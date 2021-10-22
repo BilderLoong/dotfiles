@@ -20,6 +20,10 @@ set nowrap
 set clipboard=unnamedplus
 set fileformats+=mac
 
+" Treat long lines as break lines
+map j gj
+map k gk
+
 " Key Mapping
 let mapleader = "\<Space>"
 
@@ -41,36 +45,43 @@ inoremap jk <Esc>
 " Plugin Selection
 call plug#begin('~/.vim/plugged')
 
+" Theme
+Plug 'morhetz/gruvbox'
+colorscheme gruvbox
+
+" Airline
+Plug 'vim-airline/vim-airline'
+
 " use vscode easymotion when in vscode mode
 Plug 'asvetliakov/vim-easymotion'
-    nmap s         <Plug>(easymotion-s2)
+    nnoremap s         <Plug>(easymotion-s2)
     xmap s         <Plug>(easymotion-s2)
     omap z         <Plug>(easymotion-s2)
-    nmap <Leader>s <Plug>(easymotion-sn)
+    nnoremap <Leader>s <Plug>(easymotion-sn)
     xmap <Leader>s <Plug>(easymotion-sn)
     omap <Leader>z <Plug>(easymotion-sn)
 
-nmap <Leader>a <Plug>(easymotion-jumptoanywhere)
+nnoremap <Leader>a <Plug>(easymotion-jumptoanywhere)
 xmap <Leader>a <Plug>(easymotion-jumptoanywhere)
 omap <Leader>a <Plug>(easymotion-jumptoanywhere)
 
-nmap <Leader>w <Plug>(easymotion-bd-w)
+nnoremap <Leader>w <Plug>(easymotion-bd-w)
 xmap <Leader>w <Plug>(easymotion-bd-w)
 omap <Leader>w <Plug>(easymotion-bd-w)
 
-nmap <Leader>e <Plug>(easymotion-bd-e)
+nnoremap <Leader>e <Plug>(easymotion-bd-e)
 xmap <Leader>e <Plug>(easymotion-bd-e)
 omap <Leader>e <Plug>(easymotion-bd-e)
 
-nmap <Leader>t <Plug>(easymotion-bd-t)
+nnoremap <Leader>t <Plug>(easymotion-bd-t)
 xmap <Leader>t <Plug>(easymotion-bd-t)
 omap <Leader>t <Plug>(easymotion-bd-t)
 
 "Plug 'unblevable/quick-scope'
 xmap gc  <Plug>VSCodeCommentary
-nmap gc  <Plug>VSCodeCommentary
+nnoremap gc  <Plug>VSCodeCommentary
 omap gc  <Plug>VSCodeCommentary
-nmap gcc <Plug>VSCodeCommentaryLine
+nnoremap gcc <Plug>VSCodeCommentaryLine
 
 Plug 'tpope/vim-surround'
 
@@ -81,18 +92,45 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Extension
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-json']
+let g:coc_global_extensions = ['coc-markdownlint', 'coc-tsserver', 'coc-git', 'coc-json', 'coc-eslint', 'coc-json', 'coc-prettier', 'coc-css']
+
+" Use `[g` and `]g` to navigate diagnostics
+nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
+nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
 
 " Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nnoremap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nnoremap <leader>qf  <Plug>(coc-fix-current)
+
+" Remap for rename current word
+nnoremap <F2> <Plug>(coc-rename)
+
+" Format
+nnoremap <leader>f   :CocCommand prettier.formatFile<CR>
+
+" coc-git
+" navigate chunks of current buffer
+nmap [g <Plug>(coc-git-prevchunk)
+nmap ]g <Plug>(coc-git-nextchunk)
+" navigate conflicts of current buffer
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+" show chunk diff at current position
+nmap gs <Plug>(coc-git-chunkinfo)
+" show commit contains current position
+" nmap gc <Plug>(coc-git-commit) " Confilcting with vim-commentary.
+" create text object for git chunks
+omap ig <Plug>(coc-git-chunk-inner)
+xmap ig <Plug>(coc-git-chunk-inner)
+omap ag <Plug>(coc-git-chunk-outer)
+xmap ag <Plug>(coc-git-chunk-outer)
 
 " Emmet
 Plug 'mattn/emmet-vim'
@@ -104,6 +142,14 @@ Plug 'tpope/vim-surround'
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+nnoremap <silent> <c-p> :Files<CR>
+nnoremap <silent><leader>l :Buffers<CR>
 
 Plug 'jiangmiao/auto-pairs'
+
+" Nerdtree
+Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 call plug#end() 
