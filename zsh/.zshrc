@@ -1,3 +1,13 @@
+# If the system run in Windows
+if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
+	# Proxy the WSL
+	## 获取主机 IP
+	## 主机 IP 保存在 /etc/resolv.conf 中
+	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
+	export all_proxy="http://${hostip}:7890"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -66,6 +76,35 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Plugins
+
+# Antigen plugins 
+# Init Antigen
+# If antigen.zsh don't exist, install it.
+if [[ ! -e ~/antigen.zsh ]]; then
+	curl -L git.io/antigen > ~/antigen.zsh
+fi
+source ~/antigen.zsh
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+
+# Antigen Plugins List
+
+# Load bundles from the default repo (oh-my-zsh)
+antigen bundle command-not-found
+
+# Load bundles from external repos
+antigen bundle jeffreytse/zsh-vi-mode
+antigen bundle zsh-users/zsh-syntax-highlighting
+# Fish-like fast/unobtrusive autosuggestions for zsh.
+antigen bundle zsh-users/zsh-autosuggestions # end key or right arrow key accept suggestion.
+# Additional completion definitions for Zsh.
+antigen bundle zsh-users/zsh-completions
+
+# Tell Antigen that you're done.
+antigen apply
+
+# Oh-My-Zsh plugins custom plugins
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -101,19 +140,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias zshconfig="source ~/.zshrc"
-alias configpush="cd ~/config; stow -R *; git add .; git commit -m 'config push'; git push origin HEAD; cd -"
+alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config push'; git push origin HEAD; cd -"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
 
-# If the system run in Windows
-if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
-	# Proxy the WSL
-	## 获取主机 IP
-	## 主机 IP 保存在 /etc/resolv.conf 中
-	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
-	export all_proxy="http://${hostip}:7890"
-else
-fi
 
 # Change the homebrew packages source.
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
