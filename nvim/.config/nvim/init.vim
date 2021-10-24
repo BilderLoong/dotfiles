@@ -1,10 +1,17 @@
+" Plugin Selection
+call plug#begin('~/.vim/plugged')
+
 " The common init of both vscode neovim and native neovim
-source ./common.vim
+try
+	source common.vim
+endtry
 
 if exists('g:vscode')
-	source ./vscode.vim    " VSCode extension
+	try
+		source vscode.vim    " VSCode extension
+	endtry
 else
-    " ordinary neovim
+	" Ordinary neovim
 	" Editing
 	set ts=2
 	set sw=0
@@ -20,8 +27,6 @@ else
 	set fileformats+=mac
 
 
-	" Plugin Selection
-	call plug#begin('~/.vim/plugged')
 
 	" THEME
 	" nord
@@ -97,9 +102,10 @@ else
 	" Lua
 	Plug 'folke/lua-dev.nvim'
 
-	call plug#end() 
 
 	" The colorscheme option need be put at the end of the plug#end
 	" source: https://stackoverflow.com/a/64178519
-	colorscheme nord
 endif
+call plug#end() 
+
+colorscheme nord

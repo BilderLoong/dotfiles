@@ -1,159 +1,111 @@
-"Automatic install vim-plug.
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-	  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-		  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-		endif
-
-" Editing
-set ts=2
-set sw=0
-set number
-set relativenumber
-set scrolloff=4
-set scrolloff=4
-set autoindent
-set ruler
-set showcmd
-set backup
-set nowrap
-set clipboard=unnamedplus
-set fileformats+=mac
-
-" Treat long lines as break lines
-map j gj
-map k gk
-
-" Key Mapping
-let mapleader = "\<Space>"
-
-inoremap <C-c> <Nop>
-
-nnoremap <Leader>j J
-nnoremap J 5j
-nnoremap K 5k
-nnoremap <Leader>o o<Esc>
-
-nnoremap <Leader>y "*y
-xnoremap <Leader>y "*y
-
-nnoremap <Leader>p "*p
-xnoremap <Leader>p "*p
-
-inoremap jk <Esc>
-
 " Plugin Selection
 call plug#begin('~/.vim/plugged')
 
-" THEME
-" nord
-Plug 'arcticicestudio/nord-vim'
+" The common init of both vscode neovim and native neovim
+try
+	source common.vim
+endtry
 
-" Airline
-Plug 'vim-airline/vim-airline'
+if exists('g:vscode')
+	try
+		source vscode.vim    " VSCode extension
+	endtry
+else
+	" Ordinary neovim
+	" Editing
+	set ts=2
+	set sw=0
+	set number
+	set relativenumber
+	set scrolloff=4
+	set autoindent
+	set ruler
+	set showcmd
+	set backup
+	set nowrap
+	set clipboard=unnamedplus
+	set fileformats+=mac
 
-" use vscode easymotion when in vscode mode
-Plug 'asvetliakov/vim-easymotion'
-    nnoremap s         <Plug>(easymotion-s2)
-    xmap s         <Plug>(easymotion-s2)
-    omap z         <Plug>(easymotion-s2)
-    nnoremap <Leader>s <Plug>(easymotion-sn)
-    xmap <Leader>s <Plug>(easymotion-sn)
-    omap <Leader>z <Plug>(easymotion-sn)
 
-nnoremap <Leader>a <Plug>(easymotion-jumptoanywhere)
-xmap <Leader>a <Plug>(easymotion-jumptoanywhere)
-omap <Leader>a <Plug>(easymotion-jumptoanywhere)
 
-nnoremap <Leader>w <Plug>(easymotion-bd-w)
-xmap <Leader>w <Plug>(easymotion-bd-w)
-omap <Leader>w <Plug>(easymotion-bd-w)
+	" THEME
+	" nord
+	Plug 'arcticicestudio/nord-vim'
 
-nnoremap <Leader>e <Plug>(easymotion-bd-e)
-xmap <Leader>e <Plug>(easymotion-bd-e)
-omap <Leader>e <Plug>(easymotion-bd-e)
+	" Airline
+	Plug 'vim-airline/vim-airline'
 
-nnoremap <Leader>t <Plug>(easymotion-bd-t)
-xmap <Leader>t <Plug>(easymotion-bd-t)
-omap <Leader>t <Plug>(easymotion-bd-t)
+	" CoC
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	" Extension
+	let g:coc_global_extensions = ['coc-sumneko-lua','coc-markdownlint', 'coc-tsserver', 'coc-git', 'coc-json', 'coc-eslint', 'coc-json', 'coc-prettier', 'coc-css']
 
-"Plug 'unblevable/quick-scope'
-xmap gc  <Plug>VSCodeCommentary
-nnoremap gc  <Plug>VSCodeCommentary
-omap gc  <Plug>VSCodeCommentary
-nnoremap gcc <Plug>VSCodeCommentaryLine
+	" Use `[g` and `]g` to navigate diagnostics
+	nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
+	nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
 
-Plug 'tpope/vim-surround'
+	" GoTo code navigation.
+	nnoremap <silent> gd <Plug>(coc-definition)
+	nnoremap <silent> gy <Plug>(coc-type-definition)
+	nnoremap <silent> gi <Plug>(coc-implementation)
+	nnoremap <silent> gr <Plug>(coc-references)
 
-Plug 'unblevable/quick-scope'
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+	" Remap keys for applying codeAction to the current line.
+	nnoremap <leader>ac  <Plug>(coc-codeaction)
+	" Apply AutoFix to problem on the current line.
+	nnoremap <leader>qf  <Plug>(coc-fix-current)
 
-" CoC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Extension
-let g:coc_global_extensions = [ 'coc-markdownlint', 'coc-tsserver', 'coc-git', 'coc-json', 'coc-eslint', 'coc-json', 'coc-prettier', 'coc-css']
+	" Remap for rename current word
+	nnoremap <F2> <Plug>(coc-rename)
 
-" Use `[g` and `]g` to navigate diagnostics
-nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
-nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
+	" Format
+	nnoremap <leader>f   :CocCommand prettier.formatFile<CR>
 
-" GoTo code navigation.
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gy <Plug>(coc-type-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gr <Plug>(coc-references)
+	" coc-git
+	" navigate chunks of current buffer
+	nmap [g <Plug>(coc-git-prevchunk)
+	nmap ]g <Plug>(coc-git-nextchunk)
+	" navigate conflicts of current buffer
+	nmap [c <Plug>(coc-git-prevconflict)
+	nmap ]c <Plug>(coc-git-nextconflict)
+	" show chunk diff at current position
+	nmap gs <Plug>(coc-git-chunkinfo)
+	" show commit contains current position
+	" nmap gc <Plug>(coc-git-commit) " Confilcting with vim-commentary.
+	" create text object for git chunks
+	omap ig <Plug>(coc-git-chunk-inner)
+	xmap ig <Plug>(coc-git-chunk-inner)
+	omap ag <Plug>(coc-git-chunk-outer)
+	xmap ag <Plug>(coc-git-chunk-outer)
 
-" Remap keys for applying codeAction to the current line.
-nnoremap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nnoremap <leader>qf  <Plug>(coc-fix-current)
+	" Emmet
+	Plug 'mattn/emmet-vim'
 
-" Remap for rename current word
-nnoremap <F2> <Plug>(coc-rename)
+	Plug 'tpope/vim-commentary'
 
-" Format
-nnoremap <leader>f   :CocCommand prettier.formatFile<CR>
+	" fzf
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	nnoremap <silent> <c-p> :Files<CR>
+	nnoremap <silent><leader>l :Buffers<CR>
 
-" coc-git
-" navigate chunks of current buffer
-nmap [g <Plug>(coc-git-prevchunk)
-nmap ]g <Plug>(coc-git-nextchunk)
-" navigate conflicts of current buffer
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
-" show chunk diff at current position
-nmap gs <Plug>(coc-git-chunkinfo)
-" show commit contains current position
-" nmap gc <Plug>(coc-git-commit) " Confilcting with vim-commentary.
-" create text object for git chunks
-omap ig <Plug>(coc-git-chunk-inner)
-xmap ig <Plug>(coc-git-chunk-inner)
-omap ag <Plug>(coc-git-chunk-outer)
-xmap ag <Plug>(coc-git-chunk-outer)
+	Plug 'jiangmiao/auto-pairs'
+	Plug '907th/vim-auto-save'
+	" Nerdtree
+	Plug 'preservim/nerdtree'
+	" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	" Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Emmet
-Plug 'mattn/emmet-vim'
+	" If you need Vim help for vim-plug itself (e.g. :help plug-options), register vim-plug as a plugin.
+	Plug 'junegunn/vim-plug'
 
-Plug 'tpope/vim-commentary'
+	" Lua
+	Plug 'folke/lua-dev.nvim'
 
-Plug 'tpope/vim-surround'
 
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-nnoremap <silent> <c-p> :Files<CR>
-nnoremap <silent><leader>l :Buffers<CR>
-
-Plug 'jiangmiao/auto-pairs'
-
-" Nerdtree
-Plug 'preservim/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+	" The colorscheme option need be put at the end of the plug#end
+	" source: https://stackoverflow.com/a/64178519
+	colorscheme nord
+endif
 
 call plug#end() 
-
-" The colorscheme option need be put at the end of the plug#end
-" source: https://stackoverflow.com/a/64178519
-colorscheme nord
