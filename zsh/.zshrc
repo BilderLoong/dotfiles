@@ -6,6 +6,7 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	## 主机 IP 保存在 /etc/resolv.conf 中
 	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
 	export all_proxy="http://${hostip}:7890"
+	export D="/mnt/d"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -95,6 +96,8 @@ antigen bundle command-not-found
 
 # Load bundles from external repos
 antigen bundle jeffreytse/zsh-vi-mode
+ZVM_VI_ESCAPE_BINDKEY=jk # The vi escape key in all modes (default is ^[ => ESC)
+
 antigen bundle zsh-users/zsh-syntax-highlighting
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 antigen bundle zsh-users/zsh-autosuggestions # end key or right arrow key accept suggestion.
@@ -118,15 +121,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='mvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

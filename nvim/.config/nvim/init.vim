@@ -45,9 +45,10 @@ inoremap jk <Esc>
 " Plugin Selection
 call plug#begin('~/.vim/plugged')
 
-" Theme
-Plug 'morhetz/gruvbox'
-colorscheme gruvbox
+" THEME
+" nord
+Plug 'arcticicestudio/nord-vim'
+colorscheme nord
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -92,7 +93,9 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Extension
-let g:coc_global_extensions = ['coc-markdownlint', 'coc-tsserver', 'coc-git', 'coc-json', 'coc-eslint', 'coc-json', 'coc-prettier', 'coc-css']
+let g:coc_global_extensions = [
+	# 'coc-lua' ,
+	'coc-markdownlint', 'coc-tsserver', 'coc-git', 'coc-json', 'coc-eslint', 'coc-json', 'coc-prettier', 'coc-css']
 
 " Use `[g` and `]g` to navigate diagnostics
 nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
