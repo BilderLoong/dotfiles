@@ -50,6 +50,7 @@ else
 				\ 'coc-json',
 				\ 'coc-prettier',
 				\ 'coc-css']
+
 	" Use `[g` and `]g` to navigate diagnostics
 	nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
 	nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
