@@ -2,15 +2,12 @@
 call plug#begin('~/.vim/plugged')
 
 " The common init of both vscode neovim and native neovim
-try
-	source common.vim
-endtry
+source <sfile>:h/common.vim
 
 if exists('g:vscode')
-	try
-		source vscode.vim    " VSCode extension
-	endtry
+	source <sfile>:h/vscode.vim
 else
+
 	" Ordinary neovim
 	" Editing
 	set ts=2
@@ -25,12 +22,17 @@ else
 	set nowrap
 	set clipboard=unnamedplus
 	set fileformats+=mac
+	" Switch on the spell checking
+	set spell
+	" When the 'spell' option is on spellchecking will be done for these languages.
+	set spelllang+=en
 
 
 
 	" THEME
 	" nord
 	Plug 'arcticicestudio/nord-vim'
+	let g:nord_uniform_diff_background = 1
 
 	" Airline
 	Plug 'vim-airline/vim-airline'
@@ -38,8 +40,16 @@ else
 	" CoC
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" Extension
-	let g:coc_global_extensions = ['coc-sumneko-lua','coc-markdownlint', 'coc-tsserver', 'coc-git', 'coc-json', 'coc-eslint', 'coc-json', 'coc-prettier', 'coc-css']
-
+	let g:coc_global_extensions = [ 
+				\'coc-sumneko-lua',
+				\ 'coc-markdownlint',
+				\ 'coc-tsserver',
+				\ 'coc-git',
+				\ 'coc-json',
+				\ 'coc-eslint',
+				\ 'coc-json',
+				\ 'coc-prettier',
+				\ 'coc-css']
 	" Use `[g` and `]g` to navigate diagnostics
 	nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
 	nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -102,10 +112,26 @@ else
 	" Lua
 	Plug 'folke/lua-dev.nvim'
 
+	" For better spellchecking.
+	Plug 'kamykn/spelunker.vim'
+	" Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
+	set nospell
+	" Highlight type: (default: 1)
+	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
+	" 2: Highlight only SpellBad.
+	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
+let g:spelunker_highlight_type = 2
 
-	" The colorscheme option need be put at the end of the plug#end
-	" source: https://stackoverflow.com/a/64178519
 endif
 call plug#end() 
 
+" Improve the comment contrast
+" source: https://github.com/arcticicestudio/nord-vim/issues/26#issuecomment-284210428
+augroup nord-overrides
+	autocmd!
+	autocmd ColorScheme nord highlight Comment ctermfg=14
+augroup END
+
+" The colorscheme option need be put at the end of the plug#end
+" source: https://stackoverflow.com/a/64178519
 colorscheme nord

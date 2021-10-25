@@ -1,4 +1,3 @@
-echo '123'
 "Automatic install vim-plug.
 	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 	if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -34,9 +33,5 @@ echo '123'
 	" source vimrc file.
 	nnoremap <Leader>r :source $MYVIMRC<CR>
 
-	call plug#begin('~/.vim/plugged')
-
 	Plug 'tpope/vim-surround'
 	Plug 'unblevable/quick-scope'
-
-	call plug#end() 

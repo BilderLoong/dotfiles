@@ -1,16 +1,15 @@
+let g:spelunker_highlight_type = 2
+
 " Plugin Selection
 call plug#begin('~/.vim/plugged')
 
 " The common init of both vscode neovim and native neovim
-try
-	source common.vim
-endtry
+source <sfile>:h/common.vim
 
 if exists('g:vscode')
-	try
-		source vscode.vim    " VSCode extension
-	endtry
+	execute "source" . "expand('%:p:h')" . "/vscode.vim"
 else
+
 	" Ordinary neovim
 	" Editing
 	set ts=2
@@ -25,12 +24,17 @@ else
 	set nowrap
 	set clipboard=unnamedplus
 	set fileformats+=mac
+	" Switch on the spell checking
+	set spell
+	" When the 'spell' option is on spellchecking will be done for these languages.
+	set spelllang+=en
 
 
 
 	" THEME
 	" nord
 	Plug 'arcticicestudio/nord-vim'
+	let g:nord_uniform_diff_background = 1
 
 	" Airline
 	Plug 'vim-airline/vim-airline'
@@ -102,10 +106,26 @@ else
 	" Lua
 	Plug 'folke/lua-dev.nvim'
 
+	" For better spellchecking.
+	Plug 'kamykn/spelunker.vim'
+	" Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
+	set nospell
+	" Highlight type: (default: 1)
+	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
+	" 2: Highlight only SpellBad.
+	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
 
-	" The colorscheme option need be put at the end of the plug#end
-	" source: https://stackoverflow.com/a/64178519
-	colorscheme nord
 endif
-
 call plug#end() 
+
+" Improve the comment contrast
+" source: https://github.com/arcticicestudio/nord-vim/issues/26#issuecomment-284210428
+augroup nord-overrides
+	autocmd!
+	autocmd ColorScheme nord highlight Comment ctermfg=14
+augroup END
+
+" The colorscheme option need be put at the end of the plug#end
+" source: https://stackoverflow.com/a/64178519
+colorscheme nord
+let g:spelunker_highlight_type = 2
