@@ -138,6 +138,7 @@ alias zshconfig="source ~/.zshrc"
 alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config push'; git push origin HEAD; cd -"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
+alias vi="nvim"
 
 
 # Change the homebrew packages source.

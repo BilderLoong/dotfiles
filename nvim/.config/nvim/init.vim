@@ -18,7 +18,7 @@ else
 	set autoindent
 	set ruler
 	set showcmd
-	set backup
+	set nobackup
 	set nowrap
 	set clipboard=unnamedplus
 	set fileformats+=mac
@@ -62,15 +62,15 @@ else
 	nnoremap <silent> gr <Plug>(coc-references)
 
 	" Remap keys for applying codeAction to the current line.
-	nnoremap <leader>ac  <Plug>(coc-codeaction)
+	nnoremap <Leader>ac  <Plug>(coc-codeaction)
 	" Apply AutoFix to problem on the current line.
-	nnoremap <leader>qf  <Plug>(coc-fix-current)
+	nnoremap <Leader>qf  <Plug>(coc-fix-current)
 
 	" Remap for rename current word
 	nnoremap <F2> <Plug>(coc-rename)
 
 	" Format
-	nnoremap <leader>f   :CocCommand prettier.formatFile<CR>
+	nnoremap <Leader>f   :CocCommand prettier.formatFile<CR>
 
 	" coc-git
 	" navigate chunks of current buffer
@@ -97,15 +97,19 @@ else
 	" fzf
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	nnoremap <silent> <c-p> :Files<CR>
-	nnoremap <silent><leader>l :Buffers<CR>
+	nnoremap <silent> <C-P> <Cmd>Files<CR>
+	nnoremap <silent><Leader>l <Cmd>Buffers<CR>
 
 	Plug 'jiangmiao/auto-pairs'
 	Plug '907th/vim-auto-save'
-	" Nerdtree
+
+	" NERDtree
 	Plug 'preservim/nerdtree'
+	nmap <C-N> <Cmd>NERDTreeToggle<CR>
+	nmap <Leader>n <Cmd>NERDTreeFocus<CR>
+
+	Plug 'Xuyuanp/nerdtree-git-plugin'
 	" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 	" If you need Vim help for vim-plug itself (e.g. :help plug-options), register vim-plug as a plugin.
 	Plug 'junegunn/vim-plug'
@@ -133,6 +137,6 @@ augroup nord-overrides
 	autocmd ColorScheme nord highlight Comment ctermfg=14
 augroup END
 
-" The colorscheme option need be put at the end of the plug#end
+" The colorscheme option should be put at the end of the plug#end
 " source: https://stackoverflow.com/a/64178519
 colorscheme nord
