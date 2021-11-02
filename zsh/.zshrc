@@ -135,7 +135,7 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias zshconfig="source ~/.zshrc"
-alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config push'; git push origin HEAD; cd - &"
+alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config push'; git push origin HEAD; cd - "
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
 alias vi="nvim"
