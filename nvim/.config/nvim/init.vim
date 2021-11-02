@@ -26,8 +26,18 @@ else
 	set spell
 	" When the 'spell' option is on spellchecking will be done for these languages.
 	set spelllang+=en
+	set hidden
 
+	" The below setting aim to improve Coc experience.
+	" Some coc languages servers have issues with backup files, see #649.
+	set nobackup
+	set nowritebackup
 
+	" Give more space for displaying messages.
+	set cmdheight=2
+	" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+	" delays and poor user experience.
+	set updatetime=300
 
 	" THEME
 	" nord
@@ -89,6 +99,29 @@ else
 	omap ag <Plug>(coc-git-chunk-outer)
 	xmap ag <Plug>(coc-git-chunk-outer)
 
+	" Symbol renaming.
+	nmap <F2> <Plug>(coc-rename)
+
+	" Use <c-space> to trigger completion.
+	if has('nvim')
+		inoremap <silent><expr> <c-space> coc#refresh()
+	else
+		inoremap <silent><expr> <c-@> coc#refresh()
+	endif
+
+	" Use <Leader> K to show documentation in preview window.
+	nnoremap <silent> <Leader>K <Cmd>call <SID>show_documentation()<CR>
+
+	function! s:show_documentation()
+		if (index(['vim','help'], &filetype) >= 0)
+			execute 'h '.expand('<cword>')
+		elseif (coc#rpc#ready())
+			call CocActionAsync('doHover')
+		else
+			execute '!' . &keywordprg . " " . expand('<cword>')
+		endif
+	endfunction
+
 	" Emmet
 	Plug 'mattn/emmet-vim'
 
@@ -125,7 +158,7 @@ else
 	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
 	" 2: Highlight only SpellBad.
 	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
-let g:spelunker_highlight_type = 2
+	let g:spelunker_highlight_type = 2
 
 endif
 call plug#end() 
