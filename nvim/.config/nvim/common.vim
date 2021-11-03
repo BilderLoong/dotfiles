@@ -9,7 +9,6 @@ endif
 map j gj
 map k gk
 
-" Key Mapping
 let mapleader = "\<Space>"
 
 " Unbind C-c key
@@ -27,6 +26,7 @@ nnoremap <Leader>p "*p
 xnoremap <Leader>p "*p
 
 inoremap jk <Esc>
+cnoremap jk <Esc>
 
 " Open my vimrc file.
 nnoremap <Leader>vm :e $MYVIMRC<CR>
