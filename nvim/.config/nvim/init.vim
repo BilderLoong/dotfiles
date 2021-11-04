@@ -138,7 +138,7 @@ else
 
 	" NERDtree
 	Plug 'preservim/nerdtree'
-	nmap <C-N> <Cmd>NERDTreeToggle<CR>
+	nmap <C-n> <Cmd>NERDTreeToggle<CR>
 	nmap <Leader>n <Cmd>NERDTreeFocus<CR>
 
 	Plug 'Xuyuanp/nerdtree-git-plugin'
