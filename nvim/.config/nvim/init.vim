@@ -132,7 +132,7 @@ else
 	Plug 'junegunn/fzf.vim'
 	nnoremap <silent> <C-P> <Cmd>Files<CR>
 	nnoremap <silent><Leader>l <Cmd>Buffers<CR>
-
+	nmap <silent> <leader>m :History<CR>
 	Plug 'jiangmiao/auto-pairs'
 	Plug '907th/vim-auto-save'
 
@@ -160,6 +160,8 @@ else
 	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
 	let g:spelunker_highlight_type = 2
 
+	" Vim git
+	" Plug "tpope/vim-fugitive"
 endif
 call plug#end() 
 
