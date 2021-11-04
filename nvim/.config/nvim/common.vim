@@ -25,11 +25,11 @@ xnoremap <Leader>y "*y
 nnoremap <Leader>p "*p
 xnoremap <Leader>p "*p
 
-inoremap jk <Esc>
-cnoremap jk <Esc>
+map! jk <Esc>
 
-" Open my vimrc file.
-nnoremap <Leader>vm :e $MYVIMRC<CR>
+" Open the director that contains vimrc file.
+nnoremap <Leader>vm <Cmd>NERDTreeToggle $MYVIMRC<CR>
+
 " source vimrc file.
 nnoremap <Leader>r :source $MYVIMRC<CR>
 
