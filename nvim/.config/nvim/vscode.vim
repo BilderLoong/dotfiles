@@ -8,11 +8,14 @@ nnoremap zt <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
 nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
+nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
+
 " commentary
 xmap gc  <Plug>VSCodeCommentary
 nnoremap gc  <Plug>VSCodeCommentary
 omap gc  <Plug>VSCodeCommentary
 nnoremap gcc <Plug>VSCodeCommentaryLine
+
 
 " Use vscode easymotion when in vscode mode
 Plug 'asvetliakov/vim-easymotion'
