@@ -49,78 +49,7 @@ else
 
 	" CoC
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	" Extension
-	let g:coc_global_extensions = [ 
-				\'coc-sumneko-lua',
-				\ 'coc-markdownlint',
-				\ 'coc-tsserver',
-				\ 'coc-git',
-				\ 'coc-json',
-				\ 'coc-eslint',
-				\ 'coc-json',
-				\ 'coc-prettier',
-				\ 'coc-css']
-
-	" Use `[g` and `]g` to navigate diagnostics
-	nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
-	nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
-
-	" GoTo code navigation.
-	nnoremap <silent> gd <Plug>(coc-definition)
-	nnoremap <silent> gy <Plug>(coc-type-definition)
-	nnoremap <silent> gi <Plug>(coc-implementation)
-	nnoremap <silent> gr <Plug>(coc-references)
-
-	" Remap keys for applying codeAction to the current line.
-	nnoremap <Leader>ac  <Plug>(coc-codeaction)
-	" Apply AutoFix to problem on the current line.
-	nnoremap <Leader>qf  <Plug>(coc-fix-current)
-
-	" Remap for rename current word
-	nnoremap <F2> <Plug>(coc-rename)
-
-	" Format
-	nnoremap <Leader>f   :CocCommand prettier.formatFile<CR>
-
-	" coc-git
-	" navigate chunks of current buffer
-	nmap [g <Plug>(coc-git-prevchunk)
-	nmap ]g <Plug>(coc-git-nextchunk)
-	" navigate conflicts of current buffer
-	nmap [c <Plug>(coc-git-prevconflict)
-	nmap ]c <Plug>(coc-git-nextconflict)
-	" show chunk diff at current position
-	nmap gs <Plug>(coc-git-chunkinfo)
-	" show commit contains current position
-	" nmap gc <Plug>(coc-git-commit) " Confilcting with vim-commentary.
-	" create text object for git chunks
-	omap ig <Plug>(coc-git-chunk-inner)
-	xmap ig <Plug>(coc-git-chunk-inner)
-	omap ag <Plug>(coc-git-chunk-outer)
-	xmap ag <Plug>(coc-git-chunk-outer)
-
-	" Symbol renaming.
-	nmap <F2> <Plug>(coc-rename)
-
-	" Use <c-space> to trigger completion.
-	if has('nvim')
-		inoremap <silent><expr> <c-space> coc#refresh()
-	else
-		inoremap <silent><expr> <c-@> coc#refresh()
-	endif
-
-	" Use <Leader> K to show documentation in preview window.
-	nnoremap <silent> <Leader>K <Cmd>call <SID>show_documentation()<CR>
-
-	function! s:show_documentation()
-		if (index(['vim','help'], &filetype) >= 0)
-			execute 'h '.expand('<cword>')
-		elseif (coc#rpc#ready())
-			call CocActionAsync('doHover')
-		else
-			execute '!' . &keywordprg . " " . expand('<cword>')
-		endif
-	endfunction
+	source ./coc.vim
 
 	" Emmet
 	Plug 'mattn/emmet-vim'
