@@ -42,3 +42,5 @@ command CDC cd %:p:h
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
 Plug 'wsdjeg/luarefvim'
+
+Plug 'milisims/nvim-luaref'
