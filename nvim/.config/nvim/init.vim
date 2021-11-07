@@ -39,6 +39,10 @@ else
 	" delays and poor user experience.
 	set updatetime=300
 
+	" autocmd
+	" Make it easier for sourcing playground vim script
+	autocmd BufRead *_playground.vim nnoremap <Leader>r <Cmd>source %<CR> 
+
 	" THEME
 	" nord
 	Plug 'arcticicestudio/nord-vim'
@@ -66,6 +70,7 @@ else
 	Plug '907th/vim-auto-save'
 
 	" NERDtree
+	let NERDTreeHijackNetrw = 1
 	Plug 'preservim/nerdtree'
 	nmap <C-n> <Cmd>NERDTreeToggle<CR>
 	nmap <Leader>n <Cmd>NERDTreeFocus<CR>
