@@ -7,6 +7,8 @@ source <sfile>:h/common.vim
 if exists('g:vscode')
 	source <sfile>:h/vscode.vim
 else
+	" Support syntax highlight for lua in VimL.
+	let g:vimsyn_embed = 'l'
 
 	" Ordinary neovim
 	" Editing
@@ -53,7 +55,7 @@ else
 
 	" CoC
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	source ./coc.vim
+	source <sfile>:h/coc.vim
 
 	" Emmet
 	Plug 'mattn/emmet-vim'
@@ -63,9 +65,12 @@ else
 	" fzf
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	nnoremap <silent> <C-P> <Cmd>Files<CR>
-	nnoremap <silent><Leader>l <Cmd>Buffers<CR>
-	nmap <silent> <leader>m :History<CR>
+	nnoremap <silent> <C-P> <Cmd>GFiles<CR>
+	map <leader>/ <Cmd>BLines<CR>
+	nnoremap <silent><Leader>fl <Cmd>Buffers<CR>
+	nnoremap <silent><Leader>fh <Cmd>Helptags<CR>
+	nmap <silent> <leader>fm <Cmd>History<CR>
+
 	Plug 'jiangmiao/auto-pairs'
 	Plug '907th/vim-auto-save'
 
