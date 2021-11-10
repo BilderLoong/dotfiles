@@ -62,8 +62,8 @@ else
 	Plug 'vim-airline/vim-airline'
 
 	" CoC
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	source <sfile>:h/coc.vim
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 	" Emmet
 	Plug 'mattn/emmet-vim'
