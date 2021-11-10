@@ -1,3 +1,11 @@
+	" Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
+	set nospell
+	" Highlight type: (default: 1)
+	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
+	" 2: Highlight only SpellBad.
+	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
+	let g:spelunker_highlight_type = 2
+
 " Plugin Selection
 call plug#begin('~/.vim/plugged')
 
@@ -91,13 +99,6 @@ else
 
 	" For better spellchecking.
 	Plug 'kamykn/spelunker.vim'
-	" Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
-	set nospell
-	" Highlight type: (default: 1)
-	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
-	" 2: Highlight only SpellBad.
-	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
-	let g:spelunker_highlight_type = 2
 
 	" Vim git
 	" Plug "tpope/vim-fugitive"
