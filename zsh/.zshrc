@@ -140,12 +140,18 @@ alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
 alias vi="nvim"
 
+if [[ $OSTYPE == 'darwin'* ]]; then
+	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
+defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
+defaults write net.ichi2.anki NSAppSleepDisabled -bool true
+defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
 
 # Change the homebrew packages source.
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+fi
 
 # nvm setup.
  export NVM_DIR="$HOME/.nvm"
