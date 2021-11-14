@@ -1,4 +1,8 @@
-	" Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
+lua << EOF
+	require 'eden'
+EOF
+
+" Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
 	set nospell
 	" Highlight type: (default: 1)
 	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
@@ -52,6 +56,7 @@ else
 	" autocmd
 	" Make it easier for sourcing playground vim script
 	autocmd BufRead *_playground.vim nnoremap <Leader>r <Cmd>source %<CR> 
+	autocmd BufRead * call v:lua.checkEden()
 
 	" THEME
 	" nord
@@ -60,6 +65,7 @@ else
 
 	" Airline
 	Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
 
 	" CoC
 	source <sfile>:h/coc.vim

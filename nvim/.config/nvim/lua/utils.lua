@@ -9,8 +9,4 @@ function _G.put(...)
   return ...
 end
 
-function isInEden(path)
-	vim.api.nvim_command('!slient !eden')	
-	if(vim.v.shell_error==0)
-	
-end
+
