@@ -1,1 +1,21 @@
-../dotfiles/bin/bin/setproxy.sh
+#!/bin/bash
+# set the wifi service proxy to the localhost with passed port number.
+
+PROXY_SERVER='127.0.0.1'
+
+function setBothProxy(){
+ networksetup -setwebproxy $1 $2 $3
+ networksetup -setsecurewebproxy $1 $2 $3
+}
+
+function setBothState(){
+	 networksetup -setwebproxystate $1 $2 
+	 networksetup -setsecurewebproxystate $1 $2
+}
+
+if [[ -z $1 ]]; then
+	setBothState Wi-Fi off
+else
+	setBothProxy Wi-Fi $PROXY_SERVER $1
+fi
+
