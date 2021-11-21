@@ -8,7 +8,8 @@ EOF
 	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
 	" 2: Highlight only SpellBad.
 	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
-	let g:spelunker_highlight_type = 2
+let g:spelunker_highlight_type = 2
+let g:enable_spelunker_vim = 1
 
 " Plugin Selection
 call plug#begin('~/.vim/plugged')
@@ -36,8 +37,6 @@ else
 	set nowrap
 	set clipboard=unnamedplus
 	set fileformats+=mac
-	" Switch on the spell checking
-	set spell
 	" When the 'spell' option is on spellchecking will be done for these languages.
 	set spelllang+=en
 	set hidden
@@ -90,6 +89,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 	" NERDtree
 	let NERDTreeHijackNetrw = 1
+let NERDTreeShowHidden=1
 	Plug 'preservim/nerdtree'
 	nmap <C-n> <Cmd>NERDTreeToggle<CR>
 	nmap <Leader>n <Cmd>NERDTreeFocus<CR>

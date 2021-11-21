@@ -10,7 +10,7 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -138,7 +138,7 @@ alias zshconfig="source ~/.zshrc"
 alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config push'; git push origin HEAD; cd - "
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 
-alias vi="nvim"
+alias v="nvim"
 
 if [[ $OSTYPE == 'darwin'* ]]; then
 	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
