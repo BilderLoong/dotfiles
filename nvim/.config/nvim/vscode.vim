@@ -15,32 +15,32 @@ nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
 " commentary
 " xmap gc  <Plug>VSCodeCommentary
-" nnoremap gc  <Plug>VSCodeCommentary
+" nmap gc  <Plug>VSCodeCommentary
 " omap gc  <Plug>VSCodeCommentary
 map gc  <Plug>VSCodeCommentary
-nnoremap gcc <Plug>VSCodeCommentaryLine
+nmap gcc <Plug>VSCodeCommentaryLine
 
 
 " easymotion config
-nnoremap s         <Plug>(easymotion-s2)
+nmap s         <Plug>(easymotion-s2)
 xmap s         <Plug>(easymotion-s2)
 omap z         <Plug>(easymotion-s2)
-nnoremap <Leader>s <Plug>(easymotion-sn)
+nmap <Leader>s <Plug>(easymotion-sn)
 xmap <Leader>s <Plug>(easymotion-sn)
 omap <Leader>z <Plug>(easymotion-sn)
 
-nnoremap <Leader>a <Plug>(easymotion-jumptoanywhere)
-xmap <Leader>a <Plug>(easymotion-jumptoanywhere)
+nmap <Leader>a <Plug>(easymotion-jumptoanywhere)
+xmap <Leader>a <Plug>(easymotio-jumptoanywhere)
 omap <Leader>a <Plug>(easymotion-jumptoanywhere)
 
-nnoremap <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-bd-w)
 xmap <Leader>w <Plug>(easymotion-bd-w)
 omap <Leader>w <Plug>(easymotion-bd-w)
 
-nnoremap <Leader>e <Plug>(easymotion-bd-e)
+nmap <Leader>e <Plug>(easymotion-bd-e)
 xmap <Leader>e <Plug>(easymotion-bd-e)
 omap <Leader>e <Plug>(easymotion-bd-e)
 
-nnoremap <Leader>t <Plug>(easymotion-bd-t)
+nmap <Leader>t <Plug>(easymotion-bd-t)
 xmap <Leader>t <Plug>(easymotion-bd-t)
 omap <Leader>t <Plug>(easymotion-bd-t)

@@ -49,3 +49,5 @@ augroup END
 " gruvbox
 let g:airline_theme = 'gruvbox'
 
+" easymotion
+
