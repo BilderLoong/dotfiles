@@ -99,8 +99,10 @@ antigen bundle jeffreytse/zsh-vi-mode
 ZVM_VI_ESCAPE_BINDKEY=jk # The vi escape key in all modes (default is ^[ => ESC)
 
 antigen bundle zsh-users/zsh-syntax-highlighting
+
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 antigen bundle zsh-users/zsh-autosuggestions # end key or right arrow key accept suggestion.
+
 # Additional completion definitions for Zsh.
 antigen bundle zsh-users/zsh-completions
 
