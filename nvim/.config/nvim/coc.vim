@@ -76,7 +76,7 @@ else
 endif
 
 " Use <Leader> K to show documentation in preview window.
-nnoremap <silent> <Leader>K <Cmd>call <SID>show_documentation()<CR>
+nnoremap <silent> gh <Cmd>call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
 	if (index(['vim','help'], &filetype) >= 0)
