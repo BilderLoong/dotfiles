@@ -1,3 +1,6 @@
+" All config expect plug relate to vscode is stored in this file
+
+" Make qucik scope highlight in vscode.
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
 
@@ -8,7 +11,7 @@ nnoremap zt <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
 nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
-nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
+" nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
 
 " commentary
 xmap gc  <Plug>VSCodeCommentary
@@ -17,8 +20,7 @@ omap gc  <Plug>VSCodeCommentary
 nnoremap gcc <Plug>VSCodeCommentaryLine
 
 
-" Use vscode easymotion when in vscode mode
-Plug 'asvetliakov/vim-easymotion'
+" easymotion config
 nnoremap s         <Plug>(easymotion-s2)
 xmap s         <Plug>(easymotion-s2)
 omap z         <Plug>(easymotion-s2)
@@ -41,4 +43,3 @@ omap <Leader>e <Plug>(easymotion-bd-e)
 nnoremap <Leader>t <Plug>(easymotion-bd-t)
 xmap <Leader>t <Plug>(easymotion-bd-t)
 omap <Leader>t <Plug>(easymotion-bd-t)
-
