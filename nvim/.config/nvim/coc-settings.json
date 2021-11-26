@@ -1,11 +1,11 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx"
+    //    "javascript",
+    //   "typescript",
+    //  "typescriptreact",
+    // "json",
+    // "javascriptreact",
+    // "typescript.tsx"
   ],
   "git.addGBlameToVirtualText": true
 }
