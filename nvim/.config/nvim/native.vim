@@ -28,6 +28,9 @@ set nobackup
 	" delays and poor user experience.
 	set updatetime=300
 
+	" Support syntax highlight for lua in VimL.
+	let g:vimsyn_embed = 'l'
+
 	" Mapping
 
 let mapleader = "\<Space>"
@@ -43,6 +46,8 @@ inoremap <C-c> <Nop>
 nnoremap <Leader>j J
 nnoremap J 5j
 nnoremap K 5k
+
+noremap Y y$
 
 " fast insert black line.
 nnoremap <Leader>o o<Esc>
@@ -71,3 +76,10 @@ nnoremap <Leader>vm <Cmd>NERDTreeToggle $MYVIMRC<CR>
 " CDC = Change to Directory of Current file, 
 " source: https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file#Mapping_or_command_for_quick_directory_change
 command! CDC cd %:p:h
+
+" Aesthetics
+" The colorscheme option should be put at the end of the plug#end
+" source: https://stackoverflow.com/a/64178519
+if(!exists('g:vscode'))
+	colorscheme gruvbox
+endif

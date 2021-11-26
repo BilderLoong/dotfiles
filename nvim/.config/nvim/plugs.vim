@@ -17,14 +17,15 @@ call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VSCode plugs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'))
+Plug 'asvetliakov/vim-easymotion'
+" , Cond(exists('g:vscode'))
 
-Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+" Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 
-" THEME
 " nord
 Plug 'arcticicestudio/nord-vim'
-let g:nord_uniform_diff_background = 1
+
+Plug 'morhetz/gruvbox'
 
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
@@ -50,11 +51,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug '907th/vim-auto-save'
 
 " NERDtree
-let NERDTreeHijackNetrw = 1
-let NERDTreeShowHidden=1
 Plug 'preservim/nerdtree'
-nmap <C-n> <Cmd>NERDTreeToggle<CR>
-nmap <Leader>n <Cmd>NERDTreeFocus<CR>
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'

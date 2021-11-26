@@ -92,8 +92,8 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format)
-nmap <leader>f  <Plug>(coc-format)
+xmap <leader>ff  <Plug>(coc-format)
+nmap <leader>ff  <Plug>(coc-format)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.

@@ -14,9 +14,10 @@ nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 " nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
 
 " commentary
-xmap gc  <Plug>VSCodeCommentary
-nnoremap gc  <Plug>VSCodeCommentary
-omap gc  <Plug>VSCodeCommentary
+" xmap gc  <Plug>VSCodeCommentary
+" nnoremap gc  <Plug>VSCodeCommentary
+" omap gc  <Plug>VSCodeCommentary
+map gc  <Plug>VSCodeCommentary
 nnoremap gcc <Plug>VSCodeCommentaryLine
 
 
