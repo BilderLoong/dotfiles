@@ -1,37 +1,37 @@
-	" Ordinary neovim
+" Ordinary neovim
 
-	" Editing
-	set ts=2
-	set sw=0
-	set number
-	set relativenumber
-	set scrolloff=4
-	set autoindent
-	set ruler
-	set showcmd
-	set nobackup
-	set nowrap
-	set clipboard=unnamedplus
-	set fileformats+=mac
-	" When the 'spell' option is on spellchecking will be done for these languages.
-	set spelllang+=en
-	set hidden
-
-	" The below setting aim to improve Coc experience.
-	" Some coc languages servers have issues with backup files, see #649.
+" Editing
+set ts=2
+set sw=0
+set number
+set relativenumber
+set scrolloff=4
+set autoindent
+set ruler
+set showcmd
 set nobackup
-	set nowritebackup
+set nowrap
+set clipboard=unnamedplus
+set fileformats+=mac
+" When the 'spell' option is on spellchecking will be done for these languages.
+set spelllang+=en
+set hidden
 
-	" Give more space for displaying messages.
-	set cmdheight=2
-	" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-	" delays and poor user experience.
-	set updatetime=300
+" The below setting aim to improve Coc experience.
+" Some coc languages servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
 
-	" Support syntax highlight for lua in VimL.
-	let g:vimsyn_embed = 'l'
+" Give more space for displaying messages.
+set cmdheight=2
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 
-	" Mapping
+" Support syntax highlight for lua in VimL.
+let g:vimsyn_embed = 'l'
+
+" Mapping
 
 let mapleader = "\<Space>"
 
@@ -81,5 +81,6 @@ command! CDC cd %:p:h
 " The colorscheme option should be put at the end of the plug#end
 " source: https://stackoverflow.com/a/64178519
 if(!exists('g:vscode'))
-	colorscheme gruvbox
+	" colorscheme gruvbox
+	colorscheme nord
 endif

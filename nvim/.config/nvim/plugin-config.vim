@@ -18,7 +18,6 @@ nmap <C-n> <Cmd>NERDTreeToggle<CR>
 nmap <Leader>n <Cmd>NERDTreeFocus<CR>
 
 " nord
-Plug 'arcticicestudio/nord-vim'
 let g:nord_uniform_diff_background = 1
 " Improve the comment contrast
 " source: https://github.com/arcticicestudio/nord-vim/issues/26#issuecomment-284210428
@@ -29,11 +28,24 @@ augroup END
 
 " spelunker
 " Turn off Vim's spell as it highlights the same words. source: https://github.com/kamykn/spelunker.vim
-	set nospell
+set nospell
 
-	" Highlight type: (default: 1)
-	" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
-	" 2: Highlight only SpellBad.
-	" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
+" Highlight type: (default: 1)
+" 1: Highlight all types (SpellBad, SpellCap, SpellRare, SpellLocal).
+" 2: Highlight only SpellBad.
+" FYI: https://vim-jp.org/vimdoc-en/spell.html#spell-quickstart
 let g:spelunker_highlight_type = 2
 let g:enable_spelunker_vim = 1
+
+" quick-scope
+" You should put the following block before you set colorscheme <colorsname>.
+" source: https://github.com/unblevable/quick-scope#customize-colors
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
+
+" gruvbox
+let g:airline_theme = 'gruvbox'
+
