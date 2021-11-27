@@ -50,6 +50,8 @@ if (!exists('g:vscode'))
 	set showcmd
 	set nobackup
 	set nowrap
+	" Support 
+	set mouse=a
 	set clipboard=unnamedplus
 	set fileformats+=mac
 	" When the 'spell' option is on spellchecking will be done for these languages.

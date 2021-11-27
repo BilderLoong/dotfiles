@@ -20,7 +20,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gzI <Plug>(coc-implementation)  // gi is already, see :h gi .
 nmap <silent> gr <Plug>(coc-references)
 
 " Remap keys for applying codeAction to the current line.
@@ -41,7 +41,7 @@ nmap ]c <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
 nmap gs <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-" nmap gc <Plug>(coc-git-commit) " Confilcting with vim-commentary.
+nmap gzc <Plug>(coc-git-commit) " Confilcting with vim-commentary.
 " Create text object for git chunks.
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
