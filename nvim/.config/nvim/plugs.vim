@@ -73,5 +73,9 @@ Plug 'folke/lua-dev.nvim', Cond(!exists('g:vscode'))
 Plug 'kamykn/spelunker.vim', Cond(!exists('g:vscode'))
 
 " Vim git
-" Plug "tpope/vim-fugitive"
+Plug 'tpope/vim-fugitive', Cond(!exists('g:vscode'))
+
+" Navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
+Plug 'christoomey/vim-tmux-navigator', Cond(!exists('g:vscode'))
+
 call plug#end() 
