@@ -2,7 +2,7 @@
 source <sfile>:h/coc.vim
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Fzf
 nnoremap <silent> <C-P> <Cmd>GFiles<CR>
@@ -41,9 +41,9 @@ let g:enable_spelunker_vim = 1
 " You should put the following block before you set colorscheme <colorsname>.
 " source: https://github.com/unblevable/quick-scope#customize-colors
 augroup qs_colors
-  autocmd!
-  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+	autocmd!
+	autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+	autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 augroup END
 
 " gruvbox

@@ -20,7 +20,7 @@ noremap Y y$
 nnoremap <Leader>o o<Esc>
 
 " fast enter command line mode.
-map , :
+map <Leader>; :
 
 " fast system clipboard.
 nnoremap <Leader>y "*y
@@ -30,8 +30,8 @@ xnoremap <Leader>p "*p
 
 noremap! jk <C-c>
 
+" Ordinary neovim
 if (!exists('g:vscode'))
-	" Ordinary neovim
 
 	" Aesthetics
 	" The colorscheme option should be put at the end of the plug#end
