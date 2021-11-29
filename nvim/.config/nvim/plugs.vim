@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Common plugs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'unblevable/quick-scope'
+Plug 'tpope/vim-surround'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VSCode plugs
@@ -35,7 +36,6 @@ Plug 'arcticicestudio/nord-vim', Cond(!exists('g:vscode'))
 
 Plug 'morhetz/gruvbox', Cond(!exists('g:vscode'))
 
-Plug 'tpope/vim-surround', Cond(!exists('g:vscode'))
 Plug 'wsdjeg/luarefvim', Cond(!exists('g:vscode'))
 Plug 'milisims/nvim-luaref', Cond(!exists('g:vscode'))
 

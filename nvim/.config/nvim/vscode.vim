@@ -4,19 +4,44 @@
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
 
-" Personal keybinding
+" Mappling
+" Fold
 nnoremap zc <Cmd>call VSCodeNotify('editor.fold')<CR>
 nnoremap zo <Cmd>call VSCodeNotify('editor.unfold')<CR>
 nnoremap zt <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
 nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
-" nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
+
+" Move between windows in a tab
+nnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
+xnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
+nnoremap <M-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
+xnoremap <M-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
+nnoremap <M-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
+xnoremap <M-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
+nnoremap <M-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
+xnoremap <M-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CoC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
+xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
+
+nnoremap gY <Cmd>call VSCodeNotify('editor.action.peekTypeDefinition)<CR>
+xnoremap gY <Cmd>call VSCodeNotify('editor.action.peekTypeDefinition)<CR>
+
+nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
+xnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
+
+nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
+
+" TODO add move to next git chunk. same to git gutter: https://github.com/airblade/vim-gitgutter#hunks
+" TODO open file explore. use <C-n>
+" TODO open git aside. Maybe using :G
 
 " commentary
-" xmap gc  <Plug>VSCodeCommentary
-" nmap gc  <Plug>VSCodeCommentary
-" omap gc  <Plug>VSCodeCommentary
 map gc  <Plug>VSCodeCommentary
 nmap gcc <Plug>VSCodeCommentaryLine
 
