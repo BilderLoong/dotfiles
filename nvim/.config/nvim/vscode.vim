@@ -35,6 +35,9 @@ xnoremap gY <Cmd>call VSCodeNotify('editor.action.peekTypeDefinition)<CR>
 nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
 xnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
 
+nnoremap z= <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
+nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
+
 nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
 
 " TODO add move to next git chunk. same to git gutter: https://github.com/airblade/vim-gitgutter#hunks
