@@ -24,7 +24,7 @@ nmap <silent> gzI <Plug>(coc-implementation)  // gi is already, see :h gi .
 nmap <silent> gr <Plug>(coc-references)
 
 " Remap keys for applying codeAction to the current line.
-nmap <Leader>ac  <Plug>(coc-codeaction)
+nmap z= <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <Leader>qf  <Plug>(coc-fix-current)
 

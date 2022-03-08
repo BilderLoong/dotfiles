@@ -5,7 +5,10 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	## 获取主机 IP
 	## 主机 IP 保存在 /etc/resolv.conf 中
 	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
-	export all_proxy="http://${hostip}:7890"
+	export proxy_address="http://${hostip}:7890" 
+	export all_proxy=$proxy_address
+	export http_proxy=$proxy_address
+	export https_proxy=$proxy_address
 	export D="/mnt/d"
 fi
 
