@@ -144,7 +144,7 @@ alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config pus
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias v="nvim"
 
-alias gsave = 'git add .; git commit -m "save"; git push origin HEAD'
+alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
 if [[ $OSTYPE == 'darwin'* ]]; then
 	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
