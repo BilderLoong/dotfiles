@@ -180,3 +180,6 @@ unset __conda_setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add TeX Live binaries to the PATH: https://www.tug.org/texlive/quickinstall.html#:~:text=Post%2Dinstall%3A%20setting%20PATH
+export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
