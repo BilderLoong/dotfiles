@@ -30,6 +30,9 @@ xnoremap <Leader>p "*p
 
 noremap! jk <C-c>
 
+" Set format option, make format line (gq) work for Chinese. 
+set formatoptions+=mM
+
 " Ordinary neovim
 if (!exists('g:vscode'))
 

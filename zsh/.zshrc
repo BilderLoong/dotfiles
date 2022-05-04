@@ -6,9 +6,9 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	## 主机 IP 保存在 /etc/resolv.conf 中
 	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
 	export proxy_address="http://${hostip}:7890" 
-	export all_proxy=$proxy_address
-	export http_proxy=$proxy_address
-	export https_proxy=$proxy_address
+	# export all_proxy=$proxy_address
+	# export http_proxy=$proxy_address
+	# export https_proxy=$proxy_address
 	export D="/mnt/d"
 fi
 
@@ -183,3 +183,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add TeX Live binaries to the PATH: https://www.tug.org/texlive/quickinstall.html#:~:text=Post%2Dinstall%3A%20setting%20PATH
 export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+
+export PNPM_HOME="/home/bilder/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
