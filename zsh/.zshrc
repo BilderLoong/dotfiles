@@ -146,6 +146,14 @@ alias v="nvim"
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
+# Run Emacs in graphical display from wsl.
+# https://github.com/hubisan/emacs-wsl#run-emacs
+alias ema="
+export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
+export LIBGL_ALWAYS_INDIRECT=1
+setsid emacs
+"
+
 if [[ $OSTYPE == 'darwin'* ]]; then
 	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
 defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
@@ -186,3 +194,6 @@ export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
 
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

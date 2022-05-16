@@ -1,5 +1,8 @@
 " All config expect plug relate to vscode is stored in this file
 
+" Vim editor setting.
+ set textwidth=60
+
 " Make qucik scope highlight in vscode.
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline

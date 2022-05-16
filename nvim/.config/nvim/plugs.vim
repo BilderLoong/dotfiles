@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-surround'
+Plug 'michaeljsmith/vim-indent-object'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VSCode plugs

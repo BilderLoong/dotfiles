@@ -43,8 +43,9 @@ if (!exists('g:vscode'))
 	colorscheme nord
 
 	" Editing
-	set ts=2
-	set sw=0
+	set tabstop=2
+	set shiftwidth=2
+	set expandtab
 	set number
 	set relativenumber
 	set scrolloff=4
@@ -53,6 +54,7 @@ if (!exists('g:vscode'))
 	set showcmd
 	set nobackup
 	set nowrap
+  set textwidth=60
 	" Support 
 	set mouse=a
 	set clipboard=unnamedplus
