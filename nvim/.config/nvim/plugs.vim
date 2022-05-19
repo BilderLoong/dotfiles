@@ -66,9 +66,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin', Cond(!exists('g:vscode'))
 " If you need Vim help for vim-plug itself (e.g. :help plug-options), register vim-plug as a plugin.
 Plug 'junegunn/vim-plug', Cond(!exists('g:vscode'))
 
-" Lua
-Plug 'folke/lua-dev.nvim', Cond(!exists('g:vscode'))
-
 " For better spellchecking.
 Plug 'kamykn/spelunker.vim', Cond(!exists('g:vscode'))
 
@@ -77,5 +74,11 @@ Plug 'tpope/vim-fugitive', Cond(!exists('g:vscode'))
 
 " Navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
 Plug 'christoomey/vim-tmux-navigator', Cond(!exists('g:vscode'))
+
+" Language specific plugin.
+" Lua
+Plug 'folke/lua-dev.nvim', Cond(!exists('g:vscode'))
+" Racket https://docs.racket-lang.org/guide/Vim.html
+Plug 'benknoble/vim-racket', Cond(!exists('g:vscode'))
 
 call plug#end() 
