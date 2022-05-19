@@ -1,5 +1,8 @@
 " All config expect plug relate to vscode is stored in this file
 
+" Vim editor setting.
+ set textwidth=60
+
 " Make qucik scope highlight in vscode.
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
@@ -12,8 +15,15 @@ nnoremap zt <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
 nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
+" Workbench action
+" Toggle Primiary Sidebar
+nnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
+xnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 
-" Move between windows in a tab
+nnoremap <M-j> :call VSCodeNotify('workbench.action.togglePanel')<CR>
+xnoremap <M-j> :call VSCodeNotify('workbench.action.togglePanel')<CR>
+
+" Move cursor between windows in a tab
 nnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
 xnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
 nnoremap <M-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
@@ -22,6 +32,7 @@ nnoremap <M-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
 xnoremap <M-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
 nnoremap <M-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
 xnoremap <M-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CoC

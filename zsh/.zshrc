@@ -6,9 +6,9 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	## 主机 IP 保存在 /etc/resolv.conf 中
 	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
 	export proxy_address="http://${hostip}:7890" 
-	export all_proxy=$proxy_address
-	export http_proxy=$proxy_address
-	export https_proxy=$proxy_address
+	# export all_proxy=$proxy_address
+	# export http_proxy=$proxy_address
+	# export https_proxy=$proxy_address
 	export D="/mnt/d"
 fi
 
@@ -146,6 +146,14 @@ alias v="nvim"
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
+# Run Emacs in graphical display from wsl.
+# https://github.com/hubisan/emacs-wsl#run-emacs
+alias ema="
+export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
+export LIBGL_ALWAYS_INDIRECT=1
+setsid emacs
+"
+
 if [[ $OSTYPE == 'darwin'* ]]; then
 	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
 defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
@@ -183,3 +191,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add TeX Live binaries to the PATH: https://www.tug.org/texlive/quickinstall.html#:~:text=Post%2Dinstall%3A%20setting%20PATH
 export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+
+export PNPM_HOME="/home/bilder/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
