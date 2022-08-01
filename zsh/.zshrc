@@ -109,6 +109,9 @@ antigen bundle zsh-users/zsh-autosuggestions # end key or right arrow key accept
 # Additional completion definitions for Zsh.
 antigen bundle zsh-users/zsh-completions
 
+# z - jump around
+antigen bundle rupa/z
+
 # Tell Antigen that you're done.
 antigen apply
 
