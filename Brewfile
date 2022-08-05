@@ -35,3 +35,5 @@ cask "visual-studio-code"
 cask "youdaodict"
 cask "obs"
 cask "activitywatch"
+cask 'calibre'
+cask 'webstorm'
