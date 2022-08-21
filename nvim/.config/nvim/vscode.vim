@@ -3,11 +3,11 @@
 " Vim editor setting.
  set textwidth=60
 
-" Make qucik scope highlight in vscode.
+" Make quick scope highlight in vscode.
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
 
-" Mappling
+" Mapping
 " Fold
 nnoremap zc <Cmd>call VSCodeNotify('editor.fold')<CR>
 nnoremap zo <Cmd>call VSCodeNotify('editor.unfold')<CR>
@@ -16,7 +16,7 @@ nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
 " Workbench action
-" Toggle Primiary Sidebar
+" Toggle Primary Sidebar
 nnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 xnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 
@@ -49,7 +49,11 @@ xnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
 nnoremap z= <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
 nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
 
-nnoremap <Leader>f <Plug>VSCodeNotify('eden-develop-environment.lint.format')<CR>
+nnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
+xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
+
+nnoremap <Leader>hc <Cmd>call VSCodeNotify('references-view.showCallHierarchy')<CR> 
+xnoremap <Leader>hc <Cmd>call VSCodeNotify('references-view.showCallHierarchy')<CR> 
 
 " TODO add move to next git chunk. same to git gutter: https://github.com/airblade/vim-gitgutter#hunks
 " TODO open file explore. use <C-n>

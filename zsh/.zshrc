@@ -1,11 +1,16 @@
+# Pyenv setup
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
 	# Proxy the WSL
 	## 获取主机 IP
 	## 主机 IP 保存在 /etc/resolv.conf 中
-	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
-	export proxy_address="http://${hostip}:7890" 
+	# export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
+	# export proxy_address="http://${hostip}:7890" 
 	# export all_proxy=$proxy_address
 	# export http_proxy=$proxy_address
 	# export https_proxy=$proxy_address
@@ -94,6 +99,11 @@ antigen use oh-my-zsh
 
 # Antigen Plugins List
 
+# Use fnm instead of zsh-nvm.
+# Reason to use nvm instead of nvm directly: https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load/
+# export NVM_AUTO_USE=true
+# antigen bundle lukechilds/zsh-nvm 
+
 # Load bundles from the default repo (oh-my-zsh)
 antigen bundle command-not-found
 
@@ -149,14 +159,6 @@ alias v="nvim"
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
-# Run Emacs in graphical display from wsl.
-# https://github.com/hubisan/emacs-wsl#run-emacs
-alias ema="
-export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
-export LIBGL_ALWAYS_INDIRECT=1
-setsid emacs
-"
-
 if [[ $OSTYPE == 'darwin'* ]]; then
 	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
 defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
@@ -168,35 +170,30 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottl
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+
+# Use Clash proxy.
+export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
+
+# Fnm setup:https://github.com/Schniz/fnm#shell-setup
+eval "$(fnm env --use-on-cd)"
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bilder/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/bilder/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bilder/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/bilder/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Nvm setup
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add TeX Live binaries to the PATH: https://www.tug.org/texlive/quickinstall.html#:~:text=Post%2Dinstall%3A%20setting%20PATH
-export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
-
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+
+
+
+# pnpm
+export PNPM_HOME="/Users/birudo/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm endexport PATH="/usr/local/sbin:$PATH"
+# Adding from the brew doctor warning 
+export PATH="/usr/local/sbin:$PATH"
+
+PATH="/Users/birudo/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/birudo/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/birudo/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/birudo/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
