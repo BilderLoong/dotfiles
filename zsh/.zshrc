@@ -159,6 +159,12 @@ alias v="nvim"
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
+# Personal Used Variables
+
+# Make it easy to asscess dotfiles
+# Note that to use tidle expansion, 
+df=~/Project/dotfiles
+
 if [[ $OSTYPE == 'darwin'* ]]; then
 	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
 defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true

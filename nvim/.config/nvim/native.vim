@@ -28,7 +28,8 @@ xnoremap <Leader>y "*y
 nnoremap <Leader>p "*p
 xnoremap <Leader>p "*p
 
-noremap! jk <C-c>
+" noremap! jk <C-c>
+noremap! jk <Esc>
 
 " Set format option, make format line (gq) work for Chinese. 
 set formatoptions+=mM

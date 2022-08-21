@@ -16,14 +16,18 @@ nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
 " Workbench action
-" Toggle Primary Sidebar
+" Toggle Primary Sidebar.
 nnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 xnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
+
+" Toggle Second Sidebar.
+nnoremap <M-n> :call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
+xnoremap <M-n> :call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
 
 nnoremap <M-j> :call VSCodeNotify('workbench.action.togglePanel')<CR>
 xnoremap <M-j> :call VSCodeNotify('workbench.action.togglePanel')<CR>
 
-" Move cursor between windows in a tab
+" Move cursor between windows in a tab.
 nnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
 xnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
 nnoremap <M-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
@@ -55,7 +59,13 @@ xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard
 nnoremap <Leader>hc <Cmd>call VSCodeNotify('references-view.showCallHierarchy')<CR> 
 xnoremap <Leader>hc <Cmd>call VSCodeNotify('references-view.showCallHierarchy')<CR> 
 
-" TODO add move to next git chunk. same to git gutter: https://github.com/airblade/vim-gitgutter#hunks
+" The below doesn't work.
+" Jump between git hunk, https://github.com/airblade/vim-gitgutter#hunks
+nnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR> 
+xnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR> 
+nnoremap ]c <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR> 
+xnoremap ]c <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR> 
+
 " TODO open file explore. use <C-n>
 " TODO open git aside. Maybe using :G
 
