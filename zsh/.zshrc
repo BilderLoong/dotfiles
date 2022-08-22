@@ -1,11 +1,16 @@
+# Pyenv setup
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
 	# Proxy the WSL
 	## 获取主机 IP
 	## 主机 IP 保存在 /etc/resolv.conf 中
-	export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
-	export proxy_address="http://${hostip}:7890" 
+	# export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
+	# export proxy_address="http://${hostip}:7890" 
 	# export all_proxy=$proxy_address
 	# export http_proxy=$proxy_address
 	# export https_proxy=$proxy_address
@@ -94,7 +99,7 @@ antigen use oh-my-zsh
 
 # Antigen Plugins List
 
-# Use fnm intead of zsh-nvm.
+# Use fnm instead of zsh-nvm.
 # Reason to use nvm instead of nvm directly: https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load/
 # export NVM_AUTO_USE=true
 # antigen bundle lukechilds/zsh-nvm 
@@ -113,6 +118,9 @@ antigen bundle zsh-users/zsh-autosuggestions # end key or right arrow key accept
 
 # Additional completion definitions for Zsh.
 antigen bundle zsh-users/zsh-completions
+
+# z - jump around
+antigen bundle rupa/z
 
 # Tell Antigen that you're done.
 antigen apply
@@ -178,13 +186,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-# Fnm setup:https://github.com/Schniz/fnm#shell-setup
-eval "$(fnm env --use-on-cd)"
 
-# Pyenv setup
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
 
 # pnpm
 export PNPM_HOME="/Users/birudo/Library/pnpm"
