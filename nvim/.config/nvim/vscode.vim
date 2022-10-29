@@ -17,25 +17,25 @@ nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
 " Workbench action
 " Toggle Primary Sidebar.
-nnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
-xnoremap <M-b> :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
+nnoremap <M-b> <Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
+xnoremap <M-b> <Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 
 " Toggle Second Sidebar.
-nnoremap <M-n> :call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
-xnoremap <M-n> :call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
+nnoremap <M-n> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
+xnoremap <M-n> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
 
-nnoremap <M-j> :call VSCodeNotify('workbench.action.togglePanel')<CR>
-xnoremap <M-j> :call VSCodeNotify('workbench.action.togglePanel')<CR>
+nnoremap <M-j> <Cmd>call VSCodeNotify('workbench.action.togglePanel')<CR>
+xnoremap <M-j> <Cmd>call VSCodeNotify('workbench.action.togglePanel')<CR>
 
 " Move cursor between windows in a tab.
-nnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
-xnoremap <M-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
-nnoremap <M-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
-xnoremap <M-k> :call VSCodeNotify('workbench.action.navigateUp')<CR>
-nnoremap <M-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
-xnoremap <M-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
-nnoremap <M-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
-xnoremap <M-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
+nnoremap <M-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
+xnoremap <M-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
+nnoremap <M-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
+xnoremap <M-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
+nnoremap <M-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
+xnoremap <M-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
+nnoremap <M-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
+xnoremap <M-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

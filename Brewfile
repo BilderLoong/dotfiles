@@ -37,3 +37,4 @@ cask "obs"
 cask "activitywatch"
 cask 'calibre'
 cask 'webstorm'
+cask 'sourcetree'
