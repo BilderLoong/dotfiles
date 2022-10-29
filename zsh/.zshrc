@@ -5,16 +5,16 @@
 
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
-	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
-	# Proxy the WSL
-	## 获取主机 IP
-	## 主机 IP 保存在 /etc/resolv.conf 中
-	# export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
-	# export proxy_address="http://${hostip}:7890" 
-	# export all_proxy=$proxy_address
-	# export http_proxy=$proxy_address
-	# export https_proxy=$proxy_address
-	export D="/mnt/d"
+    # Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
+    # Proxy the WSL
+    ## 获取主机 IP
+    ## 主机 IP 保存在 /etc/resolv.conf 中
+    # export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+    # export proxy_address="http://${hostip}:7890"
+    # export all_proxy=$proxy_address
+    # export http_proxy=$proxy_address
+    # export https_proxy=$proxy_address
+    export D="/mnt/d"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -41,7 +41,7 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
- HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -87,11 +87,11 @@ ZSH_THEME="robbyrussell"
 
 # Plugins
 
-# Antigen plugins 
+# Antigen plugins
 # Init Antigen
 # If antigen.zsh don't exist, install it.
 if [[ ! -e ~/antigen.zsh ]]; then
-	curl -L git.io/antigen > ~/antigen.zsh
+    curl -L git.io/antigen > ~/antigen.zsh
 fi
 source ~/antigen.zsh
 # Load the oh-my-zsh's library
@@ -102,7 +102,7 @@ antigen use oh-my-zsh
 # Use fnm instead of zsh-nvm.
 # Reason to use nvm instead of nvm directly: https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load/
 # export NVM_AUTO_USE=true
-# antigen bundle lukechilds/zsh-nvm 
+# antigen bundle lukechilds/zsh-nvm
 
 # Load bundles from the default repo (oh-my-zsh)
 antigen bundle command-not-found
@@ -140,6 +140,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR='nvim'
+export PATH="$PATH:~/Project/playground/bin"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -162,29 +163,32 @@ alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 # Personal Used Variables
 
 # Make it easy to asscess dotfiles
-# Note that to use tidle expansion, 
+# Note that to use tidle expansion,
 df=~/Project/dotfiles
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
-defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
-defaults write net.ichi2.anki NSAppSleepDisabled -bool true
-defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
-
-# Change the homebrew packages source.
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-
-# Use Clash proxy.
-export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
-
-# Fnm setup:https://github.com/Schniz/fnm#shell-setup
-eval "$(fnm env --use-on-cd)"
+    # Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
+    defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
+    defaults write net.ichi2.anki NSAppSleepDisabled -bool true
+    defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
+    
+    # Change the homebrew packages source.
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+    export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+    
+    # Use Clash proxy.
+    export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
+    
+    # Fnm setup:https://github.com/Schniz/fnm#shell-setup
+    eval "$(fnm env --use-on-cd)"
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Tex live path: https://www.tug.org/texlive/quickinstall.html
+export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
 
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -195,8 +199,9 @@ export PATH="$PNPM_HOME:$PATH"
 export PNPM_HOME="/Users/birudo/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm endexport PATH="/usr/local/sbin:$PATH"
-# Adding from the brew doctor warning 
+# Adding from the brew doctor warning
 export PATH="/usr/local/sbin:$PATH"
+
 
 PATH="/Users/birudo/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/birudo/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
