@@ -2,7 +2,9 @@
 
 let mapleader = "\<Space>"
 
-" Key mapping	" Treat long lines as break lines
+" Key mapping	
+
+" Treat long lines as break lines
 map j gj
 map k gk
 
@@ -33,6 +35,10 @@ noremap! jk <Esc>
 
 " Set format option, make format line (gq) work for Chinese. 
 set formatoptions+=mM
+
+" Snippet Maping
+nmap <Leader>n ONOTE@HZL<Esc>gcc
+
 
 " Ordinary neovim
 if (!exists('g:vscode'))

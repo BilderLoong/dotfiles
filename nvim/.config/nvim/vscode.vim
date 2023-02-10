@@ -11,7 +11,6 @@ highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=und
 " Fold
 nnoremap zc <Cmd>call VSCodeNotify('editor.fold')<CR>
 nnoremap zo <Cmd>call VSCodeNotify('editor.unfold')<CR>
-nnoremap zt <Cmd>call VSCodeNotify('editor.toggleFold')<CR>
 nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
 nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
 
@@ -59,7 +58,16 @@ xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard
 nnoremap <Leader>hc <Cmd>call VSCodeNotify('references-view.showCallHierarchy')<CR> 
 xnoremap <Leader>hc <Cmd>call VSCodeNotify('references-view.showCallHierarchy')<CR> 
 
-" The below doesn't work.
+" Git
+
+" Stage selected range 
+" https://github.com/airblade/vim-gitgutter#hunks
+nnoremap <Leader>hs <Cmd>call VSCodeNotify('git.stageSelectedRanges')<CR> 
+xnoremap <Leader>hs <Cmd>call VSCodeNotify('git.stageSelectedRanges')<CR> 
+nnoremap <Leader>hu <Cmd>call VSCodeNotify('git.unstageSelectedRanges')<CR> 
+xnoremap <Leader>hu <Cmd>call VSCodeNotify('git.unstageSelectedRanges')<CR> 
+
+" The below paragraph doesn't work.
 " Jump between git hunk, https://github.com/airblade/vim-gitgutter#hunks
 nnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR> 
 xnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR> 

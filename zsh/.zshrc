@@ -104,6 +104,8 @@ antigen use oh-my-zsh
 # export NVM_AUTO_USE=true
 # antigen bundle lukechilds/zsh-nvm 
 
+eval "$(fnm env --use-on-cd)"
+
 # Load bundles from the default repo (oh-my-zsh)
 antigen bundle command-not-found
 
@@ -159,6 +161,18 @@ alias v="nvim"
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
+# The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
+wechatcli () {
+  wechatcli='/Applications/wechatwebdevtools.app/Contents/MacOS/cli'
+
+  if [[ -z "$1" ]] 
+  then
+    "${wechatcli}"
+  else
+   ${wechatcli} open --project ~/Project/menuorder-new-rms-h5-$1/apps/menuorder/dist/merchant
+  fi
+}
+
 # Personal Used Variables
 
 # Make it easy to asscess dotfiles
@@ -166,19 +180,19 @@ alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 df=~/Project/dotfiles
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-	# Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
-defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
-defaults write net.ichi2.anki NSAppSleepDisabled -bool true
-defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
+    # Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
+  defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
+  defaults write net.ichi2.anki NSAppSleepDisabled -bool true
+  defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
 
-# Change the homebrew packages source.
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+  # Change the homebrew packages source.
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
-# Use Clash proxy.
-# export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
+  # Use Clash proxy.
+  # export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -200,3 +214,8 @@ PERL5LIB="/Users/birudo/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5L
 PERL_LOCAL_LIB_ROOT="/Users/birudo/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/birudo/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
