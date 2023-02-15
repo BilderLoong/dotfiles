@@ -82,4 +82,7 @@ Plug 'folke/lua-dev.nvim', Cond(!exists('g:vscode'))
 " Racket https://docs.racket-lang.org/guide/Vim.html
 Plug 'benknoble/vim-racket', Cond(!exists('g:vscode'))
 
+" Text objects 
+Plug 'wellle/targets.vim'
+
 call plug#end() 
