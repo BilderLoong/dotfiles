@@ -21,6 +21,10 @@ brew "pyenv"
 brew "bpython"
 brew "python"
 brew "virtualenv"
+brew "fnm"
+brew "go"
+
+
 
 cask "anki"
 cask "deepl"
