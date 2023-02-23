@@ -1,6 +1,9 @@
 tap "homebrew/bundle"
 tap "homebrew/cask", "https://mirrors.ustc.edu.cn/homebrew-cask.git"
 tap "homebrew/core", "https://mirrors.aliyun.com/homebrew/homebrew-core.git"
+tap "buo/cask-upgrade"
+tap "homebrew/cask-fonts"
+
 brew "bat"
 brew "ffmpeg"
 brew "fzf"

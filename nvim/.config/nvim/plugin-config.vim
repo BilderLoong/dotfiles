@@ -1,6 +1,5 @@
 
 " Common config
-
 " quick-scope
 " You should put the following block before you set colorscheme <colorsname>.
 " source: https://github.com/unblevable/quick-scope#customize-colors
