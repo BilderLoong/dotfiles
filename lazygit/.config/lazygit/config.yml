@@ -1,0 +1,5 @@
+mainPanelSplitMode: 'horizontal' # one of 'horizontal' | 'flexible' | 'vertical'
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never

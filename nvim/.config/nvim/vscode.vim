@@ -74,6 +74,11 @@ xnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR>
 nnoremap ]c <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR> 
 xnoremap ]c <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR> 
 
+
+nnoremap <Leader>f <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR> 
+xnoremap <Leader>f <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR> 
+
+
 " TODO open file explore. use <C-n>
 " TODO open git aside. Maybe using :G
 
