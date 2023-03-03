@@ -16,7 +16,7 @@ vim.opt.relativenumber = true
 -- Folding
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = "nvim_treesitgre#sbydexpr()"
 vim.opt.foldenable = true
 
 
@@ -36,8 +36,10 @@ lvim.keys.normal_mode["<C-v>"] = { '<cmd>lua require("export-to-vscode").launch(
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- `g` namespace
-vim.keymap.set({ 'n' }, 'gd', vim.lsp.buf.type_definition())
+vim.keymap.set({ 'n' }, 'gy', vim.lsp.buf.type_definition)
 
+-- The default <C-\> conflict with the <C-\>_<C-N> which is used to exit Terminal-mode see :help Terminal-mode
+lvim.builtin.terminal.open_mapping = "<C-`>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -68,16 +70,19 @@ vim.keymap.set({ 'n' }, 'gd', vim.lsp.buf.type_definition())
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["sm"] = {
+  "<cmd>Telescope marks<CR>", "Marks"
+}
 
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
--- }
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Trouble",
+  r = { "<cmd>Trouble lsp_references<cr>", "References" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -85,7 +90,7 @@ lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx",
@@ -238,10 +243,19 @@ lvim.plugins = { {
       }
     }
   end
-}, {
-  "nvim-treesitter/playground",
-  event = "BufRead"
-}, {
+},
+
+  -- { "tpope/vim-repeat" },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+  {
+    "nvim-treesitter/playground",
+    event = "BufRead"
+  }, {
   "windwp/nvim-ts-autotag",
   config = function()
     require("nvim-ts-autotag").setup()
@@ -257,17 +271,93 @@ lvim.plugins = { {
   'michaeljsmith/vim-indent-object',
   opt = true,
   event = "BufRead",
-}, {
+},
+
+  {
+    "RRethy/nvim-treesitter-textsubjects",
+    opt = true,
+    event = "BufRead",
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        textsubjects = {
+          enable = true,
+          prev_selection = ',', -- (Optional) keymap to select the previous selection
+          keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+            ['i;'] = 'textsubjects-container-inner',
+          },
+        },
+      }
+    end
+
+
+  },
+  {
+
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    opt = true,
+    event = "BufRead",
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+
+
+        textobjects = {
+          select = {
+            enable = true,
+
+            -- Automatically jump forward to textobj, similar to targets.vim
+            lookahead = true,
+
+            keymaps = {
+              -- You can use the capture groups defined in textobjects.scm
+              ["af"] = "@function.outer",
+              ["if"] = "@function.inner",
+              ["ac"] = "@class.outer",
+              -- You can optionally set descriptions to the mappings (used in the desc parameter of
+              -- nvim_buf_set_keymap) which plugins like which-key display
+              ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+              -- You can also use captures from other query groups like `locals.scm`
+              ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+            },
+            -- You can choose the select mode (default is charwise 'v')
+            --
+            -- Can also be a function which gets passed a table with the keys
+            -- * query_string: eg '@function.inner'
+            -- * method: eg 'v' or 'o'
+            -- and should return the mode ('v', 'V', or '<c-v>') or a table
+            -- mapping query_strings to modes.
+            selection_modes = {
+              ['@parameter.outer'] = 'v', -- charwise
+              ['@class.outer'] = '<c-v>', -- blockwise
+            },
+            -- If you set this to `true` (default is `false`) then any textobject is
+            -- extended to include preceding or succeeding whitespace. Succeeding
+            -- whitespace has priority in order to act similarly to eg the built-in
+            -- `ap`.
+            --
+            -- Can also be a function which gets passed a table with the keys
+            -- * query_string: eg '@function.inner'
+            -- * selection_mode: eg 'v'
+            -- and should return true of false
+            include_surrounding_whitespace = true,
+          },
+        },
+      }
+    end
+  }, {
 
   "elijahmanor/export-to-vscode.nvim",
   opt = true,
   event = "BufRead"
-}, {
-
-  "nvim-telescope/telescope-symbols.nvim",
-  opt = true,
-  event = "BufRead"
-}, {
+},
+  {
+    "nvim-telescope/telescope-symbols.nvim",
+    opt = true,
+    event = "BufRead"
+  }, {
 
   "wellle/targets.vim",
   opt = true,
@@ -281,13 +371,21 @@ lvim.plugins = { {
     config = function()
       vim.g.rainbow_active = 1
     end
-  } -- {
-  --   "folke/trouble.nvim",
-  --   cmd = "TroubleToggle",
-  -- },
+  }, {
+  "junegunn/fzf.vim",
+  requires = { { "junegunn/fzf", run = ":call fzf#install()<CR>" } }
+}, {
+  "folke/trouble.nvim",
+  cmd = "TroubleToggle",
+},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
+-- https://github.com/nvim-telescope/telescope.nvim/issues/699#issuecomment-1159637962
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*" },
+  command = "normal zx",
+})
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },
 --   -- enable wrap mode for json files only
