@@ -40,7 +40,7 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 vim.keymap.set({ 'n' }, 'gy', vim.lsp.buf.type_definition)
 
 -- The default <C-\> conflict with the <C-\>_<C-N> which is used to exit Terminal-mode see :help Terminal-mode
-lvim.builtin.terminal.open_mapping = "<C-`>"
+lvim.builtin.terminal.open_mapping = "<M-t>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -64,8 +64,8 @@ lvim.builtin.terminal.open_mapping = "<C-`>"
 --     ["<C-k>"] = actions.move_selection_previous,
 --   },
 -- }
-
 -- Change theme settings
+
 -- lvim.builtin.theme.options.dim_inactive = true
 -- lvim.builtin.theme.options.style = "storm"
 
@@ -236,7 +236,7 @@ lvim.plugins = { {
       throttle = true, -- Throttles plugin updates (may improve performance)
       max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
       patterns = {
-                       -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+        -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
         -- For all filetypes
         -- Note that setting an entry here replaces all other patterns for this entry.
         -- By setting the 'default' entry below, you can control which nodes you want to
