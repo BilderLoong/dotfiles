@@ -26,6 +26,7 @@ brew "python"
 brew "virtualenv"
 brew "fnm"
 brew "go"
+brew "rust"
 
 
 

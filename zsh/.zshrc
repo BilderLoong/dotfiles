@@ -196,7 +196,6 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   # export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
     
     # Fnm setup:https://github.com/Schniz/fnm#shell-setup
-    eval "$(fnm env --use-on-cd)"
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
