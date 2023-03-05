@@ -40,7 +40,7 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 vim.keymap.set({ 'n' }, 'gy', vim.lsp.buf.type_definition)
 
 -- The default <C-\> conflict with the <C-\>_<C-N> which is used to exit Terminal-mode see :help Terminal-mode
-lvim.builtin.terminal.open_mapping = "<M-t>"
+lvim.builtin.terminal.open_mapping = "<M-\\>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
