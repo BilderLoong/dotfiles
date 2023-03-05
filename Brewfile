@@ -27,6 +27,7 @@ brew "virtualenv"
 brew "fnm"
 brew "go"
 brew "rust"
+brew "lazygit"
 
 
 
