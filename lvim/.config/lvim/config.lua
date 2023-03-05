@@ -20,6 +20,7 @@ vim.opt.foldexpr = "nvim_treesitgre#sbydexpr()"
 vim.opt.foldenable = true
 
 
+
 -- runtime path
 -- :help vim.opt and :help vim.o
 -- To resolve the problem: https://github.com/nvim-treesitter/nvim-treesitter#i-get-query-error-invalid-node-type-at-position
@@ -231,10 +232,11 @@ lvim.plugins = { {
   "romgrk/nvim-treesitter-context",
   config = function()
     require("treesitter-context").setup {
-      enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+      enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
       throttle = true, -- Throttles plugin updates (may improve performance)
-      max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
-      patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+      max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
+      patterns = {
+                       -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
         -- For all filetypes
         -- Note that setting an entry here replaces all other patterns for this entry.
         -- By setting the 'default' entry below, you can control which nodes you want to
@@ -291,11 +293,8 @@ lvim.plugins = { {
         },
       }
     end
-
-
   },
   {
-
     "nvim-treesitter/nvim-treesitter-textobjects",
     opt = true,
     event = "BufRead",
@@ -307,10 +306,8 @@ lvim.plugins = { {
         textobjects = {
           select = {
             enable = true,
-
             -- Automatically jump forward to textobj, similar to targets.vim
             lookahead = true,
-
             keymaps = {
               -- You can use the capture groups defined in textobjects.scm
               ["af"] = "@function.outer",
@@ -348,7 +345,6 @@ lvim.plugins = { {
       }
     end
   }, {
-
   "elijahmanor/export-to-vscode.nvim",
   opt = true,
   event = "BufRead"
@@ -358,7 +354,6 @@ lvim.plugins = { {
     opt = true,
     event = "BufRead"
   }, {
-
   "wellle/targets.vim",
   opt = true,
   event = "BufRead"
