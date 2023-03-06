@@ -1,4 +1,4 @@
-mainPanelSplitMode: 'horizontal' # one of 'horizontal' | 'flexible' | 'vertical'
+mainPanelSplitMode: 'flexible' # one of 'horizontal' | 'flexible' | 'vertical'
 git:
   paging:
     colorArg: always
