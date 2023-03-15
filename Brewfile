@@ -29,6 +29,7 @@ brew "go"
 brew "rust"
 brew "lazygit"
 brew "git-delta"
+brew "imagemagick"
 
 cask "anki"
 cask "deepl"

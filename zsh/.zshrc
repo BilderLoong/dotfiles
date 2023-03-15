@@ -7,8 +7,9 @@
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
 	# Proxy the WSL
+  #
 	## 获取主机 IP
-	## 主机 IP 保存在 /etc/resolv.conf 中
+	# 主机 IP 保存在 /etc/resolv.conf 中
 	# export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
 	# export proxy_address="http://${hostip}:7890" 
 	# export all_proxy=$proxy_address
