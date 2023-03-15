@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-surround'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'ggandor/lightspeed.nvim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VSCode plugs
@@ -84,6 +85,7 @@ Plug 'benknoble/vim-racket', Cond(!exists('g:vscode'))
 
 " Text objects 
 Plug 'wellle/targets.vim'
+
 
 call plug#end() 
 

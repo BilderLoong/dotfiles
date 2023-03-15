@@ -88,8 +88,6 @@ nmap gcc <Plug>VSCodeCommentaryLine
 
 
 " easymotion config
-nmap s         <Plug>(easymotion-s2)
-xmap s         <Plug>(easymotion-s2)
 omap z         <Plug>(easymotion-s2)
 nmap <Leader>s <Plug>(easymotion-sn)
 xmap <Leader>s <Plug>(easymotion-sn)

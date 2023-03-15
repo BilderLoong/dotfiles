@@ -55,6 +55,7 @@ set formatoptions+=mM
 " Snippet Maping
 nmap <Leader>n ONOTE@HZL<Esc>gcc
 
+lua vim.api.nvim_set_hl(0, 'Cursor', { reverse = true })
 
 " Ordinary neovim
 if (!exists('g:vscode'))
