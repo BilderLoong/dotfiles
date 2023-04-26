@@ -1,7 +1,7 @@
 # Pyenv setup
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
@@ -160,6 +160,7 @@ alias zshconfig="source ~/.zshrc"
 alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config push'; git pull origin HEAD; git push origin HEAD; cd - "
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias v="nvim"
+alias lv="lvim"
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
@@ -173,6 +174,16 @@ wechatcli () {
   else
    ${wechatcli} open --project ~/Project/menuorder-new-rms-h5-$1/apps/menuorder/dist/merchant
   fi
+}
+
+# proxy()
+function proxy() {
+  local port=${1:-7890}
+  local proxy_host="localhost:$port"
+  export http_proxy="http://$proxy_host"
+  export https_proxy="http://$proxy_host"
+  echo "HTTP proxy set to $http_proxy"
+  echo "HTTPS proxy set to $https_proxy"
 }
 
 # Personal Used Variables
