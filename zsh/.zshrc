@@ -1,15 +1,18 @@
+# zmodload zsh/zprof
+eval "$(starship init zsh)"
+eval $(thefuck --alias)
+
 # Pyenv setup
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
 	# Proxy the WSL
-  #
 	## 获取主机 IP
-	# 主机 IP 保存在 /etc/resolv.conf 中
+	## 主机 IP 保存在 /etc/resolv.conf 中
 	# export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*') 
 	# export proxy_address="http://${hostip}:7890" 
 	# export all_proxy=$proxy_address
@@ -21,15 +24,10 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
+# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#user-config
+export XDG_CONFIG_HOME="$HOME/.config"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -42,7 +40,7 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+ HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -88,45 +86,51 @@ HYPHEN_INSENSITIVE="true"
 
 # Plugins
 
-# Antigen plugins 
-# Init Antigen
-# If antigen.zsh don't exist, install it.
-if [[ ! -e ~/antigen.zsh ]]; then
-	curl -L git.io/antigen > ~/antigen.zsh
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
 fi
-source ~/antigen.zsh
-# Load the oh-my-zsh's library
-antigen use oh-my-zsh
 
-# Antigen Plugins List
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Use fnm instead of zsh-nvm.
-# Reason to use nvm instead of nvm directly: https://blog.mattclemente.com/2020/06/26/oh-my-zsh-slow-to-load/
-# export NVM_AUTO_USE=true
-# antigen bundle lukechilds/zsh-nvm 
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
+
+# zinit plugins 
+
+# The vi escape key in all modes (default is ^[ => ESC)
+ZVM_VI_ESCAPE_BINDKEY=jk
+zinit wait lucid light-mode for \
+    OMZP::command-not-found \
+    OMZL::git.zsh\
+    OMZP::git \
+    zsh-users/zsh-syntax-highlighting \
+    zsh-users/zsh-completions \
+    agkozak/zsh-z 
+
+zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
+      zsh-users/zsh-autosuggestions
+
+zinit light-mode for \
+      jeffreytse/zsh-vi-mode 
+
+# zinit ice svn 
+# zinit snippet OMZP::aliases 
 
 eval "$(fnm env --use-on-cd)"
-
-# Load bundles from the default repo (oh-my-zsh)
-antigen bundle command-not-found
-
-# Load bundles from external repos
-antigen bundle jeffreytse/zsh-vi-mode
-ZVM_VI_ESCAPE_BINDKEY=jk # The vi escape key in all modes (default is ^[ => ESC)
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# Fish-like fast/unobtrusive autosuggestions for zsh.
-antigen bundle zsh-users/zsh-autosuggestions # end key or right arrow key accept suggestion.
-
-# Additional completion definitions for Zsh.
-antigen bundle zsh-users/zsh-completions
-
-# z - jump around
-antigen bundle rupa/z
-
-# Tell Antigen that you're done.
-antigen apply
 
 # Oh-My-Zsh plugins custom plugins
 # Which plugins would you like to load?
@@ -134,16 +138,14 @@ antigen apply
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export EDITOR='nvim'
-export PATH="$PATH:~/Project/playground/bin"
+export EDITOR='lvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -161,6 +163,18 @@ alias configpush="cd ~/dotfiles; stow -R *; git add .; git commit -m 'config pus
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias v="nvim"
 alias lv="lvim"
+alias gwl="git worktree list"
+
+proxy (){
+  port=$1
+
+	export proxy_address="http://127.0.0.1:${port:-7890}" 
+	export all_proxy=$proxy_address
+	export http_proxy=$proxy_address
+	export https_proxy=$proxy_address
+}
+
+
 
 alias gsave='git add .; git commit -m "save"; git push origin HEAD'
 
@@ -176,14 +190,11 @@ wechatcli () {
   fi
 }
 
-# proxy()
-function proxy() {
-  local port=${1:-7890}
-  local proxy_host="localhost:$port"
-  export http_proxy="http://$proxy_host"
-  export https_proxy="http://$proxy_host"
-  echo "HTTP proxy set to $http_proxy"
-  echo "HTTPS proxy set to $https_proxy"
+# rm_all_nest_node_modules
+trash_all_nest_node_modules () {
+  directory=${1:-.}
+  echo "removing ${directory}"
+  find $1 -name 'node_modules' -type d -prune -exec trash -rf '{}' +
 }
 
 # Personal Used Variables
@@ -206,14 +217,9 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 
   # Use Clash proxy.
   # export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
-    
-    # Fnm setup:https://github.com/Schniz/fnm#shell-setup
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Tex live path: https://www.tug.org/texlive/quickinstall.html
-export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
 
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -227,7 +233,6 @@ export PATH="$PNPM_HOME:$PATH"
 # Adding from the brew doctor warning 
 export PATH="/usr/local/sbin:$PATH"
 
-
 PATH="/Users/birudo/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/birudo/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/birudo/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -238,3 +243,4 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
+# zprof
