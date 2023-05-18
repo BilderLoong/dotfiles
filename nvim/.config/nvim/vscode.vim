@@ -87,24 +87,25 @@ map gc  <Plug>VSCodeCommentary
 nmap gcc <Plug>VSCodeCommentaryLine
 
 
+" Stop using easymotion, use ggandor/lightspeed.nvim instead.
 " easymotion config
-omap z         <Plug>(easymotion-s2)
-nmap <Leader>s <Plug>(easymotion-sn)
-xmap <Leader>s <Plug>(easymotion-sn)
-omap <Leader>z <Plug>(easymotion-sn)
+" omap z         <Plug>(easymotion-s2)
+" nmap <Leader>s <Plug>(easymotion-sn)
+" xmap <Leader>s <Plug>(easymotion-sn)
+" omap <Leader>z <Plug>(easymotion-sn)
 
-nmap <Leader>a <Plug>(easymotion-jumptoanywhere)
-xmap <Leader>a <Plug>(easymotio-jumptoanywhere)
-omap <Leader>a <Plug>(easymotion-jumptoanywhere)
+" nmap <Leader>a <Plug>(easymotion-jumptoanywhere)
+" xmap <Leader>a <Plug>(easymotio-jumptoanywhere)
+" omap <Leader>a <Plug>(easymotion-jumptoanywhere)
 
-nmap <Leader>w <Plug>(easymotion-bd-w)
-xmap <Leader>w <Plug>(easymotion-bd-w)
-omap <Leader>w <Plug>(easymotion-bd-w)
+" nmap <Leader>w <Plug>(easymotion-bd-w)
+" xmap <Leader>w <Plug>(easymotion-bd-w)
+" omap <Leader>w <Plug>(easymotion-bd-w)
 
-nmap <Leader>e <Plug>(easymotion-bd-e)
-xmap <Leader>e <Plug>(easymotion-bd-e)
-omap <Leader>e <Plug>(easymotion-bd-e)
+" nmap <Leader>e <Plug>(easymotion-bd-e)
+" xmap <Leader>e <Plug>(easymotion-bd-e)
+" omap <Leader>e <Plug>(easymotion-bd-e)
 
-nmap <Leader>t <Plug>(easymotion-bd-t)
-xmap <Leader>t <Plug>(easymotion-bd-t)
-omap <Leader>t <Plug>(easymotion-bd-t)
+" nmap <Leader>t <Plug>(easymotion-bd-t)
+" xmap <Leader>t <Plug>(easymotion-bd-t)
+" omap <Leader>t <Plug>(easymotion-bd-t)

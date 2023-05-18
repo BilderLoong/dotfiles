@@ -5,7 +5,7 @@
   email = huzilong@meituan.com
 [core]
   excludesfile = /Users/birudo/.gitignore_global
-  pager = delta
+  ; pager = delta
 [alias]
   root = rev-parse --show-toplevel
 [merge]
