@@ -30,6 +30,7 @@ brew "rust"
 brew "lazygit"
 brew "git-delta"
 brew "imagemagick"
+brew "GitJournal/tap/git-auto-sync"
 
 cask "anki"
 cask "deepl"
