@@ -1,3 +1,8 @@
+
+## Directory Structure
+`./termux`: contain all config files used for termux on my nex phone.
+
+
 ## Install Package
 
 ```bash
