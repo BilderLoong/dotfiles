@@ -10,6 +10,7 @@
   root = rev-parse --show-toplevel
 [merge]
   conflictstyle = diff3
+	tool = nvimdiff
 [diff]
   colorMoved = default
 [delta]
