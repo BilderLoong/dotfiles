@@ -48,3 +48,4 @@ cask "activitywatch"
 cask 'calibre'
 cask 'webstorm'
 cask 'sourcetree'
+cask 'obsidian'
