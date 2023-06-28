@@ -263,5 +263,7 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
+#JAVA
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # zprof
