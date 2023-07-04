@@ -3,6 +3,13 @@
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
+ZSH_CUSTOM=~/zsh/custom
+
+# https://stackoverflow.com/a/54618022/11602758
+if [[ $(uname) == "Darwin" ]]; then
+    source "$ZSH_CUSTOM/macOS.sh"
+fi
+
 
 # Pyenv setup
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -265,5 +272,12 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 
 #JAVA
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Android
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
+
+alias emulator="cd $ANDROID_HOME/tools && emulator"
+
+
 
 # zprof
