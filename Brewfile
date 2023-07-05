@@ -31,6 +31,7 @@ brew "lazygit"
 brew "git-delta"
 brew "imagemagick"
 brew "GitJournal/tap/git-auto-sync"
+brew "mp3gain"
 
 cask "anki"
 cask "deepl"
