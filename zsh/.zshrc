@@ -109,7 +109,7 @@ export EDITOR='lvim'
 
 # Shortcut
 alias zshconfig="source ~/.zshrc"
-alias configpush="cd $HOME/Projects/dotfiles; stow -R *; git-auto-sync w . &"
+alias configpush="cd $HOME/Projects/dotfiles &&  git-auto-sync w . &"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias v="nvim"
 alias lv="lvim"
