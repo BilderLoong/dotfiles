@@ -203,7 +203,7 @@ proxy (){
 
 
 
-alias gsave='git pull origin HEAD && git add . && git commit -m "save" && git push origin HEAD'
+alias gsave='git add . && git commit -m "save" && git pull origin HEAD &&  git push origin HEAD'
 
 # The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
 wechatcli () {
