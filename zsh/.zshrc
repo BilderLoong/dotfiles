@@ -3,6 +3,8 @@
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
+test
+
 ZSH_CUSTOM=~/zsh/custom
 
 # https://stackoverflow.com/a/54618022/11602758
