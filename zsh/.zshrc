@@ -12,7 +12,6 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 
-asdfasdf
 
 # Pyenv setup
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -51,7 +50,10 @@ export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#user-config
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export HISTFILE="$HOME/.zsh_history"
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
 
 
 HYPHEN_INSENSITIVE="true"
@@ -221,7 +223,7 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
 #JAVA
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Android
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
