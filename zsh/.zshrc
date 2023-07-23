@@ -29,9 +29,9 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# export http_proxy=$proxy_address
 	# export https_proxy=$proxy_address
 	export D="/mnt/d"
-# For Android Studio
+  # For Android Studio
   export GDK_SCALE=3
-export GDK_DPI_SCALE=0.5
+  export GDK_DPI_SCALE=0.5
 
 fi
 
