@@ -32,7 +32,7 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
   # For Android Studio
   export GDK_SCALE=3
   export GDK_DPI_SCALE=0.5
-  alias android-studio="/opt/android-studio/bin/studio.sh"
+  alias android-studio="/opt/android-studio/bin/studio.sh & 2>&1 1>/dev/null"
 
 fi
 
