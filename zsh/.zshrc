@@ -11,6 +11,8 @@ if [[ $(uname) == "Darwin" ]]; then
     source "$ZSH_CUSTOM/macOS.sh"
 fi
 
+  export GDK_SCALE=0.5
+  export GDK_DPI_SCALE=1.5
 
 
 # Pyenv setup
@@ -30,8 +32,6 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# export http_proxy=$proxy_address
 	# export https_proxy=$proxy_address
 	export D="/mnt/d"
-  export GDK_SCALE=0.5
-  export GDK_DPI_SCALE=1.5
 fi
 
 if [ $(ps -ef|grep -c com.termux ) -gt 0 ]; then
