@@ -1,1 +1,1 @@
-if vim..
+if vim.g
