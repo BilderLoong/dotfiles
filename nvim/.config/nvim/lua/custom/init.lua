@@ -1,1 +1,1 @@
-if vim.fn.exists()
+if vim.fn.exists('g:vs')
