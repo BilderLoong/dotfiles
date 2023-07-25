@@ -1,1 +1,1 @@
-if vim.fn.
+if vim.fn.exists()
