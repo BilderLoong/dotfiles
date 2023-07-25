@@ -1,4 +1,3 @@
-
 vim.cmd([[
 " All config expect plug relate to vscode is stored in this file
 
