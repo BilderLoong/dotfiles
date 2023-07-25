@@ -1,1 +1,1 @@
-if vim.fn.exists('g:vs')
+if vim.fn.exists('g:vscode')
