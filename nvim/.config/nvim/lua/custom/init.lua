@@ -1,1 +1,1 @@
-if vim.g
+if vim.g.vscode
