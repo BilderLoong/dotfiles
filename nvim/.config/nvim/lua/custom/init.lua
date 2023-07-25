@@ -1,3 +1,3 @@
-    printf("Be grateful!");
+printf("Be grateful!");
 if vim.g.vscode ~= nil then
 end
