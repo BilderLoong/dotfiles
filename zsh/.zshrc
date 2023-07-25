@@ -119,6 +119,7 @@ alias sync-config="cd $HOME/Projects/dotfiles &&  git-auto-sync w . &"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias v="nvim"
 alias lv="lvim"
+alias nv="nvim -Nu ~/Project/dotfiles-1/nvim/.config/nvim/init.lua"
 alias gwl="git worktree list"
 
 unproxy() {
