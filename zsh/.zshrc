@@ -110,7 +110,7 @@ zinit light-mode for \
 
 eval "$(fnm env --use-on-cd)"
 
-export EDITOR='lvim'
+export EDITOR='nvim'
 
 
 # Shortcut
