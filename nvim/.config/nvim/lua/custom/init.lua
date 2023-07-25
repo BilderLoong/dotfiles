@@ -1,1 +1,1 @@
-if vim.g.vscode
+if vim.g.vscode !==nil
