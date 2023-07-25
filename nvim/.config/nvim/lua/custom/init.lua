@@ -1,3 +1,0 @@
-if vim. then
-    
-end
