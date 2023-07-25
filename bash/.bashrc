@@ -22,6 +22,8 @@ HISTFILESIZE=2000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+export GDK_SCALE=2.5
+export GDK_DPI_SCALE=1.5
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
