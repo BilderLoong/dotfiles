@@ -99,7 +99,25 @@ local plugins = {
     config=function ()
      require('auto-save').setup{}
     end
-  },
+  }, 
+  {
+   "williamboman/mason.nvim",
+   opts = {
+      ensure_installed = {
+        -- lua
+        "lua-language-server",
+        "stylua",
+				"luacheck",
+
+        -- Web 
+        "html-lsp",
+        "prettier",
+        "tsserver",
+        "cssls",
+
+      },
+    },
+  }
 }
 
 return plugins
