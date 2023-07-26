@@ -9,7 +9,7 @@ local sources = {
   -- Web developement
    formatting.prettierd,
    ca.eslint_d,
-  null_ls.builtins.code_actions.gitrebase,
+   ca.gitrebase,
 
    formatting.stylua,
 
