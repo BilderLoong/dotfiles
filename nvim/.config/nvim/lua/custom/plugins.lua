@@ -119,7 +119,7 @@ local plugins = {
         "html-lsp",
         "prettier",
         "typescript-language-server",
-        "cssls",
+        -- "cssls",
         "vuejs/vetur ",
 
         -- MP
