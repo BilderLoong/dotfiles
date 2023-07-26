@@ -1,13 +1,13 @@
-local BufEvents =  { 'BufReadPost', 'BufAdd', 'BufNewFile' }
+local BufEnterLike =  { 'BufReadPost', 'BufAdd', 'BufNewFile' }
 
 local plugins = {
   {
   'unblevable/quick-scope',
-  event = BufEvents,
+  event = BufEnterLike,
   },
   {
     'ggandor/lightspeed.nvim',
-    event = BufEvents,
+    event = BufEnterLike,
   },
     {
     "kylechui/nvim-surround",
@@ -21,17 +21,17 @@ local plugins = {
   },
   {
     "wellle/targets.vim",
-    event = BufEvents
+    event = BufEnterLike
   },
 {
   "elijahmanor/export-to-vscode.nvim",
-  event = BufEvents
+  event = BufEnterLike
   },
 
   {
     "RRethy/nvim-treesitter-textsubjects",
     opt = true,
-    event = BufEvents,
+    event = BufEnterLike,
     requires = "nvim-treesitter/nvim-treesitter",
     config = function()
       require('nvim-treesitter.configs').setup {
@@ -56,7 +56,7 @@ local plugins = {
   },
   {
     "nvim-treesitter/playground",
-    event = BufEvents
+    event = BufEnterLike
   },
 
   {
