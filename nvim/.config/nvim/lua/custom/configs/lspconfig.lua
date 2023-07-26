@@ -12,5 +12,5 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.tsserver.setup{
-  
+
 }
