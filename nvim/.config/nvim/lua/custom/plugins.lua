@@ -1,31 +1,31 @@
-local BufEnterLike =  { 'BufReadPost', 'BufAdd', 'BufNewFile' }
+local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
 
 local plugins = {
   {
-  'unblevable/quick-scope',
-  event = BufEnterLike,
-  },
-{
-    'ggandor/lightspeed.nvim',
+    "unblevable/quick-scope",
     event = BufEnterLike,
   },
-    {
+  {
+    "ggandor/lightspeed.nvim",
+    event = BufEnterLike,
+  },
+  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    keys= {'c','y','d'},
+    keys = { "c", "y", "d" },
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
   },
   {
     "wellle/targets.vim",
-    event = BufEnterLike
+    event = BufEnterLike,
   },
-{
-  "elijahmanor/export-to-vscode.nvim",
-  event = BufEnterLike
+  {
+    "elijahmanor/export-to-vscode.nvim",
+    event = BufEnterLike,
   },
 
   {
@@ -34,39 +34,39 @@ local plugins = {
     event = BufEnterLike,
     requires = "nvim-treesitter/nvim-treesitter",
     config = function()
-      require('nvim-treesitter.configs').setup {
+      require("nvim-treesitter.configs").setup {
         textsubjects = {
           enable = true,
-          prev_selection = ',', -- (Optional) keymap to select the previous selection
+          prev_selection = ",", -- (Optional) keymap to select the previous selection
           keymaps = {
-            ['.'] = 'textsubjects-smart',
-            [';'] = 'textsubjects-container-outer',
-            ['i;'] = 'textsubjects-container-inner',
+            ["."] = "textsubjects-smart",
+            [";"] = "textsubjects-container-outer",
+            ["i;"] = "textsubjects-container-inner",
           },
         },
       }
-    end
+    end,
   },
 
- {
+  {
     "simrat39/symbols-outline.nvim",
     config = function()
-      require('symbols-outline').setup()
-    end
+      require("symbols-outline").setup()
+    end,
   },
   {
     "nvim-treesitter/playground",
-    event = BufEnterLike
+    event = BufEnterLike,
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        -- defaults 
+        -- defaults
         "vim",
         "lua",
-        -- web dev 
+        -- web dev
         "html",
         "css",
         "javascript",
@@ -75,58 +75,57 @@ local plugins = {
         "json",
         -- "vue", "svelte",
 
-       -- low level
+        -- low level
         "c",
-        "zig"
+        "zig",
       },
     },
   },
   {
-  "neovim/nvim-lspconfig",
-     dependencies = {
-     "jose-elias-alvarez/null-ls.nvim",
-     config = function()
-       require "custom.configs.null-ls"
-     end,
-   },
-   config = function()
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require "custom.configs.null-ls"
+      end,
+    },
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-   end,
-},
+    end,
+  },
   {
-  "folke/trouble.nvim",
-  cmd = "TroubleToggle",
-},
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
 
   {
     "Pocco81/auto-save.nvim",
-    event='VeryLazy',
-    config=function ()
-     require('auto-save').setup{}
-    end
+    event = "VeryLazy",
+    config = function()
+      require("auto-save").setup {}
+    end,
   },
   {
-   "williamboman/mason.nvim",
-   opts = {
+    "williamboman/mason.nvim",
+    opts = {
       ensure_installed = {
         -- Lua
         "lua-language-server",
         "stylua",
-				"luacheck",
+        "luacheck",
 
-        -- Web 
+        -- Web
         "html-lsp",
         "prettier",
         "typescript-language-server",
 
         -- MP
         "yaml-language-server",
-
       },
     },
-  }
-  ,{
+  },
+  {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
@@ -134,9 +133,7 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
-  }
+  },
 }
 
 return plugins
-
-
