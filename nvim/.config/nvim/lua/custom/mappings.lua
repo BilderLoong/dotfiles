@@ -6,7 +6,9 @@ M.general = {
 }
 
 M.telescope = {
-
+  n = {
+    
+  }
 }
 
 return M
