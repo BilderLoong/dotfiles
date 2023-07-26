@@ -114,7 +114,7 @@ local plugins = {
         "prettier",
         "typescript-language-server",
         "cssls",
-      "vuejs/vetur ",
+        "vuejs/vetur ",
 
         -- MP
         "wxml-languageserver",
