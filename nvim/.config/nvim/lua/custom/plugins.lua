@@ -99,7 +99,7 @@ local plugins = {
     config=function ()
      require('auto-save').setup{}
     end
-  }, 
+  },
   {
    "williamboman/mason.nvim",
    opts = {
