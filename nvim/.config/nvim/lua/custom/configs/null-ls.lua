@@ -11,6 +11,8 @@ local sources = {
    formatting.stylua,
 
    lint.shellcheck,
+
+  -- Misc
    null_ls.builtins.diagnostics.cspell,
   null_ls.builtins.code_actions.cspell
 }
