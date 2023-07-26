@@ -8,7 +8,7 @@ M.general = {
 local builtin = require('telescope.builtin')
 M.telescope = {
   n = {
-    ["<leader>fs"] = { , "Find Workspace symbols" },
+    ["<leader>fs"] = { builtin.find_files, "Find Workspace symbols" },
   }
 }
 
