@@ -124,7 +124,7 @@ local plugins = {
 
         "yaml-language-server",
         -- Misc
-        --
+        "cspell"
       },
     },
   },
