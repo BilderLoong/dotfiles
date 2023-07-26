@@ -8,6 +8,7 @@ local sources = {
   -- Web developement
    formatting.prettier,
    null_ls.builtins.code_actions.eslint_d,
+  null_ls.builtins.code_actions.gitrebase,
 
    formatting.stylua,
 
