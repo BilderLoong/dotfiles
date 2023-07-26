@@ -8,7 +8,7 @@ M.general = {
 local builtin = require('telescope.builtin')
 M.telescope = {
   n = {
-    ["<leader>fs"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find Workspace symbols" },
+    ["<leader>fs"] = { , "Find Workspace symbols" },
   }
 }
 
