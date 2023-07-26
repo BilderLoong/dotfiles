@@ -6,10 +6,11 @@ local lint = null_ls.builtins.diagnostics
 
 local sources = {
    formatting.prettier,
+
    formatting.stylua,
 
    lint.shellcheck,
-   null_ls.builtins.diagnostics.cspell, 
+   null_ls.builtins.diagnostics.cspell,
   null_ls.builtins.code_actions.cspell
 }
 
