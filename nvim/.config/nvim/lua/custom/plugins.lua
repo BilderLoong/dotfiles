@@ -104,7 +104,7 @@ local plugins = {
    "williamboman/mason.nvim",
    opts = {
       ensure_installed = {
-        -- lua
+        -- Lua
         "lua-language-server",
         "stylua",
 				"luacheck",
