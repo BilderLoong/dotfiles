@@ -10,4 +10,5 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-.tsserver.setup{}
+
+lspconfig.tsserver.setup{}
