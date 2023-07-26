@@ -7,7 +7,7 @@ M.general = {
 
 M.telescope = {
   n = {
-    ["<leader>fs"] = { "<cmd> Telescope <CR>", "Find Workspace symbols" },
+    ["<leader>fs"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Find Workspace symbols" },
   }
 }
 
