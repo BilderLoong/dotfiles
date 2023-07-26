@@ -118,7 +118,6 @@ local plugins = {
 
         -- MP
         "wxml-languageserver",
-
         "yaml-language-server",
 
       },
