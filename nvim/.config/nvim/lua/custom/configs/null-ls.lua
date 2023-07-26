@@ -14,7 +14,7 @@ local sources = {
 
   -- Misc
    null_ls.builtins.diagnostics.cspell,
-  null_ls.builtins.code_actions.cspell
+   null_ls.builtins.code_actions.cspell
 }
 
 null_ls.setup {
