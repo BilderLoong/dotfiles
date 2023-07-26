@@ -121,7 +121,10 @@ local plugins = {
         "typescript-language-server",
 
         -- MP
+
         "yaml-language-server",
+        -- Misc
+        --
       },
     },
   },
