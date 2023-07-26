@@ -1,6 +1,7 @@
 
-## Directory Structure
-`./termux`: contain all config files used for termux on my nex phone.
+# Directory Structure
+  `./termux`: contain all config files used for termux 'on' my "nex" .
+
 
 
 ## Install Package
