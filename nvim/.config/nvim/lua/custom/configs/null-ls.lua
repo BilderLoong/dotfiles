@@ -6,7 +6,7 @@ local lint = null_ls.builtins.diagnostics
 
 local sources = {
   -- Web developement
-   formatting.prettier,
+   formatting.prettierd,
    null_ls.builtins.code_actions.eslint_d,
   null_ls.builtins.code_actions.gitrebase,
 
