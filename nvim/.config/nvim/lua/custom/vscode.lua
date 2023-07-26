@@ -1,4 +1,4 @@
-vim.cmd([[" All config expect plug relate to vscode is stored in this file
+vim.cmd [[" All config expect plug relate to vscode is stored in this file
 
 " Vim editor setting.
  set textwidth=60
@@ -109,4 +109,4 @@ nmap gcc <Plug>VSCodeCommentaryLine
 " nmap <Leader>t <Plug>(easymotion-bd-t)
 " xmap <Leader>t <Plug>(easymotion-bd-t)
 " omap <Leader>t <Plug>(easymotion-bd-t)
-]])
+]]
