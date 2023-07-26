@@ -11,3 +11,4 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+require'lspconfig'.tsserver.setup{}
