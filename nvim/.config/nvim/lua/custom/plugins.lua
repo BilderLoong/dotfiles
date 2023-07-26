@@ -115,6 +115,9 @@ local plugins = {
         "typescript-language-server",
         "cssls",
 
+        -- MP
+        "wxml-languageserver"
+
       },
     },
   }
