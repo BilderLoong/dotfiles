@@ -112,7 +112,7 @@ local plugins = {
         -- Web 
         "html-lsp",
         "prettier",
-        "tsserver",
+        "typescript-language-server",
         "cssls",
 
       },
