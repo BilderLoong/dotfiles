@@ -5,7 +5,7 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 local servers = { "html", "cssls", "clangd","tsserver"}
 for _, lsp in ipairs(servers) do
-
+  print()
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
