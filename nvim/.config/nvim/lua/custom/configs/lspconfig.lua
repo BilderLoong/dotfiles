@@ -12,7 +12,7 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.tsserver.setup{
-on_attach = on_attach
+on_attach = on_attach,
     capabilities = capabilities,
 
 }
