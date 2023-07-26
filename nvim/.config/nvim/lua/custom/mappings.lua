@@ -7,7 +7,8 @@ M.general = {
 
 M.telescope = {
   n = {
-    
+
+    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
   }
 }
 
