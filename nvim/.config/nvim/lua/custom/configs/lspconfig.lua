@@ -6,7 +6,7 @@ lspconfig.prettier.setup {}
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
-local servers = { "html", "cssls", "clangd", "tsserver" }
+local servers = { "html", "cssls", "clangd", "tsserver", "prettier" }
 for _, lsp in ipairs(servers) do
   print("lsp", lsp)
   lspconfig[lsp].setup {
