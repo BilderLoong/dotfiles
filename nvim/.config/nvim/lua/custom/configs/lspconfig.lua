@@ -2,7 +2,7 @@ local configs = require("plugins.configs.lspconfig")
 local lspconfig = require "lspconfig"
 
 lspconfig.tsserver.setup{ }
-lspconfig.pir.setup{ }
+lspconfig.prettier.setup{ }
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
