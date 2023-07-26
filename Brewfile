@@ -32,6 +32,7 @@ brew "git-delta"
 brew "imagemagick"
 brew "GitJournal/tap/git-auto-sync"
 brew "mp3gain"
+brew "fd"
 
 cask "anki"
 cask "deepl"
