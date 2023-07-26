@@ -1,5 +1,10 @@
 local configs = require("plugins.configs.lspconfig")
 local lspconfig = require "lspconfig"
+lspconfig.tsserver.setup{
+  on_attach = on_attach,
+    capabilities = capabilities,
+
+}
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
@@ -12,8 +17,3 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.tsserver.setup{
-  on_attach = on_attach,
-    capabilities = capabilities,
-
-}
