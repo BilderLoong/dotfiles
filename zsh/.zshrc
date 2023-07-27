@@ -1,7 +1,7 @@
 
 # zmodload zsh/zprof
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
+eval "$(jump shell)"
 
 
 ZSH_CUSTOM=~/zsh/custom
