@@ -1,4 +1,4 @@
----@type MappingsTable
+--- @type MappingsTable
 local M = {}
 
 M.general = {
@@ -8,7 +8,9 @@ M.general = {
 M.telescope = {
   n = {
     ["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find Workspace symbols" },
-    ["<C-P>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
+    ["<leader>fr"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
+    ["<C-S-O>"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find document symbols" },
+    ["<C-S-P>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
   },
 }
 

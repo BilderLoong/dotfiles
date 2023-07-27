@@ -1,8 +1,12 @@
 
 # zmodload zsh/zprof
 eval "$(starship init zsh)"
-eval "$(jump shell)"
 
+# https://github.com/gsamokovarov/jump
+eval "$(jump shell --bind=g)"
+
+# https://github.com/ajeetdsouza/zoxide
+# eval "$(zoxide init zsh --cmd z)"
 
 ZSH_CUSTOM=~/zsh/custom
 
@@ -95,9 +99,13 @@ zinit wait lucid light-mode for \
     OMZP::command-not-found \
     OMZL::git.zsh\
     OMZP::git \
-    zsh-users/zsh-syntax-highlighting \
     zsh-users/zsh-completions \
-    agkozak/zsh-z 
+    OMZ::plugins/autojump/autojump.plugin.zsh \
+    DarrinTisdale/zsh-aliases-exa \
+    zdharma-continuum/fast-syntax-highlighting \
+    ajeetdsouza/zoxide 
+
+
 
 zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
       zsh-users/zsh-autosuggestions

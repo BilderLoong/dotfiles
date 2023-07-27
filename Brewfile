@@ -35,6 +35,8 @@ brew "mp3gain"
 brew "fd"
 brew "jump"
 brew "autojump"
+brew "exa"
+brew "zoxide"
 
 cask "anki"
 cask "deepl"
