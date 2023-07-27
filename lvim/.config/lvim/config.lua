@@ -177,7 +177,6 @@ lvim.builtin.treesitter.highlight.enable = true
 -- Additional Plugins
 lvim.plugins = { {
   "github/copilot.vim",
-  opt = true,
   event = 'BufRead',
   config = function()
     vim.g.copilot_no_tab_map = true
@@ -185,11 +184,9 @@ lvim.plugins = { {
   end
 }, {
   "unblevable/quick-scope",
-  opt = true,
   event = 'BufRead'
 }, {
   "tpope/vim-surround",
-  opt = true,
   event = 'BufRead'
 }, {
   "phaazon/hop.nvim",
@@ -210,13 +207,16 @@ lvim.plugins = { {
     vim.cmd "highlight default link gitblame SpecialComment"
     vim.g.gitblame_enabled = 0
   end
-}, { "mrjones2014/nvim-ts-rainbow" }, {
-  "nvim-telescope/telescope-project.nvim",
-  event = "BufWinEnter",
-  setup = function()
-    vim.cmd [[packadd telescope.nvim]]
-  end
-}, {
+},
+  { "mrjones2014/nvim-ts-rainbow" },
+
+  {
+    "nvim-telescope/telescope-project.nvim",
+    event = "BufWinEnter",
+    -- init = function()
+    --   vim.cmd [[packadd telescope.nvim]]
+    -- end
+  }, {
   "itchyny/vim-cursorword",
   event = { "BufEnter", "BufNewFile" },
   config = function()
@@ -267,19 +267,16 @@ lvim.plugins = { {
   event = "BufRead"
 }, {
   "ggandor/lightspeed.nvim",
-  opt = true,
   event = "BufRead"
 }, {
   'michaeljsmith/vim-indent-object',
-  opt = true,
   event = "BufRead",
 },
 
   {
     "RRethy/nvim-treesitter-textsubjects",
-    opt = true,
     event = "BufRead",
-    requires = "nvim-treesitter/nvim-treesitter",
+    dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
       require('nvim-treesitter.configs').setup {
         textsubjects = {
@@ -296,9 +293,8 @@ lvim.plugins = { {
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    opt = true,
     event = "BufRead",
-    requires = "nvim-treesitter/nvim-treesitter",
+    dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
       require("nvim-treesitter.configs").setup {
 
@@ -346,29 +342,25 @@ lvim.plugins = { {
     end
   }, {
   "elijahmanor/export-to-vscode.nvim",
-  opt = true,
   event = "BufRead"
 },
   {
     "nvim-telescope/telescope-symbols.nvim",
-    opt = true,
     event = "BufRead"
   }, {
   "wellle/targets.vim",
-  opt = true,
   event = "BufRead"
 },
 
   {
     "luochen1990/rainbow",
-    opt = true,
     event = "BufRead",
     config = function()
       vim.g.rainbow_active = 1
     end
   }, {
   "junegunn/fzf.vim",
-  requires = { { "junegunn/fzf", run = ":call fzf#install()<CR>" } }
+  dependencies = { { "junegunn/fzf", run = ":call fzf#install()<CR>" } }
 }, {
   "folke/trouble.nvim",
   cmd = "TroubleToggle",

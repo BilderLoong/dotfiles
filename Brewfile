@@ -33,6 +33,8 @@ brew "imagemagick"
 brew "GitJournal/tap/git-auto-sync"
 brew "mp3gain"
 brew "fd"
+brew "jump"
+brew "autojump"
 
 cask "anki"
 cask "deepl"
