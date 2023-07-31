@@ -187,7 +187,6 @@ local plugins = {
 	},
 	{
 		"sindrets/diffview.nvim",
-
 	},
 }
 
