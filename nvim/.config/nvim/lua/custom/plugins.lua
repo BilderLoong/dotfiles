@@ -186,7 +186,7 @@ local plugins = {
 		},
 	},
 	{
-		"sindrets/diffview.nvim",
+		"sindrets/diffview.nvim",cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
     cmd = {
      cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" }, ''
     }
