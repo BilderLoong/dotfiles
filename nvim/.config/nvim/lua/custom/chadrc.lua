@@ -1,6 +1,5 @@
 ---@type ChadrcConfig
 local M = {
-  la
   mappings = require "custom.mappings",
   plugins = "custom.plugins",
   ui = {
