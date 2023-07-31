@@ -15,7 +15,7 @@ local plugins = {
 		end,
 	},
 	{
-		-- "ggandor/lightspeed.nvim",
+		"ggandor/lightspeed.nvim",
 		event = "VeryLazy",
 	},
 	{
