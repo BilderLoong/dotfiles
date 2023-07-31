@@ -3,6 +3,7 @@ tap "gitjournal/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+
 brew "xz"
 brew "alsa-lib"
 brew "aom"
