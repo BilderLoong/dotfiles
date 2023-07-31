@@ -5,11 +5,16 @@ local plugins = {
 	{
 		"unblevable/quick-scope",
 		event = BufEnterLike,
-    config = function ()
-     vim.highlight.create("QuickScopePrimary", {guifg="#afff5f", gui="underline", ctermfg=155, cterm="underline"})
-vim.highlight.create("QuickScopeSecondary", {guifg="#6fffff", gui="underline", ctermfg=81, cterm="underline"})
- 
-    end
+		config = function()
+			vim.highlight.create(
+				"QuickScopePrimary",
+				{ guifg = "#afff5f", gui = "underline", ctermfg = 155, cterm = "underline" }
+			)
+			vim.highlight.create(
+				"QuickScopeSecondary",
+				{ guifg = "#6fffff", gui = "underline", ctermfg = 81, cterm = "underline" }
+			)
+		end,
 	},
 	{
 		"ggandor/lightspeed.nvim",
