@@ -187,12 +187,7 @@ local plugins = {
 	},
 	{
 		"sindrets/diffview.nvim",
-		dependencies = {
-			{
-				"junegunn/fzf",
-				run = ":call fzf#install()<CR>",
-			},
-		},
+
 	},
 }
 
