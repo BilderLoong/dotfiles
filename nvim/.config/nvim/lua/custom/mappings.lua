@@ -25,7 +25,7 @@ local telescope_i_n = {
 	["<A-p>"] = { "<cmd> Telescope <CR>", "Telescope" },
 	["<A-m>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
 	["<A-c>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
-		["<A-r>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
+	["<A-r>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
 }
 
 M.telescope = {
