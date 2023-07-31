@@ -2,7 +2,7 @@ local opt = vim.opt
 local g = vim.g
 
 -- Editor
-vim.opt.relativenumber = true
+opt.relativenumber = true
 
 -- Folding
 
