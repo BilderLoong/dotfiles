@@ -1,11 +1,11 @@
 --- @type MappingsTable
 local M = {}
 
--- M.disabled = {
--- 	n = {
--- 		["<leader>D"] = "",
--- 	},
--- }
+M.disabled = {
+	n = {
+		["<leader>D"] = "",
+	},
+}
 
 M.general = {
 	i = { ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } } },
