@@ -172,7 +172,7 @@ local plugins = {
 		cmd = { "Z", "Tzi", "Lzi", "Zi", "Lz" },
     dependencies = {
       {
-
+junegunn/fzf.vim
       }
     }
 	},
