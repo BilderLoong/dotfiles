@@ -19,8 +19,6 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitgre#sbydexpr()"
 vim.opt.foldenable = true
 
-
-
 -- runtime path
 -- :help vim.opt and :help vim.o
 -- To resolve the problem: https://github.com/nvim-treesitter/nvim-treesitter#i-get-query-error-invalid-node-type-at-position
@@ -32,12 +30,12 @@ vim.opt.foldenable = true
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = "<cmd>Telescope resume<CR>"
-vim.keymap.set({ 'i' }, 'jk', '<Esc>')
+vim.keymap.set({ "i" }, "jk", "<Esc>")
 lvim.keys.normal_mode["<C-v>"] = { '<cmd>lua require("export-to-vscode").launch()<cr>' }
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- `g` namespace
-vim.keymap.set({ 'n' }, 'gy', vim.lsp.buf.type_definition)
+vim.keymap.set({ "n" }, "gy", vim.lsp.buf.type_definition)
 
 -- The default <C-\> conflict with the <C-\>_<C-N> which is used to exit Terminal-mode see :help Terminal-mode
 lvim.builtin.terminal.open_mapping = "<M-\\>"
@@ -72,17 +70,18 @@ lvim.builtin.terminal.open_mapping = "<M-\\>"
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["sm"] = {
-  "<cmd>Telescope marks<CR>", "Marks"
+	"<cmd>Telescope marks<CR>",
+	"Marks",
 }
 
 lvim.builtin.which_key.mappings["t"] = {
-  name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+	name = "+Trouble",
+	r = { "<cmd>Trouble lsp_references<cr>", "References" },
+	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+	d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 
 -- TODO: User Config for predefined plugins
@@ -94,8 +93,8 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx",
-  "css", "rust", "java", "yaml" }
+lvim.builtin.treesitter.ensure_installed =
+	{ "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "java", "yaml" }
 
 lvim.builtin.treesitter.highlight.enable = true
 
@@ -175,203 +174,217 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
-lvim.plugins = { {
-  "github/copilot.vim",
-  event = 'BufRead',
-  config = function()
-    vim.g.copilot_no_tab_map = true
-    vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-  end
-}, {
-  "unblevable/quick-scope",
-  event = 'BufRead'
-}, {
-  "tpope/vim-surround",
-  event = 'BufRead'
-}, {
-  "phaazon/hop.nvim",
-  event = "BufRead",
-  config = function()
-    require("hop").setup()
-    vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", {
-      silent = true
-    })
-    vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", {
-      silent = true
-    })
-  end
-}, {
-  "f-person/git-blame.nvim",
-  event = "BufRead",
-  config = function()
-    vim.cmd "highlight default link gitblame SpecialComment"
-    vim.g.gitblame_enabled = 0
-  end
-},
-  { "mrjones2014/nvim-ts-rainbow" },
+lvim.plugins = {
+	{
+		"github/copilot.vim",
+		event = "BufRead",
+		config = function()
+			vim.g.copilot_no_tab_map = true
+			vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+		end,
+	},
+	{
+		"unblevable/quick-scope",
+		event = "BufRead",
+	},
+	{
+		"tpope/vim-surround",
+		event = "BufRead",
+	},
+	{
+		"phaazon/hop.nvim",
+		event = "BufRead",
+		config = function()
+			require("hop").setup()
+			vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", {
+				silent = true,
+			})
+			vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", {
+				silent = true,
+			})
+		end,
+	},
+	{
+		"f-person/git-blame.nvim",
+		event = "BufRead",
+		config = function()
+			vim.cmd("highlight default link gitblame SpecialComment")
+			vim.g.gitblame_enabled = 0
+		end,
+	},
+	{ "mrjones2014/nvim-ts-rainbow" },
 
-  {
-    "nvim-telescope/telescope-project.nvim",
-    event = "BufWinEnter",
-    -- init = function()
-    --   vim.cmd [[packadd telescope.nvim]]
-    -- end
-  }, {
-  "itchyny/vim-cursorword",
-  event = { "BufEnter", "BufNewFile" },
-  config = function()
-    vim.api.nvim_command("augroup user_plugin_cursorword")
-    vim.api.nvim_command("autocmd!")
-    vim.api.nvim_command("autocmd FileType NvimTree,lspsagafinder,dashboard,vista let b:cursorword = 0")
-    vim.api.nvim_command("autocmd WinEnter * if &diff || &pvw | let b:cursorword = 0 | endif")
-    vim.api.nvim_command("autocmd InsertEnter * let b:cursorword = 0")
-    vim.api.nvim_command("autocmd InsertLeave * let b:cursorword = 1")
-    vim.api.nvim_command("augroup END")
-  end
-}, {
-  "romgrk/nvim-treesitter-context",
-  config = function()
-    require("treesitter-context").setup {
-      enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
-      throttle = true, -- Throttles plugin updates (may improve performance)
-      max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
-      patterns = {
-        -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
-        -- For all filetypes
-        -- Note that setting an entry here replaces all other patterns for this entry.
-        -- By setting the 'default' entry below, you can control which nodes you want to
-        -- appear in the context window.
-        default = { 'class', 'function', 'method' }
-      }
-    }
-  end
-},
+	{
+		"nvim-telescope/telescope-project.nvim",
+		event = "BufWinEnter",
+		-- init = function()
+		--   vim.cmd [[packadd telescope.nvim]]
+		-- end
+	},
+	{
+		"itchyny/vim-cursorword",
+		event = { "BufEnter", "BufNewFile" },
+		config = function()
+			vim.api.nvim_command("augroup user_plugin_cursorword")
+			vim.api.nvim_command("autocmd!")
+			vim.api.nvim_command("autocmd FileType NvimTree,lspsagafinder,dashboard,vista let b:cursorword = 0")
+			vim.api.nvim_command("autocmd WinEnter * if &diff || &pvw | let b:cursorword = 0 | endif")
+			vim.api.nvim_command("autocmd InsertEnter * let b:cursorword = 0")
+			vim.api.nvim_command("autocmd InsertLeave * let b:cursorword = 1")
+			vim.api.nvim_command("augroup END")
+		end,
+	},
+	{
+		"romgrk/nvim-treesitter-context",
+		config = function()
+			require("treesitter-context").setup({
+				enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+				throttle = true, -- Throttles plugin updates (may improve performance)
+				max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+				patterns = {
+					-- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+					-- For all filetypes
+					-- Note that setting an entry here replaces all other patterns for this entry.
+					-- By setting the 'default' entry below, you can control which nodes you want to
+					-- appear in the context window.
+					default = { "class", "function", "method" },
+				},
+			})
+		end,
+	},
 
-  -- { "tpope/vim-repeat" },
-  {
-    "simrat39/symbols-outline.nvim",
-    config = function()
-      require('symbols-outline').setup()
-    end
-  },
-  {
-    "nvim-treesitter/playground",
-    event = "BufRead"
-  }, {
-  "windwp/nvim-ts-autotag",
-  config = function()
-    require("nvim-ts-autotag").setup()
-  end
-}, {
-  "sindrets/diffview.nvim",
-  event = "BufRead"
-}, {
-  "ggandor/lightspeed.nvim",
-  event = "BufRead"
-}, {
-  'michaeljsmith/vim-indent-object',
-  event = "BufRead",
-},
+	-- { "tpope/vim-repeat" },
+	{
+		"simrat39/symbols-outline.nvim",
+		config = function()
+			require("symbols-outline").setup()
+		end,
+	},
+	{
+		"nvim-treesitter/playground",
+		event = "BufRead",
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+	{
+		"sindrets/diffview.nvim",
+		event = "BufRead",
+	},
+	{
+		"ggandor/lightspeed.nvim",
+		event = "BufRead",
+	},
+	{
+		"michaeljsmith/vim-indent-object",
+		event = "BufRead",
+	},
 
-  {
-    "RRethy/nvim-treesitter-textsubjects",
-    event = "BufRead",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require('nvim-treesitter.configs').setup {
-        textsubjects = {
-          enable = true,
-          prev_selection = ',', -- (Optional) keymap to select the previous selection
-          keymaps = {
-            ['.'] = 'textsubjects-smart',
-            [';'] = 'textsubjects-container-outer',
-            ['i;'] = 'textsubjects-container-inner',
-          },
-        },
-      }
-    end
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    event = "BufRead",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup {
+	{
+		"RRethy/nvim-treesitter-textsubjects",
+		event = "BufRead",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				textsubjects = {
+					enable = true,
+					prev_selection = ",", -- (Optional) keymap to select the previous selection
+					keymaps = {
+						["."] = "textsubjects-smart",
+						[";"] = "textsubjects-container-outer",
+						["i;"] = "textsubjects-container-inner",
+					},
+				},
+			})
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		event = "BufRead",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("nvim-treesitter.configs").setup({
 
+				textobjects = {
+					select = {
+						enable = true,
+						-- Automatically jump forward to textobj, similar to targets.vim
+						lookahead = true,
+						keymaps = {
+							-- You can use the capture groups defined in textobjects.scm
+							["af"] = "@function.outer",
+							["if"] = "@function.inner",
+							["ac"] = "@class.outer",
+							-- You can optionally set descriptions to the mappings (used in the desc parameter of
+							-- nvim_buf_set_keymap) which plugins like which-key display
+							["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+							-- You can also use captures from other query groups like `locals.scm`
+							["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+						},
+						-- You can choose the select mode (default is charwise 'v')
+						--
+						-- Can also be a function which gets passed a table with the keys
+						-- * query_string: eg '@function.inner'
+						-- * method: eg 'v' or 'o'
+						-- and should return the mode ('v', 'V', or '<c-v>') or a table
+						-- mapping query_strings to modes.
+						selection_modes = {
+							["@parameter.outer"] = "v", -- charwise
+							["@class.outer"] = "<c-v>", -- blockwise
+						},
+						-- If you set this to `true` (default is `false`) then any textobject is
+						-- extended to include preceding or succeeding whitespace. Succeeding
+						-- whitespace has priority in order to act similarly to eg the built-in
+						-- `ap`.
+						--
+						-- Can also be a function which gets passed a table with the keys
+						-- * query_string: eg '@function.inner'
+						-- * selection_mode: eg 'v'
+						-- and should return true of false
+						include_surrounding_whitespace = true,
+					},
+				},
+			})
+		end,
+	},
+	{
+		"elijahmanor/export-to-vscode.nvim",
+		event = "BufRead",
+	},
+	{
+		"nvim-telescope/telescope-symbols.nvim",
+		event = "BufRead",
+	},
+	{
+		"wellle/targets.vim",
+		event = "BufRead",
+	},
 
-        textobjects = {
-          select = {
-            enable = true,
-            -- Automatically jump forward to textobj, similar to targets.vim
-            lookahead = true,
-            keymaps = {
-              -- You can use the capture groups defined in textobjects.scm
-              ["af"] = "@function.outer",
-              ["if"] = "@function.inner",
-              ["ac"] = "@class.outer",
-              -- You can optionally set descriptions to the mappings (used in the desc parameter of
-              -- nvim_buf_set_keymap) which plugins like which-key display
-              ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
-              -- You can also use captures from other query groups like `locals.scm`
-              ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
-            },
-            -- You can choose the select mode (default is charwise 'v')
-            --
-            -- Can also be a function which gets passed a table with the keys
-            -- * query_string: eg '@function.inner'
-            -- * method: eg 'v' or 'o'
-            -- and should return the mode ('v', 'V', or '<c-v>') or a table
-            -- mapping query_strings to modes.
-            selection_modes = {
-              ['@parameter.outer'] = 'v', -- charwise
-              ['@class.outer'] = '<c-v>', -- blockwise
-            },
-            -- If you set this to `true` (default is `false`) then any textobject is
-            -- extended to include preceding or succeeding whitespace. Succeeding
-            -- whitespace has priority in order to act similarly to eg the built-in
-            -- `ap`.
-            --
-            -- Can also be a function which gets passed a table with the keys
-            -- * query_string: eg '@function.inner'
-            -- * selection_mode: eg 'v'
-            -- and should return true of false
-            include_surrounding_whitespace = true,
-          },
-        },
-      }
-    end
-  }, {
-  "elijahmanor/export-to-vscode.nvim",
-  event = "BufRead"
-},
-  {
-    "nvim-telescope/telescope-symbols.nvim",
-    event = "BufRead"
-  }, {
-  "wellle/targets.vim",
-  event = "BufRead"
-},
-
-  {
-    "luochen1990/rainbow",
-    event = "BufRead",
-    config = function()
-      vim.g.rainbow_active = 1
-    end
-  }, {
-  "junegunn/fzf.vim",
-  dependencies = { { "junegunn/fzf", run = ":call fzf#install()<CR>" } }
-}, {
-  "folke/trouble.nvim",
-  cmd = "TroubleToggle",
-},
+	{
+		"luochen1990/rainbow",
+		event = "BufRead",
+		config = function()
+			vim.g.rainbow_active = 1
+		end,
+	},
+	{
+		"junegunn/fzf.vim",
+		dependencies = { { "junegunn/fzf", run = ":call fzf#install()<CR>" } },
+	},
+	{
+		"folke/trouble.nvim",
+		cmd = "TroubleToggle",
+	},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- https://github.com/nvim-telescope/telescope.nvim/issues/699#issuecomment-1159637962
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*" },
-  command = "normal zx",
+	pattern = { "*" },
+	command = "normal zx",
 })
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },
