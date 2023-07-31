@@ -29,6 +29,7 @@ local telescope_i_n = {
 		"<cmd> Telescope resume <CR>",
 		"Resume last Telescope picker",
 	},
+}
 
 M.telescope = {
 	n = vim.tbl_deep_extend("force", telescope_i_n, {
