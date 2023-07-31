@@ -7,8 +7,8 @@ local plugins = {
 		event = BufEnterLike,
 		config = function()
 			vim.cmd([[
-" Make quick scope highlight in vscode.
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  " Make quick scope highlight in vscode.
+  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
 
    ]])
