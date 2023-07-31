@@ -28,7 +28,7 @@ local telescope_i_n = {
 	["<A-r>"] = {
 		"<cmd> Telescope lsp_references <CR>",
 		"Telescope LSP references",
-	},
+	}
 }
 
 M.telescope = {
