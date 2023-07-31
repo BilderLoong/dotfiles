@@ -37,7 +37,6 @@ local plugins = {
 
 	{
 		"RRethy/nvim-treesitter-textsubjects",
-		opt = true,
 		event = BufEnterLike,
 		requires = "nvim-treesitter/nvim-treesitter",
 		config = function()
@@ -194,13 +193,21 @@ local plugins = {
 		"lewis6991/gitsigns.nvim",
 		ft = { "gitcommit", "diff" },
 		opts = function()
-			return require("plugins.configs.others").gitsigns
-		end,
-		config = function(_, opts)
-			dofile(vim.g.base46_cache .. "git")
-			require("gitsigns").setup(opts)
+			--  add config
 		end,
 	},
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	opts = function()
+	-- 		local cmp = require("cmp")
+	-- 		--  add config
+	-- 		return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
+	-- 			mapping = {
+	-- 				["<A-<ESC>>"] = cmp.mapping.complete(),
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 }
 
 return plugins
