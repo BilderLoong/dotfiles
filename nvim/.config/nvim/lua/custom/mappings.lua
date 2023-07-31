@@ -25,7 +25,8 @@ local telescope_i_n = {
 	["<A-p>"] = { "<cmd> Telescope <CR>", "Telescope" },
 	["<A-m>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
 	["<A-c>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
-	["<A-r>"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" }, }
+	["<A-r>"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
+}
 
 M.telescope = {
 	n = vim.tbl_deep_extend("force", telescope_i_n, {
