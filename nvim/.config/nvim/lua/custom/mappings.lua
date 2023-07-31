@@ -2,6 +2,9 @@
 local M = {}
 
 M.disabled = {
+  n = {
+    
+  }
 	["<leader>D"] = "",
 }
 
