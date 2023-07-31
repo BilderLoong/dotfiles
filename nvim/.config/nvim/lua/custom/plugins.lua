@@ -7,7 +7,8 @@ local plugins = {
 		event = BufEnterLike,
 		config =function ()
 	 vim.cmd([[
-   
+
+
    ]])	  
 		end,
 	},
