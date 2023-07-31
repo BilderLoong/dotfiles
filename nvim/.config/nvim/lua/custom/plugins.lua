@@ -193,7 +193,6 @@ local plugins = {
 	{
 		"lewis6991/gitsigns.nvim",
 		ft = { "gitcommit", "diff" },
-		init =,
 		opts = function()
 			return require("plugins.configs.others").gitsigns
 		end,
