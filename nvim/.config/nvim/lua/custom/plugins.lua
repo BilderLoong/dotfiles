@@ -170,6 +170,9 @@ local plugins = {
 	{
 		"nanotee/zoxide.vim",
 		cmd = { "Z", "Tzi", "Lzi", "Zi", "Lz" },
+    dependencies = {
+      
+    }
 	},
 	{
 		"junegunn/fzf.vim",
