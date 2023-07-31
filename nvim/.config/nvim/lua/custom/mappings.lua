@@ -41,24 +41,24 @@ M.telescope = {
 }
 
 M.lspconfig = {
-  n = {
+	n = {
 
-  }
-	["gd"] = {
-		"<cmd> Telescope lsp_definitions  <CR>",
-		"Telescope LSP definitions",
-	},
-	["gr"] = {
-		"<cmd> Telescope lsp_references <CR>",
-		"Telescope LSP references",
-	},
-	["gy"] = {
-		"<cmd> Telescope lsp_type_definitions  <CR>",
-		"Telescope LSP type definitions",
-	},
-	["gi"] = {
-		"<cmd> Telescope lsp_implementations   <CR>",
-		"Telescope LSP type implementations",
+		["gd"] = {
+			"<cmd> Telescope lsp_definitions  <CR>",
+			"Telescope LSP definitions",
+		},
+		["gr"] = {
+			"<cmd> Telescope lsp_references <CR>",
+			"Telescope LSP references",
+		},
+		["gy"] = {
+			"<cmd> Telescope lsp_type_definitions  <CR>",
+			"Telescope LSP type definitions",
+		},
+		["gi"] = {
+			"<cmd> Telescope lsp_implementations   <CR>",
+			"Telescope LSP type implementations",
+		},
 	},
 }
 
