@@ -179,9 +179,10 @@ local plugins = {
 	{
 		"junegunn/fzf.vim",
 		dependencies = {
-			{ 
-        "junegunn/fzf",
-        run = ":call fzf#install()<CR>" },
+			{
+				"junegunn/fzf",
+				run = ":call fzf#install()<CR>",
+			},
 		},
 	},
 }
