@@ -17,7 +17,7 @@ brew "neovim"
 brew "node", link: false
 brew "nvm"
 brew "stow"
-brew "thrift"
+
 brew "tmux"
 brew "tree"
 brew "pyenv"
