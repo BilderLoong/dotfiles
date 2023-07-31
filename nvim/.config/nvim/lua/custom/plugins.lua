@@ -186,7 +186,7 @@ local plugins = {
 		},
 	},
 	{
-		"junegunn/fzf.vim",
+		"sindrets/diffview.nvim",
 		dependencies = {
 			{
 				"junegunn/fzf",
