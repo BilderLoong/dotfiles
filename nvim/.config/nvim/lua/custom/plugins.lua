@@ -1,5 +1,6 @@
 local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
 
+---
 local plugins = {
 	{
 		"unblevable/quick-scope",
@@ -25,7 +26,6 @@ local plugins = {
 	},
 	{
 		"elijahmanor/export-to-vscode.nvim",
-		event = BufEnterLike,
 	},
 
 	{
@@ -96,7 +96,7 @@ local plugins = {
 	},
 	{
 		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
+		cmd = { "TroubleToggle" },
 	},
 
 	{
@@ -124,8 +124,8 @@ local plugins = {
 				-- MP
 				"yaml-language-server",
 
-        -- Shell
-        "shellcheck",
+				-- Shell
+				"shellcheck",
 
 				-- Misc
 				"cspell",
@@ -159,6 +159,10 @@ local plugins = {
 				},
 			})
 		end,
+	},
+	{
+		"nanotee/zoxide.vim",
+		cmd = { "Z", "Tzi", "Lzi", "Zi", "Lz" },
 	},
 }
 
