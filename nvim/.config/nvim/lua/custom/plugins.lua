@@ -5,7 +5,9 @@ local plugins = {
 	{
 		"unblevable/quick-scope",
 		event = BufEnterLike,
-		config =,
+		config =function ()
+		  
+		end,
 	},
 	{
 		"ggandor/lightspeed.nvim",
