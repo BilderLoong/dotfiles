@@ -42,7 +42,6 @@ M.telescope = {
 
 M.lspconfig = {
 	n = {
-
 		["gd"] = {
 			"<cmd> Telescope lsp_definitions  <CR>",
 			"Telescope LSP definitions",
