@@ -171,6 +171,7 @@ local plugins = {
 		"nanotee/zoxide.vim",
 		cmd = { "Z", "Tzi", "Lzi", "Zi", "Lz" },
 	},
+
 }
 
 return plugins
