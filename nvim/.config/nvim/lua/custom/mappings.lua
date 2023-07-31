@@ -41,7 +41,6 @@ M.telescope = {
 }
 
 M.lspconfig = {
-  ['s'] = {},
 	n = {
 		["gd"] = {
 			"<cmd> Telescope lsp_definitions  <CR>",
