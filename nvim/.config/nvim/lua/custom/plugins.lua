@@ -175,7 +175,7 @@ local plugins = {
 				"junegunn/fzf.vim",
 			},
 		},
-	}{
+	},{
 		"junegunn/fzf.vim",
 		dependencies = {
 			{
