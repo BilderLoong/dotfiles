@@ -37,6 +37,7 @@ M.telescope = {
 		["<A-p>"] = { "<cmd> Telescope <CR>", "Telescope" },
 		["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
 		["<A-c>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
+		["<A-c>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
 	}),
 }
 
