@@ -103,7 +103,8 @@ zinit wait lucid light-mode for \
     OMZ::plugins/autojump/autojump.plugin.zsh \
     DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    ajeetdsouza/zoxide 
+    ajeetdsouza/zoxide \
+    marlonrichert/zsh-autocomplete
 
 
 
