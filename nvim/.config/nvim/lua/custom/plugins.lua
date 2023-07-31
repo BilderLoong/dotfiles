@@ -6,7 +6,9 @@ local plugins = {
 		"unblevable/quick-scope",
 		event = BufEnterLike,
 		config =function ()
-	 vim.cmd()	  
+	 vim.cmd([[
+   
+   ]])	  
 		end,
 	},
 	{
