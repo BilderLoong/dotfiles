@@ -37,6 +37,7 @@ brew "jump"
 brew "autojump"
 brew "exa"
 brew "zoxide"
+brew "luarock"
 
 cask "anki"
 cask "deepl"
