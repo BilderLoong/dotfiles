@@ -6,7 +6,7 @@ local ca = null_ls.builtins.code_actions
 
 local sources = {
   -- Web developement
-  -- fmt.prettierd,
+  fmt.prettierd,
   fmt.prettier,
   ca.eslint_d,
   ca.gitrebase,
