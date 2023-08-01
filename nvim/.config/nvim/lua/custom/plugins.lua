@@ -218,11 +218,13 @@ local plugins = {
 				build = "make",
 			},
 		},
+    -- It's ugly to change the the plugin's config function.
 		config = function(_, opts)
 			dofile(vim.g.base46_cache .. "telescope")
 			local telescope = require("telescope")
 			telescope.setup(opts)
 
+    -- It's ugly to extend this list.
 			local extensions_list = vim.tbl_deep_extend("force", opts.extensions_list, {
 				"fzf",
 			})
