@@ -223,11 +223,11 @@ local plugins = {
 			local telescope = require("telescope")
 			telescope.setup(opts)
 
-			local extensions_list = vim.tbl_deep_extend("force", opt.extensions_list, {
+			local extensions_list = vim.tbl_deep_extend("force", opts.extensions_list, {
 				"fzf",
 			})
 
-			vim.tbl_deep_extend("force", opt, {
+			vim.tbl_deep_extend("force", opts, {
 				extensions_list,
 			})
 
