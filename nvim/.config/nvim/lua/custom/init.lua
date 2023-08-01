@@ -3,7 +3,7 @@ local g = vim.g
 
 -- Editor
 opt.relativenumber = true
-opt.nowrap = true
+opt.wrap = true
 
 -- Folding
 
