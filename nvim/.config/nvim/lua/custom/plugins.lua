@@ -218,6 +218,19 @@ local plugins = {
 			require("telescope").load_extension("fzf")
 		end,
 	},
+
+	{
+		"rmagatti/auto-session",
+		opts = {
+			log_level = "error",
+		},
+		config = function(_, opts)
+			require("auto-session").setup(opts)
+			--[For a better experience with the plugin overall using this config for sessionoptions is recommended.](https://github.com/rmagatti/auto-session#recommended-sessionoptions-config)
+			--
+			vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+		end,
+	},
 }
 
 return plugins
