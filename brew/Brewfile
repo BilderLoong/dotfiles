@@ -5,6 +5,7 @@ tap "buo/cask-upgrade"
 tap "homebrew/cask-fonts"
 
 brew "bat"
+brew "tidwall/jj/jj"
 brew "ffmpeg"
 brew "fzf"
 brew "git"
