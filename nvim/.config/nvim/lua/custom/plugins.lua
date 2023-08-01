@@ -225,7 +225,7 @@ local plugins = {
 		lazy = false,
 		opts = {
 			log_level = vim.log.levels.ERROR,
-			auto_session_enable_last_session = true,
+			-- auto_session_enable_last_session = true,
 
 			-- ⚠️ This will only work if Telescope.nvim is installed
 			-- The following are already the default values, no need to provide them if these are already the settings you want.
