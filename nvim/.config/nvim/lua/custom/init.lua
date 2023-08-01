@@ -8,5 +8,5 @@ opt.relativenumber = true
 
 -- opt.autochdir = true
 --
-g.toggle_theme_icon = "   "
+g.toggle_theme_icon = ""
 
