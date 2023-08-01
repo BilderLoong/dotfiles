@@ -124,7 +124,7 @@ local plugins = {
         -- Web
         "html-lsp",
         "typescript-language-server",
-        "prettierd",
+        -- "prettierd",
         "prettier",
         "eslint_d",
 
