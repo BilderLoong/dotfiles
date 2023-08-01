@@ -214,6 +214,7 @@ local plugins = {
 		"nvim-telescope/telescope-fzf-native.nvim", -- dependency for better sorting performance
 		build = "make",
 		config = function()
+      vim.print('123')
 			require("telescope").load_extension("fzf")
 		end,
 	},
