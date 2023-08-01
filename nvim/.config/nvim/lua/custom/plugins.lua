@@ -247,7 +247,7 @@ local plugins = {
 
     "nvim-tree/nvim-tree.lua",
     opts = function()
-      vim.tbl_deep_extend("force", require "plugins.configs.nvimtree", {
+      return vim.tbl_deep_extend("force", require "plugins.configs.nvimtree", {
         filesystem_watchers = {
           enable = false
         }
