@@ -224,11 +224,9 @@ local plugins = {
 			local telescope = require("telescope")
 			telescope.setup(opts)
 
-			-- vim.tbl_deep_extend("force", opts, {
-			-- 	extensions_list = table.insert(opts.extensions_list, "fzf"),
-			-- })
-
-			vim.print(opts)
+			vim.tbl_deep_extend("force", opts, {
+				extensions_list = table.insert(opts.extensions_list, "fzf"),
+			})
 
 			-- load extensions
 			for _, ext in ipairs(opts.extensions_list) do
