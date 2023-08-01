@@ -221,6 +221,7 @@ local plugins = {
 
 	{
 		"rmagatti/auto-session",
+    event="VeryLazy",
 		opts = {
 			log_level = "error",
 		},
