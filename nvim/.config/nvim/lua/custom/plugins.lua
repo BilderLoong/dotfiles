@@ -209,26 +209,27 @@ local plugins = {
 	-- 	end,
 	-- },
 	{
-		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "make",
-	},
-
-	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", {
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			{
 
-    } },
-		cmd = "Telescope",
-		init = function()
-			require("core.utils").load_mappings("telescope")
-		end,
-		opts = function()
-			return require("plugins.configs.telescope")
-		end,
+				"nvim-telescope/telescope-fzf-native.nvim", -- dependency for better sorting performance
+				build = "make",
+			},
+		},
 		config = function(_, opts)
 			dofile(vim.g.base46_cache .. "telescope")
 			local telescope = require("telescope")
 			telescope.setup(opts)
+
+			local extensions_list = vim.tbl_deep_extend("force", opt.extensions_list, {
+				"fzf",
+			})
+
+			vim.tbl_deep_extend("force", opt, {
+				extensions_list,
+			})
 
 			-- load extensions
 			for _, ext in ipairs(opts.extensions_list) do
