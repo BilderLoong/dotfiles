@@ -7,4 +7,6 @@ opt.relativenumber = true
 -- Folding
 
 -- opt.autochdir = true
+--
+g.toggle_theme_icon = "   "
 
