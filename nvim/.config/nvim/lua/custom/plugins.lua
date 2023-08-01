@@ -196,7 +196,18 @@ local plugins = {
 			--  add config
 		end,
 	},
-	-- ,
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	opts = function()
+	-- 		local cmp = require("cmp")
+	-- 		--  add config
+	-- 		return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
+	-- 			mapping = {
+	-- 				["<A-<ESC>>"] = cmp.mapping.complete(),
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 }
 
