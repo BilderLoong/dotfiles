@@ -220,18 +220,18 @@ local plugins = {
 		},
 		-- It's ugly to change the the plugin's config function.
 		config = function(_, opts)
-			dofile(vim.g.base46_cache .. "telescope")
-			local telescope = require("telescope")
-			telescope.setup(opts)
-
-			vim.tbl_deep_extend("force", opts, {
-				extensions_list = table.insert(opts.extensions_list, "fzf"),
-			})
-
+			-- dofile(vim.g.base46_cache .. "telescope")
+			-- local telescope = require("telescope")
+			-- telescope.setup(opts)
+			--
+			-- vim.tbl_deep_extend("force", opts, {
+			-- 	extensions_list = table.insert(opts.extensions_list, "fzf"),
+			-- })
+vim.print('overwrite runs')
 			-- load extensions
-			for _, ext in ipairs(opts.extensions_list) do
-				telescope.load_extension(ext)
-			end
+			-- for _, ext in ipairs(opts.extensions_list) do
+			-- 	telescope.load_extension(ext)
+			-- end
 		end,
 	},
 }
