@@ -222,6 +222,7 @@ local plugins = {
 	{
 		"rmagatti/auto-session",
 		-- event = "VeryLazy",
+		lazy = false,
 		opts = {
 			log_level = vim.log.levels.ERROR,
 			auto_session_enable_last_session = true,
