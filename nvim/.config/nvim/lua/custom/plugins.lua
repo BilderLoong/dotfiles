@@ -226,8 +226,10 @@ local plugins = {
 
 			-- It's ugly to extend this list.
 			vim.tbl_deep_extend("force", opts, {
-        extensions_list:table.insert(opts.extensions_list,'fzf')
+				extensions_list = table.insert(opts.extensions_list, "fzf"),
 			})
+
+			vim.print(opts)
 
 			-- load extensions
 			for _, ext in ipairs(opts.extensions_list) do
