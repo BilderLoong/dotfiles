@@ -180,10 +180,11 @@ local plugins = {
 		dependencies = {
 			{
 				"junegunn/fzf",
-				run = ":call fzf#install()<CR>",
+				build = ":call fzf#install()<CR>",
 			},
 		},
 	},
+
 	{
 		"sindrets/diffview.nvim",
 		cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
