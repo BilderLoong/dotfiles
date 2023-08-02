@@ -119,7 +119,7 @@ zinit light starship/starship
 
 zinit ice wait lucid \
   eval"fnm env --use-on-cd"
-zinit light starship
+zinit light-mode
 
 eval "$(fnm env --use-on-cd)"
 
