@@ -105,7 +105,6 @@ zinit wait lucid light-mode for \
     marlonrichert/zsh-autocomplete
 
 
-
 zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
       zsh-users/zsh-autosuggestions
 
