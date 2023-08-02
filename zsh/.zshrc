@@ -128,7 +128,7 @@ zinit light ajeetdsouza/zoxide
 # zinit light starship/starship
 
 zinit ice as"command" from"gh-r" \
-          eval"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          eval"./starship init zsh " \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
