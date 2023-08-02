@@ -106,7 +106,8 @@ zinit wait lucid light-mode for \
     marlonrichert/zsh-autocomplete
 
 # https://github.com/tj/git-extras
-zinit ice wait as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" nocompile
+zinit ice wait as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" nocompile \
+  atload'''
 zinit light tj/git-extras
 source /Users/birudo/.local/share/zinit/plugins/tj---git-extras/etc/git-extras-completion.zsh
 
