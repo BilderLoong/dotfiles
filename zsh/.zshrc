@@ -116,6 +116,7 @@ zinit ice wait lucid  as"command" from"gh-r" \
           eval"./starship init zsh" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
+eval "$(fnm env --use-on-cd)"
 
 
 zinit as'null' lucid sbin wait'1' for \
