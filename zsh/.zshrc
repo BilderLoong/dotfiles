@@ -1,7 +1,3 @@
-# zmodload zsh/zprof
-# eval "$(starship init zsh)"
-
-
 ZSH_CUSTOM=~/zsh/custom
 
 # https://stackoverflow.com/a/54618022/11602758
