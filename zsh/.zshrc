@@ -100,7 +100,7 @@ zinit wait lucid light-mode for \
     OMZL::git.zsh\
     OMZP::git \
     zsh-users/zsh-completions \
-    OMZ::plugins/autojump/autojump.plugin.zsh \
+    # OMZ::plugins/autojump/autojump.plugin.zsh \
     DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     ajeetdsouza/zoxide \
