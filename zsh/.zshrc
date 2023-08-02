@@ -111,6 +111,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
 
 ## With z-a-eval
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
+      act
       eval"./zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
