@@ -110,6 +110,12 @@ zinit light-mode for \
       jeffreytse/zsh-vi-mode 
 
 
+## With z-a-eval
+zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
+      eval"./zoxide init zsh"
+zinit light ajeetdsouza/zoxide
+
+
 eval "$(fnm env --use-on-cd)"
 
 export EDITOR='nvim'
