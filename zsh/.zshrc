@@ -1,4 +1,3 @@
-
 zmodload zsh/zprof
 eval "$(starship init zsh)"
 
