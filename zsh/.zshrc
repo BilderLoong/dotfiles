@@ -97,7 +97,7 @@ zinit wait lucid light-mode for \
     zsh-users/zsh-completions \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    marlonrichert/zsh-autocomplete \
+    marlonrichert/zsh-autocomplete 
 
 
 # https://github.com/tj/git-extras
