@@ -109,8 +109,6 @@ zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
 zinit light-mode for \
       jeffreytse/zsh-vi-mode 
 
-# zinit ice svn 
-# zinit snippet OMZP::aliases 
 
 eval "$(fnm env --use-on-cd)"
 
