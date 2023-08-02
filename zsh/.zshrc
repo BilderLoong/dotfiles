@@ -95,7 +95,7 @@ zinit light-mode for \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval
 
-# Meaing of lucid
+# Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid light-mode for \
     OMZP::command-not-found \
     OMZL::git.zsh\
