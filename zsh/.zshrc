@@ -95,7 +95,6 @@ zinit wait lucid light-mode for \
     OMZL::git.zsh\
     OMZP::git \
     zsh-users/zsh-completions \
-    \
     DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     marlonrichert/zsh-autocomplete
