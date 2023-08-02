@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 eval "$(starship init zsh)"
 
 # https://github.com/gsamokovarov/jump
