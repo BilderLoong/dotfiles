@@ -144,7 +144,7 @@ alias v="nvim"
 alias vc="nvim $HOME/.config/nvim"
 alias lv="lvim"
 alias gwl="git worktree list"
-alias cd='z'
+# alias cd='z'
 
 unproxy() {
   unset proxy_address
