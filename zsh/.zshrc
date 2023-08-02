@@ -115,6 +115,9 @@ zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
 zinit light ajeetdsouza/zoxide
 
 
+
+
+
 eval "$(fnm env --use-on-cd)"
 
 export EDITOR='nvim'
