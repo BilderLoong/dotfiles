@@ -118,7 +118,7 @@ zinit ice wait lucid  as"command" from"gh-r" \
 zinit light starship/starship
 
 zinit ice wait lucid \
-  eval"fnm"
+  eval"fnm env --use-on-cd"
 
 eval "$(fnm env --use-on-cd)"
 
