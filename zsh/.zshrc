@@ -113,7 +113,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
       zsh-users/zsh-autosuggestions
 
 
-
+# https://github.com/NICHOLAS85/z-a-eval#ice-modifiers-provided-by-the-annex
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
       eval"./zoxide init zsh"
 zinit light ajeetdsouza/zoxide
