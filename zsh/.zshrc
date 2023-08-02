@@ -87,7 +87,7 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# zinit user plugins 
+# zinit user plugins.
 
 zinit light-mode for \
       jeffreytse/zsh-vi-mode \
