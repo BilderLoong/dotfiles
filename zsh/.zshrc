@@ -107,7 +107,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
 
 zinit light-mode for \
       jeffreytse/zsh-vi-mode 
-zinit light NICHOLAS85/z-a-eval
+zinit light 
 
 
 ## With z-a-eval
