@@ -92,8 +92,8 @@ zinit light-mode for \
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid light-mode for \
     OMZP::command-not-found \
-    hasgit'  OMZL::git.zsh\
-    has'git' OMZP::git \
+    OMZL::git.zsh\
+    OMZP::git \
     zsh-users/zsh-completions \
     has'exa' \
     DarrinTisdale/zsh-aliases-exa \
