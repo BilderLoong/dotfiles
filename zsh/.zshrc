@@ -93,6 +93,7 @@ zinit light-mode for \
 zinit wait lucid light-mode for \
     OMZP::command-not-found \
     OMZL::git.zsh\
+    has'git'
     OMZP::git \
     zsh-users/zsh-completions \
     has'exa' \
