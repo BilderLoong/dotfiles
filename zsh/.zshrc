@@ -4,8 +4,6 @@ eval "$(starship init zsh)"
 # https://github.com/gsamokovarov/jump
 eval "$(jump shell --bind=g)"
 
-# https://github.com/ajeetdsouza/zoxide
-# eval "$(zoxide init zsh --cmd z)"
 
 ZSH_CUSTOM=~/zsh/custom
 
