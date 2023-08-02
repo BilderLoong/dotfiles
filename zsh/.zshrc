@@ -127,7 +127,7 @@ zinit light ajeetdsouza/zoxide
 #           atpull"%atclone" src"init.zsh"
 # zinit light starship/starship
 
-zinit ice lucid wait as"command" from"gh-r" \
+zinit ice wait lucid  as"command" from"gh-r" \
           eval"./starship init zsh" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
