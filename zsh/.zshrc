@@ -127,10 +127,10 @@ zinit light ajeetdsouza/zoxide
 #           atpull"%atclone" src"init.zsh"
 # zinit light starship/starship
 
-zinit ice as"command" from"gh-r" \
-          eval"./starship init zsh" \
-          atpull"%atclone" src"init.zsh"
-zinit light starship/starship
+# zinit ice as"command" from"gh-r" \
+#           eval"./starship init zsh" \
+#           atpull"%atclone" src"init.zsh"
+# zinit light starship/starship
 
 
 zinit as'null' lucid sbin wait'1' for \
