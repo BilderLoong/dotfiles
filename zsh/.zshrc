@@ -115,6 +115,7 @@ zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
 zinit light ajeetdsouza/zoxide
 
 
+# zinit plugins end
 
 
 
