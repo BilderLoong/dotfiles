@@ -98,7 +98,6 @@ zinit wait lucid light-mode for \
     zsh-users/zsh-completions \
     DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    # ajeetdsouza/zoxide \
     marlonrichert/zsh-autocomplete
 
 
