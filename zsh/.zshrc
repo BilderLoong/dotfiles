@@ -128,7 +128,7 @@ zinit ice as"command" from"gh-r" \
 zinit light starship/starship
 
 
-zi as'null' lucid sbin wait'1' for \
+zinit as'null' lucid sbin wait'1' for \
   Fakerr/git-recall \
   davidosomething/git-my \
   iwata/git-now \
