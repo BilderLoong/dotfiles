@@ -123,7 +123,7 @@ zinit light ajeetdsouza/zoxide
 # line 2: starship setup at clone(create init.zsh, completion)
 # line 3: pull behavior same as clone, source init.zsh
 zinit ice as"command" from"gh-r" \
-          eval"./starship init zsh; ./starship completions zsh > _starship" \
+          eval"./starship init zsh; ./starship completions zsh " \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
