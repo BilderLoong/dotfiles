@@ -136,7 +136,6 @@ zinit as'null' lucid sbin wait'1' for \
 
 
 
-eval "$(fnm env --use-on-cd)"
 
 export EDITOR='nvim'
 
