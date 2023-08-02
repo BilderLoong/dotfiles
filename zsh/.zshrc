@@ -1,5 +1,5 @@
 # zmodload zsh/zprof
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # https://github.com/gsamokovarov/jump
 eval "$(jump shell --bind=g)"
