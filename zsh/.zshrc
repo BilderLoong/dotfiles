@@ -1,8 +1,6 @@
 # zmodload zsh/zprof
 # eval "$(starship init zsh)"
 
-# https://github.com/gsamokovarov/jump
-eval "$(jump shell --bind=g)"
 
 ZSH_CUSTOM=~/zsh/custom
 
