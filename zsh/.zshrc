@@ -105,9 +105,6 @@ zinit wait lucid light-mode for \
 zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
       zsh-users/zsh-autosuggestions
 
-zinit light-mode for \
-      jeffreytse/zsh-vi-mode \
-      NICHOLAS85/z-a-eval
 
 
 ## With z-a-eval
