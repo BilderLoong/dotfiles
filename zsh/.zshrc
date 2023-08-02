@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 ZSH_CUSTOM=~/zsh/custom
 
 # https://stackoverflow.com/a/54618022/11602758
@@ -6,10 +8,6 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 
-# Pyenv setup
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
 
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
@@ -50,7 +48,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000
-SAVEHIST=1000
+SAVEHIST=9999
 setopt appendhistory
 
 
@@ -85,59 +83,67 @@ zinit light-mode for \
 
 # The vi escape key in all modes (default is ^[ => ESC)
 zinit light-mode for \
-      atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
+        atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
-      NICHOLAS85/z-a-eval
+      NICHOLAS85/z-a-eval \
+      marlonrichert/zsh-autocomplete 
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
-zinit wait lucid light-mode for \
+zinit wait lucid for \
     OMZP::command-not-found \
     has'git' OMZL::git.zsh \
     has'git' OMZP::git \
-    zsh-users/zsh-completions \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    marlonrichert/zsh-autocomplete 
+    zsh-users/zsh-completions 
 
 
-zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
-      zsh-users/zsh-autosuggestions
+# Fish-like autosuggestions for zsh 
+zinit wait lucid atload'_zsh_autosuggest_start' for \
+      zsh-users/zsh-autosuggestions 
 
 
 # https://github.com/NICHOLAS85/z-a-eval#ice-modifiers-provided-by-the-annex
+# zinit ice lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
+#       eval'zoxide init zsh' \
+# zinit light ajeetdsouza/zoxide
+
+zinit lucid for \
+  has'starship' id-as'starship_init' eval"starship init zsh" \
+  zdharma-continuum/null  
+
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
-      eval"./zoxide init zsh"
+      eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
-
-zinit ice wait lucid  as"command" from"gh-r" \
-          eval"./starship init zsh" \
-          atpull"%atclone" src"init.zsh"
-zinit light starship/starship
-
-zinit ice wait lucid has"fnm" \
-  eval"fnm env --use-on-cd"
-zinit light-mode
-
-eval "$(fnm env --use-on-cd)"
+# zinit lucid for \
+#     has'zoxide' id-as'zoxide_init' eval'zoxide init zsh' \
+#   zdharma-continuum/null
 
 
-zinit as'null' lucid sbin wait'1' for \
-  Fakerr/git-recall \
-  davidosomething/git-my \
-  iwata/git-now \
-  paulirish/git-open \
-  paulirish/git-recent \
-    atload'export _MENU_THEME=legacy' \
-  arzzen/git-quick-stats \
-    make'install' \
-  tj/git-extras \
-    make'GITURL_NO_CGITURL=1' \
-    sbin'git-url;git-guclone' \
-  zdharma-continuum/git-url
+# Use `id-as` to avoid conflic.
+zinit wait"1" lucid for \
+    has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env'\
+  zdharma-continuum/null \
+    has"pyenv" eval"pyenv init -" atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
+  zdharma-continuum/null 
+  # id-as'fnm_env' \
+  # zdharma-continuum/null
 
+# zinit as'null' lucid sbin wait'1' for \
+#   Fakerr/git-recall \
+#   davidosomething/git-my \
+#   iwata/git-now \
+#   paulirish/git-open \
+#   paulirish/git-recent \
+#     atload'export _MENU_THEME=legacy' \
+#   arzzen/git-quick-stats \
+#     make'install' \
+#   tj/git-extras \
+#     make'GITURL_NO_CGITURL=1' \
+#     sbin'git-url;git-guclone' \
+#   zdharma-continuum/git-url
+#
 # ==== zinit plugins end ====
-
-
 
 
 export EDITOR='nvim'
@@ -147,7 +153,6 @@ export EDITOR='nvim'
 alias zshconfig="source ~/.zshrc"
 alias sync-config="cd $HOME/Projects/dotfiles &&  git-auto-sync w . &"
 alias v="nvim"
-alias vc="nvim $HOME/.config/nvim"
 alias lv="lvim"
 alias gwl="git worktree list"
 alias cd='z'
@@ -264,7 +269,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
 
 alias emulator="cd $ANDROID_HOME/tools && emulator"
-
 
 
 # zprof
