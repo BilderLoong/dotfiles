@@ -134,6 +134,8 @@ local plugins = {
         -- Shell
         "shellcheck",
 
+        -- Python
+
         -- Misc
         "cspell",
       },
