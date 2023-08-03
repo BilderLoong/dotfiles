@@ -18,6 +18,7 @@ local sources = {
   fmt.shfmt,
 
   -- Python
+  
 
   -- Misc
   -- null_ls.builtins.diagnostics.cspell,
