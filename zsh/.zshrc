@@ -113,7 +113,7 @@ zinit wait lucid for \
   has'starship' id-as'starship_init' eval"starship init zsh" \
   zdharma-continuum/null  
 
-zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
+zinit wait ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
       eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 # zinit lucid for \
