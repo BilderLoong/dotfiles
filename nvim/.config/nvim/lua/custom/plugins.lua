@@ -137,6 +137,7 @@ local plugins = {
 
         -- Python
         "ruff",
+        "black",
 
 
 
