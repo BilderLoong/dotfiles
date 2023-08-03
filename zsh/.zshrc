@@ -88,7 +88,7 @@ zinit light-mode for \
     Aloxaf/fzf-tab
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
-zinit wait lucid   for \
+zinit wait lucid for \
     OMZP::command-not-found \
     has'git' OMZL::git.zsh \
     has'git' OMZP::git \
