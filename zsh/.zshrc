@@ -84,7 +84,8 @@ zinit light-mode for \
 zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
-      NICHOLAS85/z-a-eval 
+      NICHOLAS85/z-a-eval \
+      zinit light Aloxaf/fzf-tab
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
