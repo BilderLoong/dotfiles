@@ -19,7 +19,7 @@ local sources = {
 
   -- Python
   fmt.black,
-  lint.ruff
+  lint.ruff,
 
   -- Misc
   -- null_ls.builtins.diagnostics.cspell,
