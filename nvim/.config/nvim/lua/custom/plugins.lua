@@ -135,7 +135,7 @@ local plugins = {
         "shellcheck",
 
         -- Python
-        
+        "ruff"
 
 
         -- Misc
