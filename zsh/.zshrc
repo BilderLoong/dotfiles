@@ -48,7 +48,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000
-SAVEHIST=9999
+export SAVEHIST=9999
 setopt appendhistory
 
 
