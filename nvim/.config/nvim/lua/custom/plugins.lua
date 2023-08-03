@@ -133,10 +133,10 @@ local plugins = {
 
         -- Shell
         "shellcheck",
+        "shfmt"
 
         -- Python
         "ruff",
-        "shfmt"
 
 
         -- Misc
