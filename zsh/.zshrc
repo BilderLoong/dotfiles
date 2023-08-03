@@ -96,6 +96,7 @@ zinit wait lucid for \
     zsh-users/zsh-completions \
     Aloxaf/fzf-tab
 
+
 # zinit light @marlonrichert/zsh-autocomplete 
 
 
