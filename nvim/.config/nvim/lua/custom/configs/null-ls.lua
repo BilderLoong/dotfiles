@@ -17,7 +17,7 @@ local sources = {
   lint.shellcheck,
   fmt.shfmt,
 
-  -- PyP
+  -- Python
 
   -- Misc
   -- null_ls.builtins.diagnostics.cspell,
