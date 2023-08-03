@@ -15,7 +15,7 @@ local sources = {
 
   -- Shell
   lint.shellcheck,
-  fmt.prettierd
+  fmt.shfmt
 
   -- Misc
   -- null_ls.builtins.diagnostics.cspell,
