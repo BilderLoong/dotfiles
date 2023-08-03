@@ -136,8 +136,8 @@ local plugins = {
         "shfmt",
 
         -- Python
-        "ruff",
-        "black",
+        "ruff",  -- linter
+        "black", -- formater
 
 
 
