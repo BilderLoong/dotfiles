@@ -139,6 +139,7 @@ local plugins = {
         "ruff",
 
 
+
         -- Misc
         "cspell",
       },
