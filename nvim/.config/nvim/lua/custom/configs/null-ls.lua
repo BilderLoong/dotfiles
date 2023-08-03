@@ -13,6 +13,7 @@ local sources = {
 
   fmt.stylua,
 
+-- shell
   lint.shellcheck,
   fmt
 
