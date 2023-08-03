@@ -116,9 +116,6 @@ zinit wait lucid for \
 zinit wait ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
       eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
-# zinit lucid for \
-#     has'zoxide' id-as'zoxide_init' eval'zoxide init zsh' \
-#   zdharma-continuum/null
 
 
 # Use `id-as` to avoid conflic.
