@@ -3,7 +3,7 @@
 ZSH_CUSTOM=~/zsh/custom
 
 # https://stackoverflow.com/a/54618022/11602758
-if [[ $(uname) == "Darwin" ]]; then
+f [[ $(uname) == "Darwin" ]]; then
     source "$ZSH_CUSTOM/macOS.sh"
 fi
 
