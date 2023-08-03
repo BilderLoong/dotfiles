@@ -95,7 +95,7 @@ zinit wait lucid for \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions 
 
-zinit light @marlonrichert/zsh-autocomplete 
+# zinit light @marlonrichert/zsh-autocomplete 
 
 
 # Fish-like autosuggestions for zsh 
