@@ -14,6 +14,7 @@ local sources = {
   fmt.stylua,
 
   lint.shellcheck,
+  fmt
 
   -- Misc
   -- null_ls.builtins.diagnostics.cspell,
