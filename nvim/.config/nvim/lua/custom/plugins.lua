@@ -136,6 +136,7 @@ local plugins = {
 
         -- Python
 
+
         -- Misc
         "cspell",
       },
