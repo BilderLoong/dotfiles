@@ -1,7 +1,11 @@
-2023/08/03 09:50:03 exit status 1: Command: git fetch origin
+2023/08/03 09:50:03 exit status 1: Com2023/08/03 11:28:05 exit status 128: Command: git commit -m  M Logseq/pages/S47-点餐小程序复制抖音券码核销.md
 StdOut: 
-StdErr: erreur : cannot lock ref 'refs/remotes/origin/master': is at ed041649ebb9120fe5c2c96ff20b65ee88c4e5be but expected a0a0019a56724dc718b2cd382423a018ed728739
-Depuis github.com:BilderLoong/privite-collection
- ! a0a0019..ed04164  master     -> origin/master  (impossible de mettre à jour la référence locale)
-erreur : cannot lock ref 'refs/remotes/origin/gh-pages': is at 0b7b2206b32c90cb0bf0a5bba4041d6c505c5974 but expected 8f586b8658ec2b6cb2dec16cca6a512a8acd79ca
- ! 8f586b8..0b7b220  gh-pages   -> origin/gh-pages  (impossible de mettre à jour la référence locale)
+StdErr: fatal : Impossible de créer '/Users/birudo/Resilio Sync/MaxLumi/private-collection/Notes/Meituan/.git/index.lock' : File exists.
+
+Il semble qu'un autre processus git est déjà lancé dans ce dépôt,
+par exemple un éditeur ouvert par 'git commit'. Veuillez vous assurer
+que tous les processus sont terminés et réessayez. Si l'échec persiste,
+un processus git peut avoir planté :
+supprimez le fichier manuellement pour poursuivre.
+
+ à jour la référence locale)
