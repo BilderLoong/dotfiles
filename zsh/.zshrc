@@ -76,7 +76,6 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
-  
 
 ### End of Zinit's installer chunk
 
@@ -85,7 +84,7 @@ zinit light-mode for \
 zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
-      NICHOLAS85/z-a-eval 
+      NICHOLAS85/z-a-eval \
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
