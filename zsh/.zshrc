@@ -93,7 +93,7 @@ zinit wait lucid for \
     has'git' OMZP::git \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    zsh-users/zsh-completions 
+    zsh-users/zsh-completions \
       Aloxaf/fzf-tab
 
 # zinit light @marlonrichert/zsh-autocomplete 
