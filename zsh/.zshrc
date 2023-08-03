@@ -47,8 +47,8 @@ export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 
 HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=1000
-export SAVEHIST=9999
+HISTSIZE=1000
+SAVEHIST=9999
 setopt appendhistory
 
 
