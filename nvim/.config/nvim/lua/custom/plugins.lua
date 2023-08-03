@@ -134,6 +134,7 @@ local plugins = {
         -- Shell
         "shellcheck",
         "shfmt",
+        "bash-language-server",
 
         -- Python
         "ruff",  -- linter
