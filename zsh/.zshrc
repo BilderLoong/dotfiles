@@ -109,7 +109,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 #       eval'zoxide init zsh' \
 # zinit light ajeetdsouza/zoxide
 
-zinit lucid for \
+zinit wait lucid for \
   has'starship' id-as'starship_init' eval"starship init zsh" \
   zdharma-continuum/null  
 
