@@ -85,7 +85,7 @@ zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval \
-    Aloxaf/fzf-tab
+      Aloxaf/fzf-tab
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
@@ -95,9 +95,6 @@ zinit wait lucid for \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions 
-
-
-# zinit light @marlonrichert/zsh-autocomplete 
 
 
 # Fish-like autosuggestions for zsh 
