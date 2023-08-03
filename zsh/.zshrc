@@ -91,7 +91,7 @@ zinit light-mode for \
 zinit wait lucid for \
     OMZP::command-not-found \
     has'git' OMZL::git.zsh \
-    has'git' OMZP::git \
+    has'git'OMZP::git \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions 
