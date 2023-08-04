@@ -123,7 +123,7 @@ zinit wait"1" lucid for \
   zdharma-continuum/null 
   # id-as'fnm_env' \
   # zdharma-continuum/null
-  #
+
 
  zinit light Aloxaf/fzf-tab
 
