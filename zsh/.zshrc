@@ -112,7 +112,6 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 zinit wait lucid for \
   has'starship' id-as'starship_init' eval"starship init zsh" \
   zdharma-continuum/null  
-
 zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
       eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
@@ -148,7 +147,6 @@ export EDITOR='nvim'
 
 
 # Shortcut
-alias zshconfig="source ~/.zshrc"
 alias sync-config="cd $HOME/Projects/dotfiles &&  git-auto-sync w . &"
 alias v="nvim"
 alias lv="lvim"
@@ -215,11 +213,6 @@ trash_all_nest_node_modules () {
 }
 
 # Personal Used Variables
-
-# Make it easy to asscess dotfiles
-# Note that to use tidle expansion, 
-df=~/Project/dotfiles
-
 if [[ $OSTYPE == 'darwin'* ]]; then
     # Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
   defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
@@ -256,10 +249,6 @@ PERL_LOCAL_LIB_ROOT="/Users/birudo/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB
 PERL_MB_OPT="--install_base \"/Users/birudo/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
 #JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -270,5 +259,3 @@ alias emulator="cd $ANDROID_HOME/tools && emulator"
 
 
 # zprof
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
