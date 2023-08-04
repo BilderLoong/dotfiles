@@ -89,6 +89,11 @@ zinit light-mode for \
 
 
 
+      zinit ice atclone"shell/key-bindings.zsh" \
+  atpull"%atclone" multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" \
+  pick"/dev/null"
+zinit light junegunn/fzf
+
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
     OMZP::command-not-found \
