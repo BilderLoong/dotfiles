@@ -89,6 +89,7 @@ zinit light-mode for \
 
 
 
+
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
     OMZP::command-not-found \
