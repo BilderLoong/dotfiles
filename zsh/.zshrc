@@ -122,7 +122,7 @@ zinit wait"1" lucid for \
     has"pyenv" eval"pyenv init -" atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
   zdharma-continuum/null 
 
- zinit light wait  Aloxaf/fzf-tab
+ zinit ice wait  Aloxaf/fzf-tab
  zinit light wait  Aloxaf/fzf-tab
 
 
