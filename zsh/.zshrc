@@ -124,7 +124,8 @@ zinit wait"1" lucid for \
   # id-as'fnm_env' \
   # zdharma-continuum/null
   #
-  #
+
+  zinit light 
 
 # zinit as'null' lucid sbin wait'1' for \
 #   Fakerr/git-recall \
