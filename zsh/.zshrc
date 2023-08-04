@@ -103,11 +103,6 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 # https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
 zinit light-mode for Aloxaf/fzf-tab
 
-# https://github.com/NICHOLAS85/z-a-eval#ice-modifiers-provided-by-the-annex
-# zinit ice lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
-#       eval'zoxide init zsh' \
-# zinit light ajeetdsouza/zoxide
-
 zinit wait lucid for \
   has'starship' id-as'starship_init' eval"starship init zsh" \
   zdharma-continuum/null  
