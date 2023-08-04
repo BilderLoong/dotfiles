@@ -100,6 +100,7 @@ zinit wait lucid for \
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
 
+# https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
 zinit light-mode for Aloxaf/fzf-tab
 
 # https://github.com/NICHOLAS85/z-a-eval#ice-modifiers-provided-by-the-annex
