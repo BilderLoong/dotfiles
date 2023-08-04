@@ -124,7 +124,6 @@ zinit light ajeetdsouza/zoxide
 
 # Use `id-as` to avoid conflic.
 zinit wait"1" lucid for \
-    has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env'\
   zdharma-continuum/null \
     has"pyenv" eval"pyenv init -" atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
   zdharma-continuum/null 
