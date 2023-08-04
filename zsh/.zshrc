@@ -82,46 +82,46 @@ zinit light-mode for \
 # zinit user plugins.
 # The vi escape key in all modes (default is ^[ => ESC)
 zinit light Aloxaf/fzf-tab
-zinit light-mode for \
-      atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
-      jeffreytse/zsh-vi-mode \
-      NICHOLAS85/z-a-eval
-      # Aloxaf/fzf-tab
-
-
-
-# Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
-zinit wait lucid for \
-    OMZP::command-not-found \
-    has'git' OMZL::git.zsh \
-    has'git' OMZP::git \
-    has'exa' DarrinTisdale/zsh-aliases-exa \
-    zdharma-continuum/fast-syntax-highlighting \
-    zsh-users/zsh-completions \
-
-
-# Fish-like autosuggestions for zsh 
-zinit wait lucid atload'_zsh_autosuggest_start' for \
-      zsh-users/zsh-autosuggestions 
-
-# Put this after other plugins may also bind "^I"
-# https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
-
-zinit wait lucid for \
-  has'starship' id-as'starship_init' eval"starship init zsh" \
-  zdharma-continuum/null  
-
-zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
-      eval"zoxide init zsh"
-zinit light ajeetdsouza/zoxide
-
-
-# Use `id-as` to avoid conflic.
-zinit wait"1" lucid for \
-    has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env'\
-  zdharma-continuum/null \
-    has"pyenv" eval"pyenv init -" atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
-  zdharma-continuum/null 
+# zinit light-mode for \
+#       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
+#       jeffreytse/zsh-vi-mode \
+#       NICHOLAS85/z-a-eval
+#       # Aloxaf/fzf-tab
+#
+#
+#
+# # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
+# zinit wait lucid for \
+#     OMZP::command-not-found \
+#     has'git' OMZL::git.zsh \
+#     has'git' OMZP::git \
+#     has'exa' DarrinTisdale/zsh-aliases-exa \
+#     zdharma-continuum/fast-syntax-highlighting \
+#     zsh-users/zsh-completions \
+#
+#
+# # Fish-like autosuggestions for zsh 
+# zinit wait lucid atload'_zsh_autosuggest_start' for \
+#       zsh-users/zsh-autosuggestions 
+#
+# # Put this after other plugins may also bind "^I"
+# # https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
+#
+# zinit wait lucid for \
+#   has'starship' id-as'starship_init' eval"starship init zsh" \
+#   zdharma-continuum/null  
+#
+# zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
+#       eval"zoxide init zsh"
+# zinit light ajeetdsouza/zoxide
+#
+#
+# # Use `id-as` to avoid conflic.
+# zinit wait"1" lucid for \
+#     has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env'\
+#   zdharma-continuum/null \
+#     has"pyenv" eval"pyenv init -" atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
+#   zdharma-continuum/null 
 
 
 
