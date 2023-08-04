@@ -270,3 +270,5 @@ alias emulator="cd $ANDROID_HOME/tools && emulator"
 
 
 # zprof
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
