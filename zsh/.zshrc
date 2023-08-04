@@ -99,7 +99,7 @@ zinit wait lucid for \
     zsh-users/zsh-completions \
 
 
-zinit ice wait atclone"shell/key-bindings.zsh" \
+ atclone"shell/key-bindings.zsh" \
   atpull"%atclone" multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" \
   pick"/dev/null"
 zinit light junegunn/fzf
