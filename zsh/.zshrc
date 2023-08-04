@@ -94,7 +94,7 @@ zinit wait lucid for \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions \
-     Aloxaf/fzf-tab
+   Aloxaf/fzf-tab
 
 
 # Fish-like autosuggestions for zsh 
