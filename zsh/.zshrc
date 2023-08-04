@@ -100,7 +100,7 @@ zinit wait lucid for \
       atpull"%atclone" \
       multisrc"shell/{completion,key-bindings}.zsh" \
       id-as"junegunn/fzf_completions" \
-    pick"/dev/null" junegunn/fzf \
+    pick"/dev/null" junegunn/fzf 
 
 zinit snippet https://github.com/junegunn/fzf-git.sh/blob/main/fzf-git.sh
 
