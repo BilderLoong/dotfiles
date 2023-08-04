@@ -103,7 +103,7 @@ zinit wait lucid for \
       id-as"junegunn/fzf_completions" \
     pick"/dev/null" junegunn/fzf
 
-zinit wait lucid for snippet 
+zinit wait lucid for 
 
 
 
