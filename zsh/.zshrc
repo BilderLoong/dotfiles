@@ -81,7 +81,6 @@ zinit light-mode for \
 
 # zinit user plugins.
 # The vi escape key in all modes (default is ^[ => ESC)
-zinit light Aloxaf/fzf-tab
 zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
