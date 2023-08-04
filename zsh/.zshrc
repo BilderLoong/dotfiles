@@ -107,7 +107,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 # https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
 # https://github.com/Aloxaf/fzf-tab#install
 # Got error for this plugin, given up
-zinit light Aloxaf/fzf-tab
+# zinit light Aloxaf/fzf-tab
 
 zinit wait lucid for \
   has'starship' id-as'starship_init' eval"starship init zsh" \
