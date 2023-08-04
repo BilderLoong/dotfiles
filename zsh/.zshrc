@@ -121,7 +121,8 @@ zinit wait"1" lucid for \
     has"pyenv" eval"pyenv init -" atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
   zdharma-continuum/null 
 
-zinit load Aloxaf/fzf-tab
+
+
 # zinit as'null' lucid sbin wait'1' for \
 #   Fakerr/git-recall \
 #   davidosomething/git-my \
