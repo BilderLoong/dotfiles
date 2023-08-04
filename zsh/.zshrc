@@ -105,6 +105,8 @@ zinit wait lucid for \
 
 
 
+
+
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
