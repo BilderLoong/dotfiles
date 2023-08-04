@@ -85,7 +85,7 @@ zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval 
-
+zinit wait for
 
     Aloxaf/fzf-tab
 
