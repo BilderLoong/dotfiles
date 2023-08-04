@@ -97,8 +97,8 @@ zinit wait lucid for \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions \
-   atclone"shell/key-bindings.zsh" \
-  atpull"%atclone" multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" \
+     atclone"shell/key-bindings.zsh" \
+      atpull"%atclone" multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" \
   pick"/dev/null" junegunn/fzf
 
 
