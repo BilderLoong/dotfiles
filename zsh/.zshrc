@@ -122,6 +122,7 @@ zinit wait"1" lucid for \
   zdharma-continuum/null 
 
 
+zinit load Aloxaf/fzf-tab
 
 # zinit as'null' lucid sbin wait'1' for \
 #   Fakerr/git-recall \
