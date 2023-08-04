@@ -85,6 +85,7 @@ zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval 
+load Aloxaf/fzf-tab
 
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
