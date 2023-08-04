@@ -98,7 +98,8 @@ zinit wait lucid for \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions \
       atclone"shell/key-bindings.zsh" \
-      atpull"%atclone" multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" \
+      atpull"%atclone" \
+      multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" \
     pick"/dev/null" junegunn/fzf
 
 
