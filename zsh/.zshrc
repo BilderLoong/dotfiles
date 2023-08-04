@@ -105,6 +105,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 
 # Put this after other plugins may also bind "^I"
 # https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
+# https://github.com/Aloxaf/fzf-tab#install
 zinit light Aloxaf/fzf-tab
 
 zinit wait lucid for \
