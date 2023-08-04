@@ -78,7 +78,6 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
-
 # zinit user plugins.
 # The vi escape key in all modes (default is ^[ => ESC)
 zinit light-mode for \
