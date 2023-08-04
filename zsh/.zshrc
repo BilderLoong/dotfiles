@@ -84,7 +84,8 @@ zinit light-mode for \
 zinit light-mode for \
       atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
-      NICHOLAS85/z-a-eval
+      NICHOLAS85/z-a-eval \
+    has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env'
 
 
 
