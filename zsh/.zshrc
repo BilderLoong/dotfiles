@@ -86,7 +86,7 @@ zinit light-mode for \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval 
 
-zinit wait'2' for Aloxaf/fzf-tab
+zinit for Aloxaf/fzf-tab
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
