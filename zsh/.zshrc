@@ -102,7 +102,7 @@ zinit wait lucid for \
       id-as"junegunn/fzf_completions" \
     pick"/dev/null" junegunn/fzf \
     junegunn/fzf-git.sh
-
+zinit snippet https://github.com/junegunn/fzf-git.sh/blob/main/fzf-git.sh
 
 
 
