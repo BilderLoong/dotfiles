@@ -104,7 +104,7 @@ zinit wait lucid for \
     pick"/dev/null" junegunn/fzf
 
 
-zinit wait lucid for 
+
 
 
 
