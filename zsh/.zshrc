@@ -29,7 +29,6 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
   source "$ZSH_CUSTOM/wsl.sh"
 fi
 
-source "$ZSH_CUSTOM/functionsAndAlias.sh"
 
 # If the system is running on termux.
 if [ $(ps -ef|grep -c com.termux ) -gt 0 ]; then
