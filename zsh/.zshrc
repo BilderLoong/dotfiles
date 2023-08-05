@@ -1,6 +1,7 @@
 # zmodload zsh/zprof
 
 ZSH_CUSTOM="$HOME/zsh/custom"
+
 source "$ZSH_CUSTOM/zinit.sh"
 
 # https://stackoverflow.com/a/54618022/11602758
