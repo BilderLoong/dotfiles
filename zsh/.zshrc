@@ -54,8 +54,6 @@ setopt appendhistory
 
  HYPHEN_INSENSITIVE="true"
 
-
-
 export EDITOR='nvim'
 
 
