@@ -1,4 +1,4 @@
-
+!/
 # Plugins
 
 ### Added by Zinit's installer
