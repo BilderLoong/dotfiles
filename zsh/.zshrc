@@ -29,7 +29,7 @@ if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 fi
 
 if [ $(ps -ef|grep -c com.termux ) -gt 0 ]; then
- source
+ source "$ZSH_CUSTOM/termux.sh"
 fi
 
 # If you come from bash you might have to change your $PATH.
