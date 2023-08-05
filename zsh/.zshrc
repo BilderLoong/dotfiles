@@ -84,17 +84,6 @@ proxy (){
 
 alias gsave='git add . && git commit -m "save" && git pull origin HEAD &&  git push origin HEAD'
 
-# The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
-wechatcli () {
-  wechatcli='/Applications/wechatwebdevtools.app/Contents/MacOS/cli'
-
-  if [[ -z "$1" ]] 
-  then
-    "${wechatcli}"
-  else
-   ${wechatcli} open --project ~/Project/menuorder-new-rms-h5-$1/apps/menuorder/dist/merchant
-  fi
-}
 
 # rm_all_nest_node_modules
 trash_all_nest_node_modules () {
