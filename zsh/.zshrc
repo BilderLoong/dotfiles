@@ -12,8 +12,7 @@ HISTSIZE=1000
 SAVEHIST=9999
 setopt appendhistory
 
-
- HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 export EDITOR='nvim'
 
