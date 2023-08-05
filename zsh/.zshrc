@@ -10,7 +10,7 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 
-# If the system run in Windows
+# If the system is running on WSL.
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
   source "$ZSH_CUSTOM/wsl.sh"
 fi
