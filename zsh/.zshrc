@@ -94,19 +94,6 @@ trash_all_nest_node_modules () {
 
 # Personal Used Variables
 if [[ $OSTYPE == 'darwin'* ]]; then
-    # Make Ankiconnect be able to run in background, source: https://github.com/FooSoft/anki-connect#installation
-  defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
-  defaults write net.ichi2.anki NSAppSleepDisabled -bool true
-  defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
-
-  # Change the homebrew packages source.
-  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-
-  # Use Clash proxy.
-  # export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
