@@ -16,7 +16,6 @@ HYPHEN_INSENSITIVE="true"
 
 export EDITOR='nvim'
 
-
 source "$ZSH_CUSTOM/zinit.sh"
 
 # https://stackoverflow.com/a/54618022/11602758
