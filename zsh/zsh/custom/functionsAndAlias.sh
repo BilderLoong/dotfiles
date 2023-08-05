@@ -1,5 +1,5 @@
 alias emulator="cd \$ANDROID_HOME/tools && emulator"
-alias sync-config="cd $HOME/Projects/dotfiles &&  git-auto-sync w . &"
+alias sync-config="cd \$HOME/Projects/dotfiles &&  git-auto-sync w . &"
 alias v="nvim"
 alias lv="lvim"
 alias gwl="git worktree list"
