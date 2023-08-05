@@ -7,6 +7,8 @@ if [[ $(uname) == "Darwin" ]]; then
     source "$ZSH_CUSTOM/macOS.sh"
 fi
 
+source "$ZSH_CUSTOM/zinit.sh"
+
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
 	# Should be placed at the beginning of the init, so that the below commands that need to send network be proxied.
