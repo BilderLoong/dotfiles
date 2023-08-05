@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 # Plugins
 
 ### Added by Zinit's installer
