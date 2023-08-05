@@ -92,10 +92,6 @@ trash_all_nest_node_modules () {
   find $1 -name 'node_modules' -type d -prune -exec trash -rf '{}' +
 }
 
-# Personal Used Variables
-if [[ $OSTYPE == 'darwin'* ]]; then
-fi
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
