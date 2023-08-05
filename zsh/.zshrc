@@ -11,6 +11,7 @@ source "$ZSH_CUSTOM/zinit.sh"
 
 # If the system run in Windows
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+  source "$ZSH_CUSTOM/wsl.sh"
 fi
 
 if [ $(ps -ef|grep -c com.termux ) -gt 0 ]; then
