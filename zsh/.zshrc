@@ -17,12 +17,12 @@ HYPHEN_INSENSITIVE="true"
 export EDITOR='nvim'
 
 source "$ZSH_CUSTOM/zinit.sh"
+source "$ZSH_CUSTOM/functionsAndAlias.sh"
 
 # https://stackoverflow.com/a/54618022/11602758
 if [[ $(uname) == "Darwin" ]]; then
     source "$ZSH_CUSTOM/macOS.sh"
 fi
-
 
 # If the system is running on WSL.
 if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
