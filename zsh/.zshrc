@@ -36,8 +36,6 @@ if [ $(ps -ef|grep -c com.termux ) -gt 0 ]; then
  source "$ZSH_CUSTOM/termux.sh"
 fi
 
-
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
