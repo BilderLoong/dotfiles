@@ -1,6 +1,6 @@
 # zmodload zsh/zprof
 
-ZSH_CUSTOM="/zsh/custom"
+ZSH_CUSTOM="$HOME/zsh/custom"
 
 # https://stackoverflow.com/a/54618022/11602758
 if [[ $(uname) == "Darwin" ]]; then
