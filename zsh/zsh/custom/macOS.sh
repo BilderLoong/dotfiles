@@ -1,6 +1,6 @@
 
 # Android SDK
-export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
 wechatcli () {
