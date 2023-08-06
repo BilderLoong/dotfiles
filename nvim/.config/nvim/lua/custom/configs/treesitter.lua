@@ -4,7 +4,7 @@ local options = {
 	highlight = {
 		--- Disable syntax highlight for big file.
 		--- bufnr
-    ---@param lang any
+    ---@param lang string
     ---@param bufnr number
     ---@return boolean
 		disable = function(lang, bufnr)
