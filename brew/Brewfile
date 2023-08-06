@@ -35,7 +35,7 @@ brew "fd"
 brew "exa"
 brew "zoxide"
 brew "luarocks"
-brew "tidwall/jj/jj"
+brew "tidwall/jj"
 
 cask "anki"
 cask "deepl"
