@@ -3,7 +3,6 @@ local options = {
 	ensure_installed = "all",
 	highlight = {
 		--- Disable syntax highlight for big file.
-		--- bufnr
     ---@param lang string
     ---@param bufnr number
     ---@return boolean
