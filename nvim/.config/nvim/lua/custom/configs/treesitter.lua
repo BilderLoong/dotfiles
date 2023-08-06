@@ -1,3 +1,4 @@
+
 local options = {
 	ensure_installed = "all",
 
