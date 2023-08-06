@@ -67,8 +67,9 @@ local plugins = {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		opts = {
-		},
+    opts = function ()
+      
+    end
 	},
 	{
 		"neovim/nvim-lspconfig",
