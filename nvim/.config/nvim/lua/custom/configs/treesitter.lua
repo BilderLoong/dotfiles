@@ -2,7 +2,7 @@ local options = {
 
 	highlight = {
 		disable = function(lang, bufnr)
-			vim.api.nvim_buf_line_count(bufnr) == 1
+			local big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and 
 
 		end,
 	},
