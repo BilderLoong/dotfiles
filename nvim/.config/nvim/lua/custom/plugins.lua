@@ -65,12 +65,12 @@ local plugins = {
 		event = BufEnterLike,
 	},
 
-	{
-		"nvim-treesitter/nvim-treesitter",
-		opts = function()
-			return require("custom.configs.treesitter")
-		end,
-	},
+	-- {
+	-- 	"nvim-treesitter/nvim-treesitter",
+	-- 	opts = function()
+	-- 		return require("custom.configs.treesitter")
+	-- 	end,
+	-- },
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
