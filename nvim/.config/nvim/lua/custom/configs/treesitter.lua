@@ -3,6 +3,7 @@ local options = {
 	highlight = {
 		disable = function(lang, bufnr)
 			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
+      if if ok and stats
 			local buf_size = stats.size
 			-- Disable big oneline file.
 			-- :h uv.fs_stat()
