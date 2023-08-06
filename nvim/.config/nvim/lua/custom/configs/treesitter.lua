@@ -1,6 +1,7 @@
 local options = {
 
 	highlight = {
+    -- Disable syntax highlight for big file
 		disable = function(lang, bufnr)
 			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
 
