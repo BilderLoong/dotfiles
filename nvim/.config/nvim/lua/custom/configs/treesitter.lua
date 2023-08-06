@@ -1,5 +1,6 @@
 local options = {
 
+	ensure_installed = "all"
 	-- ensure_installed = {
 	-- 	-- defaults
 	-- 	"vim",
