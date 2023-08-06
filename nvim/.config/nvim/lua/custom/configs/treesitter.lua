@@ -18,7 +18,7 @@ local options = {
 			vim.print("size", buf_size)
 			-- Disable big oneline file.
 			local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
-			print("is_big_oneliner", is_big_oneliner)
+			vim.print("is_big_oneliner", is_big_oneliner)
 			return is_big_oneliner or buf_size > 100 * 1024 -- 100 KB
 		end,
 	},
