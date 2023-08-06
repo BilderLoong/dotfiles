@@ -1,5 +1,23 @@
 local options = {
 
+	ensure_installed = {
+		-- defaults
+		"vim",
+		"lua",
+		-- web dev
+		"html",
+		"css",
+		"javascript",
+		"typescript",
+		"tsx",
+		"json",
+		"go",
+		-- "vue", "svelte"
+
+		-- low level
+		"c",
+		"zig",
+	},
 	highlight = {
 		-- Disable syntax highlight for big file.
 		-- bufnr: buffer number.
