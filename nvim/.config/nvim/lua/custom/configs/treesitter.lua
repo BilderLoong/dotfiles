@@ -5,7 +5,7 @@ local options = {
 		--- Disable syntax highlight for big file.
 		--- bufnr
     ---@param lang any
-    ---@param bufnr : buffer number
+    ---@param bufnr number
     ---@return boolean
 		disable = function(lang, bufnr)
 			-- :h uv.fs_stat()
