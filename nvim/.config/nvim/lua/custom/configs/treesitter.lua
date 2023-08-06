@@ -7,7 +7,7 @@ local options = {
 			-- Disable big oneline file.
 			-- :h uv.fs_stat()
 			local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
-			return is_big_oneliner or size > 100 * 1024
+			return is_big_oneliner or buf_size > 100 * 1024
 		end,
 	},
 }
