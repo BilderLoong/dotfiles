@@ -6,7 +6,6 @@ local plugins = {
 		"unblevable/quick-scope",
 		event = BufEnterLike,
 		config = function()
-			-- Make quick scope highlight in vscode.
 			vim.cmd([[
 			  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 			  highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
