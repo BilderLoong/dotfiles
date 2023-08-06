@@ -3,9 +3,9 @@ local options = {
 	ensure_installed = "all",
 	highlight = {
 		--- Disable syntax highlight for big file.
-		--- bufnr: buffer number.
+		--- bufnr
     ---@param lang any
-    ---@param bufnr any
+    ---@param bufnr : buffer number
     ---@return boolean
 		disable = function(lang, bufnr)
 			-- :h uv.fs_stat()
