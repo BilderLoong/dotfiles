@@ -1,4 +1,4 @@
-
+vim.print('123')
 local options = {
 	ensure_installed = "all",
 
