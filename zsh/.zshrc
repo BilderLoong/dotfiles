@@ -110,15 +110,13 @@ zinit wait lucid for \
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
 
-# Put this after other plugins may also bind "^I"
-# https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
-# https://github.com/Aloxaf/fzf-tab#install
-# Got error for this plugin, given up
-# zinit light Aloxaf/fzf-tab
-
 zinit wait lucid for \
-  has'starship' id-as'starship_init' eval"starship init zsh" \
+    has'starship' id-as'starship_init' eval"starship init zsh" \
+  zdharma-continuum/null  \
+    has"thefuck" id-as"thefuck_init" eval"thefuck --alias"\
   zdharma-continuum/null  
+
+
 zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
       eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
@@ -198,15 +196,15 @@ proxy (){
 
 alias gsave='git add . && git commit -m "save" && git pull origin HEAD &&  git push origin HEAD'
 
-# The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
-wechatcli () {
-  wechatcli='/Applications/wechatwebdevtools.app/Contents/MacOS/cli'
+alias wechatcli="/Applications/wechatwebdevtools.app/Contents/MacOS/cli"
 
+# The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
+wechatcliopen () {
   if [[ -z "$1" ]] 
   then
-    "${wechatcli}"
+    echo "Please provide the project."
   else
-   ${wechatcli} open --project ~/Project/menuorder-new-rms-h5-$1/apps/menuorder/dist/merchant
+   wechatcli open --project ~/Project/menuorder-new-rms-h5-$1/apps/menuorder/dist/merchant
   fi
 }
 
@@ -264,3 +262,4 @@ alias emulator="cd $ANDROID_HOME/tools && emulator"
 
 
 # zprof
+
