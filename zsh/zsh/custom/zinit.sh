@@ -61,10 +61,12 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 # zinit light Aloxaf/fzf-tab
 
 zinit wait lucid for \
-  has'starship' id-as'starship_init' eval"starship init zsh" \
-  zdharma-continuum/null  
-zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide" \
-      eval"zoxide init zsh"
+    has'starship' id-as'starship_init' eval"starship init zsh" \
+  zdharma-continuum/null  \
+    has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
+  zdharma-continuum/null
+
+zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
 
@@ -88,5 +90,3 @@ zinit wait"1" lucid for \
 #     make'GITURL_NO_CGITURL=1' \
 #     sbin'git-url;git-guclone' \
 #   zdharma-continuum/git-url
-#
-# ==== zinit plugins end ====
