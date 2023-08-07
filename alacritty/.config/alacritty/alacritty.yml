@@ -528,7 +528,7 @@ mouse:
   #double_click: { threshold: 300 }
   #triple_click: { threshold: 300 }
   url:
-   launcher:
+     launcher:
       # This depends on your OS, on Mac it’s `open`
       program: open
     modifiers: Command
