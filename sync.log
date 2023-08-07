@@ -1,1 +1,10 @@
 2023/08/07 15:21:51 git rebase failed
+2023/08/07 15:57:52 exit status 1: Command: git commit -m  M Logseq/pages/S47-点餐小程序复制抖音券码核销.md
+StdOut: Sur la branche master
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+	Obsidian/2023-08-01.md
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+
+StdErr: 
