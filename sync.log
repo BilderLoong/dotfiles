@@ -1,10 +1,6 @@
-2023/08/07 15:21:51 git rebase failed
-2023/08/07 15:57:52 exit status 1: Command: git commit -m  M Logseq/pages/S47-点餐小程序复制抖音券码核销.md
-StdOut: Sur la branche master
-Fichiers non suivis:
-  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
-	Obsidian/2023-08-01.md
+2023/08/07 18:32:12 exit status 1: Command: git push origin master
+StdOut: 
+StdErr: To github.com:BilderLoong/privite-collection.git
+ ! [remote rejected] master -> master (cannot lock ref 'refs/heads/master': is at c668070ad4fe084a83b0a130f00f74b54de43ddc but expected 459e66c98edc092d27ae8aea70c0da871736ad45)
+erreur : impossible de pousser des références vers 'github.com:BilderLoong/privite-collection.git'
 
-aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
-
-StdErr: 
