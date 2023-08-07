@@ -575,7 +575,7 @@ hints:
   #       Move the vi mode cursor to the beginning of the hint.
   enabled:
   - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
-  #           [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+            [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
     hyperlinks: true
     command: xdg-open
   #   post_processing: true
