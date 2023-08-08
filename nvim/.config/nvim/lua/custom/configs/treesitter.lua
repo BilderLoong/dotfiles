@@ -19,13 +19,14 @@ local options = {
       -- Disable big oneline file.
       local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
       vim.print("is_big_oneliner", is_big_oneliner)
-      return is_big_oneliner or buf_size > 100 * 1024 -- 100 KB
+      return is_big_oneliner or buf_size > 1000 * 1024 -- 1MB
     end,
 
   },
 
   context_commentstring = {
     enable = true,
+    enable_autocmd = false,
   },
   -- ensure_installed = {
   -- 	-- defaults
