@@ -68,12 +68,16 @@ local plugins = {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		dependencies = {
-			"JoosepAlviste/nvim-ts-context-commentstring",
-		},
+		-- dependencies = {
+		-- 	"JoosepAlviste/nvim-ts-context-commentstring",
+		-- },
 		opts = function()
 			return require("custom.configs.treesitter")
 		end,
+	},
+
+	{
+		"JoosepAlviste/nvim-ts-context-commentstring",
 	},
 
 	{
@@ -247,6 +251,7 @@ local plugins = {
 			})
 		end,
 	},
+
 	{
 		"christoomey/vim-tmux-navigator",
 		event = "VeryLazy",
