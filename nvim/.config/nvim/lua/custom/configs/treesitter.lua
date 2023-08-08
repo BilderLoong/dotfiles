@@ -101,7 +101,6 @@ local options = {
   	"typescript",
   	"tsx",
   	"json",
-  	"go",
   	"vue",
     -- "svelte"
 
