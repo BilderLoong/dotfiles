@@ -68,6 +68,9 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring"
+    },
     opts = function()
       return require("custom.configs.treesitter")
     end,
