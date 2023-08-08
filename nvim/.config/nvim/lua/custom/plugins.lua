@@ -90,7 +90,7 @@ local plugins = {
 
 	{
 		"Pocco81/auto-save.nvim",
-		event = BufEnterLike
+		event = BufEnterLike,
 		-- config = function()
 		-- 	require("auto-save").setup({})
 		-- end,
