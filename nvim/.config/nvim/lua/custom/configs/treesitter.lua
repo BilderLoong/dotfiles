@@ -21,9 +21,10 @@ local options = {
       vim.print("is_big_oneliner", is_big_oneliner)
       return is_big_oneliner or buf_size > 100 * 1024 -- 100 KB
     end,
-    context_commentstring = {
-      enable = true,
-    },
+
+  },
+  context_commentstring = {
+    enable = true,
   },
   -- ensure_installed = {
   -- 	-- defaults
