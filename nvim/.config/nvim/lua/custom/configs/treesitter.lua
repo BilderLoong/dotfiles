@@ -83,7 +83,6 @@ local options = {
       },
   context_commentstring = {
     enable = true,
-    enable_autocmd = false,
   },
 
     -- Automatically install missing parsers when entering buffer
