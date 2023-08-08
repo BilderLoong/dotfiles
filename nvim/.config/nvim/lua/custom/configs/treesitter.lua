@@ -104,6 +104,7 @@ local options = {
   	"vue",
     -- "svelte"
 
+  	"go",
   	-- low level
   	"c",
   	"zig",
