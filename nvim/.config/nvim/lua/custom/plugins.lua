@@ -76,9 +76,9 @@ local plugins = {
 		end,
 	},
 
-	-- {
-	-- 	"JoosepAlviste/nvim-ts-context-commentstring",
-	-- },
+	{
+		"JoosepAlviste/nvim-ts-context-commentstring",
+	},
 
 	{
 		"neovim/nvim-lspconfig",
