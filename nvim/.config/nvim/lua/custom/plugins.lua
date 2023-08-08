@@ -36,6 +36,11 @@ local plugins = {
 		"elijahmanor/export-to-vscode.nvim",
 	},
 
+  {
+  "nvim-treesitter/nvim-treesitter-textobjects",
+  dependencies = "nvim-treesitter/nvim-treesitter",
+},
+
 	{
 		"RRethy/nvim-treesitter-textsubjects",
 		event = BufEnterLike,
