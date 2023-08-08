@@ -69,7 +69,7 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
-			"JoosepAlviste/nvim-ts-context-commentstring",
+			-- "JoosepAlviste/nvim-ts-context-commentstring",
 		},
 		opts = function()
 			return require("custom.configs.treesitter")
@@ -261,12 +261,9 @@ local plugins = {
 		end,
 	},
 
-	{
-		"numToStr/Comment.nvim",
-		opts = {
-			-- pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-		},
-	},
+	-- {
+	-- 	"numToStr/Comment.nvim",
+	-- },
 }
 
 return plugins
