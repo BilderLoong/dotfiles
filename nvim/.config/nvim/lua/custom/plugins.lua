@@ -257,7 +257,7 @@ local plugins = {
   },
   {
 
-    
+
   },
 }
 
