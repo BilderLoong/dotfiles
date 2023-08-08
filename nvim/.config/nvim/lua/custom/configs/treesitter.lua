@@ -102,9 +102,8 @@ local options = {
   	"tsx",
   	"json",
   	"vue",
-    -- "svelte"
-
   	"go",
+
   	-- low level
   	"c",
   	"zig",
