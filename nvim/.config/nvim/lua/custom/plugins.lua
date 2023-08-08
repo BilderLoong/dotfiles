@@ -91,6 +91,9 @@ local plugins = {
 	{
 		"Pocco81/auto-save.nvim",
 		event = BufEnterLike
+		-- config = function()
+		-- 	require("auto-save").setup({})
+		-- end,
 	},
 	{
 		"williamboman/mason.nvim",
