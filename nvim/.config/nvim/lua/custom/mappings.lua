@@ -14,6 +14,7 @@ M.general = {
 			function()
 				cmp.mapping.complete()
 			end,
+      "Trigger completions"
 		},
 	},
 	n = {
