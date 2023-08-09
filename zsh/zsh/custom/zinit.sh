@@ -66,8 +66,6 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 # Got error for this plugin, given up
 # zinit light Aloxaf/fzf-tab
 
-zinit wait lucid for \
-
 zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
