@@ -9,7 +9,7 @@ M.disabled = {
 
 M.general = {
 	i = { ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } } ,
-    ["<A-Space>"] = cmp.mapping.complete()
+    ["<A-Space>"] = { cmp.mapping.complete() }
 },
 	n = {
 		["<leader>cd"] = {
