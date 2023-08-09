@@ -35,7 +35,7 @@ M.telescope = {
 	}),
 	i = vim.tbl_deep_extend("force", {}, {
 		["<A-d>"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find document symbols" },
-		["<A-c>"] = { "<cmd> Telescope <CR>", "Telescope" },
+		["<A-b>"] = { "<cmd> Telescope <CR>", "Telescope" },
 		["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
 		["<A-p>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
 	}),
