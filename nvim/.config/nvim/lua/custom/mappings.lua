@@ -7,7 +7,6 @@ M.disabled = {
 	},
 }
 
-M.
 
 M.general = {
 	i = { ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } } },
