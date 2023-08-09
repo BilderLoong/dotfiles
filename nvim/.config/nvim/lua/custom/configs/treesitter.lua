@@ -110,6 +110,7 @@ local options = {
 		"c",
 		"zig",
 	},
+	-- ensure_installed = "all",
 }
 
 return options
