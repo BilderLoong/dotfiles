@@ -36,7 +36,6 @@ M.telescope = {
 	i = vim.tbl_deep_extend("force", telescope_i_n, {
 		["<A-b>"] = { "<cmd> Telescope <CR>", "Telescope bulitins" },
 		["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
-		["<A-p>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
 	}),
 }
 
