@@ -36,12 +36,11 @@ local plugins = {
 		"elijahmanor/export-to-vscode.nvim",
 	},
 
-  {
-  "nvim-treesitter/nvim-treesitter-textobjects",
-  dependencies = "nvim-treesitter/nvim-treesitter",
-  config = function ()
-  end
-},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function() end,
+	},
 
 	{
 		"RRethy/nvim-treesitter-textsubjects",
@@ -203,9 +202,9 @@ local plugins = {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-    config = function (_, opt)
-      
-    end
+		-- config = function (_, opt)
+		--
+		-- end
 		-- opts = function()
 		-- 	local cmp = require("cmp")
 		-- 	--  add config
