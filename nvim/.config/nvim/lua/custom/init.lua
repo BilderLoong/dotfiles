@@ -12,5 +12,5 @@ opt.relativenumber = true
 g.toggle_theme_icon = ""
 
 opt.foldmethod = "expr"
-opt.foldexpr = "navim_treesitter#foldexpr()"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 
