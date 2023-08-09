@@ -201,18 +201,18 @@ local plugins = {
 			--  add config
 		end,
 	},
-	{
-		"hrsh7th/nvim-cmp",
-		opts = function()
-			local cmp = require("cmp")
-			--  add config
-			return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
-				mapping = {
-					["<A-<ESC>>"] = cmp.mapping.complete(),
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	opts = function()
+	-- 		local cmp = require("cmp")
+	-- 		--  add config
+	-- 		return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
+	-- 			mapping = {
+	-- 				["<A-<ESC>>"] = cmp.mapping.complete(),
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	{
 
