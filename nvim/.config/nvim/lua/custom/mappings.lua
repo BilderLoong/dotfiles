@@ -33,10 +33,7 @@ M.telescope = {
 		["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
 		-- ["<leader>fr"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
 	}),
-	i = vim.tbl_deep_extend("force", telescope_i_n, {
-		["<A-b>"] = { "<cmd> Telescope <CR>", "Telescope bulitins" },
-		["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
-	}),
+	i = vim.tbl_deep_extend("force", telescope_i_n, {}),
 }
 
 M.lspconfig = {
