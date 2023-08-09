@@ -206,15 +206,15 @@ local plugins = {
     config = function ()
       
     end
-		opts = function()
-			local cmp = require("cmp")
-			--  add config
-			return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
-				mapping = {
-					["<A-<ESC>>"] = cmp.mapping.complete(),
-				},
-			})
-		end,
+		-- opts = function()
+		-- 	local cmp = require("cmp")
+		-- 	--  add config
+		-- 	return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
+		-- 		mapping = {
+		-- 			["<A-<ESC>>"] = cmp.mapping.complete(),
+		-- 		},
+		-- 	})
+		-- end,
 	},
 
 	{
