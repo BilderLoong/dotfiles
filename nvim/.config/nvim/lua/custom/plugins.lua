@@ -203,7 +203,7 @@ local plugins = {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-    config = function ()
+    config = function (opt)
       
     end
 		-- opts = function()
