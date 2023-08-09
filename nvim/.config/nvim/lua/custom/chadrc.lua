@@ -3,7 +3,7 @@ local M = {
   mappings = require "custom.mappings",
   plugins = "custom.plugins",
   ui = {
-    theme = "nord", -- default theme
+    theme = "onedark", -- default theme
     nvdash = {
       load_on_startup = true
     }
