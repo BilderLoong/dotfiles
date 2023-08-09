@@ -22,7 +22,7 @@ M.general = {
 
 local telescope_i_n = {
 	["<A-d>"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find document symbols" },
-	["<A-c>"] = { "<cmd> Telescope <CR>", "Telescope builtins" },
+	["<A-b>"] = { "<cmd> Telescope <CR>", "Telescope builtins" },
 	["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
 	["<A-p>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
 	["<A-r>"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
