@@ -16,6 +16,6 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.cmd([[
 
 
-opt.nofoldenable = true
+set nofoldenable = true
 ]])
 
