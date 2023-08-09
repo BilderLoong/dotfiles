@@ -197,9 +197,9 @@ local plugins = {
 	{
 		"lewis6991/gitsigns.nvim",
 		ft = { "gitcommit", "diff" },
-		opts = function()
-			--  add config
-		end,
+		-- opts = function()
+		-- 	--  add config
+		-- end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
