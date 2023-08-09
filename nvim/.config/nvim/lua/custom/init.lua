@@ -11,9 +11,7 @@ opt.relativenumber = true
 --
 g.toggle_theme_icon = ""
 
-vim.cmd({{
-  
-}})
+vim.cmd({{}})
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable                     " Disable folding at startup.
