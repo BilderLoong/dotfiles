@@ -10,7 +10,7 @@ M.disabled = {
 M.general = {
 	i = {
 		["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-		["<A-Space>"] = {
+		["<A-Esc>"] = {
 			function()
 				require("cmp").mapping.complete()
 			end,
