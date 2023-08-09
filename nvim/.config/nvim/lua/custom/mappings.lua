@@ -10,12 +10,12 @@ M.disabled = {
 M.general = {
 	i = {
 		["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-		["<A-ESC>"] = {
-			function()
-				require("cmp").mapping.complete()
-			end,
-			"Trigger completions",
-		},
+		-- ["<A-ESC>"] = {
+		-- 	function()
+		-- 		require("cmp").mapping.complete()
+		-- 	end,
+		-- 	"Trigger completions",
+		-- },
 	},
 	n = {
 		["<leader>cd"] = {
