@@ -8,9 +8,14 @@ M.disabled = {
 }
 
 M.general = {
-	i = { ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } } ,
-    ["<A-Space>"] = { function() cmp.mapping.complete() }
-},
+	i = {
+		["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
+		["<A-Space>"] = {
+			function()
+				cmp.mapping.complete()
+			end,
+		},
+	},
 	n = {
 		["<leader>cd"] = {
 			function()
