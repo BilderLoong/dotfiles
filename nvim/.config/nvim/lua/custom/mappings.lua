@@ -12,8 +12,7 @@ M.general = {
 		["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
 		["<A-Space>"] = {
 			function()
-				local cmp = require("cmp")
-				cmp.mapping.complete()
+				require("cmp").mapping.complete()
 			end,
 			"Trigger completions",
 		},
