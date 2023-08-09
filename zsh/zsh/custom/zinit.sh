@@ -45,6 +45,10 @@ zinit wait lucid for \
     zsh-users/zsh-completions \
         has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env' \
     zdharma-continuum/null  
+    has'starship' id-as'starship_init' eval"starship init zsh" \
+  zdharma-continuum/null  \
+    has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
+  zdharma-continuum/null
     #   atclone"shell/key-bindings.zsh" \
     #   atpull"%atclone" \
     #   multisrc"shell/{completion,key-bindings}.zsh" \
