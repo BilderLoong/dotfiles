@@ -13,4 +13,5 @@ g.toggle_theme_icon = ""
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
+set nofoldenable
 
