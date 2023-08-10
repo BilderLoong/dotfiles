@@ -38,7 +38,7 @@ local plugins = {
 
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
-		lazy = false,
+    e
 	},
 
 	{
