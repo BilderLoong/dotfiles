@@ -80,6 +80,7 @@ local plugins = {
 			return require("custom.configs.treesitter")
 		end,
 	},
+
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
 	},
