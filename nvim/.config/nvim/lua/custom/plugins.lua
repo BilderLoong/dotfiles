@@ -212,7 +212,7 @@ local plugins = {
 				},
 			})
 
-			vim.print()
+			vim.print("cmp opt")
 			--  add config
 			return
 		end,
