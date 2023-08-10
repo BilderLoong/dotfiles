@@ -192,28 +192,28 @@ local plugins = {
 		cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
 	},
 
-	{
-		"lewis6991/gitsigns.nvim",
-		ft = { "gitcommit", "diff" },
-		opts = function()
-			--  add config
-		end,
-	},
-	{
-		"hrsh7th/nvim-cmp",
-		config = function (_, opt)
-      vim.print('opt int config', opt)
-		end,
-		opts = function()
-			local cmp = require("cmp")
-			local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
-				mapping = {
-					["<S-Space"] = function()
-						cmp.mapping.complete()
-					end,
-				},
-			})
-
+	-- {
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	ft = { "gitcommit", "diff" },
+	-- 	opts = function()
+	-- 		--  add config
+	-- 	end,
+	-- },
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	config = function (_, opt)
+ --      vim.print('opt int config', opt)
+	-- 	end,
+	-- 	opts = function()
+	-- 		local cmp = require("cmp")
+	-- 		local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
+	-- 			mapping = {
+	-- 				["<S-Space"] = function()
+	-- 					cmp.mapping.complete()
+	-- 				end,
+	-- 			},
+	-- 		})
+	--
       vim.print(opts)
 			return opts
 		end,
