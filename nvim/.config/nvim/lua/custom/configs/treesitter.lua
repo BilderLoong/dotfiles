@@ -24,7 +24,7 @@ local options = {
 	},
 	-- https://github.com/AstroNvim/AstroNvim/blob/ffaa3877f0dd3a7468f29e81cf4ebf534a5ad891/lua/plugins/treesitter.lua#L35
 	-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-	textobjects = {
+textobjects = {
 		select = {
 			enable = true,
 			lookahead = true,
