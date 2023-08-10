@@ -213,7 +213,7 @@ local plugins = {
 					end,
 				},
 			})
-      vim.print()
+      vim.print(opts)
 
 			--  add config
 			return opts
