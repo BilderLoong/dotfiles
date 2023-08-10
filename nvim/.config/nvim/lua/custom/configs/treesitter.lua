@@ -88,12 +88,12 @@ local options = {
 
 	incremental_selection = {
 		enable = true,
-		keymaps = {
-			init_selection = "gnn",
-			node_incremental = "grn",
-			scope_incremental = "grc",
-			node_decremental = "grm",
-		},
+		-- keymaps = {
+		-- 	init_selection = "gnn",
+		-- 	node_incremental = "grn",
+		-- 	scope_incremental = "grc",
+		-- 	node_decremental = "grm",
+		-- },
 	},
 
 	-- Automatically install missing parsers when entering buffer
