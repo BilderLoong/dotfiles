@@ -208,7 +208,7 @@ local plugins = {
 			local cmp = require("cmp")
 			local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
 				mapping = {
-					["<Tap>"] = function()
+					["<C-"] = function()
 						cmp.mapping.complete()
 					end,
 				},
