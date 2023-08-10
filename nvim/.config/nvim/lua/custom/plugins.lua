@@ -201,9 +201,9 @@ local plugins = {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-		-- config = function (_, opt)
-		--
-		-- end,
+		config = function (_, opt)
+
+		end,
 		opts = function()
 			local cmp = require("cmp")
 			local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
