@@ -214,7 +214,7 @@ local plugins = {
 
 			vim.print("cmp opts",opts)
 			--  add config
-			return
+			return opts
 		end,
 	},
 
