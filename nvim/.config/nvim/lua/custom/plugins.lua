@@ -209,12 +209,11 @@ local plugins = {
 			local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
 				mapping = {
 					["<C-e>"] = function ()
-					 
-					end cmp.mapping.complete(),
+					 cmp.mapping.complete(),
+					end 
 				},
 			})
 
-			vim.print("cmp opts", opts)
 			--  add config
 			return opts
 		end,
