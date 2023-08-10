@@ -39,6 +39,7 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		event = BufEnterLike,
+		dependencies = "nvim-treesitter/nvim-treesitter",
 	},
 
 	{
