@@ -32,6 +32,7 @@ local plugins = {
 		"wellle/targets.vim",
 		event = BufEnterLike,
 	},
+
 	{
 		"elijahmanor/export-to-vscode.nvim",
 	},
