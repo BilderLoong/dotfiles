@@ -197,7 +197,6 @@ local plugins = {
 		ft = { "gitcommit", "diff" },
 		opts = function()
       local defaults = require("plugins.configs.others").gitsigns
-
 		end,
 	},
 	{
