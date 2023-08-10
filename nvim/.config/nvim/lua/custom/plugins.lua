@@ -209,7 +209,7 @@ local plugins = {
 			--  add config
 			return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
 				mapping = {
-					["<A-<ESC>>"] = cmp.mapping.complete(),
+					["<C-e>"] = cmp.mapping.complete(),
 				},
 			})
 		end,
