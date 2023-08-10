@@ -197,7 +197,7 @@ local plugins = {
 		ft = { "gitcommit", "diff" },
 		opts = function()
       local defaults = require("plugins.configs.others").gitsigns
-vim.tbl_deep_extend("force",)
+vim.tbl_deep_extend("force",defaults,custom)
       return 
 		end,
 	},
