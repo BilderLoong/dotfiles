@@ -202,7 +202,7 @@ local plugins = {
 	{
 		"hrsh7th/nvim-cmp",
 		config = function (_, opt)
-      vim.print(opt)
+      vim.print('opt int config',opt)
 		end,
 		opts = function()
 			local cmp = require("cmp")
