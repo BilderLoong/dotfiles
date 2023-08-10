@@ -208,7 +208,7 @@ local plugins = {
 			local cmp = require("cmp")
 			local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
 				mapping = {
-					["<S-"] = function()
+					["<S-Space"] = function()
 						cmp.mapping.complete()
 					end,
 				},
