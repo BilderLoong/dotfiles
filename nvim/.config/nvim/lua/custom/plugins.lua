@@ -196,7 +196,7 @@ local plugins = {
 		"lewis6991/gitsigns.nvim",
 		ft = { "gitcommit", "diff" },
 		opts = function()
-      
+
 		end,
 	},
 	{
