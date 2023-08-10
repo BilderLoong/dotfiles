@@ -206,14 +206,14 @@ local plugins = {
 		-- end,
 		opts = function()
 			local cmp = require("cmp")
-      vim.print()
-			--  add config
-			return vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
+      vim.prinvim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
 				mapping = {
 					["<C-e>"] = cmp.mapping.complete(),
 				},
 			})
-		end,
+t()
+			--  add config
+			return 		end,
 	},
 
 	{
