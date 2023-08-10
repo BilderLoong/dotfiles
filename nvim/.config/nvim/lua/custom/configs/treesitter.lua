@@ -117,7 +117,7 @@ local options = {
 		-- low level
 		"c",
 		"zig",
-	},{}
+	},
 }
 
 return options
