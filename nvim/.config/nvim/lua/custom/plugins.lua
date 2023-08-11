@@ -209,6 +209,7 @@ local plugins = {
 			return vim.tbl_deep_extend("force", defaults, custom)
 		end,
 	},
+
 	{
 		"hrsh7th/nvim-cmp",
 		opts = function()
