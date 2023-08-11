@@ -204,6 +204,7 @@ local plugins = {
 					delete = { text = "删" },
 				},
 			}
+
 			return vim.tbl_deep_extend("force", defaults, custom)
 		end,
 	},
