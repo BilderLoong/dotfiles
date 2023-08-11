@@ -11,3 +11,9 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+vim.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
+	callback = function() 
+    vim.print('VimEnter')
+  end,
+})
