@@ -200,8 +200,8 @@ local plugins = {
 			local custom = {
 				signs = {
 					add = { text = "增" },
-					-- change = { text = "改" },
-					-- -- delete = { text = "删" },
+					change = { text = "改" },
+					-- delete = { text = "删" },
 				},
 			}
 
