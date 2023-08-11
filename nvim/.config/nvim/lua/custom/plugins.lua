@@ -277,9 +277,6 @@ local plugins = {
 		end,
 	},
 
-	-- {
-	-- 	"numToStr/Comment.nvim",
-	-- },
 }
 
 return plugins
