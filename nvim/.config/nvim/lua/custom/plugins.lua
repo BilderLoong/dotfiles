@@ -201,7 +201,7 @@ local plugins = {
 				signs = {
 					add = { text = "增" },
 					change = { text = "改" },
-					delete = { text = "删" },
+					-- delete = { text = "删" },
 				},
 			}
 
