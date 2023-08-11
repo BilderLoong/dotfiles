@@ -262,8 +262,8 @@ local plugins = {
 		opts = function()
 			return vim.tbl_deep_extend("force", require("plugins.configs.nvimtree"), {
 				filesystem_watchers = {
---- I get a filesystem_watchers related error when compiling project, disable it help to resolve the error.
-					enable = false, 
+					--- I get a filesystem_watchers related error when compiling project, disable it help to resolve the error.
+					enable = false,
 				},
 			})
 		end,
@@ -277,7 +277,6 @@ local plugins = {
 			vim.g.tmux_navigator_save_on_switch = 2
 		end,
 	},
-
 }
 
 return plugins
