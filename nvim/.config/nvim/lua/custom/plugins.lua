@@ -198,7 +198,9 @@ local plugins = {
 		opts = function()
 			local defaults = require("plugins.configs.others").gitsigns
 			local custom = {
-        
+				signs = {
+          
+        },
 				word_diff = true,
 				current_line_blame = true,
 			}
