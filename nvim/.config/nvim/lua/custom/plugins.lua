@@ -262,7 +262,7 @@ local plugins = {
 		opts = function()
 			return vim.tbl_deep_extend("force", require("plugins.configs.nvimtree"), {
 				filesystem_watchers = {
-					enable = false,
+					enable = false, --- I get error when compiling project.
 				},
 			})
 		end,
