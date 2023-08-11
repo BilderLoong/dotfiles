@@ -59,7 +59,6 @@ M.lspconfig = {
 	},
 }
 
-local gs = package.loaded.gitsigns
 M.gitsigns = {
 	n = {
 		["<leader>hs"] = {
