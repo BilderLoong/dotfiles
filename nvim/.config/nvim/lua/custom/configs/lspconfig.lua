@@ -12,8 +12,8 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
-vim.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
-	callback = function() 
-    vim.print('VimEnter')
-  end,
+vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
+	callback = function()
+		vim.print("VimEnter")
+	end,
 })
