@@ -198,6 +198,7 @@ local plugins = {
 		opts = function()
 			local defaults = require("plugins.configs.others").gitsigns
 			local custom = {
+        -- stylua: ignore start
 				signs = {
           add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
     change = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
@@ -205,8 +206,11 @@ local plugins = {
     topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
     changedelete = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
         },
+				-- stylua: ignore end
 				word_diff = true,
 				current_line_blame = true,
+          numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
+  linehl     = true, -- Toggle with `:Gitsigns toggle_linehl`
 			}
 
 			return vim.tbl_deep_extend("force", defaults, custom)
