@@ -61,11 +61,11 @@ M.lspconfig = {
 
 local gs = package.loaded.gitsign
 M.gitsigns = {
-n = {
-  ["<leader>hs"] = {
-     gs.stage_hunk
-  }
-}
+	n = {
+		["<leader>hs"] = {
+			gs.stage_hunk,
+		},
+	},
 }
 
 return M
