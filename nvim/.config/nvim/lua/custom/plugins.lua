@@ -225,6 +225,7 @@ local plugins = {
 						linehl = "GitSignsChangeLn",
 					},
 				},
+          word_diff = true,
 				current_line_blame = true,
 			}
 
