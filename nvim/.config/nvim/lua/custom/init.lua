@@ -20,11 +20,11 @@ vim.cmd([[
 local function _start_tsserver()
 	-- local cwd = vim.loop.cmd()
 	-- local root_dir = vim.fs.dirname(vim.fs.find({ "tsconfig.json", "package.json","jsconfig.json" ".git" }, { upward = true })[1])
- --  local client = vim.lsp.start({
- --            name = 'tsserver',
- --            -- cmd = { '' },
- --            root_dir = root_dir,
- --        })
+	--  local client = vim.lsp.start({
+	--            name = 'tsserver',
+	--            -- cmd = { '' },
+	--            root_dir = root_dir,
+	--        })
 end
 
 if vim.g.vim_did_enter then
@@ -37,3 +37,9 @@ else
 		end,
 	})
 end
+
+vim.api.nvim_create_autocmd({ "UserGettingBored" }, {
+	callback = function()
+		vim.print("are you crazy?")
+	end,
+})
