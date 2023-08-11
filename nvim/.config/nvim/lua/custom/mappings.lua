@@ -62,7 +62,7 @@ M.lspconfig = {
 M.gitsigns = {
 	n = {
 		["<leader>hs"] = {
-        require("gitsigns").stage_hunk
+			require("gitsigns").stage_hunk,
 		},
 	},
 }
