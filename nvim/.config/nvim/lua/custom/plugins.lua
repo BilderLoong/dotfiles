@@ -197,10 +197,7 @@ local plugins = {
 		ft = { "gitcommit", "diff" },
 		opts = function()
 			local defaults = require("plugins.configs.others").gitsigns
-			local custom = {
-				signs = {
-					add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-					change = {
+			local custom = { signs = { add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" }, change = {
 						hl = "GitSignsChange",
 						text = "~",
 						numhl = "GitSignsChangeNr",
