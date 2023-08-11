@@ -53,7 +53,7 @@ M.lspconfig = {
 			"Telescope LSP type definitions",
 		},
 		["gi"] = {
-			"<cmd> Telescope lsp_implementations   <CR>",
+			"<cmd> Telescope lsp_implementations <CR>",
 			"Telescope LSP type implementations",
 		},
 	},
