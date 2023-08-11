@@ -198,16 +198,15 @@ local plugins = {
 		opts = function()
 			local defaults = require("plugins.configs.others").gitsigns
 			local custom = {
-
-  signs = {
-    add = { text = "│" },
-    change = { text = "│" },
-    delete = { text = "󰍵" },
-    topdelete = { text = "‾" },
-    changedelete = { text = "~" },
-    untracked = { text = "│" },
-  },
-      }
+				signs = {
+					add = { text = "│" },
+					change = { text = "│" },
+					delete = { text = "󰍵" },
+					topdelete = { text = "‾" },
+					changedelete = { text = "~" },
+					untracked = { text = "│" },
+				},
+			}
 			return vim.tbl_deep_extend("force", defaults, custom)
 		end,
 	},
