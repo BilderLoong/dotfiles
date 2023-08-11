@@ -12,4 +12,4 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
-vim.print(vim.g.vim_did_enter)
+vim.print(vim.v.vim_did_enter)
