@@ -62,7 +62,7 @@ M.lspconfig = {
 M.gitsigns = {
 n = {
   ["<leader>hs"] = {
-    
+     gs.stage_hunk
   }
 }
 }
