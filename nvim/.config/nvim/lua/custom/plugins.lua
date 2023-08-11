@@ -199,6 +199,8 @@ local plugins = {
 			local defaults = require("plugins.configs.others").gitsigns
 			local custom = {
 				signs = {
+					add = { text = "│" },
+					change = { text = "│" },
 					delete = { text = "󰍵" },
 				},
 			}
