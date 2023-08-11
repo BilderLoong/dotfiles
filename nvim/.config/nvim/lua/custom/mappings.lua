@@ -111,7 +111,7 @@ M.gitsigns = {
 	},
 	o = {
 		["ih"] = {
-			":<C-U>Gitsigns select_hunk <CR>",
+			"<cmd> <C-U>Gitsigns select_hunk <CR>",
 			"Select Hunk",
 		},
 	},
