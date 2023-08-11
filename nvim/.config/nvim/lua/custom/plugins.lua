@@ -200,7 +200,7 @@ local plugins = {
 			local custom = {
 				signs = {
 					add = { text = "│" },
-					change = { text = "│" },
+					change = { text = "改" },
 					delete = { text = "󰍵" },
 				},
 			}
