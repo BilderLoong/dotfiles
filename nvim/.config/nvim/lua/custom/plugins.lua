@@ -65,7 +65,7 @@ local plugins = {
 	{
 		"simrat39/symbols-outline.nvim",
 		event = BufEnterLike,
-    cmd = ""
+    cmd = "",
 		-- config = function()
 		-- 	require("symbols-outline").setup()
 		-- end,
