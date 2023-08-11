@@ -17,18 +17,18 @@ vim.cmd([[
   set nofoldenable
 ]])
 
+local function _start_tsserver()
+	local cwd = vim.fn.getcwd()
 
-function start_tsserver()
-	vim.print("start")
 end
 
 if vim.g.vim_did_enter then
-	start_tsserver()
+	_start_tsserver()
 else
 	vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
 		-- pattern = "*",
 		callback = function()
-      start_tsserver()
+			_start_tsserver()
 		end,
 	})
 end
