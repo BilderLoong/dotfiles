@@ -11,5 +11,3 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
-
-vim.print(vim.v.vim_did_enter)
