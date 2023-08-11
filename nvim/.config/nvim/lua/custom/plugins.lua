@@ -199,7 +199,7 @@ local plugins = {
 			local defaults = require("plugins.configs.others").gitsigns
 			local custom = {
 				signs = {
-					add = { text = "增" },
+					add = { text = "A" },
 					change = { text = "改" },
 					delete = { text = "删" },
 				},
