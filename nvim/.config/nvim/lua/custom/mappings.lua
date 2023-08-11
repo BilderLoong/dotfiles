@@ -105,13 +105,13 @@ M.gitsigns = {
 	-- Text object
 	x = {
 		["ih"] = {
-			"<cmd> <C-U>Gitsigns select_hunk <CR>",
+			":<C-U>Gitsigns select_hunk <CR>",
 			"Select Hunk",
 		},
 	},
 	o = {
 		["ih"] = {
-			"<cmd> <C-U>Gitsigns select_hunk <CR>",
+			":<C-U>Gitsigns select_hunk <CR>",
 			"Select Hunk",
 		},
 	},
