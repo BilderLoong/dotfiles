@@ -60,7 +60,9 @@ M.lspconfig = {
 }
 
 M.gitsigns = {
-
+n = {
+  
+}
 }
 
 return M
