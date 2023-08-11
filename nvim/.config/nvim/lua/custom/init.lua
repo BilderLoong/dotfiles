@@ -18,7 +18,7 @@ vim.cmd([[
 ]])
 
 local function _start_tsserver()
-	local cwd = vim.fn.getcwd()
+	local cwd = vim.loop.cmd()
 
 end
 
