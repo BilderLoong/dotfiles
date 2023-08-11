@@ -67,6 +67,7 @@ local plugins = {
 		event = BufEnterLike,
 		cmd = { "SymbolsOutline", "SymbolsOutlineOpen", "SymbolsOutlineClose" },
 	},
+
 	{
 		"nvim-treesitter/playground",
 		event = BufEnterLike,
