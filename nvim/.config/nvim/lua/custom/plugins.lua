@@ -203,7 +203,7 @@ local plugins = {
 					change = { text = "改" },
 					delete = { text = "删" },
 				},
-          current_line_blame = false,
+				current_line_blame = false,
 			}
 
 			return vim.tbl_deep_extend("force", defaults, custom)
