@@ -210,7 +210,7 @@ local plugins = {
 				word_diff = true,
 				current_line_blame = true,
 				numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
-				linehl = true, -- Toggle with `:Gitsigns toggle_linehl`
+				linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
 			}
 
 			return vim.tbl_deep_extend("force", defaults, custom)
@@ -227,7 +227,6 @@ local plugins = {
 				},
 			})
 
-			vim.print(opts)
 			return opts
 		end,
 	},
