@@ -59,4 +59,8 @@ M.lspconfig = {
 	},
 }
 
+M.gitsigns = {
+
+}
+
 return M
