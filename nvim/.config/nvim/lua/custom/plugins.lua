@@ -64,10 +64,10 @@ local plugins = {
 
 	{
 		"simrat39/symbols-outline.nvim",
-    event = BufEnterLike,
-		config = function()
-			require("symbols-outline").setup()
-		end,
+		event = BufEnterLike,
+		-- config = function()
+		-- 	require("symbols-outline").setup()
+		-- end,
 	},
 	{
 		"nvim-treesitter/playground",
