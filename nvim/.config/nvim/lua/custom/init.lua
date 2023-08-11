@@ -18,17 +18,17 @@ vim.cmd([[
 ]])
 
 
--- function start_tsserver()
--- 	vim.print("start")
--- end
---
--- if vim.g.vim_did_enter then
--- 	start_tsserver()
--- else
--- 	vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
--- 		pattern = "*",
--- 		callback = function()
--- 			vim.print("VimEnter")
--- 		end,
--- 	})
--- end
+function start_tsserver()
+	vim.print("start")
+end
+
+if vim.g.vim_did_enter then
+	start_tsserver()
+else
+	vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
+		-- pattern = "*",
+		callback = function()
+      start_tsserver()
+		end,
+	})
+end
