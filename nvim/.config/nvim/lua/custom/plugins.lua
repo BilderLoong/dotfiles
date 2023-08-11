@@ -209,8 +209,8 @@ local plugins = {
 				-- stylua: ignore end
 				word_diff = true,
 				current_line_blame = true,
-          numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
-  linehl     = true, -- Toggle with `:Gitsigns toggle_linehl`
+				numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+				linehl = true, -- Toggle with `:Gitsigns toggle_linehl`
 			}
 
 			return vim.tbl_deep_extend("force", defaults, custom)

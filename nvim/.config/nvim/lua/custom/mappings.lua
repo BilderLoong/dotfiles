@@ -59,17 +59,58 @@ M.lspconfig = {
 }
 
 M.gitsigns = {
-	n = {
-		["<leader>hs"] = {
+	v = {
+		["<leader>ghu"] = {
 			function()
-				require("gitsigns").stage_hunk()
+				require("gitsigns").undo_stage_hunk()
 			end,
+			"Unstage Git hunk",
+		},
+		["<leader>ghr"] = {
+			function()
+				require("gitsigns").reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+			end,
+			"Reset Hunk",
 		},
 
-		["<leader>hs"] = {
+		["<leader>ghs"] = {
+			function()
+				require("gitsigns").stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+			end,
+			"Stage Hunk",
+		},
+	},
+	n = {
+		["<leader>ghu"] = {
+			function()
+				require("gitsigns").undo_stage_hunk()
+			end,
+			"Unstage Git hunk",
+		},
+		["<leader>ghr"] = {
+			function()
+				require("gitsigns").reset_hunk()
+			end,
+			"Reset Hunk",
+		},
+
+		["<leader>ghs"] = {
 			function()
 				require("gitsigns").stage_hunk()
 			end,
+			"Stage Hunk",
+		},
+
+		-- Text object
+		x = {
+			["ih"] = {
+				"<cmd> <C-U>Gitsigns select_hunk<CR>",
+			},
+		},
+		o = {
+			["ih"] = {
+				"<cmd> <C-U>Gitsigns select_hunk<CR>",
+			},
 		},
 	},
 }
