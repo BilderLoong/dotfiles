@@ -61,7 +61,9 @@ M.lspconfig = {
 
 M.gitsigns = {
 n = {
-  ["<leader>hs"]
+  ["<leader>hs"] = {
+    
+  }
 }
 }
 
