@@ -198,7 +198,7 @@ local plugins = {
 		opts = function()
 			local defaults = require("plugins.configs.others").gitsigns
 			local custom = {
-        
+
       }
 			return vim.tbl_deep_extend("force", defaults, custom)
 		end,
