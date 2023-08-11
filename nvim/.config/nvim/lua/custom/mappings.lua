@@ -66,6 +66,12 @@ M.gitsigns = {
 				require("gitsigns").stage_hunk()
 			end,
 		},
+
+		["<leader>hs"] = {
+			function()
+				require("gitsigns").stage_hunk()
+			end,
+		},
 	},
 }
 
