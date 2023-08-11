@@ -262,7 +262,7 @@ local plugins = {
 		opts = function()
 			return vim.tbl_deep_extend("force", require("plugins.configs.nvimtree"), {
 				filesystem_watchers = {
-					enable = false, --- I get a filesystem_watchers related error when compiling project.
+					enable = false, --- I get a filesystem_watchers related error when compiling project, disable it help to resolve the error.
 				},
 			})
 		end,
