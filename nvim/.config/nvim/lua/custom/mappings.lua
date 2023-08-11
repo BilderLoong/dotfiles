@@ -63,7 +63,7 @@ M.gitsigns = {
 	n = {
 		["<leader>hs"] = {
         require("gitsigns").preview_hunk()
-.stage_hunk,
+.stage_hunk
 		},
 	},
 }
