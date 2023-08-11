@@ -201,7 +201,7 @@ local plugins = {
 				signs = {
 					add = { text = "增" },
 					change = { text = "改" },
-					delete = { text = "rmed" },
+					delete = { text = "删" },
 				},
 			}
 			return vim.tbl_deep_extend("force", defaults, custom)
