@@ -65,7 +65,7 @@ local plugins = {
 	{
 		"simrat39/symbols-outline.nvim",
 		event = BufEnterLike,
-		cmd = { "SymbolsOutline", "SymbolsOutlineOpen", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+		cmd = { "SymbolsOutline", "SymbolsOutlineOpen", "SymbolsOutlineClose", "DiffviewFocusFiles" },
 		-- config = function()
 		-- 	require("symbols-outline").setup()
 		-- end,
