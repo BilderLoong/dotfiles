@@ -38,8 +38,3 @@ else
 	})
 end
 
-vim.api.nvim_create_autocmd("UserGettingBored", {
-	callback = function()
-		vim.print("are you crazy?")
-	end,
-})
