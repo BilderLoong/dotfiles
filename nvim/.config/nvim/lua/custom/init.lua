@@ -1,13 +1,13 @@
 local opt = vim.opt
 local g = vim.g
 
--- Editor
+--Editor
 opt.relativenumber = true
--- opt.wrap = false
+--opt.wrap = false
 
--- Folding
+--Folding
 
--- opt.autochdir = true
+--opt.autochdir = true
 --
 g.toggle_theme_icon = ""
 
@@ -17,10 +17,10 @@ vim.cmd([[
   set nofoldenable
 ]])
 
-vim.print("",require('lspconfig'))
+vim.print("lspconfig", require("lspconfig"))
 
 local function _start_tsserver()
-	-- local cwd = vim.loop.cmd()
+	--local cwd = vim.loop.cmd()
 	local root_dir =
 		vim.fs.dirname(vim.fs.find({ "tsconfig.json", "package.json", "jsconfig.json", ".git" }, { upward = true })[1])
 
@@ -37,7 +37,7 @@ if vim.g.vim_did_enter then
 	_start_tsserver()
 else
 	vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
-		-- pattern = "*",
+		--pattern = "*",
 		callback = function()
 			_start_tsserver()
 		end,
