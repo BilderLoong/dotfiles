@@ -31,6 +31,7 @@ local function _start_tsserver()
 	})
 end
 
+
 if vim.g.vim_did_enter then
 	_start_tsserver()
 else
