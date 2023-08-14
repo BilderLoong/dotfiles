@@ -17,6 +17,8 @@ vim.cmd([[
   set nofoldenable
 ]])
 
+vim.print(require('lspconfig'))
+
 local function _start_tsserver()
 	-- local cwd = vim.loop.cmd()
 	local root_dir =
