@@ -43,4 +43,3 @@ vim.cmd([[
 -- 	})
 -- end
 --
-require('didi')
