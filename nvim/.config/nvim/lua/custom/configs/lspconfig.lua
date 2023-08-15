@@ -1,7 +1,7 @@
 local configs = require("plugins.configs.lspconfig")
 local lspconfig = require("lspconfig")
 
-vim.print(require(lspconfig.lspconfig.util.lua))
+vim.print(require(lspconfig.lspconfig.util))
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
