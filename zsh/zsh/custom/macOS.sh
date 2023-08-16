@@ -4,7 +4,7 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export wechatcli
 
 # The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
-wechatcli () {
+wechatcliopen () {
   wechatcli='/Applications/wechatwebdevtools.app/Contents/MacOS/cli'
 
   if [[ -z "$1" ]] 
