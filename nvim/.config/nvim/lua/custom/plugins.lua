@@ -133,7 +133,7 @@ local plugins = {
 
         -- Go
               "gopls" ,
-      "gospel" 
+      "gospel" ,
 
 
 				-- Python
