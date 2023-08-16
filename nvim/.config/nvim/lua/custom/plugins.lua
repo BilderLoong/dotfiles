@@ -131,6 +131,8 @@ local plugins = {
 				"shfmt",
 				"bash-language-server",
 
+        -- go
+
 				-- Python
 				"ruff", -- linter
 				"black", -- formater
