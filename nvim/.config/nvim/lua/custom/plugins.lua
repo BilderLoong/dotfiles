@@ -131,10 +131,9 @@ local plugins = {
 				"shfmt",
 				"bash-language-server",
 
-        -- Go
-              "gopls" ,
-      "gospel" ,
-
+				-- Go
+				"gopls",
+				"gospel",
 
 				-- Python
 				"ruff", -- linter
