@@ -32,14 +32,14 @@ vim.cmd([[
 -- 	})
 -- end
 
-if vim.g.vim_did_enter then
-	_start_tsserver()
-else
-	vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
-		--pattern = "*",
-		callback = function()
-			_start_tsserver()
-		end,
-	})
-end
+-- if vim.g.vim_did_enter then
+-- 	_start_tsserver()
+-- else
+-- 	vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
+-- 		--pattern = "*",
+-- 		callback = function()
+-- 			_start_tsserver()
+-- 		end,
+-- 	})
+-- end
 
