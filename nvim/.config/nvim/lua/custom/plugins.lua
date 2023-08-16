@@ -132,6 +132,7 @@ local plugins = {
 				"bash-language-server",
 
         -- Go
+        
 
 				-- Python
 				"ruff", -- linter
