@@ -195,7 +195,7 @@ local plugins = {
 		dependencies = {
 			{
 				"junegunn/fzf",
-				build = ":call fzf#install()<CR>",
+				build = "./install --all",
 			},
 		},
 	},
