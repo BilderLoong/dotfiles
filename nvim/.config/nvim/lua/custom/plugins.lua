@@ -1,6 +1,6 @@
 local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
 
----
+---@type NvPluginSpec[]
 local plugins = {
 	{
 		"unblevable/quick-scope",
@@ -182,6 +182,15 @@ local plugins = {
 		},
 	},
 	{
+		"ibhagwan/fzf-lua",
+		-- optional for icon support
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			-- calling `setup` is optional for customization
+			require("fzf-lua").setup({})
+		end,
+	},
+	{
 		"junegunn/fzf.vim",
 		dependencies = {
 			{
@@ -236,12 +245,24 @@ local plugins = {
 	},
 
 	{
-
-		"nvim-telescope/telescope-fzf-native.nvim", -- dependency for better sorting performance
-		build = "make",
-		config = function()
-			require("telescope").load_extension("fzf")
-		end,
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			{
+				-- dependency for better sorting performance
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+				config = function()
+					-- require("telescope").load_extension("fzf")
+				end,
+			},
+			{
+				"nvim-telescope/telescope-frecency.nvim",
+				config = function()
+					require("telescope").load_extension("frecency")
+				end,
+				dependencies = { "kkharji/sqlite.lua" },
+			},
+		},
 	},
 
 	{
