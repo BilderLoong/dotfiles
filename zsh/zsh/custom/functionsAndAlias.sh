@@ -38,7 +38,7 @@ clone_my_repo() {
   repo_name=$1
   dist_path=$2
 
-  git clone "git@github.com:BilderLoong/${repo_name}.git "$dist_path"
+  git clone "git@github.com:BilderLoong/${repo_name}.git" "$dist_path"
 }
 
 
