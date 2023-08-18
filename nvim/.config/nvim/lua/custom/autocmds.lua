@@ -2,8 +2,8 @@
 local api = vim.api
 api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 	pattern = "*",
-	command = "silent! wall",
 	callback = function(ctx)
+    api.nvim_command('silent! wall')
 		vim.print("Save all buffer on blur.")
 	end,
 })
