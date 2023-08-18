@@ -344,7 +344,8 @@ local plugins = {
 			"Gedit",
 		},
 		ft = { "fugitive" },
-	},{
+	},
+  {
 
   }
 }
