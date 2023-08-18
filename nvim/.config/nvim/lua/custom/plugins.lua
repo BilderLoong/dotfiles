@@ -345,6 +345,7 @@ local plugins = {
 		},
 		ft = { "fugitive" },
 	},
+
   {
 
   }
