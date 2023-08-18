@@ -347,6 +347,11 @@ local plugins = {
 	},
 
   {
+    'rafcamlet/nvim-luapad',
+    cmd = {
+      "Luapad",
+      "LuaRun"
+    }
 
   }
 }
