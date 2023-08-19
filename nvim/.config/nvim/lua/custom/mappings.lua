@@ -68,11 +68,9 @@ M.lspconfig = {
       "<cmd> Lspsaga code_action <CR>",
       "LSPsaga code action.",
     },
-    
+    -- https://nvimdev.github.io/lspsaga/diagnostic/
     ["<leader>f"] = {
-      function()
-        vim.diagnostic.open_float { border = "rounded" }
-      end,
+      ""
       "Floating diagnostic",
     },
 	},
