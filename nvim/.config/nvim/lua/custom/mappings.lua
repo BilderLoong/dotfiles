@@ -68,7 +68,7 @@ M.lspconfig = {
       "<cmd> Lspsaga code_action <CR>",
       "LSPsaga code action.",
     },
-    Lspsaga diagnostic_jump_next
+    [""]
 	},
 }
 
