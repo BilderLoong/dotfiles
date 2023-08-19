@@ -57,7 +57,7 @@ M.lspconfig = {
 		},
     ['gO'] = {
 			"<cmd> Lspsaga outline <CR>",
-			"Telescope LSP type implementations",
+			"Open symbols outline.",
     }
 	},
 }
