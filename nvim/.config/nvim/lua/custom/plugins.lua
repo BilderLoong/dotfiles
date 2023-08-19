@@ -356,8 +356,8 @@ local plugins = {
   },
   {
      'nvimdev/lspsaga.nvim',
-    event = 'LspAttach'
-     config = function()
+    event = 'LspAttach',
+     config = function(),
         require('lspsaga').setup({})
     end,
      dependencies = {
