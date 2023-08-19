@@ -58,10 +58,10 @@ M.lspconfig = {
     ['gO'] = {
 			"<cmd> Lspsaga outline <CR>",
 			"Open symbols outline.",
-    }
+    },
     ['gA'] = {
       "<cmd> Lspsaga finder <CR>",
-  
+   
     }
 	},
 }
