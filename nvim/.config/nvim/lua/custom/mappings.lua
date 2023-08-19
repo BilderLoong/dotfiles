@@ -73,6 +73,7 @@ M.lspconfig = {
       "<cmd> Lspsaga diagnostic_jump_next <CR>",
       "Show the diagnostic in a nice float.",
     },
+    -- https://nvimdev.github.io/lspsaga/hover/
     -- `gx` to open link.
     ["K"] = {
       "<cmd> Lspsaga hover_doc <CR>",
