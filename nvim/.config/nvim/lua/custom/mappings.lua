@@ -70,7 +70,7 @@ M.lspconfig = {
     },
     -- https://nvimdev.github.io/lspsaga/diagnostic/
     ["<leader>f"] = {
-      ""
+      "<cmd> Lspsaga code_action <CR>",
       "Floating diagnostic",
     },
 	},
