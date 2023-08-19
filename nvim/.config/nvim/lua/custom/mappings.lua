@@ -73,6 +73,10 @@ M.lspconfig = {
       "<cmd> Lspsaga diagnostic_jump_next <CR>",
       "Show the diagnostic in a nice float.",
     },
+    ["K"] = {
+      "<cmd> Lspsaga diagnostic_jump_next <CR>",
+      "Show the diagnostic in a nice float.",
+    },
 	},
 }
 
