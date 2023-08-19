@@ -63,6 +63,7 @@ M.lspconfig = {
       "<cmd> Lspsaga finder <CR>",
       "Show LSP methods search result."
     },
+    -- https://nvimdev.github.io/lspsaga/codeaction/
     ["<leader>ca"] = {
       "<cmd> Lspsaga code_action <CR>",
       "LSPsaga code action.",
