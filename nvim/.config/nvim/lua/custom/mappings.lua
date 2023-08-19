@@ -71,7 +71,7 @@ M.lspconfig = {
     -- https://nvimdev.github.io/lspsaga/diagnostic/
     ["<leader>f"] = {
       "<cmd> Lspsaga diagnostic_jump_next <CR>",
-      " Show the diagnostic in a nice float",
+      "Show the diagnostic in a nice float.",
     },
 	},
 }
