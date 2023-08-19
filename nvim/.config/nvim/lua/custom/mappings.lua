@@ -75,7 +75,7 @@ M.lspconfig = {
     },
     ["K"] = {
       "<cmd> Lspsaga hover_doc <CR>",
-      "",
+      "Open hover",
     },
 	},
 }
