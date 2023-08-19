@@ -64,7 +64,7 @@ M.lspconfig = {
       "Show LSP methods search result."
     },
     ["<leader>ca"] = {
-      "<cmd>  <CR>",
+      "<cmd> Lspsaga code_action <CR>",
       "LSP code action",
     },
 	},
