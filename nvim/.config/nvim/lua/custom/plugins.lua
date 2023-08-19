@@ -353,7 +353,8 @@ local plugins = {
       "LuaRun"
     }
 
-  },{
+  },
+  {
      'nvimdev/lspsaga.nvim',
     
      config = function()
