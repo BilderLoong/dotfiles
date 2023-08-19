@@ -354,6 +354,7 @@ local plugins = {
     }
 
   },{
+     'nvimdev/lspsaga.nvim',
     
   }
 }
