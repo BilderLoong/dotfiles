@@ -56,7 +56,7 @@ M.lspconfig = {
 			"Telescope LSP type implementations",
 		},
     ['gO'] = {
-			"<cmd>  <CR>",
+			"<cmd> Lspsaga outline <CR>",
 			"Telescope LSP type implementations",
     }
 	},
