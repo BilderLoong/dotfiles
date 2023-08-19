@@ -65,7 +65,7 @@ M.lspconfig = {
     },
     ["<leader>ca"] = {
       "<cmd> Lspsaga code_action <CR>",
-      "LSPSaga code action",
+      "LSPsaga code action.",
     },
 	},
 }
