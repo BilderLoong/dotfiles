@@ -68,7 +68,7 @@ M.lspconfig = {
       "<cmd> Lspsaga code_action <CR>",
       "LSPsaga code action.",
     },
-
+    
     ["<leader>f"] = {
       function()
         vim.diagnostic.open_float { border = "rounded" }
