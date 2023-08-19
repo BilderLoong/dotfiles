@@ -63,7 +63,12 @@ M.lspconfig = {
       "<cmd> Lspsaga finder <CR>",
       "Show LSP methods search result."
     },
-
+    ["<leader>ca"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "LSP code action",
+    },
 	},
 }
 
