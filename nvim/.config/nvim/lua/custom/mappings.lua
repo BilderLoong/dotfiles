@@ -59,7 +59,9 @@ M.lspconfig = {
 			"<cmd> Lspsaga outline <CR>",
 			"Open symbols outline.",
     }
-    ['gA']
+    ['gA'] = {
+      
+    }
 	},
 }
 
