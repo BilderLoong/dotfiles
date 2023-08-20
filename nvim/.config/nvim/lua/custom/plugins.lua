@@ -256,6 +256,14 @@ local plugins = {
 					require("telescope").load_extension("fzf")
 				end,
 			},
+
+			{
+				"Marskey/telescope-sg",
+				config = function()
+					require("telescope").load_extension("ast_grep")
+				end,
+			},
+
 			{
 				"nvim-telescope/telescope-frecency.nvim",
 				config = function()
@@ -325,7 +333,7 @@ local plugins = {
 		ft = { "go", "gomod" },
 		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
 	},
--- https://github.com/jimcornmell/lvim/blob/34ee4560c05f061055cddc608d882906780e7aad/config.lua#L364
+	-- https://github.com/jimcornmell/lvim/blob/34ee4560c05f061055cddc608d882906780e7aad/config.lua#L364
 	{
 		"tpope/vim-fugitive",
 		cmd = {
@@ -346,25 +354,24 @@ local plugins = {
 		ft = { "fugitive" },
 	},
 
-  {
-    'rafcamlet/nvim-luapad',
-    cmd = {
-      "Luapad",
-      "LuaRun"
-    }
-
-  },
-  {
-     'nvimdev/lspsaga.nvim',
-    event = 'LspAttach',
-     config = function()
-        require('lspsaga').setup({})
-    end,
-     dependencies = {
-        'nvim-treesitter/nvim-treesitter', -- optional
-        'nvim-tree/nvim-web-devicons'     -- optional
-    }
-  }
+	{
+		"rafcamlet/nvim-luapad",
+		cmd = {
+			"Luapad",
+			"LuaRun",
+		},
+	},
+	{
+		"nvimdev/lspsaga.nvim",
+		event = "LspAttach",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter", -- optional
+			"nvim-tree/nvim-web-devicons", -- optional
+		},
+	},
 }
 
 return plugins

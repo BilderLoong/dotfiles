@@ -48,7 +48,7 @@ zinit wait lucid for \
       has'starship' id-as'starship_init' eval"starship init zsh" \
     zdharma-continuum/null  \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
-    zdharma-continuum/null
+    zdharma-continuum/null 
     #   atclone"shell/key-bindings.zsh" \
     #   atpull"%atclone" \
     #   multisrc"shell/{completion,key-bindings}.zsh" \
@@ -76,6 +76,12 @@ zinit wait"1" lucid for \
   zdharma-continuum/null 
 
 
+# https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
+zinit ice as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" \
+    mv"completions_zsh -> _tldr" \
+    pick"_tldr" \
+    atpull'!git reset --hard' 
+zinit light dbrgn/tealdeer
 
 # zinit as'null' lucid sbin wait'1' for \
 #   Fakerr/git-recall \

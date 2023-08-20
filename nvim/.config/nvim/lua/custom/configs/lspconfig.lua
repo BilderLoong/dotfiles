@@ -5,6 +5,16 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls","gopls" }
 
+-- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
+configs.ast_grep = {
+  default_config = {
+    cmd = {'sg', 'lsp'};
+    -- filetypes = {'typescript'};
+    single_file_support = true;
+    root_dir = lspconfig.util.root_pattern('.git', 'sgconfig.yml');
+  };
+}
+
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
