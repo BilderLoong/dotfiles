@@ -37,8 +37,7 @@ brew "exa"
 brew "zoxide"
 brew "luarocks"
 brew "tidwall/jj"
-brew "Zellij"
-brew install zellij
+brew "zellij"
 
 cask "anki"
 cask "deepl"
