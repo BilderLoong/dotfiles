@@ -38,6 +38,7 @@ brew "zoxide"
 brew "luarocks"
 brew "tidwall/jj"
 brew "Zellij"
+brew install zellij
 
 cask "anki"
 cask "deepl"
