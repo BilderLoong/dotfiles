@@ -44,3 +44,4 @@ vim.cmd([[
 -- end
 
 require("custom.autocmds")
+require("custom.custom_cmds")

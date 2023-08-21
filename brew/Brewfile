@@ -41,6 +41,7 @@ brew "zellij"
 brew "ast-grep"
 brew "jless"
 brew "tealdeer"
+brew "httpie"
 
 cask "anki"
 cask "deepl"
