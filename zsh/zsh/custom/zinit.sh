@@ -45,7 +45,7 @@ zinit wait lucid for \
     zsh-users/zsh-completions \
         has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env' \
     zdharma-continuum/null  \
-      has'starship' id-as'starship_init' eval"starship init zsh" \
+         wait'!0' has'starship' id-as'starship_init' eval"starship init zsh" \
     zdharma-continuum/null  \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
     zdharma-continuum/null 
@@ -66,7 +66,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 # Got error for this plugin, given up
 # zinit light Aloxaf/fzf-tab
 
-zinit ice wait lucid as"command" from"gh-r" mv"zoxide* -> zoxide"  eval"zoxide init zsh"
+zinit ice wait lucid as"command" from"gh-r"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
 
@@ -84,6 +84,7 @@ zinit ice as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh
     pick"_tldr" \
     atpull'!git reset --hard' 
 zinit light dbrgn/tealdeer
+
 
 # zinit as'null' lucid sbin wait'1' for \
 #   Fakerr/git-recall \

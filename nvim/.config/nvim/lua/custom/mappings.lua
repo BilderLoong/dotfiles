@@ -19,6 +19,13 @@ M.general = {
 			"Export to VSCode",
 			opts = { noremap = true, silent = true },
 		},
+		["<leader>cg"] = {
+			function()
+				require("custom.custom_cmds").open_config()
+			end,
+			"Open neovim config in a new tab.",
+			opts = { noremap = true, silent = true },
+		},
 	},
 }
 
