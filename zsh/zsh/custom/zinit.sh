@@ -35,6 +35,9 @@ zinit light-mode for \
 
 
 
+autoload -Uz compinit
+compinit
+
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid for \
     OMZP::command-not-found \
@@ -48,7 +51,10 @@ zinit wait lucid for \
          wait'!0' has'starship' id-as'starship_init' eval"starship init zsh" \
     zdharma-continuum/null  \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
+    zdharma-continuum/null \
+         has'ast-grep' id-as'sg-completions' eval"ast-grep completions zsh" \
     zdharma-continuum/null 
+    
     #   atclone"shell/key-bindings.zsh" \
     #   atpull"%atclone" \
     #   multisrc"shell/{completion,key-bindings}.zsh" \
