@@ -67,7 +67,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
 
 # zinit ice atload'zicompinit; zicdreplay' \
-    zinit load zsh-users/zsh-completions 
+    # zinit load zsh-users/zsh-completions 
 # Put this after other plugins may also bind "^I"
 # https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
 # https://github.com/Aloxaf/fzf-tab#install
