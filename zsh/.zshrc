@@ -61,5 +61,7 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 # Go
 export PATH=$PATH:$GOPATH/bin
 
+source $HOME/Project/zsh-autocomplete
+
 
 # zprof
