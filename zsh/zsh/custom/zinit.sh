@@ -45,7 +45,7 @@ zinit wait lucid for \
     has'git' OMZP::git \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    atload'zicompinit; zicdreplay' \
+      atload'zicompinit; zicdreplay' \
     zsh-users/zsh-completions \
     marlonrichert/zsh-autocomplete \
         has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env' \
