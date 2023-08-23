@@ -64,6 +64,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # zprof
 
-source $HOME/Project/
+source $HOME/Project/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 
