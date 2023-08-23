@@ -61,8 +61,7 @@ zinit wait lucid for \
     #   id-as"junegunn/fzf_completions" \
     # pick"/dev/null" junegunn/fzf 
 
-zinit for wait lucid has'ast-grep' id-as'sg-completions' atload'zicompinit; zicdreplay' \
-   zdharma-continuum/null
+zinit for wait lucid 
 
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
