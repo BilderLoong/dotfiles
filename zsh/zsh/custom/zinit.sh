@@ -64,6 +64,7 @@ zinit wait lucid for \
     # pick"/dev/null" junegunn/fzf 
 zinit load for \
 
+    zdharma-continuum/null 
 
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
