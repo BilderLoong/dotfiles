@@ -60,6 +60,7 @@ zinit wait lucid for \
     #   multisrc"shell/{completion,key-bindings}.zsh" \
     #   id-as"junegunn/fzf_completions" \
     # pick"/dev/null" junegunn/fzf 
+
 zinit load for \
          has'ast-grep' id-as'sg-completions' eval"ast-grep completions zsh" \
     zdharma-continuum/null 
