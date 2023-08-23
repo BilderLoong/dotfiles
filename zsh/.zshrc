@@ -64,5 +64,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # zprof
 
+source $HOME/Project/
 
 
