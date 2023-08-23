@@ -45,7 +45,7 @@ zinit wait lucid for \
     has'git' OMZP::git \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
-    marlonrichert/zsh-autocomplete \
+    # marlonrichert/zsh-autocomplete \
         has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env' \
     zdharma-continuum/null  \
          wait'!0' has'starship' id-as'starship_init' eval"starship init zsh" \
