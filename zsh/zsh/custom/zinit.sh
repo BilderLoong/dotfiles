@@ -63,7 +63,7 @@ zinit wait lucid for \
     #   id-as"junegunn/fzf_completions" \
     # pick"/dev/null" junegunn/fzf 
 zinit load for \
-  has'
+  has'ast-grep'
     id-as
     zdharma-continuum/null 
 
