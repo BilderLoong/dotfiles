@@ -56,6 +56,7 @@ zinit wait lucid for \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' \
     zdharma-continuum/null
+marlonrichert/zsh-autocomplete
     #   atclone"shell/key-bindings.zsh" \
     #   atpull"%atclone" \
     #   multisrc"shell/{completion,key-bindings}.zsh" \
