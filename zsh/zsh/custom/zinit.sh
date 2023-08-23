@@ -55,7 +55,7 @@ zinit wait lucid for \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' \
-    zdharma-continuum/null\
+    zdharma-continuum/null
 
     #   atclone"shell/key-bindings.zsh" \
     #   atpull"%atclone" \
