@@ -46,6 +46,7 @@ zinit wait lucid for \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     zsh-users/zsh-completions \
+    \
     marlonrichert/zsh-autocomplete \
         has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env' \
     zdharma-continuum/null  \
