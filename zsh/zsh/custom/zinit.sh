@@ -53,6 +53,8 @@ zinit wait lucid for \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
     zdharma-continuum/null \
          has'ast-grep' id-as'sg-completions' eval"ast-grep completions zsh" \
+    zdharma-continuum/null \
+         has'navi' id-as'navi-width' eval"navi widget zsh" \
     zdharma-continuum/null 
     
     #   atclone"shell/key-bindings.zsh" \
