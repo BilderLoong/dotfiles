@@ -64,6 +64,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # zprof
 
-zinit load "$HOME/Project/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+zinit load "$HOME/Project/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
 
