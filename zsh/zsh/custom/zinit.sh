@@ -62,7 +62,8 @@ zinit wait lucid for \
     #   multisrc"shell/{completion,key-bindings}.zsh" \
     #   id-as"junegunn/fzf_completions" \
     # pick"/dev/null" junegunn/fzf 
-zinit
+zinit load for \
+
 
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
