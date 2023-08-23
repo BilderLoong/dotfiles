@@ -52,8 +52,6 @@ zinit wait lucid for \
     zdharma-continuum/null  \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
     zdharma-continuum/null \
-         has'ast-grep' id-as'sg-completions' eval"ast-grep completions zsh" \
-    zdharma-continuum/null \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null 
     
@@ -63,6 +61,8 @@ zinit wait lucid for \
     #   id-as"junegunn/fzf_completions" \
     # pick"/dev/null" junegunn/fzf 
 zinit load for \
+         has'ast-grep' id-as'sg-completions' eval"ast-grep completions zsh" \
+    zdharma-continuum/null \
   has'ast-grep'
     id-as
     zdharma-continuum/null 
