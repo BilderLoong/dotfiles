@@ -63,7 +63,7 @@ zinit wait lucid for \
     #   id-as"junegunn/fzf_completions" \
     # pick"/dev/null" junegunn/fzf 
 zinit load for \
-
+    id-as
     zdharma-continuum/null 
 
 # Fish-like autosuggestions for zsh 
