@@ -52,7 +52,7 @@ zinit wait lucid for \
     zdharma-continuum/null  \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias" \
     zdharma-continuum/null \
-         has'navi' id-as'navi-widget' eval"navi widget zsh" \1000
+         has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' \
     zdharma-continuum/null
