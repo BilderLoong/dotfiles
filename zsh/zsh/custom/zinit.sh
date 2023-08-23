@@ -57,7 +57,7 @@ zinit wait lucid for \
         has'ast-grep' id-as'sg-completions' \
     zdharma-continuum/null
 
-zinit light Aloxaf/fzf-tab
+zinit light 
 
     #   atclone"shell/key-bindings.zsh" \
     #   atpull"%atclone" \
