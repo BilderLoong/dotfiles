@@ -42,6 +42,7 @@ brew "ast-grep"
 brew "jless"
 brew "tealdeer"
 brew "httpie"
+brew "navi"
 
 cask "anki"
 cask "deepl"

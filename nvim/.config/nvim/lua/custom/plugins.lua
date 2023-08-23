@@ -221,7 +221,7 @@ local plugins = {
     changedelete = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
         },
 				-- stylua: ignore end
-				word_diff = true,
+				word_diff = false,
 				current_line_blame = true,
 				numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
 				linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
