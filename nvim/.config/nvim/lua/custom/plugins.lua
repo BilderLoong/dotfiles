@@ -6,10 +6,10 @@ local plugins = {
     "unblevable/quick-scope",
     event = BufEnterLike,
     config = function()
-      vim.cmd [[
+      vim.cmd([[
 			  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 			  highlight QuickScopeSecondary guifg='#6fffff' gui=underline ctermfg=81 cterm=underline
-   ]]
+   ]])
     end,
   },
 
@@ -23,9 +23,9 @@ local plugins = {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     keys = { "c", "y", "d" },
     config = function()
-      require("nvim-surround").setup {
+      require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults
-      }
+      })
     end,
   },
   {
@@ -48,7 +48,7 @@ local plugins = {
     event = BufEnterLike,
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
-      require("nvim-treesitter.configs").setup {
+      require("nvim-treesitter.configs").setup({
         textsubjects = {
           enable = true,
           prev_selection = ",", -- (Optional) keymap to select the previous selection
@@ -58,14 +58,8 @@ local plugins = {
             ["i;"] = "textsubjects-container-inner",
           },
         },
-      }
+      })
     end,
-  },
-
-  {
-    "simrat39/symbols-outline.nvim",
-    event = BufEnterLike,
-    cmd = { "SymbolsOutline", "SymbolsOutlineOpen", "SymbolsOutlineClose" },
   },
 
   {
@@ -77,7 +71,7 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {},
     opts = function()
-      return require "custom.configs.treesitter"
+      return require("custom.configs.treesitter")
     end,
   },
 
@@ -90,12 +84,12 @@ local plugins = {
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
-        require "custom.configs.null-ls"
+        require("custom.configs.null-ls")
       end,
     },
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require("plugins.configs.lspconfig")
+      require("custom.configs.lspconfig")
     end,
   },
   {
@@ -157,7 +151,7 @@ local plugins = {
     "romgrk/nvim-treesitter-context",
     event = BufEnterLike,
     config = function()
-      require("treesitter-context").setup {
+      require("treesitter-context").setup({
         enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -169,7 +163,7 @@ local plugins = {
           -- appear in the context window.
           default = { "class", "function", "method" },
         },
-      }
+      })
     end,
   },
   {
@@ -188,13 +182,13 @@ local plugins = {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       -- calling `setup` is optional for customization
-      require("fzf-lua").setup {
+      require("fzf-lua").setup({
         -- https://github.com/ibhagwan/fzf-lua/wiki#how-do-i-change-the-window-size-and-position
         winopts = {
           width = 0.98,
           height = 0.98,
         },
-      }
+      })
     end,
   },
   {
@@ -219,12 +213,12 @@ local plugins = {
       local defaults = require("plugins.configs.others").gitsigns
       local custom = {
         -- stylua: ignore start
-				signs = {
+        signs = {
           add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-    change = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-    delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-    topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-    changedelete = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          change = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+          topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+          changedelete = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
         },
         -- stylua: ignore end
         word_diff = false,
@@ -240,8 +234,8 @@ local plugins = {
   {
     "hrsh7th/nvim-cmp",
     opts = function()
-      local cmp = require "cmp"
-      local opts = vim.tbl_deep_extend("force", require "plugins.configs.cmp", {
+      local cmp = require("cmp")
+      local opts = vim.tbl_deep_extend("force", require("plugins.configs.cmp"), {
         mapping = {
           ["<A-Space>"] = cmp.mapping.complete(),
         },
@@ -259,21 +253,21 @@ local plugins = {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
         config = function()
-          require("telescope").load_extension "fzf"
+          require("telescope").load_extension("fzf")
         end,
       },
 
       {
         "Marskey/telescope-sg",
         config = function()
-          require("telescope").load_extension "ast_grep"
+          require("telescope").load_extension("ast_grep")
         end,
       },
 
       {
         "nvim-telescope/telescope-frecency.nvim",
         config = function()
-          require("telescope").load_extension "frecency"
+          require("telescope").load_extension("frecency")
         end,
         dependencies = { "kkharji/sqlite.lua" },
       },
@@ -282,7 +276,14 @@ local plugins = {
 
   {
     "rmagatti/auto-session",
-    lazy = false,
+    lazy = true,
+    cmd = {
+			"Autosession",
+			"SessionDelete",
+			"SessionRestore",
+			"SessionRestoreFromFile",
+			"SessionSave",
+		},
     opts = {
       log_level = vim.log.levels.ERROR,
       -- auto_session_enable_last_session = true,
@@ -295,6 +296,11 @@ local plugins = {
         theme_conf = { border = true },
         previewer = true,
       },
+      -- https://github.com/rmagatti/auto-session#-command-hooks
+      -- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_after_restoring_a_session/
+      pre_save_cmds = {
+				'NvimTreeClose',
+			},
     },
     config = function(_, opts)
       require("auto-session").setup(opts)
@@ -307,7 +313,7 @@ local plugins = {
 
     "nvim-tree/nvim-tree.lua",
     opts = function()
-      return vim.tbl_deep_extend("force", require "plugins.configs.nvimtree", {
+      return vim.tbl_deep_extend("force", require("plugins.configs.nvimtree"), {
         filesystem_watchers = {
           --- I get a filesystem_watchers related error when compiling project, disable it help to resolve the error.
           enable = false,
@@ -371,11 +377,11 @@ local plugins = {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-      require("lspsaga").setup {}
+      require("lspsaga").setup({})
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons", -- optional
+      "nvim-tree/nvim-web-devicons",  -- optional
     },
   },
   {
@@ -385,10 +391,16 @@ local plugins = {
       -- UI related https://github.com/mfussenegger/nvim-dap#goals
       "rcarriga/nvim-dap-ui",
       "theHamsta/nvim-dap-virtual-text",
+      {
+        "jay-babu/mason-nvim-dap.nvim",
+        dependencies = { "nvim-dap" },
+        cmd = { "DapInstall", "DapUninstall" },
+        opts = { handlers = {} },
+      },
     },
-    config = function (_, opts)
-     require("custom.configs.debug")
-    end
+    config = function(_, opts)
+      -- require("custom.configs.debug")
+    end,
   },
   {
     "jbyuki/one-small-step-for-vimkind",
