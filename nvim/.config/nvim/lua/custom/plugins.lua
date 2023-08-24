@@ -388,7 +388,7 @@ local plugins = {
 		},
   },
   {
-    
+    'jbyuki/one-small-step-for-vimkind'
   }
 }
 
