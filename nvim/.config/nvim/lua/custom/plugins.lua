@@ -312,7 +312,7 @@ local plugins = {
 	{
 
 		"nvim-tree/nvim-tree.lua",
-    cmd = {"NvimTreeClose"},
+		cmd = { "NvimTreeClose" },
 		opts = function()
 			return vim.tbl_deep_extend("force", require("plugins.configs.nvimtree"), {
 				filesystem_watchers = {
@@ -416,7 +416,7 @@ local plugins = {
 		dependencies = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
 		config = function()
 			require("session-lens").setup({
-       prompt_title = 'YEAH SESSIONS',
+				prompt_title = "YEAH SESSIONS",
 			})
 		end,
 	},
