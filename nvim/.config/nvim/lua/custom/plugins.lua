@@ -387,7 +387,8 @@ local plugins = {
       "theHamsta/nvim-dap-virtual-text",
     },
     config = function (_, opts)
-      
+     -- require("custom.configs.debug")
+ 
     end
   },
   {
