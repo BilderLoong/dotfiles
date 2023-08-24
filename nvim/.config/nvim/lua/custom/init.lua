@@ -13,9 +13,7 @@ g.toggle_theme_icon = ""
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.cmd([[
-  set nofoldenable
-]])
+vim.cmd([[ set nofoldenable ]])
 
 
 -- local function _start_tsserver()
