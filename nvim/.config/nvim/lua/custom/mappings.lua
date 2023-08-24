@@ -50,7 +50,6 @@ M.telescope = {
 		["<leader>ff"] = {
 			function()
 				require("telescope.builtin").find_files({
-					-- hidden = true,
           follow = true
 				})
 			end,
