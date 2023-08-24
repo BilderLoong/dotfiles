@@ -49,8 +49,8 @@ M.telescope = {
 		["<leader>fh"] = {
 			function()
 				require("telescope").builtin.find_files({
-          hidden = true,
-        })
+					hidden = true,
+				})
 			end,
 			"AST Grep!",
 		},
