@@ -48,7 +48,9 @@ M.telescope = {
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
 		["<leader>fh"] = {
 			function()
-				require("telescope").builtin.find_files()
+				require("telescope").builtin.find_files({
+          
+        })
 			end,
 			"AST Grep!",
 		},
