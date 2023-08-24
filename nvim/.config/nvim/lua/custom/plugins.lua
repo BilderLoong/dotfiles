@@ -381,7 +381,7 @@ local plugins = {
   {
     -- https://github.com/mfussenegger/nvim-dap
     "mfussenegger/nvim-dap",
-    event = 'VeryLazy',
+    event = BufEnterLike,
     dependencies = {
       -- UI related https://github.com/mfussenegger/nvim-dap#goals
       "rcarriga/nvim-dap-ui",
