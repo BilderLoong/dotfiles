@@ -190,7 +190,7 @@ local plugins = {
 			-- calling `setup` is optional for customization
 			require("fzf-lua").setup({
 				winopts = {
-					width = 0.9,
+					width = 1,
 				},
 			})
 		end,
