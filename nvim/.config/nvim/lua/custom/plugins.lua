@@ -189,6 +189,7 @@ local plugins = {
 		config = function()
 			-- calling `setup` is optional for customization
 			require("fzf-lua").setup({
+        -- https://github.com/ibhagwan/fzf-lua/wiki#how-do-i-change-the-window-size-and-position
 				winopts = {
 					width = 0.98,
 					height = 0.98,
