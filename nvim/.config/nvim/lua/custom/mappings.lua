@@ -51,6 +51,7 @@ M.telescope = {
 			function()
 				require("telescope.builtin").find_files({
 					hidden = true,
+          follow = true
 				})
 			end,
 			"Telescope find files.",
