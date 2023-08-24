@@ -301,7 +301,7 @@ local plugins = {
 			pre_save_cmds = {
 				[[
           lua << EOF
-            if vim.fn.exists('')
+            if vim.fn.exists(':NvimTreeClose')
           EOF
         ]],
 			},
