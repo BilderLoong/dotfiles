@@ -400,7 +400,7 @@ local plugins = {
 			},
 		},
 		config = function(_, opts)
-			-- require("custom.configs.debug")
+			require("custom.configs.debug")
 		end,
 	},
 	{
