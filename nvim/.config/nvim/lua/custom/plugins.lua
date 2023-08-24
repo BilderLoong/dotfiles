@@ -189,9 +189,10 @@ local plugins = {
 		config = function()
 			-- calling `setup` is optional for customization
 			require("fzf-lua").setup({
-        win
-width
-      })
+				winopts = {
+					width = "0.9",
+				},
+			})
 		end,
 	},
 	{
