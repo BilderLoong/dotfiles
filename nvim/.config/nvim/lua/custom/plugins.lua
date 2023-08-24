@@ -312,6 +312,7 @@ local plugins = {
 	{
 
 		"nvim-tree/nvim-tree.lua",
+    cmd = {"NvimTreeClose"}
 		opts = function()
 			return vim.tbl_deep_extend("force", require("plugins.configs.nvimtree"), {
 				filesystem_watchers = {
