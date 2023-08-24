@@ -45,7 +45,9 @@ local telescope_i_n = {
 M.telescope = {
 	n = vim.tbl_deep_extend("force", telescope_i_n, {
 		["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
-		["<leader>fS"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
+		["<leader>fS"] = { function ()
+		  
+		end, "Find workspace symbols" },
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
 		["<leader>ff"] = {
 			function()
