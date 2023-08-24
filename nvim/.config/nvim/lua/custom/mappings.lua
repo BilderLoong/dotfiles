@@ -39,7 +39,7 @@ local telescope_i_n = {
 		function()
       require("fzf-lua").help_tags()
 		end,
-    "Fzf lua help tags"
+    "Fzf lua help tags."
 	},
 }
 
