@@ -48,7 +48,7 @@ M.telescope = {
 		["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
 		["<leader>ss"] = { function ()
 		  
-		end d session history" },
+		end require("auto-session.session-lens").search_session(), "Find session history" },
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
 		["<leader>ff"] = {
 			function()
