@@ -306,7 +306,7 @@ local plugins = {
               print(v)
             end
           EOF
-  ]],
+        ]],
 			},
 		},
 		config = function(_, opts)
