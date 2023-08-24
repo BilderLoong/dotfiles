@@ -1,4 +1,4 @@
-local local dap = require"dap"
+local dap = require"dap"
 dap.configurations.lua = { 
   { 
     type = 'nlua', 
