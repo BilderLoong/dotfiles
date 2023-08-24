@@ -35,9 +35,11 @@ local telescope_i_n = {
 	["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
 	["<A-p>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
 	["<A-r>"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
-  ["<F1>"] = {function ()
-   require ( 'telescope' ) .builtins
-  end}
+	["<F1>"] = {
+		function()
+			require("telescope").builtin.find_files()
+		end,
+	},
 }
 
 M.telescope = {
@@ -66,30 +68,30 @@ M.lspconfig = {
 			"<cmd> Telescope lsp_implementations <CR>",
 			"Telescope LSP type implementations",
 		},
-    ['gO'] = {
+		["gO"] = {
 			"<cmd> Lspsaga outline <CR>",
 			"Open symbols outline.",
-    },
-    ['gA'] = {
-      "<cmd> Lspsaga finder <CR>",
-      "Show LSP methods search result."
-    },
-    -- https://nvimdev.github.io/lspsaga/codeaction/
-    ["<leader>ca"] = {
-      "<cmd> Lspsaga code_action <CR>",
-      "LSPsaga code action.",
-    },
-    -- https://nvimdev.github.io/lspsaga/diagnostic/
-    ["<leader>f"] = {
-      "<cmd> Lspsaga diagnostic_jump_next <CR>",
-      "Show the diagnostic in a nice float.",
-    },
-    -- https://nvimdev.github.io/lspsaga/hover/
-    -- `gx` to open link.
-    ["K"] = {
-      "<cmd> Lspsaga hover_doc <CR>",
-      "Open hover",
-    },
+		},
+		["gA"] = {
+			"<cmd> Lspsaga finder <CR>",
+			"Show LSP methods search result.",
+		},
+		-- https://nvimdev.github.io/lspsaga/codeaction/
+		["<leader>ca"] = {
+			"<cmd> Lspsaga code_action <CR>",
+			"LSPsaga code action.",
+		},
+		-- https://nvimdev.github.io/lspsaga/diagnostic/
+		["<leader>f"] = {
+			"<cmd> Lspsaga diagnostic_jump_next <CR>",
+			"Show the diagnostic in a nice float.",
+		},
+		-- https://nvimdev.github.io/lspsaga/hover/
+		-- `gx` to open link.
+		["K"] = {
+			"<cmd> Lspsaga hover_doc <CR>",
+			"Open hover",
+		},
 	},
 }
 
