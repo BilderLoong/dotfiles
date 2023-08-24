@@ -384,6 +384,7 @@ local plugins = {
 		dependencies = {
       -- https://github.com/rcarriga/nvim-dap-ui
       'rcarriga/nvim-dap-ui',
+      https://github.com/theHamsta/nvim-dap-virtual-text
       'theHamsta/nvim-dap-virtual-text'
 		},
   }
