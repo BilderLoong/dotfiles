@@ -99,7 +99,7 @@ local plugins = {
 
   {
     "Pocco81/auto-save.nvim",
-    event = 'BufWritePre).',
+    event = 'BufWritePre',
   },
   {
     "williamboman/mason.nvim",
