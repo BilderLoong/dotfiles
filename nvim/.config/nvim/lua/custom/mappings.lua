@@ -37,7 +37,7 @@ local telescope_i_n = {
 	["<A-r>"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
 	["<F1>"] = {
 		function()
-			require("telescope").builtin.find_files()
+			require("fzf-lua").builtin.find_files()
 		end,
 	},
 }
