@@ -191,6 +191,7 @@ local plugins = {
 			require("fzf-lua").setup({
 				winopts = {
 					width = 0.98,
+					height = 0.98,
 				},
 			})
 		end,
