@@ -378,6 +378,9 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons", -- optional
 		},
 	},
+  {
+    
+  }
 }
 
 return plugins
