@@ -47,8 +47,8 @@ M.telescope = {
 	n = vim.tbl_deep_extend("force", telescope_i_n, {
 		["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
 		["<leader>ss"] = { function ()
-		  require("auto-session.session-lens")
-		end .search_session(), "Find session history" },
+		  require("auto-session.session-lens").search_session()
+		end , "Find session history" },
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
 		["<leader>ff"] = {
 			function()
