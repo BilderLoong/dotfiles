@@ -300,12 +300,12 @@ local plugins = {
 			-- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_after_restoring_a_session/
 			pre_save_cmds = {
 				[[
-lua << EOF
-  local tbl = {1, 2, 3}
-  for k, v in ipairs(tbl) do
-    print(v)
-  end
-EOF
+    lua << EOF
+      local tbl = {1, 2, 3}
+      for k, v in ipairs(tbl) do
+        print(v)
+      end
+    EOF
   ]],
 			},
 		},
