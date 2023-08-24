@@ -381,7 +381,7 @@ local plugins = {
   {
     -- https://github.com/mfussenegger/nvim-dap
     "mfussenegger/nvim-dap",
-    -- Temp
+    -- Temp, change it latter
     event = BufEnterLike,
     dependencies = {
       -- UI related https://github.com/mfussenegger/nvim-dap#goals
