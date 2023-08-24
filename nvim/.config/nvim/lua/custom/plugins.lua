@@ -388,7 +388,7 @@ local plugins = {
     },
     config = function (_, opts)
      require("custom.configs.debug")
- 
+     
     end
   },
   {
