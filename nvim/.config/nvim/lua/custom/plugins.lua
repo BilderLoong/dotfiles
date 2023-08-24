@@ -276,7 +276,7 @@ local plugins = {
 
   {
     "rmagatti/auto-session",
-    lazy = true,
+    lazy = false,
     cmd = {
 			"Autosession",
 			"SessionDelete",
