@@ -299,10 +299,7 @@ local plugins = {
 			-- https://github.com/rmagatti/auto-session#-command-hooks
 			-- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_after_restoring_a_session/
 			pre_save_cmds = {
-				[[lua if vim.fn.exists(':NvimTreeClose') then
-              vim.cmd('NvimTreeClose')
-            end
-          EOF
+				[[lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('NvimTreeClose') end
         ]],
 			},
 		},
