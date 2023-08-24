@@ -52,7 +52,7 @@ M.telescope = {
 					hidden = true,
 				})
 			end,
-			"",
+			"Find files.",
 		},
 	}),
 	i = vim.tbl_deep_extend("force", telescope_i_n, {}),
