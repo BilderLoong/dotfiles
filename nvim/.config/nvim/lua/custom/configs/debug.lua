@@ -8,7 +8,3 @@ dap.configurations.lua = {
 	},
 }
 
--- https://github.com/mfussenegger/nvim-dap/blob/master/doc/dap.txt#L171
-dap.adapters.nlua = function(callback, config)
-	callback({ type = "server", host = config.host or "127.0.0.1", port = config.port or 8086 })
-end
