@@ -5,7 +5,7 @@ local M = {
   ui = {
     theme = "nord", -- default theme
     nvdash = {
-      load_on_startup = true
+      load_on_startup = false
     }
   }
 }
