@@ -189,9 +189,7 @@ local plugins = {
 		config = function()
 			-- calling `setup` is optional for customization
 			require("fzf-lua").setup({
-        fzf_opts = {
-          ['--layout'] = 
-        }
+        
       })
 		end,
 	},
