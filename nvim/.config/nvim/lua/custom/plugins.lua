@@ -306,7 +306,7 @@ lua << EOF
     print(v)
   end
 EOF
-        ',
+]],
 			},
 		},
 		config = function(_, opts)
