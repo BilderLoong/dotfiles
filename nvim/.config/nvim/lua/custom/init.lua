@@ -43,4 +43,4 @@ vim.cmd([[ set nofoldenable ]])
 
 require("custom.autocmds")
 require("custom.custom_cmds")
-require("custom.custom_cmds")
+require("custom.configs.debug")
