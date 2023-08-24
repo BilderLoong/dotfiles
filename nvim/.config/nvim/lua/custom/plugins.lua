@@ -386,6 +386,9 @@ local plugins = {
       "rcarriga/nvim-dap-ui",
       "theHamsta/nvim-dap-virtual-text",
     },
+    config = function (_, opts)
+      
+    end
   },
   {
     "jbyuki/one-small-step-for-vimkind",
