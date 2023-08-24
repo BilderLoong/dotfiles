@@ -46,6 +46,7 @@ M.telescope = {
 	n = vim.tbl_deep_extend("force", telescope_i_n, {
 		["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
+		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
 		["<leader>ff"] = {
 			function()
 				require("telescope").builtin.find_files({
