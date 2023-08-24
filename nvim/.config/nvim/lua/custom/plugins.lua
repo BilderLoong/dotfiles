@@ -415,7 +415,7 @@ local plugins = {
 		dependencies = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
 		config = function()
 			require("session-lens").setup({
- prompt_title = 'YEAH SESSIONS',
+       prompt_title = 'YEAH SESSIONS',
 			})
 		end,
 	},
