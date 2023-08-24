@@ -381,7 +381,7 @@ local plugins = {
   {
     'mfussenegger/nvim-dap',
 		dependencies = {
-      ''
+      'rcarriga/nvim-dap-ui'
 		},
   }
 }
