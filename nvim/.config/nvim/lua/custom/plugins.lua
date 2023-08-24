@@ -274,42 +274,42 @@ local plugins = {
 		},
 	},
 
-	{
-		"rmagatti/auto-session",
-		lazy = false,
-		cmd = {
-			"Autosession",
-			"SessionDelete",
-			"SessionRestore",
-			"SessionRestoreFromFile",
-			"SessionSave",
-		},
-		opts = {
-			log_level = vim.log.levels.ERROR,
-			-- auto_session_enable_last_session = true,
-
-			-- ⚠️ This will only work if Telescope.nvim is installed
-			-- The following are already the default values, no need to provide them if these are already the settings you want.
-			session_lens = {
-				-- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
-				load_on_setup = true,
-				theme_conf = { border = true },
-				previewer = true,
-			},
-			-- https://github.com/rmagatti/auto-session#-command-hooks
-			-- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_after_restoring_a_session/
-			pre_save_cmds = {
-        -- Doesn't support `:h lua-heredoc` here.
-				"lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
-			},
-		},
-		config = function(_, opts)
-			require("auto-session").setup(opts)
-			--[For a better experience with the plugin overall using this config for sessionoptions is recommended.](https://github.com/rmagatti/auto-session#recommended-sessionoptions-config)
-			--
-			vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-		end,
-	},
+	-- {
+	-- 	"rmagatti/auto-session",
+	-- 	lazy = false,
+	-- 	cmd = {
+	-- 		"Autosession",
+	-- 		"SessionDelete",
+	-- 		"SessionRestore",
+	-- 		"SessionRestoreFromFile",
+	-- 		"SessionSave",
+	-- 	},
+	-- 	opts = {
+	-- 		log_level = vim.log.levels.ERROR,
+	-- 		-- auto_session_enable_last_session = true,
+	--
+	-- 		-- ⚠️ This will only work if Telescope.nvim is installed
+	-- 		-- The following are already the default values, no need to provide them if these are already the settings you want.
+	-- 		session_lens = {
+	-- 			-- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
+	-- 			load_on_setup = true,
+	-- 			theme_conf = { border = true },
+	-- 			previewer = true,
+	-- 		},
+	-- 		-- https://github.com/rmagatti/auto-session#-command-hooks
+	-- 		-- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_after_restoring_a_session/
+	-- 		pre_save_cmds = {
+ --        -- Doesn't support `:h lua-heredoc` here.
+	-- 			"lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
+	-- 		},
+	-- 	},
+	-- 	config = function(_, opts)
+	-- 		require("auto-session").setup(opts)
+	-- 		--[For a better experience with the plugin overall using this config for sessionoptions is recommended.](https://github.com/rmagatti/auto-session#recommended-sessionoptions-config)
+	-- 		--
+	-- 		vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+	-- 	end,
+	-- },
 	{
 
 		"nvim-tree/nvim-tree.lua",
