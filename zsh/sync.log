@@ -7,3 +7,7 @@ fatal : Impossible de lire le dépôt distant.
 Veuillez vérifier que vous avez les droits d'accès
 et que le dépôt existe.
 
+2023/08/25 14:17:11 exit status 128: Command: git commit -m ?? Logseq/pages/S49.md
+StdOut: 
+StdErr: fatal : cannot lock ref 'HEAD': is at 3e36860cfe8c21fa09af3d4a3727a6bae6df676a but expected 7f3a88f9ef8b376961e1bda09d84bb42bdd4e402
+
