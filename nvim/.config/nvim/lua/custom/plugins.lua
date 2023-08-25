@@ -399,7 +399,6 @@ local plugins = {
 				opts = { handlers = {} },
 			},
 		},
-
 		config = function(_, opts)
 			require("custom.configs.debug").setup()
 			require("core.utils").load_mappings("debug")
