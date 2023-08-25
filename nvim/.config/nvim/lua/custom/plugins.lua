@@ -408,7 +408,7 @@ local plugins = {
 	},
 	{
 		"jbyuki/one-small-step-for-vimkind",
-		event = BufEnterLike,
+		-- event = BufEnterLike,
 		dependencies = {
 			"mfussenegger/nvim-dap",
 		},
