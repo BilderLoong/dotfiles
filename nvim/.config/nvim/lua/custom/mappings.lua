@@ -55,7 +55,7 @@ M.telescope = {
           follow = true
 				})
 			end,
-			"Telescope find files.",
+			"Fzf-lua find files.",
 		},
 	}),
 	i = vim.tbl_deep_extend("force", telescope_i_n, {}),
