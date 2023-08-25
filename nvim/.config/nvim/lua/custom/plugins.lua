@@ -1,5 +1,5 @@
 local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
-local utils = require('custom.utils')
+local utils = require("custom.utils")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -389,7 +389,7 @@ local plugins = {
 	{
 		-- https://github.com/mfussenegger/nvim-dap
 		"mfussenegger/nvim-dap",
-    keys = utils.getTableKeys(  require('custom.mappings').debug),
+		keys = utils.getTableKeys(require("custom.mappings").debug),
 		dependencies = {
 			-- UI related https://github.com/mfussenegger/nvim-dap#goals
 			"rcarriga/nvim-dap-ui",
