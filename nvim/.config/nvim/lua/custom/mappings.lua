@@ -187,6 +187,35 @@ M.debug = {
       end,
       "DAP Continue",
     },
+
+    ["<F5>"] = {
+      function()
+        require("dap").continue()
+      end,
+      "DAP Continue",
+    },
+
+    ["<F5>"] = {
+      function()
+        require("dap").continue()
+      end,
+      "DAP Continue",
+    },
+
+    ["<F5>"] = {
+      function()
+        require("dap").continue()
+      end,
+      "DAP Continue",
+    },
+
+    ["<F5>"] = {
+      function()
+        require("dap").continue()
+      end,
+      "DAP Continue",
+    },
+
   },
 }
 
