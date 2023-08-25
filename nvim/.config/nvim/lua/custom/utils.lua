@@ -1,3 +1,1 @@
-local M = {
-  
-}
+local M = { }
