@@ -7,7 +7,6 @@ function M.function getTableKeys(tab)
   end
   return keyset
 end
-()
   
 end
 
