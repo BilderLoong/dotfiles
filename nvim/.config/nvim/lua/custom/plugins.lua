@@ -392,7 +392,6 @@ local plugins = {
 			-- UI related https://github.com/mfussenegger/nvim-dap#goals
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
-      key = {},
 			{
 				"jay-babu/mason-nvim-dap.nvim",
 				dependencies = { "nvim-dap" },
