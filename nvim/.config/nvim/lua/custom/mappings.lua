@@ -51,8 +51,7 @@ M.telescope = {
 		end , "Find session history." },
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
 		["<leader>f"] = {
-			function()
-				require("telescope.builtin").find_files({
+			function() require("telescope.builtin").find_files({
           follow = true
 				})
 			end,
