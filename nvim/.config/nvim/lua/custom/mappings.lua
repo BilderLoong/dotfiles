@@ -185,17 +185,17 @@ M.debug = {
       function()
         require("dap").step_over()
       end,
-      "DAP ",
+      "DAP step over.",
     },
 
     ["<F5>"] = {
       function()
         require("dap").continue()
       end,
-      "DAP Continue",
+      "DAP continue.",
     },
 
-    ["<F5>"] = {
+    ["<F11>"] = {
       function()
         require("dap").continue()
       end,
