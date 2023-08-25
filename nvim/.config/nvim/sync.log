@@ -1,0 +1,10 @@
+2023/08/25 10:12:05 exit status 128: Command: git commit -m  M Logseq/pages/S48.2 MP release.md
+StdOut: 
+StdErr: fatal : Impossible de créer '/Users/birudo/Resilio Sync/MaxLumi/private-collection/Notes/Meituan/.git/index.lock' : File exists.
+
+Il semble qu'un autre processus git est déjà lancé dans ce dépôt,
+par exemple un éditeur ouvert par 'git commit'. Veuillez vous assurer
+que tous les processus sont terminés et réessayez. Si l'échec persiste,
+un processus git peut avoir planté :
+supprimez le fichier manuellement pour poursuivre.
+
