@@ -387,6 +387,9 @@ local plugins = {
       "nvim-tree/nvim-web-devicons", -- optional
     },
   },
+
+  {},
+
   {
     -- https://github.com/mfussenegger/nvim-dap
     "mfussenegger/nvim-dap",
@@ -409,6 +412,7 @@ local plugins = {
       require("core.utils").load_mappings "debug"
     end,
   },
+
   {
     "jbyuki/one-small-step-for-vimkind",
     -- event = BufEnterLike,
