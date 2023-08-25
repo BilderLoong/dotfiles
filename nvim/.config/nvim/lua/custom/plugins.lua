@@ -118,6 +118,7 @@ local plugins = {
         "prettier",
         "eslint_d",
 
+
         -- MP
         "yaml-language-server",
 
