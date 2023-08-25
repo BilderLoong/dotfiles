@@ -1,6 +1,6 @@
 alias emulator="cd \$ANDROID_HOME/tools && emulator"
 alias sync-config="cd \$HOME/Projects/dotfiles &&  git-auto-sync w . &"
-alias v="nvim"
+alias v="export npm_config_registry=http://registry.npmjs.org && nvim"
 alias lv="lvim"
 alias gwl="git worktree list"
 alias cd='z'
