@@ -396,7 +396,7 @@ local plugins = {
     opts = 
     config = function (_, opts)
       
-      adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' },
+
     end
   },
 
