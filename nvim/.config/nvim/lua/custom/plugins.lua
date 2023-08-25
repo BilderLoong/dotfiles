@@ -393,15 +393,14 @@ local plugins = {
     "mxsdev/nvim-dap-vscode-js",
     ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
     dependencies = { "mfussenegger/nvim-dap" },
-    opts = function ()
-    return {
-      adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' }
-    }  
+    opts = function()
+      return {
+        adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
+      }
     end,
-    config = function (_, opts)
-     require("dap-vscode-js").setup(opts) 
-
-    end
+    config = function(_, opts)
+      require("dap-vscode-js").setup(opts)
+    end,
   },
 
   {
