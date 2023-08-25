@@ -117,7 +117,7 @@ local plugins = {
         "prettierd",
         "prettier",
         "eslint_d",
-
+        "js-debug-adapter",
 
         -- MP
         "yaml-language-server",
