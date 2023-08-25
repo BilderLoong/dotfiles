@@ -213,7 +213,7 @@ M.debug = {
       function()
         require("dap").continue()
       end,
-      "DAP Continue",
+      "DAP Continue.",
     },
 
   },
