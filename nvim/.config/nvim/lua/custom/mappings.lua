@@ -202,7 +202,7 @@ M.debug = {
       "DAP step into",
     },
 
-    ["<F5>"] = {
+    ["<S-F11>"] = {
       function()
         require("dap").continue()
       end,
