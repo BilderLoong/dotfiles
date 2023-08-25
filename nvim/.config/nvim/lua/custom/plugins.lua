@@ -404,7 +404,7 @@ local plugins = {
 		config = function(_, opts)
 			require("custom.configs.debug").setup()
 			require("core.utils").load_mappings("debug")
-vim.print(utils.getTableKeys(require("custom.mappings").debug.n),
+vim.print(utils.getTableKeys(require("custom.mappings").debug.n))
 		end,
 	},
 	{
