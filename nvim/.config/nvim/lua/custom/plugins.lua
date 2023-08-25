@@ -388,7 +388,7 @@ local plugins = {
 	{
 		-- https://github.com/mfussenegger/nvim-dap
 		"mfussenegger/nvim-dap",
-    keys = requ require('custom.mappings').debug,
+    keys =  require('custom.mappings').debug,
 		dependencies = {
 			-- UI related https://github.com/mfussenegger/nvim-dap#goals
 			"rcarriga/nvim-dap-ui",
