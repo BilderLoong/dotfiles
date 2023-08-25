@@ -395,7 +395,7 @@ local plugins = {
     dependencies = { "mfussenegger/nvim-dap" },
     opts = function ()
     return {
-      
+      adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' }
     }  
     end,
     config = function (_, opts)
