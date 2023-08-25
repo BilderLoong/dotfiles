@@ -1,4 +1,5 @@
 local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
+local utils = require()
 
 ---@type NvPluginSpec[]
 local plugins = {
