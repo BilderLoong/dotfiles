@@ -181,7 +181,7 @@ M.debug = {
       "Toggle breakpoint.",
     },
 
-    ["<F5>"] = {
+    ["<F10>"] = {
       function()
         require("dap").continue()
       end,
