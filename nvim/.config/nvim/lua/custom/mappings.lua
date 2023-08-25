@@ -204,7 +204,7 @@ M.debug = {
 
     ["<S-F11>"] = {
       function()
-        require("dap").step_()
+        require("dap").step_out()
       end,
       "DAP Continue",
     },
