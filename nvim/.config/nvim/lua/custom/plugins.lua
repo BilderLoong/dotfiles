@@ -390,6 +390,7 @@ local plugins = {
 
   {
 'mxsdev/nvim-dap-vscode-js',
+ ft = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
   },
 
   {
