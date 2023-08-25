@@ -299,7 +299,7 @@ local plugins = {
 	-- 		-- https://github.com/rmagatti/auto-session#-command-hooks
 	-- 		-- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_after_restoring_a_session/
 	-- 		pre_save_cmds = {
- --        -- Doesn't support `:h lua-heredoc` here.
+	--        -- Doesn't support `:h lua-heredoc` here.
 	-- 			"lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
 	-- 		},
 	-- 	},
@@ -400,7 +400,8 @@ local plugins = {
 			},
 		},
 		config = function(_, opts)
-			require("custom.configs.debug")
+			require("custom.configs.debug").setup()
+			require("core.utils").load_mappings("debug")
 		end,
 	},
 	{

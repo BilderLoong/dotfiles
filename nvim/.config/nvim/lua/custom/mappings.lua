@@ -165,4 +165,17 @@ M.gitsigns = {
 	},
 }
 
+M.debug = {
+	plugin = true, -- Important
+
+	n = {
+		["<F9>"] = {
+			function()
+        require('dap').toggle_breakpoint()
+			end,
+			"Toggle breakpoint.",
+		},
+	},
+}
+
 return M
