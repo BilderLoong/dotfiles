@@ -188,12 +188,12 @@ M.debug = {
       "DAP step over.",
     },
 
-    ["<F5>"] = {
-      function()
-        require("dap").continue()
-      end,
-      "DAP continue.",
-    },
+    -- ["<F5>"] = {
+    --   function()
+    --     require("dap").continue()
+    --   end,
+    --   "DAP continue.",
+    -- },
 
     ["<F11>"] = {
       function()
