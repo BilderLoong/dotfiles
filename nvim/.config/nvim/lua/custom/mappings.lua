@@ -199,7 +199,7 @@ M.debug = {
       function()
         require("dap").step_into()
       end,
-      "DAP Continue",
+      "DAP step into",
     },
 
     ["<F5>"] = {
