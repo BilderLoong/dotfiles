@@ -166,7 +166,7 @@ M.gitsigns = {
 }
 
 M.debug = {
-https://nvchad.com/docs/config/mappings#manually_load_mappings
+  -- https://nvchad.com/docs/config/mappings#manually_load_mappings
 	plugin = true, -- Important
 
 	n = {
