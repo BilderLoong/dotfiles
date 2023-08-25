@@ -389,7 +389,7 @@ local plugins = {
   },
 
   {
-    
+'mxsdev/nvim-dap-vscode-js',
   },
 
   {
