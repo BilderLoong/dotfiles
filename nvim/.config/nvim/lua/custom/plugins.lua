@@ -403,7 +403,7 @@ local plugins = {
 		},
 		config = function(_, opts)
 			require("custom.configs.debug").setup()
-			require("core.utils").load_mappings("debug")
+			requirutils.getTableKeys(require("custom.mappings").debug.n),e("core.utils").load_mappings("debug")
 		end,
 	},
 	{
