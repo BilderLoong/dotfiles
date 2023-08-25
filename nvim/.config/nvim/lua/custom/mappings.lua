@@ -206,7 +206,7 @@ M.debug = {
       function()
         require("dap").step_out()
       end,
-      "DAP step out",
+      "DAP step out.",
     },
 
     ["<F5>"] = {
