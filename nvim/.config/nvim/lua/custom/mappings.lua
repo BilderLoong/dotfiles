@@ -50,7 +50,7 @@ M.telescope = {
 		  require("auto-session.session-lens").search_session()
 		end , "Find session history." },
 		["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
-		["<leader>ff"] = {
+		["<leader>f"] = {
 			function()
 				require("telescope.builtin").find_files({
           follow = true
@@ -94,7 +94,7 @@ M.lspconfig = {
 			"LSPsaga code action.",
 		},
 		-- https://nvimdev.github.io/lspsaga/diagnostic/
-		["<leader>f"] = {
+		["<leader>d"] = {
 			"<cmd> Lspsaga diagnostic_jump_next <CR>",
 			"Show the diagnostic in a nice float.",
 		},
