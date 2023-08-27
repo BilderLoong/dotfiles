@@ -5,7 +5,7 @@ local utils = require "custom.utils"
 local plugins = {
   {
     "unblevable/quick-scope",
-    event = BufEnterLike,
+    event = "BufReadPost",
     config = function()
       vim.cmd [[
 			  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
