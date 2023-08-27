@@ -41,5 +41,10 @@ vim.cmd([[ set nofoldenable ]])
 -- 	})
 -- end
 
+local function reload_theme(name)
+  vim.g.nvchad_theme = name
+  require("base46").load_all_highlights()
+  vim.api.nvim_exec_autocmds("User", { pattern = "NvChadThemeReload" })
+end
 require("custom.autocmds")
 require("custom.custom_cmds")
