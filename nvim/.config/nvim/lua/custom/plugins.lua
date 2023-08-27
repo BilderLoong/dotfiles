@@ -447,6 +447,8 @@ local plugins = {
 
   {
 
+    "LunarVim/bigfile.nvim",
+    
   }
 }
 
