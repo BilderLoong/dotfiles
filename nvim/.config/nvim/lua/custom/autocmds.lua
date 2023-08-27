@@ -11,7 +11,7 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 	end,
 })
 
-function disableAS()
+function disable_auto_save()
 	local cwd = vim.loop.cmd()
 	local config_dir = vim.fn.stdpath("config")
 
@@ -21,12 +21,12 @@ function disableAS()
 end
 
 if vim.g.vim_did_enter then
-	disableAS()
+	disable_auto_save()
 else
 	api.nvim_create_autocmd({
 		"Dirchanged",
 		"VimEnter",
 	}, {
-		callback = disableAS,
+		callback = disable_auto_save,
 	})
 end
