@@ -1,28 +1,25 @@
 -- Auto save all buffer when buffer losing focus.
 local api = vim.api
 api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
-	pattern = "*",
-	callback = function(ctx)
-		api.nvim_command("silent! wall")
+  pattern = "*",
+  callback = function(ctx)
+    api.nvim_command "silent! wall"
 
-		if vim.log.levels.TRACE then
-			-- vim.print("Save all buffers on blur.")
-		end
-	end,
+    if vim.log.levels.TRACE then
+      -- vim.print("Save all buffers on blur.")
+    end
+  end,
 })
 
 function disable_auto_save()
-	local cwd = vim.loop.cwd()
-  local buf_name = vim.api.nvim_buf_get_name(0)
-	local config_dir = vim.fn.stdpath("config")
-
-	if cwd == config_dir then
-		vim.g.auto_save = 0
-	end
+  local cur_buf_name = vim.api.nvim_buf_get_name(0)
+  local config_dir = vim.fn.stdpath "config"
+  vim.g.auto_save = 0
+  
 end
 
-	api.nvim_create_autocmd({
-		"BufEnter",
-	}, {
-		callback = disable_auto_save,
-	})
+api.nvim_create_autocmd({
+  "BufEnter",
+}, {
+  callback = disable_auto_save,
+})
