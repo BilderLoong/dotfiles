@@ -19,6 +19,7 @@ function disable_auto_save()
   if not utils.isParentPath(config_dir, cur_buf_name) then
     return
   end
+
   print "disable_auto_save"
   vim.g.auto_save = 0
 end
