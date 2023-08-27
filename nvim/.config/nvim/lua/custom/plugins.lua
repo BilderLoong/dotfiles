@@ -401,6 +401,7 @@ local plugins = {
     end,
     config = function(_, opts)
       require("dap-vscode-js").setup(opts)
+      
     end,
   },
 
