@@ -401,19 +401,7 @@ local plugins = {
     end,
     config = function(_, opts)
       require("dap-vscode-js").setup(opts)
-      for _, language in ipairs { "typescript", "javascript", "svelte" } do
-        require("dap").configurations[language] = {
-          {
-            -- use nvim-dap-vscode-js's pwa-node debug adapter
-            type = "pwa-node",
-            -- launch a new process to attach the debugger to
-            request = "launch",
-            -- name of the debug action you have to select for this config
-            name = "Launch current file in new node process",
-            program = "${file}",
-          },
-        }
-      end
+      
     end,
   },
 
