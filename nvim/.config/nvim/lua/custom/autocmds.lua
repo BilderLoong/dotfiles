@@ -16,7 +16,7 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 function disable_auto_save()
   local cur_buf_name = vim.api.nvim_buf_get_name(0)
   local config_dir = vim.fn.stdpath "config"
-  if utils.isParentPath()
+  if utils.isParentPath(config_dir,)
   vim.g.auto_save = 0
 
   print('disable_auto_save')
