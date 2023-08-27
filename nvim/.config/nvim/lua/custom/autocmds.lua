@@ -20,7 +20,7 @@ function disable_auto_save()
     return
   end
 
-  vim.g.auto_save = 0
+  vim.b.auto_save = 0
 end
 
 api.nvim_create_autocmd({
