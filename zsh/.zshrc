@@ -65,3 +65,5 @@ export PATH=$PATH:$GOPATH/bin
 
 
 # zprof
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
