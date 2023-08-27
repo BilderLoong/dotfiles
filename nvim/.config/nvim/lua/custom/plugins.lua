@@ -17,6 +17,7 @@ local plugins = {
   {
     "ggandor/lightspeed.nvim",
     event = BufEnterLike,
+
   },
 
   {
