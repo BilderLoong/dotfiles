@@ -15,6 +15,7 @@ function disable_auto_save()
 	local cwd = vim.loop.cwd()
 	local config_dir = vim.fn.stdpath("config")
 
+          local file_contents = vim.fn.readfile(vim.api.nvim_buf_get_name(bufnr))
 	if cwd == config_dir then
 		vim.g.auto_save = 0
 	end
