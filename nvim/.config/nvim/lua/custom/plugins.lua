@@ -409,7 +409,7 @@ local plugins = {
 						-- launch a new process to attach the debugger to
 						request = "launch",
 						-- name of the debug action you have to select for this config
-						name = "Launch current file in new node process" .. "(" .. language..")"),
+						name = "Launch current file in new node process(" .. language..")"),
 						program = "${file}",
 					},
 				}
