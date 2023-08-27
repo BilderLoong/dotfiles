@@ -401,7 +401,10 @@ local plugins = {
     end,
     config = function(_, opts)
       require("dap-vscode-js").setup(opts)
-
+      for _, language in ipairs { "typescript", "javascript", "svelte" } do
+        require("dap").configurations[language] = {
+        }
+      end
     end,
   },
 
