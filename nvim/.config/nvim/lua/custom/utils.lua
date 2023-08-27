@@ -36,5 +36,10 @@ function M.isParentPath(parentPath, childPath)
   return true -- Parent path is the parent of the child path
 end
 
+local function reload_theme(name)
+  vim.g.nvchad_theme = name
+  require("base46").load_all_highlights()
+  vim.api.nvim_exec_autocmds("User", { pattern = "NvChadThemeReload" })
+end
 
 return M
