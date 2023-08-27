@@ -1,4 +1,4 @@
-local utils = require()
+local utils = require('lsp.util')
 
 -- Auto save all buffer when buffer losing focus.
 local api = vim.api
