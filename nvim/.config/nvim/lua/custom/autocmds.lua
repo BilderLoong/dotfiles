@@ -1,4 +1,3 @@
-local utils = require('lua.core.utils')
 local utils = require "custom.utils"
 
 -- Auto save all buffer when buffer losing focus.
