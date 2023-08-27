@@ -132,7 +132,7 @@ local plugins = {
         "gospel",
 
         -- Python
-        "ruff",  -- linter
+        "ruff", -- linter
         "black", -- formater
 
         -- Misc
@@ -154,9 +154,9 @@ local plugins = {
     event = BufEnterLike,
     config = function()
       require("treesitter-context").setup {
-        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = {
           -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
@@ -225,7 +225,7 @@ local plugins = {
         -- stylua: ignore end
         word_diff = false,
         current_line_blame = true,
-        numhl = true,   -- Toggle with `:Gitsigns toggle_numhl`
+        numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
       }
 
@@ -380,15 +380,11 @@ local plugins = {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-      require("lspsaga").setup {
-        symbol_in_winbar = {
-          enable = false
-        }
-      }
+      require("lspsaga").setup {}
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons",     -- optional
+      "nvim-tree/nvim-web-devicons", -- optional
     },
   },
 
@@ -474,9 +470,7 @@ local plugins = {
           -- if file_length == 1 then
           --   return true
           -- end
-        end
-
-
+        end,
       }
     end,
   },
