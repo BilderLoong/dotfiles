@@ -12,7 +12,7 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 })
 
 if vim.g.vim_did_enter then 
-  vim.g.au
+  vim.g.auto_save = 0
 
 api.nvim_create_autocmd({"Dirchanged","VimEnter"},{
 
