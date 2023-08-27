@@ -12,7 +12,7 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 })
 
 function disable_auto_save()
-	local cwd = vim.loop.cmd()
+	local cwd = vim.loop.cwd()
 	local config_dir = vim.fn.stdpath("config")
 
 	if cwd == config_dir then
