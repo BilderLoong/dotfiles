@@ -23,5 +23,8 @@ end
 if vim.g.vim_did_enter then
   disableAS()
 else
-	api.nvim_create_autocmd({ "Dirchanged", "VimEnter" }, {})
+	api.nvim_create_autocmd({
+    "Dirchanged", "VimEnter" }, {
+      callback = disableAS()
+    })
 end
