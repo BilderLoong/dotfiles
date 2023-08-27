@@ -53,7 +53,7 @@ M.telescope = {
       "Find session history.",
     },
     ["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
-    ["<leader>f"] = {
+    ["<leader>ff"] = {
       function()
         require("fzf-lua").files {
           follow = true,
