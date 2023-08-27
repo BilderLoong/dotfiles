@@ -20,13 +20,8 @@ function disable_auto_save()
 	end
 end
 
-if vim.g.vim_did_enter then
-	disable_auto_save()
-else
 	api.nvim_create_autocmd({
-		"Dirchanged",
-		"VimEnter",
+		"BufEnter",
 	}, {
 		callback = disable_auto_save,
 	})
-end
