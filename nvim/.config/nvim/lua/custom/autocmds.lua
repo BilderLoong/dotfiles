@@ -11,13 +11,12 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 	end,
 })
 
-
 function disableAS()
-  vim.fn.stdpath('config')  
+	vim.fn.stdpath("config")
 end
 
-if vim.g.vim_did_enter then 
-  vim.g.auto_save = 0
-api.nvim_create_autocmd({"Dirchanged","VimEnter"},{
-
-})
+if vim.g.vim_did_enter then
+	vim.g.auto_save = 0
+else
+	api.nvim_create_autocmd({ "Dirchanged", "VimEnter" }, {})
+end
