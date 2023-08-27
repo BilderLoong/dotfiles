@@ -132,7 +132,7 @@ local plugins = {
         "gospel",
 
         -- Python
-        "ruff", -- linter
+        "ruff",  -- linter
         "black", -- formater
 
         -- Misc
@@ -154,9 +154,9 @@ local plugins = {
     event = BufEnterLike,
     config = function()
       require("treesitter-context").setup {
-        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = {
           -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
@@ -225,7 +225,7 @@ local plugins = {
         -- stylua: ignore end
         word_diff = false,
         current_line_blame = true,
-        numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+        numhl = true,   -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
       }
 
@@ -384,7 +384,7 @@ local plugins = {
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons", -- optional
+      "nvim-tree/nvim-web-devicons",     -- optional
     },
   },
 
@@ -449,27 +449,31 @@ local plugins = {
     "LunarVim/bigfile.nvim",
     cmd = "BufReadPre",
     opts = function(_, opts)
-      pattern = function(bufnr, filesize_mib)
-        -- you can't use `nvim_buf_line_count` because this runs on BufReadPre
-        -- local file_contents = vim.fn.readfile(vim.api.nvim_buf_get_name(bufnr))
-        -- local file_length = #file_contents
-        -- local filetype = vim.filetype.match { buf = bufnr }
-        -- if file_length == 1 then
-        --   return true
-        -- end
+      return {
+        pattern = function(bufnr, filesize_mib)
+          local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
 
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
+          if not ok or not stats then
+            return true
+          end
 
-        if not ok or not stats then
-          return true
+          local buf_size = stats.size
+          -- Disable oneline file that lager than 100KB.
+          local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
+
+          return is_big_oneliner or buf_size > 2000 * 1024
+
+          -- you can't use `nvim_buf_line_count` because this runs on BufReadPre
+          -- local file_contents = vim.fn.readfile(vim.api.nvim_buf_get_name(bufnr))
+          -- local file_length = #file_contents
+          -- local filetype = vim.filetype.match { buf = bufnr }
+          -- if file_length == 1 then
+          --   return true
+          -- end
         end
 
-        local buf_size = stats.size
-        -- Disable oneline file that lager than 100KB.
-        local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
 
-        return is_big_oneliner or buf_size > 2000 * 1024
-      end
+      }
     end,
   },
 }
