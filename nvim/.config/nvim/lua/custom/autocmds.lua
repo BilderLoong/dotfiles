@@ -20,7 +20,6 @@ function disable_auto_save()
     return
   end
 
-  print "disable_auto_save"
   vim.g.auto_save = 0
 end
 
