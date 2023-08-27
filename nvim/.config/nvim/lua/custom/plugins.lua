@@ -449,7 +449,9 @@ local plugins = {
     "LunarVim/bigfile.nvim",
    cmd = "BufReadPre",
    opts = function (_, opts)
-      
+      pattern = function ()
+        
+      end
     
    end
   }
