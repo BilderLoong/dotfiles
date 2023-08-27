@@ -11,4 +11,6 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 	end,
 })
 
-api.nvim_create_autocmd({""})
+api.nvim_create_autocmd({"Dirchanged"},{
+
+})
