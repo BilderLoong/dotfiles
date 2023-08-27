@@ -447,7 +447,8 @@ local plugins = {
 
   {
     "LunarVim/bigfile.nvim",
-   "*BufReadPre" 
+   cmd = "BufReadPre",
+
   }
 }
 
