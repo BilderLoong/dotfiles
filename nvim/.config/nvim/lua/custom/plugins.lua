@@ -451,12 +451,23 @@ local plugins = {
     opts = function(_, opts)
       pattern = function(bufnr, filesize_mib)
         -- you can't use `nvim_buf_line_count` because this runs on BufReadPre
-        local file_contents = vim.fn.readfile(vim.api.nvim_buf_get_name(bufnr))
-        local file_length = #file_contents
-        local filetype = vim.filetype.match { buf = bufnr }
-        if file_length == 1 and  then
+        -- local file_contents = vim.fn.readfile(vim.api.nvim_buf_get_name(bufnr))
+        -- local file_length = #file_contents
+        -- local filetype = vim.filetype.match { buf = bufnr }
+        -- if file_length == 1 then
+        --   return true
+        -- end
+
+        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
+
+        if not ok or not stats then
           return true
         end
+
+        local buf_size = stats.size
+        -- Disable big oneline file.
+        local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
+        return is_big_oneliner or buf_size > 1000 * 1024
       end
     end,
   },
