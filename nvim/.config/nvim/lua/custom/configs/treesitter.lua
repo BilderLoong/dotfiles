@@ -5,19 +5,19 @@ local options = {
 		--- @param lang string
 		--- @param bufnr number
 		--- @return boolean
-		disable = function(lang, bufnr)
-			-- :h uv.fs_stat()
-			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
-
-			if not ok or not stats then
-				return true
-			end
-
-			local buf_size = stats.size
-			-- Disable big oneline file.
-			local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
-			return is_big_oneliner or buf_size > 1000 * 1024 -- 1MB
-		end,
+		-- disable = function(lang, bufnr)
+		-- 	-- :h uv.fs_stat()
+		-- 	local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(bufnr))
+		--
+		-- 	if not ok or not stats then
+		-- 		return true
+		-- 	end
+		--
+		-- 	local buf_size = stats.size
+		-- 	-- Disable big oneline file.
+		-- 	local is_big_oneliner = vim.api.nvim_buf_line_count(bufnr) == 1 and buf_size > 100 * 1024
+		-- 	return is_big_oneliner or buf_size > 1000 * 1024 -- 1MB
+		-- end,
 
 		enable = true,
 		additional_vim_regex_highlighting = false,
