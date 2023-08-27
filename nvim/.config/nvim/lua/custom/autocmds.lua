@@ -1,4 +1,4 @@
-local utils = require('custom.utils')
+local utils = require('lua.core.utils')
 
 -- Auto save all buffer when buffer losing focus.
 local api = vim.api
