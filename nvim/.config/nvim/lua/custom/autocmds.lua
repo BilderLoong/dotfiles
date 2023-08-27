@@ -20,6 +20,7 @@ function disable_auto_save()
     return
   end
 
+-- https://github.com/907th/vim-auto-save#enable-on-startup
   vim.b.auto_save = 0
 end
 
