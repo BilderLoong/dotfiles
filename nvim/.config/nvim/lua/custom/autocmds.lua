@@ -13,7 +13,7 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 
 
 function disableAS()
-   
+  vim.  
 end
 
 if vim.g.vim_did_enter then 
