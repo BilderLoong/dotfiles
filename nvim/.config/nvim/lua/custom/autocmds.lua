@@ -11,6 +11,9 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 	end,
 })
 
-api.nvim_create_autocmd({"Dirchanged"},{
+if vim.g.vim_did_enter then 
+
+
+api.nvim_create_autocmd({"Dirchanged","VimEnter"},{
 
 })
