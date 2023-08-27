@@ -44,3 +44,4 @@ vim.cmd([[ set nofoldenable ]])
 require("custom.autocmds")
 require("custom.custom_cmds")
 local results = require("nvchad.utils").list_themes()
+rel
