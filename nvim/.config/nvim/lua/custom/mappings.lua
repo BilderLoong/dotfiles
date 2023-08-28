@@ -41,6 +41,14 @@ local telescope_i_n = {
     end,
     "Fzf lua help tags.",
   },
+  ["<C-P>"] = {
+    function()
+      require("fzf-lua").files {
+        follow = true,
+      }
+    end,
+    "Fzf-lua find files.",
+  },
 }
 
 M.telescope = {
@@ -53,14 +61,6 @@ M.telescope = {
       "Find session history.",
     },
     ["<leader>sg"] = { "<cmd> Telescope ast_grep  <CR>", "AST Grep!" },
-    ["<C-P>"] = {
-      function()
-        require("fzf-lua").files {
-          follow = true,
-        }
-      end,
-      "Fzf-lua find files.",
-    },
   }),
   i = vim.tbl_deep_extend("force", telescope_i_n, {}),
 }
@@ -215,7 +215,6 @@ M.debug = {
       end,
       "DAP Continue.",
     },
-
   },
 }
 
