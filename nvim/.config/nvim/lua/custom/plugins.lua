@@ -46,7 +46,7 @@ local plugins = {
 
   {
     "mfussenegger/nvim-treehopper",
-    event = BufEnterLike,
+    event = "BufReadPost",
     dependencies = "nvim-treesitter/nvim-treesitter",
   },
 
