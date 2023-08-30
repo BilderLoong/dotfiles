@@ -48,10 +48,9 @@ local plugins = {
     "mfussenegger/nvim-treehopper",
     event = "BufReadPost",
     dependencies = "nvim-treesitter/nvim-treesitter",
-    config = function (_, opts)
-            require("core.utils").load_mappings ""
-
-    end
+    config = function(_, opts)
+      require("core.utils").load_mappings "nvim_treehopper"
+    end,
   },
 
   {
