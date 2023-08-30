@@ -46,9 +46,8 @@ local plugins = {
 
   {
     "mfussenegger/nvim-treehopper",
-    event = "BufReadPost",
     dependencies = "nvim-treesitter/nvim-treesitter",
-    keys = {'vm','ym','dm','cm'},
+    keys = { "vm", "ym", "dm", "cm" },
     config = function(_, opts)
       require("core.utils").load_mappings "nvim_treehopper"
     end,
