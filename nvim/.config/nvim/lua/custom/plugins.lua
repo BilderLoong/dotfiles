@@ -49,7 +49,8 @@ local plugins = {
     event = "BufReadPost",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function (_, opts)
-      -- require('custom.mappings').debug.n
+            require("core.utils").load_mappings ""
+
     end
   },
 
