@@ -218,7 +218,9 @@ M.debug = {
   },
 }
 
-M.
+M.nvim_treehopper{
+
+}
 
 
 return M
