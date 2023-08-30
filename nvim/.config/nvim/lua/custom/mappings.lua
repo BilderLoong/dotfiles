@@ -222,13 +222,17 @@ M.nvim_treehopper = {
   plugin = true,
 
   o = {
-    ":<C-U>lua require('tsht').nodes()<CR>",
-    "Treehopper select node.",
+    ["m"] = {
+      ":<C-U>lua require('tsht').nodes()<CR>",
+      "Treehopper select node.",
+    },
   },
 
   x = {
-    ":lua require('tsht').nodes()<CR>",
-    "Treehopper select node.",
+    ["m"] = {
+      ":lua require('tsht').nodes()<CR>",
+      "Treehopper select node.",
+    },
   },
 }
 
