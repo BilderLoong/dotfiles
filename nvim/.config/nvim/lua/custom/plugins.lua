@@ -70,7 +70,9 @@ local plugins = {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		dependencies = {},
+		dependencies = {
+      
+    },
 		opts = function()
 			return require("custom.configs.treesitter")
 		end,
