@@ -218,7 +218,7 @@ M.debug = {
   },
 }
 
-M.nvim_treehopper {
+M.nvim_treehopper = {
   plugin = true,
 
   o = {
