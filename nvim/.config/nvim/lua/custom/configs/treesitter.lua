@@ -83,7 +83,8 @@ local options = {
 	},
 
 	context_commentstring = {
-		enable = true,
+    enable = true,
+    enable_autocmd = false,
 	},
 
 	incremental_selection = {
