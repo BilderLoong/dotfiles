@@ -62,4 +62,5 @@ cask 'webstorm'
 cask 'sourcetree'
 cask 'obsidian'
 cask 'mp3gain-express'
+cask 'vlc'
 
