@@ -82,6 +82,7 @@ local options = {
 		},
 	},
 
+  -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring/wiki/Integrations#plugins-with-a-pre-comment-hook
 	context_commentstring = {
     enable = true,
     enable_autocmd = false,
