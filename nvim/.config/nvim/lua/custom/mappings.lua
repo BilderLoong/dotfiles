@@ -220,9 +220,7 @@ M.debug = {
 
 M.nvim_treehopper{
   o = {
-    [ 'm' ] = function ()
-      
-    end
+    ""
   }
 }
 
