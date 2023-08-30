@@ -219,6 +219,7 @@ M.debug = {
 }
 
 M.nvim_treehopper {
+  plugin = true,
   o = {
     ":<C-U>lua require('tsht').nodes()<CR>",
     "Treehopper select node.",
