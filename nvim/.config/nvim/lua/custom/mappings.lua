@@ -218,16 +218,16 @@ M.debug = {
   },
 }
 
-M.nvim_treehopper{
+M.nvim_treehopper {
   o = {
     ":<C-U>lua require('tsht').nodes()<CR>",
-    ""
-  }
+    "Treehopper select node.",
+  },
 
   x = {
-
-  }
+    ":lua require('tsht').nodes()<CR>",
+    "Treehopper select node.",
+  },
 }
-
 
 return M
