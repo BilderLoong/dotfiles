@@ -1,0 +1,8 @@
+2023/09/01 13:40:05 exit status 128: Command: git fetch origin
+StdOut: 
+StdErr: ssh_dispatch_run_fatal: Connection to 20.205.243.166 port 22: Operation timed out
+fatal : Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+
