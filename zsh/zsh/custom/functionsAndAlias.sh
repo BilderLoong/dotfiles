@@ -42,6 +42,7 @@ clone_my_repo() {
 	git clone "git@github.com:BilderLoong/${repo_name}.git" "$dist_path"
 }
 
+# Make it easy to operate clipboard in macOS.
 alias pbc='pbcopy'
 alias pbp='pbpaste'
 
