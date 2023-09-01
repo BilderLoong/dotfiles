@@ -65,6 +65,17 @@ M.telescope = {
   i = vim.tbl_deep_extend("force", telescope_i_n, {}),
 }
 
+M.fzf_lua = {
+  n = {
+    ["<leader>rr"] = {
+      function()
+        require("fzf-lua").resume()
+      end,
+      "Resume last fzf-lua search.",
+    },
+  },
+}
+
 M.lspconfig = {
   n = {
     ["gd"] = {
