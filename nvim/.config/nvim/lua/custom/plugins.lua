@@ -418,6 +418,7 @@ local plugins = {
     end,
     config = function(_, opts)
       vim.print(opts)
+
       require("dap-vscode-js").setup(opts)
       for _, language in ipairs { "typescript", "javascript" } do
         require("dap").configurations[language] = {
