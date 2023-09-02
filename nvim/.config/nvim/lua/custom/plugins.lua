@@ -152,6 +152,9 @@ local plugins = {
         "ruff", -- linter
         "black", -- formater
 
+        -- Haskell
+        
+
         -- Misc
         "cspell",
       },
