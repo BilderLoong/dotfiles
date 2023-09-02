@@ -519,6 +519,7 @@ local plugins = {
 		dependencies = { "neovim/nvim-lspconfig" },
 	},
 
+	-- https://github.com/mrcjkb/haskell-tools.nvim
 	{
 		"mrcjkb/haskell-tools.nvim",
 		dependencies = {
