@@ -155,6 +155,7 @@ local plugins = {
 				-- Haskell
 				"haskell-debug-adapter",
 				"haskell-language-server",
+        "fourmolu",
 
 				-- Misc
 				"cspell",
