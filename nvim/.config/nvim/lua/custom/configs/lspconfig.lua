@@ -6,7 +6,7 @@ local capabilities = configs.capabilities
 local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls", "hls" }
 
 configs.hls = {
-
+	filetypes = { "haskell", "lhaskell", "cabal" },
 }
 
 -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
