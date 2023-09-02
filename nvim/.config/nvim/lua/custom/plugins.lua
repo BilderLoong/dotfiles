@@ -420,6 +420,7 @@ local plugins = {
       vim.print(opts)
       require("dap-vscode-js").setup(opts)
       for _, language in ipairs { "typescript", "javascript" } do
+        print()
         require("dap").configurations[language] = {
           {
             -- use nvim-dap-vscode-js's pwa-node debug adapter
