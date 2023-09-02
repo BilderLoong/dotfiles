@@ -191,6 +191,12 @@ M.debug = {
       end,
       "Toggle breakpoint.",
     },
+    ["<S-F9>"] = {
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      "Toggle breakpoint.",
+    },
 
     ["<F10>"] = {
       function()
