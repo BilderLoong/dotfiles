@@ -3,12 +3,12 @@ local lspconfig = require("lspconfig")
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
-local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls", "hls" }
+local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
 
-configs.hls = {
-	filetypes = { "haskell", "lhaskell", "cabal" },
-}
-
+-- configs.hls = {
+-- 	filetypes = { "haskell", "lhaskell", "cabal" },
+-- }
+--
 -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
 configs.ast_grep = {
 	default_config = {
