@@ -98,7 +98,7 @@ M.lspconfig = {
       "<cmd> Lspsaga outline <CR>",
       "Open symbols outline.",
     },
-    ["gA"] = {
+    ["ga"] = {
       "<cmd> Lspsaga finder <CR>",
       "Show LSP methods search result.",
     },

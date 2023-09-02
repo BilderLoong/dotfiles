@@ -135,6 +135,7 @@ local plugins = {
         "eslint_d",
         "js-debug-adapter",
         "json-lsp",
+   "css-lsp",
 
         -- MP
         "yaml-language-server",
