@@ -15,7 +15,6 @@ configs.ast_grep = {
   },
 }
 -- https://github.com/b0o/SchemaStore.nvim#usage
---
 configs.jsonls =  {
   settings = {
     json = {
