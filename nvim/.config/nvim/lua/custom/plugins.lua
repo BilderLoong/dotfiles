@@ -404,7 +404,6 @@ local plugins = {
       "nvim-tree/nvim-web-devicons", -- optional
     },
   },
-  vim
 
   -- Example: https://github.com/akinsho/dotfiles/blob/d061b48766de8da969dfcb178ff32324f76aed6f/.config/nvim/lua/as/plugins/debugger.lua#L96
   {
@@ -516,5 +515,6 @@ local plugins = {
     dependencies = { "neovim/nvim-lspconfig" },
   },
 }
+vim.print('123123')
 
 return plugins
