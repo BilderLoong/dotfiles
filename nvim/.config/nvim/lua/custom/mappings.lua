@@ -193,7 +193,7 @@ M.debug = {
     },
     ["<S-F9>"] = {
       function()
-        require("dap").toggle_breakpoint()
+        require("dap").set_breakpoint(vim.fn.input "Breakpoint condition: ")
       end,
       "Toggle breakpoint.",
     },
