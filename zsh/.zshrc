@@ -67,3 +67,5 @@ export PATH=$PATH:$GOPATH/bin
 # zprof
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f "/home/birudo/.ghcup/env" ] && source "/home/birudo/.ghcup/env" # ghcup-env
