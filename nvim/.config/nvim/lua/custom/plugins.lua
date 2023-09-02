@@ -412,13 +412,12 @@ local plugins = {
     dependencies = { "mfussenegger/nvim-dap" },
     opts = function()
       return {
-        -- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
+        debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
         adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
       }
     end,
     config = function(_, opts)
       vim.print(opts)
-
       require("dap-vscode-js").setup(opts)
       for _, language in ipairs { "typescript", "javascript" } do
         require("dap").configurations[language] = {
