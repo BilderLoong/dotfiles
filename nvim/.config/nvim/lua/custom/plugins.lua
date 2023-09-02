@@ -411,6 +411,7 @@ local plugins = {
     ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
     dependencies = { "mfussenegger/nvim-dap" },
     opts = function()
+      print('lua')
       vim.print('123')
       return {
         debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
@@ -515,6 +516,5 @@ local plugins = {
     dependencies = { "neovim/nvim-lspconfig" },
   },
 }
-vim.print('123123')
 
 return plugins
