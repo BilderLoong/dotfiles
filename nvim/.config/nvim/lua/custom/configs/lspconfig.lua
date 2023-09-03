@@ -5,6 +5,8 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 -- UFO: https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
+--
+--
 capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true,
