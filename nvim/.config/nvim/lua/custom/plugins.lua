@@ -569,7 +569,7 @@ local plugins = {
       end
 
       require("ufo").setup(opts)
-      -- require("ufo").setup()
+      require("ufo").setup()
 
       -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
       vim.o.foldcolumn = "1" -- '0' is not bad
