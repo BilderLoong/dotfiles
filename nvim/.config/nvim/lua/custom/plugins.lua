@@ -568,7 +568,7 @@ local plugins = {
         }
       end
 
-      -- require("ufo").setup(opts)
+      require("ufo").setup(opts)
       require("ufo").setup()
 
       -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
