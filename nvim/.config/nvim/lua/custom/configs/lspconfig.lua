@@ -3,7 +3,11 @@ local lspconfig = require "lspconfig"
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
-
+-- 
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}
 
 -- local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
 local language_servers = require("lspconfig").util.available_servers()
