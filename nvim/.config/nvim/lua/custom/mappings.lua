@@ -261,13 +261,13 @@ M.nvim_ufo = {
     ["zM"] = {
 	    function()
 
-      require("ufo").closeAllFolds,
+      require("ufo").closeAllFolds()
       end,
       "UFO close all folds.",
     },
     ["zR"] = {
 	    function()
-      require("ufo").openAllFolds 
+      require("ufo").openAllFolds()
       end,
       "UFO open all folds.",
     },
