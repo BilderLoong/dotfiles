@@ -3,8 +3,8 @@ local lspconfig = require "lspconfig"
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
-      local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
-local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
+-- local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
+local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
 
 -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
 configs.ast_grep = {
