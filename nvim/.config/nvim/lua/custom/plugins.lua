@@ -554,6 +554,8 @@ local plugins = {
 			vim.o.foldlevelstart = 99
 			vim.o.foldenable = true
 
+      require()
+
 		end,
 	},
 }
