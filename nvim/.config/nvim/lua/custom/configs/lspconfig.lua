@@ -11,6 +11,16 @@ capabilities.textDocument.foldingRange = {
 
 -- local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
 
+local language_servers = require("lspconfig").util.available_servers()
+
+
+for _, lsp in ipairs(language_servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
+
 -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
 lspconfig.ast_grep.setup {
   on_attach = on_attach,
@@ -34,13 +44,3 @@ lspconfig.jsonls.setup  {
   },
 }
 
-local language_servers = require("lspconfig").util.available_servers()
-
-vim.print(language_servers)
-
-for _, lsp in ipairs(language_servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-end
