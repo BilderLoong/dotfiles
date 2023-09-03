@@ -254,11 +254,14 @@ M.nvim_treehopper = {
 }
 
 M.nvim_ufo = {
-  plugin=true,
+  plugin = true,
 
-  n={
-    ['zR'] = {}
-  }
+  n = {
+    ["zR"] = {
+      require("ufo").openAllFolds,
+      ""
+    },
+  },
 }
 
 return M
