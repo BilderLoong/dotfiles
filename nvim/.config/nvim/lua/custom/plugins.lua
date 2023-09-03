@@ -546,8 +546,10 @@ local plugins = {
 		"kevinhwang91/nvim-ufo",
 		event = "BufReadPost",
 		dependencies = "kevinhwang91/promise-async",
-    opts = function (_,)
-      
+    opts = function ()
+     return {
+_
+     } 
     end
 		config = function(_, opts)
 			require("kevinhwang91/nvim-ufo").setup(opts)
