@@ -253,4 +253,6 @@ M.nvim_treehopper = {
   },
 }
 
+M.
+
 return M
