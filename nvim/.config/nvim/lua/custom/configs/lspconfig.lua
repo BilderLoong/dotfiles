@@ -3,7 +3,7 @@ local lspconfig = require "lspconfig"
 
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
--- 
+-- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
 capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true,
