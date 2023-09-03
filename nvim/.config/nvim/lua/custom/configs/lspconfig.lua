@@ -10,7 +10,6 @@ capabilities.textDocument.foldingRange = {
 }
 
 -- local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
-local language_servers = require("lspconfig").util.available_servers()
 
 -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
 configs.ast_grep = {
