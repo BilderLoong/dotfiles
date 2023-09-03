@@ -429,6 +429,13 @@ local plugins = {
         print "asdfasd"
         require("dap").configurations[language] = {
           {
+            type = "pwa-node",
+            request = "attach",
+            name = "Attach",
+            processId = require("dap.utils").pick_process,
+            cwd = "${workspaceFolder}",
+          },
+          {
             -- use nvim-dap-vscode-js's pwa-node debug adapter
             type = "pwa-node",
             -- launch a new process to attach the debugger to
