@@ -547,7 +547,7 @@ local plugins = {
 		event = "BufReadPost",
 		dependencies = "kevinhwang91/promise-async",
 		config = function(_, opts)
-			require("kevinhwang91/nvim-ufo").setup()
+			require("kevinhwang91/nvim-ufo").setup(opts)
 
 			-- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
 			vim.o.foldcolumn = "1" -- '0' is not bad
