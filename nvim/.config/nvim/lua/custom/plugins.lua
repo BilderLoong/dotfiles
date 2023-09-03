@@ -540,6 +540,10 @@ local plugins = {
     end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
+
+  {
+    
+  }
 }
 
 return plugins
