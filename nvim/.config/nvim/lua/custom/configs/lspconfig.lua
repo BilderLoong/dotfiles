@@ -31,6 +31,7 @@ configs.jsonls = {
 }
 
 local language_servers = require("lspconfig").util.available_servers()
+vim.pring(language_servers)
 for _, lsp in ipairs(language_servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
