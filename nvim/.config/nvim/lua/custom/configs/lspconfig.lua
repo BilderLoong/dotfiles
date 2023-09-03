@@ -24,6 +24,8 @@ lspconfig.ast_grep.setup {
 }
 -- https://github.com/b0o/SchemaStore.nvim#usage
 configs.jsonls = {
+  on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     json = {
       schemas = require("schemastore").json.schemas(),
