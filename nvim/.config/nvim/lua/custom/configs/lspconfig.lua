@@ -9,6 +9,7 @@ capabilities.textDocument.foldingRange = {
   lineFoldingOnly = true,
 }
 
+-- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
 
 
