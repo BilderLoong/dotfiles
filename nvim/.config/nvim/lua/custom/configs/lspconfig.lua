@@ -31,7 +31,7 @@ end
 --     root_dir = lspconfig.util.root_pattern(".git", "sgconfig.yml"),
 --   },
 -- }
---
+
 -- https://github.com/b0o/SchemaStore.nvim#usage
 lspconfig.jsonls.setup {
   on_attach = on_attach,
