@@ -548,7 +548,9 @@ local plugins = {
 		dependencies = "kevinhwang91/promise-async",
     opts = function ()
      return {
-_
+  provider_selector = function(bufnr, filetype, buftype)
+        return {'treesitter', 'indent'}
+    end
      } 
     end
 		config = function(_, opts)
