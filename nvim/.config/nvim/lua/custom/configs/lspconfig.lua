@@ -25,7 +25,7 @@ configs.jsonls = {
   },
 }
 
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs(language_servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
