@@ -6,6 +6,7 @@ function M.open_config()
 	vim.cmd([[tabnew]])
 	vim.cmd("tcd " .. vim_home)
 	vim.cmd("e lua/custom/init.lua")
+	vim.cmd("e lua/custom/init.lua")
 end
 
 api.nvim_create_user_command("Config", M.open_config, {})
