@@ -253,6 +253,7 @@ M.nvim_treehopper = {
   },
 }
 
+-- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
 M.nvim_ufo = {
   plugin = true,
 
