@@ -20,18 +20,18 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
-lspconfig.ast_grep.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  default_config = {
-    cmd = { "sg", "lsp" },
-    -- filetypes = {'typescript'};
-    single_file_support = true,
-    root_dir = lspconfig.util.root_pattern(".git", "sgconfig.yml"),
-  },
-}
-
+-- -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
+-- lspconfig.ast_grep.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   default_config = {
+--     cmd = { "sg", "lsp" },
+--     -- filetypes = {'typescript'};
+--     single_file_support = true,
+--     root_dir = lspconfig.util.root_pattern(".git", "sgconfig.yml"),
+--   },
+-- }
+--
 -- https://github.com/b0o/SchemaStore.nvim#usage
 lspconfig.jsonls.setup {
   on_attach = on_attach,
