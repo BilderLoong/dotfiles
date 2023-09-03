@@ -258,8 +258,8 @@ M.nvim_ufo = {
 
   n = {
     ["zM"] = {
-      require("ufo").,
-      "UFO open all folds.",
+      require("ufo").closeAllFolds,
+      "UFO close all folds.",
     },
     ["zR"] = {
       require("ufo").openAllFolds,
