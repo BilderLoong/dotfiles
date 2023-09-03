@@ -9,9 +9,7 @@ capabilities.textDocument.foldingRange = {
   lineFoldingOnly = true,
 }
 
--- local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
-
-local language_servers = require("lspconfig").util.available_servers()
+local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
 
 
 for _, lsp in ipairs(language_servers) do
