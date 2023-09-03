@@ -555,7 +555,7 @@ local plugins = {
 			vim.o.foldlevelstart = 99
 			vim.o.foldenable = true
 
-			load_mappings("nvim_treehopper")
+			load_mappings("nvim_ufo")
 		end,
 	},
 }
