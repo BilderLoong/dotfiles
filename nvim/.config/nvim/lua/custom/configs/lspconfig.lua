@@ -12,8 +12,7 @@ capabilities.textDocument.foldingRange = {
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
 
-
-for _, lsp in ipairs(language_servers) do
+for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -32,7 +31,7 @@ lspconfig.ast_grep.setup {
   },
 }
 -- https://github.com/b0o/SchemaStore.nvim#usage
-lspconfig.jsonls.setup  {
+lspconfig.jsonls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -42,4 +41,3 @@ lspconfig.jsonls.setup  {
     },
   },
 }
-
