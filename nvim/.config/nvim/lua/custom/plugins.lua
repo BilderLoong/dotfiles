@@ -551,7 +551,7 @@ local plugins = {
   provider_selector = function(bufnr, filetype, buftype)
         return {'treesitter', 'indent'}
     end
-     } 
+     },
     end
 		config = function(_, opts)
 			require("kevinhwang91/nvim-ufo").setup(opts)
