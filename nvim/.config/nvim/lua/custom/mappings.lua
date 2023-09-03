@@ -257,7 +257,7 @@ M.nvim_ufo = {
   plugin=true,
 
   n={
-    
+    ['zR'] = {}
   }
 }
 
