@@ -541,6 +541,7 @@ local plugins = {
     end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
+
   {
     "kevinhwang91/nvim-ufo",
     event = "BufReadPost",
