@@ -573,6 +573,8 @@ local plugins = {
       return vim.tbl_deep_extend(require("plugins.configs.others").blankline, {
         show_current_context = false,
         show_current_context_start = false,
+        show_current_context = false,
+        show_current_context_start = false,
       })
     end,
   },
