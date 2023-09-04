@@ -26,7 +26,7 @@ xnoremap <M-n> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
 nnoremap <M-j> <Cmd>call VSCodeNotify('workbench.action.togglePanel')<CR>
 xnoremap <M-j> <Cmd>call VSCodeNotify('workbench.action.togglePanel')<CR>
 
-" Move cursor between windows in a tab.
+" Cove cursor between windows in a tab.
 nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
 xnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
 nnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
