@@ -574,6 +574,7 @@ local plugins = {
       require("core.utils").lazy_load "indent-blankline.nvim"
     end,
     opts = function()
+      vim.tbl_deep_extend()
       return require("plugins.configs.others").blankline
     end,
     config = function(_, opts)
