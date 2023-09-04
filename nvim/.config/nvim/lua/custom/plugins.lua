@@ -300,42 +300,42 @@ local plugins = {
     },
   },
 
-  -- {
-  --   "rmagatti/auto-session",
-  --   lazy = false,
-  --   cmd = {
-  --     "Autosession",
-  --     "SessionDelete",
-  --     "SessionRestore",
-  --     "SessionRestoreFromFile",
-  --     "SessionSave",
-  --   },
-  --   opts = {
-  --     log_level = vim.log.levels.ERROR,
-  --     -- auto_session_enable_last_session = true,
-  --
-  --     -- ⚠️ This will only work if Telescope.nvim is installed
-  --     -- The following are already the default values, no need to provide them if these are already the settings you want.
-  --     session_lens = {
-  --       -- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
-  --       load_on_setup = true,
-  --       theme_conf = { border = true },
-  --       previewer = true,
-  --     },
-  --     -- https://github.com/rmagatti/auto-session#-command-hooks
-  --     -- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_afjer_restoring_a_session/
-  --     pre_save_cmds = {
-  --       -- Doesn't support `:h lua-heredoc` here.
-  --       "lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
-  --     },
-  --   },
-  --   config = function(_, opts)
-  --     require("auto-session").setup(opts)
-  --     --[For a better experience with the plugin overall using this config for sessionoptions is recommended.](https://github.com/rmagatti/auto-session#recommended-sessionoptions-config)
-  --     --
-  --     vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-  --   end,
-  -- },
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    cmd = {
+      "Autosession",
+      "SessionDelete",
+      "SessionRestore",
+      "SessionRestoreFromFile",
+      "SessionSave",
+    },
+    opts = {
+      log_level = vim.log.levels.ERROR,
+      -- auto_session_enable_last_session = true,
+
+      -- ⚠️ This will only work if Telescope.nvim is installed
+      -- The following are already the default values, no need to provide them if these are already the settings you want.
+      session_lens = {
+        -- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
+        load_on_setup = true,
+        theme_conf = { border = true },
+        previewer = true,
+      },
+      -- https://github.com/rmagatti/auto-session#-command-hooks
+      -- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_afjer_restoring_a_session/
+      pre_save_cmds = {
+        -- Doesn't support `:h lua-heredoc` here.
+        "lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
+      },
+    },
+    config = function(_, opts)
+      require("auto-session").setup(opts)
+      --[For a better experience with the plugin overall using this config for sessionoptions is recommended.](https://github.com/rmagatti/auto-session#recommended-sessionoptions-config)
+      --
+      vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+    end,
+  },
   {
 
     "nvim-tree/nvim-tree.lua",
@@ -523,49 +523,49 @@ local plugins = {
     end,
   },
 
-  -- {
-  --   "b0o/schemastore.nvim",
-  --   filetype = { "json", "jsonc" },
-  --   dependencies = { "neovim/nvim-lspconfig" },
-  -- },
+  {
+    "b0o/schemastore.nvim",
+    filetype = { "json", "jsonc" },
+    dependencies = { "neovim/nvim-lspconfig" },
+  },
 
   -- https://github.com/mrcjkb/haskell-tools.nvim
-  -- {
-  --   "mrcjkb/haskell-tools.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim", -- Optional
-  --   },
-  --   branch = "2.x.x", -- Recommended
-  --   init = function() -- Optional, see Advanced configuration
-  --   end,
-  --   ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
-  -- },
+  {
+    "mrcjkb/haskell-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim", -- Optional
+    },
+    branch = "2.x.x", -- Recommended
+    init = function() -- Optional, see Advanced configuration
+    end,
+    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+  },
 
-  -- {
-  --   "kevinhwang91/nvim-ufo",
-  --   event = "BufReadPost",
-  --   dependencies = "kevinhwang91/promise-async",
-  --   -- My experience use LSP as folder provider is better than treesitter.
-  --   -- opts = function()
-  --   --   return {
-  --   --     provider_selector = function(bufnr, filetype, buftype)
-  --   --       return { "treesitter", "indent" }
-  --   --     end,
-  --   --   }
-  --   -- end,
-  --
-  --   config = function(_, opts)
-  --     -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
-  --     vim.o.foldcolumn = "1" -- '0' is not bad
-  --     vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-  --     vim.o.foldlevelstart = 99
-  --     vim.o.foldenable = true
-  --
-  --     require("ufo").setup()
-  --     load_mappings "nvim_ufo"
-  --   end,
-  -- },
+  {
+    "kevinhwang91/nvim-ufo",
+    event = "BufReadPost",
+    dependencies = "kevinhwang91/promise-async",
+    -- My experience use LSP as folder provider is better than treesitter.
+    -- opts = function()
+    --   return {
+    --     provider_selector = function(bufnr, filetype, buftype)
+    --       return { "treesitter", "indent" }
+    --     end,
+    --   }
+    -- end,
+
+    config = function(_, opts)
+      -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
+      vim.o.foldcolumn = "1" -- '0' is not bad
+      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+      vim.o.foldlevelstart = 99
+      vim.o.foldenable = true
+
+      require("ufo").setup()
+      load_mappings "nvim_ufo"
+    end,
+  },
 }
 
 return plugins
