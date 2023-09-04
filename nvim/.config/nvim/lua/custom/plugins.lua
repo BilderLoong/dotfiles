@@ -523,24 +523,24 @@ local plugins = {
     end,
   },
 
-  {
-    "b0o/schemastore.nvim",
-    filetype = { "json", "jsonc" },
-    dependencies = { "neovim/nvim-lspconfig" },
-  },
+  -- {
+  --   "b0o/schemastore.nvim",
+  --   filetype = { "json", "jsonc" },
+  --   dependencies = { "neovim/nvim-lspconfig" },
+  -- },
 
   -- https://github.com/mrcjkb/haskell-tools.nvim
-  {
-    "mrcjkb/haskell-tools.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim", -- Optional
-    },
-    branch = "2.x.x", -- Recommended
-    init = function() -- Optional, see Advanced configuration
-    end,
-    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
-  },
+  -- {
+  --   "mrcjkb/haskell-tools.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim", -- Optional
+  --   },
+  --   branch = "2.x.x", -- Recommended
+  --   init = function() -- Optional, see Advanced configuration
+  --   end,
+  --   ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+  -- },
 
   -- {
   --   "kevinhwang91/nvim-ufo",
