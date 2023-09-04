@@ -5,10 +5,10 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 -- UFO: https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
--- capabilities.textDocument.foldingRange = {
---   dynamicRegistration = false,
---   lineFoldingOnly = true,
--- }
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}
 
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "clangd", "tsserver", "pyright", "bashls", "gopls", "jsonls" }
