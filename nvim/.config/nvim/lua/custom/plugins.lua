@@ -566,6 +566,8 @@ local plugins = {
       load_mappings "nvim_ufo"
     end,
   },
+
+  
 }
 
 return plugins
