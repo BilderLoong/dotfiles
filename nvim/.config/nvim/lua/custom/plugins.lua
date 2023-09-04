@@ -571,8 +571,8 @@ local plugins = {
     "lukas-reineke/indent-blankline.nvim",
     opts = function()
       return vim.tbl_deep_extend("force", require("plugins.configs.others").blankline, {
-        show_current_context = true,
-        show_current_context_start = true,
+        -- show_current_context = true,
+        -- show_current_context_start = true,
         -- show_current_context = false,
         -- show_current_context_start = false,
       })
