@@ -9,7 +9,7 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 -- general
 lvim.log.level = "warn"
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "nord"
 lvim.format_on_save = true
 vim.opt.relativenumber = true
 
@@ -175,14 +175,14 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-  {
-    "github/copilot.vim",
-    event = "BufRead",
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   event = "BufRead",
+  --   config = function()
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+  --   end,
+  -- },
   {
     "unblevable/quick-scope",
     event = "BufRead",
