@@ -20,6 +20,6 @@ require("lazy").setup({
 	-- "folke/neodev.nvim",
 	{ "sindrets/diffview.nvim" },
   { 'shaunsingh/nord.nvim',config={
-    
+    vim.cmd[[colorscheme nord]]
   } }
 })
