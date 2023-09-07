@@ -378,6 +378,11 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+
+  {
+    'sindrets/diffview.nvim'
+    event = 'VeryLazy'
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
