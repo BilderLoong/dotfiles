@@ -19,5 +19,7 @@ require("lazy").setup({
 	-- { "folke/neoconf.nvim", cmd = "Neoconf" },
 	-- "folke/neodev.nvim",
 	{ "sindrets/diffview.nvim" },
-  { 'shaunsingh/nord.nvim' }
+  { 'shaunsingh/nord.nvim',config={
+    
+  } }
 })
