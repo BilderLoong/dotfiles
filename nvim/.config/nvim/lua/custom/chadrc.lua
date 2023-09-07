@@ -3,7 +3,7 @@ local M = {
   mappings = require "custom.mappings",
   plugins = "custom.plugins",
   ui = {
-    theme = "nord", -- default theme
+    theme = "vscode_dark", -- default theme
     nvdash = {
       load_on_startup = false
     }
