@@ -9,7 +9,7 @@ wechatcliopen () {
 
   if [[ -z "$1" ]] 
   then
-    "${wechatcli}"
+    ${wechatcli} open --project "$(realpath apps/menuorder/dist/merchant)"
   else
    ${wechatcli} open --project ~/Project/menuorder-new-rms-h5-$1/apps/menuorder/dist/merchant
   fi
