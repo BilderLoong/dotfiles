@@ -3,7 +3,7 @@ local M = {
   mappings = require "custom.mappings",
   plugins = "custom.plugins",
   ui = {
-    theme = "gruvbox", -- default theme
+    theme = "aquarium", -- default theme
     nvdash = {
       load_on_startup = false
     }
