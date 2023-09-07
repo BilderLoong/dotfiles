@@ -380,8 +380,28 @@ lvim.plugins = {
   },
 
   {
-    'sindrets/diffview.nvim',
-    event = 'VeryLazy'
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles", "DiffviewFileHistory" },
+    opts = function()
+      return {
+        enhanced_diff_hl = true
+      }
+    end
+  },
+
+  {
+    'shaunsingh/nord.nvim',
+    config = function()
+      vim.cmd [[colorscheme nord]]
+    end
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    event = "VeryLazy",
+    init = function()
+      -- Write all buffers before navigating from Vim to tmux pane
+      vim.g.tmux_navigator_save_on_switch = 2
+    end,
   }
 }
 
