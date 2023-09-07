@@ -21,7 +21,7 @@ require("lazy").setup({
 	{ "sindrets/diffview.nvim" },
 	{ "shaunsingh/nord.nvim", config =function ()
 	 
-	end {
 		vim.cmd([[colorscheme nord]]),
+	end {
 	} },
 })
