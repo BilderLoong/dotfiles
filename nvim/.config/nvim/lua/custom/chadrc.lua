@@ -6,7 +6,8 @@ local M = {
     theme = "nord", -- default theme
     nvdash = {
       load_on_startup = false
-    }
+    },
+    
   }
 }
 
