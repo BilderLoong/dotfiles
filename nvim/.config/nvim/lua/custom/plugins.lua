@@ -234,7 +234,6 @@ local plugins = {
       return {
         enhanced_diff_hl = true,
         vim.opt.fillchars:append { diff = "╱" }
-
       }
     end,
   },
