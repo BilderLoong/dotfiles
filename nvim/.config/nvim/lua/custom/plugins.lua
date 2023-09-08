@@ -493,7 +493,8 @@ local plugins = {
 
   {
     "mfussenegger/nvim-dap-python",
-    ft = 'python'
+    ft = 'python',
+    
   },
 
   {
