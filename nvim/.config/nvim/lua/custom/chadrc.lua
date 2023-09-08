@@ -26,10 +26,15 @@ local M = {
         fg = "NONE",
       },
 
-      DiffText = {
+      -- DiffText = {
+      --   bg = { "yellow", -40 },
+      --   fg = "NONE",
+      -- },
+      --
+      DiffChange = {
         bg = { "yellow", -40 },
         fg = "NONE",
-      },
+      }
     },
   },
 }
