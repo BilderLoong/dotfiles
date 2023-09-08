@@ -334,7 +334,7 @@ local plugins = {
       pre_save_cmds = {
         -- Doesn't support `:h lua-heredoc` here.
         "lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
-        "lua if vim.fn.exists(':DiffviewClose') then vim.cmd('tabdo DiffviewOpen') end",
+        "lua if vim.fn.exists(':DiffviewClose') then vim.cmd('tabdo DiffviewClose') end",
       },
     },
     config = function(_, opts)
