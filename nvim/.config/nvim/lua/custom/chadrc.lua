@@ -15,7 +15,6 @@ local M = {
       DiffAdd = {
         bg = { "green", -20 },
         fg = "NONE",
-        sdf
       },
 
       DiffDelete = {
