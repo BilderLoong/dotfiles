@@ -17,7 +17,8 @@ local M = {
   }
 }
 
-requ
+
+require()
 
 -- check core.mappings for table structure
 
