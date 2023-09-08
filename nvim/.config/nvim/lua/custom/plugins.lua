@@ -493,7 +493,7 @@ local plugins = {
 
   {
 
-  }
+  },
 
   -- {
   --   "rmagatti/session-lens",
