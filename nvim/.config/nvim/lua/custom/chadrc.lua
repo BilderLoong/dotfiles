@@ -13,7 +13,7 @@ local M = {
 
     hl_override = {
       DiffAdd = {
-        bg = { "green",-15 },
+        bg = { "green",-20 },
         fg = "NONE",
       },
 
