@@ -42,13 +42,13 @@ vim.cmd([[ set nofoldenable ]])
 --
 --
 --
-GitSignsAddNr                          { GitSignsAdd }, -- GitSignsAddNr  
-    GitSignsDelete                         { fg="#ee5396", }, -- GitSignsDelete 
-    GitSignsDeleteNr                       { GitSignsDelete }, -- GitSignsDeleteNr 
-    DiffviewDiffAddAsDelete                { bg="#311d26", }, -- DiffviewDiffAddAsDelete 
-    DiffviewPrimary                        { fg="#8cb6ff", }, -- DiffviewPrimary 
-    DiffviewSecondary                      { fg="#25be6a", }, -- DiffviewSecondary 
-    DiffviewFilePanelTitle                 { gui="bold", fg="#c8a5ff", }, -- DiffviewFilePanelTitle 
+-- GitSignsAddNr                          { GitSignsAdd }, -- GitSignsAddNr  
+--     GitSignsDelete                         { fg="#ee5396", }, -- GitSignsDelete 
+--     GitSignsDeleteNr                       { GitSignsDelete }, -- GitSignsDeleteNr 
+--     DiffviewDiffAddAsDelete                { bg="#311d26", }, -- DiffviewDiffAddAsDelete 
+--     DiffviewPrimary                        { fg="#8cb6ff", }, -- DiffviewPrimary 
+--     DiffviewSecondary                      { fg="#25be6a", }, -- DiffviewSecondary 
+--     DiffviewFilePanelTitle                 { gui="bold", fg="#c8a5ff", }, -- DiffviewFilePanelTitle 
 
 -- function FixGruvbox()
 -- 	vim.api.nvim_set_hl(0, "DiffviewDiffAddAsDelete", { bg = "#431313" })
