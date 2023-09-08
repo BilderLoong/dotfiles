@@ -12,7 +12,7 @@ local M = {
     },
 
     hl_override = {
-      DiffAdd='#A3BE8C'
+      DiffAdd=''
     }
   }
 }
