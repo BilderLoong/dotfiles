@@ -1,4 +1,3 @@
- --
 local theme = require("base46").get_theme_tb "base_16"
 local colors = require("base46").get_theme_tb "base_30"
 
