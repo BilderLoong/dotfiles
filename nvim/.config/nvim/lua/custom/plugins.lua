@@ -493,9 +493,14 @@ local plugins = {
 
   {
     "mfussenegger/nvim-dap-python",
+    ft = 'python'
   },
 
-  { "folke/neodev.nvim", opts = {} },
+  {
+    "folke/neodev.nvim",
+    ft = 'lua',
+    opts = {}
+  },
 
   -- {
   --   "rmagatti/session-lens",
