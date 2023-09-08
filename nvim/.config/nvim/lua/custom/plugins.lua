@@ -232,7 +232,7 @@ local plugins = {
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles", "DiffviewFileHistory" },
     opts = function()
       return {
-enhanced_diff_hl = true
+        enhanced_diff_hl = true,
       }
     end,
   },
