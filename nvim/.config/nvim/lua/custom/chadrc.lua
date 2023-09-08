@@ -20,7 +20,7 @@ local M = {
   },
 }
 
--- require("base46").load_all_highlights()
+-- lua require("base46").load_all_highlights()
 
 -- check core.mappings for table structure
 
