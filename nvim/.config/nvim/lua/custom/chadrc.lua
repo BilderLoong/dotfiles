@@ -2,9 +2,6 @@
 -- Each highlight group can take a table with variables fg, bg, bold, italic, etc
 -- base30 variable names can also be used as colors
 
--- local theme = require("base46").get_theme_tb "base_16"
--- local colors = require("base46").get_theme_tb "base_30"
-
 ---@type ChadrcConfig
 local M = {
   mappings = require "custom.mappings",
