@@ -23,7 +23,6 @@ local M = {
       },
 
       DiffChange = {
-
         bg = "yellow",
         fg = "NONE",
       },
