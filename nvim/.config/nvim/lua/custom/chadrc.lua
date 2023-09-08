@@ -27,7 +27,7 @@ local M = {
       },
 
       DiffText = {
-        bg = { "yellow", -0 },
+        bg = { "yellow", -40 },
         fg = "NONE",
       },
     },
