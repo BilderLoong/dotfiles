@@ -1,7 +1,6 @@
 local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
-require()
 
 ---@type NvPluginSpec[]
 local plugins = {
