@@ -18,7 +18,7 @@ local M = {
 }
 
 
-require()
+require('base46')
 
 -- check core.mappings for table structure
 
