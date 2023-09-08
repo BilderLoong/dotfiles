@@ -16,6 +16,10 @@ local M = {
         bg = "green",
         fg = "NONE",
       },
+
+      DiffDelete={
+        
+      }
     },
   },
 }
