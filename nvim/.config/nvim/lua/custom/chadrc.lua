@@ -8,17 +8,16 @@ local M = {
   ui = {
     theme = "nord", -- default theme
     nvdash = {
-      load_on_startup = false
+      load_on_startup = false,
     },
 
     hl_override = {
-      DiffAdd=colors.green;
-    }
-  }
+      DiffAdd = colors.green,
+    },
+  },
 }
 
-
-require('base46').load_all_highlights()
+require("base46").load_all_highlights()
 
 -- check core.mappings for table structure
 
