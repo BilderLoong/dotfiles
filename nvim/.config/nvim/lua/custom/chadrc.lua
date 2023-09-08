@@ -30,7 +30,7 @@ local M = {
       --   bg = { "yellow", -40 },
       --   fg = "NONE",
       -- },
-      --
+
       DiffChange = {
         bg = { "yellow", -40 },
         fg = "NONE",
