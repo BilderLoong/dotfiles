@@ -151,7 +151,7 @@ local plugins = {
         "gospel",
 
         -- Python
-        "ruff", -- linter
+        "ruff",  -- linter
         "black", -- formater
 
         -- Haskell
@@ -178,9 +178,9 @@ local plugins = {
     event = BufEnterLike,
     config = function()
       require("treesitter-context").setup {
-        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = {
           -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
@@ -256,7 +256,7 @@ local plugins = {
 
         word_diff = false,
         current_line_blame = true,
-        numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+        numhl = true,   -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
       }
 
@@ -416,7 +416,7 @@ local plugins = {
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons", -- optional
+      "nvim-tree/nvim-web-devicons",     -- optional
     },
   },
 
@@ -492,10 +492,10 @@ local plugins = {
   },
 
   {
-"mfussenegger/nvim-dap-python",
+    "mfussenegger/nvim-dap-python",
   },
 
-  { "folke/neodev.nvim", opts = {} }
+  { "folke/neodev.nvim", opts = {} },
 
   -- {
   --   "rmagatti/session-lens",
@@ -550,8 +550,8 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim", -- Optional
     },
-    branch = "2.x.x", -- Recommended
-    init = function() -- Optional, see Advanced configuration
+    branch = "2.x.x",                  -- Recommended
+    init = function()                  -- Optional, see Advanced configuration
     end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
@@ -572,7 +572,7 @@ local plugins = {
     config = function(_, opts)
       -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
       vim.o.foldcolumn = "1" -- '0' is not bad
-      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+      vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
       vim.o.foldlevelstart = 99
       vim.o.foldenable = true
 
