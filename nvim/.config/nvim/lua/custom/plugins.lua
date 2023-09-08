@@ -492,7 +492,7 @@ local plugins = {
   },
 
   {
-
+"mfussenegger/nvim-dap-pythonmfussenegger/nvim-dap-python"
   },
 
   -- {
