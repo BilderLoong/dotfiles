@@ -1,3 +1,4 @@
+
 ---@type ChadrcConfig
 local M = {
   mappings = require "custom.mappings",
