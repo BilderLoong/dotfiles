@@ -15,6 +15,7 @@ local M = {
       DiffAdd = {
         bg = "green",
         fg = "",
+reverse
       },
     },
   },
