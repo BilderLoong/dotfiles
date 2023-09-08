@@ -39,7 +39,9 @@ vim.cmd([[ set nofoldenable ]])
 -- 		end,
 -- 	})
 -- end
-
+--
+--
+--
 GitSignsAddNr                          { GitSignsAdd }, -- GitSignsAddNr  
     GitSignsDelete                         { fg="#ee5396", }, -- GitSignsDelete 
     GitSignsDeleteNr                       { GitSignsDelete }, -- GitSignsDeleteNr 
