@@ -12,7 +12,7 @@ local M = {
     },
 
     hl_override = {
-      DiffAdd=colors.
+      DiffAdd=colors.green.
     }
   }
 }
