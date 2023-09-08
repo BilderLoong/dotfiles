@@ -17,10 +17,10 @@ local M = {
         fg = "NONE",
       },
 
-      DiffDelete={
-        bg='red',
-        fg='NONE'
-      }
+      DiffDelete = {
+        bg = "red",
+        fg = "NONE",
+      },
     },
   },
 }
