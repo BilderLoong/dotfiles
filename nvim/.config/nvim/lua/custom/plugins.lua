@@ -241,7 +241,8 @@ local plugins = {
   {
     "lewis6991/gitsigns.nvim",
     ft = { "gitcommit", "diff" },
-    opts = function(_, defaults)
+    opts = function(_, nvchad_defaults)
+
       local custom = {
         -- stylua: ignore start
         signs = {
@@ -264,7 +265,7 @@ local plugins = {
         },
       }
 
-      return vim.tbl_deep_extend("force", defaults, custom)
+      return vim.tbl_deep_extend("force", nvchad_defaults, custom)
     end,
   },
 
