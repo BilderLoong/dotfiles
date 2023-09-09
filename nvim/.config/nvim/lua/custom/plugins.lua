@@ -242,9 +242,27 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     ft = { "gitcommit", "diff" },
     opts = function(_, nvchad_defaults)
-      local custom = 
+      return vim.tbl_deep_extend("force", nvchad_defaults, {
+        -- stylua: ignore start
+        signs = {
+          add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+          change = { hl = "NONE", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+          topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+          changedelete = { hl = "NONE", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+        },
+        -- stylua: ignore end
 
-      return vim.tbl_deep_extend("force", nvchad_defaults, custom)
+        word_diff = false,
+        current_line_blame = true,
+        numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
+        linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+
+        current_line_blame_opts = {
+          delay = 500,
+          ignore_whitespace = true,
+        },
+      })
     end,
   },
 
