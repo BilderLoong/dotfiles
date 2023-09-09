@@ -436,10 +436,9 @@ local plugins = {
       }
     end,
     config = function(_, opts)
-      vim.print "Can't be printed."
       require("dap-vscode-js").setup(opts)
+
       for _, language in ipairs { "typescript", "javascript" } do
-        print "asdfasd"
         require("dap").configurations--[[ [language] ]] = {
           {
             type = "pwa-node",
