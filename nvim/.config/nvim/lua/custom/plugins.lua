@@ -151,7 +151,7 @@ local plugins = {
         "gospel",
 
         -- Python
-        "ruff",  -- linter
+        "ruff", -- linter
         "black", -- formater
 
         -- Haskell
@@ -178,9 +178,9 @@ local plugins = {
     event = BufEnterLike,
     config = function()
       require("treesitter-context").setup {
-        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = {
           -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
@@ -233,7 +233,7 @@ local plugins = {
     opts = function()
       return {
         enhanced_diff_hl = true,
-        vim.opt.fillchars:append { diff = "╱" }
+        vim.opt.fillchars:append { diff = "╱" },
       }
     end,
   },
@@ -247,17 +247,22 @@ local plugins = {
         -- stylua: ignore start
         signs = {
           add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-          change = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          change = { hl = "NONE", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
           delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
           topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-          changedelete = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          changedelete = { hl = "NONE", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
         },
         -- stylua: ignore end
 
         word_diff = false,
         current_line_blame = true,
-        numhl = true,   -- Toggle with `:Gitsigns toggle_numhl`
+        numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+
+        current_line_blame_opts = {
+          delay = 500,
+          ignore_whitespace = true,
+        },
       }
 
       return vim.tbl_deep_extend("force", defaults, custom)
@@ -416,7 +421,7 @@ local plugins = {
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons",     -- optional
+      "nvim-tree/nvim-web-devicons", -- optional
     },
   },
 
@@ -493,16 +498,16 @@ local plugins = {
 
   {
     "mfussenegger/nvim-dap-python",
-    ft = 'python',
-    config=function ()
-      require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
-    end
+    ft = "python",
+    config = function()
+      require("dap-python").setup "~/.virtualenvs/debugpy/bin/python"
+    end,
   },
 
   {
     "folke/neodev.nvim",
-    ft = 'lua',
-    opts = {}
+    ft = "lua",
+    opts = {},
   },
 
   -- {
@@ -558,8 +563,8 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim", -- Optional
     },
-    branch = "2.x.x",                  -- Recommended
-    init = function()                  -- Optional, see Advanced configuration
+    branch = "2.x.x", -- Recommended
+    init = function() -- Optional, see Advanced configuration
     end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
@@ -580,7 +585,7 @@ local plugins = {
     config = function(_, opts)
       -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
       vim.o.foldcolumn = "1" -- '0' is not bad
-      vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
       vim.o.foldlevelstart = 99
       vim.o.foldenable = true
 
@@ -608,6 +613,5 @@ local plugins = {
     config = true,
   },
 }
-
 
 return plugins
