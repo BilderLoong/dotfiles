@@ -426,44 +426,44 @@ local plugins = {
   },
 
   -- Example: https://github.com/akinsho/dotfiles/blob/d061b48766de8da969dfcb178ff32324f76aed6f/.config/nvim/lua/as/plugins/debugger.lua#L96
-  -- {
-  --   "mxsdev/nvim-dap-vscode-js",
-  --   ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
-  --   dependencies = { "mfussenegger/nvim-dap" },
-  --   opts = function(_, default_nvchad_opts)
-  --     return {
-  --       node_path = "node",
-  --       debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
-  --       adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
-  --     }
-  --   end,
-  --   config = function(_, opts)
-  --     vim.print "Can't be printed."
-  --     require("dap-vscode-js").setup(opts)
-  --     for _, language in ipairs { "typescript", "javascript" } do
-  --       print "asdfasd"
-  --       require("dap").configurations--[[ [language] ]] = {
-  --         {
-  --           type = "pwa-node",
-  --           request = "attach",
-  --           name = "Attach",
-  --           processId = require("dap.utils").pick_process,
-  --           cwd = "${workspaceFolder}",
-  --         },
-  --         {
-  --           -- use nvim-dap-vscode-js's pwa-node debug adapter
-  --           type = "pwa-node",
-  --           -- launch a new process to attach the debugger to
-  --           request = "launch",
-  --           -- name of the debug action you have to select for this config
-  --           name = "Launch current file in new node process(" .. language .. ")",
-  --           program = "${file}",
-  --           cwd = "${workspaceFolder}",
-  --         },
-  --       }
-  --     end
-  --   end,
-  -- },
+  {
+    "mxsdev/nvim-dap-vscode-js",
+    ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
+    dependencies = { "mfussenegger/nvim-dap" },
+    opts = function(_, default_nvchad_opts)
+      return {
+        node_path = "node",
+        debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
+        adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
+      }
+    end,
+    config = function(_, opts)
+      vim.print "Can't be printed."
+      require("dap-vscode-js").setup(opts)
+      for _, language in ipairs { "typescript", "javascript" } do
+        print "asdfasd"
+        require("dap").configurations--[[ [language] ]] = {
+          {
+            type = "pwa-node",
+            request = "attach",
+            name = "Attach",
+            processId = require("dap.utils").pick_process,
+            cwd = "${workspaceFolder}",
+          },
+          {
+            -- use nvim-dap-vscode-js's pwa-node debug adapter
+            type = "pwa-node",
+            -- launch a new process to attach the debugger to
+            request = "launch",
+            -- name of the debug action you have to select for this config
+            name = "Launch current file in new node process(" .. language .. ")",
+            program = "${file}",
+            cwd = "${workspaceFolder}",
+          },
+        }
+      end
+    end,
+  },
 
   {
     -- https://github.com/mfussenegger/nvim-dap
