@@ -439,7 +439,7 @@ local plugins = {
       require("dap-vscode-js").setup(opts)
 
       for _, language in ipairs { "typescript", "javascript" } do
-        require("dap").configurations--[[ [language] ]] = {
+        require("dap").configurations.[language] = {
           {
             type = "pwa-node",
             request = "attach",
