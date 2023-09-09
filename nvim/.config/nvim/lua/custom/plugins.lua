@@ -486,6 +486,15 @@ local plugins = {
     end,
   },
 
+
+  {
+
+      "rcarriga/nvim-dap-ui",
+  config = function (_, opts)
+    
+  end
+  },
+
   {
     "jbyuki/one-small-step-for-vimkind",
     -- event = BufEnterLike,
