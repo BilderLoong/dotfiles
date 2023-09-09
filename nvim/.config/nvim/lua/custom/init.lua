@@ -71,3 +71,17 @@ vim.cmd([[ set nofoldenable ]])
 
 require("custom.autocmds")
 require("custom.custom_cmds")
+-- -- Key:         Ctrl-e
+-- -- Action:      Show treesitter capture group for textobject under cursor.
+-- bindkey("n",    "<C-e>",
+--     function()
+--         local result = vim.treesitter.get_captures_at_cursor(0)
+--         print(vim.inspect(result))
+--     end,
+--     { noremap = true, silent = false }
+-- )
+--
+-- -- TSPlayground provided command. (Need to install the plugin.)
+-- -- bindkey("n",    "<C-e>",  ":TSHighlightCapturesUnderCursor<CR>",   opts)
+-- -- This was misbehaving a lot.
+-- -- Might be more stable now in recent treesitter versions.

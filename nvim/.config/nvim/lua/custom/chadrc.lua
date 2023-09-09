@@ -11,7 +11,6 @@ local M = {
     nvdash = {
       load_on_startup = false,
     },
-
     hl_override = {
       DiffAdd = {
         bg = { "green", -25 },
