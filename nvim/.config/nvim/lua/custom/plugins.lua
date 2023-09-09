@@ -459,7 +459,6 @@ local plugins = {
             program = "${file}",
             cwd = "${workspaceFolder}",
             port = 8123,
-
           },
         }
       end
