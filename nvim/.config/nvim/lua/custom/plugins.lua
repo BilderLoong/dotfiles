@@ -245,6 +245,7 @@ local plugins = {
       vim.print(opts)
       local defaults = require("plugins.configs.others").gitsigns
       vim.print(opts)
+      vim.print(opts)
       local custom = {
         -- stylua: ignore start
         signs = {
