@@ -69,3 +69,10 @@ export PATH=$PATH:$GOPATH/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f "/home/birudo/.ghcup/env" ] && source "/home/birudo/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
