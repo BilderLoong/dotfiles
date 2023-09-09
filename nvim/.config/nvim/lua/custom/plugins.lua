@@ -242,7 +242,7 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     ft = { "gitcommit", "diff" },
     opts = function(_,opts)
-      vim.print()
+      vim.print(opts)
       local defaults = require("plugins.configs.others").gitsigns
       local custom = {
         -- stylua: ignore start
