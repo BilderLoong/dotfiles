@@ -520,7 +520,7 @@ local plugins = {
     "mfussenegger/nvim-dap-python",
     ft = "python",
     config = function()
-      -- Maybe use a more heri
+      -- Maybe use a more heru
       require("dap-python").setup "/home/birudo/Projects/playground/.virtualenvs/debugpy/bin/python"
     end,
   },
