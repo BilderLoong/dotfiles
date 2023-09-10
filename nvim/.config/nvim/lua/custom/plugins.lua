@@ -469,7 +469,6 @@ local plugins = {
   {
     -- https://github.com/mfussenegger/nvim-dap
     "mfussenegger/nvim-dap",
-    lazy=false,
     keys = utils.getTableKeys(require("custom.mappings").debug.n),
     dependencies = {
       -- UI related https://github.com/mfussenegger/nvim-dap#goals
