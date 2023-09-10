@@ -460,7 +460,6 @@ local plugins = {
             name = "Launch current file in new node process (" .. language .. ")",
             program = "${file}",
             cwd = "${workspaceFolder}",
-            port = 8123,
           },
         }
       end
