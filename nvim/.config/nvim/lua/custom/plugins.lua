@@ -533,6 +533,7 @@ local plugins = {
     },
     config = function(_, opts)
       require("neodev").setup(opts)
+      require()
     end,
   },
 
