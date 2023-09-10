@@ -437,7 +437,7 @@ local plugins = {
         -- debugger_path
         adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost", "node", "chrome" },
         log_file_path = "/home/birudo/dap_vscode_js.log", -- Path for file logging
-       log_file_level =true,  -- Logging level for output to file. Set to false to disable file logging. 
+        log_file_level = true, -- Logging level for output to file. Set to false to disable file logging.
       }
     end,
     config = function(_, opts)
