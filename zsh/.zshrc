@@ -74,4 +74,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # snpa
 export PATH="/snap/bin:$PATH"
 
-
+# zprof
