@@ -437,6 +437,7 @@ local plugins = {
         -- debugger_path
         adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost", "node", "chrome" },
         log_file_path = "~/dap_vscode_js.log" -- Path for file logging
+        
       }
     end,
     config = function(_, opts)
