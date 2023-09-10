@@ -528,7 +528,7 @@ local plugins = {
     "folke/neodev.nvim",
     ft = "lua",
     config = function (_, opts)
-     require('neodev') 
+     require('neodev').setup(opts)
     end
   },
 
