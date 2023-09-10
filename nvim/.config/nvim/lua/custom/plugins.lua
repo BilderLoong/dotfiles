@@ -423,7 +423,6 @@ local plugins = {
     },
   },
 
-
   -- Example: https://github.com/akinsho/dotfiles/blob/d061b48766de8da969dfcb178ff32324f76aed6f/.config/nvim/lua/as/plugins/debugger.lua#L96
   {
     "mxsdev/nvim-dap-vscode-js",
@@ -437,7 +436,8 @@ local plugins = {
         debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
         -- debugger_path
         adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost", "node", "chrome" },
-      --[[  ]]}
+        log_file_path = "~/dap_vscode_js.log" -- Path for file logging
+      }
     end,
     config = function(_, opts)
       require("dap-vscode-js").setup(opts)
