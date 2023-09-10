@@ -382,6 +382,7 @@ local plugins = {
     ft = { "go", "gomod" },
     build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
   },
+
   -- https://github.com/jimcornmell/lvim/blob/34ee4560c05f061055cddc608d882906780e7aad/config.lua#L364
   {
     "tpope/vim-fugitive",
