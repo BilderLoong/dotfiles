@@ -520,7 +520,7 @@ local plugins = {
     "mfussenegger/nvim-dap-python",
     ft = "python",
     config = function()
-      -- Maybe use a more heru
+      -- Maybe use a more heuristic way to decide the python path.
       require("dap-python").setup "/home/birudo/Projects/playground/.virtualenvs/debugpy/bin/python"
     end,
   },
