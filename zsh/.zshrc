@@ -78,7 +78,7 @@ export PATH="/snap/bin:$PATH"
 
 # GO
 if command -v go >/dev/null; then
-	export PATH="$HOME/go/:$PATH"
+	export PATH="$HOME/go/bin:$PATH"
 fi
 
 # zprof
