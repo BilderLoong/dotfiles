@@ -636,7 +636,7 @@ local plugins = {
   {
     "leoluz/nvim-dap-go",
     lazy = false,
-    ft = { "go" },
+    -- ft = { "go" },
     -- config = function(_, opts)
     --   -- require("dap")
     -- end,
