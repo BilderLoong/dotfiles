@@ -77,7 +77,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 
 # GO
-	export PATH="$HOME/go/bin:$PATH"
-fi
+export PATH="$HOME/go/bin:$PATH"
 
 # zprof
