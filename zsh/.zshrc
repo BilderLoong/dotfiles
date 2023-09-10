@@ -77,7 +77,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 
 # GO
-if command -v go >/dev/null; then
 	export PATH="$HOME/go/bin:$PATH"
 fi
 
