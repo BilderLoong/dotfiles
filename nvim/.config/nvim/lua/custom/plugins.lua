@@ -527,7 +527,6 @@ local plugins = {
   {
     "folke/neodev.nvim",
     ft = "lua",
-    opts = {},
   },
 
   -- {
