@@ -59,7 +59,7 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
 
 # Go
-
+PATH="$(go env GOPATH)/bin:$PATH" 
 # source "$HOME/Project/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
 
