@@ -60,6 +60,7 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 
 # Go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 # source "$HOME/Project/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
@@ -80,4 +81,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # snpa
 export PATH="/snap/bin:$PATH"
-export PATH=/home/birudo/go/bin:/home/birudo/.pyenv/shims:/home/birudo/.pyenv/bin:/mnt/wslg/runtime-dir/fnm_multishells/31649_1693720052493/bin:/snap/bin:/home/birudo/.bun/bin:/Users/birudo/perl5/bin:/usr/local/sbin:/Users/birudo/Library/pnpm:/home/bilder/.local/share/pnpm:/home/birudo/.yarn/bin:/home/birudo/.config/yarn/global/node_modules/.bin:/mnt/wslg/runtime-dir/fnm_multishells/31649_1693720052493/bin:/home/birudo/.local/bin:/home/birudo/bin:/usr/local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/birudo/.pyenv/bin:/home/birudo/.local/share/zinit/plugins/ajeetdsouza---zoxide:/mnt/wslg/runtime-dir/fnm_multishells/31649_1693720052493/bin:/home/birudo/.bun/bin:/home/birudo/.cabal/bin:/home/birudo/.ghcup/bin:/Users/birudo/perl5/bin:/usr/local/sbin:/Users/birudo/Library/pnpm:/home/bilder/.local/share/pnpm:/home/birudo/.yarn/bin:/home/birudo/.config/yarn/global/node_modules/.bin:/mnt/wslg/runtime-dir/fnm_multishells/31649_1693720052493/bin:/home/birudo/.local/share/zinit/polaris/bin:/home/birudo/.local/bin:/home/birudo/bin:/usr/local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/ProgramData/chocolatey/lib/mpv.install/tools:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Bandizip/:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files (x86)/oh-my-posh/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/birudo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/birudo/AppData/Roaming/npm:/tools:/platform-tools:/cmdline-tools/latest/bin/:/bin:/tools:/platform-tools:/cmdline-tools/latest/bin/:/bin
+
+
