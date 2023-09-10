@@ -631,6 +631,11 @@ local plugins = {
     version = "*",
     config = true,
   },
+
+  {
+    "leoluz/nvim-dap-go",
+    ft = { "go" },
+  },
 }
 
 return plugins
