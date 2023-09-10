@@ -527,11 +527,10 @@ local plugins = {
   {
     "folke/neodev.nvim",
     ft = "lua",
-    dependencies={
-    "neovim/nvim-lspconfig",
-},
+    dependencies = {
+      "neovim/nvim-lspconfig",
+    },
     config = function(_, opts)
-      -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
       require("neodev").setup(opts)
     end,
   },
