@@ -58,12 +58,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"; export PERL_MM_OPT;
 # Android
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
 
-# Go
-
-# source "$HOME/Project/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
-
-
-# zprof
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
