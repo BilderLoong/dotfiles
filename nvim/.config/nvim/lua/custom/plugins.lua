@@ -132,6 +132,7 @@ local plugins = {
         "html-lsp",
         "typescript-language-server",
         "prettierd",
+        -- "prettier",
         "eslint_d",
         "js-debug-adapter",
         "json-lsp",
