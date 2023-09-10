@@ -520,6 +520,7 @@ local plugins = {
     "mfussenegger/nvim-dap-python",
     ft = "python",
     config = function()
+      -- It's uncon
       require("dap-python").setup "/home/birudo/Projects/playground/.virtualenvs/debugpy/bin/python"
     end,
   },
