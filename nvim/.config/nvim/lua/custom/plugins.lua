@@ -638,7 +638,7 @@ local plugins = {
     dependencies = { "mfussenegger/nvim-dap" },
     ft = { "go" },
     config = function(_, opts)
-      require("dap-go")
+      require("dap-go").setup(opts)
     end,
   },
 }
