@@ -80,5 +80,3 @@ zinit ice as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh
     atpull'!git reset --hard' 
 zinit light dbrgn/tealdeer
 
-zinit id-as'replay_comp' atload'zicompinit; zicdreplay' for \
-    zdharma-continuum/null
