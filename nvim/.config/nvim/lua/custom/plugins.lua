@@ -467,7 +467,6 @@ local plugins = {
 						name = "Launch current file in new node process (" .. language .. ")",
 						program = "${file}",
             smartStep = true,
-            sourceMaps = false,
 						cwd = "${workspaceFolder}",
 					},
 				}
