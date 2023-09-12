@@ -54,7 +54,7 @@ zinit wait lucid for \
     Aloxaf/fzf-tab \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
-        has'ast-grep' id-as'sg-completions' eval"ast-grep completions"  \
+        has'ast-grep' id-as'sg-completions' eval"sg completions"  \
     zdharma-continuum/null
 
 zinit id-as'replay_comp' atload'zicompinit; zicdreplay' for \
