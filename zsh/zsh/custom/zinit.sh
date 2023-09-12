@@ -50,7 +50,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     Aloxaf/fzf-tab \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
-        has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
+        has'ast-grep' id-as'sg-completions' eval" completions" \
     zdharma-continuum/null
 
 # Fish-like autosuggestions for zsh 
@@ -75,4 +75,4 @@ zinit ice as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh
     pick"_tldr" \
     atpull'!git reset --hard' 
 zinit light dbrgn/tealdeer
-as"completion"
+
