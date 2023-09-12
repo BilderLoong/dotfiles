@@ -442,7 +442,7 @@ local plugins = {
 					"chrome",
 				},
 				log_file_path = vim.fn.stdpath("log") .. "/nvim-dap-vscode-js", -- Path for file logging
-				log_file_level = vim.log.levels.TRACE, -- Logging level for output to file. Set to false to disable file logging.
+				-- log_file_level = vim.log.levels.TRACE, -- Logging level for output to file. Set to false to disable file logging.
 			}
 		end,
 		config = function(_, opts)
