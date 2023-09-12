@@ -432,8 +432,8 @@ local plugins = {
       return {
         node_path = "node",
         -- debugger_path = vim.fn.stdpath "data" .. "/mason/packages/js-debug-adapter",
-        debugger_path = vim.fn.stdpath "data" .. "/mason/packages/js-debug-adapter",
-        debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
+        debugger_path = "",
+        -- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
         -- debugger_path
         adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost", "node", "chrome" },
         log_file_path = "/home/birudo/dap_vscode_js.log", -- Path for file logging
