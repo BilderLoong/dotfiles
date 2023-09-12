@@ -70,8 +70,9 @@ zinit wait"1" lucid for \
 
 
 # https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
-zinit ice as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" atload'zicompinit; zicdreplay' \
+zinit ice as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" \
     mv"completions_zsh -> _tldr" \
     pick"_tldr" \
     atpull'!git reset --hard' 
 zinit light dbrgn/tealdeer
+as"completion"
