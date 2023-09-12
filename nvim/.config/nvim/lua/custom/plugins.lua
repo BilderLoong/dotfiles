@@ -436,7 +436,7 @@ local plugins = {
         debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
         -- debugger_path
         adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost", "node", "chrome" },
-        log_file_path =  vim.fn.stdpath ""/Users/birudo/dap_vscode_js.log", -- Path for file logging
+        log_file_path =  vim.fn.stdpath "" "/Users/birudo/dap_vscode_js.log", -- Path for file logging
         log_file_level = vim.log.levels.TRACE, -- Logging level for output to file. Set to false to disable file logging.
       }
     end,
