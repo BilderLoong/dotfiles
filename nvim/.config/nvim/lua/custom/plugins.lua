@@ -461,7 +461,6 @@ local plugins = {
 					{
 						-- use nvim-dap-vscode-js's pwa-node debug adapter
 						type = "pwa-node",
-						type = "pwa-node",
 						-- launch a new process to attach the debugger to
 						request = "launch",
 						-- name of the debug action you have to select for this config
