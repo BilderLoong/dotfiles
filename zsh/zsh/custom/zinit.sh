@@ -56,7 +56,7 @@ zinit wait lucid for \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' eval"ast-grep completions"  \
     zdharma-continuum/null \
-        atload'zicompinit; zicdreplay'\ 
+        atload'zicompinit; zicdreplay' \
     zdharma-continuum/null
 
 # Fish-like autosuggestions for zsh 
