@@ -483,12 +483,12 @@ local plugins = {
 			-- UI related https://github.com/mfussenegger/nvim-dap#goals
 			"rcarriga/nvim-dap-ui",
 			"theHamsta/nvim-dap-virtual-text",
-			{
-				"jay-babu/mason-nvim-dap.nvim",
-				dependencies = { "nvim-dap" },
-				cmd = { "DapInstall", "DapUninstall" },
-				opts = { handlers = {} },
-			},
+			-- {
+			-- 	"jay-babu/mason-nvim-dap.nvim",
+			-- 	dependencies = { "nvim-dap" },
+			-- 	cmd = { "DapInstall", "DapUninstall" },
+			-- 	opts = { handlers = {} },
+			-- },
 		},
 		config = function(_, opts)
 			require("dapui").setup()
