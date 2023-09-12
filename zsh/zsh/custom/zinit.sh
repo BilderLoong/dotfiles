@@ -54,7 +54,7 @@ zinit wait lucid for \
     Aloxaf/fzf-tab \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
-        has'ast-grep' id-as'sg-completions' \
+        has'ast-grep' id-as'sg-completions' eval" \
     zdharma-continuum/null
 
     # marlonrichert/zsh-autocomplete 
