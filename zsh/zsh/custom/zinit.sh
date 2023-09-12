@@ -35,8 +35,6 @@ zinit light-mode for \
 
 
 
-# autoload -Uz compinit
-# compinit
 
 # Meaing of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid atload'zicompinit; zicdreplay' for \
