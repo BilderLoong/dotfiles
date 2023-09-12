@@ -29,10 +29,6 @@ zinit light-mode for \
         atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval \
-        has"fnm" eval"fnm env --use-on-cd" id-as'fnm_env' \
-      zdharma-continuum/null  
-
-
 
 # zicompinit replace the below commands.
 # autoload -Uz compinit
