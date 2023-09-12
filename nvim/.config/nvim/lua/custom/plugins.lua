@@ -466,6 +466,7 @@ local plugins = {
 						-- name of the debug action you have to select for this config
 						name = "Launch current file in new node process (" .. language .. ")",
 						program = "${file}",
+            smartStep = true,
 						cwd = "${workspaceFolder}",
 					},
 				}
