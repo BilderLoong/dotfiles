@@ -54,22 +54,13 @@ zinit wait lucid for \
     Aloxaf/fzf-tab \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
-        has'ast-grep' id-as'sg-completions' eval" \
+        has'ast-grep' id-as'sg-completions' eval"ast-grep completions" atload'zicompinit; zicdreplay' \
     zdharma-continuum/null
-
-    # marlonrichert/zsh-autocomplete 
-    #   atclone"shell/key-bindings.zsh" \
-    #   atpull"%atclone" \
-    #   multisrc"shell/{completion,key-bindings}.zsh" \
-    #   id-as"junegunn/fzf_completions" \
-    # pick"/dev/null" junegunn/fzf 
 
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
 
-# zinit ice atload'zicompinit; zicdreplay' \
-    # zinit load zsh-users/zsh-completions 
 # Put this after other plugins may also bind "^I"
 # https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
 # https://github.com/Aloxaf/fzf-tab#install
