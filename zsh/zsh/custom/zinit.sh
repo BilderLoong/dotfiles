@@ -50,7 +50,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     Aloxaf/fzf-tab \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
-        has'ast-grep' id-as'sg-completions' eval" completions" \
+        has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
     zdharma-continuum/null
 
 # Fish-like autosuggestions for zsh 
