@@ -430,7 +430,6 @@ local plugins = {
 		dependencies = { "mfussenegger/nvim-dap" },
 		opts = function(_, default_nvchad_opts)
 			return {
-				node_path = "node",
 				-- debugger_path = vim.fn.stdpath "data" .. "/mason/packages/js-debug-adapter",
 				debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
 				adapters = {
