@@ -34,7 +34,7 @@ zinit light-mode for \
 
 
 
-
+# zicompinit replace the below commands.
 # autoload -Uz compinit
 # compinit
 
