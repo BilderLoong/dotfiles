@@ -432,9 +432,7 @@ local plugins = {
 			return {
 				node_path = "node",
 				-- debugger_path = vim.fn.stdpath "data" .. "/mason/packages/js-debug-adapter",
-				-- debugger_path = "/Users/birudo/Project/vscode-js-debug",
-				-- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
-				-- debugger_path
+				debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
 				adapters = {
 					"pwa-node",
 					"pwa-chrome",
