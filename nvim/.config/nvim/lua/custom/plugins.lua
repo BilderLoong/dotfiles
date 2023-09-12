@@ -134,7 +134,7 @@ local plugins = {
 				"prettierd",
 				-- "prettier",
 				"eslint_d",
-				"js-debug-adapter",
+				"js-debug-adapter@",
 				"json-lsp",
 				"css-lsp",
 
