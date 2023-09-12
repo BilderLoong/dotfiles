@@ -44,6 +44,7 @@ zinit wait lucid for \
     has'git' OMZL::git.zsh \
     has'git' OMZP::git \
     has'exa' DarrinTisdale/zsh-aliases-exa \
+      atload'zicompinit; zicdreplay' \
     zdharma-continuum/fast-syntax-highlighting \
         has"fnm" id-as'fnm_env' eval"fnm env --use-on-cd" \
     zdharma-continuum/null  \
