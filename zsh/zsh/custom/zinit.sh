@@ -61,12 +61,6 @@ zinit wait lucid for \
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
 
-# Put this after other plugins may also bind "^I"
-# https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
-# https://github.com/Aloxaf/fzf-tab#install
-# Got error for this plugin, given up
-# zinit light Aloxaf/fzf-tab
-
 zinit ice wait lucid as"command" from"gh-r"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
