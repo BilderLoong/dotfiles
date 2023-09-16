@@ -658,8 +658,10 @@ local plugins = {
 		end,
 	},
 
+  -- Make it easy to view messages.
   {
   'AckslD/messages.nvim',
+  cmd='Messages',
   
   }
 }
