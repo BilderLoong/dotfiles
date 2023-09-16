@@ -14,7 +14,7 @@ function M.start_tsserver()
 	})
 end
 
-function M.start_tsserver()
+function M.start_go()
 	--local cwd = vim.loop.cmd()
 	local root_dir =
 		vim.fs.dirname(vim.fs.find({ "tsconfig.json", "package.json", "jsconfig.json", ".git" }, { upward = true })[1])
