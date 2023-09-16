@@ -15,6 +15,7 @@ function M.start_tsserver()
 end
 
 local clients = vim.lsp.get_active_clients()
+vim.print(clients)
 
 return M
 
