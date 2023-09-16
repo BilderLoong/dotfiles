@@ -12,6 +12,8 @@ function M.start_tsserver()
 		cmd = { "typescript-language-server", "--stdio" },
 		root_dir = root_dir,
 	})
+
+  return client
 end
 
 return M
