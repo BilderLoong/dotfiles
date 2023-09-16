@@ -13,6 +13,7 @@ function M.start_tsserver()
 		root_dir = root_dir,
 	})
 end
+
 function M.start_tsserver()
 	--local cwd = vim.loop.cmd()
 	local root_dir =
