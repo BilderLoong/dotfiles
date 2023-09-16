@@ -662,7 +662,7 @@ local plugins = {
   {
     "AckslD/messages.nvim",
     cmd = "Messages",
-    config = function(_,opts)
+    config = function(_, opts)
       require("messages").setup()
     end,
   },
