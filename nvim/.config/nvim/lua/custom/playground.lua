@@ -1,8 +1,8 @@
 local M = {}
 
 function M.start_tsserver()
-  local reuse_client = opts.reuse_client
-	or function(client, conf)
+
+	function(client, conf)
 		return client.config.root_dir == conf.root_dir and client.name == conf.name
 	end
 
