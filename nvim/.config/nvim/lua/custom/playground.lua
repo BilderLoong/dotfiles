@@ -2,9 +2,8 @@ local M = {}
 
 function M.start_tsserver()
 
-	function(client, conf)
+  if 
 		return client.config.root_dir == conf.root_dir and client.name == conf.name
-	end
 
 	--local cwd = vim.loop.cmd()
 	local root_dir =
