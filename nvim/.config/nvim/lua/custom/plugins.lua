@@ -659,7 +659,8 @@ local plugins = {
 	},
 
   {
-    
+  'AckslD/messages.nvim',
+  
   }
 }
 
