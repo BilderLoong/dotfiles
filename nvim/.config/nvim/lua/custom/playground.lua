@@ -1,6 +1,11 @@
 local M = {}
 
 function M.start_tsserver()
+  local reuse_client = opts.reuse_client
+	or function(client, conf)
+		return client.config.root_dir == conf.root_dir and client.name == conf.name
+	end
+
 	--local cwd = vim.loop.cmd()
 	local root_dir =
 		vim.fs.dirname(vim.fs.find({ "tsconfig.json", "package.json", "jsconfig.json", ".git" }, { upward = true })[1])
