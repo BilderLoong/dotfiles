@@ -2,7 +2,7 @@ local M = {}
 
 function M.start_tsserver()
 
-  if 
+  if lsp.get_clients(
 		return client.config.root_dir == conf.root_dir and client.name == conf.name
 
 	--local cwd = vim.loop.cmd()
