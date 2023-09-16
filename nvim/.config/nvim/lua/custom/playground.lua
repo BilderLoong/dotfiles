@@ -13,7 +13,7 @@ function M.start_tsserver()
 		root_dir = root_dir,
 	})
 
-  return client
+  return client_id
 end
 
 return M
