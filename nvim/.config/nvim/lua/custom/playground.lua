@@ -7,7 +7,7 @@ function M.start_tsserver()
 
 	-- vim.print("root_dir", root_dir)
 
-	local client = vim.lsp.start({
+	local client_id = vim.lsp.start({
 		name = "tsserver",
 		cmd = { "typescript-language-server", "--stdio" },
 		root_dir = root_dir,
