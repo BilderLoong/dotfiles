@@ -15,3 +15,5 @@ function M.start_tsserver()
 end
 
 return M
+
+vim.print(123)
