@@ -335,8 +335,8 @@ local plugins = {
       -- https://www.reddit.com/r/neovim/comments/15bfz5f/how_to_open_nvim_tree_afjer_restoring_a_session/
       pre_save_cmds = {
         -- Doesn't support `:h lua-heredoc` here.
-        "lua if vim.fn.exists(':NvimTreeClose') then vim.cmd('tabdo NvimTreeClose') end",
-        "lua if vim.fn.exists(':DiffviewClose') then vim.cmd('tabdo DiffviewClose') end",
+        "lua if vim.fn.exists(':NvimTreeClose') > 0 then vim.cmd('tabdo NvimTreeClose') end",
+        "lua if vim.fn.exists(':DiffviewClose') > 0 then vim.cmd('tabdo DiffviewClose') end",
       },
     },
     config = function(_, opts)
