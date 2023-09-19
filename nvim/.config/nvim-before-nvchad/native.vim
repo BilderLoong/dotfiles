@@ -52,9 +52,6 @@ noremap! jk <Esc>
 " Set format option, make format line (gq) work for Chinese. 
 set formatoptions+=mM
 
-" Snippet Maping
-nmap <Leader>n ONOTE@HZL<Esc>gcc
-
 lua vim.api.nvim_set_hl(0, 'Cursor', { reverse = true })
 
 " Ordinary neovim
