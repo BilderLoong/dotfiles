@@ -44,8 +44,10 @@ require("lazy").setup({
 			})
 		end,
 	},
+
   {
     "wellle/targets.vim",
     event = "BufReadPost",
   },
+
 }, {})
