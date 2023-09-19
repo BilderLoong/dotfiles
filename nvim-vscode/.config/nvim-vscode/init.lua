@@ -1,5 +1,5 @@
 
-vim.opt.mapleader = "<Space>"
+vim.opt.mapleader = " "
 
 vim.api.nvim_set_keymap(
 
