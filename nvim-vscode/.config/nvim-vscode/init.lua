@@ -23,7 +23,6 @@ vim.cmd([[
 ]])
 
 require("lazy").setup({
-
   {
     "unblevable/quick-scope",
     event = "BufReadPost",
