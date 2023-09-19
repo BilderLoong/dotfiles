@@ -45,13 +45,12 @@ require("lazy").setup({
 		end,
 	},
 
-  {
-    "wellle/targets.vim",
-    event = "BufReadPost",
-  },
-
+	{
+		"wellle/targets.vim",
+		event = "BufReadPost",
+	},
 }, {
-    defaults = {
-          lazy = true, -- should plugins be lazy-loaded?
-    }
+	defaults = {
+		lazy = true, -- should plugins be lazy-loaded?
+	},
 })
