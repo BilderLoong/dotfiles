@@ -13,7 +13,6 @@ vim.g.mapleader = " "
 -- end
 -- vim.opt.rtp:prepend(lazypath)
 
-
 ---@type NvPluginSpec[]
 -- require("lazy").setup({
 -- 	-- {
@@ -94,7 +93,6 @@ vim.cmd([[
   nnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
 ]])
 
-
-vim.keymap.set('n','gr',function ()
- require("vscode-neovim").notify('editor.action.referenceSearch.trigger')
+vim.keymap.set("n", "gr", function()
+	require("vscode-neovim").notify("editor.action.referenceSearch.trigger")
 end)
