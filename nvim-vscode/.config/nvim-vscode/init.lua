@@ -95,4 +95,4 @@ vim.cmd([[
 ]])
 
 
-vim.
+vim.keymap.set()
