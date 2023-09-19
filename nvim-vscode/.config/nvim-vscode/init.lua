@@ -50,4 +50,6 @@ require("lazy").setup({
     event = "BufReadPost",
   },
 
-}, {})
+}, {
+  
+})
