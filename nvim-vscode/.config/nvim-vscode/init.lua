@@ -95,4 +95,4 @@ vim.cmd([[
 ]])
 
 
-vim.api.
+vim.
