@@ -56,6 +56,10 @@ require("lazy").setup({
 	},
 }, {
 	performance = {
+
+	defaults = {
+		lazy = true, -- should plugins be lazy-loaded?
+	},
 		rtp = {
 			disabled_plugins = {
 				"2html_plugin",
