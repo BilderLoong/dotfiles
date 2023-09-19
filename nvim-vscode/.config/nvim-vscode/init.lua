@@ -4,7 +4,7 @@ vim.opt.mapleader = "<Space>"
 vim.api.nvim_set_keymap(
 
 )
-nnoremap <Leader>o o<Esc>
+-- nnoremap <Leader>o o<Esc>
 
 vim.cmd([[
   nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
