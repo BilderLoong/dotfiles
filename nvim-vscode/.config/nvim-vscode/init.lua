@@ -1,5 +1,5 @@
 
-let mapleader = "\<Space>"
+mapleader = "\<Space>"
 
 vim.cmd([[
   nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
