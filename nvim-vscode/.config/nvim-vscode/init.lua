@@ -88,7 +88,7 @@ require("lazy").setup({
 	},
 })
 
-vim.print(re)
+vim.print(require("vscode-neovim").notify)
 
 vim.cmd([[
   nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
