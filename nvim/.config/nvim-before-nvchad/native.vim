@@ -37,9 +37,6 @@ noremap Y y$
 " fast insert black line.
 nnoremap <Leader>o o<Esc>
 
-" fast enter command line mode.
-map <Leader>; :
-
 " fast system clipboard.
 nnoremap <Leader>y "*y
 xnoremap <Leader>y "*y
