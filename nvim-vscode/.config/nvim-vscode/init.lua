@@ -52,7 +52,7 @@ require("lazy").setup({
 
 	{
 		"ggandor/lightspeed.nvim",
-		event = BufEnterLike,
+		event = "BufReadPost",
 	},
 }, {
 	defaults = {
