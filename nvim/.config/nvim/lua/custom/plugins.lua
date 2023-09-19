@@ -110,15 +110,12 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
-  {
-    "folke/trouble.nvim",
-    cmd = { "TroubleToggle" },
-  },
 
   {
     "Pocco81/auto-save.nvim",
     event = "BufWritePre",
   },
+
   {
     "williamboman/mason.nvim",
     opts = {
@@ -164,15 +161,18 @@ local plugins = {
       },
     },
   },
+
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = { "TroubleToggle" },
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
   },
+
   {
     "romgrk/nvim-treesitter-context",
     event = BufEnterLike,
@@ -192,6 +192,7 @@ local plugins = {
       }
     end,
   },
+
   {
     "nanotee/zoxide.vim",
     cmd = { "Z", "Tzi", "Lzi", "Zi", "Lz" },
@@ -201,6 +202,7 @@ local plugins = {
       },
     },
   },
+
   {
     "ibhagwan/fzf-lua",
     cmd = { "FzfLua" },
@@ -217,6 +219,7 @@ local plugins = {
       }
     end,
   },
+
   {
     "junegunn/fzf.vim",
     dependencies = {
