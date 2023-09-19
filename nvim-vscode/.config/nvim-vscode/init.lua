@@ -52,6 +52,6 @@ require("lazy").setup({
 
 }, {
     defaults = {
-      
+          lazy = true, -- should plugins be lazy-loaded?
     }
 })
