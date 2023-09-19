@@ -13,7 +13,7 @@ vim.print('lazypath',lazypath)
 --
 vim.opt.rtp:prepend(lazypath)
 
-vim.opt.mapleader = " "
+vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap(
 
