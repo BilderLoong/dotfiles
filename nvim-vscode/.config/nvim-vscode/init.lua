@@ -94,5 +94,5 @@ vim.g.mapleader = " "
 -- ]])
 
 vim.keymap.set("n", "gr", function()
-	require("vscode-neovim").notify("")
+	require("vscode-neovim").notify("editor.action.revealDefinitionAside")
 end)
