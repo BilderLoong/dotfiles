@@ -49,6 +49,11 @@ require("lazy").setup({
 		"wellle/targets.vim",
 		event = "BufReadPost",
 	},
+
+	{
+		"ggandor/lightspeed.nvim",
+		event = BufEnterLike,
+	},
 }, {
 	defaults = {
 		lazy = true, -- should plugins be lazy-loaded?
