@@ -27,26 +27,26 @@ require("lazy").setup({
 		end,
 	},
 
-	{
-		"kylechui/nvim-surround",
-		version = "*", -- Use for stability; omit to use `main` branch for the latest features
-		keys = { "c", "y", "d" },
-		config = function()
-			require("nvim-surround").setup({
-				-- Configuration here, or leave empty to use defaults
-			})
-		end,
-	},
-
-	{
-		"wellle/targets.vim",
-		event = "BufReadPost",
-	},
-
-	{
-		"ggandor/lightspeed.nvim",
-		event = "BufReadPost",
-	},
+	-- {
+	-- 	"kylechui/nvim-surround",
+	-- 	version = "*", -- Use for stability; omit to use `main` branch for the latest features
+	-- 	keys = { "c", "y", "d" },
+	-- 	config = function()
+	-- 		require("nvim-surround").setup({
+	-- 			-- Configuration here, or leave empty to use defaults
+	-- 		})
+	-- 	end,
+	-- },
+	--
+	-- {
+	-- 	"wellle/targets.vim",
+	-- 	event = "BufReadPost",
+	-- },
+	--
+	-- {
+	-- 	"ggandor/lightspeed.nvim",
+	-- 	event = "BufReadPost",
+	-- },
 }, {
 	performance = {
 
