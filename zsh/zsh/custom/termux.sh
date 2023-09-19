@@ -2,7 +2,7 @@
     alias xc='termux-clipboard-set'
     alias xp='termux-clipboard-get'
 
-    open () 
+    termux_open () 
     { 
         termux-share "$@"
     }
