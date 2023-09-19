@@ -88,7 +88,7 @@ require("lazy").setup({
 	},
 })
 
--- nnoremap <Leader>o o<Esc>
+vim.print()
 
 vim.cmd([[
   nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
