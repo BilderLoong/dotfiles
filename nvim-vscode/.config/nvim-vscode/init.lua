@@ -12,7 +12,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
 
 -- nnoremap <Leader>o o<Esc>
 
