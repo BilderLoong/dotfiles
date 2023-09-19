@@ -25,5 +25,4 @@ vim.cmd([[
   nnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
 ]])
 
-
-
+require("lazy").setup(plugins, opts)
