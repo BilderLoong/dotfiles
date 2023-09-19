@@ -96,5 +96,5 @@ vim.cmd([[
 
 
 vim.keymap.set('n','gr',function ()
- require('require("vscode-neovim").notify') 
+ require("vscode-neovim").notify()
 end)
