@@ -22,6 +22,7 @@ vim.cmd([[
   nnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
 ]])
 
+---@type NvPluginSpec[]
 require("lazy").setup({
   {
     "unblevable/quick-scope",
