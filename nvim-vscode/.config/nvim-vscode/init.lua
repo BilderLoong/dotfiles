@@ -51,5 +51,5 @@ require("lazy").setup({
   },
 
 }, {
-  
+    defaults = {
 })
