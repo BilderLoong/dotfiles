@@ -95,4 +95,6 @@ vim.cmd([[
 ]])
 
 
-vim.keymap.set('n','gr')
+vim.keymap.set('n','gr',function ()
+  
+end)
