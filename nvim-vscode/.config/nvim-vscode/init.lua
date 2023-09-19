@@ -1,6 +1,9 @@
 
 vim.opt.mapleader = "<Space>"
 
+vim.api.nvim_set_keymap(
+
+)
 nnoremap <Leader>o o<Esc>
 
 vim.cmd([[
