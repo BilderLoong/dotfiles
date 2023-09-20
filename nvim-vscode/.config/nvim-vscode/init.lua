@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-https://dev.sankuai.com/code/repo-detail/sjst/fe.rms-orderdish-mobile/file/detail?branch=370bf8f8ae0cfcdd40bd178fe071fad3b4ffb3c3&path=srs.config.ts#L20
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
