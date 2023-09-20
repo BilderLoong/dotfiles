@@ -263,7 +263,7 @@ local function LSP()
 
   ]])
 
-
+keymap.set({'n'})
 	vim.keymap.set("n", "gr", function()
 		vscode_neovim.notify("editor.action.goToReferences")
 	end)
