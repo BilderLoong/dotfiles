@@ -2,11 +2,11 @@ vim.g.mapleader = " "
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
-local function notify()
-	return function()
-		vscode_neovim.notify(...)
-	end
-end
+-- local function notify()
+-- 	return function()
+-- 		vscode_neovim.notify(...)
+-- 	end
+-- end
 
 local function plugins()
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
