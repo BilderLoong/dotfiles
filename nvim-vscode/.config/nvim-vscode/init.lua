@@ -167,7 +167,7 @@ local function plugins()
 		{
 			"folke/flash.nvim",
 			event = "BufReadPost",
-			-@type Flash.Config
+			---@type Flash.Config
 			opts = {},
       keys = {
         { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
