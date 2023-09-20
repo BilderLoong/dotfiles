@@ -166,7 +166,7 @@ local function plugins()
 
 		{
 			"folke/flash.nvim",
-			event = "VeryLazy",
+			event = "BufReadPost",
 			---@type Flash.Config
 			opts = {},
       keys = {
