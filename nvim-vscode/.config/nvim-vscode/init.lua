@@ -5,7 +5,7 @@ local keymap = vim.keymap
 local function nofity(...)
   local args = ...
 	return function()
-		vscode_neovim.notify(...)
+		vscode_neovim.notify(args)
 	end
 end
 
