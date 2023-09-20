@@ -58,7 +58,7 @@ local function plugins()
 			"mfussenegger/nvim-treehopper",
 			dependencies = "nvim-treesitter/nvim-treesitter",
 			event = "BufReadPost",
-			keys = { "v", "y", "d", "c" },
+			-- keys = { "v", "y", "d", "c" },
 			config = function(_, opts)
         vim.keymap.
 			end,
