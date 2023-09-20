@@ -49,7 +49,7 @@ local function plugins()
 		},
 
     {
-
+"nvim-treesitter/nvim-treesitter",
     },
 
 		{
