@@ -162,7 +162,20 @@ local function plugins()
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			event = "BufReadPost",
 			dependencies = "nvim-treesitter/nvim-treesitter",
-		},
+	{
+  "folke/flash.nvim",
+  event = "VeryLazy",
+  ---@type Flash.Config
+  opts = {},
+  -- stylua: ignore
+  keys = {
+    { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
+    { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+  },
+}	},
 
 		-- Doesn't in VSCodeNeovim due to dependencies of LSP: https://github.com/mfussenegger/nvim-treehopper/blob/5a28bff46c05d28bdb4bcaef67e046eb915a9390/lua/tsht.lua#L96
 		--[[ {
