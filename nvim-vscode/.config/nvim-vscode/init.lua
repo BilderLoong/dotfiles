@@ -262,7 +262,7 @@ local function LSP()
   ]])
 
 	keymap.set({ "n", "x" }, "ca", notify("editor.action.quickFix"), { desc = "Code Action" })
-	keymap.set({ "n", "x" }, "cf", notify(""), { desc = "Code Action" })
+	keymap.set({ "n", "x" }, "cf", notify("gitlens.copyRemoteFileUrlToClipboard"), { desc = "Code Action" })
 
 	vim.keymap.set("n", "gr", function()
 		vscode_neovim.notify("editor.action.goToReferences")
