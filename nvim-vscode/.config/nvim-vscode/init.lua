@@ -174,6 +174,7 @@ local function plugins()
 				vim.keymap.set({ "o", "x" }, "m", ":<C-U>lua require('tsht').nodes()<CR>")
 			end,
 		}, ]]
+
 	}, {
 		performance = {
 
