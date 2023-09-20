@@ -5,11 +5,11 @@ local keymap = vim.keymap
 
 keymap.set("", "<Space>", "<Nop>")
 
--- local function notify()
--- 	return function()
--- 		vscode_neovim.notify(...)
--- 	end
--- end
+local function notify()
+	return function()
+		vscode_neovim.notify(...)
+	end
+end
 
 local function plugins()
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
