@@ -2,9 +2,8 @@ vim.g.mapleader = " "
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
-local function notify
+local function notify()
 	return function()
-    print(...)
 		vscode_neovim.notify(...)
 	end
 end
