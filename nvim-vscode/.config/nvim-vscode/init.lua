@@ -88,6 +88,7 @@ function plugins()
 		},
 	})
 end
+plugins()
 
 -- vim.cmd([[
 --   nnoremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
