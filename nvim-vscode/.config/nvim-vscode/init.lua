@@ -3,7 +3,8 @@ local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
 local function nofity(...)
-	return function(...)
+  p
+	return function()
 		vscode_neovim.notify(...)
 	end
 end
