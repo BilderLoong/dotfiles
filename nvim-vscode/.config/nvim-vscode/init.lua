@@ -48,7 +48,9 @@ local function plugins()
 			event = "BufReadPost",
 		},
 
-    
+    {
+
+    },
 
 		{
 			"nvim-treesitter/nvim-treesitter-textobjects",
