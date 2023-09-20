@@ -60,7 +60,7 @@ local function plugins()
 			event = "BufReadPost",
 			-- keys = { "v", "y", "d", "c" },
 			config = function(_, opts)
-        vim.set
+        vim.ke
 			end,
 		},
 	}, {
