@@ -1,4 +1,12 @@
 vim.g.mapleader = " "
+local vscode_neovim = require("vscode-neovim")
+local keymap = vim.keymap
+
+local function nofity(...)
+	return function(...)
+		vscode_neovim.notify(...)
+	end
+end
 
 local function plugins()
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -43,10 +51,11 @@ local function plugins()
 			event = "BufReadPost",
 		},
 
-		{
-			"ggandor/lightspeed.nvim",
-			event = "BufReadPost",
-		},
+		-- In favor of flash.nvim.
+		-- {
+		-- 	"ggandor/lightspeed.nvim",
+		-- 	event = "BufReadPost",
+		-- },
 
 		{
 			"nvim-treesitter/nvim-treesitter",
@@ -156,6 +165,9 @@ local function plugins()
 					},
 				}
 			end,
+			config = function(_, opts)
+				require("nvim-treesitter.configs").setup(opts)
+			end,
 		},
 
 		{
@@ -169,6 +181,7 @@ local function plugins()
 			event = "BufReadPost",
 			---@type Flash.Config
 			opts = {},
+       -- stylua: ignore
       keys = {
         { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
         { "m", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
@@ -230,7 +243,81 @@ local function plugins()
 end
 plugins()
 
--- LSP stuff
-vim.keymap.set("n", "gr", function()
-	require("vscode-neovim").notify("editor.action.goToReferences")
-end)
+-- LSP stuffs
+local function LSP()
+	vim.cmd([[
+    nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
+    xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
+
+    nnoremap <leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
+
+    nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
+    nnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
+    xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
+    map gc  <Plug>VSCodeCommentary
+    nmap gcc <Plug>VSCodeCommentaryLine
+
+  ]])
+
+	vim.keymap.set("n", "gr", function()
+		vscode_neovim.notify("editor.action.goToReferences")
+	end)
+
+	vim.keymap.set("n", "<leader>fm", function()
+		vscode_neovim.notify("editor.action.formatDocument")
+	end)
+end
+LSP()
+
+-- Folder
+local function folder()
+	vim.cmd([[
+    nnoremap zc <Cmd>call VSCodeNotify('editor.fold')<CR>
+    nnoremap zo <Cmd>call VSCodeNotify('editor.unfold')<CR>
+    nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
+    nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
+
+  ]])
+end
+folder()
+
+-- Control VSCode native ui.
+local function vscode_ui()
+	-- To make the below take effect, need to add thoese keys in VSCode's keymap config: https://github.com/vscode-neovim/vscode-neovim#adding-keybindings
+	vim.cmd([[
+    " Move cursor between windows in a tab.
+    nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
+    xnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
+    nnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
+    xnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
+    nnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
+    xnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
+    nnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
+    xnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
+
+    " Toggle Second Sidebar.
+    nnoremap <M-n> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
+    xnoremap <M-n> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
+]])
+
+	--  Toggle Primary Sidebar.
+	keymap.set({ "n", "x", "i" }, "<C-n>", function()
+		-- vscode_neovim.notify("workbench.action.tog")
+		vscode_neovim.notify("workbench.action.focusSideBar")
+	end)
+
+	keymap.set("n", "<leader>e", function()
+		vscode_neovim.notify("workbench.action.focusSideBar")
+	end)
+end
+vscode_ui()
+
+local function vscode_editor()
+	keymap.set("n", "]c", function()
+		vscode_neovim.notify("workbench.action.editor.nextChange")
+	end)
+	keymap.set("n", "[c", function()
+		vscode_neovim.notify("workbench.action.editor.previousChange")
+	end)
+end
+vscode_editor()

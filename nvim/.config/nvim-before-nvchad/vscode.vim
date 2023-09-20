@@ -38,7 +38,7 @@ xnoremap <M-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CoC
+" LSP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
 xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
