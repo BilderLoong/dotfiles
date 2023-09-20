@@ -48,12 +48,11 @@ local function plugins()
 			event = "BufReadPost",
 		},
 
-
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    event = BufEnterLike,
-    dependencies = "nvim-treesitter/nvim-treesitter",
-  },
+		{
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			event = BufEnterLike,
+			dependencies = "nvim-treesitter/nvim-treesitter",
+		},
 	}, {
 		performance = {
 
