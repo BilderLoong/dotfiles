@@ -52,7 +52,7 @@ local function plugins()
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			event = "BufReadPost",
 			dependencies = "nvim-treesitter/nvim-treesitter",
-	{
+		},{
     "mfussenegger/nvim-treehopper",
     dependencies = "nvim-treesitter/nvim-treesitter",
     event = "BufReadPost",
@@ -60,7 +60,7 @@ local function plugins()
     config = function(_, opts)
       require("core.utils").load_mappings "nvim_treehopper"
     end,
-  }	},
+  }
 	}, {
 		performance = {
 
