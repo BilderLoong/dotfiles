@@ -5,7 +5,7 @@ local lint = null_ls.builtins.diagnostics
 local ca = null_ls.builtins.code_actions
 
 local sources = {
-  -- Web developement
+  -- web developement
   fmt.prettierd,
   -- fmt.prettier,
   ca.eslint_d,
@@ -13,7 +13,7 @@ local sources = {
 
   fmt.stylua,
 
-  -- Shell
+  -- shell
   lint.shellcheck.with {
     extra_filetypes = { "sh", "zsh" },
   },
@@ -21,11 +21,11 @@ local sources = {
     extra_filetypes = { "sh", "zsh" },
   },
 
-  -- Python
+  -- python
   fmt.black.with { extra_args = { "--fast" } },
   lint.ruff,
 
-  -- Misc
+  -- misc
   -- null_ls.builtins.diagnostics.cspell,
   -- null_ls.builtins.code_actions.cspell,
 }
