@@ -88,7 +88,6 @@ local function plugins()
 		},
 	})
 end
-
 plugins()
 
 vim.keymap.set("n", "gr", function()
