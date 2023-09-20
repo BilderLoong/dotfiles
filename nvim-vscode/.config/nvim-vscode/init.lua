@@ -4,6 +4,7 @@ local keymap = vim.keymap
 
 local function notify(...)
 	return function()
+    print(...)
 		-- vscode_neovim.notify(...)
 	end
 end
