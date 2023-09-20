@@ -88,6 +88,7 @@ function plugins()
 		},
 	})
 end
+
 plugins()
 
 -- vim.cmd([[
