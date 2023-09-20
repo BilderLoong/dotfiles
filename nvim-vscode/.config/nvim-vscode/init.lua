@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
