@@ -311,7 +311,7 @@ local function vscode_ui()
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
-	keymap.set("n", "<leader>e", function()
+	keymap.set("n", "<Leader>e", function()
 		vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 end
