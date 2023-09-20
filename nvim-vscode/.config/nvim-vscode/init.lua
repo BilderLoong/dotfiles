@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+function plugins()
+	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 	if not vim.loop.fs_stat(lazypath) then
 		vim.fn.system({
 			"git",
@@ -85,8 +87,6 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 			},
 		},
 	})
-function plugins()
-	
 end
 
 plugins()
