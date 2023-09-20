@@ -48,10 +48,15 @@ local function plugins()
 			event = "BufReadPost",
 		},
 
-    {
-"nvim-treesitter/nvim-treesitter",
-
+  {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
     },
+    opts = function()
+      return require "custom.configs.treesitter"
+    end,
+  },
 
 		{
 			"nvim-treesitter/nvim-treesitter-textobjects",
