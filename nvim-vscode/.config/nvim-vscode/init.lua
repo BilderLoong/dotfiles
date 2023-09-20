@@ -253,6 +253,7 @@ local function LSP()
     xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
 
     nnoremap <leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
+    xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
 
     nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
     nnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
