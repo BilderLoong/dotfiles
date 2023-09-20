@@ -249,31 +249,7 @@ plugins()
 
 -- LSP stuffs
 local function LSP()
-	vim.cmd([[
-    nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
-    xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
-
-    nnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
-    xnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR> " Replace the default quickfix into code action.
-
-    nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
-    nnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
-    xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
-    map gc  <Plug>VSCodeCommentary
-    nmap gcc <Plug>VSCodeCommentaryLine
-
-  ]])
-
-keymap.set({'n','x'},'ca',function ()
-  
-end)
-	vim.keymap.set("n", "gr", function()
-		vscode_neovim.notify("editor.action.goToReferences")
-	end)
-
-	vim.keymap.set("n", "<Leader>fm", function()
-		vscode_neovim.notify("editor.action.formatDocument")
-	end)
+	
 end
 LSP()
 
