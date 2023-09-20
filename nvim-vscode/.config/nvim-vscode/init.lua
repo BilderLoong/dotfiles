@@ -8,7 +8,7 @@ keymap.set("", "<Space>", "<Nop>")
 local function notify(method)
 	return function()
 		-- vscode_neovim.notify(...)
-		vscode_neovim.notify(...)
+		vscode_neovim.notify(method)
 	end
 end
 
