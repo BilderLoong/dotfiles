@@ -3,6 +3,8 @@ vim.g.mapleader = " "
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
+keymap.set()
+
 -- local function notify()
 -- 	return function()
 -- 		vscode_neovim.notify(...)
