@@ -47,6 +47,13 @@ local function plugins()
 			"ggandor/lightspeed.nvim",
 			event = "BufReadPost",
 		},
+
+
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    event = BufEnterLike,
+    dependencies = "nvim-treesitter/nvim-treesitter",
+  },
 	}, {
 		performance = {
 
