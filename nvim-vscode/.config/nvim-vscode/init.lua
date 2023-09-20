@@ -16,7 +16,6 @@ local function plugins()
 
 	---@type NvPluginSpec[]
 	require("lazy").setup({
-    -
 		{
 			"unblevable/quick-scope",
 			event = "BufReadPost",
