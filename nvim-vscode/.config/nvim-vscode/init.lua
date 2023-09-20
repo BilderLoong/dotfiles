@@ -53,7 +53,6 @@ local function plugins()
 			opts = function()
 				return {
 					highlight = {
-
 						enable = false,
 						additional_vim_regex_highlighting = false,
 					},
