@@ -268,7 +268,6 @@ local function LSP()
 	end)
 
 	vim.keymap.set("n", "<Leader>fm", function()
-    vim.print('123')
 		vscode_neovim.notify("editor.action.formatDocument")
 	end)
 end
