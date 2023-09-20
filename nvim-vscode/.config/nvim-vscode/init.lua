@@ -253,7 +253,6 @@ local function LSP()
     nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
     xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
 
-
     nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
     nnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
     xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
@@ -262,7 +261,7 @@ local function LSP()
 
   ]])
 
-keymap.set({'n','x'},'ca',notify('editor.action.quickFix'))
+	keymap.set({ "n", "x" }, "ca", notify("editor.action.quickFix"))
 	vim.keymap.set("n", "gr", function()
 		vscode_neovim.notify("editor.action.goToReferences")
 	end)
