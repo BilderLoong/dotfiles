@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
-keymap.set("", "<Space>", "<Nop>")
+-- keymap.set("", "<Space>", "<Nop>")
 
 -- local function notify()
 -- 	return function()
