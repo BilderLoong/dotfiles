@@ -60,7 +60,7 @@ local function plugins()
 			event = "BufReadPost",
 			-- keys = { "v", "y", "d", "c" },
 			config = function(_, opts)
-				require("core.utils").load_mappings("nvim_treehopper")
+        vim.set
 			end,
 		},
 	}, {
