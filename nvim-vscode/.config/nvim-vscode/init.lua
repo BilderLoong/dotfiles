@@ -164,7 +164,7 @@ local function plugins()
 			dependencies = "nvim-treesitter/nvim-treesitter",
 		},
 
-    -- https://github.com/mfussenegger/nvim-treehopper/blob/5a28bff46c05d28bdb4bcaef67e046eb915a9390/lua/tsht.lua#L96
+		-- https://github.com/mfussenegger/nvim-treehopper/blob/5a28bff46c05d28bdb4bcaef67e046eb915a9390/lua/tsht.lua#L96
 		--[[ {
 			"mfussenegger/nvim-treehopper",
 			dependencies = "nvim-treesitter/nvim-treesitter",
