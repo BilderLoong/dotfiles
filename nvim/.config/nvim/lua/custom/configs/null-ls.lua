@@ -8,7 +8,7 @@ local sources = {
   -- web developement
   fmt.prettierd,
   -- fmt.prettier,
-  ca.eslint_d,
+  -- ca.eslint_d,
   -- ca.eslint,
   ca.gitrebase,
 
