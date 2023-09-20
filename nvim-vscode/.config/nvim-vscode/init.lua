@@ -118,7 +118,7 @@ local function plugins()
 
 					-- https://github.com/JoosepAlviste/nvim-ts-context-commentstring/wiki/Integrations#plugins-with-a-pre-comment-hook
 					context_commentstring = {
-						enable = true,
+						enable = false,
 						enable_autocmd = false,
 					},
 
