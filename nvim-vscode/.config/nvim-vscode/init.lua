@@ -253,9 +253,6 @@ local function LSP()
     nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
     xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
 
-    nnoremap <Leader>zo <Cmd>call VSCodeNotify('editor.action.organizeImports')<CR>
-    nnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
-    xnoremap <Leader>cf <Cmd>call VSCodeNotify('gitlens.copyRemoteFileUrlToClipboard')<CR> 
     map gc  <Plug>VSCodeCommentary
     nmap gcc <Plug>VSCodeCommentaryLine
 
