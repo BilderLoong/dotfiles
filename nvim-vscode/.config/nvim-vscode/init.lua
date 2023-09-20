@@ -60,7 +60,10 @@ local function plugins()
 			event = "BufReadPost",
 			-- keys = { "v", "y", "d", "c" },
 			config = function(_, opts)
-        vim.keymap.set('n','m',)
+        vim.keymap.set('n','m',
+
+      ":<C-U>lua require('tsht').nodes()<CR>",
+        )
 			end,
 		},
 	}, {
