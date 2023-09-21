@@ -445,8 +445,6 @@ local plugins = {
             tyd = "textDocument/typeDefinition",
           },
 
-          -- lightbulb
-                    --
 
         },
       }
