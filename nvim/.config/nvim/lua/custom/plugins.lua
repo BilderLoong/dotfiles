@@ -440,6 +440,9 @@ local plugins = {
           keys = {
             vsplit = "v",
           },
+            methods = {
+      'tyd' = 'textDocument/typeDefinition'
+    }
         },
       }
     end,
