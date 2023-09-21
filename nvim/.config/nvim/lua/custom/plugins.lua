@@ -444,7 +444,7 @@ local plugins = {
           methods = {
             tyd = "textDocument/typeDefinition",
           },
-          -- https://github.com/nvimdev/lspsaga.nvim/blob/ac29d673d9edc437a05cce30fce1c5b070a25664/lua/lspsaga/init.lua#L55
+          -- Default: https://github.com/nvimdev/lspsaga.nvim/blob/ac29d673d9edc437a05cce30fce1c5b070a25664/lua/lspsaga/init.lua#L55
           lightbulb = {
             enable = false,
           },
