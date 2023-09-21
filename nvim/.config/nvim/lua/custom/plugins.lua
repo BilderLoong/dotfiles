@@ -444,10 +444,10 @@ local plugins = {
           methods = {
             tyd = "textDocument/typeDefinition",
           },
-lightbulb = {
-  
-}
 
+          lightbulb = {
+            enable = false,
+          },
         },
       }
     end,
