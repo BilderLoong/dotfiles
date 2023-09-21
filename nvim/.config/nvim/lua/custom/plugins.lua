@@ -446,6 +446,7 @@ local plugins = {
             tyd = "textDocument/typeDefinition",
           },
         },
+        
       }
     end,
     dependencies = {
