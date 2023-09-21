@@ -440,13 +440,11 @@ local plugins = {
           keys = {
             vsplit = "v",
             split = "s",
-            shuttle = "i",
           },
           methods = {
             tyd = "textDocument/typeDefinition",
           },
         },
-        
       }
     end,
     dependencies = {
