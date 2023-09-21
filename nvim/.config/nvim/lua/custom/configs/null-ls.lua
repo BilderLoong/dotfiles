@@ -9,7 +9,7 @@ local sources = {
   -- fmt.prettierd,
   fmt.prettier,
   -- ca.eslint_d,
-  ca.eslint,
+  -- ca.eslint,
   ca.gitrebase,
 
   fmt.stylua,
