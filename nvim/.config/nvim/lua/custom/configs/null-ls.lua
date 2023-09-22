@@ -11,7 +11,9 @@ local sources = {
     timeout = 10000,
   },
   -- fmt.prettier,
-  ca.eslint_d,
+  ca.eslint_d.with{
+    
+  },
   -- ca.eslint,
   ca.gitrebase,
 
