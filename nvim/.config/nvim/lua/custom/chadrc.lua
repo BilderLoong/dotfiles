@@ -35,7 +35,7 @@ local M = {
 
 		statusline = {
 			overriden_modules = function(modules)
-				modules[5] = 
+				modules[5] = nil
 			end,
 		},
 	},
