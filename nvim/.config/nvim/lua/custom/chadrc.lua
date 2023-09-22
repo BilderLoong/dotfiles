@@ -37,7 +37,7 @@ local M = {
 			overriden_modules = function(modules)
 				vim.defer_fn(function()
 					vim.print(modules)
-				end,)
+				end,1)
 				modules.remove(modules, 5)
 			end,
 		},
