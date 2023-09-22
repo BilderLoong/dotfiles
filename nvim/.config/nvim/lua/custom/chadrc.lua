@@ -39,7 +39,9 @@ local M = {
 					vim.print('modules')
 					vim.print(modules)
 				end,0)
-				-- modules.remove(modules, 5)
+				modules[5] = ( function ()
+				  
+				end )()
 			end,
 		},
 	},
