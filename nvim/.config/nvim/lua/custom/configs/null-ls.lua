@@ -1,4 +1,4 @@
-local null_ls = require("null-ls")
+local null_ls = require "null-ls"
 
 local fmt = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
@@ -6,8 +6,9 @@ local ca = null_ls.builtins.code_actions
 
 local sources = {
   -- web developement
-  fmt.prettierd.with{
-    
+  fmt.prettierd.with {
+    -- milliseconds
+    timeout = 10000,
   },
   -- fmt.prettier,
   ca.eslint_d,
@@ -33,8 +34,8 @@ local sources = {
   -- null_ls.builtins.code_actions.cspell,
 }
 
-null_ls.setup({
+null_ls.setup {
   debug = false,
   sources = sources,
   debounce = 500,
-})
+}
