@@ -35,6 +35,7 @@ local M = {
 
 		statusline = {
 			overriden_modules = function(modules)
+        -- Disable LSP progress message: https://github.com/NvChad/ui/blob/6c22f52568c4ab080a6676f7bb6515f0076e6567/lua/nvchad/statusline/default.lua#L105C1-L105C15
 				modules[5] = (function()
 					return ""
 				end)()
