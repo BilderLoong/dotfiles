@@ -8,7 +8,7 @@ local sources = {
   -- web developement
   fmt.prettier.with {
     -- milliseconds
-    timeout = 10000,
+    -- timeout = 10000,
   },
   -- fmt.prettierd,
   ca.eslint_d.with {
