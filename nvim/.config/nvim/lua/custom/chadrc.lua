@@ -36,12 +36,13 @@ local M = {
 		statusline = {
 			overriden_modules = function(modules)
 				vim.defer_fn(function()
-					vim.print('modules')
+					vim.print("modules")
 					vim.print(modules)
-				end,0)
-				modules[5] = ( function ()
-				  
-				end )()
+				end, 0)
+
+				modules[5] = (function()
+					return ""
+				end)()
 			end,
 		},
 	},
