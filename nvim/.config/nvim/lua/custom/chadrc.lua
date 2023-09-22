@@ -35,7 +35,7 @@ local M = {
 
 		statusline = {
 			overriden_modules = function(modules)
-        modules.remove(modules,5)
+				modules.remove(modules, 5)
 			end,
 		},
 	},
