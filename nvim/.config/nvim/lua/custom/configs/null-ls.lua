@@ -6,12 +6,11 @@ local ca = null_ls.builtins.code_actions
 
 local sources = {
   -- web developement
-  fmt.prettier.with {
-    -- milliseconds
-    timeout = 10000,
-  },
+  -- fmt.prettier.with {
+  --   -- milliseconds
+  --   timeout = 10000,
+  -- },
   fmt.prettierd.with {
-
     timeout = 10000,
   },
   ca.eslint_d.with {
