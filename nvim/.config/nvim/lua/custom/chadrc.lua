@@ -34,7 +34,7 @@ local M = {
     },
 
     statusline = {
-
+overriden_modules = 
     }
   },
 }
