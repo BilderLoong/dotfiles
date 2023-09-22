@@ -13,8 +13,7 @@ g.toggle_theme_icon = ""
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.cmd([[ set nofoldenable ]])
+vim.cmd [[ set nofoldenable ]]
 
-
-require("custom.autocmds")
-require("custom.custom_cmds")
+require "custom.autocmds"
+require "custom.custom_cmds"
