@@ -35,6 +35,7 @@ local M = {
 
 		statusline = {
 			overriden_modules = function(modules)
+				vim.print(modules)
 				modules.remove(modules, 5)
 			end,
 		},
