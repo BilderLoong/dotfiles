@@ -38,7 +38,6 @@ local sources = {
 
 null_ls.setup {
   debug = true,
-  log_level = "warn",
   sources = sources,
   debounce = 500,
 }
