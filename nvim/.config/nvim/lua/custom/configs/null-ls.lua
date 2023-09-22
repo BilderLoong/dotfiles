@@ -10,7 +10,9 @@ local sources = {
     -- milliseconds
     timeout = 10000,
   },
-  fmt.prettierd,
+  fmt.prettierd.with{
+
+  },
   ca.eslint_d.with {
     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
   },
