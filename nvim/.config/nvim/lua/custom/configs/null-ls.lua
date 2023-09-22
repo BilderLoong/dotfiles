@@ -19,8 +19,6 @@ local sources = {
   },
   -- ca.eslint,
 
-  --
-  ca.gitrebase,
 
   fmt.stylua,
 
