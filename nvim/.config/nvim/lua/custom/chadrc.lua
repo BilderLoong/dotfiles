@@ -35,10 +35,10 @@ local M = {
 
 		statusline = {
 			overriden_modules =function (modules)
+      modules[5]=
 			 
 			end
 
-      modules[5],
 		},
 	},
 }
