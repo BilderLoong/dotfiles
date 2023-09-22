@@ -38,7 +38,7 @@ local sources = {
 
 null_ls.setup {
   -- debug = false,
-  debug = true
+  debug = true,
   sources = sources,
   debounce = 500,
 }
