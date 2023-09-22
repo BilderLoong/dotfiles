@@ -32,7 +32,9 @@ local M = {
         fg = "NONE",
       },
     },
-    
+    statusline = {
+      
+    }
   },
 }
 
