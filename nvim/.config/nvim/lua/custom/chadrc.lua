@@ -38,8 +38,8 @@ local M = {
 				vim.defer_fn(function()
 					vim.print('modules')
 					vim.print(modules)
-				end,1)
-				modules.remove(modules, 5)
+				end,0)
+				-- modules.remove(modules, 5)
 			end,
 		},
 	},
