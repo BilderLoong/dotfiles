@@ -23,6 +23,7 @@ local sources = {
   lint.shellcheck.with {
     extra_filetypes = { "sh", "zsh" },
   },
+
   fmt.shfmt.with { extra_filetypes = { "sh", "zsh" } }, -- python fmt.black.with { extra_args = { "--fast" } }, lint.ruff,
 
   -- misc
