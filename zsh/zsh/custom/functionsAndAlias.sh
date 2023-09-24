@@ -46,7 +46,7 @@ clone_my_repo() {
 alias pbc='pbcopy'
 alias pbp='pbpaste'
 
-alias gsave='git add . && git commit -m "save" && git pull origin HEAD &&  git push origin HEAD'
+alias gsave='git add . && git commit -m "save"; git pull origin HEAD &&  git push origin HEAD'
 
 # rm_all_nest_node_modules
 trash_all_nest_node_modules() {
