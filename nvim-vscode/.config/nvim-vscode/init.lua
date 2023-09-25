@@ -259,9 +259,9 @@ local function LSP()
 
   ]])
 
-	keymap.set({ "n", "x" }, "ca", notify("editor.action.quickFix"), { desc = "Code Action" })
-	keymap.set({ "n", "x" }, "cf", notify("editor.action.organizeImports"), { desc = "Organize Imports" })
-	keymap.set({ "n", "x" }, "cf", notify("gitlens.copyRemoteFileUrlToClipboard"), { desc = "Copy remote URL" })
+	keymap.set({ "n", "x" }, "<Leader>ca", notify("editor.action.quickFix"), { desc = "Code Action" })
+	keymap.set({ "n", "x" }, "<Leader>cf", notify("editor.action.organizeImports"), { desc = "Organize Imports" })
+	keymap.set({ "n", "x" }, "<Leader>cf", notify("gitlens.copyRemoteFileUrlToClipboard"), { desc = "Copy remote URL" })
 
 	vim.keymap.set("n", "gr", function()
 		vscode_neovim.notify("editor.action.goToReferences")
