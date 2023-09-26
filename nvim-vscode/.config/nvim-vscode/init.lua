@@ -5,6 +5,7 @@ local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
+vim.keymap.set('')
 
 local function notify(method)
 	return function()
