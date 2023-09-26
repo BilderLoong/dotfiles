@@ -6,7 +6,7 @@ local keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
 vim.keymap.set({ "n", "v", "x" }, "j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"')
-vim.keymap.set({ "n", "v", "x" }, "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"')
+vim.keymap.set({ "n", "v", "x" }, "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',{expr})
 
 local function notify(method)
 	return function()
