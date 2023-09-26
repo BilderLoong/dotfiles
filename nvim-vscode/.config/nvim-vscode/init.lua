@@ -4,6 +4,9 @@ vim.opt.clipboard = "unnamedplus"
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
+vim.cmd[[
+]]
+
 vim.keymap.set("", "<Space>", "<Nop>")
 vim.keymap.set(
 	{ "n", "v", "x" },
