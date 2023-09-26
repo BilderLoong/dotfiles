@@ -7,8 +7,8 @@ local keymap = vim.keymap
 vim.cmd([[
     " nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
     " nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
-    nnoremap k (v:count == 0 ? 'gk' : 'k')
-    nnoremap j (v:count == 0 ? 'gj' : 'j')
+    nnoremap k  'gk' : 'k')
+    nnoremap j  'gj' : 'j')
 ]])
 
 vim.keymap.set("", "<Space>", "<Nop>")
