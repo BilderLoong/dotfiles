@@ -282,6 +282,10 @@ local function LSP()
 		vscode_neovim.notify("editor.action.goToReferences")
 	end)
 
+	vim.keymap.set("n", "<Leader>fs", function()
+		vscode_neovim.notify("")
+	end)
+
 	vim.keymap.set("n", "<Leader>fm", function()
 		vscode_neovim.notify("editor.action.formatDocument")
 	end)
