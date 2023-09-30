@@ -283,7 +283,7 @@ local function LSP()
 	end)
 
 	vim.keymap.set("n", "<Leader>fs", function()
-		vscode_neovim.notify("")
+		vscode_neovim.notify("workbench.action.showAllSymbols")
 	end)
 
 	vim.keymap.set("n", "<Leader>fm", function()
