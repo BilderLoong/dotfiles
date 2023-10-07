@@ -22,6 +22,7 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "k", "gk")
+vim.keymap.set("n", "k", "gk")
 
 local function notify(method)
 	return function()
