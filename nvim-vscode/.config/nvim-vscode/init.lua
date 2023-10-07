@@ -21,7 +21,7 @@ vim.keymap.set(
 	{ expr = true, silent = true, desc = "Move down" }
 )
 
-vim.keymap.set('n','k')
+vim.keymap.set('n','k',"gk")
 
 local function notify(method)
 	return function()
