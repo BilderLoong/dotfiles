@@ -4,19 +4,17 @@ vim.opt.clipboard = "unnamedplus"
 local vscode_neovim = require("vscode-neovim")
 local keymap = vim.keymap
 
-
 vim.keymap.set("", "<Space>", "<Nop>")
 
 -- The below doen't work, I don't why.
 vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
-  function ()
-   if 
-
-  end
-	-- { expr = true, desc = "Move up" }
+	function()
+		return (vim.v.count ~= 0 or string.sub(vim.fn.mode(1), 1, 2) == "no") and "j" or "gj"
+	end,
 	{ expr = true, desc = "Move up" }
+	-- { expr = true, desc = "Move up" }
 )
 vim.keymap.set(
 	{ "n", "v", "x" },
