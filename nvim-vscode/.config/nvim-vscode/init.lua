@@ -7,12 +7,12 @@ local keymap = vim.keymap
 vim.keymap.set("", "<Space>", "<Nop>")
 
 -- The below doen't work, I don't why.
--- vim.keymap.set(
--- 	{ "n", "v", "x" },
--- 	"j",
--- 	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
--- 	{ expr = true, silent = true, desc = "Move up" }
--- )
+vim.keymap.set(
+	{ "n", "v", "x" },
+	"j",
+	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
+	{ expr = true, silent = true, desc = "Move up" }
+)
 --
 -- vim.keymap.set(
 -- 	{ "n", "v", "x" },
