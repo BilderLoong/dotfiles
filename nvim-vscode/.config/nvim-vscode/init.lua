@@ -10,12 +10,12 @@ vim.keymap.set("", "<Space>", "<Nop>")
 vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
-  [[]]
-	function()
-		vim.print("count", vim.v.count)
-		-- vim.print("mode", vim.fn.mode(1))
-		return (vim.v.count ~= 0 or string.sub(vim.fn.mode(1), 1, 2) == "no") and "j" or "gj"
-	end,
+  [[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]]
+	-- function()
+	-- 	vim.print("count", vim.v.count)
+	-- 	-- vim.print("mode", vim.fn.mode(1))
+	-- 	return (vim.v.count ~= 0 or string.sub(vim.fn.mode(1), 1, 2) == "no") and "j" or "gj"
+	-- end,
 	{ expr = true, silent = true, desc = "Move up" }
 	-- { expr = true, desc = "Move up" }
 )
