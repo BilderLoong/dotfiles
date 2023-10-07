@@ -22,7 +22,7 @@ vim.keymap.set(
 	{ "n", "v", "x" },
 	"k",
 	'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',
-	{ expr = true, desc = "Move down" }
+	{ expr = true, silent = true desc = "Move down" }
 )
 
 local function notify(method)
