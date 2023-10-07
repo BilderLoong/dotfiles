@@ -21,8 +21,8 @@ vim.keymap.set("", "<Space>", "<Nop>")
 -- 	{ expr = true, silent = true, desc = "Move down" }
 -- )
 
-vim.keymap.set("n", "k", "gk")
-vim.keymap.set("n", "j", "gj")
+-- vim.keymap.set("n", "k", "gk")
+-- vim.keymap.set("n", "j", "gj")
 
 local function notify(method)
 	return function()
