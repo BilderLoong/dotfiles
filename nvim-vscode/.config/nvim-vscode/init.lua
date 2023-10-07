@@ -17,8 +17,7 @@ vim.keymap.set(
 vim.keymap.set(
 	{ "n", "v", "x" },
 	"k",
-	-- [[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
-
+	[[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
 	{ expr = true, silent = true, desc = "Move down" }
 )
 
