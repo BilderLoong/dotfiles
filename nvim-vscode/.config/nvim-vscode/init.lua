@@ -21,6 +21,8 @@ vim.keymap.set(
 	{ expr = true, silent = true, desc = "Move down" }
 )
 
+vim.keymap.set('n')
+
 local function notify(method)
 	return function()
 		-- vscode_neovim.notify(...)
