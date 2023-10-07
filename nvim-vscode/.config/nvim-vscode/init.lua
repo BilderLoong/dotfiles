@@ -14,12 +14,12 @@ vim.keymap.set(
 	{ expr = true, silent = true, desc = "Move up" }
 )
 --
--- vim.keymap.set(
--- 	{ "n", "v", "x" },
--- 	"k",
--- 	[[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
--- 	{ expr = true, silent = true, desc = "Move down" }
--- )
+vim.keymap.set(
+	{ "n", "v", "x" },
+	"k",
+	[[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
+	{ expr = true, silent = true, desc = "Move down" }
+)
 
 -- vim.keymap.set("n", "k", "gk")
 -- vim.keymap.set("n", "j", "gj")
