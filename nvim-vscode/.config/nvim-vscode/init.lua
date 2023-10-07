@@ -15,7 +15,7 @@ vim.keymap.set(
 		-- vim.print("mode", vim.fn.mode(1))
 		return (vim.v.count ~= 0 or string.sub(vim.fn.mode(1), 1, 2) == "no") and "j" or "gj"
 	end,
-	{ expr = true, desc = "Move up" }
+	{ expr = true,, desc = "Move up" }
 	-- { expr = true, desc = "Move up" }
 )
 vim.keymap.set(
