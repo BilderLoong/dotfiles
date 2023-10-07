@@ -1,25 +1,25 @@
--- vim.g.mapleader = " "
--- vim.opt.clipboard = "unnamedplus"
---
--- local vscode_neovim = require("vscode-neovim")
--- local keymap = vim.keymap
---
--- vim.keymap.set("", "<Space>", "<Nop>")
---
--- -- The below doen't work, I don't why.
--- vim.keymap.set(
--- 	{ "n", "v", "x" },
--- 	"j",
--- 	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
--- 	{ expr = true, silent = true, desc = "Move up" }
--- )
---
--- vim.keymap.set(
--- 	{ "n", "v", "x" },
--- 	"k",
--- 	[[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
--- 	{ expr = true, silent = true, desc = "Move down" }
--- )
+vim.g.mapleader = " "
+vim.opt.clipboard = "unnamedplus"
+
+local vscode_neovim = require("vscode-neovim")
+local keymap = vim.keymap
+
+vim.keymap.set("", "<Space>", "<Nop>")
+
+-- The below doen't work, I don't why.
+vim.keymap.set(
+	{ "n", "v", "x" },
+	"j",
+	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
+	{ expr = true, silent = true, desc = "Move up" }
+)
+
+vim.keymap.set(
+	{ "n", "v", "x" },
+	"k",
+	[[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
+	{ expr = true, silent = true, desc = "Move down" }
+)
 
 vim.keymap.set("n", "k", "gk")
 vim.keymap.set("n", "j", "gj")
