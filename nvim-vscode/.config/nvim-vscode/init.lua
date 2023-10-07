@@ -11,6 +11,7 @@ vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
 	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
+  -- https://github.com/vscode-neovim/vscode-neovim/blob/4d7a9be9be95ea5e8da793fd810345171a865cd2/vim/vscode-motion.vim#L15-L16
 	{ expr = true, silent = true, desc = "Move up", remap = true }
 )
 
