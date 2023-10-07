@@ -12,6 +12,7 @@ vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
 	'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',
+	'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',
 	{ expr = true, desc = "Move up" }
 )
 vim.keymap.set(
