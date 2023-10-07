@@ -10,7 +10,7 @@ vim.keymap.set("", "<Space>", "<Nop>")
 vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
-  [[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]]
+	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
 	-- function()
 	-- 	vim.print("count", vim.v.count)
 	-- 	-- vim.print("mode", vim.fn.mode(1))
