@@ -11,7 +11,7 @@ vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
 	function()
-    vim.print()
+    vim.print('count',)
 		return (vim.v.count ~= 0 or string.sub(vim.fn.mode(1), 1, 2) == "no") and "j" or "gj"
 	end,
 	{ expr = true, desc = "Move up" }
