@@ -10,6 +10,7 @@ vim.keymap.set("", "<Space>", "<Nop>")
 vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
+  [[]]
 	function()
 		vim.print("count", vim.v.count)
 		-- vim.print("mode", vim.fn.mode(1))
