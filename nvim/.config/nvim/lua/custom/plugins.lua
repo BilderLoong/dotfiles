@@ -438,8 +438,8 @@ local plugins = {
       require("lspsaga").setup {
         finder = {
           max_height = 0.6,
-          left_width = 0.5,
-          right_width = 0.5,
+          left_width = 0.45,
+          right_width = 0.55,
           keys = {
             vsplit = "v",
             split = "s",
