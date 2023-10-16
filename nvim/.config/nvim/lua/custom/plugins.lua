@@ -439,6 +439,7 @@ local plugins = {
         finder = {
           max_height = 0.6,
           left_width = 0.4,
+          right_width = 0.6,
           keys = {
             vsplit = "v",
             split = "s",
