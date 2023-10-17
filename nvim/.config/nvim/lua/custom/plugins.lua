@@ -637,8 +637,8 @@ local plugins = {
       "nvim-telescope/telescope.nvim", -- Optional
     },
     branch = "^2", -- Recommended
-    init = function() -- Optional, see Advanced configuration
-    end,
+    -- init = function() -- Optional, see Advanced configuration
+    -- end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
 
