@@ -81,5 +81,3 @@ export PATH="$HOME/go/bin:$PATH"
 
 # zprof
 
-#[ -f "/Users/birudo/.ghcup/env" ] && source "/Users/birudo/.ghcup/env" # ghcup-env
-[ -f "/Users/birudo/.ghcup/env" ] && source "/Users/birudo/.ghcup/env" # ghcup-env
