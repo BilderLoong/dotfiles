@@ -1,3 +1,2 @@
 editMode: Vi
-bind: jk escape
 keyseq: "jk" escape
