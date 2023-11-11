@@ -1,2 +1,2 @@
 editMode: Vi
-bind: jk ctrl-escape
+bind: jk escape
