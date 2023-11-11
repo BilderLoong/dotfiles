@@ -1,2 +1,2 @@
 editMode: Vi
-bind jk ^[
+bind: jk ^[
