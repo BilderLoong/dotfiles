@@ -439,7 +439,7 @@ local plugins = {
         finder = {
           max_height = 0.6,
           left_width = 0.45,
-          right_width = 0.55,
+          right_width = 0.50,
           keys = {
             vsplit = "v",
             split = "s",
@@ -447,10 +447,11 @@ local plugins = {
           methods = {
             tyd = "textDocument/typeDefinition",
           },
-          -- Default: https://github.com/nvimdev/lspsaga.nvim/blob/ac29d673d9edc437a05cce30fce1c5b070a25664/lua/lspsaga/init.lua#L55
-          lightbulb = {
-            enable = false,
-          },
+        },
+
+        -- Default: https://github.com/nvimdev/lspsaga.nvim/blob/ac29d673d9edc437a05cce30fce1c5b070a25664/lua/lspsaga/init.lua#L55
+        lightbulb = {
+          enable = false,
         },
       }
     end,
