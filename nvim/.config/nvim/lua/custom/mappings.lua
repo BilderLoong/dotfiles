@@ -259,17 +259,36 @@ M.nvim_ufo = {
 
   n = {
     ["zM"] = {
-	    function()
-
-      require("ufo").closeAllFolds()
+      function()
+        require("ufo").closeAllFolds()
       end,
       "UFO close all folds.",
     },
     ["zR"] = {
-	    function()
-      require("ufo").openAllFolds()
+      function()
+        require("ufo").openAllFolds()
       end,
       "UFO open all folds.",
+    },
+  },
+}
+
+M.haskell_tools = {
+  plugin = true,
+
+  n = {
+    ["<leader>rq"] = {
+	    function()
+      require("haskell-tools").repl.quit()
+      end,
+      "Toggle a GHCi repl for the current buffer.",
+    },
+
+    ["<leader>rf"] = {
+      function()
+        require("haskell-tools").repl.toggle(vim.api.nvim_buf_get_name(0))
+      end,
+      "Toggle a GHCi repl for the current buffer.",
     },
   },
 }

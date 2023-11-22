@@ -531,7 +531,7 @@ local plugins = {
       require("dapui").setup()
 
       require("custom.configs.debug").setup()
-      require("core.utils").load_mappings "debug"
+      load_mappings "debug"
     end,
   },
 
@@ -637,10 +637,14 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim", -- Optional
     },
-    version = "^2", -- Recommended
+    version = "^3", -- Recommended
     -- init = function() -- Optional, see Advanced configuration
     -- end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+    config = function(_, opts)
+      load_mappings "lspconfig"
+      load_mappings "haskell_tools"
+    end,
   },
 
   {
