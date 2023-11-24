@@ -75,5 +75,3 @@ zinit ice wait lucid  as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"com
     pick"_tldr" \
     atpull'!git reset --hard' 
 zinit light dbrgn/tealdeer
-
-
