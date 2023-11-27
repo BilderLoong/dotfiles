@@ -69,10 +69,9 @@ zinit wait"1" lucid for \
   zdharma-continuum/null \
     # For async source local file.
     id-as"local_async_file" \
-    atinit"source ZSH_CUSTOM/lazy.zsh" \
+    atinit"source $ZSH_CUSTOM/lazy.zsh" \
   zdharma-continuum/null 
 
-ZSH_CUSTOM="$HOME/zsh/custom"
 
 # https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
 zinit ice wait lucid  as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" \
