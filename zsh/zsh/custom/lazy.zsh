@@ -12,3 +12,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+# If the system is running on WSL.
+if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+	source "$ZSH_CUSTOM/wsl.sh"
+fi
+
