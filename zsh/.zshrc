@@ -78,5 +78,3 @@ export PATH="/snap/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
 # zprof
-
-
