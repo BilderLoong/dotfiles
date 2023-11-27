@@ -1,4 +1,5 @@
 source "$ZSH_CUSTOM/functionsAndAlias.sh"
+
 # https://stackoverflow.com/a/54618022/11602758
 if [[ $(uname) == "Darwin" ]]; then
 	source "$ZSH_CUSTOM/macOS.sh"
