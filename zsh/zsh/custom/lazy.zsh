@@ -1,4 +1,5 @@
 source "$ZSH_CUSTOM/functionsAndAlias.sh"
+
 # bun completions
 [ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bunajjj/_bun"
 
