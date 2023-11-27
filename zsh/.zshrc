@@ -66,8 +66,6 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 
 #[ -f "/home/birudo/.ghcup/env" ] && source "/home/birudo/.ghcup/env" # ghcup-env
 
-# bun completions
-[ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
