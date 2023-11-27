@@ -69,7 +69,7 @@ zinit wait"1" lucid for \
   zdharma-continuum/null \
     # For async source local file.
     id-as"local_async_file" \
-    atinit"source $HOME/zsh/custom/lazy.zsh" \
+    atinit"source ZSH_CUSTOM/lazy.zsh" \
   zdharma-continuum/null 
 
 ZSH_CUSTOM="$HOME/zsh/custom"
