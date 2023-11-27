@@ -57,9 +57,6 @@ export PERL_MM_OPT
 # Android
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#[ -f "/home/birudo/.ghcup/env" ] && source "/home/birudo/.ghcup/env" # ghcup-env
 
 
 # bun
