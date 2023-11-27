@@ -72,7 +72,7 @@ zinit wait"1" lucid for \
     atinit"source $HOME/zsh/custom/lazy.zsh" \
   zdharma-continuum/null 
 
-ZSH_CUSTOM="$HOME/zsh/custom"
+ZSH_CUSTOM=""
 
 # https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
 zinit ice wait lucid  as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" \
