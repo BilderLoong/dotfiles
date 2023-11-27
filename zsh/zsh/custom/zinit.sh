@@ -68,7 +68,7 @@ zinit wait"1" lucid for \
     atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
   zdharma-continuum/null \
     id-as"local_async_file" \
-    atinit"source ~/zsh/custom/lazy.zsh" \
+    atinit"source lazy.zsh" \
   zdharma-continuum/null 
 
 
