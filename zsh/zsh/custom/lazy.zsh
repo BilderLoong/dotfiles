@@ -35,6 +35,7 @@ export PATH="/snap/bin:$PATH"
 
 # GO
 export PATH="$HOME/go/bin:$PATH"
+
 source "$ZSH_CUSTOM/functionsAndAlias.sh"
 
 # If the system is running on WSL.
