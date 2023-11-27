@@ -67,6 +67,10 @@ zinit wait"1" lucid for \
     id-as"pyenv_init" \
     atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
   zdharma-continuum/null 
+    has"pyenv" eval"pyenv init -" \
+    id-as"pyenv_init" \
+    atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
+  zdharma-continuum/null 
 
 
 # https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
@@ -75,3 +79,4 @@ zinit ice wait lucid  as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"com
     pick"_tldr" \
     atpull'!git reset --hard' 
 zinit light dbrgn/tealdeer
+
