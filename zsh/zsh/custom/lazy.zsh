@@ -1,4 +1,4 @@
-
+echo '1'
 # bun completions
 [ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bun/_bun"
 
