@@ -49,7 +49,7 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 # bun completions
-[ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bunajjj/_bun"
+[ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bun/_bun"
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
