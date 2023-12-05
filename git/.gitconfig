@@ -27,4 +27,4 @@
 [status]
 	submodulesummary = 1
 [submodule]
-	recurse = true # https://memex.social/a/2hmeLCzQwlj7q4XNbQdw
+	recurse = true
