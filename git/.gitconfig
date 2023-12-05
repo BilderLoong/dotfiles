@@ -9,6 +9,9 @@
   ; pager = delta
 [alias]
   root = rev-parse --show-toplevel
+	sdiff = !git diff && git submodule foreach 'git diff'
+	spush = push --recurse-submodules=on-demand
+	supdate = submodule update --remote --merge
 [merge]
   conflictstyle = diff3
 	tool = nvimdiff
