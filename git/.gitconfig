@@ -5,6 +5,7 @@
   email = huzilong@meituan.com
 [core]
   excludesfile = /Users/birudo/.gitignore_global
+	logallrefupdates = true
   ; pager = delta
 [alias]
   root = rev-parse --show-toplevel
@@ -13,9 +14,14 @@
 	tool = nvimdiff
 [diff]
   colorMoved = default
+	submodule = log
 [delta]
   navigate = true    # use n and N to move between diff sections
   light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
   side-by-side = true
 [safe]
 	directory = /storage/emulated/0/Download/Sync/MaxLumi/Logseq
+[status]
+	submodulesummary = 1
+[submodule]
+	recurse = true # https://memex.social/a/2hmeLCzQwlj7q4XNbQdw
