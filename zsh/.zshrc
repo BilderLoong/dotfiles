@@ -24,3 +24,6 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
 # zprof
+
+# bun completions
+[ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
