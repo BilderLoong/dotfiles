@@ -11,7 +11,7 @@ vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
 	[[v:count || mode(1)[0:1] == "no" ? "j" : "gj"]],
-  -- set `remap` to `true` to use the vscode neovim's `gj` keymap: https://github.com/vscode-neovim/vscode-neovim/blob/4d7a9be9be95ea5e8da793fd810345171a865cd2/vim/vscode-motion.vim#L15-L16
+	-- set `remap` to `true` to use the vscode neovim's `gj` keymap: https://github.com/vscode-neovim/vscode-neovim/blob/4d7a9be9be95ea5e8da793fd810345171a865cd2/vim/vscode-motion.vim#L15-L16
 	{ expr = true, silent = true, desc = "Move up", remap = true }
 )
 
@@ -25,10 +25,9 @@ vim.keymap.set(
 -- vim.keymap.set("n", "k", "gk")
 -- vim.keymap.set("n", "j", "gj")
 
-local function notify(method)
+local function action(method)
 	return function()
-		-- vscode_neovim.notify(...)
-		vscode_neovim.notify(method)
+		vscode_neovim.action(method)
 	end
 end
 
@@ -278,20 +277,20 @@ local function LSP()
 
   ]])
 
-	keymap.set({ "n", "x" }, "<Leader>ca", notify("editor.action.quickFix"), { desc = "Code Action" })
-	keymap.set({ "n", "x" }, "<Leader>cf", notify("editor.action.organizeImports"), { desc = "Organize Imports" })
-	keymap.set({ "n", "x" }, "<Leader>cf", notify("gitlens.copyRemoteFileUrlToClipboard"), { desc = "Copy remote URL" })
+	keymap.set({ "n", "x" }, "<Leader>ca", action("editor.action.quickFix"), { desc = "Code Action" })
+	keymap.set({ "n", "x" }, "<Leader>cf", action("editor.action.organizeImports"), { desc = "Organize Imports" })
+	keymap.set({ "n", "x" }, "<Leader>cf", action("gitlens.copyRemoteFileUrlToClipboard"), { desc = "Copy remote URL" })
 
 	vim.keymap.set("n", "gr", function()
-		vscode_neovim.notify("editor.action.goToReferences")
+		vscode_neovim.action("editor.action.goToReferences")
 	end)
 
 	vim.keymap.set("n", "<Leader>fs", function()
-		vscode_neovim.notify("workbench.action.showAllSymbols")
+		vscode_neovim.action("workbench.action.showAllSymbols")
 	end)
 
 	vim.keymap.set("n", "<Leader>fm", function()
-		vscode_neovim.notify("editor.action.formatDocument")
+		vscode_neovim.action("editor.action.formatDocument")
 	end)
 end
 LSP()
@@ -303,7 +302,6 @@ local function folder()
     nnoremap zo <Cmd>call VSCodeNotify('editor.unfold')<CR>
     nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
     nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
-
   ]])
 end
 folder()
