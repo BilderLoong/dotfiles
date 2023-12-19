@@ -339,10 +339,10 @@ vscode_ui()
 
 local function vscode_editor()
 	keymap.set("n", "]c", function()
-		vscode_neovim.notify("workbench.action.editor.nextChange")
+		vscode_neovim.action("workbench.action.editor.nextChange")
 	end)
 	keymap.set("n", "[c", function()
-		vscode_neovim.notify("workbench.action.editor.previousChange")
+		vscode_neovim.action("workbench.action.editor.previousChange")
 	end)
 end
 vscode_editor()
