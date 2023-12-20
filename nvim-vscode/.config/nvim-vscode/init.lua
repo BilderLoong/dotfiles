@@ -25,11 +25,13 @@ vim.keymap.set(
 -- vim.keymap.set("n", "k", "gk")
 -- vim.keymap.set("n", "j", "gj")
 
-local function action(method)
+local function deferred_action(method)
 	return function()
 		vscode_neovim.action(method)
 	end
 end
+
+local notify = vscode_neovim.notify
 
 local function plugins()
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -277,9 +279,19 @@ local function LSP()
 
   ]])
 
-	keymap.set({ "n", "x" }, "<Leader>ca", action("editor.action.quickFix"), { desc = "Code Action" })
-	keymap.set({ "n", "x" }, "<Leader>cf", action("editor.action.organizeImports"), { desc = "Organize Imports" })
-	keymap.set({ "n", "x" }, "<Leader>cf", action("gitlens.copyRemoteFileUrlToClipboard"), { desc = "Copy remote URL" })
+	keymap.set({ "n", "x" }, "<Leader>ca", deferred_action("editor.action.quickFix"), { desc = "Code Action" })
+	keymap.set(
+		{ "n", "x" },
+		"<Leader>cf",
+		deferred_action("editor.action.organizeImports"),
+		{ desc = "Organize Imports" }
+	)
+	keymap.set(
+		{ "n", "x" },
+		"<Leader>cf",
+		deferred_action("gitlens.copyRemoteFileUrlToClipboard"),
+		{ desc = "Copy remote URL" }
+	)
 
 	vim.keymap.set("n", "gr", function()
 		vscode_neovim.action("editor.action.goToReferences")
@@ -327,14 +339,23 @@ local function vscode_ui()
 
 	--  Toggle Primary Sidebar.
 	keymap.set({ "n", "x", "i" }, "<C-n>", function()
-		vscode_neovim.notify("workbench.action.toggleSidebarVisibility")
+		vscode_neovim.action("workbench.action.toggleSidebarVisibility")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
+	keymap.set({ "i" }, "<M-Space>", function()
+		vscode_neovim.action("editor.action.triggerSuggest")
+	end)
+
+	keymap.set({ "n", "x", "i" }, "<Leader>d", function()
+		vscode_neovim.action("editor.action.marker.nextInFiles")
+	end)
+
 	keymap.set("n", "<Leader>e", function()
-		vscode_neovim.notify("workbench.action.focusSideBar")
+		vscode_neovim.action("workbench.action.focusSideBar")
 	end)
 end
+
 vscode_ui()
 
 local function vscode_editor()
