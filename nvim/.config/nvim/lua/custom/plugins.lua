@@ -142,6 +142,12 @@ local plugins = {
         "stylua",
         "luacheck",
 
+        -- Python
+        "debugpy", -- Debugger
+        "pyright", -- LSP
+        "ruff", -- Linter
+        "black", -- Formater
+
         -- Web
         "html-lsp",
         "typescript-language-server",
@@ -163,10 +169,6 @@ local plugins = {
         -- Go
         "gopls",
         "gospel",
-
-        -- Python
-        "ruff", -- linter
-        "black", -- formater
 
         -- Haskell
         "haskell-debug-adapter",
@@ -712,6 +714,7 @@ local plugins = {
   {
 
     "github/copilot.vim",
+    event = "BufReadPost",
     cmd = "Copilot ",
     config = function(_, opts)
       vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', {
