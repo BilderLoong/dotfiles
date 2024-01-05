@@ -14,6 +14,7 @@ setopt appendhistory
 setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
+setopt hist_ignore_space # Put a space to omit this command from history.
 
 HYPHEN_INSENSITIVE="true"
 
