@@ -11,6 +11,7 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=9999
 SAVEHIST=9999
 setopt appendhistory
+setopt share_history
 
 HYPHEN_INSENSITIVE="true"
 
