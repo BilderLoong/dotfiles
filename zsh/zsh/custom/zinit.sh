@@ -70,7 +70,6 @@ zinit wait"1" lucid for \
     id-as"async_source" \
     atinit"source $ZSH_CUSTOM/lazy/*.{sh,zsh}" \
   zdharma-continuum/null 
-echo 1
 
 
 # https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
