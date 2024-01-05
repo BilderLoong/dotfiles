@@ -3,5 +3,6 @@ function fzf-select-history() {
 	CURSOR=$#BUFFER
 	zle reset-prompt
 }
+
 zle -N fzf-select-history
 bindkey '^r' fzf-select-history
