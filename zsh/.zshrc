@@ -13,6 +13,7 @@ SAVEHIST=9999
 setopt appendhistory
 setopt share_history
 setopt hist_ignore_all_dups
+setopt hist_ignore_dups
 
 HYPHEN_INSENSITIVE="true"
 
