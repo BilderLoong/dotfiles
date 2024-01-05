@@ -15,13 +15,13 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt hist_ignore_space # Put a space to omit this command from history.
+setopt hist_reduce_blank
 
 HYPHEN_INSENSITIVE="true"
 
 export EDITOR='nvim'
 
 source "$ZSH_CUSTOM/zinit.sh"
-
 
 # If the system is running on termux.
 if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
