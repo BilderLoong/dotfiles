@@ -331,10 +331,6 @@ local function vscode_ui()
     xnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
     nnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
     xnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
-
-    " Toggle Second Sidebar.
-    nnoremap <C-m> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
-    xnoremap <C-m> <Cmd>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>
 ]])
 
 	--  Toggle Primary Sidebar.
