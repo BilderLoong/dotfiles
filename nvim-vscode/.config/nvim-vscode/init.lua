@@ -340,7 +340,7 @@ local function vscode_ui()
 	end)
 
 	--  Toggle auxiliary bar.
-	keymap.set({ "n", "x", "i" }, "<C-n>", function()
+	keymap.set({ "n", "x", "i" }, "<C-m>", function()
 		vscode_neovim.action("workbench.action.toggleAuxiliaryBar")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
