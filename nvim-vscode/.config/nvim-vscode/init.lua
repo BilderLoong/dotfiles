@@ -343,6 +343,7 @@ local function vscode_ui()
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
+	--  Toggle Primary Sidebar.
 	keymap.set({ "n", "x", "i" }, "<C-n>", function()
 		vscode_neovim.action("workbench.action.toggleSidebarVisibility")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
