@@ -160,6 +160,9 @@ local plugins = {
 
         -- Kotlin
 
+        "ktlint",
+        "kotlin-language-server",
+        "kotlin-debug-adapter",
 
         -- MP
         "yaml-language-server",
