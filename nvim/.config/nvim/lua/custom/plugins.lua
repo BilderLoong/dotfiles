@@ -158,6 +158,9 @@ local plugins = {
         "json-lsp",
         "css-lsp",
 
+        -- Kotlin
+
+
         -- MP
         "yaml-language-server",
 
