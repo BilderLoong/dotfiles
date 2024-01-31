@@ -31,6 +31,8 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
+lspconfig.kotlin_language_server
+
 -- -- https://ast-grep.github.io/guide/editor-integration.html#nvim-lspconfig
 -- lspconfig.ast_grep.setup {
 --   on_attach = on_attach,
