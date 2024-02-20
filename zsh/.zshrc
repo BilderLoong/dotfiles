@@ -35,6 +35,4 @@ fi
 export GITHUB_API_URL=http://124.220.157.23:8800
 export GITHUB_SERVER_URL=https://github.com
 export GITHUB_TOKEN=ODM1Ljk0YWRjM2ZhMDljZmFlOWM4MTYwOWY1NWQ2OWM4OWE2
-[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
-# [[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
 
