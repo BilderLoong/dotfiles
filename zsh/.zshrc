@@ -28,8 +28,6 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 fi
 # zprof
 
-# bun completions
-[ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
 
 export GITHUB_API_URL=http://124.220.157.23:8800
 export GITHUB_SERVER_URL=https://github.com
