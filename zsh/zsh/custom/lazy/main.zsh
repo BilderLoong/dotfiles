@@ -20,10 +20,8 @@ export PERL_MB_OPT
 PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"
 export PERL_MM_OPT
 
-
 # Android
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin/
-
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -54,4 +52,4 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-[[ -s ~/.luaver/luaver ]] && source "$HOME/.luaver/luaver"
+[[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
