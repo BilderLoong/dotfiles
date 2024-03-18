@@ -33,3 +33,6 @@ export GITHUB_SERVER_URL=https://github.com
 export GITHUB_TOKEN=ODM1Ljk0YWRjM2ZhMDljZmFlOWM4MTYwOWY1NWQ2OWM4OWE2
 
 [[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
+
+# bun completions
+[ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
