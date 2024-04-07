@@ -277,18 +277,25 @@ M.haskell_tools = {
   plugin = true,
 
   n = {
-    ["<leader>rq"] = {
-	    function()
-      require("haskell-tools").repl.quit()
+    ["<leader>re"] = {
+      function()
+        require("haskell-tools").lsp.buf_eval_all()
       end,
-      "Toggle a GHCi repl for the current buffer.",
+      "Evaluate all code snippets at once.",
+    },
+
+    ["<leader>rq"] = {
+      function()
+        require("haskell-tools").repl.quit()
+      end,
+      "Quit GHCi repl.",
     },
 
     ["<leader>rf"] = {
       function()
         require("haskell-tools").repl.toggle(vim.api.nvim_buf_get_name(0))
       end,
-      "Toggle a GHCi repl for the current buffer.",
+      "Open a GHCi repl for the current buffer.",
     },
   },
 }
