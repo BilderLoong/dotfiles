@@ -55,3 +55,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Cargo
 . "$HOME/.cargo/env"
+
+# Tex
+
+export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
