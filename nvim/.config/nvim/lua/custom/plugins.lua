@@ -181,6 +181,10 @@ local plugins = {
         "haskell-language-server",
         "fourmolu",
 
+        -- Rust
+        "rust-analyzer",
+        "codelldb",
+
         -- Misc
         "cspell",
       },
@@ -729,6 +733,15 @@ local plugins = {
       })
       vim.g.copilot_no_tab_map = true
       vim.g.copilot_proxy = "localhost:7890"
+    end,
+  },
+  -- Rust
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^4", -- Recommended
+    ft = { "rust" },
+    config = function(_, opts)
+      load_mappings "lspconfig"
     end,
   },
 }
