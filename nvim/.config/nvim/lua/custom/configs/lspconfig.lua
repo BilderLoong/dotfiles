@@ -24,6 +24,7 @@ local servers = {
   "kotlin_language_server",
 }
 
+-- 
 require("java").setup() 
 
 for _, lsp in ipairs(servers) do
