@@ -60,4 +60,4 @@ lspconfig.jsonls.setup {
   },
 }
 
-require("lspconfig").jdtls.setup {}
+lspconfig.jdtls.setup {}
