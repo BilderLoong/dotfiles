@@ -30,6 +30,7 @@ wechatcliopen () {
 [ -f "/Users/birudo/.ghcup/env" ] && source "/Users/birudo/.ghcup/env" # ghcup-env
 
 # JAVA
+export PATH=$PATH:$M2_HOME/bin
 
 
   # Use Clash proxy.
