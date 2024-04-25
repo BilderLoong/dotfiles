@@ -762,7 +762,9 @@ local plugins = {
     },
   },
 
-  config = {}
+  config = function ()
+    
+  end
 }
 
 return plugins
