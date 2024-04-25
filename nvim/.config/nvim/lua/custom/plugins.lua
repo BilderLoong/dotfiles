@@ -759,7 +759,6 @@ local plugins = {
       "MunifTanjim/nui.nvim",
       "neovim/nvim-lspconfig",
       "mfussenegger/nvim-dap",
-      ,
     },
   },
 }
