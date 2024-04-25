@@ -185,6 +185,9 @@ local plugins = {
         "rust-analyzer",
         "codelldb",
 
+        -- java
+        "jdl"
+
         -- Misc
         "cspell",
       },
