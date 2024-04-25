@@ -762,9 +762,9 @@ local plugins = {
     },
   },
 
-  config = function ()
-    
-  end
+  config = function()
+    require("java").setup()
+  end,
 }
 
 return plugins
