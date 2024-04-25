@@ -24,7 +24,6 @@ local servers = {
   "kotlin_language_server",
 }
 
-
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -60,4 +59,6 @@ lspconfig.jsonls.setup {
 
 lspconfig.jdtls.setup {
 
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
