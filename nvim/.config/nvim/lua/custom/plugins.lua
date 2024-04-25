@@ -186,7 +186,7 @@ local plugins = {
         "codelldb",
 
         -- java
-        "jdl"
+        "jdtls",
 
         -- Misc
         "cspell",
