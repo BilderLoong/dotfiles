@@ -23,7 +23,7 @@ local servers = {
 	"sourcekit",
 	"kotlin_language_server",
 }
-
+require('java').setup()
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
