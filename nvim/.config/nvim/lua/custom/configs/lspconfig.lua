@@ -56,3 +56,5 @@ lspconfig.jsonls.setup({
 		},
 	},
 })
+
+lsp
