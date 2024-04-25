@@ -32,7 +32,7 @@ wechatcliopen () {
 # JAVA
 export M2_HOME="/usr/local/Cellar/maven/3.9.6"
 export PATH="$PATH:$M2_HOME/bin"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
 
 
   # Use Clash proxy.
