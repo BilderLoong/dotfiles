@@ -744,6 +744,10 @@ local plugins = {
       load_mappings "lspconfig"
     end,
   },
+
+  {
+    
+  }
 }
 
 return plugins
