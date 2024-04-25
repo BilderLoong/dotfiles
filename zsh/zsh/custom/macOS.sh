@@ -30,7 +30,8 @@ wechatcliopen () {
 [ -f "/Users/birudo/.ghcup/env" ] && source "/Users/birudo/.ghcup/env" # ghcup-env
 
 # JAVA
-export PATH=$PATH:$M2_HOME/bin
+export M2_HOME="/usr/local/Cellar/maven/3.9.6"
+export PATH="$PATH:$M2_HOME/bin"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
 
 
