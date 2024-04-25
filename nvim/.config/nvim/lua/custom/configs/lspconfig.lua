@@ -25,7 +25,8 @@ local servers = {
 }
 
 -- https://github.com/nvim-java/nvim-java?tab=readme-ov-file#hammer-how-to-install
-require("java").setup() 
+require("java").setup()
+require("lspconfig").jdtls.setup {}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
