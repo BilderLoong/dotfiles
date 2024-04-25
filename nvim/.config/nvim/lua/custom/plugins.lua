@@ -761,6 +761,8 @@ local plugins = {
       "mfussenegger/nvim-dap",
     },
   },
+
+  config = {}
 }
 
 return plugins
