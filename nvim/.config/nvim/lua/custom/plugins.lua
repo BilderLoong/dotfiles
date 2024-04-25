@@ -188,11 +188,10 @@ local plugins = {
         -- Misc
         "cspell",
       },
-
-          registries = {
-            "github:nvim-java/mason-registry",
-            "github:mason-org/mason-registry",
-          },
+      registries = {
+        "github:nvim-java/mason-registry",
+        "github:mason-org/mason-registry",
+      },
     },
   },
 
@@ -762,8 +761,7 @@ local plugins = {
       "mfussenegger/nvim-dap",
       {
         "williamboman/mason.nvim",
-        opts = {
-        },
+        opts = {},
       },
     },
   },
