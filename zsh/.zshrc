@@ -27,6 +27,6 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
 
-[[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
+[[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver" &
 
 # zprof
