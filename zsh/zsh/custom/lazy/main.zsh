@@ -56,7 +56,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Cargo
 . "$HOME/.cargo/env"
 
-# [[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
+[[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
 
 export GITHUB_API_URL=http://124.220.157.23:8800
 export GITHUB_SERVER_URL=https://github.com
