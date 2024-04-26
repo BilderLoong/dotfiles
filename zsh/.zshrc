@@ -22,8 +22,4 @@ export EDITOR='nvim'
 
 source "$ZSH_CUSTOM/zinit.sh"
 
-# If the system is running on termux.
-if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
-	source "$ZSH_CUSTOM/termux.sh"
-fi
 # zprof
