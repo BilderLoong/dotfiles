@@ -26,6 +26,5 @@ source "$ZSH_CUSTOM/zinit.sh"
 if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
-
 # zprof
 
