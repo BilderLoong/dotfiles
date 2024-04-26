@@ -55,3 +55,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Cargo
 . "$HOME/.cargo/env"
+
+[[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver"
+
