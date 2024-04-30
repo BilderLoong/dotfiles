@@ -2,6 +2,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PNPM_HOME="/home/bilder/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
+
 # pnpm
 export PNPM_HOME="/Users/birudo/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
