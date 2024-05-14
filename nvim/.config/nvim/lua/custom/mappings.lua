@@ -187,10 +187,10 @@ M.debug = {
 	n = {
 		["<leaner>dl"] = {
 			function()
-  require('osv').
-      end,
--- https://github.com/jbyuki/one-small-step-for-vimkind?tab=readme-ov-file#configuration
-      "Start neovim lua debug server in current neovim."
+				require("osv").launch({ port = 8086 })
+			end,
+			-- https://github.com/jbyuki/one-small-step-for-vimkind?tab=readme-ov-file#configuration
+			"Start neovim lua debug server in current neovim.",
 		},
 		["<F9>"] = {
 			function()
