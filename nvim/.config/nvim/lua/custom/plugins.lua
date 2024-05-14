@@ -579,7 +579,9 @@ local plugins = {
     dependencies = {
       "mfussenegger/nvim-dap",
     },
-    opts
+    config=function ()
+     load_mappings  "osv"
+    end
   },
 
   {
