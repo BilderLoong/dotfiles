@@ -185,7 +185,7 @@ M.debug = {
 	plugin = true, -- Important
 
 	n = {
-		["<leaner>"] = {
+		["<leaner>osv"] = {
 			function()
 				require("osv").launch({ port = 8086 })
 			end,
