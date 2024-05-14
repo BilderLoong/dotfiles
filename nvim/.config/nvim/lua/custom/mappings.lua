@@ -187,7 +187,7 @@ M.debug = {
 	n = {
 		["<leaner>dl"] = {
 			function()
-
+  require()
       end,
 -- https://github.com/jbyuki/one-small-step-for-vimkind?tab=readme-ov-file#configuration
       "Start neovim lua debug server in current neovim."
