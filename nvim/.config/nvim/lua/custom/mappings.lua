@@ -189,7 +189,7 @@ M.debug = {
 			function()
 
       end,
-      ""
+      "Start neovim lua debug server in current neovim."
 		},
 		["<F9>"] = {
 			function()
