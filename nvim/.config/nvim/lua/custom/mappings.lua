@@ -185,13 +185,6 @@ M.debug = {
 	plugin = true, -- Important
 
 	n = {
-		["<leaner>osv"] = {
-			function()
-				require("osv").launch({ port = 8086 })
-			end,
-			-- https://github.com/jbyuki/one-small-step-for-vimkind?tab=readme-ov-file#configuration
-			"Start neovim lua debug server in current neovim.",
-		},
 		["<F9>"] = {
 			function()
 				require("dap").toggle_breakpoint()
@@ -303,6 +296,19 @@ M.haskell_tools = {
 				require("haskell-tools").repl.toggle(vim.api.nvim_buf_get_name(0))
 			end,
 			"Open a GHCi repl for the current buffer.",
+		},
+	},
+}
+
+M.osv = {
+	plugin = true,
+	n = {
+		["<leaner>osv"] = {
+			function()
+				require("osv").launch({ port = 8086 })
+			end,
+			-- https://github.com/jbyuki/one-small-step-for-vimkind?tab=readme-ov-file#configuration
+			"Start neovim lua debug server in current neovim.",
 		},
 	},
 }
