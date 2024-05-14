@@ -579,6 +579,7 @@ local plugins = {
     dependencies = {
       "mfussenegger/nvim-dap",
     },
+    opts
   },
 
   {
