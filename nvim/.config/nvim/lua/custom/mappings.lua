@@ -185,8 +185,11 @@ M.debug = {
 	plugin = true, -- Important
 
 	n = {
-		["<leaner>DE"] = {
-			function() end,
+		["<leaner>dl"] = {
+			function()
+
+      end,
+      ""
 		},
 		["<F9>"] = {
 			function()
