@@ -6,7 +6,7 @@
 [core]
   excludesfile = /Users/birudo/.gitignore_global
 	logallrefupdates = true
-  ; pager = delta
+  pager = delta
 [alias]
   root = rev-parse --show-toplevel
 	sdiff = !git diff && git submodule foreach 'git diff'
