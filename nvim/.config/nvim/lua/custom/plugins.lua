@@ -776,7 +776,7 @@ local plugins = {
     keys = {
         -- stylua: ignore start
       { "sx", mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
-      { "sxx", mode = { "n" }, function() "substitute.exchange".line() end, desc = "Substitute Exchange Line", { noremap = true }, },
+      { "sxx", mode = { "n" }, function() require("substitute.exchange").line() end, desc = "Substitute Exchange Line", { noremap = true }, },
       { "X", mode = { "x" }, function() require("substitute.exchange").visual() end, desc = "Substitute Exchange Visual", { noremap = true }, },
       { "sxc", mode = { "n" }, function() require("substitute.exchange").cancel() end, desc = "Substitute Exchange Cancel", { noremap = true }, },
       { "s", mode = { "n" }, function() require("substitute").operator() end, desc = "Substitute Operator", { noremap = true }, },
