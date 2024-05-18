@@ -774,17 +774,8 @@ local plugins = {
     "gbprod/substitute.nvim",
     event = BufEnterLike,
     keys = {
-      {
-        "sx",
-        mode = { "n" },
-        function()
-          require("substitute.exchange").operator()
-        end,
-        desc = "Substitute Exchange Operator",
-        { noremap = true },
-      },
-      {
-        "sxx",
+      { "sx", mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
+      { "sxx",
         mode = { "n" },
         function()
           require("substitute.exchange").line()
