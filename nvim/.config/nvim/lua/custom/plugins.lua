@@ -24,6 +24,7 @@ local plugins = {
       keys = {
         { "m", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
         { "M", mode = { "n","o",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+        {}
         -- Use `m` and `M` instead of `s` and `S` to avoid the conflict with nvim-surround.
         -- { "m", mode = { "o" }, function() require("flash").jump() end, desc = "Flash Jump" },
         -- { "M", mode = { "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
