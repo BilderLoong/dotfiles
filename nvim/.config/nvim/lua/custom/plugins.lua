@@ -15,23 +15,6 @@ local plugins = {
     end,
   },
 
-  -- In favor of flash.nvim.
-  -- {
-  -- 	"mfussenegger/nvim-treehopper",
-  -- 	dependencies = "nvim-treesitter/nvim-treesitter",
-  -- 	event = "BufReadPost",
-  -- 	-- keys = { "v", "y", "d", "c" },
-  -- 	config = function(_, opts)
-  -- 		require("core.utils").load_mappings("nvim_treehopper")
-  -- 	end,
-  -- },
-
-  -- In favor of flash.nvim.
-  -- {
-  -- 	"ggandor/lightspeed.nvim",
-  -- 	event = "BufReadPost",
-  -- },
-
   {
     "folke/flash.nvim",
     event = "BufReadPost",
@@ -39,9 +22,11 @@ local plugins = {
     opts = {},
       -- stylua: ignore
       keys = {
-        { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
-        { "z", mode = {  "o"  }, function() require("flash").jump() end, desc = "Flash Jump" },
-        { "m", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+        { "s", mode = { "n",  "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
+        { "S", mode = { "n",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+        -- Use `m` and `M` instead of `s` and `S` to avoid the conflict with nvim-surround.
+        { "m", mode = { "o" }, function() require("flash").jump() end, desc = "Flash Jump" },
+        { "M", mode = { "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
         { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
         { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
         { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
@@ -206,7 +191,7 @@ local plugins = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
-    }
+    },
   },
 
   {
@@ -579,9 +564,9 @@ local plugins = {
     dependencies = {
       "mfussenegger/nvim-dap",
     },
-    config=function ()
-     load_mappings  "osv"
-    end
+    config = function()
+      load_mappings "osv"
+    end,
   },
 
   {
@@ -766,11 +751,26 @@ local plugins = {
       "neovim/nvim-lspconfig",
       "mfussenegger/nvim-dap",
     },
+
+    config = function()
+      require("java").setup()
+    end,
   },
 
-  config = function()
-    require("java").setup()
-  end,
+  {
+    "gbprod/yanky.nvim",
+    event = BufEnterLike,
+    lazy = false,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    config = function(_, opts)
+      require("yanky").setup()
+      load_mappings("yanky")
+    end,
+  },
 }
 
 return plugins
