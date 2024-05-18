@@ -775,7 +775,7 @@ local plugins = {
     event = BufEnterLike,
     keys = {
         -- stylua: ignore start
-      { "sx", mode = { "n" }, function() require("substitute.exchange").operator end, desc = "Substitute Exchange Operator", { noremap = true }, },
+      { "sx", mode = { "n" }, function() "substitute.exchange").operator( end, desc = "Substitute Exchange Operator", { noremap = true }, },
       { "sxx", mode = { "n" }, function() require("substitute.exchange").line() end, desc = "Substitute Exchange Line", { noremap = true }, },
       { "X", mode = { "x" }, function() require("substitute.exchange").visual() end, desc = "Substitute Exchange Visual", { noremap = true }, },
       { "sxc", mode = { "n" }, function() require("substitute.exchange").cancel() end, desc = "Substitute Exchange Cancel", { noremap = true }, },
