@@ -816,9 +816,6 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
-    keys={
-
-    }
     config = function(_, opts)
       require("substitute").setup {
         on_substitute = require("yanky.integration").substitute(),
