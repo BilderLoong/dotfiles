@@ -20,7 +20,7 @@ local plugins = {
     event = "BufReadPost",
     ---@type Flash.Config
     opts = {},
-    kes = {
+    keys = {
         -- stylua: ignore start
       { "m", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
       { "M", mode = { "n","o",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
