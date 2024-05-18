@@ -782,10 +782,6 @@ local plugins = {
   { "sxx", mode = { "n" }, function() require('substitute.exchange').line() end, desc = "Substitute Exchange Line", { noremap = true } },
   { "X", mode = { "x" }, function() require('substitute.exchange').visual() end, desc = "Substitute Exchange Visual", { noremap = true } },
   { "sxc", mode = { "n" }, function() require('substitute.exchange').cancel() end, desc = "Substitute Exchange Cancel", { noremap = true } },
-vim.keymap.set("n", "sx", require('substitute.exchange').operator, { noremap = true })
-vim.keymap.set("n", "sxx", require('substitute.exchange').line, { noremap = true })
-vim.keymap.set("x", "X", require('substitute.exchange').visual, { noremap = true })
-vim.keymap.set("n", "sxc", require('substitute.exchange').cancel, { noremap = true })
     }
     opts = {
       -- your configuration comes here
