@@ -774,7 +774,6 @@ local plugins = {
     "gbprod/substitute.nvim",
     event = BufEnterLike,
     keys = {
-
       {
         "sx",
         mode = { "n" },
