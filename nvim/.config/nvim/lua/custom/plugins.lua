@@ -789,6 +789,11 @@ local plugins = {
       vim.keymap.set("x", "s", require("substitute").visual, { noremap = true })
     end,
   },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 }
 
 return plugins
