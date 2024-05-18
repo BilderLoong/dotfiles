@@ -794,7 +794,8 @@ local plugins = {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config=function (_,opts)
-      
+      kjplocal harpoon = require("harpoon")
+      harpoon:setup()
     end
   },
 }
