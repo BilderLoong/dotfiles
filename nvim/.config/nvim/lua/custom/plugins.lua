@@ -21,50 +21,15 @@ local plugins = {
     ---@type Flash.Config
     opts = {},
     kes = {
-      {
-        "m",
-        mode = { "n", "o", "x" },
-        function()
-          require("flash").jump()
-        end,
-        desc = "Flash Jump",
-      },
-      {
-        "M",
-        mode = { "n", "o", "x" },
-        function()
-          require("flash").treesitter()
-        end,
-        desc = "Flash Treesitter",
-      },
-      { "<leader>m", mode = { "n", "o", "x" }, "m", desc = "Flash Treesitter" },
+      { "m", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
+      { "M", mode = { "n","o",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      { "<leader>m", mode = { "n","o",  "x" }, "m", desc = "Flash Treesitter" },
       -- Use `m` and `M` instead of `s` and `S` to avoid the conflict with nvim-surround.
       -- { "m", mode = { "o" }, function() require("flash").jump() end, desc = "Flash Jump" },
       -- { "M", mode = { "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      {
-        "r",
-        mode = "o",
-        function()
-          require("flash").remote()
-        end,
-        desc = "Remote Flash",
-      },
-      {
-        "R",
-        mode = { "o", "x" },
-        function()
-          require("flash").treesitter_search()
-        end,
-        desc = "Treesitter Search",
-      },
-      {
-        "<c-s>",
-        mode = { "c" },
-        function()
-          require("flash").toggle()
-        end,
-        desc = "Toggle Flash Search",
-      },
+      { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   },
   {
