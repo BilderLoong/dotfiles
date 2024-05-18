@@ -235,23 +235,6 @@ M.debug = {
   },
 }
 
-M.nvim_treehopper = {
-  plugin = true,
-
-  o = {
-    ["m"] = {
-      ":<C-U>lua require('tsht').nodes()<CR>",
-      "Treehopper select node.",
-    },
-  },
-
-  x = {
-    ["m"] = {
-      ":lua require('tsht').nodes()<CR>",
-      "Treehopper select node.",
-    },
-  },
-}
 
 -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
 M.nvim_ufo = {
