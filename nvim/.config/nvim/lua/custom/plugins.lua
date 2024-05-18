@@ -817,12 +817,7 @@ local plugins = {
       -- refer to the configuration section below
     },
     keys={
-{
-  { "s", mode = { "n" }, function() require("substitute").operator() end, desc = "Substitute Operator", { noremap = true } },
-  { "ss", mode = { "n" }, function() require("substitute").line() end, desc = "Substitute Line", { noremap = true } },
-  { "S", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true } },
-  { "s", mode = { "x" }, function() require("substitute").visual() end, desc = "Substitute Visual", { noremap = true } },
-}
+
     }
     config = function(_, opts)
       require("substitute").setup {
