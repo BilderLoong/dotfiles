@@ -778,42 +778,10 @@ local plugins = {
       { "sxx", mode = { "n" }, function() require("substitute.exchange").line() end, desc = "Substitute Exchange Line", { noremap = true }, },
       { "X", mode = { "x" }, function() require("substitute.exchange").visual() end, desc = "Substitute Exchange Visual", { noremap = true }, },
       { "sxc", mode = { "n" }, function() require("substitute.exchange").cancel() end, desc = "Substitute Exchange Cancel", { noremap = true }, },
-      {
-        "s",
-        mode = { "n" },
-        function()
-          require("substitute").operator()
-        end,
-        desc = "Substitute Operator",
-        { noremap = true },
-      },
-      {
-        "ss",
-        mode = { "n" },
-        function()
-          require("substitute").line()
-        end,
-        desc = "Substitute Line",
-        { noremap = true },
-      },
-      {
-        "S",
-        mode = { "n" },
-        function()
-          require("substitute").eol()
-        end,
-        desc = "Substitute EOL",
-        { noremap = true },
-      },
-      {
-        "s",
-        mode = { "x" },
-        function()
-          require("substitute").visual()
-        end,
-        desc = "Substitute Visual",
-        { noremap = true },
-      },
+      { "s", mode = { "n" }, function() require("substitute").operator() end, desc = "Substitute Operator", { noremap = true }, },
+      { "ss", mode = { "n" }, function() require("substitute").line() end, desc = "Substitute Line", { noremap = true }, },
+      { "S", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true }, },
+      { "s", mode = { "x" }, function() require("substitute").visual() end, desc = "Substitute Visual", { noremap = true }, },
     },
     opts = {
       -- your configuration comes here
