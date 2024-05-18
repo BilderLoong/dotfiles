@@ -783,7 +783,7 @@ local plugins = {
       { "ss", mode = { "n" }, function() require("substitute").line() end, desc = "Substitute Line", { noremap = true }, },
       { "S", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true }, },
       { "s", mode = { "x" }, function() require("substitute").visual() end, desc = "Substitute Visual", { noremap = true }, },
-        -- stylua: ignore end
+      -- stylua: ignore end
     },
     opts = {
       -- your configuration comes here
