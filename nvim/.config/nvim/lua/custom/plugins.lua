@@ -775,14 +775,11 @@ local plugins = {
     event = BufEnterLike,
     keys={
 
-      { "m", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
-      { "M", mode = { "n","o",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "<leader>mm", mode = { "n","o",  "x" }, "m",  desc = "Flash Treesitter", { noremap = true }},
  { "sx", mode = { "n" }, function() require('substitute.exchange').operator() end, desc = "Substitute Exchange Operator", { noremap = true } },
   { "sxx", mode = { "n" }, function() require('substitute.exchange').line() end, desc = "Substitute Exchange Line", { noremap = true } },
   { "X", mode = { "x" }, function() require('substitute.exchange').visual() end, desc = "Substitute Exchange Visual", { noremap = true } },
   { "sxc", mode = { "n" }, function() require('substitute.exchange').cancel() end, desc = "Substitute Exchange Cancel", { noremap = true } },
-    }
+    },
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
