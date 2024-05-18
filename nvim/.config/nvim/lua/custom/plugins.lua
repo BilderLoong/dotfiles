@@ -774,6 +774,10 @@ local plugins = {
     "gbprod/substitute.nvim",
     event = BufEnterLike,
     keys={
+
+      { "m", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
+      { "M", mode = { "n","o",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      { "<leader>mm", mode = { "n","o",  "x" }, "m",  desc = "Flash Treesitter", { noremap = true }},
 vim.keymap.set("n", "sx", require('substitute.exchange').operator, { noremap = true })
 vim.keymap.set("n", "sxx", require('substitute.exchange').line, { noremap = true })
 vim.keymap.set("x", "X", require('substitute.exchange').visual, { noremap = true })
