@@ -51,6 +51,8 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
+    zdharma-continuum/null \
+        has'atuin' id-as'atuin-init' eval"atuin init zsh --disable-up-arrow" \
     zdharma-continuum/null
 
 # Fish-like autosuggestions for zsh 

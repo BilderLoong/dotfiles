@@ -15,9 +15,6 @@ function M.setup()
       name = "Attach to running Neovim instance",
     },
   }
-
-  -- vim.api.nvim_set_keymap("n", "<F12>", [[:lua require"dap.ui.widgets".hover()<CR>]], { noremap = true })
-  -- vim.api.nvim_set_keymap("n", "<F2>", [[:lua require"osv".launch({port = 8086})<CR>]], { noremap = true })
 end
 
 return M
