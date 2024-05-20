@@ -460,10 +460,9 @@ local plugins = {
         lightbulb = {
           enable = false,
         },
-        code_action= {
-          extend_gitsigns
-
-        }
+        code_action = {
+          extend_gitsigns = true,
+        },
       }
     end,
     dependencies = {
