@@ -814,7 +814,10 @@ local plugins = {
         border = {
           enable = true, -- Show window borders. Only horizontal borders allowed
         },
-        use_trouble_qf = false
+        use_trouble_qf = false,
+          mappings = {
+            
+          }
       }
     end,
   },
