@@ -805,9 +805,11 @@ local plugins = {
   },
   {
     "dnlhc/glance.nvim",
-    config= function (_, opts)
-      
-    end
+    config = function(_, opts)
+      require("glance").setup {
+        -- your configuration
+      }
+    end,
   },
   -- {
   --   "ThePrimeagen/harpoon",
