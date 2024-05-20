@@ -808,7 +808,11 @@ local plugins = {
     cmd = { "Glance" },
     config = function(_, opts)
       require("glance").setup {
-        
+        border = {
+          enable = true, -- Show window borders. Only horizontal borders allowed
+          top_char = "―",
+          bottom_char = "―",
+        },
       }
     end,
   },
