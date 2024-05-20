@@ -810,7 +810,7 @@ local plugins = {
       require("glance").setup {
         border = {
           enable = true, -- Show window borders. Only horizontal borders allowed
-          top_char = "hzl",
+          top_char = "胡",
           bottom_char = "hzl",
         },
       }
