@@ -30,3 +30,5 @@ fi
 [[ -s "$HOME/.luaver/luaver" ]] && source "$HOME/.luaver/luaver" 
 
 # zprof
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
