@@ -460,6 +460,7 @@ local plugins = {
         lightbulb = {
           enable = false,
         },
+        
       }
     end,
     dependencies = {
