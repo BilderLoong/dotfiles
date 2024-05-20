@@ -805,6 +805,7 @@ local plugins = {
   },
   {
     "dnlhc/glance.nvim",
+    cmd = { "Glance" },
     config = function(_, opts)
       require("glance").setup {
         -- your configuration
