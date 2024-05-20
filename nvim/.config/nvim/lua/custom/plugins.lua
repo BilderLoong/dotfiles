@@ -808,7 +808,7 @@ local plugins = {
     cmd = { "Glance" },
     config = function(_, opts)
       require("glance").setup {
-        -- your configuration
+        
       }
     end,
   },
