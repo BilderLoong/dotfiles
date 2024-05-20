@@ -811,7 +811,7 @@ local plugins = {
         border = {
           enable = true, -- Show window borders. Only horizontal borders allowed
           top_char = "胡",
-          bottom_char = "hzl",
+          bottom_char = "胡",
         },
       }
     end,
