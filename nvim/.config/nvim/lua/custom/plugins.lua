@@ -816,7 +816,9 @@ local plugins = {
         },
         use_trouble_qf = false,
           mappings = {
-            
+            list = {
+              
+            }
           }
       }
     end,
