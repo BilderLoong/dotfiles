@@ -460,7 +460,7 @@ local plugins = {
         lightbulb = {
           enable = false,
         },
-        
+        code_action
       }
     end,
     dependencies = {
