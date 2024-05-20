@@ -699,7 +699,7 @@ local plugins = {
 
   {
     "akinsho/git-conflict.nvim",
-    event = { "BufReadPre" },
+    event = BufEnterLike,
     version = "*",
     config = true,
   },
