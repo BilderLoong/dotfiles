@@ -13,6 +13,7 @@ M.general = {
     ["zt"] = { "zt3<c-y>" },
   },
   n = {
+    ["zt"] = { "zt3<c-y>" },
     ["<leader>cd"] = {
       function()
         require("export-to-vscode").launch()
@@ -27,6 +28,9 @@ M.general = {
       "Open neovim config in a new tab.",
       opts = { noremap = true, silent = true },
     },
+  },
+  v = {
+    ["zt"] = { "zt3<c-y>" },
   },
 }
 
