@@ -818,6 +818,9 @@ local plugins = {
       }
     end,
   },
+  {
+    "Tastyep/structlog.nvim",
+  },
   -- {
   --   "ThePrimeagen/harpoon",
   --   branch = "harpoon2",
