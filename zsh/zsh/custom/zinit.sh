@@ -54,6 +54,8 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     zdharma-continuum/null \
         has'atuin' id-as'atuin-init' eval"atuin init zsh --disable-up-arrow" \
     zdharma-continuum/null
+        has'fzf' id-as'fzf-shell-i' eval"atuin init zsh --disable-up-arrow" \
+    zdharma-continuum/null
 
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
