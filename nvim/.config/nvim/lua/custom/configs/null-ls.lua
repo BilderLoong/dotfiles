@@ -14,8 +14,8 @@ local sources = {
     timeout = 10000,
   },
 
-  require("none-ls.diagnostics.eslint_d").with{
-
+  require("none-ls.diagnostics.eslint_d").with {
+    method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
   },
   -- ca.eslint,
 
