@@ -105,12 +105,12 @@ local plugins = {
 
     "nvimtools/none-ls.nvim",
     dependencies = {
-       "nvimtools/none-ls-extras.nvim",
+      "nvimtools/none-ls-extras.nvim",
     },
     config = function()
       require "custom.configs.null-ls"
     end,
-  }
+  },
 
   {
     "neovim/nvim-lspconfig",
