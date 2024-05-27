@@ -107,7 +107,7 @@ local plugins = {
     dependencies = {
       "nvimtools/none-ls.nvim",
       config = function()
-        require "custom.configs.null-ls"
+        require "custom.configs.none-ls"
       end,
     },
     config = function()
