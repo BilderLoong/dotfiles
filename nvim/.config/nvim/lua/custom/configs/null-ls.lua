@@ -14,7 +14,9 @@ local sources = {
     timeout = 10000,
   },
 
-  require("none-ls.diagnostics.eslint_d"),
+  require("none-ls.diagnostics.eslint_d").with{
+
+  },
   -- ca.eslint,
 
   ca.gitrebase,
