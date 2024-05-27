@@ -21,13 +21,13 @@ local plugins = {
     ---@type Flash.Config
     opts = {},
     keys = {
-        -- stylua: ignore start
-      { "m", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash Jump" },
-      { "M", mode = { "n","o",  "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "<leader>mm", mode = { "n","o",  "x" }, "m",  desc = "Default m key.", { noremap = true }},
-      { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+      -- stylua: ignore start
+      { "m",          mode = { "n", "o", "x" }, function() require("flash").jump() end,              desc = "Flash Jump" },
+      { "M",          mode = { "n", "o", "x" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+      { "<leader>mm", mode = { "n", "o", "x" }, "m",                                                 desc = "Default m key.",     { noremap = true } },
+      { "r",          mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+      { "R",          mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      { "<c-s>",      mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
       -- stylua: ignore end
     },
   },
@@ -101,15 +101,19 @@ local plugins = {
       return { pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook() }
     end,
   },
+  {
+
+    "nvimtools/none-ls.nvim",
+    dependencies = {
+      
+    },
+    config = function()
+      require "custom.configs.null-ls"
+    end,
+  }
 
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "nvimtools/none-ls.nvim",
-      config = function()
-        require "custom.configs.null-ls"
-      end,
-    },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
@@ -133,8 +137,8 @@ local plugins = {
         -- Python
         "debugpy", -- Debugger
         "pyright", -- LSP
-        "ruff", -- Linter
-        "black", -- Formater
+        "ruff",    -- Linter
+        "black",   -- Formater
 
         -- Web
         "html-lsp",
@@ -202,9 +206,9 @@ local plugins = {
     event = BufEnterLike,
     config = function()
       require("treesitter-context").setup {
-        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 4, -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 4,   -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = {
           -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
@@ -282,7 +286,7 @@ local plugins = {
 
         word_diff = false,
         current_line_blame = true,
-        numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
+        numhl = false,  -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
 
         current_line_blame_opts = {
@@ -347,7 +351,7 @@ local plugins = {
       "SessionSave",
     },
     opts = {
-      auto_restore_enabled = false, -- auto restore seesion will block the OSV start debug server. 
+      auto_restore_enabled = false, -- auto restore seesion will block the OSV start debug server.
       log_level = vim.log.levels.ERROR,
       -- auto_session_enable_last_session = true,
 
@@ -467,7 +471,7 @@ local plugins = {
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons", -- optional
+      "nvim-tree/nvim-web-devicons",     -- optional
     },
   },
 
@@ -653,7 +657,7 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim", -- Optional
     },
-    version = "^3", -- Recommended
+    version = "^3",                    -- Recommended
     -- init = function() -- Optional, see Advanced configuration
     -- end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
@@ -679,7 +683,7 @@ local plugins = {
     config = function(_, opts)
       -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
       vim.o.foldcolumn = "1" -- '0' is not bad
-      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+      vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
       vim.o.foldlevelstart = 99
       vim.o.foldenable = true
 
@@ -784,15 +788,15 @@ local plugins = {
     "gbprod/substitute.nvim",
     event = BufEnterLike,
     keys = {
-        -- stylua: ignore start
-      { "sx", mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
-      { "sxx", mode = { "n" }, function() require("substitute.exchange").line() end, desc = "Substitute Exchange Line", { noremap = true }, },
-      { "X", mode = { "x" }, function() require("substitute.exchange").visual() end, desc = "Substitute Exchange Visual", { noremap = true }, },
-      { "sxc", mode = { "n" }, function() require("substitute.exchange").cancel() end, desc = "Substitute Exchange Cancel", { noremap = true }, },
-      { "s", mode = { "n" }, function() require("substitute").operator() end, desc = "Substitute Operator", { noremap = true }, },
-      { "ss", mode = { "n" }, function() require("substitute").line() end, desc = "Substitute Line", { noremap = true }, },
-      { "S", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true }, },
-      { "s", mode = { "x" }, function() require("substitute").visual() end, desc = "Substitute Visual", { noremap = true }, },
+      -- stylua: ignore start
+      { "sx",  mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
+      { "sxx", mode = { "n" }, function() require("substitute.exchange").line() end,     desc = "Substitute Exchange Line",     { noremap = true }, },
+      { "X",   mode = { "x" }, function() require("substitute.exchange").visual() end,   desc = "Substitute Exchange Visual",   { noremap = true }, },
+      { "sxc", mode = { "n" }, function() require("substitute.exchange").cancel() end,   desc = "Substitute Exchange Cancel",   { noremap = true }, },
+      { "s",   mode = { "n" }, function() require("substitute").operator() end,          desc = "Substitute Operator",          { noremap = true }, },
+      { "ss",  mode = { "n" }, function() require("substitute").line() end,              desc = "Substitute Line",              { noremap = true }, },
+      { "S",   mode = { "n" }, function() require("substitute").eol() end,               desc = "Substitute EOL",               { noremap = true }, },
+      { "s",   mode = { "x" }, function() require("substitute").visual() end,            desc = "Substitute Visual",            { noremap = true }, },
       -- stylua: ignore end
     },
     opts = {
