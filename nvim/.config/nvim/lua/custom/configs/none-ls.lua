@@ -1,4 +1,4 @@
-local none_ls = require "none-ls"
+local none_ls = require "null-ls"
 
 local fmt = none_ls.builtins.formatting
 local lint = none_ls.builtins.diagnostics
