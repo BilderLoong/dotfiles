@@ -53,7 +53,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
     zdharma-continuum/null \
         has'atuin' id-as'atuin-init' eval"atuin init zsh --disable-up-arrow" \
-    zdharma-continuum/null
+    zdharma-continuum/null \
         has'fzf' id-as'fzf-shell-integration' eval"fzf --zsh" \
     zdharma-continuum/null
 
