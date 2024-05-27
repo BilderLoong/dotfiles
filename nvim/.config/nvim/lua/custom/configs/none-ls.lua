@@ -1,8 +1,8 @@
-local none_ls = require "null-ls"
+local null_ls = require "null-ls"
 
-local fmt = none_ls.builtins.formatting
-local lint = none_ls.builtins.diagnostics
-local ca = none_ls.builtins.code_actions
+local fmt = null_ls.builtins.formatting
+local lint = null_ls.builtins.diagnostics
+local ca = null_ls.builtins.code_actions
 
 local sources = {
   -- web developement
@@ -15,7 +15,7 @@ local sources = {
   },
 
   ca.eslint_d.with {
-    method = none_ls.methods.DIAGNOSTICS_ON_SAVE,
+    method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
   },
   -- ca.eslint,
 
@@ -35,7 +35,7 @@ local sources = {
   -- null_ls.builtins.code_actions.cspell,
 }
 
-none_ls.setup {
+null_ls.setup {
   debug = false,
   sources = sources,
   debounce = 500,
