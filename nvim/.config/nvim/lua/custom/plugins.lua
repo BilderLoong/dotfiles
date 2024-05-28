@@ -832,12 +832,12 @@ local plugins = {
       "rcarriga/nvim-notify",
     },
   },
-  {
-    "j-hui/fidget.nvim",
-    opts = {
-      -- options
-    },
-  },
+  -- {
+  --   "j-hui/fidget.nvim",
+  --   opts = {
+  --     -- options
+  --   },
+  -- },
   {
     "dstein64/vim-startuptime",
     -- lazy-load on a command
