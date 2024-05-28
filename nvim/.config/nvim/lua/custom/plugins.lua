@@ -79,7 +79,7 @@ local plugins = {
   {
     "nvim-treesitter/playground",
     -- event = BufEnterLike,
-    event = "BufEnter",
+    event = "VeryLazy",
   },
 
   {
