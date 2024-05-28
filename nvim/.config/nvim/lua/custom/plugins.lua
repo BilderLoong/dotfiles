@@ -1,4 +1,4 @@
-local BufEnterLike = { "UIEnter" }
+local BufEnterLike = { "VeryLazy" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
 
