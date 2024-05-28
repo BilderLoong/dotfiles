@@ -710,7 +710,7 @@ local plugins = {
   {
     "akinsho/git-conflict.nvim",
     -- event = BufEnterLike,
-    
+    event = "BufEnter",
     version = "*",
     config = true,
   },
