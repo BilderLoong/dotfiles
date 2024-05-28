@@ -735,7 +735,7 @@ local plugins = {
 
   {
     "github/copilot.vim",
-    event = "BufReadPost",
+    event = "BufEnter",
     cmd = "Copilot ",
     config = function(_, opts)
       vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', {
