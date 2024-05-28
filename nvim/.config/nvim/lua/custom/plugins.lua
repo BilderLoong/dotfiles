@@ -734,7 +734,6 @@ local plugins = {
   },
 
   {
-
     "github/copilot.vim",
     event = "BufReadPost",
     cmd = "Copilot ",
