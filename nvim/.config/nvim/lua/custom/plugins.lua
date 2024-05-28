@@ -487,7 +487,7 @@ local plugins = {
   {
     "mxsdev/nvim-dap-vscode-js",
     event = "VeryLazy",
-    -- ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
+    ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
     dependencies = { "mfussenegger/nvim-dap" },
     opts = function(_, default_nvchad_opts)
       return {
