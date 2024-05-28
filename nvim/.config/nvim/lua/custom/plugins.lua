@@ -790,7 +790,7 @@ local plugins = {
 
   {
     "gbprod/substitute.nvim",
-    event = BufEnterLike,
+    
     keys = {
       -- stylua: ignore start
       { "sx",  mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
