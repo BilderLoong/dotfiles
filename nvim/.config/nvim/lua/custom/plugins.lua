@@ -58,7 +58,8 @@ local plugins = {
 
   {
     "RRethy/nvim-treesitter-textsubjects",
-    event = BufEnterLike,
+    -- event = BufEnterLike,
+    event = "BufEnter",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
       require("nvim-treesitter.configs").setup {
