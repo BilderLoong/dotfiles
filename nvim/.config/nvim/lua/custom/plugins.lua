@@ -383,6 +383,7 @@ local plugins = {
       vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
     end,
   },
+
   {
 
     "nvim-tree/nvim-tree.lua",
@@ -448,6 +449,7 @@ local plugins = {
       "LuaRun",
     },
   },
+
   {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
