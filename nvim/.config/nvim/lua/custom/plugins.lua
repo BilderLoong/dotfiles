@@ -17,7 +17,7 @@ local plugins = {
 
   {
     "folke/flash.nvim",
-    event = "BufReadPost",
+    event = "BufEnter",
     ---@type Flash.Config
     opts = {},
     keys = {
