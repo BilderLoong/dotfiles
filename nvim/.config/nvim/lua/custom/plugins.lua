@@ -31,6 +31,7 @@ local plugins = {
       -- stylua: ignore end
     },
   },
+
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -41,6 +42,7 @@ local plugins = {
       }
     end,
   },
+
   {
     "wellle/targets.vim",
     event = "BufReadPost",
@@ -79,7 +81,7 @@ local plugins = {
   {
     "nvim-treesitter/playground",
     -- event = BufEnterLike,
-    event = "VeryLazy",
+    event = "BufEnter",
   },
 
   {
