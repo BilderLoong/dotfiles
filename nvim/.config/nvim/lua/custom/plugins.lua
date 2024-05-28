@@ -302,7 +302,7 @@ local plugins = {
 
   {
     "hrsh7th/nvim-cmp",
-    
+    event = "InsertEnter",
     opts = function()
       local cmp = require "cmp"
       local opts = vim.tbl_deep_extend("force", require "plugins.configs.cmp", {
