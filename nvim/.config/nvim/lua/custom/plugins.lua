@@ -78,7 +78,8 @@ local plugins = {
 
   {
     "nvim-treesitter/playground",
-    event = BufEnterLike,
+    -- event = BufEnterLike,
+    event = "BufEnter",
   },
 
   {
@@ -204,7 +205,8 @@ local plugins = {
 
   {
     "romgrk/nvim-treesitter-context",
-    event = BufEnterLike,
+    -- event = BufEnterLike,
+    event = "BufEnter",
     config = function()
       require("treesitter-context").setup {
         enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
@@ -707,7 +709,8 @@ local plugins = {
 
   {
     "akinsho/git-conflict.nvim",
-    event = BufEnterLike,
+    -- event = BufEnterLike,
+    
     version = "*",
     config = true,
   },
