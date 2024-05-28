@@ -1,4 +1,4 @@
-local BufEnterLike = { "BufReadPost", "BufAdd", "BufNewFile" }
+local BufEnterLike = { "UIEnter" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
 
@@ -17,7 +17,7 @@ local plugins = {
 
   {
     "folke/flash.nvim",
-    event = "BufEnter",
+    event = BufEnterLike,
     ---@type Flash.Config
     opts = {},
     keys = {
@@ -54,14 +54,14 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    event = "BufEnter",
+    event = BufEnterLike,
     dependencies = "nvim-treesitter/nvim-treesitter",
   },
 
   {
     "RRethy/nvim-treesitter-textsubjects",
     -- event = BufEnterLike,
-    event = "BufEnter",
+    event = BufEnterLike,
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
       require("nvim-treesitter.configs").setup {
@@ -81,7 +81,7 @@ local plugins = {
   {
     "nvim-treesitter/playground",
     -- event = BufEnterLike,
-    event = "BufEnter",
+    event = BufEnterLike,
   },
 
   {
@@ -105,7 +105,7 @@ local plugins = {
       return { pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook() }
     end,
   },
-  
+
   {
 
     "nvimtools/none-ls.nvim",
@@ -209,7 +209,7 @@ local plugins = {
   {
     "romgrk/nvim-treesitter-context",
     -- event = BufEnterLike,
-    event = "BufEnter",
+    event = BufEnterLike,
     config = function()
       require("treesitter-context").setup {
         enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
@@ -716,7 +716,7 @@ local plugins = {
   {
     "akinsho/git-conflict.nvim",
     -- event = BufEnterLike,
-    event = "BufEnter",
+    event = BufEnterLike,
     version = "*",
     config = true,
   },
@@ -741,7 +741,7 @@ local plugins = {
 
   {
     "github/copilot.vim",
-    event = "BufEnter",
+    event = BufEnterLike,
     cmd = "Copilot ",
     config = function(_, opts)
       vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', {
@@ -781,7 +781,7 @@ local plugins = {
 
   {
     "gbprod/yanky.nvim",
-    event = "BufEnter",
+    event = BufEnterLike,
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
@@ -795,7 +795,7 @@ local plugins = {
 
   {
     "gbprod/substitute.nvim",
-    event = "BufEnter",
+    event = BufEnterLike,
     keys = {
       -- stylua: ignore start
       { "sx",  mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
