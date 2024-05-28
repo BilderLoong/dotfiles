@@ -349,6 +349,7 @@ local plugins = {
 
   {
     "rmagatti/auto-session",
+    event = BufEnterLike,
     cmd = {
       "Autosession",
       "SessionDelete",
