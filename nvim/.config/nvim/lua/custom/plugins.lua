@@ -1,5 +1,5 @@
 local BufEnterLike = { "VeryLazy" }
-local User_FilePost = {"User FilePost"}
+local User_FilePost = { "User FilePost" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
 
@@ -7,7 +7,7 @@ local load_mappings = require("core.utils").load_mappings
 local plugins = {
   {
     "unblevable/quick-scope",
-    event=
+    event = User_FilePost,
     config = function()
       vim.cmd [[
 			  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
