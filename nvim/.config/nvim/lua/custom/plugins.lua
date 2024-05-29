@@ -1,4 +1,4 @@
-local BufEnterLike = { "User FilePost" }
+local BufEnterLike = { "" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
 
