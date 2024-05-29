@@ -782,7 +782,7 @@ local plugins = {
 
   {
     "gbprod/yanky.nvim",
-    event = {"*"},
+    event = {"T"},
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
