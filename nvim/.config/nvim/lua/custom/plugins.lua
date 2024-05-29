@@ -6,7 +6,7 @@ local load_mappings = require("core.utils").load_mappings
 local plugins = {
   {
     "unblevable/quick-scope",
-    
+    event=
     config = function()
       vim.cmd [[
 			  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
