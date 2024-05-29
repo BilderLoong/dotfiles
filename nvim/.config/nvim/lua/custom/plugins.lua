@@ -782,7 +782,7 @@ local plugins = {
 
   {
     "gbprod/yanky.nvim",
-    event = {"TextYankPost"},
+    event = { "TextYankPost" },
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
