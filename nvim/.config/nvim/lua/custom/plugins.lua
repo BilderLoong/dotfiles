@@ -119,7 +119,6 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
-    event = BufEnterLike,
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
