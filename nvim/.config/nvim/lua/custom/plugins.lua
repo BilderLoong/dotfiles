@@ -321,6 +321,7 @@ local plugins = {
 
   {
     "nvim-telescope/telescope.nvim",
+    event = "VeryLazy",
     dependencies = {
       {
         -- dependency for better sorting performance
