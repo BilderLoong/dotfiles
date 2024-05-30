@@ -7,7 +7,7 @@ local load_mappings = require("core.utils").load_mappings
 local plugins = {
   {
     "unblevable/quick-scope",
-    event = {"User LazyFilePost"},
+    event = { "User LazyFilePost" },
     config = function()
       vim.cmd [[
 			  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
@@ -488,7 +488,7 @@ local plugins = {
   -- Example: https://github.com/akinsho/dotfiles/blob/d061b48766de8da969dfcb178ff32324f76aed6f/.config/nvim/lua/as/plugins/debugger.lua#L96
   {
     "mxsdev/nvim-dap-vscode-js",
-    event = "VeryLazy",
+    event = BufEnterLike,
     -- ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
     dependencies = { "mfussenegger/nvim-dap" },
     opts = function(_, default_nvchad_opts)
