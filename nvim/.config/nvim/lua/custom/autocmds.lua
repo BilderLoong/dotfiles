@@ -1,5 +1,6 @@
 local utils = require "custom.utils"
 
+--- Use by lazy load plugin.
 vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = vim.api.nvim_create_augroup("MyFilePost", { clear = true }),
   callback = function(args)
@@ -14,7 +15,7 @@ vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
       vim.schedule(function()
         vim.api.nvim_exec_autocmds("User", { pattern = "LazyFilePost", modeline = false })
         vim.api.nvim_del_augroup_by_name "MyFilePost"
-      end, 0)
+      end)
     end
   end,
 })
@@ -25,10 +26,6 @@ api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
   pattern = "*",
   callback = function(ctx)
     api.nvim_command "silent! wall"
-
-    if vim.log.levels.TRACE then
-      -- vim.print("Save all buffers on blur.")
-    end
   end,
 })
 
@@ -49,19 +46,18 @@ api.nvim_create_autocmd({
   callback = disable_auto_save,
 })
 
-local function _start_tsserver()
-  --local cwd = vim.loop.cmd()
-  local root_dir =
-      vim.fs.dirname(vim.fs.find({ "tsconfig.json", "package.json", "jsconfig.json", ".git" }, { upward = true })[1])
-
-  vim.print("root_dir", root_dir)
-
-  local client = vim.lsp.start({
-    name = "tsserver",
-    cmd = { "typescript-language-server", "--stdio" },
-    root_dir = root_dir,
-  })
-end
+-- local function _start_tsserver()
+--   --local cwd = vim.loop.cmd()
+--   local root_dir =
+--       vim.fs.dirname(vim.fs.find({ "tsconfig.json", "package.json", "jsconfig.json", ".git" }, { upward = true })[1])
+--
+--
+--   local client = vim.lsp.start({
+--     name = "tsserver",
+--     cmd = { "typescript-language-server", "--stdio" },
+--     root_dir = root_dir,
+--   })
+-- end
 
 -- if vim.g.vim_did_enter then
 -- 	_start_tsserver()
