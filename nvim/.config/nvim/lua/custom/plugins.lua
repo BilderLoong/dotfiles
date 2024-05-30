@@ -705,6 +705,7 @@ local plugins = {
 
   {
     "lukas-reineke/indent-blankline.nvim",
+    event = BufEnterLike,
     opts = function()
       return vim.tbl_deep_extend("force", require("plugins.configs.others").blankline, {
         -- show_current_context = true,
