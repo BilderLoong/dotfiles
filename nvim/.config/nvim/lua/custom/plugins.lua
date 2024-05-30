@@ -45,7 +45,7 @@ local plugins = {
 
   {
     "wellle/targets.vim",
-    event = "BufReadPost",
+    event = BufEnterLike,
   },
 
   {
