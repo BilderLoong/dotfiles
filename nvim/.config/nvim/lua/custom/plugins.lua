@@ -679,7 +679,7 @@ local plugins = {
 
   {
     "kevinhwang91/nvim-ufo",
-    event = "BufReadPost",
+    event = BufEnterLike,
     dependencies = "kevinhwang91/promise-async",
     -- My experience use LSP as folder provider is better than treesitter.
     -- opts = function()
