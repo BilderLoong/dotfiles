@@ -1,4 +1,4 @@
-local BufEnterLike = { "User LazyFilePost" }
+local LazyBufEnter = { "User LazyFilePost" }
 local User_FilePost = { "User FilePost" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
@@ -45,7 +45,7 @@ local plugins = {
 
   {
     "wellle/targets.vim",
-    event = BufEnterLike,
+    event = LazyBufEnter,
   },
 
   {
@@ -54,14 +54,14 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    event = BufEnterLike,
+    event = LazyBufEnter,
     dependencies = "nvim-treesitter/nvim-treesitter",
   },
 
   {
     "RRethy/nvim-treesitter-textsubjects",
     -- event = BufEnterLike,
-    event = BufEnterLike,
+    event = LazyBufEnter,
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = function()
       require("nvim-treesitter.configs").setup {
@@ -81,7 +81,7 @@ local plugins = {
   {
     "nvim-treesitter/playground",
     -- event = BufEnterLike,
-    event = BufEnterLike,
+    event = LazyBufEnter,
   },
 
   {
@@ -210,7 +210,7 @@ local plugins = {
   {
     "romgrk/nvim-treesitter-context",
     -- event = BufEnterLike,
-    event = BufEnterLike,
+    event = LazyBufEnter,
     config = function()
       require("treesitter-context").setup {
         enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
@@ -488,7 +488,7 @@ local plugins = {
   -- Example: https://github.com/akinsho/dotfiles/blob/d061b48766de8da969dfcb178ff32324f76aed6f/.config/nvim/lua/as/plugins/debugger.lua#L96
   {
     "mxsdev/nvim-dap-vscode-js",
-    event = BufEnterLike,
+    event = LazyBufEnter,
     -- ft = { "javascript", "javascriptreact", "typescript", "typecriptreact" },
     dependencies = { "mfussenegger/nvim-dap" },
     opts = function(_, default_nvchad_opts)
@@ -680,7 +680,7 @@ local plugins = {
 
   {
     "kevinhwang91/nvim-ufo",
-    event = BufEnterLike,
+    event = LazyBufEnter,
     dependencies = "kevinhwang91/promise-async",
     -- My experience use LSP as folder provider is better than treesitter.
     -- opts = function()
@@ -705,7 +705,7 @@ local plugins = {
 
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = BufEnterLike,
+    event = LazyBufEnter,
     opts = function()
       return vim.tbl_deep_extend("force", require("plugins.configs.others").blankline, {
         -- show_current_context = true,
@@ -719,7 +719,7 @@ local plugins = {
   {
     "akinsho/git-conflict.nvim",
     -- event = BufEnterLike,
-    event = BufEnterLike,
+    event = LazyBufEnter,
     version = "*",
     config = true,
   },
@@ -744,7 +744,7 @@ local plugins = {
 
   {
     "github/copilot.vim",
-    event = BufEnterLike,
+    event = LazyBufEnter,
     cmd = "Copilot ",
     config = function(_, opts)
       vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', {
