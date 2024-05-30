@@ -1,4 +1,4 @@
-local BufEnterLike = { "User LazyFilePost" }
+local BufEnterLike = { "VeryLazy" }
 local User_FilePost = { "User FilePost" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
