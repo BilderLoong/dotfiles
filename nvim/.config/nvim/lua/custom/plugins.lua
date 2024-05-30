@@ -86,7 +86,7 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    event = BufEnterLike,
+    event = "VeryLazy",
     dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
     },
