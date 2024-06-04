@@ -84,7 +84,7 @@ M.lspconfig = {
   n = {
     ["gd"] = {
       "<cmd> Glance type_definitions  <CR>",
-      "Glance LSP definitions",
+      "Glance LSP definitions yo~",
     },
     ["gr"] = {
       "<cmd> Glance references",
