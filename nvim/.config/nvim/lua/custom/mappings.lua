@@ -92,7 +92,7 @@ M.lspconfig = {
     },
     ["gd"] = {
       "<cmd> Glance definitions <CR>",
-      "Telescope LSP type definitions",
+      "Telescope LSP definitions",
     },
     ["gi"] = {
       "<cmd> Telescope lsp_implementations <CR>",
