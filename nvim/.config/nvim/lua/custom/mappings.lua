@@ -83,15 +83,15 @@ M.fzf_lua = {
 M.lspconfig = {
   n = {
     ["gy"] = {
-      "<cmd> Glance type_definitions <CR>",
+      "<cmd> Glance type_definitions<CR>",
       "Glance LSP type definitions yo~~~",
     },
     ["gr"] = {
-      "<cmd> Glance references <CR>",
+      "<cmd> Glance references<CR>",
       "Glance LSP references",
     },
     ["gd"] = {
-      "<cmd> Glance definitions <CR>",
+      "<cmd> Glance definitions<CR>",
       "Glance LSP definitions ao!",
     },
     ["gi"] = {
