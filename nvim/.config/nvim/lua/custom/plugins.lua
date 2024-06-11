@@ -825,6 +825,16 @@ local plugins = {
     cmd = { "Glance" },
     config = function(_, opts)
       require("glance").setup {
+        hooks = {
+          --- Don't open glance when there is only one result instead jump to that location
+          before_open = function(results, open, jump)
+            if #results == 1 then
+              jump(results[1]) -- argument is optional
+            else
+              open(results)    -- argument is optional
+            end
+          end,
+        },
         border = {
           enable = true, -- Show window borders. Only horizontal borders allowed
         },
