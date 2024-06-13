@@ -22,12 +22,11 @@ local plugins = {
     opts = {},
     keys = {
       -- stylua: ignore start
-      { "m",          mode = { "n", "o", "x" }, function() require("flash").jump() end,              desc = "Flash Jump" },
-      { "M",          mode = { "n", "o", "x" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
-      { "<leader>mm", mode = { "n", "o", "x" }, "m",                                                 desc = "Default m key.",     { noremap = true } },
-      { "r",          mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
-      { "R",          mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>",      mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+      { "s",     mode = { "n", "o", "x" }, function() require("flash").jump() end,              desc = "Flash Jump" },
+      { "S",     mode = { "n", "o", "x" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+      { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+      { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
       -- stylua: ignore end
     },
   },
@@ -799,14 +798,15 @@ local plugins = {
     "gbprod/substitute.nvim",
     keys = {
       -- stylua: ignore start
-      { "sx",  mode = { "n" }, function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
-      { "sxx", mode = { "n" }, function() require("substitute.exchange").line() end,     desc = "Substitute Exchange Line",     { noremap = true }, },
-      { "X",   mode = { "x" }, function() require("substitute.exchange").visual() end,   desc = "Substitute Exchange Visual",   { noremap = true }, },
-      { "sxc", mode = { "n" }, function() require("substitute.exchange").cancel() end,   desc = "Substitute Exchange Cancel",   { noremap = true }, },
-      { "s",   mode = { "n" }, function() require("substitute").operator() end,          desc = "Substitute Operator",          { noremap = true }, },
-      { "ss",  mode = { "n" }, function() require("substitute").line() end,              desc = "Substitute Line",              { noremap = true }, },
-      { "S",   mode = { "n" }, function() require("substitute").eol() end,               desc = "Substitute EOL",               { noremap = true }, },
-      { "s",   mode = { "x" }, function() require("substitute").visual() end,            desc = "Substitute Visual",            { noremap = true }, },
+      { "<leader>mm", mode = { "n", "o", "x" }, "m",                                                      desc = "Default m key.",               { noremap = true } },
+      { "mx",         mode = { "n" },           function() require("substitute.exchange").operator() end, desc = "Substitute Exchange Operator", { noremap = true }, },
+      { "mxx",        mode = { "n" },           function() require("substitute.exchange").line() end,     desc = "Substitute Exchange Line",     { noremap = true }, },
+      { "X",          mode = { "x" },           function() require("substitute.exchange").visual() end,   desc = "Substitute Exchange Visual",   { noremap = true }, },
+      { "mxc",        mode = { "n" },           function() require("substitute.exchange").cancel() end,   desc = "Substitute Exchange Cancel",   { noremap = true }, },
+      { "m",          mode = { "n" },           function() require("substitute").operator() end,          desc = "Substitute Operator",          { noremap = true }, },
+      { "mm",         mode = { "n" },           function() require("substitute").line() end,              desc = "Substitute Line",              { noremap = true }, },
+      { "M",          mode = { "n" },           function() require("substitute").eol() end,               desc = "Substitute EOL",               { noremap = true }, },
+      { "m",          mode = { "x" },           function() require("substitute").visual() end,            desc = "Substitute Visual",            { noremap = true }, },
       -- stylua: ignore end
     },
     opts = {
