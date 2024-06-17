@@ -257,11 +257,6 @@ local plugins = {
           fzf = {
             ["ctrl-a"] = "toggle-all",
           },
-          actions = {
-            files = {
-              ["ctrl-q"] = actions.open
-            }
-          }
         }
       }
     end,
