@@ -39,20 +39,6 @@ local telescope_i_n = {
   -- ["<A-k>"] = { "<cmd> Telescope keymaps <CR>", "Telescope keymaps" },
   ["<A-p>"] = { "<cmd> Telescope commands <CR>", "Telescope commands" },
   ["<A-r>"] = { "<cmd> Telescope resume <CR>", "Resume last Telescope picker" },
-  ["<F1>"] = {
-    function()
-      require("fzf-lua").help_tags()
-    end,
-    "Fzf lua help tags.",
-  },
-  ["<C-P>"] = {
-    function()
-      require("fzf-lua").files {
-        follow = true,
-      }
-    end,
-    "Fzf-lua find files.",
-  },
 }
 
 M.telescope = {
@@ -80,6 +66,25 @@ M.fzf_lua = {
       require("fzf-lua").lsp_live_workspace_symbols()
     end, "Find workspace symbols" },
 
+    ["<leader>fw"] = { function ()
+       
+        require("fzf-lua").help_tags()
+    end, "Live grep native" },
+
+    ["<F1>"] = {
+      function()
+        require("fzf-lua").help_tags()
+      end,
+      "Fzf lua help tags.",
+    },
+    ["<C-P>"] = {
+      function()
+        require("fzf-lua").files {
+          follow = true,
+        }
+      end,
+      "Fzf-lua find files.",
+    },
   },
 }
 
