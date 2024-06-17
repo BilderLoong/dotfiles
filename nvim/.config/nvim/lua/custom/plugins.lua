@@ -247,7 +247,7 @@ local plugins = {
       local actions = require("trouble.sources.fzf").actions
       config.defaults.actions.files["ctrl-q"] = actions.open_all
 
-      local fzf_actions = require "fzf-lua.actions"
+      -- local fzf_actions = require "fzf-lua.actions"
       config.defaults.fzf["ctrl-a"] = "toggle-all"
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
