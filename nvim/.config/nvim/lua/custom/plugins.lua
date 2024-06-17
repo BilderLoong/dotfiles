@@ -255,6 +255,11 @@ local plugins = {
           height = 0.98,
         },
         keymap = {
+          builtin = {
+            -- neovim `:tmap` mappings for the fzf win
+            ["<F1>"] = "toggle-help",
+          },
+
           fzf = {
             ["ctrl-a"] = "toggle-all",
           }
