@@ -249,7 +249,9 @@ local plugins = {
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
         keymap = {
-          
+          actions = {
+            
+          }
         }
         -- https://github.com/ibhagwan/fzf-lua/wiki#how-do-i-change-the-window-size-and-position
         winopts = {
