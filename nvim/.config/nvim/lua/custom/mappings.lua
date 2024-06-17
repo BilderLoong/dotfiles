@@ -77,7 +77,7 @@ M.fzf_lua = {
       "Resume last fzf-lua search.",
     },
     ["<leader>fs"] = { function()
-      require("fzf-lua").()
+      require("fzf-lua").lsp_live_workspace_symbols()
     end, "Find workspace symbols" },
 
   },
