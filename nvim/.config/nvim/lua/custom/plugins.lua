@@ -243,9 +243,7 @@ local plugins = {
     -- optional for icon support
     dependencies = { "nvim-tree/nvim-web-devicons", "folke/trouble.nvim" },
     config = function()
-      local config = require("fzf-lua.config")
       local actions = require("trouble.sources.fzf").actions
-      config.defaults.actions.files["ctrl-q"] = actions.open_all
 
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
@@ -254,14 +252,15 @@ local plugins = {
           width = 0.98,
           height = 0.98,
         },
-        keymap = {
-          builtin = {
-            -- neovim `:tmap` mappings for the fzf win
-            ["<F1>"] = "toggle-help",
-          },
 
+        keymap = {
           fzf = {
             ["ctrl-a"] = "toggle-all",
+          },
+          actions = {
+            files = {
+              ["ctrl-q"] = actions.open
+            }
           }
         }
       }
