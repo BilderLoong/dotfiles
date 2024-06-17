@@ -244,7 +244,7 @@ local plugins = {
     dependencies = { "nvim-tree/nvim-web-devicons", "folke/trouble.nvim" },
     config = function()
       local config = require("fzf-lua.config")
-      local actions = require("trouble").actions
+      local actions = require("trouble.sources.fzf").actions
       config.defaults.actions.files["ctrl-q"] = actions.open
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
