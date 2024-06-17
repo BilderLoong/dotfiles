@@ -255,9 +255,9 @@ local plugins = {
           height = 0.98,
         },
         keymap = {
- fzf = {
-   
- }
+          fzf = {
+            ["ctrl-a"] = "toggle-all",
+          }
         }
       }
     end,
