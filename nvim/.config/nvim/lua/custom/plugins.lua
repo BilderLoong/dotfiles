@@ -258,9 +258,9 @@ local plugins = {
             ["ctrl-a"] = "toggle-all",
           },
           actions = {
-            files = {
-              ["ctrl-q"] = actions.open
-            }
+              files = {
+                ["ctrl-q"] = actions.open
+              }
           }
         }
       }
