@@ -248,7 +248,7 @@ local plugins = {
       config.defaults.actions.files["ctrl-q"] = actions.open_all
 
       local fzf_actions = require "fzf-lua.actions"
-      config.defaults.actions.files["ctrl-a"] = "toggle-all"
+      config.defaults.fzf.files["ctrl-a"] = "toggle-all"
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
         -- https://github.com/ibhagwan/fzf-lua/wiki#how-do-i-change-the-window-size-and-position
