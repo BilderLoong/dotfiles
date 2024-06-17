@@ -255,7 +255,9 @@ local plugins = {
           height = 0.98,
         },
         keymap = {
-
+ fzf = {
+   
+ }
         }
       }
     end,
