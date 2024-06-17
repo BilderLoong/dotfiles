@@ -246,13 +246,9 @@ local plugins = {
       local config = require("fzf-lua.config")
       local actions = require("trouble.sources.fzf").actions
       config.defaults.actions.files["ctrl-q"] = actions.open_all
+      config.defaults.actions.files["ctrl-a"] = actions.open_all
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
-        keymap = {
-          actions = {
-            
-          }
-        }
         -- https://github.com/ibhagwan/fzf-lua/wiki#how-do-i-change-the-window-size-and-position
         winopts = {
           width = 0.98,
