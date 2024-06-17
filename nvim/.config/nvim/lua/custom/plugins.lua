@@ -241,7 +241,7 @@ local plugins = {
     "ibhagwan/fzf-lua",
     cmd = { "FzfLua" },
     -- optional for icon support
-    dependencies = { "nvim-tree/nvim-web-devicons", "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons", "folke/trouble.nvim"
     },
     config = function()
       local config = require("fzf-lua.config")
