@@ -57,7 +57,6 @@ local telescope_i_n = {
 
 M.telescope = {
   n = vim.tbl_deep_extend("force", telescope_i_n, {
-    ["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find workspace symbols" },
     ["<leader>ss"] = {
       function()
         require("auto-session.session-lens").search_session()
@@ -77,6 +76,10 @@ M.fzf_lua = {
       end,
       "Resume last fzf-lua search.",
     },
+    ["<leader>fs"] = { function()
+  
+    end, "Find workspace symbols" },
+
   },
 }
 
