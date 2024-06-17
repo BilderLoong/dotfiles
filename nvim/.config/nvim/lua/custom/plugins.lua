@@ -258,6 +258,7 @@ local plugins = {
             ["ctrl-a"] = "toggle-all",
           },
         }
+        ,
       }
     end,
   },
