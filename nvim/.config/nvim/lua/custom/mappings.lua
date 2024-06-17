@@ -66,9 +66,8 @@ M.fzf_lua = {
       require("fzf-lua").lsp_live_workspace_symbols()
     end, "Find workspace symbols" },
 
-    ["<leader>fw"] = { function ()
-       
-        require("fzf-lua").help_tags()
+    ["<leader>fw"] = { function()
+      require("fzf-lua").live_grep_native()
     end, "Live grep native" },
 
     ["<F1>"] = {
