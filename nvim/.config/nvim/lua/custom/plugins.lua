@@ -261,7 +261,7 @@ local plugins = {
 
         actions = {
           files = {
-            ["ctrl-q"] = actions.open
+            ["ctrl-q"] = actions.open_all
           }
         }
       }
