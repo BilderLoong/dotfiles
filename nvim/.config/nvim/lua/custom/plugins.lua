@@ -250,7 +250,6 @@ local plugins = {
           width = 0.98,
           height = 0.98,
         },
-        max-perf
       }
     end,
   },
