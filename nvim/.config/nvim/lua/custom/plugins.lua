@@ -243,7 +243,8 @@ local plugins = {
     -- optional for icon support
     dependencies = { "nvim-tree/nvim-web-devicons", "folke/trouble.nvim" },
     config = function()
-      local actions = require("trouble.sources.fzf").actions
+      local trouble_actions = require("trouble.sources.fzf").actions
+      local actions = require "fzf-lua.actions"
 
       -- calling `setup` is optional for customization
       require("fzf-lua").setup {
@@ -278,8 +279,7 @@ local plugins = {
             ["ctrl-b"]     = "half-page-up",
             ["ctrl-a"]     = "beginning-of-line",
             ["ctrl-e"]     = "end-of-line",
-            -- ["alt-a"]      = "toggle-all",
-            ["ctrl-a"]     = "toggle-all",
+            ["alt-a"]      = "toggle-all",
             -- Only valid with fzf previewers (bat/cat/git/etc)
             ["f3"]         = "toggle-preview-wrap",
             ["f4"]         = "toggle-preview",
@@ -305,8 +305,8 @@ local plugins = {
             ["ctrl-s"]  = actions.file_split,
             ["ctrl-v"]  = actions.file_vsplit,
             ["ctrl-t"]  = actions.file_tabedit,
-            ["ctrl-q"]  = actions.open_all,
-            ["alt-q"]   = actions.file_sel_to_qf,
+            ["alt-q"]  = trouble_actions.open_all,
+            -- ["alt-q"]   = actions.file_sel_to_qf,
             ["alt-l"]   = actions.file_sel_to_ll,
           },
           buffers = {
