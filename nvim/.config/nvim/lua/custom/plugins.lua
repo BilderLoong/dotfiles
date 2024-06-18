@@ -252,18 +252,73 @@ local plugins = {
           width = 0.98,
           height = 0.98,
         },
-
         keymap = {
+          -- These override the default tables completely
+          -- no need to set to `false` to disable a bind
+          -- delete or modify is sufficient
+          builtin = {
+            -- neovim `:tmap` mappings for the fzf win
+            ["<F1>"]     = "toggle-help",
+            ["<F2>"]     = "toggle-fullscreen",
+            -- Only valid with the 'builtin' previewer
+            ["<F3>"]     = "toggle-preview-wrap",
+            ["<F4>"]     = "toggle-preview",
+            -- Rotate preview clockwise/counter-clockwise
+            ["<F5>"]     = "toggle-preview-ccw",
+            ["<F6>"]     = "toggle-preview-cw",
+            ["<S-down>"] = "preview-page-down",
+            ["<S-up>"]   = "preview-page-up",
+            ["<S-left>"] = "preview-page-reset",
+          },
           fzf = {
-            ["ctrl-a"] = "toggle-all",
+            -- fzf '--bind=' options
+            ["ctrl-z"]     = "abort",
+            ["ctrl-u"]     = "unix-line-discard",
+            ["ctrl-f"]     = "half-page-down",
+            ["ctrl-b"]     = "half-page-up",
+            ["ctrl-a"]     = "beginning-of-line",
+            ["ctrl-e"]     = "end-of-line",
+            -- ["alt-a"]      = "toggle-all",
+            ["ctrl-a"]     = "toggle-all",
+            -- Only valid with fzf previewers (bat/cat/git/etc)
+            ["f3"]         = "toggle-preview-wrap",
+            ["f4"]         = "toggle-preview",
+            ["shift-down"] = "preview-page-down",
+            ["shift-up"]   = "preview-page-up",
           },
         },
-
         actions = {
+          -- These override the default tables completely
+          -- no need to set to `false` to disable an action
+          -- delete or modify is sufficient
           files = {
-            ["ctrl-q"] = actions.open_all
+            -- providers that inherit these actions:
+            --   files, git_files, git_status, grep, lsp
+            --   oldfiles, quickfix, loclist, tags, btags
+            --   args
+            -- default action opens a single selection
+            -- or sends multiple selection to quickfix
+            -- replace the default action with the below
+            -- to open all files whether single or multiple
+            -- ["default"]     = actions.file_edit,
+            ["default"] = actions.file_edit_or_qf,
+            ["ctrl-s"]  = actions.file_split,
+            ["ctrl-v"]  = actions.file_vsplit,
+            ["ctrl-t"]  = actions.file_tabedit,
+            ["ctrl-q"]  = actions.open_all,
+            ["alt-q"]   = actions.file_sel_to_qf,
+            ["alt-l"]   = actions.file_sel_to_ll,
+          },
+          buffers = {
+            -- providers that inherit these actions:
+            --   buffers, tabs, lines, blines
+            ["default"] = actions.buf_edit,
+            ["ctrl-s"]  = actions.buf_split,
+            ["ctrl-v"]  = actions.buf_vsplit,
+            ["ctrl-t"]  = actions.buf_tabedit,
           }
-        }
+        },
+
       }
     end,
   },
