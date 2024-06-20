@@ -136,10 +136,10 @@ local plugins = {
       },
     },
     config = function(_, opts)
-      require('lint').linters_by_ft = {
-        markdown = { 'vale', },
-        typescriptreact = { "eslint" }
-      }
+      -- require('lint').linters_by_ft = {
+      --   markdown = { 'vale', },
+      --   typescriptreact = { "eslint" }
+      -- }
       local M = {}
 
       local lint = require("lint")
