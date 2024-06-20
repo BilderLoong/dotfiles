@@ -3,7 +3,7 @@ local utils = require "custom.utils"
 --- Use by lazy load plugin.
 vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = vim.api.nvim_create_augroup("MyFilePost", { clear = true }),
-  once = true,
+  once=true,
   callback = function(args)
     local file = vim.api.nvim_buf_get_name(args.buf)
     local buftype = vim.api.nvim_buf_get_option(args.buf, "buftype")
@@ -14,6 +14,8 @@ vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
 
     if file ~= "" and buftype ~= "nofile" and vim.g.ui_entered then
       vim.schedule(function()
+        vim.api.nvim_exec_autocmds("User", { pattern = "LazyFilePost", modeline = false })
+        vim.api.nvim_del_augroup_by_name "MyFilePost"
       end)
     end
   end,
