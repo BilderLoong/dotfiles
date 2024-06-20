@@ -114,7 +114,11 @@ local plugins = {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       linters_by_ft = {
         fish = { "fish" },
-        typescriptreact = { "eslint" }
+        typescriptreact = { "eslint" },
+        typescript = { "eslint" },
+        javascript = { "eslint" },
+        javascriptreact = { "eslint" },
+        lua={''}
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
@@ -136,10 +140,6 @@ local plugins = {
       },
     },
     config = function(_, opts)
-      -- require('lint').linters_by_ft = {
-      --   markdown = { 'vale', },
-      --   typescriptreact = { "eslint" }
-      -- }
       local M = {}
 
       local lint = require("lint")
