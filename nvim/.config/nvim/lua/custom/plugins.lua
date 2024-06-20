@@ -106,16 +106,15 @@ local plugins = {
     end,
   },
 
-  {
-
-    "nvimtools/none-ls.nvim",
-    dependencies = {
-      "nvimtools/none-ls-extras.nvim",
-    },
-    config = function()
-      require "custom.configs.null-ls"
-    end,
-  },
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   dependencies = {
+  --     "nvimtools/none-ls-extras.nvim",
+  --   },
+  --   config = function()
+  --     require "custom.configs.null-ls"
+  --   end,
+  -- },
 
   {
     "neovim/nvim-lspconfig",
@@ -305,7 +304,7 @@ local plugins = {
             ["ctrl-s"]  = actions.file_split,
             ["ctrl-v"]  = actions.file_vsplit,
             ["ctrl-t"]  = actions.file_tabedit,
-            ["alt-q"]  = trouble_actions.open_all,
+            ["alt-q"]   = trouble_actions.open_all,
             -- ["alt-q"]   = actions.file_sel_to_qf,
             ["alt-l"]   = actions.file_sel_to_ll,
           },
