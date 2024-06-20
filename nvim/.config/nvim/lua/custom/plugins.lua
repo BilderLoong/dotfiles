@@ -108,7 +108,7 @@ local plugins = {
 
   {
     "mfussenegger/nvim-lint",
-    event = "LazyFile",
+    event = LazyBufEnter,
     opts = {
       -- Event to trigger linters
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
