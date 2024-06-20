@@ -136,6 +136,9 @@ local plugins = {
       },
     },
     config = function(_, opts)
+      require('lint').linters_by_ft = {
+        markdown = { 'vale', }
+      }
       local M = {}
 
       local lint = require("lint")
