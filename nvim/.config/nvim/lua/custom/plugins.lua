@@ -137,7 +137,8 @@ local plugins = {
     },
     config = function(_, opts)
       require('lint').linters_by_ft = {
-        markdown = { 'vale', }
+        markdown = { 'vale', },
+        typescriptreact = { "eslint" }
       }
       local M = {}
 
