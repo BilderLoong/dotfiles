@@ -12,10 +12,10 @@ vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
       vim.g.ui_entered = true
     end
 
+    vim.api.nvim_exec_autocmds("User", { pattern = "LazyFilePost", modeline = false })
+    vim.api.nvim_del_augroup_by_name "MyFilePost"
     if file ~= "" and buftype ~= "nofile" and vim.g.ui_entered then
       vim.schedule(function()
-        vim.api.nvim_exec_autocmds("User", { pattern = "LazyFilePost", modeline = false })
-        vim.api.nvim_del_augroup_by_name "MyFilePost"
       end)
     end
   end,
