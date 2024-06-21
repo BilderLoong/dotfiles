@@ -186,7 +186,7 @@ local plugins = {
       return opts
     end,
     config = M.setup,
-  }
+ }<
 
   {
     "mfussenegger/nvim-lint",
