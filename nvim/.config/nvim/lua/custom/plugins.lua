@@ -336,7 +336,6 @@ local plugins = {
         -- Rust
         "rust-analyzer",
         "codelldb",
-        "rustfmt",
 
         -- java
         "jdtls",
