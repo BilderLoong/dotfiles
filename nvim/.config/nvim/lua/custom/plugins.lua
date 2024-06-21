@@ -125,16 +125,17 @@ local plugins = {
       -- log_level = vim.log.levels.TRACE,
       -- Define your formatters
       formatters_by_ft = {
-
         go = { "goimports", "gofmt" },
         lua = { "stylua" },
         python = { "isort", "black" },
+
         -- Web development
         json = { { "prettierd", "prettier" } },
         javascript = { { "prettierd", "prettier" } },
         javascriptreact = { { "prettierd", "prettier" } },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
+
         -- Rust
         rust = { "rustfmt" },
 
