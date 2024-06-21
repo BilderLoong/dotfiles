@@ -129,6 +129,7 @@ local plugins = {
         go = { "goimports", "gofmt" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        --- Web development
         json = { { "prettierd", "prettier" } },
         javascript = { { "prettierd", "prettier" } },
         javascriptreact = { { "prettierd", "prettier" } },
