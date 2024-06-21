@@ -136,7 +136,7 @@ local plugins = {
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
         -- Rust
-        
+        rust
 
         ["_"] = { "trim_whitespace" },
         ["*"] = { "codespell" },
