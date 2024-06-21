@@ -143,7 +143,7 @@ local plugins = {
 
 
         ["_"] = { "trim_whitespace" },
-        ["*"] = { "codespell" },
+        -- ["*"] = { "codespell" },
       },
       -- Set up format-on-save
       format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
@@ -179,7 +179,7 @@ local plugins = {
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
         -- ['_'] = { 'fallback linter' },
-        -- ["*"] = { "typos" },
+        ["*"] = { "cspell", },
       },
       -- LazyVim extension to easily override linter options
       -- or add custom linters.
