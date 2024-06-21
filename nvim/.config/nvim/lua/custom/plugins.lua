@@ -135,6 +135,9 @@ local plugins = {
         javascriptreact = { { "prettierd", "prettier" } },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
+        -- Rust
+        
+
         ["_"] = { "trim_whitespace" },
         ["*"] = { "codespell" },
       },
