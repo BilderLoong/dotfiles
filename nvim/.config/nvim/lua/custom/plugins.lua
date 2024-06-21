@@ -193,8 +193,8 @@ local plugins = {
         names = vim.tbl_filter(function(name)
           local linter = lint.linters[name]
           if not linter then
-            local log = require('custom.log')
-           log("Linter not found: " .. name)
+            local logger = require('custom.log').get_logger("debug_logger")
+            logger:trace("Linter not found: " .. name)
           end
           return linter and not (type(linter) == "table" and linter.condition and not linter.condition(ctx))
         end, names)
