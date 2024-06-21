@@ -122,7 +122,7 @@ local plugins = {
     },
     -- Everything in opts will be passed to setup()
     opts = {
-      log_level = vim.log.levels.TRACE,
+      -- log_level = vim.log.levels.TRACE,
       -- Define your formatters
       formatters_by_ft = {
 
