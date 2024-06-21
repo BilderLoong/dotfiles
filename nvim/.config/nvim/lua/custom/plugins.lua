@@ -343,6 +343,7 @@ local plugins = {
 
         -- Misc
         "cspell",
+        "codespell"
       },
       registries = {
         "github:nvim-java/mason-registry",
