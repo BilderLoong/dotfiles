@@ -112,7 +112,7 @@ local plugins = {
     keys = {
       {
         -- Customize or remove this keymap to your liking
-        "<leader>f",
+        "<leader>fm",
         function()
           require("conform").format({ async = true, lsp_format = "fallback" })
         end,
