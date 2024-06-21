@@ -194,7 +194,7 @@ local plugins = {
           local linter = lint.linters[name]
           if not linter then
             local logger = require('custom.log').get_logger("debug_logger")
-            logger:trace("Linter not found: " .. name)
+            logger:warn("Linter not found: " .. name)
           end
           return linter and not (type(linter) == "table" and linter.condition and not linter.condition(ctx))
         end, names)
