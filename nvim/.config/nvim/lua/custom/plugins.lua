@@ -139,6 +139,8 @@ local plugins = {
         -- Rust
         rust = { "rustfmt" },
 
+        haskell = {}
+
 
         ["_"] = { "trim_whitespace" },
         ["*"] = { "codespell" },
