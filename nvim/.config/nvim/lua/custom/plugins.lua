@@ -139,7 +139,7 @@ local plugins = {
         -- Rust
         rust = { "rustfmt" },
 
-        haskell = {}
+        haskell = { "fourmolu" },
 
 
         ["_"] = { "trim_whitespace" },
