@@ -155,8 +155,8 @@ local plugins = {
         -- LazyVim will use these options when formatting with the conform.nvim formatter
         format = {
           timeout_ms = 3000,
-          async = false,         -- not recommended to change
-          quiet = false,         -- not recommended to change
+          async = false,           -- not recommended to change
+          quiet = false,           -- not recommended to change
           lsp_format = "fallback", -- not recommended to change
         },
         ---@type table<string, conform.FormatterUnit[]>
@@ -186,7 +186,7 @@ local plugins = {
       return opts
     end,
     config = M.setup,
- },
+  },
 
   {
     "mfussenegger/nvim-lint",
