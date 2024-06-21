@@ -124,6 +124,7 @@ local plugins = {
     opts = {
       -- Define your formatters
       formatters_by_ft = {
+        go = { "goimports", "gofmt" },
         lua = { "stylua" },
         python = { "isort", "black" },
         javascript = { { "prettierd", "prettier" } },
