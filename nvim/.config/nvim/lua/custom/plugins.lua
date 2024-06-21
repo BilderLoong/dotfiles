@@ -129,6 +129,7 @@ local plugins = {
         lua = { "stylua" },
         python = { "isort", "black" },
         javascript = { { "prettierd", "prettier" } },
+        javascript = { { "prettierd", "prettier" } },
         ["_"] = { "trim_whitespace" },
         ["*"] = { "codespell" },
       },
