@@ -175,8 +175,9 @@ local plugins = {
         lua = { 'luacheck' },
         python = { 'ruff' },
         zsh = { 'zsh' },
+        markdonw = { "cspell" },
         -- Use the "*" filetype to run linters on all filetypes.
-        ["*"] = { "cspell",  },
+        ["*"] = { "cspell", },
 
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
         -- ['_'] = { 'fallback linter' },
