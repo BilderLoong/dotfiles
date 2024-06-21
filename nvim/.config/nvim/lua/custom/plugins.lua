@@ -122,6 +122,7 @@ local plugins = {
     },
     -- Everything in opts will be passed to setup()
     opts = {
+      log_level = vim.log.levels.ERROR,
       -- Define your formatters
       formatters_by_ft = {
         go = { "goimports", "gofmt" },
