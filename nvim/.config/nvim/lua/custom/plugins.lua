@@ -125,6 +125,7 @@ local plugins = {
       log_level = vim.log.levels.TRACE,
       -- Define your formatters
       formatters_by_ft = {
+
         go = { "goimports", "gofmt" },
         lua = { "stylua" },
         python = { "isort", "black" },
