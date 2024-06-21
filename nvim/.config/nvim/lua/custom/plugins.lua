@@ -129,6 +129,7 @@ local plugins = {
         python = { "isort", "black" },
         javascript = { { "prettierd", "prettier" } },
         ["_"] = { "trim_whitespace" },
+        ["*"] = { "codespell" },
       },
       -- Set up format-on-save
       format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
