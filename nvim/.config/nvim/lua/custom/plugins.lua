@@ -176,7 +176,7 @@ local plugins = {
         python = { 'ruff' },
         zsh = { 'zsh' },
         -- Use the "*" filetype to run linters on all filetypes.
-        ["*"] = { "cspell", "codespell" },
+        ["*"] = { "cspell",  },
 
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
         -- ['_'] = { 'fallback linter' },
