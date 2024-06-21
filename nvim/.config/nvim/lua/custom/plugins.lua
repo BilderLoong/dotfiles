@@ -168,7 +168,6 @@ local plugins = {
         lua = { 'luacheck' },
         python = { 'ruff' },
         zsh = { 'zsh' },
-
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
