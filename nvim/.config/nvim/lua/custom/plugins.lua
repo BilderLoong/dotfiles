@@ -284,10 +284,10 @@ local plugins = {
     end,
   },
 
-  {
-    "Pocco81/auto-save.nvim",
-    event = "BufWritePre",
-  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   event = "BufWritePre",
+  -- },
 
   {
     "williamboman/mason.nvim",
