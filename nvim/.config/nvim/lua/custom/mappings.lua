@@ -62,13 +62,26 @@ M.fzf_lua = {
       end,
       "Resume last fzf-lua search.",
     },
-    ["<leader>fs"] = { function()
-      require("fzf-lua").lsp_live_workspace_symbols()
-    end, "Find workspace symbols" },
+    ["<leader>fs"] = {
+      function()
+        require("fzf-lua").lsp_live_workspace_symbols()
+      end,
+      "Find workspace symbols",
+    },
 
-    ["<leader>fw"] = { function()
-      require("fzf-lua").live_grep_native()
-    end, "Live grep native" },
+    ["<leader>fw"] = {
+      function()
+        require("fzf-lua").live_grep_native()
+      end,
+      "Live grep native",
+    },
+
+    ["<leader>gt"] = {
+      function()
+        require("fzf-lua").git_status()
+      end,
+      "Git status",
+    },
 
     ["<F1>"] = {
       function()
