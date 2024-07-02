@@ -114,7 +114,7 @@ local plugins = {
         -- Customize or remove this keymap to your liking
         "<leader>fm",
         function()
-          require("conform").format({ async = true, lsp_format = "fallback" })
+          require("conform").format { async = true, lsp_format = "fallback" }
         end,
         mode = "",
         desc = "Format buffer",
@@ -140,7 +140,6 @@ local plugins = {
         rust = { "rustfmt" },
 
         haskell = { "fourmolu" },
-
 
         ["_"] = { "trim_whitespace" },
         -- ["*"] = { "codespell" },
@@ -168,16 +167,16 @@ local plugins = {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       linters_by_ft = {
         fish = { "fish" },
-        typescriptreact = {  "eslint", "cspell" },
-        typescript = {  "eslint" },
-        javascript = {  "eslint" },
-        javascriptreact = {  "eslint" },
-        lua = { 'luacheck' },
-        python = { 'ruff' },
-        zsh = { 'zsh' },
+        typescriptreact = { "eslint", "cspell" },
+        typescript = { "eslint" },
+        javascript = { "eslint" },
+        javascriptreact = { "eslint" },
+        lua = { "luacheck" },
+        python = { "ruff" },
+        zsh = { "zsh" },
         markdown = { "cspell" },
         -- Use the "*" filetype to run linters on all filetypes.
-        ["*"] = { "cspell", },
+        ["*"] = { "cspell" },
 
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
         -- ['_'] = { 'fallback linter' },
@@ -199,7 +198,7 @@ local plugins = {
     config = function(_, opts)
       local M = {}
 
-      local lint = require("lint")
+      local lint = require "lint"
       for name, linter in pairs(opts.linters) do
         if type(linter) == "table" and type(lint.linters[name]) == "table" then
           lint.linters[name] = vim.tbl_deep_extend("force", lint.linters[name], linter)
@@ -246,10 +245,6 @@ local plugins = {
         ctx.dirname = vim.fn.fnamemodify(ctx.filename, ":h")
         names = vim.tbl_filter(function(name)
           local linter = lint.linters[name]
-          if not linter then
-            local logger = require('custom.log').get_logger("debug_logger")
-            logger:warn("Linter not found: " .. name)
-          end
           return linter and not (type(linter) == "table" and linter.condition and not linter.condition(ctx))
         end, names)
 
@@ -301,8 +296,8 @@ local plugins = {
         -- Python
         "debugpy", -- Debugger
         "pyright", -- LSP
-        "ruff",    -- Linter
-        "black",   -- Formater
+        "ruff", -- Linter
+        "black", -- Formater
 
         -- Web
         "html-lsp",
@@ -346,7 +341,7 @@ local plugins = {
 
         -- Misc
         "cspell",
-        "codespell"
+        "codespell",
       },
       registries = {
         "github:nvim-java/mason-registry",
@@ -372,9 +367,9 @@ local plugins = {
     event = LazyBufEnter,
     config = function()
       require("treesitter-context").setup {
-        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 4,   -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 4, -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = {
           -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
@@ -419,32 +414,32 @@ local plugins = {
           -- delete or modify is sufficient
           builtin = {
             -- neovim `:tmap` mappings for the fzf win
-            ["<F1>"]     = "toggle-help",
-            ["<F2>"]     = "toggle-fullscreen",
+            ["<F1>"] = "toggle-help",
+            ["<F2>"] = "toggle-fullscreen",
             -- Only valid with the 'builtin' previewer
-            ["<F3>"]     = "toggle-preview-wrap",
-            ["<F4>"]     = "toggle-preview",
+            ["<F3>"] = "toggle-preview-wrap",
+            ["<F4>"] = "toggle-preview",
             -- Rotate preview clockwise/counter-clockwise
-            ["<F5>"]     = "toggle-preview-ccw",
-            ["<F6>"]     = "toggle-preview-cw",
+            ["<F5>"] = "toggle-preview-ccw",
+            ["<F6>"] = "toggle-preview-cw",
             ["<S-down>"] = "preview-page-down",
-            ["<S-up>"]   = "preview-page-up",
+            ["<S-up>"] = "preview-page-up",
             ["<S-left>"] = "preview-page-reset",
           },
           fzf = {
             -- fzf '--bind=' options
-            ["ctrl-z"]     = "abort",
-            ["ctrl-u"]     = "unix-line-discard",
-            ["ctrl-f"]     = "half-page-down",
-            ["ctrl-b"]     = "half-page-up",
-            ["ctrl-a"]     = "beginning-of-line",
-            ["ctrl-e"]     = "end-of-line",
-            ["alt-a"]      = "toggle-all",
+            ["ctrl-z"] = "abort",
+            ["ctrl-u"] = "unix-line-discard",
+            ["ctrl-f"] = "half-page-down",
+            ["ctrl-b"] = "half-page-up",
+            ["ctrl-a"] = "beginning-of-line",
+            ["ctrl-e"] = "end-of-line",
+            ["alt-a"] = "toggle-all",
             -- Only valid with fzf previewers (bat/cat/git/etc)
-            ["f3"]         = "toggle-preview-wrap",
-            ["f4"]         = "toggle-preview",
+            ["f3"] = "toggle-preview-wrap",
+            ["f4"] = "toggle-preview",
             ["shift-down"] = "preview-page-down",
-            ["shift-up"]   = "preview-page-up",
+            ["shift-up"] = "preview-page-up",
           },
         },
         actions = {
@@ -462,23 +457,22 @@ local plugins = {
             -- to open all files whether single or multiple
             -- ["default"]     = actions.file_edit,
             ["default"] = actions.file_edit_or_qf,
-            ["ctrl-s"]  = actions.file_split,
-            ["ctrl-v"]  = actions.file_vsplit,
-            ["ctrl-t"]  = actions.file_tabedit,
-            ["alt-q"]   = trouble_actions.open_all,
+            ["ctrl-s"] = actions.file_split,
+            ["ctrl-v"] = actions.file_vsplit,
+            ["ctrl-t"] = actions.file_tabedit,
+            ["alt-q"] = trouble_actions.open_all,
             -- ["alt-q"]   = actions.file_sel_to_qf,
-            ["alt-l"]   = actions.file_sel_to_ll,
+            ["alt-l"] = actions.file_sel_to_ll,
           },
           buffers = {
             -- providers that inherit these actions:
             --   buffers, tabs, lines, blines
             ["default"] = actions.buf_edit,
-            ["ctrl-s"]  = actions.buf_split,
-            ["ctrl-v"]  = actions.buf_vsplit,
-            ["ctrl-t"]  = actions.buf_tabedit,
-          }
+            ["ctrl-s"] = actions.buf_split,
+            ["ctrl-v"] = actions.buf_vsplit,
+            ["ctrl-t"] = actions.buf_tabedit,
+          },
         },
-
       }
     end,
   },
@@ -521,7 +515,7 @@ local plugins = {
 
         word_diff = false,
         current_line_blame = true,
-        numhl = false,  -- Toggle with `:Gitsigns toggle_numhl`
+        numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
         linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
 
         current_line_blame_opts = {
@@ -709,7 +703,7 @@ local plugins = {
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons",     -- optional
+      "nvim-tree/nvim-web-devicons", -- optional
     },
   },
 
@@ -896,7 +890,7 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim", -- Optional
     },
-    version = "^3",                    -- Recommended
+    version = "^3", -- Recommended
     -- init = function() -- Optional, see Advanced configuration
     -- end,
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
@@ -922,7 +916,7 @@ local plugins = {
     config = function(_, opts)
       -- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
       vim.o.foldcolumn = "1" -- '0' is not bad
-      vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
       vim.o.foldlevelstart = 99
       vim.o.foldenable = true
 
@@ -1060,7 +1054,7 @@ local plugins = {
             if #results == 1 then
               jump(results[1]) -- argument is optional
             else
-              open(results)    -- argument is optional
+              open(results) -- argument is optional
             end
           end,
         },
