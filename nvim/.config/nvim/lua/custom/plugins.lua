@@ -196,7 +196,6 @@ local plugins = {
       },
     },
     config = function(_, opts)
-
       local M = {}
 
       local lint = require "lint"
