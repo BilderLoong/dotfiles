@@ -245,7 +245,7 @@ local plugins = {
 
       vim.api.nvim_create_autocmd(opts.events, {
         group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),
-        callback = utils.debounce(100, M.lint),
+        callback = utils.debounce(200, M.lint),
       })
     end,
   },
