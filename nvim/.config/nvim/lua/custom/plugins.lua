@@ -164,7 +164,7 @@ local plugins = {
     event = LazyBufEnter,
     opts = {
       -- Event to trigger linters
-      events = { "BufWritePost", "BufReadPost", "InsertLeave", "TextChanged", "BufEnter", "LazyFilePost" },
+      events = { "BufWritePost", "BufReadPost", "InsertLeave", "TextChanged", "BufEnter" },
       linters_by_ft = {
         fish = { "fish" },
         typescriptreact = { "eslint_d" },
