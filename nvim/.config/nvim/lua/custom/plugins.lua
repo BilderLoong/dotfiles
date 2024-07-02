@@ -222,7 +222,9 @@ local plugins = {
         end
       end
 
+      local logger = require "custom.log"
       function M.lint()
+        logger:trace "Linting~~~"
         -- Use nvim-lint's logic first:
         -- * checks if linters exist for the full filetype first
         -- * otherwise will split filetype by "." and add all those linters
@@ -253,9 +255,6 @@ local plugins = {
           lint.try_lint(names)
         end
       end
-
-      local logger = require "custom.log"
-      logger:trace "This log will be log into a file."
 
       vim.api.nvim_create_autocmd(opts.events, {
         group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),
