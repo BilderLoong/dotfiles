@@ -3,9 +3,6 @@ local User_FilePost = { "User FilePost" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
 
-local logger = require "custom.log"
-logger:trace "This log will be log into a file."
-
 ---@type NvPluginSpec[]
 local plugins = {
   {
@@ -256,8 +253,10 @@ local plugins = {
           lint.try_lint(names)
         end
       end
+
       local logger = require "custom.log"
       logger:trace "This log will be log into a file."
+
       vim.api.nvim_create_autocmd(opts.events, {
         group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),
         callback = M.debounce(100, M.lint),
