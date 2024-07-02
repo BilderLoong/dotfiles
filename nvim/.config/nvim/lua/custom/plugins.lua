@@ -196,7 +196,6 @@ local plugins = {
       },
     },
     config = function(_, opts)
-      local logger = require "custom.log"
 
       local M = {}
 
@@ -214,7 +213,6 @@ local plugins = {
       lint.linters_by_ft = opts.linters_by_ft
 
       function M.lint()
-        logger:trace "Linting~~~"
         -- Use nvim-lint's logic first:
         -- * checks if linters exist for the full filetype first
         -- * otherwise will split filetype by "." and add all those linters
