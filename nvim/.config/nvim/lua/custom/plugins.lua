@@ -214,8 +214,8 @@ local plugins = {
       function M.debounce(ms, fn)
         local timer = vim.uv.new_timer()
         return function(...)
-          logger:trace "debounceing~~~"
           local argv = { ... }
+          logger:trace "debounc~~~"
           timer:start(ms, 0, function()
             timer:stop()
             vim.schedule_wrap(fn)(unpack(argv))
