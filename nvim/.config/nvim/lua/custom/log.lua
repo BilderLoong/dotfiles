@@ -45,4 +45,4 @@ log.configure {
   },
 }
 
-return log
+return log.get_logger('debug_logger')
