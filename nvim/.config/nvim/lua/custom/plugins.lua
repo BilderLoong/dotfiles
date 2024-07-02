@@ -3,6 +3,9 @@ local User_FilePost = { "User FilePost" }
 local utils = require "custom.utils"
 local load_mappings = require("core.utils").load_mappings
 
+local logger = require "custom.log"
+logger:trace "This log will be log into a file."
+
 ---@type NvPluginSpec[]
 local plugins = {
   {
