@@ -196,6 +196,8 @@ local plugins = {
       },
     },
     config = function(_, opts)
+      local logger = require "custom.log"
+
       local M = {}
 
       local lint = require "lint"
@@ -223,7 +225,6 @@ local plugins = {
         end
       end
 
-      local logger = require "custom.log"
       function M.lint()
         logger:trace "Linting~~~"
         -- Use nvim-lint's logic first:
