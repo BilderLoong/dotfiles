@@ -198,10 +198,7 @@ local plugins = {
     config = function(_, opts)
       local lint = require "lint"
       local eslint_d = lint.linters.eslint_d
-      eslint_d.env = vim.tbl_deep_extend('force',eslint_d.env,{
-
-      })
-
+      eslint_d.env = vim.list_extend
       local M = {}
 
       for name, linter in pairs(opts.linters) do
