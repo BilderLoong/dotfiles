@@ -200,11 +200,9 @@ local plugins = {
       local eslint_d = lint.linters.eslint_d
       -- https://github.com/mantoni/eslint_d.js/?tab=readme-ov-file#moar-speed
       table.insert(eslint_d.args, 1, "--cached")
-      eslint_d.env = {
-        ESLINT_USE_FLAT_CONFIG=
-      }
-
-
+      eslint_d.env = vim.tbl_deep_extend("force", eslint_d.env, {
+        ESLINT_USE_FLAT_CONFIG = 1,
+      })
 
       local M = {}
 
