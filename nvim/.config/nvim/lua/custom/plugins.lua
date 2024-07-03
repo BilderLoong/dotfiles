@@ -198,7 +198,7 @@ local plugins = {
     config = function(_, opts)
       local lint = require "lint"
       local eslint_d = lint.linters.eslint_d
-      -- 
+      -- https://github.com/mantoni/eslint_d.js/?tab=readme-ov-file#moar-speed
       table.insert(eslint_d.args, 1, "--cached")
 
       local M = {}
