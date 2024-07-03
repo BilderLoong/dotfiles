@@ -197,7 +197,10 @@ local plugins = {
     },
     config = function(_, opts)
       local lint = require "lint"
-      lint.linters.eslint_d = 
+      local eslint_d = lint.linters.eslint_d
+      eslint_d.env = {
+
+      }
 
       local M = {}
 
