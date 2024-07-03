@@ -199,7 +199,7 @@ local plugins = {
       local lint = require "lint"
       local eslint_d = lint.linters.eslint_d
       eslint_d.env = {
-
+        
       }
 
       local M = {}
