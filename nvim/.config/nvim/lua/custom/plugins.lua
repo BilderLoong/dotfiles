@@ -201,6 +201,8 @@ local plugins = {
       -- https://github.com/mantoni/eslint_d.js/?tab=readme-ov-file#moar-speed
       table.insert(eslint_d.args, 1, "--cached")
 
+      
+
       local M = {}
 
       for name, linter in pairs(opts.linters) do
