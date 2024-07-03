@@ -199,6 +199,8 @@ local plugins = {
       local lint = require "lint"
       local eslint_d = lint.linters.eslint_d
       eslint_d.env = vim.list_extend
+      table.insert(eslint_d.args, 1, "--cached")
+
       local M = {}
 
       for name, linter in pairs(opts.linters) do
