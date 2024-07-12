@@ -198,11 +198,12 @@ local plugins = {
     config = function(_, opts)
       local lint = require "lint"
       local eslint_d = lint.linters.eslint_d
+
       -- https://github.com/mantoni/eslint_d.js/?tab=readme-ov-file#moar-speed
-      table.insert(eslint_d.args, 1, "--cached")
-      eslint_d.env = vim.tbl_deep_extend("force", eslint_d.env or {}, {
-        ESLINT_USE_FLAT_CONFIG = 1,
-      })
+      table.insert(eslint_d.args, "--cache")
+      -- eslint_d.env = vim.tbl_deep_extend("force", eslint_d.env or {}, {
+      --   ESLINT_USE_FLAT_CONFIG = 1,
+      -- })
 
       local M = {}
 
@@ -243,7 +244,8 @@ local plugins = {
           local linter = lint.linters[name]
           return linter and not (type(linter) == "table" and linter.condition and not linter.condition(ctx))
         end, names)
-
+        local logger = require "custom.log"
+        logger:trace("names" .. vim.inspect(names))
         -- Run linters.
         if #names > 0 then
           lint.try_lint(names)
