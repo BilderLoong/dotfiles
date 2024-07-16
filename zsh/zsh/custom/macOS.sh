@@ -31,9 +31,9 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottl
 [ -f "/Users/birudo/.ghcup/env" ] && source "/Users/birudo/.ghcup/env" # ghcup-env
 
 # JAVA
-export M2_HOME="/usr/local/Cellar/maven/3.9.6"
-export PATH="$PATH:$M2_HOME/bin"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
+# export M2_HOME="/usr/local/Cellar/maven/3.9.6"
+# export PATH="$PATH:$M2_HOME/bin"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
 
 # Use Clash proxy.
 # export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
