@@ -35,3 +35,7 @@ fi
 
 # bun completions
 [ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/birudo/.sdkman"
+[[ -s "/home/birudo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/birudo/.sdkman/bin/sdkman-init.sh"
