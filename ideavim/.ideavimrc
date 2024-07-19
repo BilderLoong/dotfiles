@@ -51,9 +51,8 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-
-""" LSP function
-noremap gr :action ShowUsages<CR>
+" refresh
+noremap \r :source ~/.ideavimrc<CR>
 
 " easy window navigation
 nnoremap <c-l> <c-w>l
@@ -63,3 +62,12 @@ nnoremap <c-k> <c-w>k
 
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+
+" Edit .ideavimrc
+
+nnoremap <Leader>cg :edit ~/.ideavimrc<CR>
+
+""" LSP function
+noremap gr :action ShowUsages<CR>
+" symbol structure
+noremap gO :action FileStructurePopup<CR>
