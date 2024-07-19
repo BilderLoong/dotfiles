@@ -1,0 +1,65 @@
+"" Source your .vimrc
+source ~/.config/nvim/native.vim
+
+
+let mapleader=' '
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" 共享系统粘贴板
+set clipboard=unnamed
+set clipboard+=ideaput
+
+" Do incremental searching.
+set incsearch
+set relativenumber
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+inoremap jk <Esc>
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <Leader>fm <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map <F9> <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+set ideajoin
+
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set quickscope
+Plug 'machakann/vim-highlightedyank'
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+
+""" LSP function
+noremap gr :action ShowUsages<CR>
+
+" easy window navigation
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
