@@ -4,6 +4,8 @@ tap "homebrew/core", "https://mirrors.aliyun.com/homebrew/homebrew-core.git"
 tap "buo/cask-upgrade"
 tap "homebrew/cask-fonts"
 
+brew "youtube-dl"
+brew "yt-dlp"
 brew "tree-sitter"
 brew "bat"
 brew "ffmpeg"

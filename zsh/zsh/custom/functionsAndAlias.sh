@@ -8,7 +8,7 @@ alias cd='z'
 proxy() {
 	port=$1
 
-	export proxy_address="http://127.0.0.1:${port:-7890}"
+	export proxy_address="http://127.0.0.1:${port:-7897}"
 	export all_proxy=$proxy_address
 	export http_proxy=$proxy_address
 	export https_proxy=$proxy_address
