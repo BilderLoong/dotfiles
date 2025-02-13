@@ -4,10 +4,14 @@
 // https://github.com/b0o/surfingkeys-conf
 
 
-// an example to create a new mapping `ctrl-y`
-// api.mapkey('<ctrl-y>', 'Show me the money', function() {
-//     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
-// });
+api.mapkey('ymd', 'Copy current page title and URL as Markdown', function() {
+  const title = document.title;
+  const url = window.location.href;
+  const markdown = `[${title}](${url})`;
+  api.Clipboard.write(markdown);
+  api.Front.showBanner('Copied MD URL: ' + markdown);
+});
+
 
 // only keep E, R and T from Surfingkeys for gmail.com and twitter.com
 api.unmapAllExcept([], /youtube.com/);
