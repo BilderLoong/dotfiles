@@ -3,6 +3,8 @@
 // https://github.com/search?q=Surfingkeys&type=repositories
 // https://github.com/b0o/surfingkeys-conf
 
+// API DOC: https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md
+
 
 api.mapkey('ymd', 'Copy current page title and URL as Markdown', function() {
   const title = document.title;
