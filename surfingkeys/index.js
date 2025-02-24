@@ -16,7 +16,9 @@ api.mapkey('ymd', 'Copy current page title and URL as Markdown', function() {
 
 
 // only keep E, R and T from Surfingkeys for gmail.com and twitter.com
-api.unmapAllExcept(["j"], /youtube.com/);
+api.unmapAllExcept(["j","k"], /youtube.com/);
+// Omiting below code will cause the `se` command still work.
+api.unmap("s",/youtube.com/);
 
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 api.map('gt', 'T');
