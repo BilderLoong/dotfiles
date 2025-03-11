@@ -1,8 +1,8 @@
 [pull]
   rebase = false
 [user]
-  name = huzilong
-  email = huzilong@meituan.com
+  name = birudo
+  email = a514059172@gmail.com
 [core]
   excludesfile = /Users/birudo/.gitignore_global
 	logallrefupdates = true
