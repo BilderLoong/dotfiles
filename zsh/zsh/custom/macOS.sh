@@ -1,8 +1,7 @@
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator"
 
-export PATH="$PATH:$ANDROID_HOME/emulator"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 alias wechatcli='/Applications/wechatwebdevtools.app/Contents/MacOS/cli'
 # The wechat mp devtool cli path: https://segmentfault.com/a/1190000040867117 .
