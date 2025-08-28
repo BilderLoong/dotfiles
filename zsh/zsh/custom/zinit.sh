@@ -52,6 +52,9 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
     zdharma-continuum/null \
+        has'poetry' id-as'poetry_completions' \
+            atclone'poetry completions zsh > _poetry' atpull'%atclone' \
+    zdharma-continuum/null \
         has'atuin' id-as'atuin-init' eval"atuin init zsh --disable-up-arrow" \
     zdharma-continuum/null \
         has'syncthing' id-as'syncthing-compleltions' eval"syncthing install-completions" \
@@ -66,7 +69,7 @@ zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval
 zinit light ajeetdsouza/zoxide
 
 
-# Use `id-as` to avoid conflic.
+# Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
     has"pyenv" eval"pyenv init -" \
     id-as"pyenv_init" \
