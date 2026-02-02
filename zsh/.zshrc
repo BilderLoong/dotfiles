@@ -47,3 +47,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+# Added by Antigravity
+export PATH="/Users/birudo/.antigravity/antigravity/bin:$PATH"
