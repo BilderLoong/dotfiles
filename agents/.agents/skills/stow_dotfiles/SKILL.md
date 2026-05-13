@@ -7,7 +7,7 @@ description: Guide for managing dotfiles with GNU Stow in ~/Projects/dotfiles. U
 
 ## Overview
 
-This skill covers managing dotfiles in a  with GNU Stow. Each top-level directory is a **stow package** — its internal path structure mirrors the target (`~`).
+This skill covers managing dotfiles in a dot with GNU Stow. Each top-level directory is a **stow package** — its internal path structure mirrors the target (`~`).
 
 **Key facts:**
 - **Stow dir:** `~/Projects/dotfiles` (the repo root)
