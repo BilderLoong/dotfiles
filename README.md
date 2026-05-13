@@ -7,7 +7,6 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ## Quick Reference
 Run you stow --help
 
-
 All commands assume `cd ~/Projects/dotfiles`. The stow dir (`-d`) is the current directory; the target (`-t`) is `~` (must be explicit, see note below).
 
 > **Why `-t ~` is always needed:** The default target is the *parent* of the stow dir, which would be `~/Projects/`. Always pass `-t ~` to link into your home directory.
