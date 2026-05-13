@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "skills": {
+    "ast-grep": {
+      "source": "ast-grep/agent-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ast-grep/agent-skill.git",
+      "skillPath": "ast-grep/skills/ast-grep/SKILL.md",
+      "skillFolderHash": "ef60f77564e2d47d0cba25a809daa3af8f0c469b",
+      "installedAt": "2026-01-28T06:40:15.618Z",
+      "updatedAt": "2026-01-28T06:40:15.618Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-01-28T06:41:17.423Z",
+      "updatedAt": "2026-01-28T06:41:17.423Z"
+    },
+    "ripgrep": {
+      "source": "ratacat/claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ratacat/claude-skills.git",
+      "skillPath": "skills/ripgrep/SKILL.md",
+      "skillFolderHash": "1b6fe88f1b2cf6ad8f24adfd6e557c5b2daa3157",
+      "installedAt": "2026-01-28T06:41:37.298Z",
+      "updatedAt": "2026-01-28T06:41:37.298Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "claude-code",
+    "cline",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "windsurf"
+  ]
+}
