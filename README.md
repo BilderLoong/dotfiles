@@ -5,7 +5,8 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 `.stowrc` defaults to `--no-folding` — stow creates real directories at the target and only symlinks individual files (never whole directories).
 
 ## Quick Reference
-Run you 
+Run you stow --help
+
 
 All commands assume `cd ~/Projects/dotfiles`. The stow dir (`-d`) is the current directory; the target (`-t`) is `~` (must be explicit, see note below).
 
