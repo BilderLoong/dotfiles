@@ -7,7 +7,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ## Quick Reference
 Run `stow --help` for help. Don't guess.
 
-All commands assume the CWD is the dotfiles directory. The stow dir (`-d`) is the current directory; the target (`-t`) is `~` (must be explicit, see note below).
+All commands assume the CWD is the dotfiles (stow dir) directory. The stow dir (`-d`) is the current directory; the target (`-t`) is `~` (must be explicit, see note below).
 
 > **Why `-t ~` is always needed:** The default target is the *parent* of the stow dir, which would be `~/Projects/`. Always pass `-t ~` to link into your home directory.
 
