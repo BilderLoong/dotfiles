@@ -198,6 +198,6 @@ stow -S Rime -t ~/Library/Rime
 ## Safety Rules
 
 - Always use `-n` (dry-run) first when uncertain
-- Never stow without `-t ~` — default target is parent of stow dir (`~/Projects/`)
+- Never stow without `-t ~` — default target is parent of stow dir
 - After `--adopt`, always review with `git diff` before committing
 - After stowing new paths, verify with `ls -la <target-path>` to confirm it's a symlink
