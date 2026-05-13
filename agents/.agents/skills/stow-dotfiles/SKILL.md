@@ -1,16 +1,16 @@
 ---
 name: stow-dotfiles
-description: Guide for managing dotfiles with GNU Stow in ~/Projects/dotfiles. Use when users need to install, update, add, remove, or manage dotfiles managed by stow. Triggers on "stow", "dotfiles", "manage dotfiles", "install dotfiles", "symlink config", "stow config", "add dotfile", "remove dotfile".
+description: Guide for managing dotfiles with GNU Stow in <dotfiles-repo>. Use when users need to install, update, add, remove, or manage dotfiles managed by stow. Triggers on "stow", "dotfiles", "manage dotfiles", "install dotfiles", "symlink config", "stow config", "add dotfile", "remove dotfile".
 ---
 
 # GNU Stow — Dotfiles Management
 
 ## Overview
 
-This skill covers managing dotfiles in `~/Projects/dotfiles` with GNU Stow. Each top-level directory is a **stow package** — its internal path structure mirrors the target (`~`).
+This skill covers managing dotfiles in `<dotfiles-repo>` with GNU Stow. Each top-level directory is a **stow package** — its internal path structure mirrors the target (`~`).
 
 **Key facts:**
-- **Stow dir:** `~/Projects/dotfiles` (the repo root)
+- **Stow dir:** `<dotfiles-repo>` (the repo root)
 - **Target:** `~` (always explicit: `-t ~` — default would be parent of stow dir = `~/Projects/`)
 - **`.stowrc`** contains `--no-folding` → creates real directories, symlinks only individual files
 - Two patterns: flat dotfile (e.g. `zsh/.zshrc → ~/.zshrc`) and XDG nested (e.g. `kitty/.config/kitty/kitty.conf → ~/.config/kitty/kitty.conf`)
@@ -27,8 +27,8 @@ Trigger this skill when the user asks to:
 
 ## Required Context
 
-All commands run from `~/Projects/dotfiles` unless noted otherwise. Before any operation:
-- Confirm `~/Projects/dotfiles` exists and is a git repo
+All commands run from `<dotfiles-repo>` unless noted otherwise. Before any operation:
+- Confirm `<dotfiles-repo>` exists and is a git repo
 - Confirm stow is available (`which stow`)
 
 ---
@@ -82,15 +82,15 @@ User has a config at `~/.config/<app>/` not yet tracked.
 
 ```bash
 # XDG-style (e.g. kitty)
-mkdir -p ~/Projects/dotfiles/<pkg>/.config/<app>
-mv ~/.config/<app>/<config-file> ~/Projects/dotfiles/<pkg>/.config/<app>/<config-file>
+mkdir -p <dotfiles-repo>/<pkg>/.config/<app>
+mv ~/.config/<app>/<config-file> <dotfiles-repo>/<pkg>/.config/<app>/<config-file>
 stow <pkg> -t ~
 git add <pkg>
 git commit -m "add <pkg> config"
 
 # Flat dotfile style (e.g. .myrc)
-mkdir -p ~/Projects/dotfiles/<pkg>
-mv ~/<dotfile> ~/Projects/dotfiles/<pkg>/<dotfile>
+mkdir -p <dotfiles-repo>/<pkg>
+mv ~/<dotfile> <dotfiles-repo>/<pkg>/<dotfile>
 stow <pkg> -t ~
 git add <pkg>
 git commit -m "add <pkg> config"
@@ -120,14 +120,14 @@ stow -R <pkg> -t ~
 ```bash
 mv ~/<path-to-dotfile> ~/<path-to-dotfile>.bak
 stow <pkg> -t ~
-diff ~/<path-to-dotfile>.bak ~/Projects/dotfiles/<pkg>/<path-to-dotfile>
+diff ~/<path-to-dotfile>.bak <dotfiles-repo>/<pkg>/<path-to-dotfile>
 # Merge what the user wants, then rm the backup
 ```
 
 ### 5. Add a new file to an already-stowed package
 
 ```bash
-mv ~/<path-to-new-file> ~/Projects/dotfiles/<pkg>/<path-to-new-file>
+mv ~/<path-to-new-file> <dotfiles-repo>/<pkg>/<path-to-new-file>
 stow -R <pkg> -t ~
 git add <pkg>
 git commit -m "add <file> to <pkg>"
@@ -137,7 +137,7 @@ git commit -m "add <file> to <pkg>"
 
 ```bash
 rm ~/<path-to-dotfile>
-rm ~/Projects/dotfiles/<pkg>/<path-to-dotfile>
+rm <dotfiles-repo>/<pkg>/<path-to-dotfile>
 git add <pkg>
 git commit -m "remove <file> from <pkg>"
 ```
@@ -148,8 +148,8 @@ Replace the symlink with an actual copy, then delete the repo source.
 
 ```bash
 rm ~/<path-to-dotfile>
-cp ~/Projects/dotfiles/<pkg>/<path-to-dotfile> ~/<path-to-dotfile>
-rm ~/Projects/dotfiles/<pkg>/<path-to-dotfile>
+cp <dotfiles-repo>/<pkg>/<path-to-dotfile> ~/<path-to-dotfile>
+rm <dotfiles-repo>/<pkg>/<path-to-dotfile>
 git add <pkg>
 git commit -m "remove <file> from <pkg>, keep as real file"
 ```
@@ -164,7 +164,7 @@ To also delete the package from the repo:
 
 ```bash
 stow -D <pkg> -t ~
-rm -rf ~/Projects/dotfiles/<pkg>
+rm -rf <dotfiles-repo>/<pkg>
 git rm -r <pkg>
 git commit -m "remove <pkg>"
 ```
