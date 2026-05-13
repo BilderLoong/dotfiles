@@ -1,5 +1,5 @@
 ---
-name: stow
+name: stow_dotfiles
 description: Guide for managing dotfiles with GNU Stow in ~/Projects/dotfiles. Use when users need to install, update, add, remove, or manage dotfiles managed by stow. Triggers on "stow", "dotfiles", "manage dotfiles", "install dotfiles", "symlink config", "stow config", "add dotfile", "remove dotfile".
 ---
 
