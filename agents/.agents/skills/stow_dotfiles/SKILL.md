@@ -26,7 +26,7 @@ Trigger this skill when the user asks to:
 
 ## Required Context
 
-All commands run from a dotfiles resp unless noted otherwise. Before any operation:
+All commands run from a dotfiles respository unless noted otherwise. Before any operation:
 - Confirm `~/Projects/dotfiles` exists and is a git repo
 - Confirm stow is available (`which stow`)
 
