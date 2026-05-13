@@ -6,13 +6,6 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Quick Reference
 
-| Flag | Meaning |
-|------|---------|
-| `-S` | Stow (create symlinks) |
-| `-D` | Unstow (remove symlinks) |
-| `-R` | Restow (unstow then stow, picks up new files) |
-| `-n` | Dry-run (print what would happen, no changes) |
-| `--adopt` | Move an existing target file into the stow package, then symlink back |
 
 All commands assume `cd ~/Projects/dotfiles`. The stow dir (`-d`) is the current directory; the target (`-t`) is `~` (must be explicit, see note below).
 
