@@ -10,7 +10,7 @@ description: Guide for managing dotfiles with GNU Stow in ~/Projects/dotfiles. U
 This skill covers managing dotfiles in a dotfiles repository with GNU Stow. Each top-level directory is a **stow package** — its internal path structure mirrors the target (`~`).
 
 **Key facts:**
-- **Target:** `~` (always explicit: `-t ~` — default would be parent of stow dir = `~/Projects/`)
+- **Target:** `~` (always explicit: `-t ~`)
 - **`.stowrc`** contains `--no-folding` → creates real directories, symlinks only individual files
 - Two patterns: flat dotfile (e.g. `zsh/.zshrc → ~/.zshrc`) and XDG nested (e.g. `kitty/.config/kitty/kitty.conf → ~/.config/kitty/kitty.conf`)
 
