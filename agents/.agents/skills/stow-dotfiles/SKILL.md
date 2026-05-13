@@ -27,9 +27,11 @@ Trigger this skill when the user asks to:
 
 ## Required Context
 
-All commands run from `<dotfiles-repo>` unless noted otherwise. Before any operation:
-- Confirm `<dotfiles-repo>` exists and is a git repo
-- Confirm stow is available (`which stow`)
+Before any operation:
+- **Ask the user for `<dotfiles-repo>`** once per session — their dotfiles repository path. Never assume or hardcode it.
+- All commands run from `<dotfiles-repo>` unless noted otherwise.
+- Confirm `<dotfiles-repo>` exists and is a git repo.
+- Confirm stow is available (`which stow`).
 
 ---
 
