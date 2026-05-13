@@ -58,6 +58,8 @@ bin/
 
 After cloning the repo, re-link every package.
 
+#### Option A: keep only committed dotfiles (discard all local)
+
 ```bash
 git checkout HEAD              # ensure clean working tree
 stow */ -t ~ --adopt           # move any pre-existing ~ dotfiles into the repo, then symlink
@@ -70,6 +72,28 @@ stow --restow */ -t ~          # recreate all symlinks pointing to committed rep
 - `--adopt` solves this by *moving* the existing file into the stow package, replacing the target with a symlink pointing back.
 - On a fresh install, those pre-existing files are likely system defaults — you don't want them committed. `git checkout HEAD` discards the adopted content, restoring the repo to its committed state.
 - `--restow` then recreates the symlinks, now pointing to *your* committed dotfiles.
+
+#### Option B: review adopted files, keep what's useful
+
+Sometimes pre-existing dotfiles on the new machine contain configurations worth keeping (machine-specific paths, API keys, etc.). Instead of discarding everything, inspect the diff and selectively commit or revert.
+
+```bash
+git checkout HEAD              # ensure clean working tree
+stow */ -t ~ --adopt           # move all pre-existing ~ dotfiles into the repo, then symlink
+
+# Now review everything that was absorbed
+git diff                        # see all adopted content
+git status                      # see which files were changed
+
+# Discard files you don't want — restores the committed version for that file
+git checkout -- zsh/.zshrc
+
+# Keep files that have useful local settings
+# (they're already staged by --adopt, write a meaningful message)
+git commit -m "adopt machine-specific configs from hostname"
+
+stow --restow */ -t ~           # ensure all symlinks are consistent
+```
 
 For a single package: `stow zsh -t ~`.
 
