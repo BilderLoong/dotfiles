@@ -59,7 +59,6 @@ bin/
 After cloning the repo, re-link every package.
 
 ```bash
-cd ~/Projects/dotfiles
 git checkout HEAD              # ensure clean working tree
 stow */ -t ~ --adopt           # move any pre-existing ~ dotfiles into the repo, then symlink
 git checkout HEAD              # discard adopted content; keep only committed versions in the repo
