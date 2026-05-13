@@ -27,7 +27,7 @@ Trigger this skill when the user asks to:
 ## Required Context
 
 All commands run from a dotfiles repository unless noted otherwise. Before any operation:
-- Ask for  exists and is a git repo
+- Ask for the dotfiles repository path and confirm it exists and is a git repo
 - Confirm stow is available (`which stow`)
 
 ---
