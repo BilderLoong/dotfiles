@@ -122,12 +122,14 @@ For a flat dotfile (no `.config/`): `mkdir -p kitty && mv ~/.kittyrc kitty/.kitt
 
 A package exists in the repo, but the target already has a real file (not a symlink) at the same path.
 
-**Option A — adopt it into the repo:**
+**Option A — adopt it into the repo (preserve local content):**
 
 ```bash
 stow kitty -t ~ --adopt   # moves ~/.config/kitty/kitty.conf into the repo, creates symlink
 # Review what was adopted:
 git diff
+# Discard individual adopted files if the repo version is preferred:
+git checkout -- kitty/.config/kitty/kitty.conf
 git commit -m "adopt kitty config"
 ```
 
