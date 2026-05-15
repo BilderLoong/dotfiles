@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "workspaceRoot": "/Users/birudo/Projects/dotfiles",
+  "nodes": {
+    "/Users/birudo/Projects/dotfiles/bin/bin/merge_json.py": {
+      "filePath": "/Users/birudo/Projects/dotfiles/bin/bin/merge_json.py",
+      "moduleName": "bin/bin/merge_json.py",
+      "exports": [
+        "merge_and_update_json_file"
+      ],
+      "imports": [],
+      "language": "python",
+      "mtime": "2024-10-21T03:20:44.509Z"
+    },
+    "/Users/birudo/Projects/dotfiles/opencode/.config/opencode/tool/mgrep.ts": {
+      "filePath": "/Users/birudo/Projects/dotfiles/opencode/.config/opencode/tool/mgrep.ts",
+      "moduleName": "opencode/.config/opencode/tool/mgrep.ts",
+      "exports": [
+        "tool"
+      ],
+      "imports": [
+        "@opencode-ai/plugin"
+      ],
+      "language": "typescript",
+      "mtime": "2026-05-12T03:53:50.456Z"
+    },
+    "/Users/birudo/Projects/dotfiles/surfingkeys/index.js": {
+      "filePath": "/Users/birudo/Projects/dotfiles/surfingkeys/index.js",
+      "moduleName": "surfingkeys/index.js",
+      "exports": [],
+      "imports": [],
+      "language": "javascript",
+      "mtime": "2025-02-24T14:10:52.081Z"
+    }
+  },
+  "edges": [],
+  "metadata": {
+    "generatedAt": "2026-05-15T02:28:06.465Z",
+    "generator": "repo-graph",
+    "nodeCount": 3,
+    "edgeCount": 0
+  }
+}
