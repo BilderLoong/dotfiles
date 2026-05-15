@@ -5,6 +5,7 @@
   },
   "autoupdate": true,
   "default_agent": "plan",
+
   "instructions": [
     "instructions/code_requirement.md"
   ],
