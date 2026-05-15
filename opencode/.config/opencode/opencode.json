@@ -3,6 +3,8 @@
   "compaction": {
     "auto": true
   },
+    "autoupdate": true,
+
   "instructions": [
     "instructions/code_requirement.md"
   ],
