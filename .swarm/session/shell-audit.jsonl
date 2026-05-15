@@ -7,3 +7,4 @@
 {"ts":"2026-05-15T02:38:58.367Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ -n 2>&1"}
 {"ts":"2026-05-15T02:39:02.180Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"rm ~/.config/opencode/tui.json && stow -R opencode -t ~ -n 2>&1"}
 {"ts":"2026-05-15T02:39:10.315Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ 2>&1"}
+{"ts":"2026-05-15T02:39:14.885Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"ls -la ~/.config/opencode/tui.json ~/.config/opencode/opencode.json"}
