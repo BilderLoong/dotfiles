@@ -3,8 +3,8 @@
   "compaction": {
     "auto": true
   },
-    "autoupdate": true,
-
+  "autoupdate": true,
+  "default_agent": "plan",
   "instructions": [
     "instructions/code_requirement.md"
   ],
