@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "writtenAt": 1778812628932,
+  "writtenAt": 1778812632946,
   "toolAggregates": {
     "glob": {
       "tool": "glob",
@@ -18,10 +18,10 @@
     },
     "bash": {
       "tool": "bash",
-      "count": 1,
-      "successCount": 1,
+      "count": 2,
+      "successCount": 2,
       "failureCount": 0,
-      "totalDuration": 103
+      "totalDuration": 832
     }
   },
   "activeAgent": {
@@ -55,7 +55,7 @@
           "toolCalls": 0,
           "consecutiveErrors": 0,
           "hardLimitHit": false,
-          "lastSuccessTimeMs": 1778812628932,
+          "lastSuccessTimeMs": 1778812632946,
           "recentToolCalls": [],
           "warningIssued": false,
           "warningReason": "",
