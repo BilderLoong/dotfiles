@@ -4,3 +4,4 @@
 {"ts":"2026-05-15T02:38:45.526Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ -n 2>&1 | grep -c \"cannot stow\""}
 {"ts":"2026-05-15T02:38:48.339Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ -n 2>&1 | grep \"cannot stow\""}
 {"ts":"2026-05-15T02:38:55.251Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ -n 2>&1 | grep \"cannot stow\"; echo \"Exit: $?\""}
+{"ts":"2026-05-15T02:38:58.367Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ -n 2>&1"}
