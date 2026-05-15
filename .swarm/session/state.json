@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "writtenAt": 1778812640936,
+  "writtenAt": 1778812721404,
   "toolAggregates": {
     "glob": {
       "tool": "glob",
@@ -22,6 +22,13 @@
       "successCount": 3,
       "failureCount": 0,
       "totalDuration": 887
+    },
+    "write": {
+      "tool": "write",
+      "count": 1,
+      "successCount": 1,
+      "failureCount": 0,
+      "totalDuration": 7
     }
   },
   "activeAgent": {
@@ -39,15 +46,28 @@
   "agentSessions": {
     "ses_1d6871f49ffeH5b6hYTboYCI9r": {
       "agentName": "build",
-      "lastToolCallTime": 1778812592626,
+      "lastToolCallTime": 1778812715592,
       "lastAgentEventTime": 1778812592626,
       "delegationActive": true,
-      "activeInvocationId": 1,
+      "activeInvocationId": 2,
       "lastInvocationIdByAgent": {
         "plan": 3,
-        "build": 1
+        "build": 2
       },
       "windows": {
+        "build:2": {
+          "id": 2,
+          "agentName": "build",
+          "startedAtMs": 1778812715593,
+          "toolCalls": 0,
+          "consecutiveErrors": 0,
+          "hardLimitHit": false,
+          "lastSuccessTimeMs": 1778812721403,
+          "recentToolCalls": [],
+          "warningIssued": false,
+          "warningReason": "",
+          "transientRetryCount": 0
+        },
         "build:1": {
           "id": 1,
           "agentName": "build",
