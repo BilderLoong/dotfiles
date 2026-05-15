@@ -1,1 +1,1 @@
-For delet
+For deleting
