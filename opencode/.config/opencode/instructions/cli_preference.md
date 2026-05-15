@@ -1,1 +1,1 @@
-For deleting files, use `trash
+For deleting files, use `trash` instead of `rm` to avoid accidental permanent deletion.
