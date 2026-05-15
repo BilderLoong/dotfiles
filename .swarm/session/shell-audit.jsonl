@@ -12,3 +12,4 @@
 {"ts":"2026-05-15T02:46:10.488Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"mv ~/.config/opencode/opencode-swarm /Users/birudo/Projects/dotfiles/opencode/.config/opencode/opencode-swarm && mv ~/.config/opencode/opencode-swarm.json /Users/birudo/Projects/dotfiles/opencode/.config/opencode/opencode-swarm.json"}
 {"ts":"2026-05-15T02:46:14.406Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -n -R opencode -t ~ 2>&1"}
 {"ts":"2026-05-15T02:46:17.646Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"stow -R opencode -t ~ && ls -la ~/.config/opencode/opencode-swarm ~/.config/opencode/opencode-swarm.json"}
+{"ts":"2026-05-15T02:46:21.923Z","sessionID":"ses_1d6871f49ffeH5b6hYTboYCI9r","agent":"build","tool":"bash","command":"file /Users/birudo/Projects/dotfiles/opencode/.config/opencode/opencode-swarm"}
