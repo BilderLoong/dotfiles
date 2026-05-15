@@ -19,5 +19,16 @@
       ],
       "enabled": true
     }
+  },
+  "plugin": [
+    "opencode-swarm"
+  ],
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
   }
 }
