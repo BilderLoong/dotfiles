@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "writtenAt": 1778812599887,
+  "writtenAt": 1778812621585,
   "toolAggregates": {
     "glob": {
       "tool": "glob",
-      "count": 1,
-      "successCount": 1,
+      "count": 2,
+      "successCount": 2,
       "failureCount": 0,
-      "totalDuration": 38
+      "totalDuration": 70
     },
     "read": {
       "tool": "read",
@@ -48,7 +48,7 @@
           "toolCalls": 0,
           "consecutiveErrors": 0,
           "hardLimitHit": false,
-          "lastSuccessTimeMs": 1778812599884,
+          "lastSuccessTimeMs": 1778812621581,
           "recentToolCalls": [],
           "warningIssued": false,
           "warningReason": "",
