@@ -10,7 +10,6 @@
   "default_agent": "plan",
   "lsp": true,
   "snapshot": true,
-  "ins"
   "mcp": {
     "mgrep": {
       "type": "local",
