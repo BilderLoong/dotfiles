@@ -89,11 +89,3 @@ zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atui
     atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
     atpull"%atclone" src"init.zsh"
 zinit light atuinsh/atuin
-
-# https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
-# zinit ice wait lucid  as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" \
-#     mv"completions_zsh -> _tldr" \
-#     pick"_tldr" \
-#     atpull'!git reset --hard' 
-# zinit light dbrgn/tealdeer
-
