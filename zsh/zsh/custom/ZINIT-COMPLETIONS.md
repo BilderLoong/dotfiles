@@ -117,6 +117,7 @@ retval = 0
 | `.zinit-compile-plugin` finds nothing | `zinit-autoload.zsh:1028-1050` |
 
 ### When `nocompile` is NOT needed
+
  1. Basic when you can successfully complied. so the there is no failed compilation step that bails out the process before completion installation. 
  2. 
 
