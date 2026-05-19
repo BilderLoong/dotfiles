@@ -35,7 +35,6 @@ zinit light-mode for \
 # autoload -Uz compinit
 # compinit
 
-
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
