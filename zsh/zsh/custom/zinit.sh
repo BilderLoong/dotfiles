@@ -1,4 +1,4 @@
-# Docs: 
+# Docs: https://github.com/zdharma-continuum/zinit
 
 
 # Plugins
