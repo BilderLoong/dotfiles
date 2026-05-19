@@ -118,7 +118,7 @@ retval = 0
 
 ### When `nocompile` is NOT needed
 
-   1. Basic when you can succfully complied
+   1. Basic when you can succfully complied. so the 
    2. 
 
 - **Type 2** (side-effect commands): No `atclone`, so no compilation hook runs
