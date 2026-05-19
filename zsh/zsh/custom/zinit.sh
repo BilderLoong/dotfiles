@@ -78,6 +78,7 @@ zinit light ajeetdsouza/zoxide
 #     atclone"opencode completion zsh > _opencode; zinit creinstall -q opencode-completion" \
 #     atpull"%atclone" 
 # zinit light zdharma-continuum/null
+#
 
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
