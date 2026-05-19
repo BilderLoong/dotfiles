@@ -122,7 +122,7 @@ retval = 0
      - **Hybrid** (`as"command"`): zinit skips compilation when `as = command` (line 955: `if [[ ${ICE[as]} != command ]]; then`)
 2. There is no compilation step at all (e.g. `as"command"`).
      - **Type 2** (side-effect commands): No `atclone`, so no compilation hook runs
-  - **Type 3** (independent snippets): `as"completion"` handles everything directly
+     - **Type 3** (independent snippets): `as"completion"` handles everything directly
 
 ---
 
