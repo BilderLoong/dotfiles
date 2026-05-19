@@ -121,6 +121,7 @@ retval = 0
  1. Basic when you can successfully complied. so the there is no failed compilation step that bails out the process before completion installation. 
  2. 
 
+For example:
 - **Type 2** (side-effect commands): No `atclone`, so no compilation hook runs
 - **Type 3** (independent snippets): `as"completion"` handles everything directly
 - **Hybrid** (`as"command"`): zinit skips compilation when `as = command` (line 955: `if [[ ${ICE[as]} != command ]]; then`)
