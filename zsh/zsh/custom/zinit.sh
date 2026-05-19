@@ -75,10 +75,10 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
-# zinit ice id-as"opencode-completion" has"opencode" \
-#     atclone"opencode completion zsh > _opencode" \
-#     atpull"%atclone" nocompile
-# zinit light zdharma-continuum/null
+zinit ice id-as"opencode-completion" has"opencode" \
+    atclone"opencode completion zsh > _opencode" \
+    atpull"%atclone" nocompile
+zinit light zdharma-continuum/null
 
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
