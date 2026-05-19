@@ -63,7 +63,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions" \
     zdharma-continuum/null 
     \ has'opencode' id-as'opencode-completions' as'completion' \
-            atclone'opencode completion > _opencode' atpull'%atclone' \
+            atload'opencode completion > _opencode' atpull'%atclone' \
     zdharma-continuum/null 
 
 # Fish-like autosuggestions for zsh 
