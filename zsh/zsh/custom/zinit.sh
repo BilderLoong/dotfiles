@@ -62,7 +62,7 @@ zinit wait lucid for \
     OMZP::command-not-found \
     has'git' OMZL::git.zsh \
     has'git' OMZP::git \
-
+Aloxaf/fzf-tab
     has'exa' DarrinTisdale/zsh-aliases-exa \
     as"command" from"gh-r"  eval"zoxide init zsh" ajeetdsouza/zoxide \
     zdharma-continuum/fast-syntax-highlighting \
