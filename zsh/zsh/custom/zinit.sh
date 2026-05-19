@@ -28,6 +28,7 @@ zinit light-mode for \
 
 # zinit user plugins.
 # The vi escape key in all modes (default is ^[ => ESC)
+      # https://github.com/NICHOLAS85/z-a-eval
 zinit light-mode for \
         atinit"ZVM_VI_ESCAPE_BINDKEY=jk" \
       jeffreytse/zsh-vi-mode \
