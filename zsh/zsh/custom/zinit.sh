@@ -34,9 +34,9 @@ zinit light-mode for \
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
 
-# Without *atload* the <Tap> completions of path doesn't work.
-zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
-zinit light ajeetdsouza/zoxide
+# # Without *atload* the <Tap> completions of path doesn't work.
+# zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
+# zinit light ajeetdsouza/zoxide
 
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
