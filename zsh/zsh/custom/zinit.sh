@@ -68,7 +68,7 @@ zinit wait lucid for \
     has"fnm" id-as'fnm_env' eval"fnm env --use-on-cd"  zdharma-continuum/null\
     wait'!0' has'starship' id-as'starship_init' eval"starship init zsh"  zdharma-continuum/null\
     has"thefuck" id-as"thefuck_init" eval"thefuck --alias"  zdharma-continuum/null \
-    Aloxaf/fzf-tab as"null"  has'navi' id-as'navi-widget' eval"navi widget zsh" zdharma-continuum/null
+     as"null"  has'navi' id-as'navi-widget' eval"navi widget zsh" zdharma-continuum/null
 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 ## For the plugins with completions
