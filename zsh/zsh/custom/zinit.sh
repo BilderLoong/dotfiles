@@ -52,7 +52,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
          has'navi' id-as'navi-widget' eval"navi widget zsh" \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' as'completion' \
-            atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone' noco\
+            atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone' nocompile\
     zdharma-continuum/null \
         has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions" \
     zdharma-continuum/null \
