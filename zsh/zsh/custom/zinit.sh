@@ -58,7 +58,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'atuin' id-as'atuin-init' eval"atuin init zsh --disable-up-arrow" \
     zdharma-continuum/null \
         has'syncthing' id-as'syncthing-compleltions' eval"syncthing install-completions" \
-    zdharma-continuum/null
+    zdharma-continuum/null \
       has'opencode' id-as'opencode_completions' \
             atclone'opencode completion > _opencode' atpull'%atclone' \
     zdharma-continuum/null
