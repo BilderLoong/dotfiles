@@ -66,7 +66,7 @@ zinit wait lucid for \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     as"command" from"gh-r"  eval"zoxide init zsh" ajeetdsouza/zoxide \
     zdharma-continuum/fast-syntax-highlighting \
-    id-as'fnm_env'as"null"  has"fnm" eval"fnm env --use-on-cd"  zdharma-continuum/null\
+    id-as'fnm_env' as"null"  has"fnm" eval"fnm env --use-on-cd"  zdharma-continuum/null\
     id-as'starship_init' as"null"  wait'!0' has'starship' eval"starship init zsh"  zdharma-continuum/null\
     id-as"thefuck_init" as"null" has"thefuck" eval"thefuck --alias"  zdharma-continuum/null \
     id-as'navi-widget' as"null"  has'navi' eval"navi widget zsh" zdharma-continuum/null
