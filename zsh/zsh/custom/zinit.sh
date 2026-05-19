@@ -74,6 +74,7 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
+zicompinit
 
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
