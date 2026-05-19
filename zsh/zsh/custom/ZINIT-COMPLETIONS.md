@@ -119,7 +119,7 @@ retval = 0
 ### When `nocompile` is NOT needed
 
 1. Basic when you can successfully complied. so the there is no failed compilation step that bails out the process before completion installation. 
-2. There is no comp
+2. There is no compilation step at all (e.g. `as"command"`).
 
 For examples:
 - **Type 2** (side-effect commands): No `atclone`, so no compilation hook runs
