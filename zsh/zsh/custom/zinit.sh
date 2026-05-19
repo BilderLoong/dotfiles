@@ -98,6 +98,11 @@ zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atui
     atpull"%atclone" src"init.zsh"
 zinit light atuinsh/atuin
 
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
 # https://www.reddit.com/r/zinit/comments/j1al1v/add_completion_from_github_page_zinit/
 # zinit ice wait lucid  as"completion" from"gh-r" id-as"dbrgn/_tealdeer" bpick"completions_zsh" \
 #     mv"completions_zsh -> _tldr" \
