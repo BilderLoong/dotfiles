@@ -71,6 +71,7 @@ zinit wait lucid for \
     zdharma-continuum/fast-syntax-highlighting \
     has"fnm" id-as'fnm_env' eval"fnm env --use-on-cd"  zdharma-continuum/null
 
+## For 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid atload'zicompinit; zicdreplay' for \
     wait'!0' has'starship' id-as'starship_init' eval"starship init zsh"  zdharma-continuum/null  \
