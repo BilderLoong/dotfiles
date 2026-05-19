@@ -63,6 +63,10 @@ zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atui
 zinit light atuinsh/atuin
 
 zinit wait lucid for
+    OMZP::command-not-found \
+    has'git' OMZL::git.zsh \
+    has'git' OMZP::git \
+    has'exa' DarrinTisdale/zsh-aliases-exa \
 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid atload'zicompinit; zicdreplay' for \
