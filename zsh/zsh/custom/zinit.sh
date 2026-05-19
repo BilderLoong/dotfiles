@@ -1,4 +1,4 @@
-# Docs: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/ 
+# Docs: 
 
 
 # Plugins
