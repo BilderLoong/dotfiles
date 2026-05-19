@@ -66,10 +66,6 @@ zinit wait lucid for
 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid atload'zicompinit; zicdreplay' for \
-    OMZP::command-not-found \
-    has'git' OMZL::git.zsh \
-    has'git' OMZP::git \
-    has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     has"fnm" id-as'fnm_env' eval"fnm env --use-on-cd"  zdharma-continuum/null  \
     wait'!0' has'starship' id-as'starship_init' eval"starship init zsh"  zdharma-continuum/null  \
