@@ -76,8 +76,7 @@ zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval
 zinit light ajeetdsouza/zoxide
 
 zinit ice  id-as"opencode-completion" has"opencode" \
-    atclone"opencode completion zsh > _opencode;     ; zinit creinstall -q opencode-completion
-" \
+    atclone"opencode completion zsh > _opencode;     ; zinit creinstall -q opencode-completion " \
     atpull"%atclone" 
 zinit light zdharma-continuum/null
 
