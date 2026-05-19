@@ -56,7 +56,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     zdharma-continuum/null \
         has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions" \
     zdharma-continuum/null \
-        has'opencode' id-as'opencode-completions' nocompile \
+        has'opencode' id-as'opencode-completions' as'completion' nocompile \
             atinit'opencode completion > _opencode' atpull'%atinit' \
     zdharma-continuum/null 
 
