@@ -118,7 +118,7 @@ retval = 0
 
 ### When `nocompile` is NOT needed
 
-Basic when you can succe  full
+Basic when you can succfull
 
 - **Type 2** (side-effect commands): No `atclone`, so no compilation hook runs
 - **Type 3** (independent snippets): `as"completion"` handles everything directly
