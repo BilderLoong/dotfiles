@@ -68,7 +68,7 @@ zinit wait lucid for \
     zdharma-continuum/fast-syntax-highlighting \
     id-as'fnm_env' has"fnm" eval"fnm env --use-on-cd"  zdharma-continuum/null\
     id-as'starship_init' wait'!0' has'starship' eval"starship init zsh"  zdharma-continuum/null\
-    id-as"thefuck_init" has"thefuck" eval"thefuck --alias"  zdharma-continuum/null \
+    id-as"thefuck_init" as"null"  has"thefuck" eval"thefuck --alias"  zdharma-continuum/null \
     id-as'navi-widget' as"null"  has'navi' eval"navi widget zsh" zdharma-continuum/null
 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
