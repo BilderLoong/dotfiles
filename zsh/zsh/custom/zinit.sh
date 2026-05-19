@@ -53,7 +53,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
     zdharma-continuum/null \
         has'poetry' id-as'poetry_completions' \
-            eval"poetry completions zsh" \
+            atclone'poetry completions zsh > _poetry' atpull'%atclone' \
     zdharma-continuum/null \
         has'atuin' id-as'atuin-init' eval"atuin init zsh --disable-up-arrow" \
     zdharma-continuum/null \
