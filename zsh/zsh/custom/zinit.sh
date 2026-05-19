@@ -74,10 +74,10 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
-    zinit ice as"completion" id-as"opencode-completion" has"opencode" \
-        atclone"opencode completion zsh > _opencode; zinit creinstall -q opencode-completion" \
-        atpull"%atclone" run-atpull
-    zinit light zdharma-continuum/null
+zinit ice as"completion" id-as"opencode-completion" has"opencode" \
+    atclone"opencode completion zsh > _opencode; zinit creinstall -q opencode-completion" \
+    atpull"%atclone" run-atpull
+zinit light zdharma-continuum/null
 
 zicompinit
 
