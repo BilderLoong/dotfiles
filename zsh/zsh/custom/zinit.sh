@@ -63,7 +63,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
             atclone'opencode completion > _opencode' atpull'%atclone' \
     zdharma-continuum/null \
         as"command" from"gh-r"  eval"zoxide init zsh" \
-    zinit light ajeetdsouza/zoxide
+     ajeetdsouza/zoxide
 
 
 # Fish-like autosuggestions for zsh 
