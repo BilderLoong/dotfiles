@@ -31,10 +31,6 @@ zinit light-mode for \
       jeffreytse/zsh-vi-mode \
       NICHOLAS85/z-a-eval \
 
-# `zicompinit` replace the below commands.
-# autoload -Uz compinit
-# compinit
-
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
