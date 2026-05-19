@@ -118,10 +118,6 @@ retval = 0
 
 ### When `nocompile` is NOT needed
 
-- Any plugin with .zsh scripts you source (e.g., zsh-users/zsh-autosuggestions, zsh-users/zsh-completions)
-- Plugins like fast-syntax-highlighting, zsh-vi-mode, fzf-tab
-- The default zinit behavior handles this automatically — you don't need to do anything
-
 1. Basic when you can successfully complied. so the there is no failed compilation step that bails out the process before completion installation. 
      - **Hybrid** (`as"command"`): zinit skips compilation when `as = command` (line 955: `if [[ ${ICE[as]} != command ]]; then`)
 2. There is no compilation step at all (e.g. `as"command"`).
