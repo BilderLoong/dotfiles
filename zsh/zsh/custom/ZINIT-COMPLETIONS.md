@@ -40,7 +40,6 @@ zinit ice as"completion" from"gh-r" bpick"completions_zsh" \
 zinit light dbrgn/tealdeer
 ```
 
-
 ---
 
 ## Why `nocompile` is required
