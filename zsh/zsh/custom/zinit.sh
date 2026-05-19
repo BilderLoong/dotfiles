@@ -70,7 +70,8 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     has'exa' DarrinTisdale/zsh-aliases-exa \
     zdharma-continuum/fast-syntax-highlighting \
     has"fnm" id-as'fnm_env' eval"fnm env --use-on-cd"  zdharma-continuum/null  \
-     wait'!0' has'starship' id-as'starship_init' eval"starship init zsh"  zdharma-continuum/null  \      has"thefuck" id-as"thefuck_init" eval"thefuck --alias"  zdharma-continuum/null \
+     wait'!0' has'starship' id-as'starship_init' eval"starship init zsh"  zdharma-continuum/null  \
+      has"thefuck" id-as"thefuck_init" eval"thefuck --alias"  zdharma-continuum/null \
     Aloxaf/fzf-tab  has'navi' id-as'navi-widget' eval"navi widget zsh"  zdharma-continuum/null \
     has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions"  zdharma-continuum/null \
     has'ast-grep' id-as'sg-completions' as'completion' nocompile atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone' zdharma-continuum/null \
