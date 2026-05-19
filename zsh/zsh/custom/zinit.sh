@@ -62,7 +62,7 @@ zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atui
     atpull"%atclone" src"init.zsh"
 zinit light atuinsh/atuin
 
-zinit wait lu
+zinit wait lucid for
 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid atload'zicompinit; zicdreplay' for \
