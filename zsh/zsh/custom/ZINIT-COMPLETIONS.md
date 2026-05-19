@@ -254,40 +254,7 @@ zinit light starship/starship
 
 ## Verification & debugging
 
-### Install message
-
-When a completion is installed successfully, zinit prints a message:
-
-```
-==> Downloading zdharma-continuum/null (at label: poetry_completions)
-⠹ ███████████ OBJ: 100, PACK: 0/20, COMPR: 100%
-==> Installed 1 completion
-```
-
-If you don't see this message, the completion was not installed. Check for errors in the output.
-
-### Check the completions directory
-
-```zsh
-# List all files in the completions directory
-ls $ZINIT[COMPLETIONS_DIR]/
-
-# Check if a specific completion file exists
-ls $ZINIT[COMPLETIONS_DIR]/_opencode(N)
-```
-
-The completions directory is typically `$HOME/.local/share/zinit/completions/`.
-
-### Use `zinit completions`
-
-```zsh
-# List all installed completions managed by zinit
-zinit completions
-```
-
-This shows all completions zinit has installed, their status (enabled/disabled), and which plugin they belong to.
-
-### Check `$fpath`
+### Check if a completion file exists in `$fpath`
 
 ```zsh
 # Find all copies of a completion file across fpath
@@ -295,6 +262,9 @@ print -l $^fpath/_ast-grep(N)
 
 # Check if a completion function is defined
 whence -v _ast-grep
+
+# Check the completions registry
+zinit completions
 ```
 
 ### Common output
