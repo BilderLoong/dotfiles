@@ -37,6 +37,15 @@
       "pluginName": "example-skills",
       "installedAt": "2026-05-19T06:39:13.417Z",
       "updatedAt": "2026-05-19T06:39:13.417Z"
+    },
+    "stow-dotfiles": {
+      "source": "BilderLoong/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/BilderLoong/dotfiles.git",
+      "skillPath": "agents/.agents/skills/stow-dotfiles/SKILL.md",
+      "skillFolderHash": "1937964e3fde001eb6d0dc46ca222f8d4a84ecac",
+      "installedAt": "2026-05-19T06:45:45.197Z",
+      "updatedAt": "2026-05-19T06:45:45.197Z"
     }
   },
   "dismissed": {
