@@ -35,6 +35,34 @@ zinit light-mode for \
 # autoload -Uz compinit
 # compinit
 
+
+# Fish-like autosuggestions for zsh 
+zinit wait lucid atload'_zsh_autosuggest_start' for \
+      zsh-users/zsh-autosuggestions 
+
+# Without *atload* the <Tap> completions of path doesn't work.
+zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
+zinit light ajeetdsouza/zoxide
+
+# Use `id-as` to avoid conflict.
+zinit wait"1" lucid for \
+    has"pyenv" eval"pyenv init -" \
+    id-as"pyenv_init" \
+    atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
+  zdharma-continuum/null \
+    id-as"async_source" \
+    atinit"source $ZSH_CUSTOM/lazy/main.zsh" \
+  zdharma-continuum/null 
+
+
+# line 1: `atuin` binary as command, from github release, only look at .tar.gz files, use the `atuin` file from the extracted archive
+# line 2: setup at clone(create init.zsh, completion)
+# line 3: pull behavior same as clone, source init.zsh
+zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
+    atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
+    atpull"%atclone" src"init.zsh"
+zinit light atuinsh/atuin
+
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 zinit wait lucid atload'zicompinit; zicdreplay' for \
     OMZP::command-not-found \
@@ -64,31 +92,3 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     zdharma-continuum/null \
         as"command" from"gh-r"  eval"zoxide init zsh" \
      ajeetdsouza/zoxide
-
-
-# Fish-like autosuggestions for zsh 
-zinit wait lucid atload'_zsh_autosuggest_start' for \
-      zsh-users/zsh-autosuggestions 
-
-# Without *atload* the <Tap> completions of path doesn't work.
-zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
-zinit light ajeetdsouza/zoxide
-
-# Use `id-as` to avoid conflict.
-zinit wait"1" lucid for \
-    has"pyenv" eval"pyenv init -" \
-    id-as"pyenv_init" \
-    atinit'export PYENV_ROOT="$HOME/.pyenv"; export PATH="$PYENV_ROOT/bin:$PATH"' \
-  zdharma-continuum/null \
-    id-as"async_source" \
-    atinit"source $ZSH_CUSTOM/lazy/main.zsh" \
-  zdharma-continuum/null 
-
-
-# line 1: `atuin` binary as command, from github release, only look at .tar.gz files, use the `atuin` file from the extracted archive
-# line 2: setup at clone(create init.zsh, completion)
-# line 3: pull behavior same as clone, source init.zsh
-zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
-    atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
-    atpull"%atclone" src"init.zsh"
-zinit light atuinsh/atuin
