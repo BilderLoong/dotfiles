@@ -56,7 +56,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     zdharma-continuum/null \
         has'ast-grep' id-as'sg-completions' eval"ast-grep completions" \
     zdharma-continuum/null \
-        has'poetry' id-as'poetry_completions'  as'completion' \
+        has'poetry' id-as'poetry_completions' as'completion' \
             atclone'poetry completions zsh > _poetry' atpull'%atclone' \
     zdharma-continuum/null \
         has'syncthing' id-as'syncthing-compleltions' eval"syncthing install-completions" \
