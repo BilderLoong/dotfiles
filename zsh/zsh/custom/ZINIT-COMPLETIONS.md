@@ -40,15 +40,6 @@ zinit ice as"completion" from"gh-r" bpick"completions_zsh" \
 zinit light dbrgn/tealdeer
 ```
 
-### Hybrid: Binary installation + completion generation
-
-```zsh
-# e.g. atuin: install binary from gh-r, generate completions during atclone
-zinit ice as"command" from"gh-r" bpick"TOOL-*.tar.gz" mv"TOOL*/TOOL -> TOOL" \
-    atclone"./TOOL init zsh > init.zsh; ./TOOL gen-completions --shell zsh > _TOOL" \
-    atpull"%atclone" src"init.zsh"
-zinit light user/repo
-```
 
 ---
 
