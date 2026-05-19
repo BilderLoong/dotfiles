@@ -74,8 +74,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
       has"thefuck" id-as"thefuck_init" eval"thefuck --alias"  zdharma-continuum/null \
     Aloxaf/fzf-tab  has'navi' id-as'navi-widget' eval"navi widget zsh"  zdharma-continuum/null \
         has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions"  zdharma-continuum/null \
-        has'ast-grep' id-as'sg-completions' as'completion' nocompile atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone'  \
-    zdharma-continuum/null \
+        has'ast-grep' id-as'sg-completions' as'completion' nocompile atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone' zdharma-continuum/null \
         has'poetry' id-as'poetry_completions' as'completion' nocompile \
             atclone'poetry completions zsh > _poetry' atpull'%atclone'  \
     zdharma-continuum/null \
