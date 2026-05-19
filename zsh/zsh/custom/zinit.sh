@@ -63,9 +63,9 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions" \
     zdharma-continuum/null 
     # \
-    #     has'opencode' id-as'opencode-completions' as'completion' \
-    #         atclone'opencode completion > _opencode' atpull'%atclone' \
-    # zdharma-continuum/null 
+        has'opencode' id-as'opencode-completions' as'completion' \
+            atclone'opencode completion > _opencode' atpull'%atclone' \
+    zdharma-continuum/null 
 
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
@@ -75,9 +75,9 @@ zinit wait lucid atload'_zsh_autosuggest_start' for \
 zinit ice wait lucid atload'zicompinit; zicdreplay' as"command" from"gh-r"  eval"zoxide init zsh"
 zinit light ajeetdsouza/zoxide
 
-zinit ice as"completion" id-as"opencode-completion" has"opencode" \
+zinit ice id-as"opencode-completion" has"opencode" \
     atclone"opencode completion zsh > _opencode" \
-    atpull"%atclone"
+    atpull"%atclone" run-atpull completions nocompile
 zinit light zdharma-continuum/null
 
 # Use `id-as` to avoid conflict.
