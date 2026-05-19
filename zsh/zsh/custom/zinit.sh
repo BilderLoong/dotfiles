@@ -73,9 +73,11 @@ zinit light ajeetdsouza/zoxide
 #     atpull"%atclone" 
 # zinit light zdharma-continuum/null
 
-zinit light-mode lucid has'poetry' as'completion' id-as'poetry/completion' \
-  atclone'poetry completions zsh > _poetry' \
-  atpull'%atclone' for zdharma-continuum/null
+  # Kubectl completions (generates and caches kubectl completions)
+  zinit ice wait'1' lucid as'completion' id-as'kubectl-completion' \
+    has'kubectl' atclone'kubectl completion zsh > _kubectl' \
+    atpull'%atclone' run-atpull
+  zinit light zdharma-continuum/null
 
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
