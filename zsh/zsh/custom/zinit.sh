@@ -77,7 +77,7 @@ zinit light ajeetdsouza/zoxide
 
 zinit ice id-as"opencode-completion" has"opencode" \
     atclone"opencode completion zsh > _opencode" \
-    atpull"%atclone" run-atpull completions nocompile
+    atpull"%atclone" nocompile
 zinit light zdharma-continuum/null
 
 # Use `id-as` to avoid conflict.
