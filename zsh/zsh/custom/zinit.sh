@@ -67,7 +67,7 @@ zinit wait lucid for \
     has'git' OMZL::git.zsh \
     has'git' OMZP::git \
     has'exa' DarrinTisdale/zsh-aliases-exa \
-    as"command" from"gh-r"  eval"zoxide init zsh" ajeetdsouza/zoxide\
+    as"command" from"gh-r"  eval"zoxide init zsh" ajeetdsouza/zoxide \
     zdharma-continuum/fast-syntax-highlighting \
 
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
