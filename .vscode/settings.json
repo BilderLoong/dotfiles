@@ -4,6 +4,7 @@
         "atinit",
         "atload'zicompinit",
         "atpull",
+        "nocompile",
         "OMZL",
         "thefuck",
         "zdharma",
