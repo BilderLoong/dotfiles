@@ -78,6 +78,7 @@ zinit light ajeetdsouza/zoxide
 #     atclone"opencode completion zsh > _opencode; zinit creinstall -q opencode-completion" \
 #     atpull"%atclone" 
 # zinit light zdharma-continuum/null
+#
 zinit light-mode lucid has'poetry' as'completion' id-as'poetry/completion' \
   atclone'poetry completions zsh > _poetry' \
   atpull'%atclone' for zdharma-continuum/null
