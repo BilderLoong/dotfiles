@@ -117,6 +117,7 @@ retval = 0
 | `.zinit-compile-plugin` finds nothing | `zinit-autoload.zsh:1028-1050` |
 
 ### When `nocompile` is NOT needed
+
 Basic when you can 
 
 - **Type 2** (side-effect commands): No `atclone`, so no compilation hook runs
