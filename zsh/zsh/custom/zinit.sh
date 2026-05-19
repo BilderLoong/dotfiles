@@ -80,8 +80,6 @@ zinit ice as"completion" id-as"opencode-completion" has"opencode" \
     atpull"%atclone" run-atpull
 zinit light zdharma-continuum/null
 
-zicompinit
-
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
     has"pyenv" eval"pyenv init -" \
