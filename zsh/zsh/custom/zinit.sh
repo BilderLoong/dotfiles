@@ -64,6 +64,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'opencode' id-as'opencode-completions' as'completion' \
             atclone'opencode completion > _opencode' atpull'%atclone' \
 
+    zdharma-continuum/null \
 # Fish-like autosuggestions for zsh 
 zinit wait lucid atload'_zsh_autosuggest_start' for \
       zsh-users/zsh-autosuggestions 
