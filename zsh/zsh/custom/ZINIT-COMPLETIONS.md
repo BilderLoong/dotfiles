@@ -117,6 +117,7 @@ retval = 0
 | `.zinit-compile-plugin` finds nothing | `zinit-autoload.zsh:1028-1050` |
 
 ### When `nocompile` is NOT needed
+
 - Any plugin with .zsh scripts you source (e.g., zsh-users/zsh-autosuggestions, zsh-users/zsh-completions)
 - Plugins like fast-syntax-highlighting, zsh-vi-mode, fzf-tab
 - The default zinit behavior handles this automatically — you don't need to do anything
