@@ -62,7 +62,7 @@ zinit ice wait lucid as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atui
     atpull"%atclone" src"init.zsh"
 zinit light atuinsh/atuin
 
-zinit wait lucid for
+zinit wait lucid for \
     OMZP::command-not-found \
     has'git' OMZL::git.zsh \
     has'git' OMZP::git \
