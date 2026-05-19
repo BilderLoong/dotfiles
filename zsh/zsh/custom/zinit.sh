@@ -62,7 +62,7 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
         has'opencode' id-as'opencode-completions' as'completion' nocompile \
             atclone'opencode completion > _opencode' atpull'%atclone' \
     zdharma-continuum/null \
-        as"command" from"gh-r"  eval"zoxide init zsh"
+        as"command" from"gh-r"  eval"zoxide init zsh"\
 zinit light ajeetdsouza/zoxide
 
 
