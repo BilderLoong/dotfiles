@@ -73,12 +73,6 @@ zinit light ajeetdsouza/zoxide
 #     atpull"%atclone" 
 # zinit light zdharma-continuum/null
 
-  # Kubectl completions (generates and caches kubectl completions)
-  zinit ice wait'1' lucid as'completion' id-as'kubectl-completion' \
-    has'kubectl' atclone'kubectl completion zsh > _kubectl' \
-    atpull'%atclone' run-atpull
-  zinit light zdharma-continuum/null
-
 # Use `id-as` to avoid conflict.
 zinit wait"1" lucid for \
     has"pyenv" eval"pyenv init -" \
