@@ -31,15 +31,6 @@
     "general": {
       "disable": true
     }
-  },  "provider": {
-    "anthropic": {
-      "options": {
-        "baseURL": "https://www.ddshub.cc/v1",
-        "apiKey": "sk-573f64a662a4eb56a7b0acfdf9fe7fc5b1bc6fbbf85e17efe17501ea080b558f"
-      },
-      "npm": "@ai-sdk/anthropic"
-    }
-  },
-  "$schema": "https://opencode.ai/config.json"
+  }
 
 }
