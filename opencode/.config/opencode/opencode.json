@@ -31,8 +31,7 @@
     "general": {
       "disable": true
     }
-  },
-  "provider": {
+  },  "provider": {
     "anthropic": {
       "options": {
         "baseURL": "https://www.ddshub.cc/v1",
@@ -41,4 +40,6 @@
       "npm": "@ai-sdk/anthropic"
     }
   },
+  "$schema": "https://opencode.ai/config.json"
+
 }
