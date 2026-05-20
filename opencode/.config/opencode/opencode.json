@@ -41,5 +41,4 @@
       "npm": "@ai-sdk/anthropic"
     }
   },
-  "$schema": "https://opencode.ai/config.json"
 }
