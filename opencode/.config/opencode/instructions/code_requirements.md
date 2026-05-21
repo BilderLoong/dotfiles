@@ -2,6 +2,8 @@
 
 Although the mutability, OOP, side effects are common in most of the code base, but i don't like them. I want you to write code in a functional style as much as possible, as instructed by the programming paradigm below. I also want you to follow the code standard to keep the code clean and maintainable. 
 
+## https://github.com/multica-ai/andrej-karpathy-skills
+
 ## Programming paradigm
 
 -   Using functional style programming as much as possible.
