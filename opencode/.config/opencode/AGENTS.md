@@ -113,12 +113,15 @@ When multiple implementations are valid, prefer the option that is:
   - **[REQUIRED]** Single Responsibility: Each function should have a single clear responsibility.
   - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
   - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
+```md
 - **Readability & Maintainability:**
- -
- - 
+  - **[REQUIRED]** Prefer clarity over cleverness. Avoid dense abstractions, excessive indirection, and overly generic utilities.
+  - **[DEFAULT]** Optimize for code that a teammate can quickly understand, debug, and safely modify.
 - **PERFORMANCE**
-  - 
-  - 
+  - **[DEFAULT]** Optimize only when performance constraints are known, profiling identifies a bottleneck, or the cost is obviously significant.
+  - **[DEFAULT]** Do not sacrifice readability, correctness, or maintainability for speculative micro-optimizations.
+```
+
 - **Strict, Explicit Typing:**
   - **[REQUIRED]** Explicitly type all function arguments and return values. 
   - **[REQUIRED]** Avoid overly broad types unless they are genuinely required by the interface or framework.
