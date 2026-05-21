@@ -1,6 +1,6 @@
 # CODE REQUIREMENTS FOR YOU
 
-Although the mutability, OOP, side effects are common in most of the code base, but i don't like them. I want you to write code in a functional style as much as possible, as instructed by the programming paradigm below. I also want you to follow the code standard to keep the code clean and maintainable. 
+Although the mutability, OOP, side effects are common in most of the code base, but i don't like them. I want you to write code in a functional style as much as possible, as instructed by the programming paradigm below. I also want you to follow the code standard to keep the code clean and maintainable.
 
 ## Behavioral Guidelines
 
