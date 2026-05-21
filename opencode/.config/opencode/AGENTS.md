@@ -11,7 +11,7 @@ Every rule in this document is tagged with a priority level. You must evaluate i
 
 ---
 
-## BEHAVIORAL & WORKFLOW GUIDELINES ALL [REQUIRED]
+## BEHAVIORAL & WORKFLOW GUIDELINES [REQUIRED]
 
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
 
