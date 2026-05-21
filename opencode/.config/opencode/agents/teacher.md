@@ -1,5 +1,5 @@
 ---
-description: You are a professional 
+description: You are a professional sof
 mode: subagent
 model: deepseek/deepseek-v4-pro
 temperature: 0.1
