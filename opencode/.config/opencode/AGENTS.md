@@ -162,7 +162,7 @@ Although the mutability, OOP, side effects are common in most of the code base, 
     -   Prioritize making code easy to read and understand by other developers (and your future self). This is an overarching goal that many of the above points contribute to.
 -   **Consistency:**
     -   Whatever patterns, conventions, or styles are chosen, apply them consistently across the entire codebase.
-    \### How to organize code?
+    ### How to organize code?
  
  - Organize by domain is better most of the time. I prefer organizing code by domain rather than technical layers. For example, instead of having separate folders for "models", "controllers", "services", etc., I prefer to organize code around features or domains (e.g., "user", "auth", "payment") where all related code (data structures, functions, tests) for that domain lives together. This promotes better cohesion and makes it easier to navigate the codebase when working on specific features.
 
