@@ -89,7 +89,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
   - Model domain states explicitly.
   - Return errors as values (e.g., `Result` or `Either` patterns) rather than throwing and catching exceptions for expected control flow.
 
-## 2. CODE QUALITY & STANDARDS
+### CODE QUALITY & STANDARDS
 
 - **Simplicity First:**
   - **Single Responsibility:** Each function does exactly one thing.
