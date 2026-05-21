@@ -124,7 +124,8 @@ Although the mutability, OOP, side effects are common in most of the code base, 
     -   **Avoid Premature Optimization:** Write clear code first; optimize only when and where necessary, backed by profiling.
     -   **YAGNI (You Ain't Gonna Need It):** Don't add functionality until it's truly required.
     -   **DRY (Don't Repeat Yourself):** :
-        
+        - Prefer duplication over incorrect abstraction.
+- Abstract only after a pattern appears multiple times with stable behavior.
 -   **Add necessary comment, no more no less.**
     -   **Explain *why*, not *what*:** Code should be self-documenting for *what* it does. Comments should explain complex logic, non-obvious decisions, or the reasoning behind a particular approach.
     -   **Docstrings/API Documentation:** For public functions or modules, use standard documentation formats (e.g., JSDoc, Python Docstrings) to describe purpose, parameters, return values, and any exceptions/errors.
