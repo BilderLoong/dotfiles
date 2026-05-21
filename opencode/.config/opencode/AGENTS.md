@@ -77,7 +77,15 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+## ENGINEERING DECISION HEURISTICS [DEFAULT]
 
+When multiple implementations are valid, prefer the option that is:
+1. Easier to understand
+2. Easier to test
+3. More consistent with the existing codebase
+4. Less coupled
+5. Easier to change later
+6. Smaller in surface area
 
 ## 1. FUNCTIONAL PROGRAMMING PARADIGM
 
