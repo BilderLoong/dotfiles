@@ -93,6 +93,7 @@ Use OOP only when required by the language, framework, or ecosystem.
 
 ### CODE QUALITY & STANDARDS
 - **Simplicity First:**
+- Write the minimum code necessary to solve the problem. Avoid speculative abstractions or features that aren't explicitly requested.
   - **Single Responsibility:** Each function does exactly one thing.
   - **DRY vs. YAGNI:** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. Do not build features "just in case."
 - **Strict, Explicit Typing:**
