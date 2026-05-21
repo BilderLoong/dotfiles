@@ -105,7 +105,7 @@ Use OOP only when required by the language, framework, or ecosystem.
 - **Self-Documenting Code:**
   - Code should explain *what* it is doing through clear variable and function names.
   - Use comments exclusively to explain *why* a non-obvious decision was made 
-    - Use docstrings or API documentation for public modules and functions.
+  - Use docstrings or API documentation for public modules and functions.
 - **Tooling:**
   - Ensure all code passes standard formatters and linters for the target language.
 - **Error Handling**
