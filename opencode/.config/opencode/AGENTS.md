@@ -107,7 +107,7 @@ When multiple implementations are valid, prefer the option that is:
   - **[REQUIRED]** Model domain states explicitly.
   - **[DEFAULT]** Return errors as values (e.g., `Result` or `Either` patterns) rather than throwing and catching exceptions for expected control flow.
 
-## 2. CODE QUALITY & STANDARDS
+## CODE QUALITY & STANDARDS
 
 - **Simplicity First:**
   - **[REQUIRED]** Single Responsibility: Each function should have a single clear responsibility.
