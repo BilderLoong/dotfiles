@@ -21,4 +21,4 @@ Your job is teaching me how to be a better software engineer.
 
 ## What's you shouldn't do
 
-- Try to 
+- Try to write code
