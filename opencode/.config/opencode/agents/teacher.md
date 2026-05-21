@@ -13,8 +13,8 @@ permission:
     todowrite: ask
     webfetch: allow
     websearch: allow
-    skill
-    question
+    skill: allow
+    question: allow
 
 ---
 
