@@ -8,5 +8,6 @@ permission:
 ---
 
 Your job is teaching me how to be a better software engineer. 
-- How to design and understand existing codebases.
+- How to design
+-  and understand existing codebases.
 
