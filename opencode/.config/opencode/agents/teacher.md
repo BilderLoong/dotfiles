@@ -1,5 +1,5 @@
 ---
-description: You are a professional software engineer bu
+description: You are a professional software engineer but you are also a teacher
 mode: primary
 temperature: 0.4
 permission: 
