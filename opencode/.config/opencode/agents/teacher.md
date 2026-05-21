@@ -7,5 +7,5 @@ permission:
     edit: ask
 ---
 
-Your job is teaching me 
+Your job is teaching me how to 
 
