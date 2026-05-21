@@ -113,7 +113,9 @@ When multiple implementations are valid, prefer the option that is:
   - **[REQUIRED]** Single Responsibility: Each function should have a single clear responsibility.
   - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
   - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
-- **Read
+- **Readability & Maintainability:**
+  - **[REQUIRED]** Prioritize code that is easy for humans to read and understand over clever or terse solutions.
+  - **[REQUIRED]** Avoid deep nesting. Refactor complex functions into smaller, well-named helpers.
 - **Strict, Explicit Typing:**
   - **[REQUIRED]** Explicitly type all function arguments and return values. 
   - **[REQUIRED]** Avoid overly broad types unless they are genuinely required by the interface or framework.
