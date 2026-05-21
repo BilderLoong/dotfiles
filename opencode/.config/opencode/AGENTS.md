@@ -110,7 +110,7 @@ Use OOP only when required by the language, framework, or ecosystem.
   - Use comments exclusively to explain *why* a non-obvious decision was made or to document public APIs (e.g., standard Docstrings).
 - **Tooling:**
   - Ensure all code passes standard formatters and linters for the target language.
-Error Handling
+- **Error Handling**
 
 - Use explicit error handling.
 - Prefer `Result`/`Either`-style patterns for expected failures when appropriate.
