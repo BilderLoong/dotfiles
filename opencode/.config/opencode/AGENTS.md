@@ -113,10 +113,9 @@ When multiple implementations are valid, prefer the option that is:
   - **[REQUIRED]** Single Responsibility: Each function should have a single clear responsibility.
   - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
   - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
-- **Readability:**
+- **Readability & Maintainability:**
  -
  - 
- **
 - **PERFORMANCE**
   - 
   - 
