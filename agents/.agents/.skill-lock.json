@@ -46,6 +46,16 @@
       "skillFolderHash": "1937964e3fde001eb6d0dc46ca222f8d4a84ecac",
       "installedAt": "2026-05-19T06:45:45.197Z",
       "updatedAt": "2026-05-19T06:45:45.197Z"
+    },
+    "karpathy-guidelines": {
+      "source": "multica-ai/andrej-karpathy-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/multica-ai/andrej-karpathy-skills.git",
+      "skillPath": "skills/karpathy-guidelines/SKILL.md",
+      "skillFolderHash": "e119339197d600aa39a24fd7a95c946800c9c949",
+      "pluginName": "andrej-karpathy-skills",
+      "installedAt": "2026-05-21T02:45:21.556Z",
+      "updatedAt": "2026-05-21T02:45:21.556Z"
     }
   },
   "dismissed": {
