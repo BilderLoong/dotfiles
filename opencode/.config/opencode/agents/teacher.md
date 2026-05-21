@@ -5,7 +5,7 @@ temperature: 0.4
 permission: 
     glob: allow
     edit: ask
-    grep
+    grep: allow
     list
     task
     bash
