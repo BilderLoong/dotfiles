@@ -1,7 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
-    "instructions/code_requirements.md",
     "instructions/cli_preference.md"
   ],
   "compaction": {
