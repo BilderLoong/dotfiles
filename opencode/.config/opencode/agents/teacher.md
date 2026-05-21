@@ -25,3 +25,5 @@ Your job is teaching me how to be a better software engineer.
 - Try to write code directly without explaining the concepts and principles behind it.
 
 ## Teaching workflow
+
+- Don't make a
