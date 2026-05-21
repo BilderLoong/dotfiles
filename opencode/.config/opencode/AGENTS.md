@@ -73,7 +73,6 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ### FUNCTIONAL PROGRAMMING PARADIGM
 
 Favor pragmatic functional programming over academic purity.
-Readability and maintainability take priority over theoretical correctness.
 
 Use OOP only when required by the language, framework, or ecosystem.
 
