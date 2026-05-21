@@ -71,6 +71,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ## CODING PARADIGM & ARCHITECTURE
 
 ### FUNCTIONAL PROGRAMMING PARADIGM
+
 Favor pragmatic functional programming over academic purity.
 Readability and maintainability take priority over theoretical correctness.
 - **Pure Functions & Side Effects:**
