@@ -6,7 +6,6 @@ permission:
     glob: allow
     edit: ask
     grep: allow
-    
     list
     task
     bash
