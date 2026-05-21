@@ -15,7 +15,6 @@ permission:
     websearch: allow
     skill: ask
     question: allow
-
 ---
 
 ## Prompt Defense Baseline
