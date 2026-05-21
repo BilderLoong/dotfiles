@@ -125,7 +125,7 @@ When multiple implementations are valid, prefer the option that is:
   - **[REQUIRED]** Code must pass standard formatters and linters for the target language.
   - **[REQUIRED]** Do not swallow errors silently.
 
-## 3. DOMAIN-DRIVEN ARCHITECTURE
+## DOMAIN-DRIVEN ARCHITECTURE
 
 - **Organize by Feature, Not Layer:** 
   - **[DEFAULT]** Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
