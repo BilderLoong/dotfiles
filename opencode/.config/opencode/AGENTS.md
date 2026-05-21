@@ -88,7 +88,7 @@ When multiple implementations are valid, prefer the option that is:
 5. Easier to change later
 6. Smaller in surface area
 
-## 1. FUNCTIONAL PROGRAMMING PARADIGM
+## FUNCTIONAL PROGRAMMING PARADIGM
 
 - **Pure Functions & Side Effects:**
   - **[REQUIRED]** Core logic must have zero side effects. 
