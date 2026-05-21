@@ -74,6 +74,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 Favor pragmatic functional programming over academic purity.
 Readability and maintainability take priority over theoretical correctness.
+Use OOP only when required by the language, framework, or ecosystem.
 
 - **Pure Functions & Side Effects:**
   - Write deterministic functions that yield the same output for the same input.
