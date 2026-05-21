@@ -92,7 +92,7 @@ Use OOP only when required by the language, framework, or ecosystem.
   - Return errors as values (e.g., `Result` or `Either` patterns) rather than throwing and catching exceptions for expected control flow.
 
 ### CODE QUALITY & STANDARDS
-- Readability is more important than theoretical purity.
+- Readability is more important than theoretical purity. Favor pragmatic functional programming over academic purity.
 - **Simplicity First:**
   - **Single Responsibility:** Each function does exactly one thing.
   - **DRY vs. YAGNI:** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. Do not build features "just in case."
