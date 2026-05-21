@@ -119,8 +119,6 @@ When multiple implementations are valid, prefer the option that is:
 - **PERFORMANCE**
   - **[DEFAULT]** Optimize only when performance constraints are known, profiling identifies a bottleneck, or the cost is obviously significant.
   - **[DEFAULT]** Do not sacrifice readability, correctness, or maintainability for speculative micro-optimizations.
-```
-
 - **Strict, Explicit Typing:**
   - **[REQUIRED]** Explicitly type all function arguments and return values. 
   - **[REQUIRED]** Avoid overly broad types unless they are genuinely required by the interface or framework.
