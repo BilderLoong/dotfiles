@@ -160,6 +160,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
     -   Whatever patterns, conventions, or styles are chosen, apply them consistently across the entire codebase.
     
 ## How to organize code?
+ 
  - Organize by domain is better most of the time. I prefer organizing code by domain rather than technical layers. For example, instead of having separate folders for "models", "controllers", "services", etc., I prefer to organize code around features or domains (e.g., "user", "auth", "payment") where all related code (data structures, functions, tests) for that domain lives together. This promotes better cohesion and makes it easier to navigate the codebase when working on specific features.
 
  - But when there is a clear technical layer that is shared across domains, it can be organized separately. For example, if there is a set of utility functions or a shared data access layer that is used by multiple domains, it can be organized in a separate folder (e.g., "utils", "data-access") to avoid duplication and promote reuse. The key is to balance cohesion within domains with the need for shared functionality across the codebase. Domain first if necessary, technical layer second if it promotes reuse and reduces duplication.
