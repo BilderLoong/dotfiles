@@ -6,7 +6,7 @@ permission:
     glob: allow
     edit: ask
     grep: allow
-    list
+    list: allow
     task
     bash
     external_directory: ask
