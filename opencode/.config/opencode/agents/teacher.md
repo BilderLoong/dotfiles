@@ -6,6 +6,7 @@ permission:
     glob: allow
     edit: ask
     grep
+    list
 ---
 
 ## Prompt Defense Baseline
