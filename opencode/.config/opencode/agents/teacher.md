@@ -13,6 +13,7 @@ permission:
     todowrite: ask
     webfetch
     websearch
+    skill
 
 ---
 
