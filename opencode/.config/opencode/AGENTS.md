@@ -4,7 +4,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ## DIRECTIVE PRIORITIES
 
-Every rule in this document is tagged with a priority level, and the tags have scope the sub  and inherite the parent priority tag. You must evaluate instructions based on these definitions:
+Every rule in this document is tagged with a priority level, and the tags have scope the sub and inherite the parent priority tag. You must evaluate instructions based on these definitions:
 - **[REQUIRED]**: Absolute constraints. Non-negotiable laws of the codebase. You must not write code that violates these.
 - **[DEFAULT]**: The strong baseline. Follow these always, *unless* the specific framework/ecosystem strictly forces a different pattern, or if applying the rule severely degrades human readability. 
 - **[OPTIONAL]**: "Nice-to-haves". Apply these only if they naturally fit the current implementation and add zero structural overhead.
