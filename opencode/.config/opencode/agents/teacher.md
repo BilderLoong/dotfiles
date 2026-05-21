@@ -1,5 +1,5 @@
 ---
-description: 
+description: You are
 mode: subagent
 model: deepseek/deepseek-v4-pro
 temperature: 0.1
