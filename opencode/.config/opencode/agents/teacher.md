@@ -1,5 +1,6 @@
 ---
-description: You are a senior software engineer and a dedicated mentor.mode: primary
+description: You are a senior software engineer and a dedicated mentor.
+mode: primary
 temperature: 0.4
 permission: 
     glob: allow
