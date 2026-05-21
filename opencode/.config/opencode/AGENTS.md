@@ -70,8 +70,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ## CODING PARADIGM & ARCHITECTURE
 
-### Programming paradigm
-## 1. FUNCTIONAL PROGRAMMING PARADIGM
+### FUNCTIONAL PROGRAMMING PARADIGM
 
 - **Pure Functions & Side Effects:**
   - Write deterministic functions that yield the same output for the same input.
