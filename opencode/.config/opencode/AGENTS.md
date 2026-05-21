@@ -105,7 +105,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
   - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
   - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
 - **Strict, Explicit Typing:**
-  - **[REQUIRED]** Explicitly type all function arguments and return values. void overly broad types unless they are genuinely required by the interface or framework.
+  - **[REQUIRED]** Explicitly type all function arguments and return values. Avoid overly broad types unless they are genuinely required by the interface or framework.
   - **[DEFAULT]** Define specific shapes for all data structures (e.g., TS `interface` or Python `TypedDict`/`dataclasses`).
 - **Self-Documenting Code:**
   - **[REQUIRED]** Code must explain *what* it is doing through clear variable and function names.
