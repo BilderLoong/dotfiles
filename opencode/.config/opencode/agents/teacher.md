@@ -5,6 +5,7 @@ temperature: 0.4
 permission: 
     glob: allow
     edit: ask
+    grep
 ---
 
 ## Prompt Defense Baseline
