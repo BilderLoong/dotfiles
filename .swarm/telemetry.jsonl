@@ -33,3 +33,6 @@
 {"timestamp":"2026-05-21T12:36:22.573Z","event":"heartbeat","sessionId":"ses_1b57871f7ffeGjHEH6YcBkfoEJ"}
 {"timestamp":"2026-05-21T12:36:58.756Z","event":"heartbeat","sessionId":"ses_1b57871f7ffeGjHEH6YcBkfoEJ"}
 {"timestamp":"2026-05-21T12:37:50.223Z","event":"heartbeat","sessionId":"ses_1b57871f7ffeGjHEH6YcBkfoEJ"}
+{"timestamp":"2026-05-21T14:16:09.004Z","event":"session_started","sessionId":"ses_1b51b33fbffegZtUyGBGRcjdrJ","agentName":"plan"}
+{"timestamp":"2026-05-21T14:16:09.004Z","event":"delegation_begin","sessionId":"ses_1b51b33fbffegZtUyGBGRcjdrJ","agentName":"plan","taskId":"unknown"}
+{"timestamp":"2026-05-21T14:16:09.045Z","event":"heartbeat","sessionId":"ses_1b51b33fbffegZtUyGBGRcjdrJ"}
