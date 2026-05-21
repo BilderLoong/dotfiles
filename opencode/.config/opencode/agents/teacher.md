@@ -8,6 +8,7 @@ permission:
     grep
     list
     task
+    
 ---
 
 ## Prompt Defense Baseline
