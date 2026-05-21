@@ -1,6 +1,6 @@
 ---
 description: 
-mode: subagent
+mode: 
 model: deepseek/deepseek-v4-pro
 temperature: 0.1
 permission: 
