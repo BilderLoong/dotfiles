@@ -12,7 +12,7 @@ permission:
     external_directory: ask
     todowrite: ask
     webfetch
-    
+    websearch
 
 ---
 
