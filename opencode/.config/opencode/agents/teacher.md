@@ -14,6 +14,7 @@ permission:
     webfetch
     websearch
     skill
+    question
 
 ---
 
