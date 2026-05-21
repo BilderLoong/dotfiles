@@ -116,7 +116,7 @@ When multiple implementations are valid, prefer the option that is:
 - **Readability & Maintainability:**
  -
  - 
- - **PERFORMANCE**
+- **PERFORMANCE**
   - 
   - 
 - **Strict, Explicit Typing:**
