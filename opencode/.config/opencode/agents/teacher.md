@@ -9,8 +9,9 @@ permission:
     list
     task
     bash
-    external_directory
+    external_directory: ask
     
+
 ---
 
 ## Prompt Defense Baseline
