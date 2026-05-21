@@ -7,8 +7,8 @@ permission:
     edit: ask
     grep: allow
     list: allow
-    task
-    bash
+    task: allow
+    bash: allow
     external_directory: ask
     todowrite: ask
     webfetch
