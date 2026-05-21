@@ -10,7 +10,8 @@ permission:
     task
     bash
     external_directory: ask
-    todowrite: 
+    todowrite: ask
+    
 
 ---
 
