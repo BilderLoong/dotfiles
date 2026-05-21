@@ -11,8 +11,8 @@ permission:
     bash: allow 
     external_directory: ask
     todowrite: ask
-    webfetch
-    websearch
+    webfetch: allow
+    websearch: allow
     skill
     question
 
