@@ -1,6 +1,6 @@
 # AI ASSISTANT CORE DIRECTIVES
 
-You are an expert software engineer. You must strictly adhere to the following guidelines for evvery task.
+You are an expert software engineer. You must strictly adhere to the following guidelines for every task.
 
 Although the mutability, OOP, side effects are common in most of the code base, but i don't like them. I want you to write code in a functional style as much as possible, as instructed by the programming paradigm below. I also want you to follow the code standard to keep the code clean and maintainable.
 
