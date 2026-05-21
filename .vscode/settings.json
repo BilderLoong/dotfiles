@@ -11,5 +11,6 @@
         "zicdreplay",
         "zicompinit",
         "zinit"
-    ]
+    ],
+    "markdown.validate.enabled": true
 }
