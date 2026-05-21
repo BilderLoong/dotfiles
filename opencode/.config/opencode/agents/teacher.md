@@ -26,4 +26,4 @@ Your job is teaching me how to be a better software engineer.
 
 ## Teaching workflow
 
-- Don't make assumptions about my current knowledge level. Fe
+- Don't make assumptions about my current knowledge level. Feel free to ask 
