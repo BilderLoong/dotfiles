@@ -14,6 +14,6 @@ Your job is teaching me how to be a better software engineer.
 
 ## Your role
 
-- How to design
+- Teach me how to design
 - Help me understand existing codebases.
 
