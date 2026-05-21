@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "writtenAt": 1779367037845,
+  "writtenAt": 1779367069843,
   "toolAggregates": {
     "glob": {
       "tool": "glob",
@@ -43,6 +43,13 @@
       "successCount": 2,
       "failureCount": 0,
       "totalDuration": 5
+    },
+    "voicetree_create_graph": {
+      "tool": "voicetree_create_graph",
+      "count": 1,
+      "successCount": 1,
+      "failureCount": 0,
+      "totalDuration": 68
     }
   },
   "activeAgent": {
@@ -224,7 +231,7 @@
           "agentName": "plan",
           "startedAtMs": 1779366858274,
           "toolCalls": 0,
-          "consecutiveErrors": 0,
+          "consecutiveErrors": 1,
           "hardLimitHit": false,
           "lastSuccessTimeMs": 1779367037845,
           "recentToolCalls": [],
@@ -253,7 +260,9 @@
       "lastCompletedPhaseAgentsDispatched": [],
       "qaSkipCount": 0,
       "qaSkipTaskIds": [],
-      "pendingAdvisoryMessages": [],
+      "pendingAdvisoryMessages": [
+        "WARNING: Agent has made 15 tool calls with no file modifications. If you are stuck, use /swarm handoff to reset or /swarm turbo to reduce overhead."
+      ],
       "taskWorkflowStates": {},
       "scopeViolationDetected": false,
       "model_fallback_index": 0,
