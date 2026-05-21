@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "writtenAt": 1779367086844,
+  "writtenAt": 1779367101855,
   "toolAggregates": {
     "glob": {
       "tool": "glob",
@@ -50,6 +50,13 @@
       "successCount": 1,
       "failureCount": 0,
       "totalDuration": 68
+    },
+    "voicetree_spawn_agent": {
+      "tool": "voicetree_spawn_agent",
+      "count": 1,
+      "successCount": 1,
+      "failureCount": 0,
+      "totalDuration": 8
     }
   },
   "activeAgent": {
@@ -231,7 +238,7 @@
           "agentName": "plan",
           "startedAtMs": 1779366858274,
           "toolCalls": 0,
-          "consecutiveErrors": 0,
+          "consecutiveErrors": 1,
           "hardLimitHit": false,
           "lastSuccessTimeMs": 1779367086843,
           "recentToolCalls": [],
