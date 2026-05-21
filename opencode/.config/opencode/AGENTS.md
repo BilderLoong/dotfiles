@@ -101,6 +101,7 @@ Use OOP only when required by the language, framework, or ecosystem.
   - **DRY vs. YAGNI:** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. Do not build features "just in case."
 - **Strict, Explicit Typing:**
   - Fully utilize the type system of the target language.
+  - Use the simplest type that accurately models the domain.
   - Avoid `any`, `object`, or generic dicts. Define specific shapes for all data structures (e.g., specific TS interfaces or Python `TypedDict`/`dataclasses`).
   - Explicitly type all function arguments and return values.
 - **Self-Documenting Code:**
