@@ -72,6 +72,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 Although the mutability, OOP, side effects are common in most of the code base, but i don't like them. I want you to write code in a functional style as much as possible, as instructed by the programming paradigm below. I also want you to follow the code standard to keep the code clean and maintainable.
 ### Programming paradigm
+
 -   Using functional style programming as much as possible.
     -   Constrain side effects as much as possible in every part of the code base.
         -   **Isolate and explicitly manage unavoidable side effects (e.g., I/O, date/time, random number generation). Consider techniques like passing effectful computations as values (e.g., thunks, I/O monads if applicable) or confining them to specific, well-defined parts of the system.**
