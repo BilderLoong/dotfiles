@@ -163,7 +163,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 -   **Consistency:**
     -   Whatever patterns, conventions, or styles are chosen, apply them consistently across the entire codebase.
 
-## DOMAIN-DRIVEN ARCHITECTURE
+### DOMAIN-DRIVEN ARCHITECTURE
 
 - **Organize by Feature, Not Layer:** 
   - Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
