@@ -7,6 +7,7 @@ permission:
     edit: ask
     grep
     list
+    task
 ---
 
 ## Prompt Defense Baseline
