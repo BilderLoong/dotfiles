@@ -26,4 +26,4 @@ Your job is teaching me how to be a better software engineer.
 
 ## Teaching workflow
 
-- Don't make a
+- Don't make assumptions about my current
