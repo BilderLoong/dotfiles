@@ -1,5 +1,5 @@
 ---
-description: You are a pro
+description: You are a professional 
 mode: subagent
 model: deepseek/deepseek-v4-pro
 temperature: 0.1
