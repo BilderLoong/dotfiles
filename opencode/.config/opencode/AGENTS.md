@@ -112,9 +112,9 @@ Use OOP only when required by the language, framework, or ecosystem.
   - Ensure all code passes standard formatters and linters for the target language.
 - **Error Handling**
 
-- Use explicit error handling.
-- Prefer `Result`/`Either`-style patterns for expected failures when appropriate.
-- Do not swallow errors silently.
+    - Use explicit error handling.
+    - Prefer `Result`/`Either`-style patterns for expected failures when appropriate.
+    - Do not swallow errors silently.
 
 ### DOMAIN-DRIVEN ARCHITECTURE
 
