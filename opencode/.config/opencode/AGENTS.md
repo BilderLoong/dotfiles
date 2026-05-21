@@ -68,54 +68,54 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-## CODING PARADIGM & ARCHITECTURE
+## DIRECTIVE PRIORITIES
+Every rule in this document is tagged with a priority level. You must evaluate instructions based on these definitions:
+- **[REQUIRED]**: Absolute constraints. Non-negotiable laws of the codebase. You must not write code that violates these.
+- **[DEFAULT]**: The strong baseline. Follow these always, *unless* the specific framework/ecosystem strictly forces a different pattern, or if applying the rule severely degrades human readability. 
+- **[OPTIONAL]**: "Nice-to-haves". Apply these only if they naturally fit the current implementation and add zero structural overhead.
 
-### FUNCTIONAL PROGRAMMING PARADIGM
+---
 
-Use OOP only when required by the language, framework, or ecosystem.
+## 1. FUNCTIONAL PROGRAMMING PARADIGM
 
 - **Pure Functions & Side Effects:**
-  - Write deterministic functions that yield the same output for the same input.
-  - Core logic must have zero side effects. 
-  - Isolate unavoidable side effects (I/O, DOM manipulation, time, randomness) to the absolute edges of the system. 
+  - **[REQUIRED]** Core logic must have zero side effects. 
+  - **[REQUIRED]** Isolate unavoidable side effects (I/O, DOM manipulation, time, randomness) to the absolute edges of the system.
+  - **[DEFAULT]** Write deterministic functions that yield the same output for the same input.
 - **Immutability:**
-  - Never mutate existing data structures. Operations that alter data must return a newly constructed instance.
+  - **[REQUIRED]** Never mutate existing data structures. Operations that alter data must return a newly constructed instance.
 - **Function Composition & Declarative Style:**
-  - Build complex logic by composing smaller, focused functions. 
-  - Describe *what* to achieve rather than *how*. Use higher-order functions (`map`, `filter`, `reduce`) over explicit `for`/`while` loops.
-  - Use currying and partial application where it improves composability.
+  - **[DEFAULT]** Describe *what* to achieve rather than *how*. Use higher-order functions (`map`, `filter`, `reduce`) over explicit `for`/`while` loops.
+  - **[OPTIONAL]** Use currying, partial application, and data-last function signatures where they improve composability.
+  - **[OPTIONAL]** Prefer expression-oriented programming (e.g., ternaries or pattern matching) over statement-based execution (if/else blocks).
 - **Data over Objects (No OOP):**
-  - **No Classes or `this`:** Do not use class-based inheritance, encapsulation, or instance methods. 
-  - Keep data structures plain and distinct from the functions that transform them. Think in pipelines, not objects.
+  - **[DEFAULT]** Do not use classes, inheritance, encapsulation, or the `this` keyword. *(Exception: when strictly mandated by a framework lifecycle or library).*
+  - **[DEFAULT]** Keep data structures plain and distinct from the functions that transform them. Think in pipelines, not objects.
 - **Algebraic Data Types & Error Handling:**
-  - Model domain states explicitly.
-  - Return errors as values (e.g., `Result` or `Either` patterns) rather than throwing and catching exceptions for expected control flow.
+  - **[REQUIRED]** Model domain states explicitly.
+  - **[DEFAULT]** Return errors as values (e.g., `Result` or `Either` patterns) rather than throwing and catching exceptions for expected control flow.
 
-### CODE QUALITY & STANDARDS
+## 2. CODE QUALITY & STANDARDS
+
 - **Simplicity First:**
-  - Readability is more important than theoretical purity. Favor pragmatic functional programming over academic purity.
-  - **Single Responsibility:** Each function does exactly one thing.
-  - **DRY vs. YAGNI:** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. Do not build features "just in case."
+  - **[REQUIRED]** Single Responsibility: Each function does exactly one thing.
+  - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
+  - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
 - **Strict, Explicit Typing:**
-  - Fully utilize the type system of the target language.
-  - Use the simplest type that accurately models the domain.
-  - Explicitly define the shape of complex data structures. (e.g., specific TS interfaces or Python `TypedDict`/`dataclasses`).
-  - Avoid `any`, `object`, or generic dicts.
-  - Explicitly type all function arguments and return values.
+  - **[REQUIRED]** Explicitly type all function arguments and return values. Avoid `any`, `object`, or generic dicts.
+  - **[DEFAULT]** Define specific shapes for all data structures (e.g., TS `interface` or Python `TypedDict`/`dataclasses`).
 - **Self-Documenting Code:**
-  - Code should explain *what* it is doing through clear variable and function names.
-  - Use comments exclusively to explain *why* a non-obvious decision was made 
-  - Use docstrings or API documentation for public modules and functions.
-- **Tooling:**
-  - Ensure all code passes standard formatters and linters for the target language.
-- **Error Handling**
-    - Use explicit error handling.
-    - Do not swallow errors silently.
+  - **[REQUIRED]** Code must explain *what* it is doing through clear variable and function names.
+  - **[REQUIRED]** Use inline comments exclusively to explain *why* a non-obvious decision was made. 
+  - **[DEFAULT]** Use standard docstrings or API documentation formats for public modules and functions.
+- **Tooling & Error Handling:**
+  - **[REQUIRED]** Code must pass standard formatters and linters for the target language.
+  - **[REQUIRED]** Do not swallow errors silently.
 
-### DOMAIN-DRIVEN ARCHITECTURE
+## 3. DOMAIN-DRIVEN ARCHITECTURE
 
 - **Organize by Feature, Not Layer:** 
-  - Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
-  - A domain folder should contain everything related to that feature: its data structures, purely functional transformations, and tests.
+  - **[DEFAULT]** Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
+  - **[DEFAULT]** A domain folder should contain everything related to that feature: its data structures, purely functional transformations, and tests.
 - **Shared Utilities:**
-  - Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when fun
+  - **[DEFAULT]** Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
