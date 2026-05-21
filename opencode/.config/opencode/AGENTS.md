@@ -108,6 +108,7 @@ Use OOP only when required by the language, framework, or ecosystem.
   - Use docstrings or API documentation for public modules and functions.
 - **Tooling:**
   - Ensure all code passes standard formatters and linters for the target language.
+  
 - **Error Handling**
     - Use explicit error handling.
     - Do not swallow errors silently.
