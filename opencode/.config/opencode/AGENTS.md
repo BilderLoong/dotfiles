@@ -4,7 +4,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ## DIRECTIVE PRIORITIES
 
-Every rule in this document is tagged with a priority level,Priority tags apply recursively to all nested sub-rules unless explicitly overridden. You must evaluate instructions based on these definitions:
+Every rule in this document is tagged with a priority level. Priority tags apply recursively to all nested sub-rules unless explicitly overridden. You must evaluate instructions based on these definitions:
 
 - **[REQUIRED]**: Absolute constraints. Non-negotiable laws of the codebase. You must not write code that violates these.
 - **[DEFAULT]**: The strong baseline. Follow these always, *unless* the specific framework/ecosystem strictly forces a different pattern, or if applying the rule severely degrades human readability. 
