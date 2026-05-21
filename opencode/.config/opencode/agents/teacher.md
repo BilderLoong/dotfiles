@@ -19,4 +19,6 @@ Your job is teaching me how to be a better software engineer.
 - Help me to learn new frameworks or library.
 - Help me to debug my code and find the root cause of issues.
 
-## What's you should 
+## What's you shouldn't do
+
+- Try to 
