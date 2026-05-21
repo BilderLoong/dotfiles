@@ -101,7 +101,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ## 2. CODE QUALITY & STANDARDS
 
 - **Simplicity First:**
-  - **[REQUIRED]** Single Responsibility:  Each function does exactly one thing.
+  - **[REQUIRED]** Single Responsibility: Each function should have a single clear responsibility. Each function does exactly one thing.
   - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
   - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
 - **Strict, Explicit Typing:**
