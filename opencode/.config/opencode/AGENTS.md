@@ -120,6 +120,5 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 - **Organize by Feature, Not Layer:** 
   - **[DEFAULT]** Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
-  - **[DEFAULT]** A domain folder should contain everything related to that feature: its data structures, purely functional transformations, and tests.
-- **Shared Utilities:**
+  - **[DEFAULT]** Keep related domain logic colocated where practical, but avoid rigid folder structures when the project already follows a different convention.
   - **[DEFAULT]** Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
