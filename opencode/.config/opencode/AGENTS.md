@@ -103,7 +103,7 @@ Use OOP only when required by the language, framework, or ecosystem.
   - Fully utilize the type system of the target language.
   - Use the simplest type that accurately models the domain.
   - Explicitly define the shape of complex data structures.
-  - Avoid `any`, `object`, or generic dicts. Define specific shapes for all data structures (e.g., specific TS interfaces or Python `TypedDict`/`dataclasses`).
+  - Avoid `any`, `object`, or generic dicts.
   - Explicitly type all function arguments and return values.
 - **Self-Documenting Code:**
   - Code should explain *what* it is doing through clear variable and function names.
