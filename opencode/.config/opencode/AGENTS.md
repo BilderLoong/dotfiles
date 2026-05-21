@@ -116,6 +116,7 @@ When multiple implementations are valid, prefer the option that is:
 - **Readability & Maintainability:**
  -
  - 
+ 
 - **Strict, Explicit Typing:**
   - **[REQUIRED]** Explicitly type all function arguments and return values. 
   - **[REQUIRED]** Avoid overly broad types unless they are genuinely required by the interface or framework.
