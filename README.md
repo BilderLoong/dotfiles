@@ -136,7 +136,7 @@ git commit -m "adopt kitty config"
 **Option B — keep the repo version, discard the local one:**
 
 ```bash
-rm ~/.config/kitty/kitty.conf     # remove the conflicting file
+m ~/.config/kitty/kitty.conf     # remove the conflicting file
 stow -R kitty -t ~                # restow creates the symlink to the repo version
 ```
 
