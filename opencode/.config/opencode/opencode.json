@@ -7,7 +7,6 @@
   "default_agent": "plan",
   "instructions": [
     "~/.config/opencode/instructions/cli_preferences.md",
-    // "~/.config/opencode/instructions/context7.md"
   ],
   "lsp": true,
   "mcp": {
