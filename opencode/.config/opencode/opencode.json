@@ -1,34 +1,198 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": [
-    "instructions/cli_preference.md"
-  ],
+  "autoupdate": true,
   "compaction": {
     "auto": true
   },
-  "autoupdate": true,
   "default_agent": "plan",
+  "instructions": [
+    "instructions/code_requirements.md",
+    "instructions/cli_preference.md"
+  ],
   "lsp": true,
-  "snapshot": true,
   "mcp": {
     "mgrep": {
-      "type": "local",
       "command": [
         "mgrep",
         "mcp"
       ],
-      "enabled": true
+      "enabled": true,
+      "type": "local"
     }
   },
-  "plugin": [
-    "opencode-swarm"
-  ],
-  "agent": {
-    "explore": {
-      "disable": true
+  "plugin": [],
+  "provider": {
+    "ddshub": {
+      "models": {
+        "codex-mini-latest": {
+          "limit": {
+            "context": 200000,
+            "output": 100000
+          },
+          "name": "Codex Mini",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {}
+          }
+        },
+        "gpt-5.2": {
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "name": "GPT-5.2",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {},
+            "xhigh": {}
+          }
+        },
+        "gpt-5.3-codex": {
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "name": "GPT-5.3 Codex",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {},
+            "xhigh": {}
+          }
+        },
+        "gpt-5.3-codex-spark": {
+          "limit": {
+            "context": 128000,
+            "output": 32000
+          },
+          "name": "GPT-5.3 Codex Spark",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {},
+            "xhigh": {}
+          }
+        },
+        "gpt-5.4": {
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "name": "GPT-5.4",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {},
+            "xhigh": {}
+          }
+        },
+        "gpt-5.4-mini": {
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "name": "GPT-5.4 Mini",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {},
+            "xhigh": {}
+          }
+        },
+        "gpt-5.5": {
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          },
+          "name": "GPT-5.5",
+          "options": {
+            "store": false
+          },
+          "variants": {
+            "high": {},
+            "low": {},
+            "medium": {},
+            "xhigh": {}
+          }
+        }
+      },
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "sk-0cf6e3e2af0c5dff2c31c8c0f6c49d217aa6cbc908c0b9f0fc47a5a3c4756be6",
+        "baseURL": "https://www.ddshub.cc/v1",
+        "setCacheKey": true
+      }
     },
-    "general": {
-      "disable": true
+    "ddshubclaudediscount": {
+      "models": {
+        "claude-haiku-4-5-20251001": {
+          "name": ""
+        },
+        "claude-opus-4-6": {
+          "name": ""
+        },
+        "claude-opus-4-7": {
+          "name": ""
+        },
+        "claude-sonnet-4-6": {
+          "name": ""
+        }
+      },
+      "npm": "@ai-sdk/anthropic",
+      "options": {
+        "apiKey": "sk-573f64a662a4eb56a7b0acfdf9fe7fc5b1bc6fbbf85e17efe17501ea080b558f",
+        "baseURL": "https://www.ddshub.cc/v1",
+        "setCacheKey": true
+      }
+    },
+    "meai": {
+      "models": {
+        "claude-opus-4-7-thinking": {
+          "name": ""
+        },
+        "claude-opus-4.7": {
+          "name": ""
+        },
+        "deepseek-v4-pro": {
+          "name": "Deepseek V4 Pro"
+        },
+        "glm-5.1": {
+          "name": ""
+        },
+        "kimi-k2.6": {
+          "name": ""
+        },
+        "mimo-v2.5-pro": {
+          "name": ""
+        }
+      },
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "sk-DcKYFxVcMPUDLQWDulmXvLuhNdeR1Y1Q3l5SjPTYxABgwvT9",
+        "baseURL": "https://api.meai.cloud/v1",
+        "setCacheKey": true
+      }
     }
-  }
+  },
+  "snapshot": true
 }
