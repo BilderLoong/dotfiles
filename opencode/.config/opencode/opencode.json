@@ -8,7 +8,7 @@
   "instructions": [
     "instructions/code_requirements.md",
     "instructions/cli_preference.md"
-    "context7.md"
+    "instructions/context7.md"
   ],
   "lsp": true,
   "mcp": {
