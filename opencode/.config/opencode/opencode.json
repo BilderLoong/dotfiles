@@ -6,9 +6,7 @@
   },
   "default_agent": "plan",
   "instructions": [
-    "instructions/code_requirements.md",
-    "instructions/cli_preference.md"
-    "instructions/context7.md"
+    "instructions/cli_preference.md""instructions/context7.md"
   ],
   "lsp": true,
   "mcp": {
