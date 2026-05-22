@@ -14,4 +14,3 @@ You MUST call `library` first to get a valid ID unless the user provides one dir
 For version-specific docs, use `/org/project/version` from the `library` output (e.g., `/vercel/next.js/v14.3.0`).
 
 If a command fails with a quota error, inform the user and suggest `npx ctx7@latest login` or setting `CONTEXT7_API_KEY` env var for higher limits. Do not silently fall back to training data.
-<!-- context7 -->
