@@ -56,6 +56,16 @@
       "pluginName": "andrej-karpathy-skills",
       "installedAt": "2026-05-21T02:45:21.556Z",
       "updatedAt": "2026-05-21T02:45:21.556Z"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "ref": "main",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "skillFolderHash": "98904a7d8e0e04b9bd46220b9b17298f45fe0b72",
+      "installedAt": "2026-05-23T08:09:33.445Z",
+      "updatedAt": "2026-05-23T08:09:33.445Z"
     }
   },
   "dismissed": {
