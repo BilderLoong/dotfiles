@@ -77,3 +77,4 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     has'ast-grep' id-as'sg-completions' as'completion' nocompile atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'poetry' id-as'poetry_completions' as'completion' nocompile  atclone'poetry completions zsh > _poetry' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'opencode' id-as'opencode-completions' as'completion' nocompile  atclone'opencode completion > _opencode' atpull'%atclone' run-atpull zdharma-continuum/null \
+    has'claude' id-as'claude-completions' as'completion' wbingli/zsh-claudecode-completion \
