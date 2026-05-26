@@ -68,19 +68,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export SDKMAN_DIR="/home/birudo/.sdkman"
 [[ -s "/home/birudo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/birudo/.sdkman/bin/sdkman-init.sh"
 
-# pnpm
-export PNPM_HOME="/Users/birudo/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-
-# Added by Antigravity
-export PATH="/Users/birudo/.antigravity/antigravity/bin:$PATH"
-
-# opencode
-export PATH=/Users/birudo/.opencode/bin:$PATH
 
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
