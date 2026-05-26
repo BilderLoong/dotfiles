@@ -55,7 +55,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # zprof
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # bun completions
 [ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
