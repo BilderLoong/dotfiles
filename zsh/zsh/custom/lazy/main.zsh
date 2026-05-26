@@ -45,10 +45,6 @@ if [[ $(uname) == "Darwin" ]]; then
 	source "$ZSH_CUSTOM/macOS.sh"
 fi
 
-# bun completions
-[ -s "/home/birudo/.bun/_bun" ] && source "/home/birudo/.bun/_bun"
-[ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
-
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
