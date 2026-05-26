@@ -48,8 +48,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # zprof
 
-
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/birudo/.sdkman"
 [[ -s "/home/birudo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/birudo/.sdkman/bin/sdkman-init.sh"

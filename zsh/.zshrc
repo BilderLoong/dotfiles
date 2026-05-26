@@ -29,4 +29,3 @@ fi
 
 # Can't be load async
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
