@@ -20,3 +20,4 @@
 /.claude/stats-cache\.json
 /.claude/tasks
 /.claude/todos
+/.claude/settings.local.json

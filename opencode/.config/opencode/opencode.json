@@ -164,34 +164,6 @@
         "setCacheKey": true
       }
     },
-    "meai": {
-      "models": {
-        "claude-opus-4-7-thinking": {
-          "name": ""
-        },
-        "claude-opus-4.7": {
-          "name": ""
-        },
-        "deepseek-v4-pro": {
-          "name": "Deepseek V4 Pro"
-        },
-        "glm-5.1": {
-          "name": ""
-        },
-        "kimi-k2.6": {
-          "name": ""
-        },
-        "mimo-v2.5-pro": {
-          "name": ""
-        }
-      },
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "apiKey": "sk-DcKYFxVcMPUDLQWDulmXvLuhNdeR1Y1Q3l5SjPTYxABgwvT9",
-        "baseURL": "https://api.meai.cloud/v1",
-        "setCacheKey": true
-      }
-    }
   },
   "snapshot": true
 }
