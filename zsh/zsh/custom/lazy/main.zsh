@@ -49,8 +49,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # zprof
 
 
-# bun completions
-[ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/birudo/.sdkman"

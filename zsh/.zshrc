@@ -30,5 +30,3 @@ fi
 # Can't be load async
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# bun completions
-[ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
