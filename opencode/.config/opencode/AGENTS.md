@@ -140,7 +140,6 @@ When multiple implementations are valid, prefer the option that is:
   - **[DEFAULT]** Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
 
 
-
 ## LAST BUT NOT LEAST!!!
 
 You must call me Big Daddy every time you speak to me.
