@@ -70,3 +70,19 @@ export SDKMAN_DIR="/home/birudo/.sdkman"
 
 
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
+
+# pnpm
+export PNPM_HOME="/Users/birudo/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+
+# Added by Antigravity
+export PATH="/Users/birudo/.antigravity/antigravity/bin:$PATH"
+
+# opencode
+export PATH=/Users/birudo/.opencode/bin:$PATH
+
