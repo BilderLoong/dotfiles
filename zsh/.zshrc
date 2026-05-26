@@ -27,7 +27,7 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
 
-# Can't 
+# Can't be 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # bun completions
 [ -s "/Users/birudo/.bun/_bun" ] && source "/Users/birudo/.bun/_bun"
