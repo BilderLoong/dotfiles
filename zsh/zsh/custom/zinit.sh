@@ -81,4 +81,4 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     has'bun' id-as'bun-completions' as'completion' nocompile atclone'curl -sL https://raw.githubusercontent.com/oven-sh/bun/main/completions/bun.zsh > _bun' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'uv' id-as'uv-completions' as'completion' nocompile atclone'uv generate-shell-completion zsh > _uv' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'uvx' id-as'uvx-completions' as'completion' nocompile atclone'uvx --generate-shell-completion zsh > _uvx' atpull'%atclone' run-atpull zdharma-continuum/null \
-    has'claude' id-as'claude-completions' as'completion' wbingli/zsh-claudecode-completion \
+    has'claude' id-as'claude-completions' as'completion' wbingli/zsh-claudecode-completion 
