@@ -82,12 +82,12 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     has'claude' id-as'claude-completions' as'completion' wbingli/zsh-claudecode-completion
 
 # uv & uvx completions — standalone ice+light pattern to avoid turbo race conditions
-zinit ice as'completion' id-as'uv-completions' has'uv' nocompile \
-    atclone'uv generate-shell-completion zsh > _uv' \
-    atpull'%atclone' run-atpull
-zinit light zdharma-continuum/null
+# zinit ice as'completion' id-as'uv-completions' has'uv' nocompile \
+#     atclone'uv generate-shell-completion zsh > _uv' \
+#     atpull'%atclone' run-atpull
+# zinit light zdharma-continuum/null
 
-zinit ice as'completion' id-as'uvx-completions' has'uvx' nocompile \
-    atclone'uvx --generate-shell-completion zsh > _uvx' \
-    atpull'%atclone' run-atpull
-zinit light zdharma-continuum/null 
+# zinit ice as'completion' id-as'uvx-completions' has'uvx' nocompile \
+#     atclone'uvx --generate-shell-completion zsh > _uvx' \
+#     atpull'%atclone' run-atpull
+# zinit light zdharma-continuum/null 
