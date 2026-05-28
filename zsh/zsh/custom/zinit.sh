@@ -74,7 +74,7 @@ zinit wait lucid for \
 # Meaning of `lucid`: https://zdharma-continuum.github.io/zinit/wiki/Example-Minimal-Setup/
 ## For the plugins with completions
 zinit wait lucid atload'zicompinit; zicdreplay' for \
-    has'syncthing' id-as'syncthing-completions' eval"syncthing install-completions"  zdharma-continuum/null \
+    has'syncthing' id-as'syncthing-completions' nocompile eval"syncthing install-completions"  zdharma-continuum/null \
     has'ast-grep' id-as'sg-completions' as'completion' nocompile atclone'ast-grep completions zsh > _ast-grep' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'poetry' id-as'poetry_completions' as'completion' nocompile  atclone'poetry completions zsh > _poetry' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'opencode' id-as'opencode-completions' as'completion' nocompile  atclone'opencode completion > _opencode' atpull'%atclone' run-atpull zdharma-continuum/null \
