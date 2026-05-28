@@ -79,6 +79,15 @@ zinit wait lucid atload'zicompinit; zicdreplay' for \
     has'poetry' id-as'poetry_completions' as'completion' nocompile  atclone'poetry completions zsh > _poetry' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'opencode' id-as'opencode-completions' as'completion' nocompile  atclone'opencode completion > _opencode' atpull'%atclone' run-atpull zdharma-continuum/null \
     has'bun' id-as'bun-completions' as'completion' nocompile atclone'curl -sL https://raw.githubusercontent.com/oven-sh/bun/main/completions/bun.zsh > _bun' atpull'%atclone' run-atpull zdharma-continuum/null \
-    has'uv' id-as'uv-completions' as'completion' nocompile atclone'uv generate-shell-completion zsh > _uv' atpull'%atclone' run-atpull zdharma-continuum/null \
-    has'uvx' id-as'uvx-completions' as'completion' nocompile atclone'uvx --generate-shell-completion zsh > _uvx' atpull'%atclone' run-atpull zdharma-continuum/null \
-    has'claude' id-as'claude-completions' as'completion' wbingli/zsh-claudecode-completion 
+    has'claude' id-as'claude-completions' as'completion' wbingli/zsh-claudecode-completion
+
+# uv & uvx completions — standalone ice+light pattern to avoid turbo race conditions
+zinit ice as'completion' id-as'uv-completions' has'uv' nocompile \
+    atclone'uv generate-shell-completion zsh > _uv' \
+    atpull'%atclone' run-atpull
+zinit light zdharma-continuum/null
+
+zinit ice as'completion' id-as'uvx-completions' has'uvx' nocompile \
+    atclone'uvx --generate-shell-completion zsh > _uvx' \
+    atpull'%atclone' run-atpull
+zinit light zdharma-continuum/null 
