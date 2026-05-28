@@ -162,7 +162,7 @@ zinit ice id-as"opencode-completions" has"opencode" nocompile \
 zinit light zdharma-continuum/null
 ```
 
-Generates the completion file AND explicitly installs it via `zinit creinstall`. The `creinstall` command looks for `_*` files in the plugin directory and creates symlinks in `$ZINIT/completions`. Still requires `nocompile` to avoid the same compilation failure.
+Generates the completion file AND explicitly installs it via `zinit creinstall`. The `creinstall` command looks for `_*` files in the plugin directory and creates symlinks in `$ZINIT[COMPLETIONS_DIR]`. Still requires `nocompile` to avoid the same compilation failure.
 
 ### Wrong examples
 
@@ -170,7 +170,7 @@ Generates the completion file AND explicitly installs it via `zinit creinstall`.
 |---|-----------|--------------|
 | 1 | `eval"opencode completion zsh"` | `eval` sources stdout as a script — it defines the completion function in the current shell but never installs it into `$fpath`. Completions are never discovered by `compinit`. |
 | 2 | Missing `nocompile` | Compilation at `!atclone` fails (empty plugin), returns non-zero, bails out before completion installation. See [Why `nocompile` is required](#why-nocompile-is-required). |
-| 3 | Missing `as'completion'` | The `_*` file is generated but zinit doesn't know to install it as a completion. It sits in the plugin directory but is never symlinked to `$ZINIT/completions`. |
+| 3 | Missing `as'completion'` | The `_*` file is generated but zinit doesn't know to install it as a completion. It sits in the plugin directory but is never symlinked to `$ZINIT[COMPLETIONS_DIR]`. |
 | 4 | Missing `run-atpull` | `atpull"%atclone"` only fires when new commits are downloaded. For `zdharma-continuum/null` (which rarely updates), it never fires, so completions are never regenerated. |
 | 5 | `as'completion'` + `eval"command completions"` | Combines two wrong approaches. `eval` sources stdout (not useful for completions), and without `atclone`, no file is generated. |
 
@@ -225,7 +225,7 @@ zinit ice as"completion" from"gh-r" bpick"completions_zsh" \
 zinit light dbrgn/tealdeer
 ```
 
-The `as"completion"` ice tells zinit to treat the file as a completion and install it into `$ZINIT/completions`.
+The `as"completion"` ice tells zinit to treat the file as a completion and install it into `$ZINIT[COMPLETIONS_DIR]`.
 
 ### Wrong examples
 
@@ -305,7 +305,7 @@ zinit creinstall TOOL-completions
 
 | Ice | Description |
 |-----|-------------|
-| `as'completion'` | Mark plugin as a completion; discover and install `_*` files to `$ZINIT/completions` |
+| `as'completion'` | Mark plugin as a completion; discover and install `_*` files to `$ZINIT[COMPLETIONS_DIR]` |
 | `as"command"` | Mark plugin as a command (binary); skip compilation; still detect `_*` files for completion |
 | `nocompile` | Skip compilation entirely; required for empty plugins with `atclone` that generate files |
 | `nocompile'!'` | Compile after `make` and `atclone` (useful when Makefile installs scripts) |
