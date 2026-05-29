@@ -41,7 +41,7 @@ brew "ast-grep"
 brew "jless"
 brew "tealdeer"
 brew "httpie"
-brew "navi
+brew "navi"
 brew "ripgrep"
 brew "gh"
 
