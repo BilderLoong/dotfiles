@@ -92,8 +92,6 @@ zinit wait"0b" lucid for \
     has'git' OMZP::git \
     Aloxaf/fzf-tab \
     has'exa' DarrinTisdale/zsh-aliases-exa \
-    zdharma-continuum/fast-syntax-highlighting \
-    has'zoxide' eval"zoxide init zsh"  ajeetdsouza/zoxide \
     id-as'fnm_env' as"null" has"fnm" eval"fnm env --use-on-cd" \
         zdharma-continuum/null \
     id-as"thefuck_init" as"null" has"thefuck" eval"thefuck --alias" \
