@@ -19,7 +19,6 @@ brew "neovim"
 brew "node", link: false
 brew "stow"
 brew "tmux"
-brew "tree"
 brew "pyenv"
 brew "bpython"
 brew "python"
@@ -42,7 +41,7 @@ brew "ast-grep"
 brew "jless"
 brew "tealdeer"
 brew "httpie"
-brew "navi"
+brew "navi
 brew "ripgrep"
 brew "gh"
 

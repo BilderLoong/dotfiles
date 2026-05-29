@@ -1,3 +1,24 @@
+# Who called compinit?
+# autoload -Uz compinit
+# functions[_real_compinit]=$functions[compinit]
+
+# typeset -gi __compinit_call_count=0
+
+# compinit() {
+#   ((__compinit_call_count++))
+
+#   print -P "\n%F{yellow}========== COMPINIT #$__compinit_call_count ==========%f"
+
+#   print -P "%F{cyan}ARGS:%f $*"
+
+#   print -P "%F{cyan}STACK:%f"
+#   printf '  %s\n' "${funcfiletrace[@]}"
+
+#   print -P "%F{yellow}=======================================%f\n"
+
+#   _real_compinit "$@"
+# }
+
 # zmodload zsh/zprof
 
 ZSH_CUSTOM="$HOME/zsh/custom"
@@ -20,12 +41,11 @@ HYPHEN_INSENSITIVE="true"
 
 export EDITOR='nvim'
 
-source "$ZSH_CUSTOM/zinit.sh"
+source "$ZSH_CUSTOM/setup_zinit.sh"
 
 # If the system is running on termux.
 if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
 
-# Can't be load async
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# zprof
