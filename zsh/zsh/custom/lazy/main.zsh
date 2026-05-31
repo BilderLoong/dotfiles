@@ -72,4 +72,4 @@ export PATH="/Users/birudo/.antigravity/antigravity/bin:$PATH"
 export PATH=/Users/birudo/.opencode/bin:$PATH
 
 
-[[]]
+[[ -z]]
