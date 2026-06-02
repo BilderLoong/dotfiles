@@ -10,7 +10,10 @@
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
   "permissions": {
-    "allow": ["Bash(ls:*)", "WebFetch"],
+    "allow": [
+      "Bash(ls:*)",
+      "WebFetch"
+    ],
     "deny": [],
     "ask": [],
     "defaultMode": "plan"
@@ -28,7 +31,6 @@
     "explanatory-output-style@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "full-stack-orchestration@claude-code-workflows": true,
-    "github@claude-plugins-official": true,
     "learning-output-style@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
@@ -39,6 +41,6 @@
     "unit-testing@claude-code-workflows": true
   },
   "extraKnownMarketplaces": {},
-  "theme": "auto",
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto"
 }
