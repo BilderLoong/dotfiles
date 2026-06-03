@@ -71,7 +71,7 @@ local function plugins()
 			end,
 		},
 
-		  Shopping list: oranges, apples, bananas, tomatoes
+		  Shopping list: oranges, apples, tomatoes
 		{
 			"wellle/targets.vim",
 			event = "BufReadPost",
