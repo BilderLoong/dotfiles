@@ -248,7 +248,7 @@ local function plugins()
 					"netrwPlugin",
 					"netrwSettings",
 					"netrwFileHandlers",
-					-- "matchit",
+					"matchit",
 					"tar",
 					"tarPlugin",
 					"rrhelper",
