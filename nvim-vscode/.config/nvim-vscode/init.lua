@@ -183,6 +183,7 @@ local function plugins()
 						"json",
 						"vue",
 						"go",
+						"rust"
 
 						-- low level
 						"c",
