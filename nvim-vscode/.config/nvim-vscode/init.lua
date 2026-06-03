@@ -292,7 +292,7 @@ local function LSP()
 	)
 	keymap.set(
 		{ "n", "x" },
-		"<Leader>cf",
+		"<Leader>cgr",
 		deferred_action("gitlens.copyRemoteFileUrlToClipboard"),
 		{ desc = "Copy remote URL" }
 	)
