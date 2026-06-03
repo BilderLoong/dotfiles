@@ -55,7 +55,6 @@ local function plugins()
 			opts = {},
 		},
 
-
 		{
 			"unblevable/quick-scope",
 			event = "BufReadPost",
