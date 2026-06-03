@@ -50,6 +50,13 @@ local function plugins()
 	---@type NvPluginSpec[]
 	require("lazy").setup({
 		{
+			"folke/which-key.nvim",
+			event = "VeryLazy",
+			opts = {},
+		},
+
+
+		{
 			"unblevable/quick-scope",
 			event = "BufReadPost",
 			config = function()
