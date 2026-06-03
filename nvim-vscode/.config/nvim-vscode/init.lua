@@ -201,7 +201,7 @@ local function plugins()
 
 		{
 			"nvim-treesitter/nvim-treesitter-textobjects",
-			event = "Very",
+			event = "VeryLazy",
 			-- event = "BufReadPost",
 			dependencies = "nvim-treesitter/nvim-treesitter",
 		},
