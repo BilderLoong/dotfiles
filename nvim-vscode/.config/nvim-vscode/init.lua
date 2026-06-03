@@ -188,6 +188,8 @@ local function plugins()
 						-- low level
 						"c",
 						"zig",
+						
+						-- other
 					},
 				}
 			end,
