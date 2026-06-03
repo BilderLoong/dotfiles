@@ -190,7 +190,7 @@ local function plugins()
 						"zig",
 						
 						-- other
-						python
+						
 					},
 				}
 			end,
