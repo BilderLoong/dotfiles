@@ -206,7 +206,7 @@ local function plugins()
 			-- on BufReadPost, the initial buffers miss the textobject keymap attachment
 			-- and treesitter textobjects (daf, vif, etc.) silently do nothing.
 			-- event = "VeryLazy",
-			event = "BufReadPost",
+			event = "VeryLazy",
 			dependencies = "nvim-treesitter/nvim-treesitter",
 		},
 
