@@ -205,7 +205,6 @@ local function plugins()
 			-- before the plugin's FileType autocmd is registered. If this plugin loads
 			-- on BufReadPost, the initial buffers miss the textobject keymap attachment
 			-- and treesitter textobjects (daf, vif, etc.) silently do nothing.
-			-- event = "VeryLazy",
 			event = "VeryLazy",
 			dependencies = "nvim-treesitter/nvim-treesitter",
 		},
