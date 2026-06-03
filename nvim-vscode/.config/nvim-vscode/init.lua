@@ -50,7 +50,7 @@ local function plugins()
 	---@type NvPluginSpec[]
 	require("lazy").setup({
 		{
-			"folke/which-key.nvim",
+			"folke/-key.nvim",
 			event = "VeryLazy",
 			opts = {},
 		},
