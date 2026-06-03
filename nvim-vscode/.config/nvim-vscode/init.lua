@@ -6,7 +6,7 @@ local keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
 
--- The below doen't work, I don't why.
+-- The below doesn't work, I don't why.
 vim.keymap.set(
 	{ "n", "v", "x" },
 	"j",
