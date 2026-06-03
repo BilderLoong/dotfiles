@@ -184,7 +184,6 @@ local function plugins()
 						"vue",
 						"go",
 
-
 						-- low level
 						"c",
 						"zig",
