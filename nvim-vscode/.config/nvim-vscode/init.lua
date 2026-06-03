@@ -15,7 +15,7 @@ vim.keymap.set(
 	{ expr = true, silent = true, desc = "Move up", remap = true }
 )
 
-vim.kerman.set(
+vim.keymap.set(
 	{ "n", "v", "x" },
 	"k",
 	[[ v:count || mode(1)[0:1] == "no" ? "k" : "gk" ]],
