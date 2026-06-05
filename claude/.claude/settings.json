@@ -42,5 +42,6 @@
   },
   "extraKnownMarketplaces": {},
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto"
+  "theme": "auto",
+  "effortLevel": "xhigh"
 }
