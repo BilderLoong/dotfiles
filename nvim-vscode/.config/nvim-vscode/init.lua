@@ -87,7 +87,7 @@ local function plugins()
 			opts = function()
 				return {
 					highlight = {
-						enable = false,
+						enable = true,
 						additional_vim_regex_highlighting = false,
 					},
 					-- https://github.com/AstroNvim/AstroNvim/blob/ffaa3877f0dd3a7468f29e81cf4ebf534a5ad891/lua/plugins/treesitter.lua#L35
