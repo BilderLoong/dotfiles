@@ -43,6 +43,6 @@
   "extraKnownMarketplaces": {},
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
-  "effortLevel": "max",
+  "effortLevel": "xhigh",
   "model": "opus"
 }
