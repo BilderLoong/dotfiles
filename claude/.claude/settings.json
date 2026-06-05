@@ -43,5 +43,5 @@
   "extraKnownMarketplaces": {},
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
-  "effortLevel": "xhigh"
+  "effortLevel": "max"
 }
