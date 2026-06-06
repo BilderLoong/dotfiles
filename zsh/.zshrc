@@ -49,5 +49,3 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 fi
 
 # zprof
-
-[ -f "/Users/birudo/.ghcup/env" ] && . "/Users/birudo/.ghcup/env" # ghcup-env
