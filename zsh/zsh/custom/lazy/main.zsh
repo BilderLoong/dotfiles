@@ -54,7 +54,6 @@ export SDKMAN_DIR="/home/birudo/.sdkman"
 [[ -s "/home/birudo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/birudo/.sdkman/bin/sdkman-init.sh"
 
 
-[[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
 
 # pnpm
 export PNPM_HOME="/Users/birudo/Library/pnpm"
