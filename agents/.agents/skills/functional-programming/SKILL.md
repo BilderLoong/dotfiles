@@ -199,6 +199,28 @@ These rules keep FP from drifting into clever-but-unreadable territory. They're 
 
 **Explicit typing [REQUIRED]**: Explicitly type all function arguments and return values. Avoid overly broad types unless the interface genuinely requires it. Define specific shapes for all data structures — in TypeScript that's `interface` or `type`, in Python that's `TypedDict` or `dataclass`.
 
+**No `any`, no unsafe casts [REQUIRED]**: Never use `any` — it disables the type checker and hides bugs. `unknown` is acceptable only at system boundaries (parsing JSON, reading external input) but must be narrowed to a specific type via type guards before use. Never use `as` casts, non-null assertions (`!`), or `@ts-ignore` to silence the compiler — if the types don't align, fix the types, not the cast.
+
+```typescript
+// NO — any defeats the purpose
+function process(data: any): any {
+  return data.items.map((item: any) => item.name);
+}
+
+// NO — unsafe cast hides the problem
+const user = data as User;
+user.email.toLowerCase(); // hope this works
+
+// YES — unknown at the boundary, narrowed via type guard
+const isUser = (value: unknown): value is User =>
+  typeof value === "object" && value !== null && "email" in value;
+
+function process(data: unknown): Result<User[]> {
+  if (!isUser(data)) return failure(new Error("Invalid user data"));
+  return success(data.items); // data is now User, no cast needed
+}
+```
+
 **Self-documenting code [REQUIRED]**: Names must explain *what* is happening. Use inline comments exclusively for *why* a non-obvious decision was made. Standard docstrings for public functions are fine, but the code itself should tell the story.
 
 **Don't swallow errors [REQUIRED]**: If you return a `Result` type, the caller must handle both branches. An unhandled `failure` branch is a silent bug waiting to happen. At the system edge, log the error before converting to a user-facing message.
