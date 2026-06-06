@@ -48,4 +48,6 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
 
+[[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
+
 # zprof
