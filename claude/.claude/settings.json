@@ -18,6 +18,7 @@
     "ask": [],
     "defaultMode": "plan"
   },
+  "model": "opus",
   "enabledPlugins": {
     "agent-orchestration@claude-code-workflows": true,
     "claude-code-setup@claude-plugins-official": false,
@@ -35,14 +36,12 @@
     "lua-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
-    "shell-scripting@claude-code-workflows": true,
     "superpowers@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "unit-testing@claude-code-workflows": true
   },
   "extraKnownMarketplaces": {},
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "auto",
   "effortLevel": "xhigh",
-  "model": "opus"
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto"
 }
