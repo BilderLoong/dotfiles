@@ -199,25 +199,29 @@ These rules keep FP from drifting into clever-but-unreadable territory. They're 
 
 **Explicit typing [REQUIRED]**: Explicitly type all function arguments and return values. Avoid overly broad types unless the interface genuinely requires it. Define specific shapes for all data structures — in TypeScript that's `interface` or `type`, in Python that's `TypedDict` or `dataclass`.
 
-**No `any`, no unsafe casts [REQUIRED]**: Never use `any` — it disables the type checker and hides bugs. `unknown` is acceptable only at system boundaries (parsing JSON, reading external input) but must be narrowed to a specific type via type guards before use. Never use `as` casts, non-null assertions (`!`), or `@ts-ignore` to silence the compiler — if the types don't align, fix the types, not the cast.
+**Don't bypass the type checker [REQUIRED]**: Never use escape hatches that disable type safety — they hide bugs and rot over time. If the types don't align, fix the types, not the cast. The only acceptable widest type is the one that forces you to narrow before use.
+
+Language-specifics to avoid:
+- TypeScript: `any`, `as` casts, non-null assertions (`!`), `@ts-ignore`, `@ts-expect-error`
+- Python: `# type: ignore`, `typing.Any`, `typing.cast`, bare `dict`/`list` without type params
+- Go: `interface{}` (use generics or concrete types), `reflect` for type bypass, `unsafe.Pointer`
+- Rust: `unsafe` blocks (unless FFI), `transmute`, `.unwrap()` in core logic, `as` casts that silently truncate
+
+The escape-hatch-free pattern: accept the widest safe type at system boundaries, then narrow it with a type guard before any operation touches the value.
 
 ```typescript
-// NO — any defeats the purpose
+// NO — any escapes the type system entirely
 function process(data: any): any {
   return data.items.map((item: any) => item.name);
 }
 
-// NO — unsafe cast hides the problem
-const user = data as User;
-user.email.toLowerCase(); // hope this works
-
-// YES — unknown at the boundary, narrowed via type guard
+// YES — unknown at the boundary, narrowed via type guard before use
 const isUser = (value: unknown): value is User =>
   typeof value === "object" && value !== null && "email" in value;
 
 function process(data: unknown): Result<User[]> {
   if (!isUser(data)) return failure(new Error("Invalid user data"));
-  return success(data.items); // data is now User, no cast needed
+  return success(data.items);
 }
 ```
 
