@@ -71,3 +71,4 @@ export PATH="/Users/birudo/.antigravity/antigravity/bin:$PATH"
 # opencode
 export PATH=/Users/birudo/.opencode/bin:$PATH
 
+[ -f "/Users/birudo/.ghcup/env" ] && . "/Users/birudo/.ghcup/env" # ghcup-env
