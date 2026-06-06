@@ -86,9 +86,7 @@
     "warp",
     "zed",
     "claude-code",
-    "kilo",
     "windsurf",
-    "hermes-agent",
-    "openclaw"
+    "hermes-agent"
   ]
 }
