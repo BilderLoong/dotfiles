@@ -329,9 +329,10 @@ const parseJSON = (raw: string): Result<Config> => {
 Before finalizing any code, verify:
 
 1. **No mutations**: No `push`, `pop`, `sort`, `splice`, direct property assignment to existing objects, or `&mut` receiver methods
-2. **No classes**: No `class`, `this`, `extends`, `new` (unless framework-mandated)
-3. **No loops**: No `for`, `while`, `do...while` — use `map`/`filter`/`reduce`/`fold` instead
+2. **No behavior-classes**: No classes that mix state with mutating methods, `this`, `extends`, or `new` (unless framework-mandated). Data-classes (`@dataclass`, `data class`, `case class`) are fine — they're structs, not objects.
+3. **No loops for data transformation**: Use `map`/`filter`/`reduce`/`fold` for transforming collections. `for` loops are acceptable for early exit (break/return mid-iteration) or when profiling shows the allocation cost matters
 4. **Pure core**: All non-edge functions are deterministic and side-effect-free
 5. **Explicit errors**: Errors are returned as values, not thrown for control flow
 6. **Explicit state**: Domain states use discriminated unions/tagged types, not `null` sentinels alone
 7. **Pipe, don't nest**: Deeply nested function calls are replaced with `pipe`/`compose` chains
+8. **No `any`, no unsafe casts**: `unknown` at boundaries, narrowed via type guards. No `as` casts, non-null assertions (`!`), or `@ts-ignore` to bypass the type checker
