@@ -339,4 +339,4 @@ Before finalizing any code, verify:
 5. **Explicit errors**: Errors are returned as values, not thrown for control flow
 6. **Explicit state**: Domain states use discriminated unions/tagged types, not `null` sentinels alone
 7. **Pipe, don't nest**: Deeply nested function calls are replaced with `pipe`/`compose` chains
-8. **No `any`, no unsafe casts**: `unknown` at boundaries, narrowed via type guards. No `as` casts, non-null assertions (`!`), or `@ts-ignore` to bypass the type checker
+8. **No type-checker bypasses**: No `any`/`as`/`!`/`@ts-ignore` (TS), `# type: ignore`/`Any`/`cast` (Python), `interface{}`/`reflect` (Go), `unsafe`/`transmute` (Rust). Accept the widest safe type at boundaries, narrow with type guards before use.
