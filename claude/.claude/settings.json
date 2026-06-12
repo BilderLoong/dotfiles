@@ -1,24 +1,15 @@
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash[1m]",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro[1m]",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-pro[1m]",
-    "ANTHROPIC_MODEL": "deepseek-v4-pro[1m]",
-    "CLAUDE_CODE_EFFORT_LEVEL": "max",
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "API_TIMEOUT_MS": "3000000",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
   "permissions": {
-    "allow": [
-      "Bash(ls:*)",
-      "WebFetch"
-    ],
+    "allow": ["Bash(ls:*)", "WebFetch"],
     "deny": [],
     "ask": [],
     "defaultMode": "plan"
   },
-  "model": "opus",
   "enabledPlugins": {
     "agent-orchestration@claude-code-workflows": true,
     "claude-code-setup@claude-plugins-official": false,
@@ -41,7 +32,6 @@
     "unit-testing@claude-code-workflows": true
   },
   "extraKnownMarketplaces": {},
-  "effortLevel": "max",
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto"
 }

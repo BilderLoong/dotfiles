@@ -48,6 +48,10 @@ if [ $(ps -ef | grep -c com.termux) -gt 0 ]; then
 	source "$ZSH_CUSTOM/termux.sh"
 fi
 
+# Need to be sourced synchronously.
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # zprof

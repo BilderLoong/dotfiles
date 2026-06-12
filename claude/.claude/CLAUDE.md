@@ -139,7 +139,21 @@ When multiple implementations are valid, prefer the option that is:
   - **[DEFAULT]** Keep related domain logic colocated where practical, but avoid rigid folder structures when the project already follows a different convention.
   - **[DEFAULT]** Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
 
+## MISC
 
+- When using SUBAGENTs, you must ensure that the subagent also follows the same directives outlined in this document. You are responsible for the output of the subagent and must review its work to ensure it meets these standards. You can tell the subagent to "follow the same directives as outlined in this document" to ensure consistency across all agents involved in the task.
+
+- When introduce any tools or init projects you should use the scaffolders instead of hand-written setup.
+
+## Default tool choice
+
+### Python
+
+- Let's alway use `uv` instead of `pip` or other.
+
+## JavaScript
+
+- Let's alway use `bun` instead of `npm`.
 
 ## LAST BUT NOT LEAST!!!
 

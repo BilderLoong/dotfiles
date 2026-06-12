@@ -15,10 +15,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/birudo/perl5"
 export PERL_MM_OPT
 
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # snap
 export PATH="/snap/bin:$PATH"
 
