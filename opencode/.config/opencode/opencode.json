@@ -31,6 +31,8 @@
     }
   },
   "plugin": [],
-  "provider": {},
+  "provider": {
+    
+  },
   "snapshot": true
 }
