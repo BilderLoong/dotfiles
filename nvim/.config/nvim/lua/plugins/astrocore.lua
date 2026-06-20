@@ -17,7 +17,6 @@ return {
       n = {
         -- Disable default mappings
         ["<leader>D"] = false,
-        ["<leader>fm"] = false,
 
         -- General
         ["zt"] = { "zt3<c-y>" },
