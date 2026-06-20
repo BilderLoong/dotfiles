@@ -1,7 +1,7 @@
 return {
   "LunarVim/bigfile.nvim",
   event = "BufReadPre",
-  enable=false,
+  enable = false,
   opts = function(_, opts)
     return {
       pattern = function(bufnr, filesize_mib)
