@@ -1,147 +1,84 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
+-- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
+-- Configuration documentation can be found with `:h astrocore`
+-- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
+--       as this provides autocomplete and documentation while editing
+
+---@type LazySpec
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
+    -- Configure core features of AstroNvim
+    features = {
+      large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
+      autopairs = true, -- enable autopairs at start
+      cmp = true, -- enable completion at start
+      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
+      highlighturl = true, -- highlight URLs at start
+      notifications = true, -- enable notifications at start
+    },
+    -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
+    diagnostics = {
+      virtual_text = true,
+      underline = true,
+    },
+    -- passed to `vim.filetype.add`
+    filetypes = {
+      -- see `:h vim.filetype.add` for usage
+      extension = {
+        foo = "fooscript",
+      },
+      filename = {
+        [".foorc"] = "fooscript",
+      },
+      pattern = {
+        [".*/etc/foo/.*"] = "fooscript",
+      },
+    },
+    -- vim options can be configured here
     options = {
-      opt = {
-        relativenumber = true,
-        foldmethod = "expr",
-        foldexpr = "nvim_treesitter#foldexpr()",
-        foldenable = false,
+      opt = { -- vim.opt.<key>
+        relativenumber = true, -- sets vim.opt.relativenumber
+        number = true, -- sets vim.opt.number
+        spell = false, -- sets vim.opt.spell
+        signcolumn = "yes", -- sets vim.opt.signcolumn to yes
+        wrap = false, -- sets vim.opt.wrap
       },
-      g = {
-        toggle_theme_icon = "",
+      g = { -- vim.g.<key>
+        -- configure global vim variables (vim.g)
+        -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
+        -- This can be found in the `lua/lazy_setup.lua` file
       },
     },
+    -- Mappings can be configured through AstroCore as well.
+    -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
+      -- first key is the mode
       n = {
-        -- Disable default mappings
-        ["<leader>D"] = false,
+        -- second key is the lefthand side of the map
 
-        -- General
-        ["zt"] = { "zt3<c-y>" },
-        ["<leader>cd"] = {
-          function() require("export-to-vscode").launch() end,
-          desc = "Export to VSCode",
-          noremap = true,
-          silent = true,
-        },
-        ["<leader>cg"] = {
-          function() require("custom_cmds").open_config() end,
-          desc = "Open neovim config in a new tab",
-          noremap = true,
-          silent = true,
-        },
+        -- navigate buffer tabs
+        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        -- Telescope
-        ["<A-d>"] = { "<cmd>Telescope lsp_document_symbols<CR>", desc = "Find document symbols" },
-        ["<A-b>"] = { "<cmd>Telescope<CR>", desc = "Telescope builtins" },
-        ["<A-p>"] = { "<cmd>Telescope commands<CR>", desc = "Telescope commands" },
-        ["<A-r>"] = { "<cmd>Telescope resume<CR>", desc = "Resume last Telescope picker" },
-        ["<leader>ss"] = {
-          function() require("auto-session.session-lens").search_session() end,
-          desc = "Find session history",
-        },
-        ["<leader>sg"] = { "<cmd>Telescope ast_grep<CR>", desc = "AST Grep" },
-
-        -- fzf-lua
-        ["<leader>rr"] = { function() require("fzf-lua").resume() end, desc = "Resume last fzf-lua search" },
-        ["<leader>fs"] = { function() require("fzf-lua").lsp_live_workspace_symbols() end, desc = "Find workspace symbols" },
-        ["<leader>fw"] = { function() require("fzf-lua").live_grep_native() end, desc = "Live grep native" },
-        ["<leader>gt"] = { function() require("fzf-lua").git_status() end, desc = "Git status" },
-        ["<F1>"] = { function() require("fzf-lua").help_tags() end, desc = "Fzf lua help tags" },
-        ["<C-P>"] = { function() require("fzf-lua").files { follow = true } end, desc = "Fzf-lua find files" },
-
-        -- LSP (Glance, Lspsaga, Telescope)
-        ["gy"] = { "<cmd>Glance type_definitions<CR>", desc = "Glance LSP type definitions" },
-        ["gr"] = { "<cmd>Glance references<CR>", desc = "Glance LSP references" },
-        ["gd"] = { "<cmd>Glance definitions<CR>", desc = "Glance LSP definitions" },
-        ["gi"] = { "<cmd>Telescope lsp_implementations<CR>", desc = "Telescope LSP implementations" },
-        ["gO"] = { "<cmd>Lspsaga outline<CR>", desc = "Open symbols outline" },
-        ["ga"] = { "<cmd>Lspsaga finder<CR>", desc = "Show LSP methods search result" },
-        ["<leader>ca"] = { "<cmd>Lspsaga code_action<CR>", desc = "Lspsaga code action" },
-        ["<leader>n"] = { "<cmd>Lspsaga diagnostic_jump_next<CR>", desc = "Show diagnostic in a nice float" },
-        ["K"] = { "<cmd>Lspsaga hover_doc<CR>", desc = "Open hover" },
-
-        -- Gitsigns
-        ["<leader>ghu"] = { function() require("gitsigns").undo_stage_hunk() end, desc = "Unstage Git hunk" },
-        ["<leader>ghr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset Hunk" },
-        ["<leader>ghs"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Hunk" },
-
-        -- UFO folding
-        ["zM"] = { function() require("ufo").closeAllFolds() end, desc = "UFO close all folds" },
-        ["zR"] = { function() require("ufo").openAllFolds() end, desc = "UFO open all folds" },
-
-        -- Yanky
-        ["p"] = { "<Plug>(YankyPutAfter)", desc = "Yanky put after" },
-        ["P"] = { "<Plug>(YankyPutBefore)", desc = "Yanky put before" },
-        ["gp"] = { "<Plug>(YankyGPutAfter)", desc = "Yanky grand put after" },
-        ["gP"] = { "<Plug>(YankyGPutBefore)", desc = "Yanky grand put before" },
-        ["<A-k>"] = { "<Plug>(YankyPreviousEntry)", desc = "Yanky previous entry" },
-        ["<A-j>"] = { "<Plug>(YankyNextEntry)", desc = "Yanky next entry" },
-      },
-      i = {
-        ["jk"] = { "<ESC>", desc = "Escape insert mode", nowait = true },
-        ["<A-d>"] = { "<cmd>Telescope lsp_document_symbols<CR>", desc = "Find document symbols" },
-        ["<A-b>"] = { "<cmd>Telescope<CR>", desc = "Telescope builtins" },
-        ["<A-p>"] = { "<cmd>Telescope commands<CR>", desc = "Telescope commands" },
-        ["<A-r>"] = { "<cmd>Telescope resume<CR>", desc = "Resume last Telescope picker" },
-      },
-      v = {
-        ["zt"] = { "zt3<c-y>" },
-        ["<leader>ghu"] = { function() require("gitsigns").undo_stage_hunk() end, desc = "Unstage Git hunk" },
-        ["<leader>ghr"] = { function() require("gitsigns").reset_hunk { vim.fn.line ".", vim.fn.line "v" } end, desc = "Reset Hunk" },
-        ["<leader>ghs"] = { function() require("gitsigns").stage_hunk { vim.fn.line ".", vim.fn.line "v" } end, desc = "Stage Hunk" },
-      },
-      x = {
-        ["p"] = { "<Plug>(YankyPutAfter)", desc = "Yanky put after" },
-        ["P"] = { "<Plug>(YankyPutBefore)", desc = "Yanky put before" },
-        ["gp"] = { "<Plug>(YankyGPutAfter)", desc = "Yanky grand put after" },
-        ["gP"] = { "<Plug>(YankyGPutBefore)", desc = "Yanky grand put before" },
-        ["ih"] = { ":<C-U>Gitsigns select_hunk<CR>", desc = "Select Hunk" },
-      },
-      o = {
-        ["ih"] = { "<cmd>C-U>Gitsigns select_hunk<CR>", desc = "Select Hunk" },
-      },
-    },
-    autocmds = {
-      MyFilePost = {
-        {
-          event = { "UIEnter", "BufReadPost", "BufNewFile" },
-          once = true,
-          desc = "Trigger LazyFilePost event after UI enters and file opens",
-          callback = function(args)
-            local file = vim.api.nvim_buf_get_name(args.buf)
-            local buftype = vim.bo[args.buf].buftype
-            if not vim.g.ui_entered and args.event == "UIEnter" then
-              vim.g.ui_entered = true
-            end
-            if file ~= "" and buftype ~= "nofile" and vim.g.ui_entered then
-              vim.schedule(function()
-                vim.api.nvim_exec_autocmds("User", { pattern = "LazyFilePost", modeline = false })
-                vim.api.nvim_del_augroup_by_name "MyFilePost"
-              end)
-            end
+        -- mappings seen under group name "Buffer"
+        ["<Leader>bd"] = {
+          function()
+            require("astroui.status.heirline").buffer_picker(
+              function(bufnr) require("astrocore.buffer").close(bufnr) end
+            )
           end,
+          desc = "Close buffer from tabline",
         },
-      },
-      AutoSave = {
-        {
-          event = { "BufLeave", "FocusLost" },
-          pattern = "*",
-          desc = "Auto save on focus lost",
-          callback = function() vim.cmd "silent! wall" end,
-        },
-        {
-          event = { "BufEnter" },
-          desc = "Disable auto save for config files",
-          callback = function()
-            local cur_buf_name = vim.api.nvim_buf_get_name(0)
-            local config_dir = vim.fn.stdpath "config"
-            if not cur_buf_name:find(config_dir, 1, true) then return end
-            vim.b.auto_save = 0
-          end,
-        },
+
+        -- tables with just a `desc` key will be registered with which-key if it's installed
+        -- this is useful for naming menus
+        -- ["<Leader>b"] = { desc = "Buffers" },
+
+        -- setting a mapping to false will disable it
+        -- ["<C-S>"] = false,
       },
     },
   },
