@@ -1,7 +1,7 @@
 return {
     "folke/lazydev.nvim",
     ft = "lua",
-    enable = false,
+    enabled = false,
     opts = {
         library = {
             { path = "luvit-meta/library", words = { "vim%.uv" } },
