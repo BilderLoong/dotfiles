@@ -1,7 +1,7 @@
 return {
   "nvimdev/lspsaga.nvim",
   event = "LspAttach",
-  eng
+  enabled
   config = function()
     require("lspsaga").setup {
       finder = {
