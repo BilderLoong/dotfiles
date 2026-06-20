@@ -28,7 +28,7 @@ return {
         "typescript-language-server",
         "prettierd",
         "eslint_d",
-        "js-debug-adapter@v1.76.1",
+        "js-debug-adapter",
         "json-lsp",
         "css-lsp",
 
