@@ -1,14 +1,5 @@
 return {
   {
-    "williamboman/mason.nvim",
-    opts = {
-      registries = {
-        "github:nvim-java/mason-registry",
-        "github:mason-org/mason-registry",
-      },
-    },
-  },
-  {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
       ensure_installed = {
@@ -45,12 +36,12 @@ return {
         "shfmt",
         "bash-language-server",
 
-        -- Go
-        "gopls",
-        "gospel",
+        -- Go (gopls needs go >= 1.26, user has 1.23 — skip for now)
+        -- "gopls",
+        -- "gospel",
 
         -- Haskell
-        "haskell-debug-adapter",
+        -- "haskell-debug-adapter",
         "haskell-language-server",
         "fourmolu",
 
@@ -62,7 +53,6 @@ return {
         "jdtls",
 
         -- Misc
-        "cspell",
         "codespell",
         "tree-sitter-cli",
       },
