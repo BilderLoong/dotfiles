@@ -36,7 +36,7 @@ log.configure {
         },
         formatter = log.formatters.Format(
           "%s [%s] %s: %-30s",
-          { "timestamp", "level", , "msg" }
+          { "timestamp", "level", "logger_name", "msg" }
         ),
         sink = log.sinks.File(vim.fn.stdpath "log" .. "/debug.log"),
       },
