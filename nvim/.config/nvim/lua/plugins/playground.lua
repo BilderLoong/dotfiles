@@ -1,4 +1,4 @@
 return {
   "nvim-treesitter/playground",
-  event = "User AstroFile",
+  enabled = false,
 }
