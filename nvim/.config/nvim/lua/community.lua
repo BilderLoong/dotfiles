@@ -8,6 +8,6 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  -- TODO: 
+  -- TODO: Config to use with vs
   { import = "astrocommunity.recipes.vscode" }, -- [VS Code Integration | AstroNvim Documentation](https://docs.astronvim.com/recipes/vscode/)
 }
