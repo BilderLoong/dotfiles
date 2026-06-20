@@ -9,7 +9,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- TODO: 
-  { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  -- { import = "astrocommunity.recipes.picker-lsp-mappings" },
   -- TODO: Config to use with vscode.
   { import = "astrocommunity.recipes.vscode" }, -- [VS Code Integration | AstroNvim Documentation](https://docs.astronvim.com/recipes/vscode/)
 }
