@@ -1,26 +1,67 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- Customize Mason
-
----@type LazySpec
 return {
-  -- use mason-tool-installer for automatically installing Mason packages
+  "williamboman/mason.nvim",
+  opts = {
+    registries = {
+      "github:nvim-java/mason-registry",
+      "github:mason-org/mason-registry",
+    },
+  },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    -- overrides `require("mason-tool-installer").setup(...)`
     opts = {
-      -- Make sure to use the names found in `:Mason`
       ensure_installed = {
-        -- install language servers
+        -- Lua
         "lua-language-server",
-
-        -- install formatters
         "stylua",
+        "luacheck",
 
-        -- install debuggers
+        -- Python
         "debugpy",
+        "pyright",
+        "ruff",
+        "black",
 
-        -- install any other package
+        -- Web
+        "html-lsp",
+        "typescript-language-server",
+        "prettierd",
+        "eslint_d",
+        "js-debug-adapter@v1.76.1",
+        "json-lsp",
+        "css-lsp",
+
+        -- Kotlin
+        "ktlint",
+        "kotlin-language-server",
+        "kotlin-debug-adapter",
+
+        -- YAML
+        "yaml-language-server",
+
+        -- Shell
+        "shellcheck",
+        "shfmt",
+        "bash-language-server",
+
+        -- Go
+        "gopls",
+        "gospel",
+
+        -- Haskell
+        "haskell-debug-adapter",
+        "haskell-language-server",
+        "fourmolu",
+
+        -- Rust
+        "rust-analyzer",
+        "codelldb",
+
+        -- Java
+        "jdtls",
+
+        -- Misc
+        "cspell",
+        "codespell",
         "tree-sitter-cli",
       },
     },
