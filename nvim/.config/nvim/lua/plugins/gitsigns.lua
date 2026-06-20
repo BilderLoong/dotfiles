@@ -17,6 +17,20 @@ return {
         delay = 500,
         ignore_whitespace = true,
       },
+      on_attach = function(bufnr)
+        local gitsigns = require "gitsigns"
+        local map = function(mode, l, r, desc)
+          vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
+        end
+
+        map("n", "<leader>ghs", gitsigns.stage_hunk, "Stage hunk")
+        map("n", "<leader>ghr", gitsigns.reset_hunk, "Reset hunk")
+        map("n", "<leader>ghu", gitsigns.undo_stage_hunk, "Undo stage hunk")
+        map("v", "<leader>ghs", function() gitsigns.stage_hunk { vim.fn.line ".", vim.fn.line "v" } end, "Stage hunk")
+        map("v", "<leader>ghr", function() gitsigns.reset_hunk { vim.fn.line ".", vim.fn.line "v" } end, "Reset hunk")
+        map("x", "ih", ":<C-U>Gitsigns select_hunk<CR>", "Select hunk")
+        map("o", "ih", "<cmd>C-U>Gitsigns select_hunk<CR>", "Select hunk")
+      end,
     })
   end,
 }
