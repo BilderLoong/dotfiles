@@ -517,7 +517,7 @@ local function vscode_neovim_overrides()
 
 	-- Only / Join
 	vim.keymap.set({ "n", "x" }, "<C-w>o", function() vscode.action("workbench.action.joinAllGroups") end, { desc = "Only window" })
-	vim.keymap.set({ "n", "x" }, "<C-w><C-o>", function() vscode.action("workbench.action.joinAllGroups") end, { desc = "Only window" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><C-o>", function() vscode.action("workbench.action.joinAllGroups") end, { desc = "Only window" })
 
 	-- Size
 	vim.keymap.set({ "n", "x" }, "<C-w>=", function() vscode.action("workbench.action.evenEditorWidths") end, { desc = "Equalize splits" })
