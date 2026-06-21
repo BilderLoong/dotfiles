@@ -569,7 +569,6 @@ local function vscode_neovim_overrides()
 end
 vscode_neovim_overrides()
 
-local 
 
 local function show_mapping()
 	local function get_content()
