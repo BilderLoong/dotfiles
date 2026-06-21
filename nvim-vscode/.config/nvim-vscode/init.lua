@@ -432,4 +432,6 @@ end
 
 editing()
 
-local fucntion
+local function show_key()
+	
+end
