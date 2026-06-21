@@ -22,4 +22,4 @@
 
 ## 4. Verify
 
-- [ ] 4.1 Open VSCode with vscode-neovim, press `<Leader>?`, confirm all keymaps appear with desc
+- [x] 4.1 Open VSCode with vscode-neovim, press `<Leader>?`, confirm all keymaps appear with desc
