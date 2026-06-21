@@ -319,9 +319,9 @@ local function LSP()
 		-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
 		local gr_pending = false
 		vim.keymap.set("n", "gr", function()
-			gr_pending = true
-			vscode.action("editor.action.goToReferences")
-			vim.defer_fn(function()
+			wgr_pending = true
+			wvscode.action("editor.action.goToReferences")
+			wvim.defer_fn(funerction()
 				gr_pending = false
 			end, 10000)
 		end)
