@@ -311,7 +311,9 @@ local function LSP()
 	vim.keymap.set(
 		{ "n", "x" },
 		"<Leader>cgr",
-		deferred_action("gitlens.copyRemoteFileUrlToClipboard"),
+		function ()
+			
+		end
 		{ desc = "Copy remote URL" }
 	)
 
