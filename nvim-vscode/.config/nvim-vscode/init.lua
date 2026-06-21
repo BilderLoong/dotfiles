@@ -396,21 +396,21 @@ vscode_ui()
 local function vscode_editor()
 	vim.keymap.set("n", "]c", function()
 		vscode.action("workbench.action.editor.nextChange")
-	end)
+	end, { desc = "Next editor change" })
 	vim.keymap.set("n", "[c", function()
 		vscode.action("workbench.action.editor.previousChange")
-	end)
+	end, { desc = "Previous editor change" })
 end
 vscode_editor()
 
 local function editing()
 	vim.keymap.set({ "n", "x" }, ">>", function()
 		vscode.action("editor.action.indentLines")
-	end)
+	end, { desc = "Indent lines" })
 
 	vim.keymap.set({ "n", "x" }, "<<", function()
 		vscode.action("editor.action.outdentLines")
-	end)
+	end, { desc = "Outdent lines" })
 end
 
 editing()
