@@ -288,14 +288,9 @@ plugins()
 
 -- LSP stuffs
 local function LSP()
-	vim.cmd([[
-    nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
-    xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
-
-    map gc  <Plug>VSCodeCommentary
-    nmap gcc <Plug>VSCodeCommentaryLine
-
-  ]])
+	vim.keymap.set({ "n", "x" }, "gy", function() vscode.action("editor.action.goToTypeDefinition") end, { desc = "Go to type definition" })
+	vim.keymap.set({ "n", "x" }, "gc", "<Plug>VSCodeCommentary", { desc = "Comment" })
+	vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine", { desc = "Comment line" })
 
 	vim.keymap.set({ "n", "x" }, "<Leader>ca", deferred_action("editor.action.quickFix"), { desc = "Code Action" })
 	vim.keymap.set(
