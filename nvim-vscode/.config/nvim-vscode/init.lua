@@ -444,3 +444,5 @@ local function show_mapping()
     await vscode.window.showTextDocument(doc, vscode.ViewColumn.Beside);
   ]], { args = { content = content } })
 end
+
+
