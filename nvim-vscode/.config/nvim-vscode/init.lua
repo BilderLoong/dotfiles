@@ -430,8 +430,7 @@ local function vscode_neovim_overrides()
 		{ desc = "Go to definition" })
 	vim.keymap.set({ "n", "x" }, "gf", function() vscode.action("editor.action.revealDeclaration") end,
 		{ desc = "Go to declaration" })
-	vim.keymap.set({ "n", "x" }, "<C-]>", function() vscode.action("editor.action.revealDefinition") end,
-	{ desc = "Go to definition" })
+	-- vim.keymap.set({ "n", "x" }, "<C-]>", function() vscode.action("editor.action.revealDefinition") end, { desc = "Go to definition" })
 	vim.keymap.set({ "n", "x" }, "gO", function() vscode.action("workbench.action.gotoSymbol") end,
 		{ desc = "Go to symbol" })
 	vim.keymap.set({ "n", "x" }, "gF", function() vscode.action("editor.action.peekDeclaration") end,
