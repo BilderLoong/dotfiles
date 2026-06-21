@@ -2,7 +2,7 @@
 
 - [x] 1.1 Convert LSP `vim.cmd` block (`gy`, `gc`, `gcc`) to `vim.keymap.set` with `desc`
 - [x] 1.2 Convert folder `vim.cmd` block (`zc`, `zo`, `zC`, `zO`) to `vim.keymap.set` with `desc`
-- [ ] 1.3 Convert UI `vim.cmd` block (`<C-j/k/h/l>`) to `vim.keymap.set` with `desc`
+- [x] 1.3 Convert UI `vim.cmd` block (`<C-j/k/h/l>`) to `vim.keymap.set` with `desc`
 
 ## 2. Add desc to existing vim.keymap.set calls
 
