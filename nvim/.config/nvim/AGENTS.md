@@ -27,4 +27,20 @@ nvim --server <socket> --remote-expr '&filetype'
 
 # Send commands
 nvim --server <socket> --remote-send '<CMD>LspInfo<CR>'
+
+# Fix LSP race condition (re-trigger FileType)
+nvim --server <socket> --remote-expr 'luaeval("vim.api.nvim_exec_autocmds(\"FileType\", {buffer=0})")'
+```
+
+## Known Bug: LSP Race Condition (AstroNvim Upstream)
+
+**Confirmed on fresh AstroNvim** — not our config.
+
+**Root cause:** mason-lspconfig bridge runs `vim.lsp.enable()` inside 3 nested `vim.schedule` calls. By the time it executes, the `FileType` event for the current buffer has already fired and won't fire again.
+
+**Symptom:** Server appears in `vim.lsp._enabled_configs` but NOT in `vim.lsp.get_clients()`.
+
+**Fix:** Re-trigger FileType autocmd after bridge completes:
+```lua
+vim.api.nvim_exec_autocmds("FileType", { buffer = 0 })
 ```
