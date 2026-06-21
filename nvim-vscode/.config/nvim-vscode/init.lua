@@ -505,7 +505,7 @@ local function vscode_neovim_overrides()
 	-- vscode-window-commands.vim overrides
 	-- Splits
 	vim.keymap.set({ "n", "x" }, "<C-w>s", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "Split horizontal" })
-	vim.keymap.set({ "n", "x" }, "<C-w><C-s>", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "Split horizontal" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><C-s>", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "Split horizontal" })
 	vim.keymap.set({ "n", "x" }, "<C-w>v", function() vscode.action("workbench.action.splitEditorRight") end, { desc = "Split vertical" })
 	vim.keymap.set({ "n", "x" }, "<C-w><C-v>", function() vscode.action("workbench.action.splitEditorRight") end, { desc = "Split vertical" })
 	vim.keymap.set({ "n", "x" }, "<C-w>n", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "New split" })
