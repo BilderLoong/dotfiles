@@ -78,7 +78,7 @@ local function plugins()
 					on_substitute = require("yanky.integration").substitute(),
 				}
 			end,
-			d
+			dependencies=
 		},
 		{
 			"kylechui/nvim-surround",
