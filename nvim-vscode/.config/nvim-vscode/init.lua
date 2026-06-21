@@ -70,7 +70,6 @@ local function plugins()
 				{ "mxc",        mode = { "n" },           function() require("substitute.exchange").cancel() end,   desc = "Substitute Exchange Cancel",   { noremap = true } },
 				{ "mm",         mode = { "n" },           function() require("substitute").line() end,              desc = "Substitute Line",              { noremap = true } },
 				{ "M",          mode = { "n" },           function() require("substitute").eol() end,               desc = "Substitute EOL",               { noremap = true } },
-				{ "m",          mode = { "x" },           function() require("substitute").visual() end,            desc = "Substitute Visual",            { noremap = true } },
 			},
 			opts = {},
 			config = function(_, opts)
