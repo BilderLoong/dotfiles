@@ -433,5 +433,5 @@ end
 editing()
 
 local function show_mapping()
-	
+	local function	
 end
