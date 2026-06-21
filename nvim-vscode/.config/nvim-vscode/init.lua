@@ -443,7 +443,7 @@ local function vscode_neovim_overrides()
 		{ desc = "Definition aside" })
 	vim.keymap.set({ "n", "x" }, "<C-w>gf", function() vscode.action("editor.action.revealDefinitionAside") end,
 		{ desc = "Declaration aside" })
-	vim.keymap.set("n", "z=", function() vscode.action("editor.action.quickFix") end, { desc = "Quick fix / Spelling" })
+	-- vim.keymap.set("n", "z=", function() vscode.action("editor.action.quickFix") end, { desc = "Quick fix / Spelling" })
 
 	-- vscode-file-commands.vim overrides
 	vim.keymap.set("n", "ZZ", function()
