@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
 
 local vscode = require('vscode')
+-- Set `vim.notify` to VS Code notifications
 vim.notify = vscode.notify
 
 local keymap = vim.keymap
