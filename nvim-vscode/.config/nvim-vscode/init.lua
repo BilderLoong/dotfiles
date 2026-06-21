@@ -438,11 +438,12 @@ local function show_mapping()
 	end
 
 	vscode.eval([[
-    const doc = await vscode.workspace.openTextDocument({
+ const doc = await vscode.workspace.openTextDocument({
       content: args.content,
       language: "markdown",
     });
-    await vscode.window.showTextDocument(doc, vscode.ViewColumn.Beside);
+    await vscode.window.showTextDocument(doc);
+    await vscode.commands.executeCommand("workbench.action.moveEditorToNewWindow");
   ]], { args = { content = get_content() } })
 end
 
