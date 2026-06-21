@@ -434,31 +434,30 @@ editing()
 
 local function show_mapping()
 	local function get_content()
-		return 'haha'
- local maps = vim.api.nvim_get_keymap("")
-  local lines = { "=== Keymaps ===", "" }
+		local maps = vim.api.nvim_get_keymap("")
+		local lines = { "=== Keymaps ===", "" }
 
-  local mode_names = { n = "NORMAL", v = "VISUAL", x = "VISUAL", i = "INSERT", o = "OPERATOR", c = "COMMAND" }
-  local grouped = {}
-  local order = { "n", "v", "x", "i", "o", "c" }
+		local mode_names = { n = "NORMAL", v = "VISUAL", x = "VISUAL", i = "INSERT", o = "OPERATOR", c = "COMMAND" }
+		local grouped = {}
+		local order = { "n", "v", "x", "i", "o", "c" }
 
-  for _, m in ipairs(maps) do
-    local mode = m.mode or "n"
-    if not grouped[mode] then grouped[mode] = {} end
-    table.insert(grouped[mode], m)
-  end
+		for _, m in ipairs(maps) do
+			local mode = m.mode or "n"
+			if not grouped[mode] then grouped[mode] = {} end
+			table.insert(grouped[mode], m)
+		end
 
-  for _, mode in ipairs(order) do
-    if grouped[mode] and #grouped[mode] > 0 then
-      table.insert(lines, "── " .. (mode_names[mode] or mode) .. " ──")
-      for _, m in ipairs(grouped[mode]) do
-        local lhs = m.lhs or ""
-        local desc = m.desc or m.callback and "[function]" or ""
-        table.insert(lines, string.format("  %-12s  %s", lhs, desc))
-      end
-      table.insert(lines, "")
-    end
-  end
+		for _, mode in ipairs(order) do
+			if grouped[mode] and #grouped[mode] > 0 then
+				table.insert(lines, "── " .. (mode_names[mode] or mode) .. " ──")
+				for _, m in ipairs(grouped[mode]) do
+					local lhs = m.lhs or ""
+					local desc = m.desc or m.callback and "[function]" or ""
+					table.insert(lines, string.format("  %-12s  %s", lhs, desc))
+				end
+				table.insert(lines, "")
+			end
+		end
 	end
 
 	vscode.eval([[
