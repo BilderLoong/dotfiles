@@ -513,7 +513,7 @@ local function vscode_neovim_overrides()
 	-- Close
 	vim.keymap.set({ "n", "x" }, "<C-w>c", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
 	-- vim.keymap.set({ "n", "x" }, "<C-w>q", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
-	-- vim.keymap.set({ "n", "x" }, "<C-w><C-c>", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-c>", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
 
 	-- Only / Join
 	vim.keymap.set({ "n", "x" }, "<C-w>o", function() vscode.action("workbench.action.joinAllGroups") end, { desc = "Only window" })
