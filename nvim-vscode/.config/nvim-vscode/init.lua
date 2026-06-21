@@ -385,9 +385,9 @@ local function vscode_ui()
 		vscode.action("workbench.action.toggleAuxiliaryBar")
 	end, { desc = "Toggle auxiliary bar" })
 
-	vim.keymap.set({ "i" }, "<M-Space>", function()
-		vscode.action("editor.action.triggerSuggest")
-	end, { desc = "Trigger suggest" })
+	-- vim.keymap.set({ "i" }, "<M-Space>", function()
+	-- 	vscode.action("editor.action.triggerSuggest")
+	-- end, { desc = "Trigger suggest" })
 
 	-- vim.keymap.set({ "n", "x", "i" }, "<Leader>d", function()
 	-- 	vscode.action("editor.action.marker.nextInFiles")
