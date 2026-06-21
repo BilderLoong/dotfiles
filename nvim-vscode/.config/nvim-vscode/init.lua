@@ -319,6 +319,7 @@ local function LSP()
 	)
 	
 	local function mappingGoToReference()
+	end
 
 	-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode. https://github.com/vscode-neovim/vscode-neovim/issues/1738
 	-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
