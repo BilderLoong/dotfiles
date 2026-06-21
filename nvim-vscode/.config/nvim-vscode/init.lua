@@ -587,8 +587,7 @@ local function vscode_neovim_overrides()
 		{ desc = "Move to split left" })
 	vim.keymap.set({ "n", "x" }, "<C-w><C-l>", function() vscode.action("workbench.action.moveEditorToRightGroup") end,
 		{ desc = "Move to split right" })
-	vim.keymap.set({ "n", "x" }, "<C-w><C-Down>", function() vscode.action("workbench.action.moveEditorToBelowGroup") end,
-		{ desc = "Move to split below" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><C-Down>", function() vscode.action("workbench.action.moveEditorToBelowGroup") end, { desc = "Move to split below" })
 	vim.keymap.set({ "n", "x" }, "<C-w><C-Up>", function() vscode.action("workbench.action.moveEditorToAboveGroup") end,
 		{ desc = "Move to split above" })
 	vim.keymap.set({ "n", "x" }, "<C-w><C-Left>", function() vscode.action("workbench.action.moveEditorToLeftGroup") end,
