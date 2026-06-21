@@ -42,7 +42,7 @@ return {
     -- customize how language servers are attached
     handlers = {
       -- a function with the key `*` modifies the default handler, functions takes the server name as the parameter
-      -- ["*"] = function(server) vim.lsp.enable(server) end
+      -- ["--[[ * ]]"] = function(server) vim.lsp.enable(server) end
 
       -- the key is the server that is being setup with `vim.lsp.config`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
