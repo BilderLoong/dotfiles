@@ -478,30 +478,24 @@ local function vscode_neovim_overrides()
 		vscode.action("cursorMove", { args = { to = "down", by = "wrappedLine", value = vim.v.count1 } })
 	end, { desc = "Screen line down" })
 
-	-- vscode-scrolling.vim overrides
-	vim.keymap.set({ "n", "x" }, "z<CR>", function() vscode.action("revealLine", { args = { "top", 1 } }) end,
-		{ desc = "Top + cursor" })
-	vim.keymap.set({ "n", "x" }, "zt", function() vscode.action("revealLine", { args = { "top", 0 } }) end,
-		{ desc = "Scroll top" })
-	vim.keymap.set({ "n", "x" }, "z.", function() vscode.action("revealLine", { args = { "center", 1 } }) end,
-		{ desc = "Center + cursor" })
-	vim.keymap.set({ "n", "x" }, "zz", function() vscode.action("revealLine", { args = { "center", 0 } }) end,
-		{ desc = "Scroll center" })
-	vim.keymap.set({ "n", "x" }, "z-", function() vscode.action("revealLine", { args = { "bottom", 1 } }) end,
-		{ desc = "Bottom + cursor" })
-	vim.keymap.set({ "n", "x" }, "zb", function() vscode.action("revealLine", { args = { "bottom", 0 } }) end,
-		{ desc = "Scroll bottom" })
+	-- vscode-scrolling.vim overrides (must use VSCodeExtensionNotify — extension internal event)
+	vim.keymap.set({ "n", "x" }, "z<CR>", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 1)") end, { desc = "Top + cursor" })
+	vim.keymap.set({ "n", "x" }, "zt", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 0)") end, { desc = "Scroll top" })
+	vim.keymap.set({ "n", "x" }, "z.", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 1)") end, { desc = "Center + cursor" })
+	vim.keymap.set({ "n", "x" }, "zz", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 0)") end, { desc = "Scroll center" })
+	vim.keymap.set({ "n", "x" }, "z-", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 1)") end, { desc = "Bottom + cursor" })
+	vim.keymap.set({ "n", "x" }, "zb", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 0)") end, { desc = "Scroll bottom" })
 	vim.keymap.set({ "n", "x" }, "H", function()
 		vim.cmd("normal! m'")
-		vscode.action("move-cursor", { args = { "top" } })
+		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'top')")
 	end, { desc = "Cursor top" })
 	vim.keymap.set({ "n", "x" }, "M", function()
 		vim.cmd("normal! m'")
-		vscode.action("move-cursor", { args = { "middle" } })
+		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'middle')")
 	end, { desc = "Cursor middle" })
 	vim.keymap.set({ "n", "x" }, "L", function()
 		vim.cmd("normal! m'")
-		vscode.action("move-cursor", { args = { "bottom" } })
+		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'bottom')")
 	end, { desc = "Cursor bottom" })
 
 	-- vscode-tab-commands.vim overrides
