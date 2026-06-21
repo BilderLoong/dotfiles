@@ -78,17 +78,17 @@ local function plugins()
 					on_substitute = require("yanky.integration").substitute(),
 				}
 			end,
-			dependencies={
-return {
-  "gbprod/yanky.nvim",
-  event = { "TextYankPost" },
-  opts = {},
-  config = function(_, opts)
-    require("yanky").setup(opts)
-  end,
-}
+			dependencies = {
 
-				
+				"gbprod/yanky.nvim",
+				event = { "TextYankPost" },
+				opts = {},
+				config = function(_, opts)
+					require("yanky").setup(opts)
+				end,
+
+
+
 			}
 		},
 		{
