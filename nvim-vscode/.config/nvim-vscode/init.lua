@@ -371,26 +371,24 @@ local function vscode_ui()
 	--  Toggle Primary Sidebar.
 	vim.keymap.set({ "n", "x", "i" }, "<C-n>", function()
 		vscode.action("workbench.action.toggleSidebarVisibility")
-		-- vscode_neovim.notify("workbench.action.focusSideBar")
-	end)
+	end, { desc = "Toggle sidebar" })
 
 	--  Toggle auxiliary bar.
 	vim.keymap.set({ "n", "x", "i" }, "<C-m>", function()
 		vscode.action("workbench.action.toggleAuxiliaryBar")
-		-- vscode_neovim.notify("workbench.action.focusSideBar")
-	end)
+	end, { desc = "Toggle auxiliary bar" })
 
 	vim.keymap.set({ "i" }, "<M-Space>", function()
 		vscode.action("editor.action.triggerSuggest")
-	end)
+	end, { desc = "Trigger suggest" })
 
 	vim.keymap.set({ "n", "x", "i" }, "<Leader>d", function()
 		vscode.action("editor.action.marker.nextInFiles")
-	end)
+	end, { desc = "Next diagnostic" })
 
 	vim.keymap.set("n", "<Leader>e", function()
 		vscode.action("workbench.action.focusSideBar")
-	end)
+	end, { desc = "Focus sidebar" })
 end
 
 vscode_ui()
