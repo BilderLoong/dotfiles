@@ -307,6 +307,7 @@ local function LSP()
 
 	vim.keymap.set("n", "gr", function()
 		vscode.action("editor.action.goToReferences")
+		vscode.action("references-view.findReferences")
 	end)
 
 	vim.keymap.set("n", "<Leader>fs", function()
