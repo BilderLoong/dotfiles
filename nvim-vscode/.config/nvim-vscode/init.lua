@@ -97,12 +97,6 @@ local function plugins()
 			event = "BufReadPost",
 		},
 
-		-- In favor of flash.nvim.
-		-- {
-		-- 	"ggandor/lightspeed.nvim",
-		-- 	event = "BufReadPost",
-		-- },
-
 		{
 			"nvim-treesitter/nvim-treesitter",
 			opts = function()
