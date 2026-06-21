@@ -617,14 +617,14 @@ local function vscode_neovim_overrides()
 		{ desc = "Move group right" })
 
 	-- Move active editor group with shift+arrow
-	vim.keymap.set({ "n", "x" }, "<C-w><S-Down>",
-		function() vscode.action("workbench.action.moveActiveEditorGroupDown") end, { desc = "Move group down" })
-	vim.keymap.set({ "n", "x" }, "<C-w><S-Up>", function() vscode.action("workbench.action.moveActiveEditorGroupUp") end,
-		{ desc = "Move group up" })
-	vim.keymap.set({ "n", "x" }, "<C-w><S-Left>",
-		function() vscode.action("workbench.action.moveActiveEditorGroupLeft") end, { desc = "Move group left" })
-	vim.keymap.set({ "n", "x" }, "<C-w><S-Right>",
-		function() vscode.action("workbench.action.moveActiveEditorGroupRight") end, { desc = "Move group right" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><S-Down>",
+	-- 	function() vscode.action("workbench.action.moveActiveEditorGroupDown") end, { desc = "Move group down" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><S-Up>", function() vscode.action("workbench.action.moveActiveEditorGroupUp") end,
+	-- 	{ desc = "Move group up" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><S-Left>",
+	-- 	function() vscode.action("workbench.action.moveActiveEditorGroupLeft") end, { desc = "Move group left" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><S-Right>",
+	-- 	function() vscode.action("workbench.action.moveActiveEditorGroupRight") end, { desc = "Move group right" })
 end
 vscode_neovim_overrides()
 
