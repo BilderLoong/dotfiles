@@ -184,7 +184,7 @@ local function plugins()
 						keymaps = {
 							init_selection = "\\",
 							node_incremental = "\\",
-							scope_incremental = false,
+							scope_incremental = false, https://github.com/tjdevries/nvim-treesitter/blob/3c7528a29458a94dff3730f08356b7505a9bbda1/doc/nvim-treesitter.txt#L46
 							node_decremental = "<bs>",
 						},
 					},
