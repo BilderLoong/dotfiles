@@ -1,6 +1,7 @@
 return {
   "github/copilot.vim",
   event = "User AstroFile",
+  enabled=fale
   cmd = "Copilot",
   config = function()
     vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', {
