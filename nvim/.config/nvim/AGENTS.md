@@ -1,4 +1,3 @@
-
 # NVIM CONTROL & DEBUGGING GUIDE
 
 All documentation: `:help remote` in nvim, or `nvim --help`.
