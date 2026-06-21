@@ -288,6 +288,10 @@ local function plugins()
 end
 plugins()
 
+local Config = require("lazy.core.config")
+Config.options.checker.enabled = false
+Config.options.change_detection.enabled = false
+
 -- LSP stuffs
 local function LSP()
 	vim.keymap.set({ "n", "x" }, "gy", function() vscode.action("editor.action.goToTypeDefinition") end,
