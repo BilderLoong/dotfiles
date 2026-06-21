@@ -435,9 +435,9 @@ editing()
 local function show_mapping()
 	local function get_content()
 		local maps = vim.api.nvim_get_keymap("")
-		local lines = { "=== Keymaps ===", "" }
+		local lines = { "# Keymaps Cheatsheet", "" }
 
-		local mode_names = { n = "NORMAL", v = "VISUAL", x = "VISUAL", i = "INSERT", o = "OPERATOR", c = "COMMAND" }
+		local mode_names = { n = "Normal", v = "Visual", x = "Visual", i = "Insert", o = "Operator", c = "Command" }
 		local grouped = {}
 		local order = { "n", "v", "x", "i", "o", "c" }
 
@@ -449,11 +449,14 @@ local function show_mapping()
 
 		for _, mode in ipairs(order) do
 			if grouped[mode] and #grouped[mode] > 0 then
-				table.insert(lines, "── " .. (mode_names[mode] or mode) .. " ──")
+				table.insert(lines, "## " .. (mode_names[mode] or mode))
+				table.insert(lines, "")
+				table.insert(lines, "| Key | Description |")
+				table.insert(lines, "|-----|-------------|")
 				for _, m in ipairs(grouped[mode]) do
 					local lhs = m.lhs or ""
-					local desc = m.desc or m.callback and "[function]" or ""
-					table.insert(lines, string.format("  %-12s  %s", lhs, desc))
+					local desc = m.desc or (m.callback and "[function]") or ""
+					table.insert(lines, string.format("| `%s` | %s |", lhs, desc))
 				end
 				table.insert(lines, "")
 			end
@@ -461,14 +464,26 @@ local function show_mapping()
 		return table.concat(lines, "\n")
 	end
 
-	vscode.eval([[
-	const doc = await vscode.workspace.openTextDocument({
-		content: args.content,
-		language: "markdown",
-		});
+	local content = get_content()
+	local uniqueId = "keymaps-" .. os.time() .. ".md"
 
-	await vscode.window.showTextDocument(doc);
-  ]], { args = { content = get_content() } })
+	vscode.eval([[
+		if (!globalThis.__keymap_provider) {
+			const contents = new Map();
+			globalThis.__keymap_provider = { contents };
+			try {
+				vscode.workspace.registerTextDocumentContentProvider("nvim-keymaps", {
+					provideTextDocumentContent(uri) {
+						return contents.get(uri.path) || "";
+					}
+				});
+			} catch (e) {}
+		}
+		globalThis.__keymap_provider.contents.set(args.id, args.content);
+		const uri = vscode.Uri.parse("nvim-keymaps:" + args.id);
+		const doc = await vscode.workspace.openTextDocument(uri);
+		await vscode.window.showTextDocument(doc, vscode.ViewColumn.Beside);
+	]], { args = { content = content, id = uniqueId } })
 end
 
 vim.keymap.set("n", "<Leader>?", show_mapping, { desc = "Show all keymaps" })
