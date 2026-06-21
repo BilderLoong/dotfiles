@@ -313,7 +313,7 @@ local function LSP()
 		"<Leader>cgr",
 		function()
 			vscode.action("gitlens.copyRemoteFileUrlToClipboard")
-			vscode.notify("Succ")
+			vscode.notify("gitlens.copyRemoteFileUrlToClipboard done")
 		end,
 		{ desc = "Copy remote URL" }
 	)
