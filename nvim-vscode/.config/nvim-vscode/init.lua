@@ -400,6 +400,9 @@ local function vscode_ui()
 	-- vim.keymap.set("n", "<Leader>e", function()
 	-- 	vscode.action("workbench.action.focusSideBar")
 	-- end, { desc = "Focus sidebar" })
+
+	vim.keymap.set("n", "]d", function() vscode.action("editor.action.marker.nextInFiles") end, { desc = "Next diagnostic" })
+	vim.keymap.set("n", "[d", function() vscode.action("editor.action.marker.prevInFiles") end, { desc = "Previous diagnostic" })
 end
 
 vscode_ui()
