@@ -450,6 +450,8 @@ local function vscode_neovim_overrides()
 		{ desc = "Peek definition" })
 	vim.keymap.set({ "n", "x" }, "gH", function() vscode.action("editor.action.referenceSearch.trigger") end,
 		{ desc = "References" })
+	vim.keymap.set({ "n", "x" }, "gI", function() vscode.action("editor.action.goToImplementation") end,
+		{ desc = "Go to implementation" })
 	vim.keymap.set({ "n", "x" }, "<C-w>gd", function() vscode.action("editor.action.revealDefinitionAside") end,
 		{ desc = "Definition aside" })
 	vim.keymap.set({ "n", "x" }, "<C-w>gf", function() vscode.action("editor.action.revealDefinitionAside") end,
