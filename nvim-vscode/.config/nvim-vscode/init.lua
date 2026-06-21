@@ -382,3 +382,4 @@ end
 vscode_editor()
 
 local function editing()
+	vim.keymap
