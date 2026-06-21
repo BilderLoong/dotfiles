@@ -294,34 +294,6 @@ plugins()
 local function LSP()
 	vim.cmd([[
     nnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
-    xnoremap gy <Cmd>call VSCodeNotify('editor.action.goToTypeDefinition')<CR>
-
-    map gc  <Plug>VSCodeCommentary
-    nmap gcc <Plug>VSCodeCommentaryLine
-
-  ]])
-
-	vim.keymap.set({ "n", "x" }, "<Leader>ca", deferred_action("editor.action.quickFix"), { desc = "Code Action" })
-	vim.keymap.set(
-		{ "n", "x" },
-		"<Leader>cf",
-		deferred_action("editor.action.organizeImports"),
-		{ desc = "Organize Imports" }
-	)
-	vim.keymap.set(
-		{ "n", "x" },
-		"<Leader>cgr",
-		function()
-			vscode.action("gitlens.copyRemoteFileUrlToClipboard")
-			vscode.notify("gitlens.copyRemoteFileUrlToClipboard done!")
-		end,
-		{ desc = "Copy remote URL" }
-	)
-	
-	local function mappingGoToReference()
-	end
-
-	-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode. https://github.com/vscode-neovim/vscode-neovim/issues/1738
 	-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
 	local gr_pending = false
 	vim.keymap.set("n", "gr", function()
