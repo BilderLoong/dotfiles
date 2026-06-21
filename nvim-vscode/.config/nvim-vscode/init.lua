@@ -432,6 +432,6 @@ end
 
 editing()
 
-local function show_key()
+local function show_mapping()
 	
 end
