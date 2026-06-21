@@ -458,8 +458,7 @@ local function show_mapping()
 				table.insert(lines, "")
 			end
 		end
-		return  table.concat(lines, "\n")
-
+		return table.concat(lines, "\n")
 	end
 
 	vscode.eval([[
