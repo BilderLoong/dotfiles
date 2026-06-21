@@ -380,3 +380,5 @@ local function vscode_editor()
 	end)
 end
 vscode_editor()
+
+local function editing()
