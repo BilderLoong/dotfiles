@@ -113,7 +113,6 @@ local function plugins()
 						enable = true,
 						additional_vim_regex_highlighting = false,
 					},
-					-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 					textobjects = {
 						select = {
 							enable = true,
