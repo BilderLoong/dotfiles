@@ -12,5 +12,8 @@
         "zicompinit",
         "zinit"
     ],
-    "markdown.validate.enabled": true
+    "markdown.validate.enabled": true,
+    "Lua.diagnostics.globals": [
+        "vim"
+    ]
 }
