@@ -382,7 +382,7 @@ end
 vscode_editor()
 
 local function editing()
-	vim.keymap.set("n",">>",function ()
-	vscode.action("editor.action.indentLines")	
+	vim.keymap.set("n", ">>", function()
+		vscode.action("editor.action.indentLines")
 	end)
 end
