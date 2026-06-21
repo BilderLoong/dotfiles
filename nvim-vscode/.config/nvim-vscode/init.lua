@@ -471,7 +471,7 @@ local function vscode_neovim_overrides()
 		vscode.action("cursorLeft")
 	end, { desc = "Screen line end" })
 	vim.keymap.set("n", "gk", function()
-		vscode.action("cursorMove", { args = { to = "up", by = "wrappedLine", value = vim.v.count1 } })
+		vscode.action("cursorMove", { args = { to = "up", by = "wrappedLine", value = vim.v.count1 } })123
 	end, { desc = "Screen line up" })
 	vim.keymap.set("n", "gj", function()
 		vscode.action("cursorMove", { args = { to = "down", by = "wrappedLine", value = vim.v.count1 } })
