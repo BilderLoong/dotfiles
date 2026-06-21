@@ -386,7 +386,7 @@ local function editing()
 		vscode.action("editor.action.indentLines")
 	end)
 
-	vim.keymap.set({"n",""}, "<<", function()
+	vim.keymap.set({"n","x"}, "<<", function()
 		vscode.action("editor.action.indentLines")
 	end)
 end
