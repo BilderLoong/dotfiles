@@ -305,7 +305,7 @@ local function LSP()
 		{ desc = "Copy remote URL" }
 	)
 
-	-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode.
+	-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode. https://github.com/vscode-neovim/vscode-neovim/issues/1738
 	-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
 	local gr_pending = false
 
