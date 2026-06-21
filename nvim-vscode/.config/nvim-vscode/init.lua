@@ -319,7 +319,7 @@ local function LSP()
 			vim.defer_fn(function()
 				gr_pending = false
 			end, 10000)
-		end)
+		end, { desc = "Go to references" })
 
 		vim.api.nvim_create_autocmd("ModeChanged", {
 			pattern = "n:[vV\x16]",
