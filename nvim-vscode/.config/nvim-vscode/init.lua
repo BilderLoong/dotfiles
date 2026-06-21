@@ -479,12 +479,18 @@ local function vscode_neovim_overrides()
 	end, { desc = "Screen line down" })
 
 	-- vscode-scrolling.vim overrides (must use VSCodeExtensionNotify — extension internal event)
-	vim.keymap.set({ "n", "x" }, "z<CR>", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 1)") end, { desc = "Top + cursor" })
-	vim.keymap.set({ "n", "x" }, "zt", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 0)") end, { desc = "Scroll top" })
-	vim.keymap.set({ "n", "x" }, "z.", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 1)") end, { desc = "Center + cursor" })
-	vim.keymap.set({ "n", "x" }, "zz", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 0)") end, { desc = "Scroll center" })
-	vim.keymap.set({ "n", "x" }, "z-", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 1)") end, { desc = "Bottom + cursor" })
-	vim.keymap.set({ "n", "x" }, "zb", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 0)") end, { desc = "Scroll bottom" })
+	vim.keymap.set({ "n", "x" }, "z<CR>", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 1)") end,
+		{ desc = "Top + cursor" })
+	vim.keymap.set({ "n", "x" }, "zt", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 0)") end,
+		{ desc = "Scroll top" })
+	vim.keymap.set({ "n", "x" }, "z.", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 1)") end,
+		{ desc = "Center + cursor" })
+	vim.keymap.set({ "n", "x" }, "zz", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 0)") end,
+		{ desc = "Scroll center" })
+	vim.keymap.set({ "n", "x" }, "z-", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 1)") end,
+		{ desc = "Bottom + cursor" })
+	vim.keymap.set({ "n", "x" }, "zb", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 0)") end,
+		{ desc = "Scroll bottom" })
 	vim.keymap.set({ "n", "x" }, "H", function()
 		vim.cmd("normal! m'")
 		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'top')")
