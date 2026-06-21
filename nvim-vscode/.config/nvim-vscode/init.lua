@@ -434,7 +434,7 @@ editing()
 
 local function show_mapping()
 	local function get_content()
-		
+		return 'haha'
 	end
 
 	vscode.eval([[
