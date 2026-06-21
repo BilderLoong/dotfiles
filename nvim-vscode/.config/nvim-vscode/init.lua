@@ -382,4 +382,4 @@ end
 vscode_editor()
 
 local function editing()
-	vim.keymap.set
+	vim.keymap.set(">>")
