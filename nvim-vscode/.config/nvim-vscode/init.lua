@@ -383,6 +383,6 @@ vscode_editor()
 
 local function editing()
 	vim.keymap.set("n",">>",function ()
-		
+	vscode	
 	end)
 end
