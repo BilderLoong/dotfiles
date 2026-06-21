@@ -184,7 +184,7 @@ local function plugins()
 						keymaps = {
 							init_selection = "gnn",
 							-- TODO conflict with `gr`
-							node_incremental = "grn",
+							node_incremental = "gnn",
 							scope_incremental = "grc",
 							node_decremental = "grm",
 						},
