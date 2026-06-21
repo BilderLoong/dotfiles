@@ -486,7 +486,7 @@ local function vscode_neovim_overrides()
 	-- Wrapping in vim.cmd("call VSCodeExtensionNotify(...)") lets us use vim.keymap.set
 	-- with desc while still calling the correct extension API.
 	vim.keymap.set({ "n", "x" }, "z<CR>", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 1)") end,
-		{ desc = "Top + cursor" })
+	{ desc = "Top + cursor" })
 
 	vim.keymap.set({ "n", "x" }, "zt", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 0)") end,
 		{ desc = "Scroll top" })
