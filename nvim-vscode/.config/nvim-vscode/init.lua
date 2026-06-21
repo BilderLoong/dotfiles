@@ -3,6 +3,7 @@ vim.opt.clipboard = "unnamedplus"
 
 local vscode = require('vscode')
 vim.notify = vscode.notify
+
 local keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
