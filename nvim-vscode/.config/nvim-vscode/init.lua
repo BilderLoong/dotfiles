@@ -173,7 +173,7 @@ local function plugins()
 						enable = true,
 						keymaps = {
 							init_selection = "gnn",
-							-- TODO conflict with 
+							-- TODO conflict with gr
 							node_incremental = "grn",
 							scope_incremental = "grc",
 							node_decremental = "grm",
