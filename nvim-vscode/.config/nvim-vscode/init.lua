@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
 
-local vscode_neovim = require("vscode-neovim")
 local vscode_neovim = require('vscode')
 local keymap = vim.keymap
 
