@@ -1,4 +1,4 @@
--- TODO: learn from 
+-- TODO: learn from https://docs.astronvim.com/recipes/vscode/
 
 local vscode = require('vscode')
 
