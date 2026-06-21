@@ -443,7 +443,7 @@ local function show_mapping()
       language: "markdown",
     });
     await vscode.window.showTextDocument(doc, vscode.ViewColumn.Beside);
-  ]], { args = { content = content } })
+  ]], { args = { content = get_content } })
 end
 
 vim.keymap.set("n", "<Leader>?", show_mapping, { desc = "Show all keymaps" })
