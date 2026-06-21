@@ -306,7 +306,7 @@ local function LSP()
 	)
 
 	-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode.
-	-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
+	-- Use a flag + CursorMoved autocmd to auto-escape after jumping to a reference.
 	local gr_pending = false
 
 	vim.keymap.set("n", "gr", function()
@@ -317,17 +317,12 @@ local function LSP()
 		end, 10000)
 	end)
 
-	vim.api.nvim_create_autocmd("ModeChanged", {
-		pattern = "n:[vV\x16]",
+	vim.api.nvim_create_autocmd("CursorMoved", {
 		callback = function()
 			if gr_pending then
 				gr_pending = false
 				vim.schedule(function()
-					vim.api.nvim_feedkeys(
-						vim.api.nvim_replace_termcodes("<Esc>", true, false, true),
-						"n",
-						false
-					)
+					vim.api.nvim_input("<Esc>")
 				end)
 			end
 		end,
