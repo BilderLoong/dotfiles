@@ -182,7 +182,7 @@ local function plugins()
 					incremental_selection = {
 						enable = true,
 						keymaps = {
-							init_selection = "gnn",
+							init_selection = "\\",
 							-- TODO conflict with `gr`
 							node_incremental = "gnr",
 							scope_incremental = "gnc",
