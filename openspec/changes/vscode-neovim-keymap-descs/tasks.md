@@ -12,13 +12,13 @@
 
 ## 3. Add vscode_neovim_overrides function
 
-- [ ] 3.1 Add code action overrides: `K`, `gh`, `gd`, `gf`, `<C-]>`, `gO`, `gF`, `gD`, `gH`, `<C-w>gd`, `<C-w>gf`, `z=`
-- [ ] 3.2 Add file command overrides: `ZZ`, `ZQ`
-- [ ] 3.3 Add jumplist overrides: `<C-o>`, `<C-t>`, `<C-i>`, `Tab`
-- [ ] 3.4 Add motion overrides: `g0`, `g$`, `gk`, `gj`
-- [ ] 3.5 Add scrolling overrides: `z<CR>`, `zt`, `z.`, `zz`, `z-`, `zb`, `H`, `M`, `L`
-- [ ] 3.6 Add tab command overrides: `gt` (with count support), `gT`
-- [ ] 3.7 Add window command overrides: `<C-w>` family (~24 keymaps)
+- [x] 3.1 Add code action overrides: `K`, `gh`, `gd`, `gf`, `<C-]>`, `gO`, `gF`, `gD`, `gH`, `<C-w>gd`, `<C-w>gf`, `z=`
+- [x] 3.2 Add file command overrides: `ZZ`, `ZQ`
+- [x] 3.3 Add jumplist overrides: `<C-o>`, `<C-t>`, `<C-i>`, `Tab`
+- [x] 3.4 Add motion overrides: `g0`, `g$`, `gk`, `gj`
+- [x] 3.5 Add scrolling overrides: `z<CR>`, `zt`, `z.`, `zz`, `z-`, `zb`, `H`, `M`, `L`
+- [x] 3.6 Add tab command overrides: `gt` (with count support), `gT`
+- [x] 3.7 Add window command overrides: `<C-w>` family (~24 keymaps)
 
 ## 4. Verify
 
