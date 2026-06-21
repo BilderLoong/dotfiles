@@ -354,12 +354,10 @@ LSP()
 
 -- Folder
 local function folder()
-	vim.cmd([[
-    nnoremap zc <Cmd>call VSCodeNotify('editor.fold')<CR>
-    nnoremap zo <Cmd>call VSCodeNotify('editor.unfold')<CR>
-    nnoremap zC <Cmd>call VSCodeNotify('editor.foldRecursively')<CR>
-    nnoremap zO <Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>
-  ]])
+	vim.keymap.set("n", "zc", function() vscode.action("editor.fold") end, { desc = "Fold" })
+	vim.keymap.set("n", "zo", function() vscode.action("editor.unfold") end, { desc = "Unfold" })
+	vim.keymap.set("n", "zC", function() vscode.action("editor.foldRecursively") end, { desc = "Fold recursively" })
+	vim.keymap.set("n", "zO", function() vscode.action("editor.unfoldRecursively") end, { desc = "Unfold recursively" })
 end
 folder()
 
