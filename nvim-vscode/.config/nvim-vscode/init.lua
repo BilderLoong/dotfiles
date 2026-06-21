@@ -505,8 +505,8 @@ local function vscode_neovim_overrides()
 		vim.cmd("normal! m'")
 		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'middle')")
 	end, { desc = "Cursor middle" })
+
 	vim.keymap.set({ "n", "x" }, "L", function()
-	
 		vim.cmd("normal! m'")
 		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'bottom')")
 	end, { desc = "Cursor bottom" })
