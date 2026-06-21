@@ -63,7 +63,7 @@ local function plugins()
 			"gbprod/substitute.nvim",
 			keys = {
 				{ "<leader>mm", mode = { "n", "o", "x" }, "m",                                                      desc = "Default m key.",               { noremap = true } },
-				{ "m",          mode = { "n" },           function() require("substitute").operator() end,          desc = "Substitute Operator",          { noremap = true } },
+				{ 				{ "M",          mode = { "n" },           function() require("substitute").eol() end,               desc = "Substitute EOL",               { noremap = true } },
 				{ "m",          mode = { "x" },           function() require("substitute").visual() end,            desc = "Substitute Visual",            { noremap = true } },
 				{ "M",          mode = { "n" },           function() require("substitute").eol() end,               desc = "Substitute EOL",               { noremap = true } },
 				{ "X",          mode = { "x" },           function() require("substitute.exchange").visual() end,   desc = "Substitute Exchange Visual",   { noremap = true } },
