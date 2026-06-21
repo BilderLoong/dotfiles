@@ -237,7 +237,13 @@ local function plugins()
 			"folke/flash.nvim",
 			event = "BufReadPost",
 			---@type Flash.Config
-			opts = {},
+			opts = {
+				-- Add this to enable automatic jump-back after remote operations
+				remote_op = {
+					restore = true,
+					motion = true,
+				},
+			},
 			-- stylua: ignore
 			keys = {
 				{ "s",     mode = { "n", "o", "x" }, function() require("flash").jump() end,              desc = "Flash" },
