@@ -6,8 +6,6 @@ vim.opt.clipboard = "unnamedplus"
 -- Set `vim.notify` to VS Code notifications
 vim.notify = vscode.notify
 
-local vim.keymap = vim.keymap
-
 vim.keymap.set("", "<Space>", "<Nop>")
 
 -- The below doesn't work, I don't why.
