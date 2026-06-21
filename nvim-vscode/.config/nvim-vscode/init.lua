@@ -74,10 +74,10 @@ local function plugins()
 			},
 			opts = {},
 			config = function(_, opts)
-				require("substitute").setup {
-					on_substitute = require("yanky.integration").substitute(),
 				}
 			end,
+					on_substitute = require("yanky.integration").substitute(),
+				require("substitute").setup {
 			dependencies = {
 				{
 					"gbprod/yanky.nvim",
