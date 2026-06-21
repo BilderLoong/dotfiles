@@ -1,5 +1,3 @@
--- TODO: learn from https://docs.astronvim.com/recipes/vscode/
-
 local vscode = require('vscode')
 
 vim.g.mapleader = " "
