@@ -6,7 +6,7 @@ vim.opt.clipboard = "unnamedplus"
 -- Set `vim.notify` to VS Code notifications
 vim.notify = vscode.notify
 
-local keymap = vim.keymap
+local vim.keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
 
@@ -292,14 +292,14 @@ local function LSP()
 
   ]])
 
-	keymap.set({ "n", "x" }, "<Leader>ca", deferred_action("editor.action.quickFix"), { desc = "Code Action" })
-	keymap.set(
+	vim.keymap.set({ "n", "x" }, "<Leader>ca", deferred_action("editor.action.quickFix"), { desc = "Code Action" })
+	vim.keymap.set(
 		{ "n", "x" },
 		"<Leader>cf",
 		deferred_action("editor.action.organizeImports"),
 		{ desc = "Organize Imports" }
 	)
-	keymap.set(
+	vim.keymap.set(
 		{ "n", "x" },
 		"<Leader>cgr",
 		deferred_action("gitlens.copyRemoteFileUrlToClipboard"),
@@ -347,26 +347,26 @@ local function vscode_ui()
 ]])
 
 	--  Toggle Primary Sidebar.
-	keymap.set({ "n", "x", "i" }, "<C-n>", function()
+	vim.keymap.set({ "n", "x", "i" }, "<C-n>", function()
 		vscode.action("workbench.action.toggleSidebarVisibility")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
 	--  Toggle auxiliary bar.
-	keymap.set({ "n", "x", "i" }, "<C-m>", function()
+	vim.keymap.set({ "n", "x", "i" }, "<C-m>", function()
 		vscode.action("workbench.action.toggleAuxiliaryBar")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
-	keymap.set({ "i" }, "<M-Space>", function()
+	vim.keymap.set({ "i" }, "<M-Space>", function()
 		vscode.action("editor.action.triggerSuggest")
 	end)
 
-	keymap.set({ "n", "x", "i" }, "<Leader>d", function()
+	vim.keymap.set({ "n", "x", "i" }, "<Leader>d", function()
 		vscode.action("editor.action.marker.nextInFiles")
 	end)
 
-	keymap.set("n", "<Leader>e", function()
+	vim.keymap.set("n", "<Leader>e", function()
 		vscode.action("workbench.action.focusSideBar")
 	end)
 end
@@ -374,10 +374,10 @@ end
 vscode_ui()
 
 local function vscode_editor()
-	keymap.set("n", "]c", function()
+	vim.keymap.set("n", "]c", function()
 		vscode.action("workbench.action.editor.nextChange")
 	end)
-	keymap.set("n", "[c", function()
+	vim.keymap.set("n", "[c", function()
 		vscode.action("workbench.action.editor.previousChange")
 	end)
 end
