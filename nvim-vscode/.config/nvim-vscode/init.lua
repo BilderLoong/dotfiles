@@ -186,7 +186,7 @@ local function plugins()
 							-- TODO conflict with `gr`
 							node_incremental = "\\",
 							scope_incremental = "",
-							node_decremental = "gnm",
+							node_decremental = "gvnm",
 						},
 					},
 
