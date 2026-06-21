@@ -333,7 +333,7 @@ local function LSP()
 			callback = function()
 				if gr_pending then
 					gr_pending = false
-					?-- Clear VS Code selection to prevent re-sync, then exit visual mode
+					-- Clear VS Code selection to prevent re-sync, then exit visual mode
 					vscode.eval([[
 					const editor = vscode.window.activeTextEditor;
 					if (editor) {
