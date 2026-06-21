@@ -30,4 +30,79 @@ nvim --server <socket> --remote-send '<CMD>LspInfo<CR>'
 
 # Fix LSP race condition (re-trigger FileType)
 nvim --server <socket> --remote-expr 'luaeval("vim.api.nvim_exec_autocmds(\"FileType\", {buffer=0})")'
+
+==============================================================================
+vim.lsp:                                     require("vim.lsp.health").check()
+
+- LSP log level : WARN
+- Log path: /Users/birudo/.local/state/nvim-test/lsp.log
+- Log size: 0 KB
+
+vim.lsp: Active Clients ~
+- No active clients
+
+vim.lsp: Enabled Configurations ~
+- ⚠️ WARNING 'lua-language-server' is not executable. Configuration will not be used.
+- lua_ls:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        }
+      },
+      workspace = {
+        fileOperations = {
+          didCreate = true,
+          didDelete = true,
+          didRename = true,
+          willCreate = true,
+          willDelete = true,
+          willRename = true
+        }
+      }
+    }
+  - cmd: { "lua-language-server" }
+  - filetypes: lua
+  - root_markers: .emmyrc.json, .luarc.json, .luarc.jsonc, .luacheckrc, .stylua.toml, stylua.toml, selene.toml, selene.yml, .git
+  - settings: {
+      Lua = {
+        codeLens = {
+          enable = true
+        },
+        hint = {
+          enable = true,
+          semicolon = "Disable"
+        }
+      }
+    }
+
+
+vim.lsp: File Watcher ~
+- file watching "(workspace/didChangeWatchedFiles)" disabled on all clients
+
+vim.lsp: Position Encodings ~
+- No active clients
+
 ```
