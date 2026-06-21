@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
 
 local vscode_neovim = require('vscode')
-vim.notify = require("vscode").notify
+vim.notify = vscode_neovim.notify
 local keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
