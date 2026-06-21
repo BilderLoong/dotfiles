@@ -306,7 +306,7 @@ local function LSP()
 	)
 
 	-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode.
-	-- Clear VS Code selection and escape visual mode so vscode-neovim doesn't re-sync it.
+	-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
 	local gr_pending = false
 
 	vim.keymap.set("n", "gr", function()
@@ -322,9 +322,14 @@ local function LSP()
 		callback = function()
 			if gr_pending then
 				gr_pending = false
-				-- Clear the VS Code selection so vscode-neovim doesn't re-sync it
-				vscode.action("editor.action.cancelSelection")
-				-- Exit visual mode immediately
+				-- Clear VS Code selection to prevent re-sync, then exit visual mode
+				vscode.eval([[
+					const editor = vscode.window.activeTextEditor;
+					if (editor) {
+						const pos = editor.selection.active;
+						editor.selection = new vscode.Selection(pos, pos);
+					}
+				]])
 				vim.api.nvim_input("<Esc>")
 			end
 		end,
