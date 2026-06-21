@@ -311,8 +311,9 @@ local function LSP()
 	vim.keymap.set(
 		{ "n", "x" },
 		"<Leader>cgr",
-		function ()
-			vscode.action("gitlens.copyRemoteFileUrlToClipboard")	
+		function()
+			vscode.action("gitlens.copyRemoteFileUrlToClipboard")
+			vscode.
 		end,
 		{ desc = "Copy remote URL" }
 	)
