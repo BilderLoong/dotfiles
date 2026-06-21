@@ -317,8 +317,36 @@ local function LSP()
 		end,
 		{ desc = "Copy remote URL" }
 	)
-	
+
 	local function mappingGoToReference()
+		-- Fix: goToReferences selects text in current buffer, which vscode-neovim syncs as visual mode. https://github.com/vscode-neovim/vscode-neovim/issues/1738
+		-- Use a flag + ModeChanged autocmd to auto-escape after jumping to a reference.
+		local gr_pending = false
+		vim.keymap.set("n", "gr", function()
+			gr_pending = true
+			vscode.action("editor.action.goToReferences")
+			vim.defer_fn(function()
+				gr_pending = false
+			end, 10000)
+		end)
+
+		vim.api.nvim_create_autocmd("ModeChanged", {
+			pattern = "n:[vV\x16]",
+			callback = function()
+				if gr_pending then
+					gr_pending = false
+					-- Clear VS Code selection to prevent re-sync, then exit visual mode
+					vscode.eval([[
+					const editor = vscode.window.activeTextEditor;
+					if (editor) {
+						const pos = editor.selection.active;
+						editor.selection = new vscode.Selection(pos, pos);
+					}
+				]])
+					vim.api.nvim_input("<Esc>")
+				end
+			end,
+		})
 	end
 
 
