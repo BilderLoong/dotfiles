@@ -466,7 +466,7 @@ local function show_mapping()
 		content: args.content,
 		language: "markdown",
 		});
-		await vscode.window.showTextDocument(doc);
+	await vscode.window.showTextDocument(doc);
   ]], { args = { content = get_content() } })
 end
 
