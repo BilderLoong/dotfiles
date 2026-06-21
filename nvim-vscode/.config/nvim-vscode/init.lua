@@ -389,6 +389,10 @@ local function vscode_ui()
 		vscode.action("editor.action.triggerSuggest")
 	end, { desc = "Trigger suggest" })
 
+	vim.keymap.set({ "n", "x", "i" }, "<Leader>d", function()
+		vscode.action("editor.action.marker.nextInFiles")
+	end, { desc = "Next diagnostic" })
+
 	vim.keymap.set("n", "<Leader>e", function()
 		vscode.action("workbench.action.focusSideBar")
 	end, { desc = "Focus sidebar" })
