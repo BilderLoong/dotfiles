@@ -467,7 +467,6 @@ local function show_mapping()
       language: "markdown",
     });
     await vscode.window.showTextDocument(doc);
-    await vscode.commands.executeCommand("workbench.action.moveEditorToNewWindow");
   ]], { args = { content = get_content() } })
 end
 
