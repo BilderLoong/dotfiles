@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
 
-local vscode_neovim = require('vscode')
-vim.notify = vscode_neovim.notify
+local vscode = require('vscode')
+vim.notify = vscode.notify
 local keymap = vim.keymap
 
 vim.keymap.set("", "<Space>", "<Nop>")
@@ -26,11 +26,11 @@ vim.keymap.set(
 
 local function deferred_action(method)
 	return function()
-		vscode_neovim.action(method)
+		vscode.action(method)
 	end
 end
 
-local notify = vscode_neovim.notify
+local notify = vscode.notify
 
 local function plugins()
 	local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -320,15 +320,15 @@ local function LSP()
 	)
 
 	vim.keymap.set("n", "gr", function()
-		vscode_neovim.action("editor.action.goToReferences")
+		vscode.action("editor.action.goToReferences")
 	end)
 
 	vim.keymap.set("n", "<Leader>fs", function()
-		vscode_neovim.action("workbench.action.showAllSymbols")
+		vscode.action("workbench.action.showAllSymbols")
 	end)
 
 	vim.keymap.set("n", "<Leader>fm", function()
-		vscode_neovim.action("editor.action.formatDocument")
+		vscode.action("editor.action.formatDocument")
 	end)
 end
 LSP()
@@ -361,26 +361,26 @@ local function vscode_ui()
 
 	--  Toggle Primary Sidebar.
 	keymap.set({ "n", "x", "i" }, "<C-n>", function()
-		vscode_neovim.action("workbench.action.toggleSidebarVisibility")
+		vscode.action("workbench.action.toggleSidebarVisibility")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
 	--  Toggle auxiliary bar.
 	keymap.set({ "n", "x", "i" }, "<C-m>", function()
-		vscode_neovim.action("workbench.action.toggleAuxiliaryBar")
+		vscode.action("workbench.action.toggleAuxiliaryBar")
 		-- vscode_neovim.notify("workbench.action.focusSideBar")
 	end)
 
 	keymap.set({ "i" }, "<M-Space>", function()
-		vscode_neovim.action("editor.action.triggerSuggest")
+		vscode.action("editor.action.triggerSuggest")
 	end)
 
 	keymap.set({ "n", "x", "i" }, "<Leader>d", function()
-		vscode_neovim.action("editor.action.marker.nextInFiles")
+		vscode.action("editor.action.marker.nextInFiles")
 	end)
 
 	keymap.set("n", "<Leader>e", function()
-		vscode_neovim.action("workbench.action.focusSideBar")
+		vscode.action("workbench.action.focusSideBar")
 	end)
 end
 
@@ -388,10 +388,10 @@ vscode_ui()
 
 local function vscode_editor()
 	keymap.set("n", "]c", function()
-		vscode_neovim.action("workbench.action.editor.nextChange")
+		vscode.action("workbench.action.editor.nextChange")
 	end)
 	keymap.set("n", "[c", function()
-		vscode_neovim.action("workbench.action.editor.previousChange")
+		vscode.action("workbench.action.editor.previousChange")
 	end)
 end
 vscode_editor()
