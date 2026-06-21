@@ -1,4 +1,0 @@
--- Enable LSP servers before FileType fires (fixes race condition on first buffer)
--- The mason-lspconfig bridge runs async after User AstroFile, which is too late
--- for the first buffer opened from the command line.
-vim.lsp.enable("lua_ls")
