@@ -356,6 +356,8 @@ local function LSP()
 	vim.keymap.set("n", "<Leader>fm", function()
 		vscode.action("editor.action.formatDocument")
 	end, { desc = "Format document" })
+
+	vim.keymap.set("n", "<Leader>gg", function() vscode.action("workbench.view.scm") end, { desc = "Git SCM" })
 end
 LSP()
 
