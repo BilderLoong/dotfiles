@@ -185,7 +185,7 @@ local function plugins()
 							init_selection = "\\",
 							-- TODO conflict with `gr`
 							node_incremental = "\\",
-							scope_incremental = "",
+							scope_incremental = "gnn",
 							node_decremental = "<bs>",
 						},
 					},
