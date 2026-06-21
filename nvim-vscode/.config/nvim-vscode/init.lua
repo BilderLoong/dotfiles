@@ -184,7 +184,7 @@ local function plugins()
 						keymaps = {
 							init_selection = "\\",
 							node_incremental = "\\",
-							scope_incremental = "gnn",
+							scope_incremental = false,
 							node_decremental = "<bs>",
 						},
 					},
