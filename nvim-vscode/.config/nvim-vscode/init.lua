@@ -249,7 +249,6 @@ local function plugins()
 		},
 	}, {
 		performance = {
-
 			defaults = {
 				lazy = true, -- should plugins be lazy-loaded?
 			},
