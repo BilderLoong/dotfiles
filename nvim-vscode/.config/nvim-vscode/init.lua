@@ -433,16 +433,14 @@ end
 editing()
 
 local function show_mapping()
-	local function get_content()	
+	local function get_content()
 	end
-	
-	 vscode.eval([[
+
+	vscode.eval([[
     const doc = await vscode.workspace.openTextDocument({
       content: args.content,
       language: "markdown",
     });
     await vscode.window.showTextDocument(doc, vscode.ViewColumn.Beside);
   ]], { args = { content = content } })
-end
-
 end
