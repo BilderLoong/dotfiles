@@ -462,11 +462,11 @@ local function show_mapping()
 	end
 
 	vscode.eval([[
- const doc = await vscode.workspace.openTextDocument({
-      content: args.content,
-      language: "markdown",
-    });
-    await vscode.window.showTextDocument(doc);
+	const doc = await vscode.workspace.openTextDocument({
+		content: args.content,
+		language: "markdown",
+		});
+		await vscode.window.showTextDocument(doc);
   ]], { args = { content = get_content() } })
 end
 
