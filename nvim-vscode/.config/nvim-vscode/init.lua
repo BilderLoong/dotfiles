@@ -415,6 +415,138 @@ end
 
 editing()
 
+-- Override ALL vscode-neovim default keybindings from runtime/vscode/overrides/ with explicit desc.
+-- Without this, those defaults are invisible in the <Leader>? cheatsheet.
+local function vscode_neovim_overrides()
+	-- vscode-code-actions.vim overrides
+	vim.keymap.set("n", "K", function() vscode.action("editor.action.showHover") end, { desc = "Hover" })
+	vim.keymap.set("x", "K", function() vscode.action("editor.action.showHover") end, { desc = "Hover" })
+	vim.keymap.set("n", "gh", function() vscode.action("editor.action.showHover") end, { desc = "Hover" })
+	vim.keymap.set("x", "gh", function() vscode.action("editor.action.showHover") end, { desc = "Hover" })
+	vim.keymap.set("n", "gd", function() vscode.action("editor.action.revealDefinition") end, { desc = "Go to definition" })
+	vim.keymap.set("x", "gd", function() vscode.action("editor.action.revealDefinition") end, { desc = "Go to definition" })
+	vim.keymap.set("n", "gf", function() vscode.action("editor.action.revealDeclaration") end, { desc = "Go to declaration" })
+	vim.keymap.set("x", "gf", function() vscode.action("editor.action.revealDeclaration") end, { desc = "Go to declaration" })
+	vim.keymap.set("n", "<C-]>", function() vscode.action("editor.action.revealDefinition") end, { desc = "Go to definition" })
+	vim.keymap.set("x", "<C-]>", function() vscode.action("editor.action.revealDefinition") end, { desc = "Go to definition" })
+	vim.keymap.set("n", "gO", function() vscode.action("workbench.action.gotoSymbol") end, { desc = "Go to symbol" })
+	vim.keymap.set("x", "gO", function() vscode.action("workbench.action.gotoSymbol") end, { desc = "Go to symbol" })
+	vim.keymap.set("n", "gF", function() vscode.action("editor.action.peekDeclaration") end, { desc = "Peek declaration" })
+	vim.keymap.set("x", "gF", function() vscode.action("editor.action.peekDeclaration") end, { desc = "Peek declaration" })
+	vim.keymap.set("n", "gD", function() vscode.action("editor.action.peekDefinition") end, { desc = "Peek definition" })
+	vim.keymap.set("x", "gD", function() vscode.action("editor.action.peekDefinition") end, { desc = "Peek definition" })
+	vim.keymap.set("n", "gH", function() vscode.action("editor.action.referenceSearch.trigger") end, { desc = "References" })
+	vim.keymap.set("x", "gH", function() vscode.action("editor.action.referenceSearch.trigger") end, { desc = "References" })
+	vim.keymap.set("n", "<C-w>gd", function() vscode.action("editor.action.revealDefinitionAside") end, { desc = "Definition aside" })
+	vim.keymap.set("x", "<C-w>gd", function() vscode.action("editor.action.revealDefinitionAside") end, { desc = "Definition aside" })
+	vim.keymap.set("n", "<C-w>gf", function() vscode.action("editor.action.revealDefinitionAside") end, { desc = "Declaration aside" })
+	vim.keymap.set("x", "<C-w>gf", function() vscode.action("editor.action.revealDefinitionAside") end, { desc = "Declaration aside" })
+	vim.keymap.set("n", "z=", function() vscode.action("editor.action.quickFix") end, { desc = "Quick fix / Spelling" })
+
+	-- vscode-file-commands.vim overrides
+	vim.keymap.set("n", "ZZ", function()
+		vscode.call("workbench.action.files.save")
+		vscode.action("workbench.action.closeActiveEditor")
+	end, { desc = "Save and close" })
+	vim.keymap.set("n", "ZQ", function() vscode.action("workbench.action.revertAndCloseActiveEditor") end, { desc = "Quit without saving" })
+
+	-- vscode-jumplist.vim overrides
+	vim.keymap.set("n", "<C-o>", function() vscode.action("workbench.action.navigateBack") end, { desc = "Jump back" })
+	vim.keymap.set("n", "<C-t>", function() vscode.action("workbench.action.navigateBack") end, { desc = "Jump back" })
+	vim.keymap.set("n", "<C-i>", function() vscode.action("workbench.action.navigateForward") end, { desc = "Jump forward" })
+	vim.keymap.set("n", "Tab", function() vscode.action("workbench.action.navigateForward") end, { desc = "Jump forward" })
+
+	-- vscode-motion.vim overrides
+	vim.keymap.set("n", "g0", function()
+		vscode.action("cursorMove", { args = { to = "wrappedLineFirstNonWhitespaceCharacter" } })
+	end, { desc = "Screen line start" })
+	vim.keymap.set("n", "g$", function()
+		vscode.action("cursorMove", { args = { to = "wrappedLineLastNonWhitespaceCharacter" } })
+		vscode.action("cursorLeft")
+	end, { desc = "Screen line end" })
+	vim.keymap.set("n", "gk", function()
+		vscode.action("cursorMove", { args = { to = "up", by = "wrappedLine", value = vim.v.count1 } })
+	end, { desc = "Screen line up" })
+	vim.keymap.set("n", "gj", function()
+		vscode.action("cursorMove", { args = { to = "down", by = "wrappedLine", value = vim.v.count1 } })
+	end, { desc = "Screen line down" })
+
+	-- vscode-scrolling.vim overrides
+	vim.keymap.set({ "n", "x" }, "z<CR>", function() vscode.action("reveal", { args = { "top", 1 } }) end, { desc = "Top + cursor" })
+	vim.keymap.set({ "n", "x" }, "zt", function() vscode.action("reveal", { args = { "top", 0 } }) end, { desc = "Scroll top" })
+	vim.keymap.set({ "n", "x" }, "z.", function() vscode.action("reveal", { args = { "center", 1 } }) end, { desc = "Center + cursor" })
+	vim.keymap.set({ "n", "x" }, "zz", function() vscode.action("reveal", { args = { "center", 0 } }) end, { desc = "Scroll center" })
+	vim.keymap.set({ "n", "x" }, "z-", function() vscode.action("reveal", { args = { "bottom", 1 } }) end, { desc = "Bottom + cursor" })
+	vim.keymap.set({ "n", "x" }, "zb", function() vscode.action("reveal", { args = { "bottom", 0 } }) end, { desc = "Scroll bottom" })
+	vim.keymap.set({ "n", "x" }, "H", function()
+		vim.cmd("normal! m'")
+		vscode.action("move-cursor", { args = { "top" } })
+	end, { desc = "Cursor top" })
+	vim.keymap.set({ "n", "x" }, "M", function()
+		vim.cmd("normal! m'")
+		vscode.action("move-cursor", { args = { "middle" } })
+	end, { desc = "Cursor middle" })
+	vim.keymap.set({ "n", "x" }, "L", function()
+		vim.cmd("normal! m'")
+		vscode.action("move-cursor", { args = { "bottom" } })
+	end, { desc = "Cursor bottom" })
+
+	-- vscode-tab-commands.vim overrides
+	vim.keymap.set({ "n", "x" }, "gt", function()
+		local count = vim.v.count
+		if count > 0 then
+			vscode.call("workbench.action.openEditorAtIndex" .. count)
+		else
+			vscode.action("workbench.action.nextEditorInGroup")
+		end
+	end, { desc = "Next tab" })
+	vim.keymap.set({ "n", "x" }, "gT", function() vscode.action("workbench.action.previousEditorInGroup") end, { desc = "Previous tab" })
+
+	-- vscode-window-commands.vim overrides
+	-- Splits
+	vim.keymap.set({ "n", "x" }, "<C-w>s", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "Split horizontal" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-s>", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "Split horizontal" })
+	vim.keymap.set({ "n", "x" }, "<C-w>v", function() vscode.action("workbench.action.splitEditorRight") end, { desc = "Split vertical" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-v>", function() vscode.action("workbench.action.splitEditorRight") end, { desc = "Split vertical" })
+	vim.keymap.set({ "n", "x" }, "<C-w>n", function() vscode.action("workbench.action.splitEditorDown") end, { desc = "New split" })
+
+	-- Close
+	vim.keymap.set({ "n", "x" }, "<C-w>c", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
+	vim.keymap.set({ "n", "x" }, "<C-w>q", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-c>", function() vscode.action("workbench.action.closeActiveEditor") end, { desc = "Close window" })
+
+	-- Only / Join
+	vim.keymap.set({ "n", "x" }, "<C-w>o", function() vscode.action("workbench.action.joinAllGroups") end, { desc = "Only window" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-o>", function() vscode.action("workbench.action.joinAllGroups") end, { desc = "Only window" })
+
+	-- Size
+	vim.keymap.set({ "n", "x" }, "<C-w>=", function() vscode.action("workbench.action.evenEditorWidths") end, { desc = "Equalize splits" })
+	vim.keymap.set({ "n", "x" }, "<C-w>_", function() vscode.action("workbench.action.toggleEditorWidths") end, { desc = "Maximize height" })
+	vim.keymap.set({ "n", "x" }, "<C-w>+", function() vscode.action("workbench.action.increaseViewHeight") end, { desc = "Increase height" })
+	vim.keymap.set({ "n", "x" }, "<C-w>-", function() vscode.action("workbench.action.decreaseViewHeight") end, { desc = "Decrease height" })
+	vim.keymap.set({ "n", "x" }, "<C-w>>", function() vscode.action("workbench.action.increaseViewWidth") end, { desc = "Increase width" })
+	vim.keymap.set({ "n", "x" }, "<C-w><", function() vscode.action("workbench.action.decreaseViewWidth") end, { desc = "Decrease width" })
+
+	-- Navigate between splits
+	vim.keymap.set({ "n", "x" }, "<C-w>w", function() vscode.action("workbench.action.focusNextGroup") end, { desc = "Next window" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-w>", function() vscode.action("workbench.action.focusNextGroup") end, { desc = "Next window" })
+	vim.keymap.set({ "n", "x" }, "<C-w>W", function() vscode.action("workbench.action.focusPreviousGroup") end, { desc = "Previous window" })
+	vim.keymap.set({ "n", "x" }, "<C-w>p", function() vscode.action("workbench.action.focusPreviousGroup") end, { desc = "Previous window" })
+	vim.keymap.set({ "n", "x" }, "<C-w>t", function() vscode.action("workbench.action.focusFirstEditorGroup") end, { desc = "First window" })
+	vim.keymap.set({ "n", "x" }, "<C-w>b", function() vscode.action("workbench.action.focusLastEditorGroup") end, { desc = "Last window" })
+	vim.keymap.set({ "n", "x" }, "<C-w>j", function() vscode.action("workbench.action.navigateDown") end, { desc = "Window down" })
+	vim.keymap.set({ "n", "x" }, "<C-w>k", function() vscode.action("workbench.action.navigateUp") end, { desc = "Window up" })
+	vim.keymap.set({ "n", "x" }, "<C-w>h", function() vscode.action("workbench.action.navigateLeft") end, { desc = "Window left" })
+	vim.keymap.set({ "n", "x" }, "<C-w>l", function() vscode.action("workbench.action.navigateRight") end, { desc = "Window right" })
+
+	-- Move editor to split
+	vim.keymap.set({ "n", "x" }, "<C-w><C-j>", function() vscode.action("workbench.action.moveEditorToBelowGroup") end, { desc = "Move to split below" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-k>", function() vscode.action("workbench.action.moveEditorToAboveGroup") end, { desc = "Move to split above" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-h>", function() vscode.action("workbench.action.moveEditorToLeftGroup") end, { desc = "Move to split left" })
+	vim.keymap.set({ "n", "x" }, "<C-w><C-l>", function() vscode.action("workbench.action.moveEditorToRightGroup") end, { desc = "Move to split right" })
+end
+vscode_neovim_overrides()
+
 local function show_mapping()
 	local function get_content()
 		local maps = vim.api.nvim_get_keymap("")
