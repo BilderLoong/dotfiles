@@ -22,8 +22,6 @@ vim.keymap.set(
 	{ expr = true, silent = true, desc = "Move down", remap = true }
 )
 
--- vim.keymap.set("n", "k", "gk")
--- vim.keymap.set("n", "j", "gj")
 
 local function deferred_action(method)
 	return function()
