@@ -363,18 +363,10 @@ folder()
 
 -- Control VSCode native ui.
 local function vscode_ui()
-	-- To make the below take effect, need to add thoese keys in VSCode's keymap config: https://github.com/vscode-neovim/vscode-neovim#adding-keybindings
-	vim.cmd([[
-    " Move cursor between windows in a tab.
-    nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
-    xnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.navigateDown')<CR>
-    nnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
-    xnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.navigateUp')<CR>
-    nnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
-    xnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.navigateLeft')<CR>
-    nnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
-    xnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.navigateRight')<CR>
-]])
+	vim.keymap.set({ "n", "x" }, "<C-j>", function() vscode.action("workbench.action.navigateDown") end, { desc = "Navigate down" })
+	vim.keymap.set({ "n", "x" }, "<C-k>", function() vscode.action("workbench.action.navigateUp") end, { desc = "Navigate up" })
+	vim.keymap.set({ "n", "x" }, "<C-h>", function() vscode.action("workbench.action.navigateLeft") end, { desc = "Navigate left" })
+	vim.keymap.set({ "n", "x" }, "<C-l>", function() vscode.action("workbench.action.navigateRight") end, { desc = "Navigate right" })
 
 	--  Toggle Primary Sidebar.
 	vim.keymap.set({ "n", "x", "i" }, "<C-n>", function()
