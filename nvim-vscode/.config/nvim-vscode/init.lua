@@ -497,6 +497,7 @@ local function vscode_neovim_overrides()
 		{ desc = "Bottom + cursor" })
 	vim.keymap.set({ "n", "x" }, "zb", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 0)") end,
 		{ desc = "Scroll bottom" })
+
 	vim.keymap.set({ "n", "x" }, "H", function()
 		vim.cmd("normal! m'")
 		vim.cmd("call VSCodeExtensionNotify('move-cursor', 'top')")
