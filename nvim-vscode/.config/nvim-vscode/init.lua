@@ -387,7 +387,7 @@ local function editing()
 	end)
 
 	vim.keymap.set({ "n", "x" }, "<<", function()
-							vscode.action("editor.action.outdentLines")
+		vscode.action("editor.action.outdentLines")
 	end)
 end
 
