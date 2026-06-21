@@ -445,4 +445,5 @@ local function show_mapping()
   ]], { args = { content = content } })
 end
 
+vim.keymap.set("n", "<Leader>?", show_keymaps, { desc = "Show all keymaps" })
 
