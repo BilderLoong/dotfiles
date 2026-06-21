@@ -79,7 +79,6 @@ local function plugins()
 				}
 			end,
 			dependencies = {
-
 				"gbprod/yanky.nvim",
 				event = { "TextYankPost" },
 				opts = {},
