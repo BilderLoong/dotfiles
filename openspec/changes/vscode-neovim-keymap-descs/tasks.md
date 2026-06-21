@@ -6,7 +6,7 @@
 
 ## 2. Add desc to existing vim.keymap.set calls
 
-- [ ] 2.1 Add `desc` to leader/utility keymaps: `<Space>`, `gr`, `<Leader>fs`, `<Leader>fm`
+- [x] 2.1 Add `desc` to leader/utility keymaps: `<Space>`, `gr`, `<Leader>fs`, `<Leader>fm`
 - [ ] 2.2 Add `desc` to UI keymaps: `<C-n>`, `<C-m>`, `<M-Space>`, `<Leader>d`, `<Leader>e`
 - [ ] 2.3 Add `desc` to editor keymaps: `]c`, `[c`, `>>`, `<<`
 
