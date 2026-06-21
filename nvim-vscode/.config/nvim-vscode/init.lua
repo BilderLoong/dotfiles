@@ -491,9 +491,10 @@ local function vscode_neovim_overrides()
 		{ desc = "Scroll top" })
 	vim.keymap.set({ "n", "x" }, "z.", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 1)") end,
 		{ desc = "Center + cursor" })
+	
 	vim.keymap.set({ "n", "x" }, "zz", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'center', 0)") end,
 		{ desc = "Scroll center" })
-	
+
 	vim.keymap.set({ "n", "x" }, "z-", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'bottom', 1)") end,
 		{ desc = "Bottom + cursor" })
 
