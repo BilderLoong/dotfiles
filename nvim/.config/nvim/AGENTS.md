@@ -25,12 +25,6 @@ nvim --server <socket> --remote-expr 'luaeval("vim.inspect(vim.lsp.get_clients()
 nvim --server <socket> --remote-expr 'luaeval("vim.inspect(vim.lsp._enabled_configs)")'
 nvim --server <socket> --remote-expr '&filetype'
 
-# Fix LSP race condition (re-trigger FileType)
-nvim --server <socket> --remote-expr 'luaeval("vim.api.nvim_exec_autocmds(\"FileType\", {buffer=0})")'
-
-# Run arbitrary lua
-nvim --server <socket> --remote-expr 'luaeval("vim.inspect(vim.lsp.config.lua_ls)")'
-
 # Send commands
 nvim --server <socket> --remote-send '<CMD>LspInfo<CR>'
 ```
