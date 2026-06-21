@@ -434,6 +434,7 @@ editing()
 
 local function show_mapping()
 	local function get_content()
+		
 	end
 
 	vscode.eval([[
