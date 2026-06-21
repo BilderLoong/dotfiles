@@ -478,7 +478,13 @@ local function vscode_neovim_overrides()
 		vscode.action("cursorMove", { args = { to = "down", by = "wrappedLine", value = vim.v.count1 } })
 	end, { desc = "Screen line down" })
 
-	-- vscode-scrolling.vim overrides (must use VSCodeExtensionNotify — extension internal event)
+	-- vscode-scrolling.vim overrides
+	-- These use VSCodeExtensionNotify (extension internal events), NOT vscode.action().
+	-- The "reveal" and "move-cursor" events are handled by vscode-neovim's eventBus,
+	-- not registered as VS Code commands. vscode.action() would fall back to
+	-- commands.executeCommand() which fails for internal events.
+	-- Wrapping in vim.cmd("call VSCodeExtensionNotify(...)") lets us use vim.keymap.set
+	-- with desc while still calling the correct extension API.
 	vim.keymap.set({ "n", "x" }, "z<CR>", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 1)") end,
 		{ desc = "Top + cursor" })
 	vim.keymap.set({ "n", "x" }, "zt", function() vim.cmd("call VSCodeExtensionNotify('reveal', 'top', 0)") end,
