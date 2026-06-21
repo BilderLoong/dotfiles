@@ -529,7 +529,7 @@ local function vscode_neovim_overrides()
 
 	-- Navigate between splits
 	vim.keymap.set({ "n", "x" }, "<C-w>w", function() vscode.action("workbench.action.focusNextGroup") end, { desc = "Next window" })
-	vim.keymap.set({ "n", "x" }, "<C-w><C-w>", function() vscode.action("workbench.action.focusNextGroup") end, { desc = "Next window" })
+	-- vim.keymap.set({ "n", "x" }, "<C-w><C-w>", function() vscode.action("workbench.action.focusNextGroup") end, { desc = "Next window" })
 	vim.keymap.set({ "n", "x" }, "<C-w>W", function() vscode.action("workbench.action.focusPreviousGroup") end, { desc = "Previous window" })
 	vim.keymap.set({ "n", "x" }, "<C-w>p", function() vscode.action("workbench.action.focusPreviousGroup") end, { desc = "Previous window" })
 	vim.keymap.set({ "n", "x" }, "<C-w>t", function() vscode.action("workbench.action.focusFirstEditorGroup") end, { desc = "First window" })
