@@ -72,7 +72,7 @@ local function plugins()
 				{ "mxc",        mode = { "n" },           function() require("substitute.exchange").cancel() end,   desc = "Substitute Exchange Cancel",   { noremap = true } },
 				{ "mm",         mode = { "n" },           function() require("substitute").line() end,              desc = "Substitute Line",              { noremap = true } },
 			},
-			opts = {},
+			config = {},
 			config = function(_, opts)
 				require("substitute").setup {
 					on_substitute = require("yanky.integration").substitute(),
