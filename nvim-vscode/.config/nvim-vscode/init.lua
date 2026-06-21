@@ -238,16 +238,6 @@ local function plugins()
 				{ "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
 			},
 		},
-		-- Doesn't in VSCodeNeovim due to dependencies of LSP: https://github.com/mfussenegger/nvim-treehopper/blob/5a28bff46c05d28bdb4bcaef67e046eb915a9390/lua/tsht.lua#L96
-		--[[ {
-			"mfussenegger/nvim-treehopper",
-			dependencies = "nvim-treesitter/nvim-treesitter",
-			event = "BufReadPost",
-			-- keys = { "v", "y", "d", "c" },
-			config = function(_, opts)
-				vim.keymap.set({ "o", "x" }, "m", ":<C-U>lua require('tsht').nodes()<CR>")
-			end,
-		}, ]]
 	}, {
 		performance = {
 
