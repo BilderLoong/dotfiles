@@ -85,9 +85,6 @@ local function plugins()
 				config = function(_, opts)
 					require("yanky").setup(opts)
 				end,
-
-
-
 			}
 		},
 		{
