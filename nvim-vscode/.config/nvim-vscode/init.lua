@@ -388,7 +388,6 @@ local function vscode_ui()
 	vim.keymap.set({ "n", "x", "i" }, "<C-m>", function()
 		vscode.action("workbench.action.toggleAuxiliaryBar")
 	end, { desc = "Toggle auxiliary bar" })
-	s
 
 	-- vim.keymap.set({ "i" }, "<M-Space>", function()
 	-- 	vscode.action("editor.action.triggerSuggest")
