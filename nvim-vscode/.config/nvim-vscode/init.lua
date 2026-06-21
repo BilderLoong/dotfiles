@@ -344,11 +344,11 @@ local function LSP()
 
 	vim.keymap.set("n", "<Leader>fs", function()
 		vscode.action("workbench.action.showAllSymbols")
-	end)
+	end, { desc = "Show all symbols" })
 
 	vim.keymap.set("n", "<Leader>fm", function()
 		vscode.action("editor.action.formatDocument")
-	end)
+	end, { desc = "Format document" })
 end
 LSP()
 
