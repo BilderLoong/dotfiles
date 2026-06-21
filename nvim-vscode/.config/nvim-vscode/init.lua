@@ -323,14 +323,7 @@ local function LSP()
 			if gr_pending then
 				gr_pending = false
 				-- Clear the VS Code selection so vscode-neovim doesn't re-sync it
-				vim.fn.vscode_notify("eval", {
-					args = {
-						[[vscode.window.activeTextEditor.selection = new vscode.Selection(
-							vscode.window.activeTextEditor.selection.active,
-							vscode.window.activeTextEditor.selection.active
-						)]],
-					},
-				})
+				vscode.action("editor.action.cancelSelection")
 				-- Exit visual mode immediately
 				vim.api.nvim_input("<Esc>")
 			end
