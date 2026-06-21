@@ -348,7 +348,7 @@ local function LSP()
 			end,
 		})
 	end
-	mappingGoToReference
+	mappingGoToReference()
 
 
 	vim.keymap.set("n", "<Leader>fs", function()
