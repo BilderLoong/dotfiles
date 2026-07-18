@@ -1,0 +1,54 @@
+#!/bin/sh
+
+set -eu
+
+usage() {
+  printf '%s\n' "Usage: copy-skills-to-codex [source-skills-dir] [target-skills-dir]" >&2
+}
+
+fail() {
+  printf '%s\n' "copy-skills-to-codex: $1" >&2
+  exit 1
+}
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+default_source=$(CDPATH= cd -- "${script_dir}/../skills" && pwd)
+source_skills=${1:-$default_source}
+target_skills=${2:-"${HOME}/.agents/skills"}
+
+if [ "$#" -gt 2 ]; then
+  usage
+  exit 2
+fi
+
+[ -d "$source_skills" ] || fail "source skills directory does not exist: $source_skills"
+mkdir -p "$target_skills"
+
+tmp_dir=$(mktemp -d)
+
+cleanup() {
+  rm -rf "$tmp_dir"
+}
+trap cleanup EXIT HUP INT TERM
+
+copied_count=0
+
+for skill_dir in "$source_skills"/*; do
+  [ -d "$skill_dir" ] || continue
+  [ -f "${skill_dir}/SKILL.md" ] || continue
+
+  skill_name=${skill_dir##*/}
+  staged_skill="${tmp_dir}/${skill_name}"
+  target_skill="${target_skills}/${skill_name}"
+
+  cp -R -L "$skill_dir" "$staged_skill"
+  rm -rf "$target_skill"
+  mv "$staged_skill" "$target_skill"
+
+  copied_count=$((copied_count + 1))
+  printf '%s\n' "copied: ${skill_name}"
+done
+
+[ "$copied_count" -gt 0 ] || fail "no skill directories found in: $source_skills"
+
+printf '%s\n' "copied ${copied_count} skills into ${target_skills}"
