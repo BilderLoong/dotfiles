@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software Engineering Mentor"
+  short_description: "Mentor-style engineering guidance"
+  default_prompt: "Use $software-engineering-mentor to guide me through this engineering problem."
