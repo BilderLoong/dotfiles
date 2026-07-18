@@ -22,6 +22,11 @@ if [ "$#" -gt 2 ]; then
 fi
 
 [ -d "$source_skills" ] || fail "source skills directory does not exist: $source_skills"
+case "$target_skills" in
+  ""|"/")
+    fail "refusing dangerous target skills directory: $target_skills"
+    ;;
+esac
 mkdir -p "$target_skills"
 
 tmp_dir=$(mktemp -d)
@@ -38,6 +43,11 @@ for skill_dir in "$source_skills"/*; do
   [ -f "${skill_dir}/SKILL.md" ] || continue
 
   skill_name=${skill_dir##*/}
+  case "$skill_name" in
+    ""|"."|"..")
+      fail "refusing invalid skill name: $skill_name"
+      ;;
+  esac
   staged_skill="${tmp_dir}/${skill_name}"
   target_skill="${target_skills}/${skill_name}"
 
