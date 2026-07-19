@@ -9,7 +9,7 @@ Before declaring a task complete, tell the user what decisions were made and wha
 
 ## Rule
 
-Do not assume missing requirements, business policies, user intent, risk tolerance, success criteria, or test evidence. Label missing context as unknown and ask for a decision when it materially affects the work.
+Do not hide assumptions about missing requirements, business policies, user intent, risk tolerance, success criteria, or test evidence. List every material assumption and say what confirmation or evidence it needs.
 
 ## Material Decisions
 
@@ -28,15 +28,15 @@ Use this structure exactly:
 ### What I Am Not Sure About
 - <uncertainty, why it matters, and what could prove it wrong>
 
-### Unknown — No Assumptions Made
-- <missing fact, policy, authority, or success criterion>
-- <the user decision or evidence needed>
+### The Assumptions You Made
+- <assumption and why it was necessary>
+- <the confirmation or evidence needed>
 
 ### Status
 <ready for review | needs validation | needs user decision>
 ```
 
-State `None` in any section with no entries. Do not claim `ready for review` while an unresolved material uncertainty or unknown remains.
+State `None` in any section with no entries. Do not claim `ready for review` while an unresolved material uncertainty or assumption remains.
 
 ## Common Mistakes
 
