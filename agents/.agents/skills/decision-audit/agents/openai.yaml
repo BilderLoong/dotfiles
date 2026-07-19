@@ -1,7 +1,7 @@
 interface:
   display_name: "Decision Audit"
-  short_description: "Audit material AI implementation choices"
-  default_prompt: "Use $decision-audit to audit the material decisions made in this task."
+  short_description: "Reveal AI decisions and unknowns"
+  default_prompt: "Use $decision-audit to report decisions, uncertainties, and unknowns from this task."
 
 policy:
   allow_implicit_invocation: true
