@@ -1,85 +1,64 @@
 ---
 name: decision-audit
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Use when an AI has made a material implementation decision, found a fix that may be case-specific, changed an unplanned behavior, or is about to declare work complete, request review, commit, merge, or archive a change.
 ---
 
 # Decision Audit
 
 ## Overview
 
-[TODO: 1-2 sentences explaining what this skill enables]
+Audit the choices made during implementation, not the entire diff. Surface decisions whose correctness, scope, or trade-offs need a human or independent reviewer to evaluate.
 
-## Structuring This Skill
+## Trigger
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+Run this audit immediately after a material decision and again before declaring the task complete. A decision is material when it affects behavior, correctness, architecture, data, security, concurrency, public APIs, performance strategy, operational cost, or the supported input/workload range.
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+Do not audit mechanical work such as formatting, renaming, routine wiring, or a plan-prescribed implementation with no meaningful alternatives.
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+## Procedure
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+1. Read the approved plan, requirements, and relevant test or benchmark evidence.
+2. List each material choice made beyond those decisions. Check defaults, thresholds, selection rules, error behavior, algorithms, performance workarounds, compatibility, and security boundaries.
+3. State the intended invariant and the range in which the choice is expected to hold. Do not infer a general root cause from one passing reproduction or benchmark.
+4. For every decision, name the strongest practical falsification case: an input, workload, state, or sequence that would expose the choice as wrong or too narrow.
+5. Mark the disposition. Ask for direction instead of claiming unconditional success when a material decision remains unresolved.
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+## Required Output
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+Use this structure exactly:
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+```md
+## Decision Audit
 
-## [TODO: Replace with the first main section based on chosen structure]
+### Reviewed Context
+- Approved decisions: <plan, specification, or user direction reviewed>
+- Evidence reviewed: <tests, measurements, reproduction, or inspection>
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+### Material Decisions
 
-## Resources (optional)
+#### D1 — <short decision>
+- **Choice and trigger:** <what was chosen and why the decision arose>
+- **Alternatives:** <credible alternatives considered or not evaluated>
+- **Invariant and scope:** <what must remain true; supported range>
+- **Evidence:** <what supports this choice>
+- **Falsification case:** <what would prove it wrong or too narrow>
+- **Confidence:** high | medium | low — <why>
+- **Disposition:** accepted | needs validation | needs user decision
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+### No-Omission Check
+<Either list additional decisions or state: No material decisions beyond the approved plan.>
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+### Completion Status
+<ready for review | blocked on validation | needs user decision>
+```
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+## Completion Rule
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+Only report `ready for review` when every material decision is accepted or validated. A passing original test, reported incident, or single benchmark is evidence for that case only; it is not proof of a general fix.
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
+## Common Mistakes
 
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Not every skill requires all three types of resources.**
+- Treating an implementation detail as insignificant because it was easy to code.
+- Reporting uncertainty without naming an alternative, invariant, or falsification case.
+- Calling a workaround a root-cause fix because it passes the original reproduction.
+- Omitting decisions that were made implicitly through a changed default, threshold, or selection rule.
