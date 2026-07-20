@@ -79,6 +79,7 @@ No repository files change in this task. Do not create a commit.
 **Files:**
 - Create: `codex/.codex/AGENTS.md`
 - Create: `codex/.codex/config.toml`
+- Create: `/private/tmp/codex-stow-backup-2026-07-20/config.toml.pre-stow`
 - Test: `stow -n codex -t ~`
 
 **Interfaces:**
@@ -151,7 +152,19 @@ Do not copy any other setting. In particular, omit `notify` and every `[projects
 
 Expected: the resulting file has only the three permitted top-level keys, the `[features]` and `[memories]` tables, and enabled plugin tables. It contains no token, key, password, `CODEX_HOME`, absolute path, or shell-environment entry.
 
-- [ ] **Step 3: Inspect the candidate before it becomes tracked**
+- [ ] **Step 3: Remove the live regular configuration file after preserving a second migration copy**
+
+Run:
+
+```bash
+mv /Users/birudo/.codex/config.toml /private/tmp/codex-stow-backup-2026-07-20/config.toml.pre-stow
+cmp /private/tmp/codex-stow-backup-2026-07-20/config.toml /private/tmp/codex-stow-backup-2026-07-20/config.toml.pre-stow
+test ! -e /Users/birudo/.codex/config.toml
+```
+
+Expected: the comparison exits with status zero and the live configuration path is absent, ready to receive a Stow symlink.
+
+- [ ] **Step 4: Inspect the candidate before it becomes tracked**
 
 Run:
 
@@ -162,7 +175,7 @@ rg -n -i 'token|api[_-]?key|secret|password|authorization|bearer|/Users/birudo|C
 
 Expected: the first command lists only allowlisted keys and tables. The second command has no output and exits with status one.
 
-- [ ] **Step 4: Preview the package before linking it**
+- [ ] **Step 5: Preview the package before linking it**
 
 Run:
 
@@ -172,7 +185,7 @@ stow -n codex -t ~
 
 Expected: the preview creates only `~/.codex/AGENTS.md` and `~/.codex/config.toml` links. It must not mention any other path.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
 git -C /Users/birudo/Projects/dotfiles add codex/.codex/AGENTS.md codex/.codex/config.toml
@@ -235,7 +248,7 @@ Append this section to `README.md`:
 ```markdown
 ### Codex portable baseline
 
-The `codex` package manages only `~/.codex/AGENTS.md` and a curated `~/.codex/config.toml`. Add reusable personal prompts under `codex/.codex/prompts/` and personal skills under `codex/.codex/skills/<skill-name>/` only when they are authored locally. Never add `auth.json`, sessions, caches, plugins, packages, databases, logs, or other generated Codex state.
+The `codex` package manages only `~/.codex/AGENTS.md` and a curated `~/.codex/config.toml`. Add reusable personal prompts under `codex/.codex/prompts/` and personal skills under a named directory such as `codex/.codex/skills/my-custom-skill/` only when they are authored locally. Never add `auth.json`, sessions, caches, plugins, packages, databases, logs, or other generated Codex state.
 ```
 
 Expected: the README describes the package boundary without changing any unrelated Stow instructions.
