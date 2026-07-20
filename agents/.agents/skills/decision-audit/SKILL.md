@@ -36,7 +36,6 @@ plan-prescribed wiring.
 
 Use this structure exactly:
 
-```md
 ## Decision Audit
 
 ### Decisions I Made
