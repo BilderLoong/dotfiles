@@ -14,9 +14,9 @@ codex/
     ├── AGENTS.md
     ├── config.toml
     ├── prompts/
-    │   └── <authored prompt files>
+    │   └── .gitkeep
     └── skills/
-        └── <authored skill directories>
+        └── .gitkeep
 ```
 
 With the repository's `--no-folding` configuration, Stow creates `~/.codex` as a normal directory and individually symlinks the managed files and directories. Codex can continue to write its local runtime state alongside those links.
@@ -54,7 +54,7 @@ Track only files deliberately authored by the user:
 - `~/.codex/prompts/*.md` for reusable custom prompts;
 - `~/.codex/skills/<name>/` for reusable custom skills, including their required `SKILL.md` and supporting files.
 
-Do not add placeholder files for the currently empty `prompts/` directory or the current system-provided `skills/` content. Add paths when authored content exists.
+Create `prompts/.gitkeep` and `skills/.gitkeep` so Git and Stow create both empty target directories. These markers are the only placeholder files allowed. Replace their emptiness with authored prompt files and named custom-skill directories over time; do not add current system-provided `skills/` content.
 
 ## Explicitly local content
 
@@ -71,14 +71,14 @@ Never Stow or commit the following:
 1. Back up the existing live `AGENTS.md` and `config.toml` before changing their locations.
 2. Create the `codex/.codex/` package and write the reviewed curated configuration there.
 3. Move the existing `AGENTS.md` into that package without changing its contents.
-4. Preview Stow with `stow -n codex -t ~`; it must report only the two planned links.
+4. Preview Stow with `stow -n codex -t ~`; it must report the two managed files and the two `.gitkeep` links.
 5. Create the real symlinks with `stow codex -t ~` and verify both targets resolve into the dotfiles repository.
 6. Start Codex and confirm that it reads the baseline and can still create local runtime state.
 7. Commit only the `codex/` package and its documentation.
 
 ## Success criteria
 
-- `~/.codex/config.toml` and `~/.codex/AGENTS.md` are symlinks into the `codex` Stow package.
+- `~/.codex/config.toml`, `~/.codex/AGENTS.md`, `~/.codex/prompts/.gitkeep`, and `~/.codex/skills/.gitkeep` are symlinks into the `codex` Stow package.
 - The repository contains no credentials, histories, databases, caches, or downloaded Codex binaries.
 - A new machine can restore the same global instructions and baseline preferences with `stow codex -t ~`.
 - Existing and future Codex runtime state remains writable under the real `~/.codex` directory.

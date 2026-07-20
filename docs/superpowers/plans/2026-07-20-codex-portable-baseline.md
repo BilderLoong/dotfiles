@@ -13,7 +13,7 @@
 - Stow target is always explicit: `-t ~`.
 - Preserve the live `AGENTS.md` byte-for-byte.
 - Curate `config.toml` with an allowlist; never commit credentials, absolute paths, project trust records, application state, caches, sessions, or downloaded binaries.
-- Do not add empty `prompts/` or `skills/` directories, placeholder files, system skills, or plugin caches.
+- Create `prompts/.gitkeep` and `skills/.gitkeep` so the otherwise empty directories are tracked and Stowed; do not add any other placeholder, system skill, or plugin-cache file.
 - Keep all live-file backups outside the repository under a unique directory in `/private/tmp`.
 
 ---
@@ -79,6 +79,8 @@ No repository files change in this task. Do not create a commit.
 **Files:**
 - Create: `codex/.codex/AGENTS.md`
 - Create: `codex/.codex/config.toml`
+- Create: `codex/.codex/prompts/.gitkeep`
+- Create: `codex/.codex/skills/.gitkeep`
 - Create: `/private/tmp/codex-stow-backup-2026-07-20/config.toml.pre-stow`
 - Test: `stow -n codex -t ~`
 
@@ -92,6 +94,10 @@ Run:
 
 ```bash
 mkdir -p /Users/birudo/Projects/dotfiles/codex/.codex
+mkdir -p /Users/birudo/Projects/dotfiles/codex/.codex/prompts
+mkdir -p /Users/birudo/Projects/dotfiles/codex/.codex/skills
+touch /Users/birudo/Projects/dotfiles/codex/.codex/prompts/.gitkeep
+touch /Users/birudo/Projects/dotfiles/codex/.codex/skills/.gitkeep
 mv /Users/birudo/.codex/AGENTS.md /Users/birudo/Projects/dotfiles/codex/.codex/AGENTS.md
 cmp /private/tmp/codex-stow-backup-2026-07-20/AGENTS.md /Users/birudo/Projects/dotfiles/codex/.codex/AGENTS.md
 ```
@@ -183,17 +189,17 @@ Run:
 stow -n codex -t ~
 ```
 
-Expected: the preview creates only `~/.codex/AGENTS.md` and `~/.codex/config.toml` links. It must not mention any other path.
+Expected: the preview creates only `~/.codex/AGENTS.md`, `~/.codex/config.toml`, `~/.codex/prompts/.gitkeep`, and `~/.codex/skills/.gitkeep` links. It must not mention any other path.
 
 - [ ] **Step 6: Commit**
 
 ```bash
-git -C /Users/birudo/Projects/dotfiles add codex/.codex/AGENTS.md codex/.codex/config.toml
+git -C /Users/birudo/Projects/dotfiles add codex/.codex/AGENTS.md codex/.codex/config.toml codex/.codex/prompts/.gitkeep codex/.codex/skills/.gitkeep
 git -C /Users/birudo/Projects/dotfiles diff --cached --check
 git -C /Users/birudo/Projects/dotfiles commit -m "add portable Codex baseline"
 ```
 
-Expected: Git creates one commit containing exactly the two new package files.
+Expected: Git creates one commit containing exactly the four new package files.
 
 ### Task 3: Link, verify, and document future authored content
 
@@ -224,6 +230,10 @@ test -L /Users/birudo/.codex/AGENTS.md
 test -L /Users/birudo/.codex/config.toml
 test "$(readlink /Users/birudo/.codex/AGENTS.md)" = "/Users/birudo/Projects/dotfiles/codex/.codex/AGENTS.md"
 test "$(readlink /Users/birudo/.codex/config.toml)" = "/Users/birudo/Projects/dotfiles/codex/.codex/config.toml"
+test -L /Users/birudo/.codex/prompts/.gitkeep
+test -L /Users/birudo/.codex/skills/.gitkeep
+test "$(readlink /Users/birudo/.codex/prompts/.gitkeep)" = "/Users/birudo/Projects/dotfiles/codex/.codex/prompts/.gitkeep"
+test "$(readlink /Users/birudo/.codex/skills/.gitkeep)" = "/Users/birudo/Projects/dotfiles/codex/.codex/skills/.gitkeep"
 test -d /Users/birudo/.codex
 test ! -L /Users/birudo/.codex
 ```
@@ -248,7 +258,7 @@ Append this section to `README.md`:
 ```markdown
 ### Codex portable baseline
 
-The `codex` package manages only `~/.codex/AGENTS.md` and a curated `~/.codex/config.toml`. Add reusable personal prompts under `codex/.codex/prompts/` and personal skills under a named directory such as `codex/.codex/skills/my-custom-skill/` only when they are authored locally. Never add `auth.json`, sessions, caches, plugins, packages, databases, logs, or other generated Codex state.
+The `codex` package manages `~/.codex/AGENTS.md`, a curated `~/.codex/config.toml`, and `.gitkeep` markers in `~/.codex/prompts/` and `~/.codex/skills/`. Add reusable personal prompts under `codex/.codex/prompts/` and personal skills under a named directory such as `codex/.codex/skills/my-custom-skill/` only when they are authored locally. Never add `auth.json`, sessions, caches, plugins, packages, databases, logs, or other generated Codex state.
 ```
 
 Expected: the README describes the package boundary without changing any unrelated Stow instructions.
@@ -282,7 +292,7 @@ git -C /Users/birudo/Projects/dotfiles status --short
 rg --files /Users/birudo/Projects/dotfiles/codex
 ```
 
-Expected: `git status --short` has no output. The package file list contains exactly `codex/.codex/AGENTS.md` and `codex/.codex/config.toml` until authored prompts or skills are intentionally added.
+Expected: `git status --short` has no output. The package file list contains exactly `codex/.codex/AGENTS.md`, `codex/.codex/config.toml`, `codex/.codex/prompts/.gitkeep`, and `codex/.codex/skills/.gitkeep` until authored prompts or skills are intentionally added.
 
 - [ ] **Step 2: Re-run the Stow dry-run and confirm idempotence**
 
