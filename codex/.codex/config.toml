@@ -1,0 +1,43 @@
+personality = "pragmatic"
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
+
+[features]
+js_repl = false
+memories = true
+
+[memories]
+generate_memories = true
+use_memories = true
+disable_on_external_context = true
+
+[plugins."code-simplifier@claude-plugins-official"]
+enabled = true
+[plugins."commit-commands@claude-plugins-official"]
+enabled = true
+[plugins."context7@claude-plugins-official"]
+enabled = true
+[plugins."explanatory-output-style@claude-plugins-official"]
+enabled = true
+[plugins."frontend-design@claude-plugins-official"]
+enabled = true
+[plugins."learning-output-style@claude-plugins-official"]
+enabled = true
+[plugins."superpowers@claude-plugins-official"]
+enabled = true
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+[plugins."visualize@openai-bundled"]
+enabled = true
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+[plugins."sites@openai-bundled"]
+enabled = true
+[plugins."browser@openai-bundled"]
+enabled = true
