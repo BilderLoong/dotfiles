@@ -36,7 +36,8 @@ plan-prescribed wiring.
 
 Use this structure exactly:
 
-## Decision Audit
+```md
+Audit
 
 ### Decisions I Made
 - <decision, short reason, and whether it is a root-cause fix or mitigation>
