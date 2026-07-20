@@ -68,5 +68,3 @@ current test, reproduction, or benchmark passes.
 * Choosing a default, threshold, capacity, or record-selection policy without authority.
 * Reporting uncertainty without naming the missing fact, evidence, or decision.
 * Omitting a choice because it seemed obvious during implementation.
-
-```
