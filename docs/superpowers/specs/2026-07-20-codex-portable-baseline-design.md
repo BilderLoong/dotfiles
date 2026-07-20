@@ -31,7 +31,7 @@ Track the existing global instructions at `~/.codex/AGENTS.md` unchanged.
 
 Create a curated baseline from the live configuration using an allowlist. The baseline contains only:
 
-- top-level durable preferences: `notify`, `personality`, `model`, and `model_reasoning_effort`;
+- top-level durable preferences: `personality`, `model`, and `model_reasoning_effort`;
 - explicit feature preferences under `[features]` and `[memories]`;
 - each explicitly enabled plugin entry under `[plugins]`;
 - a future MCP-server block only when its command, arguments, working directory, and environment are portable and contain no credentials.
@@ -41,6 +41,7 @@ The baseline excludes:
 - all `[projects.*]` trust records;
 - `[tui.*]`, `[desktop]`, `[hooks.state]`, and `[marketplaces.*]` state;
 - the current `node_repl` and `computer-use` MCP-server blocks, because they contain installation-specific paths and runtime values;
+- `notify`, because the current value invokes a bundled macOS executable through an installation-specific absolute path;
 - `[shell_environment_policy]`, including its environment settings;
 - secrets, access tokens, API keys, passwords, and credentials of every kind.
 

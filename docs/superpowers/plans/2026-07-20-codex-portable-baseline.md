@@ -12,7 +12,7 @@
 
 - Stow target is always explicit: `-t ~`.
 - Preserve the live `AGENTS.md` byte-for-byte.
-- Curate `config.toml` with an allowlist; never commit credentials, absolute project trust records, application state, caches, sessions, or downloaded binaries.
+- Curate `config.toml` with an allowlist; never commit credentials, absolute paths, project trust records, application state, caches, sessions, or downloaded binaries.
 - Do not add empty `prompts/` or `skills/` directories, placeholder files, system skills, or plugin caches.
 - Keep all live-file backups outside the repository under a unique directory in `/private/tmp`.
 
@@ -99,35 +99,64 @@ Expected: the comparison exits with status zero; `~/.codex/AGENTS.md` no longer 
 
 - [ ] **Step 2: Build the curated baseline from the backed-up configuration**
 
-Create `codex/.codex/config.toml` by copying only these entries from `"$backup_dir/config.toml"`:
+Create `codex/.codex/config.toml` with exactly this current portable baseline:
 
 ```toml
-# Preserve existing values only for these top-level keys.
-notify = "<existing value>"
-personality = "<existing value>"
-model = "<existing value>"
-model_reasoning_effort = "<existing value>"
+personality = "pragmatic"
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
 
-# Preserve existing boolean preferences from these sections.
 [features]
+js_repl = false
+memories = true
 
 [memories]
+generate_memories = true
+use_memories = true
+disable_on_external_context = true
 
-# Preserve each existing enabled plugin entry exactly as a two-line TOML table.
-[plugins."<enabled-plugin-id>"]
+[plugins."code-simplifier@claude-plugins-official"]
+enabled = true
+[plugins."commit-commands@claude-plugins-official"]
+enabled = true
+[plugins."context7@claude-plugins-official"]
+enabled = true
+[plugins."explanatory-output-style@claude-plugins-official"]
+enabled = true
+[plugins."frontend-design@claude-plugins-official"]
+enabled = true
+[plugins."learning-output-style@claude-plugins-official"]
+enabled = true
+[plugins."superpowers@claude-plugins-official"]
+enabled = true
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+[plugins."visualize@openai-bundled"]
+enabled = true
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+[plugins."sites@openai-bundled"]
+enabled = true
+[plugins."browser@openai-bundled"]
 enabled = true
 ```
 
-Do not copy any other section. In particular, omit every `[projects.*]`, `[tui.*]`, `[marketplaces.*]`, `[desktop]`, `[hooks.state.*]`, `[mcp_servers.*]`, and `[shell_environment_policy.*]` table.
+Do not copy any other setting. In particular, omit `notify` and every `[projects.*]`, `[tui.*]`, `[marketplaces.*]`, `[desktop]`, `[hooks.state.*]`, `[mcp_servers.*]`, and `[shell_environment_policy.*]` table.
 
-Expected: the resulting file has only the four permitted top-level keys, optional `[features]` and `[memories]` tables, and enabled plugin tables. It contains no token, key, password, `CODEX_HOME`, absolute project path, or shell-environment entry.
+Expected: the resulting file has only the three permitted top-level keys, the `[features]` and `[memories]` tables, and enabled plugin tables. It contains no token, key, password, `CODEX_HOME`, absolute path, or shell-environment entry.
 
 - [ ] **Step 3: Inspect the candidate before it becomes tracked**
 
 Run:
 
 ```bash
-rg -n '^\[|^(notify|personality|model|model_reasoning_effort|enabled)[[:space:]]*=' /Users/birudo/Projects/dotfiles/codex/.codex/config.toml
+rg -n '^\[|^(personality|model|model_reasoning_effort|enabled)[[:space:]]*=' /Users/birudo/Projects/dotfiles/codex/.codex/config.toml
 rg -n -i 'token|api[_-]?key|secret|password|authorization|bearer|/Users/birudo|CODEX_HOME|\[projects\.|\[mcp_servers\.|\[shell_environment_policy' /Users/birudo/Projects/dotfiles/codex/.codex/config.toml
 ```
 
