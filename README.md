@@ -226,6 +226,12 @@ stow -n -R kitty -t ~   # what would restow do?
 
 ---
 
+### Codex portable baseline
+
+The `codex` package manages `~/.codex/AGENTS.md`, a curated `~/.codex/config.toml`, and `.gitkeep` markers in `~/.codex/prompts/` and `~/.codex/skills/`. Add reusable personal prompts under `codex/.codex/prompts/` and personal skills under a named directory such as `codex/.codex/skills/my-custom-skill/` only when they are authored locally. Never add `auth.json`, sessions, caches, plugins, packages, databases, logs, or other generated Codex state.
+
+---
+
 ## Special Cases
 
 ### Rime on macOS
