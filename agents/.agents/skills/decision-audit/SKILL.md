@@ -54,7 +54,7 @@ Audit
 
 ### Status
 <ready for review | ready with accepted risk | needs validation | needs user decision>
-
+```
 State `None` in any section with no entries.
 
 Do not claim `ready for review` when an unresolved issue could materially
