@@ -21,8 +21,8 @@
 ### Task 1: Preflight and create recoverable live-file backups
 
 **Files:**
-- Create: `/private/tmp/codex-stow-backup-<timestamp>/AGENTS.md`
-- Create: `/private/tmp/codex-stow-backup-<timestamp>/config.toml`
+- Create: `/private/tmp/codex-stow-backup-2026-07-20/AGENTS.md`
+- Create: `/private/tmp/codex-stow-backup-2026-07-20/config.toml`
 - Modify: none
 - Test: shell checks below
 
@@ -60,15 +60,15 @@ Expected: review every listed process. Close any other Codex desktop or CLI proc
 Run:
 
 ```bash
-backup_dir="$(mktemp -d /private/tmp/codex-stow-backup.XXXXXX)"
-cp /Users/birudo/.codex/AGENTS.md "$backup_dir/AGENTS.md"
-cp /Users/birudo/.codex/config.toml "$backup_dir/config.toml"
-cmp /Users/birudo/.codex/AGENTS.md "$backup_dir/AGENTS.md"
-cmp /Users/birudo/.codex/config.toml "$backup_dir/config.toml"
-printf '%s\n' "$backup_dir"
+test ! -e /private/tmp/codex-stow-backup-2026-07-20
+mkdir /private/tmp/codex-stow-backup-2026-07-20
+cp /Users/birudo/.codex/AGENTS.md /private/tmp/codex-stow-backup-2026-07-20/AGENTS.md
+cp /Users/birudo/.codex/config.toml /private/tmp/codex-stow-backup-2026-07-20/config.toml
+cmp /Users/birudo/.codex/AGENTS.md /private/tmp/codex-stow-backup-2026-07-20/AGENTS.md
+cmp /Users/birudo/.codex/config.toml /private/tmp/codex-stow-backup-2026-07-20/config.toml
 ```
 
-Expected: both `cmp` commands exit with status zero and the final line is the backup directory path. Record that path before proceeding.
+Expected: both `cmp` commands exit with status zero. The backup directory is `/private/tmp/codex-stow-backup-2026-07-20`.
 
 - [ ] **Step 4: Commit**
 
@@ -92,7 +92,7 @@ Run:
 ```bash
 mkdir -p /Users/birudo/Projects/dotfiles/codex/.codex
 mv /Users/birudo/.codex/AGENTS.md /Users/birudo/Projects/dotfiles/codex/.codex/AGENTS.md
-cmp "$backup_dir/AGENTS.md" /Users/birudo/Projects/dotfiles/codex/.codex/AGENTS.md
+cmp /private/tmp/codex-stow-backup-2026-07-20/AGENTS.md /Users/birudo/Projects/dotfiles/codex/.codex/AGENTS.md
 ```
 
 Expected: the comparison exits with status zero; `~/.codex/AGENTS.md` no longer exists until Task 3 creates its symlink.
@@ -287,8 +287,8 @@ If a link must be reverted, use the Task 1 backup directory:
 
 ```bash
 stow -D codex -t ~
-cp "$backup_dir/AGENTS.md" /Users/birudo/.codex/AGENTS.md
-cp "$backup_dir/config.toml" /Users/birudo/.codex/config.toml
+cp /private/tmp/codex-stow-backup-2026-07-20/AGENTS.md /Users/birudo/.codex/AGENTS.md
+cp /private/tmp/codex-stow-backup-2026-07-20/config.toml /Users/birudo/.codex/config.toml
 ```
 
 Expected: both original files become regular files again. Do not delete the backup until the user has confirmed normal Codex use.
