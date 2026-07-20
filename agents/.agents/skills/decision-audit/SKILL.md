@@ -1,7 +1,7 @@
 ---
 name: decision-audit
 description: >
-  Audits implementation decisions before declaring coding work complete.
+  Use this when you Audits implementation decisions before declaring coding work complete.
   Use for bug fixes, performance work, refactors, architecture changes,
   and any task containing underspecified behavior or non-obvious tradeoffs.
 ---
