@@ -1,18 +1,4 @@
-My pick: **the existing skill is better as the actual `SKILL.md`**.
 
-The longer version is useful as design rationale or a reference file, but this one is more likely to work reliably in repeated agent runs because it is:
-
-* focused on one behavior;
-* cheap to load and follow;
-* explicit about what counts as material;
-* equipped with a fixed output contract;
-* less likely to produce a giant ceremonial audit after every small change.
-
-The core line is especially strong:
-
-> Audit choices, not the full diff.
-
-That captures the whole idea in six words.
 
 ## What the existing skill does better
 
