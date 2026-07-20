@@ -1,6 +1,6 @@
 ---
 name: decision-audit
-description: Use when you has made a material implementation decision, is uncertain about a choice, lacks requirements or authority, finds a potentially case-specific fix, or is about to declare work complete, request review, commit, merge, or archive a change.
+description: Use after you has made a material implementation decision, is uncertain about a choice, lacks requirements or authority, finds a potentially case-specific fix, or is about to declare work complete, request review, commit, merge, or archive a change.
 ---
 
 # Decision Audit
