@@ -52,7 +52,7 @@ The Stow-managed file is the source of truth. Machine-specific Codex state is in
 Track only files deliberately authored by the user:
 
 - `~/.codex/prompts/*.md` for reusable custom prompts;
-- `~/.codex/skills/<name>/` for reusable custom skills, including their required `SKILL.md` and supporting files.
+- a named directory such as `~/.codex/skills/my-custom-skill/` for reusable custom skills, including its required `SKILL.md` and supporting files.
 
 Create `prompts/.gitkeep` and `skills/.gitkeep` so Git and Stow create both empty target directories. These markers are the only placeholder files allowed. Replace their emptiness with authored prompt files and named custom-skill directories over time; do not add current system-provided `skills/` content.
 
