@@ -53,7 +53,7 @@ Audit
 - <case that could expose a locally correct but non-general solution>
 
 ### Status
-<ready for review | ready with accepted risk | needs validation | needs user decision>
+<ready for review | ready with user-accepted risk | needs validation | needs user decision>
 
 ```
 
