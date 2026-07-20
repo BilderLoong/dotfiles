@@ -70,16 +70,3 @@ current test, reproduction, or benchmark passes.
 * Omitting a choice because it seemed obvious during implementation.
 
 ```
-
-## Verdict
-
-Use the **existing concise skill as the foundation**.
-
-The longer version is more intellectually complete, but too elaborate for the primary file. The revised concise version above preserves the existing skill’s discipline while adding the three highest-value protections:
-
-1. root cause versus mitigation;
-2. counterexample testing;
-3. recording decisions as they arise.
-
-That is the best balance.
-```
