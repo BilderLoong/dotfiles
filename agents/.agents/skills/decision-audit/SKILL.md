@@ -5,6 +5,7 @@ Audits implementation decisions before declaring coding work complete.
   Use for bug fixes, performance work, refactors, architecture changes,
   and any task containing underspecified behavior or non-obvious tradeoffs.
 ---
+
 ---
 
 # Decision Audit
@@ -27,16 +28,20 @@ Use this structure exactly:
 ## Decision Audit
 
 ### Decisions I Made
+
 - <decision and a short reason>
 
 ### What I Am Not Sure About
+
 - <uncertainty, why it matters, and what could prove it wrong>
 
 ### The Assumptions You Made
+
 - <assumption and why it was necessary>
 - <the confirmation or evidence needed>
 
 ### Status
+
 <ready for review | needs validation | needs user decision>
 ```
 
