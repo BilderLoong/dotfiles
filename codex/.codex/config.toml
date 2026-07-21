@@ -57,7 +57,7 @@ trust_level = "trusted"
 followUpQueueMode = "queue"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-07-21T13:15:55Z"
+last_updated = "2026-07-21T13:15:58Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
