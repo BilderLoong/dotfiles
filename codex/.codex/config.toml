@@ -42,8 +42,6 @@ enabled = true
 enabled = true
 [plugins."sites@openai-bundled"]
 enabled = true
-[plugins."browser@openai-bundled"]
-enabled = true
 
 [projects."/Users/birudo/Projects/anki-feedback"]
 trust_level = "trusted"
@@ -59,7 +57,7 @@ followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-07-21T13:16:04Z"
+last_updated = "2026-07-21T15:10:42Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
