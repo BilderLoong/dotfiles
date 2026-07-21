@@ -2,6 +2,8 @@ personality = "pragmatic"
 model = "gpt-5.6-terra"
 model_reasoning_effort = "xhigh"
 
+notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
 [features]
 js_repl = false
 memories = true
@@ -53,3 +55,8 @@ trust_level = "trusted"
 
 [desktop]
 followUpQueueMode = "queue"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-07-21T13:15:55Z"
+source_type = "local"
+source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
