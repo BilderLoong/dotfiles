@@ -44,3 +44,6 @@ enabled = true
 
 [projects."/Users/birudo/Projects/anki-feedback"]
 trust_level = "trusted"
+
+[projects."/Users/birudo/Projects/MediaCrawler"]
+trust_level = "trusted"
