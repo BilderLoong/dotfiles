@@ -61,6 +61,7 @@ trust_level = "trusted"
 [desktop]
 followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
+defaultTerminalLocation = "bottom"
 
 [marketplaces.openai-bundled]
 last_updated = "2026-07-21T15:10:49Z"
