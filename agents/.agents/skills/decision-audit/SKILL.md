@@ -50,6 +50,9 @@ Audit
 ### Counterexample Considered
 - <case that could expose a locally correct but non-general solution>
 
+### Decisions I Made
+- <decision, short reason, and whether it is a root-cause fix or mitigation>
+
 ### Status
 <ready for review | ready with user-accepted risk | needs validation | needs user decision>
 
