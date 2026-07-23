@@ -39,7 +39,7 @@ Use this structure exactly:
 ```md
 Audit
 
-### Decisions I Made But 
+### Decisions I Made But You don't know
 - <decision, short reason, and whether it is a root-cause fix or mitigation>
 
 ### What I Am Not Sure About
