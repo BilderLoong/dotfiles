@@ -58,6 +58,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Projects/private-collection/Notes/EE"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/EE"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
