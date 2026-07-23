@@ -39,6 +39,8 @@ Use this structure exactly:
 ```md
 Audit
 
+### Decisions I Made
+- <decision, short reason, and whether it is a root-cause fix or mitigation>
 
 ### What I Am Not Sure About
 - <uncertainty, why it matters, and what could prove it wrong>
