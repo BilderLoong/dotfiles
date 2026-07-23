@@ -65,7 +65,7 @@ defaultTerminalLocation = "bottom"
 conversationDetailMode = "STEPS_COMMANDS"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-07-23T15:47:58Z"
+last_updated = "2026-07-23T15:48:01Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
