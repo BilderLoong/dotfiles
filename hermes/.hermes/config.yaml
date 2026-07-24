@@ -6,6 +6,40 @@ model:
 browser:
   cloud_provider: local
   use_gateway: false
+voice:
+  auto_tts: false
+moa:
+  presets:
+    default:
+      reference_models:
+        - provider: openai-codex
+          model: gpt-5.5
+          enabled: true
+        - provider: openrouter
+          model: deepseek/deepseek-v4-pro
+          enabled: true
+      aggregator:
+        model: deepseek/deepseek-v4-flash
+      degraded_reference_policy: loud
+      fanout: user_turn
+  reference_models:
+    - provider: openai-codex
+      model: gpt-5.5
+      enabled: true
+    - provider: openrouter
+      model: deepseek/deepseek-v4-pro
+      enabled: true
+  aggregator:
+    provider: openrouter
+    model: deepseek/deepseek-v4-flash
+  degraded_reference_policy: loud
+  max_tokens: 4096
+  fanout: user_turn
+  enabled: true
+onboarding:
+  seen:
+    busy_input_prompt: true
+    tool_progress_prompt: true
 _config_version: 33
 mcp_servers: {}
 platform_toolsets:
@@ -29,12 +63,6 @@ platform_toolsets:
 known_plugin_toolsets:
   cli:
     - spotify
-onboarding:
-  seen:
-    busy_input_prompt: true
-    tool_progress_prompt: true
-voice:
-  auto_tts: false
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
