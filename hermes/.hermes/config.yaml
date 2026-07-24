@@ -14,8 +14,8 @@ moa:
         - provider: opencode-go
           model: deepseek-v4-flash
           enabled: true
-        - provider: openrouter
-          model: deepseek/deepseek-v4-pro
+        - provider: opencode-go
+          model: deepseek-v4-flash
           enabled: true
       aggregator:
         model: deepseek/deepseek-v4-flash
@@ -25,8 +25,8 @@ moa:
     - provider: opencode-go
       model: deepseek-v4-flash
       enabled: true
-    - provider: openrouter
-      model: deepseek/deepseek-v4-pro
+    - provider: opencode-go
+      model: deepseek-v4-flash
       enabled: true
   aggregator:
     provider: openrouter
