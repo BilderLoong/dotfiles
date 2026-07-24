@@ -11,22 +11,22 @@ moa:
   presets:
     default:
       reference_models:
-        - provider: opencode-go
-          model: deepseek-v4-flash
+        - provider: openrouter
+          model: deepseek/deepseek-v4-flash
           enabled: true
-        - provider: opencode-go
-          model: deepseek-v4-flash
+        - provider: openrouter
+          model: deepseek/deepseek-v4-pro
           enabled: true
       aggregator:
         model: deepseek/deepseek-v4-flash
       degraded_reference_policy: loud
       fanout: user_turn
   reference_models:
-    - provider: opencode-go
-      model: deepseek-v4-flash
+    - provider: openrouter
+      model: deepseek/deepseek-v4-flash
       enabled: true
-    - provider: opencode-go
-      model: deepseek-v4-flash
+    - provider: openrouter
+      model: deepseek/deepseek-v4-pro
       enabled: true
   aggregator:
     provider: openrouter
@@ -62,6 +62,8 @@ platform_toolsets:
 known_plugin_toolsets:
   cli:
     - spotify
+agent:
+  reasoning_effort: high
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
