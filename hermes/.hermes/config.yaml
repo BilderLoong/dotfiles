@@ -10,7 +10,7 @@ browser:
 display:
   language: ja
 voice:
-  auto_tts: false
+  auto_tts: true
 moa:
   presets:
     default:
