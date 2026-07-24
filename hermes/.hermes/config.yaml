@@ -12,8 +12,8 @@ moa:
   presets:
     default:
       reference_models:
-        - provider: openai-codex
-          model: gpt-5.5
+        - provider: openrouter
+          model: deepseek/deepseek-v4-flash
           enabled: true
         - provider: openrouter
           model: deepseek/deepseek-v4-pro
@@ -23,8 +23,8 @@ moa:
       degraded_reference_policy: loud
       fanout: user_turn
   reference_models:
-    - provider: openai-codex
-      model: gpt-5.5
+    - provider: openrouter
+      model: deepseek/deepseek-v4-flash
       enabled: true
     - provider: openrouter
       model: deepseek/deepseek-v4-pro
