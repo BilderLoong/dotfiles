@@ -61,6 +61,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Projects/EE"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/dotfiles"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
