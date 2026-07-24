@@ -2,9 +2,13 @@ model:
   default: deepseek-v4-flash
   provider: opencode-go
   base_url: ''
+agent:
+  reasoning_effort: high
 browser:
   cloud_provider: local
   use_gateway: false
+display:
+  language: ja
 voice:
   auto_tts: false
 moa:
@@ -35,6 +39,31 @@ moa:
   max_tokens: 4096
   fanout: user_turn
   enabled: true
+skills:
+  disabled:
+    - airtable
+    - apple-notes
+    - ascii-video
+    - audiocraft-audio-generation
+    - baoyu-infographic
+    - comfyui
+    - docx
+    - findmy
+    - heartmula
+    - himalaya
+    - huggingface-hub
+    - imessage
+    - jupyter-live-kernel
+    - notion
+    - openhue
+    - petdex
+    - polymarket
+    - research-paper-writing
+    - songsee
+    - songwriting-and-ai-music
+    - teams-meeting-pipeline
+    - touchdesigner-mcp
+    - yuanbao
 onboarding:
   seen:
     busy_input_prompt: true
@@ -62,10 +91,6 @@ platform_toolsets:
 known_plugin_toolsets:
   cli:
     - spotify
-agent:
-  reasoning_effort: high
-display:
-  language: ja
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
