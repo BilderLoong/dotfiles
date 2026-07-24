@@ -64,6 +64,11 @@ skills:
     - teams-meeting-pipeline
     - touchdesigner-mcp
     - yuanbao
+  platform_disabled:
+    telegram:
+      - himalaya
+      - jupyter-live-kernel
+      - openhue
 onboarding:
   seen:
     busy_input_prompt: true
