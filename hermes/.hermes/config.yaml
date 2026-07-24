@@ -34,7 +34,7 @@ onboarding:
     busy_input_prompt: true
     tool_progress_prompt: true
 voice:
-  auto_tts: false
+  auto_tts: true
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
