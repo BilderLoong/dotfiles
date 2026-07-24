@@ -73,6 +73,7 @@ followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
 defaultTerminalLocation = "bottom"
 conversationDetailMode = "STEPS_COMMANDS"
+appearanceTheme = "system"
 
 [marketplaces.openai-bundled]
 last_updated = "2026-07-23T15:48:04Z"
