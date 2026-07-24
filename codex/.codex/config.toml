@@ -72,6 +72,11 @@ last_updated = "2026-07-23T15:48:04Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-07-24T07:44:30Z"
+source_type = "local"
+source = "/Users/birudo/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
 [mcp_servers.node_repl]
 args = []
 command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
