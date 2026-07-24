@@ -1,0 +1,35 @@
+model:
+  default: deepseek/deepseek-v4-flash
+  provider: openrouter
+  base_url: https://openrouter.ai/api/v1
+  api_mode: chat_completions
+browser:
+  cloud_provider: local
+  use_gateway: false
+_config_version: 33
+mcp_servers: {}
+platform_toolsets:
+  cli:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
+known_plugin_toolsets:
+  cli:
+    - spotify
+onboarding:
+  seen:
+    busy_input_prompt: true
+    tool_progress_prompt: true
