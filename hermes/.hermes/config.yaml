@@ -1,8 +1,7 @@
 model:
-  default: deepseek/deepseek-v4-flash
-  provider: openrouter
-  base_url: https://openrouter.ai/api/v1
-  api_mode: chat_completions
+  default: deepseek-v4-flash
+  provider: opencode-go
+  base_url: ''
 browser:
   cloud_provider: local
   use_gateway: false
