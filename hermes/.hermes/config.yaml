@@ -64,6 +64,8 @@ known_plugin_toolsets:
     - spotify
 agent:
   reasoning_effort: high
+display:
+  language: ja
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
