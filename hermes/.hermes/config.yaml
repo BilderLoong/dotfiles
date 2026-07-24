@@ -15,23 +15,23 @@ moa:
   presets:
     default:
       reference_models:
-        - provider: openrouter
-          model: deepseek/deepseek-v4-flash
-          enabled: true
-        - provider: openrouter
-          model: deepseek/deepseek-v4-pro
-          enabled: true
+      - provider: openrouter
+        model: deepseek/deepseek-v4-flash
+        enabled: true
+      - provider: openrouter
+        model: deepseek/deepseek-v4-pro
+        enabled: true
       aggregator:
         model: deepseek/deepseek-v4-flash
       degraded_reference_policy: loud
       fanout: user_turn
   reference_models:
-    - provider: openrouter
-      model: deepseek/deepseek-v4-flash
-      enabled: true
-    - provider: openrouter
-      model: deepseek/deepseek-v4-pro
-      enabled: true
+  - provider: openrouter
+    model: deepseek/deepseek-v4-flash
+    enabled: true
+  - provider: openrouter
+    model: deepseek/deepseek-v4-pro
+    enabled: true
   aggregator:
     provider: openrouter
     model: deepseek/deepseek-v4-flash
@@ -40,17 +40,39 @@ moa:
   fanout: user_turn
   enabled: true
 skills:
-  disabled: '["airtable", "apple-notes", "ascii-video", "audiocraft-audio-generation",
-    "baoyu-infographic", "comfyui", "docx", "evaluating-llms-harness", "findmy", "heartmula",
-    "himalaya", "huggingface-hub", "imessage", "jupyter-live-kernel", "llama-cpp",
-    "notion", "openhue", "petdex", "polymarket", "research-paper-writing", "serving-llms-vllm",
-    "songsee", "songwriting-and-ai-music", "teams-meeting-pipeline", "touchdesigner-mcp",
-    "weights-and-biases", "yuanbao"]'
+  disabled:
+  - airtable
+  - apple-notes
+  - ascii-video
+  - audiocraft-audio-generation
+  - baoyu-infographic
+  - comfyui
+  - docx
+  - evaluating-llms-harness
+  - findmy
+  - heartmula
+  - himalaya
+  - huggingface-hub
+  - imessage
+  - jupyter-live-kernel
+  - llama-cpp
+  - notion
+  - openhue
+  - petdex
+  - polymarket
+  - research-paper-writing
+  - serving-llms-vllm
+  - songsee
+  - songwriting-and-ai-music
+  - teams-meeting-pipeline
+  - touchdesigner-mcp
+  - weights-and-biases
+  - yuanbao
   platform_disabled:
     telegram:
-      - himalaya
-      - jupyter-live-kernel
-      - openhue
+    - himalaya
+    - jupyter-live-kernel
+    - openhue
 onboarding:
   seen:
     busy_input_prompt: true
@@ -59,22 +81,22 @@ _config_version: 33
 mcp_servers: {}
 platform_toolsets:
   cli:
-    - browser
-    - clarify
-    - code_execution
-    - computer_use
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - memory
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - computer_use
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
 known_plugin_toolsets:
   cli:
-    - spotify
+  - spotify
