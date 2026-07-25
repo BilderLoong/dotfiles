@@ -76,7 +76,7 @@ conversationDetailMode = "STEPS_COMMANDS"
 appearanceTheme = "system"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-07-25T14:25:30Z"
+last_updated = "2026-07-25T14:35:29Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
