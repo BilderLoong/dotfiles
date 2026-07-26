@@ -74,6 +74,7 @@ selected-avatar-id = "rocky"
 defaultTerminalLocation = "bottom"
 conversationDetailMode = "STEPS_COMMANDS"
 appearanceTheme = "system"
+realtimeVoiceScreenContextEnabled = true
 
 [marketplaces.openai-bundled]
 last_updated = "2026-07-26T07:05:17Z"
