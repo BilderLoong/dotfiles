@@ -47,9 +47,6 @@ enabled = true
 [plugins."sites@openai-bundled"]
 enabled = true
 
-[plugins."browser@openai-bundled"]
-enabled = true
-
 [projects."/Users/birudo/Projects/anki-feedback"]
 trust_level = "trusted"
 
@@ -83,7 +80,7 @@ appearanceTheme = "system"
 realtimeVoiceScreenContextEnabled = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-07-27T12:31:34Z"
+last_updated = "2026-07-27T13:23:30Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
