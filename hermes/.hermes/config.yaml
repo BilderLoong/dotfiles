@@ -42,6 +42,8 @@ moa:
   fanout: user_turn
   enabled: true
 skills:
+  external_dirs:
+    - ~/.agents/skills
   disabled: '["airtable", "apple-notes", "ascii-video", "audiocraft-audio-generation",
     "baoyu-infographic", "comfyui", "docx", "evaluating-llms-harness", "findmy", "heartmula",
     "himalaya", "huggingface-hub", "imessage", "jupyter-live-kernel", "llama-cpp",
