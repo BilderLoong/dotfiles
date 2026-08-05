@@ -42,14 +42,12 @@ moa:
   fanout: user_turn
   enabled: true
 skills:
-  disabled:
-    - '["airtable", "apple-notes", "ascii-video", "audiocraft-audio-generation", "baoyu-infographic",
-      "comfyui", "docx", "evaluating-llms-harness", "findmy", "heartmula", "himalaya",
-      "huggingface-hub", "imessage", "jupyter-live-kernel", "llama-cpp", "notion",
-      "openhue", "petdex", "polymarket", "research-paper-writing", "serving-llms-vllm",
-      "songsee", "songwriting-and-ai-music", "teams-meeting-pipeline", "touchdesigner-mcp",
-      "weights-and-biases", "yuanbao"]'
-    - polymarket
+  disabled: '["airtable", "apple-notes", "ascii-video", "audiocraft-audio-generation",
+    "baoyu-infographic", "comfyui", "docx", "evaluating-llms-harness", "findmy", "heartmula",
+    "himalaya", "huggingface-hub", "imessage", "jupyter-live-kernel", "llama-cpp",
+    "notion", "openhue", "petdex", "polymarket", "research-paper-writing", "serving-llms-vllm",
+    "songsee", "songwriting-and-ai-music", "teams-meeting-pipeline", "touchdesigner-mcp",
+    "weights-and-biases", "yuanbao"]'
   platform_disabled:
     telegram:
       - himalaya
