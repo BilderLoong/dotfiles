@@ -77,6 +77,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Projects/Pain-Research"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/yomitan-dictionary"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
