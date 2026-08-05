@@ -15,9 +15,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/skills.git",
       "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
       "installedAt": "2026-01-28T06:41:17.423Z",
-      "updatedAt": "2026-01-28T06:41:17.423Z"
+      "updatedAt": "2026-08-05T07:10:52.366Z"
     },
     "ripgrep": {
       "source": "ratacat/claude-skills",
@@ -57,46 +57,22 @@
       "installedAt": "2026-05-21T02:45:21.556Z",
       "updatedAt": "2026-05-21T02:45:21.556Z"
     },
-    "test-driven-development": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "ref": "main",
-      "skillPath": "skills/test-driven-development/SKILL.md",
-      "skillFolderHash": "98904a7d8e0e04b9bd46220b9b17298f45fe0b72",
-      "installedAt": "2026-05-23T08:09:33.445Z",
-      "updatedAt": "2026-05-23T08:09:33.445Z"
-    },
     "handoff": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "ref": "main",
       "skillPath": "skills/productivity/handoff/SKILL.md",
-      "skillFolderHash": "7bbb60d64c911617cee7f71b2ba9e24364faa14e",
+      "skillFolderHash": "184d485ae68a2132893a94239b2b85d253e6152b",
       "installedAt": "2026-06-06T04:33:08.470Z",
-      "updatedAt": "2026-06-06T04:33:08.470Z"
+      "updatedAt": "2026-08-05T07:11:00.196Z"
     }
   },
   "dismissed": {
     "findSkillsPrompt": true
   },
   "lastSelectedAgents": [
-    "amp",
-    "antigravity",
-    "antigravity-cli",
-    "cline",
-    "codex",
-    "cursor",
-    "deepagents",
-    "gemini-cli",
-    "github-copilot",
-    "kimi-code-cli",
-    "opencode",
-    "warp",
-    "zed",
     "claude-code",
-    "windsurf",
-    "hermes-agent"
+    "pi"
   ]
 }
