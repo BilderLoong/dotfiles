@@ -41,6 +41,12 @@ HYPHEN_INSENSITIVE="true"
 
 export EDITOR='nvim'
 
+# Proxy
+export http_proxy="http://127.0.0.1:7897"
+export https_proxy="http://127.0.0.1:7897"
+export all_proxy="socks5://127.0.0.1:7897"
+export no_proxy="localhost,127.0.0.1,::1"
+
 source "$ZSH_CUSTOM/setup_zinit.sh"
 
 # If the system is running on termux.
