@@ -23,7 +23,7 @@
 
 ZSH_CUSTOM="$HOME/zsh/custom"
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#user-config
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -56,8 +56,5 @@ fi
 
 # Need to be sourced synchronously.
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
-
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # zprof
