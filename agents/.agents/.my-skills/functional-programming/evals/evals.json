@@ -1,0 +1,55 @@
+{
+  "skill_name": "functional-programming",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a TypeScript function that takes an array of users (each has: id, name, email, role, active boolean). Return an object where keys are role names and values are arrays of active users sorted by name. Make it production quality.",
+      "expected_output": "Uses filter + map + reduce (or groupBy), no for/while loops, no mutation (no push/sort in-place), pure function returning new data, uses const not let",
+      "files": [],
+      "assertions": [
+        {"name": "no-for-or-while-loops", "description": "Code must not contain for, while, or do...while loops"},
+        {"name": "no-mutating-methods", "description": "Code must not use mutating array methods: push, pop, splice, sort, reverse"},
+        {"name": "uses-declarative-array-methods", "description": "Code must use at least one of filter, map, or reduce"},
+        {"name": "pure-core-function", "description": "Main transformation function is pure — takes array param, returns new data"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a simple User class in TypeScript. It should have properties for id, name, email and methods to updateEmail(newEmail) and updateName(newName). Also a method to serialize to JSON.",
+      "expected_output": "Rejects OOP approach, uses plain interface/type with standalone pure functions returning new objects (spread), no class/this/extends, no mutation of input",
+      "files": [],
+      "assertions": [
+        {"name": "no-class-keyword", "description": "Code must not contain the 'class' keyword"},
+        {"name": "no-this-keyword", "description": "Code must not use the 'this' keyword"},
+        {"name": "no-void-mutations", "description": "Update functions must return a value, not void"},
+        {"name": "uses-spread-for-update", "description": "Update functions must use object spread to return new instances"},
+        {"name": "has-plain-interface-or-type", "description": "Code must define a plain User interface or type"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write a TypeScript function that fetches a user config from an API endpoint, parses the JSON response, and handles all error cases (network failure, invalid JSON, missing required fields). The function should be callable from a React component.",
+      "expected_output": "Uses Result/Either pattern (discriminated union) for error handling, isolates side effects (fetch) to edge, core parsing logic is pure, no throw for control flow, no try/catch wrapping business logic",
+      "files": [],
+      "assertions": [
+        {"name": "has-discriminated-union-result", "description": "Code must define a discriminated union Result type (ok: true/false pattern)"},
+        {"name": "no-throw-in-validation", "description": "Validation functions must not throw for control flow"},
+        {"name": "parse-returns-result-not-throws", "description": "JSON parse function must return a Result, not throw to caller"},
+        {"name": "fetch-isolated-to-edge", "description": "Only the main fetch function contains the fetch call"},
+        {"name": "no-for-loop-in-validation", "description": "Validation logic uses declarative style (map/find/every), not for/while loops"}
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I have this TypeScript code that updates a user's address nested inside a state object. Rewrite it to be cleaner:\n\nlet state = getCurrentState();\nstate.user.address.street = '123 Main St';\nstate.user.address.city = 'Springfield';\nstate.updatedAt = Date.now();\nreturn state;",
+      "expected_output": "Uses immutable updates with spread operator at each nested level, returns new object, no direct property mutation, isolates Date.now() side effect or passes timestamp as parameter",
+      "files": [],
+      "assertions": [
+        {"name": "no-direct-property-mutation", "description": "Code must not directly assign to nested properties on existing objects"},
+        {"name": "uses-spread-for-nested-update", "description": "Code must use spread operator at each nested level"},
+        {"name": "no-let-binding", "description": "Code must not use let — prefer const"},
+        {"name": "side-effect-isolated", "description": "Date.now() is isolated — passed as parameter or called at the edge"}
+      ]
+    }
+  ]
+}
