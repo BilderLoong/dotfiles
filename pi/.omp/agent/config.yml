@@ -1,0 +1,60 @@
+providers: 
+  webSearchOrder: 
+    []
+modelRoles: 
+  default: opencode-go/deepseek-v4-flash:max
+  advisor: opencode-go/deepseek-v4-flash:max
+symbolPreset: nerd
+theme: 
+  dark: nord-readable
+  light: dark-nord
+setupVersion: 1
+colorBlindMode: false
+statusLine: 
+  compactThinkingLevel: true
+terminal: 
+  showProgress: true
+tui: 
+  codexResetFireworks: true
+  tight: true
+display: 
+  showTokenUsage: true
+task: 
+  showResolvedModelBadge: false
+  enableLsp: true
+  prewalk: false
+memory: 
+  backend: hindsight
+hindsight: 
+  apiUrl: http://localhost:8888
+autolearn: 
+  enabled: true
+  autoContinue: true
+plan: 
+  defaultOnStartup: false
+astGrep: 
+  enabled: true
+computer: 
+  enabled: true
+checkpoint: 
+  enabled: true
+github: 
+  enabled: true
+security: 
+  enabled: true
+read: 
+  renderMarkdown: true
+lsp: 
+  formatOnWrite: true
+  diagnosticsOnEdit: true
+defaultThinkingLevel: max
+compaction: 
+  idleEnabled: true
+contextPromotion: 
+  enabled: false
+skills: 
+  enableClaudeUser: false
+  enableClaudeProject: false
+  enableCodexUser: false
+  enablePiUser: false
+  enablePiProject: false
