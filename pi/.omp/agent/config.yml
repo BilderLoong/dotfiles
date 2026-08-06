@@ -55,3 +55,6 @@ contextPromotion:
 skills: 
   enablePiUser: true
   enablePiProject: true
+  enableClaudeUser: false
+  enableClaudeProject: false
+  enableCodexUser: false
