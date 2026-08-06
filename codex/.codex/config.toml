@@ -80,6 +80,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Projects/yomitan-dictionary"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Documents/Codex/2026-08-06/the-chrome-mcp-was-unavailable-because"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "queue"
 selected-avatar-id = "rocky"
