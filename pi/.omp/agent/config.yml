@@ -53,8 +53,5 @@ compaction:
 contextPromotion: 
   enabled: false
 skills: 
-  enableClaudeUser: false
-  enableClaudeProject: false
-  enableCodexUser: false
-  enablePiUser: false
-  enablePiProject: false
+  enablePiUser: true
+  enablePiProject: true
