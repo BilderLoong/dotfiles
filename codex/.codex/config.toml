@@ -50,6 +50,9 @@ enabled = true
 [plugins."browser@openai-bundled"]
 enabled = true
 
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
 [projects."/Users/birudo/Projects/anki-feedback"]
 trust_level = "trusted"
 
