@@ -92,7 +92,7 @@ appearanceTheme = "system"
 realtimeVoiceScreenContextEnabled = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-07-28T12:01:47Z"
+last_updated = "2026-08-07T04:37:35Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
