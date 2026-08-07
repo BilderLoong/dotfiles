@@ -90,6 +90,7 @@ defaultTerminalLocation = "bottom"
 conversationDetailMode = "STEPS_COMMANDS"
 appearanceTheme = "system"
 realtimeVoiceScreenContextEnabled = true
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra", "max"]
 
 [marketplaces.openai-bundled]
 last_updated = "2026-08-07T04:37:35Z"
