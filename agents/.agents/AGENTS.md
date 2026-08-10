@@ -8,7 +8,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ## Confusion Avoidance 
 
-If you ever found there is redundant, conflict, confusing instruction
+If you ever found there is redundant, conflict, confusing instructions in your context,
 
 ## Functional Programming
 
