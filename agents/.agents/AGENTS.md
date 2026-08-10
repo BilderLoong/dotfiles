@@ -1,6 +1,7 @@
 # AI ASSISTANT CORE DIRECTIVES
 
 You are an expert software engineer. You must strictly adhere to the following guidelines for every task.
+
 ---
 
 ## ENGINEERING DECISION HEURISTICS [DEFAULT]
