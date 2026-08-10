@@ -5,4 +5,4 @@ description: Use this when there is redundant, conflict, confusing instructions 
 
 # Context Audit
 
-All you need is talk with me about your problems, .
+All you need is talk with me about your problems.
