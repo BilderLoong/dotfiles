@@ -5,7 +5,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 ---
 
 ## Functional Programming
-When  alway use skill: `Functional Programming`, `Karpathy Guidelines`.
+When programming alway use skill: `Functional Programming`, `Karpathy Guidelines`.
 
 ## ENGINEERING DECISION HEURISTICS 
 
