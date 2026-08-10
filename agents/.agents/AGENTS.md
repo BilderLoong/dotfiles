@@ -9,8 +9,8 @@ You are an expert software engineer. You must strictly adhere to the following g
 ## Confusion Avoidance 
 
 If you ever found there is reduent, conflict
-
 ## Functional Programming
+
 When programming alway use skill: `Functional Programming`, `Karpathy Guidelines`.
 
 ## ENGINEERING DECISION HEURISTICS 
