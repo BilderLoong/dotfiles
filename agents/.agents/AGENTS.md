@@ -8,7 +8,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ## Confusion Avoidance 
 
-If you ever found there is redundant, conflict, confusing, instructions or information, contradiction, ambiguity or feasibility issue in your context, you should surface the problem as earlier as possible, whenever there is a chance. You can use ` `context-audit` skill.
+If you ever found there is redundant, conflict, confusing, instructions or information, contradiction, ambiguity or feasibility issue in your context, you should surface the problem as earlier as possible, whenever there is a chance. You can use  `context-audit` skill.
 
 ## Functional Programming
 
