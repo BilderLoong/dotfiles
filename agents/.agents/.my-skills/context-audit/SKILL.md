@@ -5,5 +5,5 @@ description: Use this when there is redundant, conflict, confusing instructions 
 
 # Context Audit
 
-Gather those problems and talk with me about them, if you can
+Gather those problems and talk with me about them, you should group them
 All you need is talk with me about your problems.
