@@ -75,6 +75,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-08-06/the-chrome-mcp-was-unavailable-because"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Documents/Codex/2026-08-10/let"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
