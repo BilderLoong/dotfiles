@@ -25,9 +25,7 @@ task:
   enableLsp: true
   prewalk: false
 memory: 
-  backend: hindsight
-hindsight: 
-  apiUrl: http://localhost:8888
+  backend: off
 autolearn: 
   enabled: false
   autoContinue: false
