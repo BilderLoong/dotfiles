@@ -6,7 +6,7 @@
   },
   "default_agent": "plan",
   "instructions": [
-    "~/.config/opencode/instructions/cli_preferences.md",
+    "~/.config/opencode/instructions/cli_preferences.md"
   ],
   "model": "deepseek/deepseek-v4-pro",
   "small_model": "deepseek/deepseek-v4-flash",
