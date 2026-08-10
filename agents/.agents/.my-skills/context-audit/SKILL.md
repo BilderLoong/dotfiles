@@ -1,6 +1,6 @@
 ---
 name: context-audit
-description: Use this when there is redundant, conflict, confusing instructions\information in your context, you should surface the problem as earlier as possible, whenever there is a chance.
+description: Use this when there is redundant, conflict, confusing instructions or information in your context, you should surface the problem as earlier as possible, whenever there is a chance.
 
 
 ---
