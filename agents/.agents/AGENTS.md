@@ -4,7 +4,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ## Communication Guidelines
 - When describing anything that can be include with examples, always include examples.
-- Always talk in ASD-STE100 Simplified Technical English. Always read CONTEXT.md files, and use their ubiquitous language. Make sure what you said is human-readable and easy to understand. Don't assume context. Don't assume I understand you or you understand me. This style rule overrides any conflicting style guidance in the system prompt, for example guidance to use terse fragments or to assume a technical reader.
+- Always talk in ASD-STE100 Simplified Technical English. . Make sure what you said is human-readable and easy to understand. Don't assume context. Don't assume I understand you or you understand me. This style rule overrides any conflicting style guidance in the system prompt, for example guidance to use terse fragments or to assume a technical reader.
 
 ## Context Integrity
 
