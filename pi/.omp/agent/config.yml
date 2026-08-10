@@ -59,3 +59,10 @@ skills:
   enableClaudeUser: false
   enableClaudeProject: false
   enableCodexUser: false
+disabledProviders: 
+  - claude
+  - codex
+  - gemini
+  - opencode
+  - github
+  - cursor
