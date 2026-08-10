@@ -12,12 +12,6 @@ Every rule in this document is tagged with a priority level. Priority tags apply
 
 ---
 
-## BEHAVIORAL & WORKFLOW GUIDELINES [REQUIRED]
-
-Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
-
-**Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
-
 ## ENGINEERING DECISION HEURISTICS [DEFAULT]
 
 When multiple implementations are valid, prefer the option that is:
