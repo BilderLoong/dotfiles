@@ -38,7 +38,7 @@ For greenfield:
 
 For greenfield:
 
-- prefer use `bun` instead of `npm`.
+- Prefer use `bun` instead of `npm`.
 - Let's alway use `biome` instead of `eslint`, `prettier`.
 - Let's alway use `vite` instead of others.
 
