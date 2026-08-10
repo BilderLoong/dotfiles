@@ -1,5 +1,5 @@
 ---
-name: decision-audit
+name: context-audit
 description: Use after making a material implementation decision, when uncertain about a choice, when requirements or authority are missing, when a fix may be case-specific, or before declaring work complete, requesting review, committing, merging, or archiving a change.
 ---
 
