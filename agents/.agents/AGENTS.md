@@ -18,7 +18,7 @@ When multiple implementations are valid, prefer the option that is:
 
 - **Organize by Feature, Not Layer:** 
   - Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
-  - * Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
+  - Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
 
 ## MISC
 
