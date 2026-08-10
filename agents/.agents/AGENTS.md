@@ -28,49 +28,6 @@ When multiple implementations are valid, prefer the option that is:
 5. Easier to change later
 6. Smaller in surface area
 
-## FUNCTIONAL PROGRAMMING PARADIGM
-
-- **Pure Functions & Side Effects:**
-  - **[REQUIRED]** Core logic must have zero side effects. 
-  - **[REQUIRED]** Isolate unavoidable side effects (I/O, DOM manipulation, time, randomness) to the absolute edges of the system.
-  - **[DEFAULT]** Write deterministic functions that yield the same output for the same input.
-- **Immutability:**
-  - **[REQUIRED]** Never mutate existing data structures. Operations that alter data must return a newly constructed instance.
-- **Function Composition & Declarative Style:**
-  - **[DEFAULT]** Describe *what* to achieve rather than *how*. Use higher-order functions (`map`, `filter`, `reduce`) over explicit `for`/`while` loops.
-  - **[OPTIONAL]** Use currying, partial application, and data-last function signatures where they improve composability.
-  - **[OPTIONAL]** Prefer expression-oriented programming (e.g., ternaries or pattern matching) over statement-based execution (if/else blocks).
-- **Data over Objects (No OOP):**
-  - **[DEFAULT]** Do not use classes, inheritance, encapsulation, or the `this` keyword. *(Exception: when strictly mandated by a framework lifecycle or library).*
-  - **[DEFAULT]** Keep data structures plain and distinct from the functions that transform them. Think in pipelines, not objects.
-- **Algebraic Data Types & Error Handling:**
-  - **[REQUIRED]** Model domain states explicitly.
-  - **[DEFAULT]** Return errors as values (e.g., `Result` or `Either` patterns) rather than throwing and catching exceptions for expected control flow.
-
-## CODE QUALITY & STANDARDS
-
-- **Simplicity First:**
-  - **[REQUIRED]** Single Responsibility: Each function should have a single clear responsibility.
-  - **[DEFAULT]** Prefer slight duplication over the wrong abstraction. Abstract only after a clear, stable pattern emerges multiple times. 
-  - **[REQUIRED]** YAGNI (You Ain't Gonna Need It): Do not build features or abstractions "just in case."
-- **Readability & Maintainability:**
-  - **[REQUIRED]** Prefer clarity over cleverness. Avoid dense abstractions, excessive indirection, and overly generic utilities.
-  - **[DEFAULT]** Optimize for code that a teammate can quickly understand, debug, and safely modify.
-- **PERFORMANCE**
-  - **[DEFAULT]** Optimize only when performance constraints are known, profiling identifies a bottleneck, or the cost is obviously significant.
-  - **[DEFAULT]** Do not sacrifice readability, correctness, or maintainability for speculative micro-optimizations.
-- **Strict, Explicit Typing:**
-  - **[REQUIRED]** Explicitly type all function arguments and return values. 
-  - **[REQUIRED]** Avoid overly broad types unless they are genuinely required by the interface or framework.
-  - **[DEFAULT]** Define specific shapes for all data structures (e.g., TS `interface` or Python `TypedDict`/`dataclasses`).
-- **Self-Documenting Code:**
-  - **[REQUIRED]** Code must explain *what* it is doing through clear variable and function names.
-  - **[REQUIRED]** Use inline comments exclusively to explain *why* a non-obvious decision was made. 
-  - **[DEFAULT]** Use standard docstrings or API documentation formats for public modules and functions.
-- **Tooling & Error Handling:**
-  - **[REQUIRED]** Code must pass standard formatters and linters for the target language.
-  - **[REQUIRED]** Do not swallow errors silently.
-
 ## DOMAIN-DRIVEN ARCHITECTURE
 
 - **Organize by Feature, Not Layer:** 
