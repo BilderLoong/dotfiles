@@ -61,6 +61,10 @@ zinit wait"0a" lucid for \
         atclone'opencode completion > _opencode' \
         atpull'%atclone' run-atpull \
         zdharma-continuum/null \
+    has'omp' id-as'omp-completions' as'completion' nocompile \
+        atclone'omp completions zsh > _omp' \
+        atpull'%atclone' run-atpull \
+        zdharma-continuum/null \
     has'uv' id-as'uv-completions' as'completion' nocompile \
         atclone'uv generate-shell-completion zsh > _uv' \
         atpull'%atclone' run-atpull \

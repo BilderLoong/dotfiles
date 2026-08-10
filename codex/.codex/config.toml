@@ -1,35 +1,24 @@
 personality = "pragmatic"
 model = "gpt-5.6-luna"
-model_reasoning_effort = "max"
+model_reasoning_effort = "xhigh"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 service_tier = "default"
 
 [agents]
 default_subagent_model = "gpt-5.6-luna"
-default_subagent_reasoning_effort = "high"
+default_subagent_reasoning_effort = "max"
 
 [features]
 js_repl = false
 memories = true
+default_mode_request_user_input = true
 
 [memories]
 generate_memories = true
 use_memories = true
 disable_on_external_context = true
 
-[plugins."code-simplifier@claude-plugins-official"]
-enabled = true
-[plugins."commit-commands@claude-plugins-official"]
-enabled = true
-[plugins."context7@claude-plugins-official"]
-enabled = true
-[plugins."explanatory-output-style@claude-plugins-official"]
-enabled = true
-[plugins."frontend-design@claude-plugins-official"]
-enabled = true
-[plugins."learning-output-style@claude-plugins-official"]
-enabled = true
 [plugins."superpowers@claude-plugins-official"]
 enabled = true
 [plugins."documents@openai-primary-runtime"]
@@ -87,16 +76,19 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [desktop]
-followUpQueueMode = "queue"
+followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
 defaultTerminalLocation = "bottom"
 conversationDetailMode = "STEPS_COMMANDS"
 appearanceTheme = "system"
 realtimeVoiceScreenContextEnabled = true
 enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra", "max"]
+show-context-window-usage = true
+composerEnterBehavior = "cmdAlways"
+preventSleepWhileRunning = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-08-07T04:37:35Z"
+last_updated = "2026-08-08T15:28:40Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
@@ -123,6 +115,7 @@ NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunct
 NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
 BROWSER_USE_CODEX_APP_VERSION = "26.803.41515"
+SKY_CUA_SERVICE_PATH = "/Users/birudo/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
 [mcp_servers.computer-use]

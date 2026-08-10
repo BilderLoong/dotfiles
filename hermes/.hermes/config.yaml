@@ -25,6 +25,7 @@ moa:
           enabled: true
       aggregator:
         model: deepseek/deepseek-v4-flash
+      enabled: false
       degraded_reference_policy: loud
       fanout: user_turn
   reference_models:
@@ -40,7 +41,7 @@ moa:
   degraded_reference_policy: loud
   max_tokens: 4096
   fanout: user_turn
-  enabled: true
+  enabled: false
 skills:
   external_dirs:
     - ~/.agents/skills

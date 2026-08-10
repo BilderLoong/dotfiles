@@ -1,60 +1,61 @@
-providers:
-  webSearchOrder: []
-modelRoles:
+providers: 
+  webSearchOrder: 
+    []
+modelRoles: 
   default: opencode-go/deepseek-v4-flash:max
   advisor: opencode-go/deepseek-v4-flash:max
+  vision: openai-codex/gpt-5.6-luna
 symbolPreset: nerd
-theme:
+theme: 
   dark: nord-readable
   light: dark-nord
 setupVersion: 1
 colorBlindMode: false
-statusLine:
+statusLine: 
   compactThinkingLevel: true
-terminal:
+terminal: 
   showProgress: true
-tui:
+tui: 
   codexResetFireworks: true
   tight: true
-display:
+display: 
   showTokenUsage: true
-task:
+task: 
   showResolvedModelBadge: false
   enableLsp: true
   prewalk: false
-memory:
+memory: 
   backend: hindsight
-hindsight:
+hindsight: 
   apiUrl: http://localhost:8888
-autolearn:
+autolearn: 
   enabled: true
   autoContinue: true
-plan:
+plan: 
   defaultOnStartup: false
-astGrep:
+astGrep: 
   enabled: true
-computer:
+computer: 
   enabled: true
-checkpoint:
+checkpoint: 
   enabled: true
-github:
+github: 
   enabled: true
-security:
+security: 
   enabled: true
-read:
+read: 
   renderMarkdown: true
-lsp:
+lsp: 
   formatOnWrite: true
   diagnosticsOnEdit: true
-defaultThinkingLevel: max
-compaction:
+defaultThinkingLevel: auto
+compaction: 
   idleEnabled: true
-contextPromotion:
+contextPromotion: 
   enabled: false
-skills:
+skills: 
   enablePiUser: true
   enablePiProject: true
   enableClaudeUser: false
   enableClaudeProject: false
   enableCodexUser: false
-

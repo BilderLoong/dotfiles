@@ -25,7 +25,7 @@ Every plugin falls into one of 7 types. Find your type, copy the pattern, put it
 
 ### Type A — Completion from stdout
 
-Tool outputs `#compdef TOOL` to stdout. **Examples:** ast-grep, poetry, opencode, uv.
+Tool outputs `#compdef TOOL` to stdout. **Examples:** ast-grep, omp, opencode, poetry, uv.
 
 ```zsh
 has'TOOL' id-as'TOOL-completions' as'completion' nocompile \
