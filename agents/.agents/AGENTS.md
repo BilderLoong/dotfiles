@@ -8,7 +8,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ## Confusion Avoidance 
 
-If you ever found there is redundant, conflict, confusing, Contradiction, instructions or information in your context, you should surface the problem as earlier as possible, whenever there is a chance.
+If you ever found there is redundant, conflict, confusing, contradiction, instructions or information in your context, you should surface the problem as earlier as possible, whenever there is a chance.
 
 ## Functional Programming
 
