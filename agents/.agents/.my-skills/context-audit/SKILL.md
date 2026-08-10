@@ -3,7 +3,7 @@ name: context-audit
 description: Use this when there is redundant, conflict, confusing instructions or information in your context.
 ---
 
-# Contex Audit
+# Context Audit
 
 Before declaring a task complete, report the material decisions made and
 what remains uncertain. Audit choices, not the full diff.
