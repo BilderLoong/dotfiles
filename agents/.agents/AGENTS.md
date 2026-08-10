@@ -32,7 +32,7 @@ When multiple implementations are valid, prefer the option that is:
 
 For greenfield:
 
-- Let's alway use `uv` instead of `pip` or other.
+- Let's alway use `uv` instead of `pip` or other old tools.
 
 ## JavaScript
 
