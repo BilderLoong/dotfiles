@@ -34,7 +34,7 @@ For greenfield:
 
 - Let's alway use `uv` instead of `pip` or other old tools.
 
-##$ JavaScript
+### JavaScript
 
 For greenfield:
 
