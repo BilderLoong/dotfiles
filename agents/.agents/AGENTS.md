@@ -4,7 +4,7 @@ You are an expert software engineer. You must strictly adhere to the following g
 
 ---
 
-## 
+## Functional Programming
 
 ## ENGINEERING DECISION HEURISTICS 
 
