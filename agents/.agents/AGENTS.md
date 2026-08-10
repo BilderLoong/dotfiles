@@ -17,7 +17,7 @@ When multiple implementations are valid, prefer the option that is:
 ## DOMAIN-DRIVEN ARCHITECTURE
 
 - **Organize by Feature, Not Layer:** 
-  - *** Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
+  - Group code by domain (e.g., `user`, `auth`, `payment`) rather than technical layers (`controllers`, `services`, `models`). 
   - **[DEFAULT]** Keep related domain logic colocated where practical, but avoid rigid folder structures when the project already follows a different convention.
   - **[DEFAULT]** Extract code into shared technical layers (e.g., `utils`, `data-access`) *only* when the exact same functionality is required across multiple distinct domains.
 
