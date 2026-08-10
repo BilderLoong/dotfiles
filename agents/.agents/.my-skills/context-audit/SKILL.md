@@ -1,6 +1,8 @@
 ---
 name: context-audit
-description: Use this when there is 
+description: Use this when there is there is redundant, conflict, confusing instructions\information in your context, you should surface the problem as earlier as possible, whenever there is a chance.
+
+
 ---
 
 # Decision Audit
