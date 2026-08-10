@@ -76,6 +76,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-08-10/let"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Documents/Codex/2026-08-10/is"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
