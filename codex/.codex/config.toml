@@ -19,8 +19,6 @@ generate_memories = true
 use_memories = true
 disable_on_external_context = true
 
-[plugins."superpowers@claude-plugins-official"]
-enabled = true
 [plugins."documents@openai-primary-runtime"]
 enabled = true
 [plugins."spreadsheets@openai-primary-runtime"]
