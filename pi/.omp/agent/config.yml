@@ -29,8 +29,8 @@ memory:
 hindsight: 
   apiUrl: http://localhost:8888
 autolearn: 
-  enabled: true
-  autoContinue: true
+  enabled: false
+  autoContinue: false
 plan: 
   defaultOnStartup: false
 astGrep: 
