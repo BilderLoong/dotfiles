@@ -24,7 +24,7 @@ When multiple implementations are valid, prefer the option that is:
 
 - When using SUBAGENTs, you must ensure that the subagent also follows the same directives outlined in this document. You are responsible for the output of the subagent and must review its work to ensure it meets these standards. You can tell the subagent to "follow the same directives as outlined in this document" to ensure consistency across all agents involved in the task.
 
-- When introduce any tools or init projects you should use the scaffolders instead of hand-written setup.
+- When introduce any tools or init projects you should invisgate the scaffolders instead of hand-written setup.
 
 ## Default tools choice
 
