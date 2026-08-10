@@ -30,7 +30,7 @@ When multiple implementations are valid, prefer the option that is:
 
 ### Python
 
-For greenfield:
+When greenfield:
 
 - Let's alway use `uv` instead of `pip` or other old tools.
 
