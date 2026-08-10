@@ -12,7 +12,7 @@ If you ever found there is redundant, conflict, confusing instructions in your c
 
 ## Functional Programming
 
-When programming alway use skill: `Functional Programming`, `Karpathy Guidelines`.
+When programming alway take a look skill: `Functional Programming`, `Karpathy Guidelines`.
 
 ## ENGINEERING DECISION HEURISTICS 
 
