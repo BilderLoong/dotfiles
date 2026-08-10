@@ -181,6 +181,27 @@ stow -n -R <pkg> -t ~    # what would restow do?
 
 ---
 
+### 10. Single-source shared config across packages (agent AGENTS.md pattern)
+
+One canonical file consumed by multiple stow packages (e.g. one AGENTS.md for Claude Code + Codex + OpenCode). Do NOT duplicate content per package.
+
+```bash
+# 1. Canonical file lives inside one package: agents/.agents/AGENTS.md  → stows to ~/.agents/AGENTS.md
+# 2. Other packages' entry points become repo-internal symlinks to it:
+ln -sf ../../agents/.agents/AGENTS.md    claude/.claude/CLAUDE.md        # stows to ~/.claude/CLAUDE.md
+ln -sf ../../agents/.agents/AGENTS.md    codex/.codex/AGENTS.md          # stows to ~/.codex/AGENTS.md
+ln -sf ../../../agents/.agents/AGENTS.md opencode/.config/opencode/AGENTS.md
+```
+
+- Stowed links chain: `~/.claude/CLAUDE.md → dotfiles/claude/.claude/CLAUDE.md → dotfiles/agents/.agents/AGENTS.md`. Edit the canonical file once → all agents.
+- Repo-relative symlinks survive `git clone` on any machine (portable). Root-level `AGENTS.md` file in the repo also works and is skipped by `stow */`.
+- All major agent CLIs (Claude Code, Codex, OpenCode) follow symlinked rule files; only Claude Code additionally supports `@path` imports (Codex/OpenCode read plain content — symlinks are the cross-agent mechanism).
+- Verify with `readlink -f ~/.claude/CLAUDE.md ...` (all resolve to the canonical file) — no `stow -R` needed, stowed links still point at the same repo paths.
+
+## Pitfall: package contains a dangling tracked symlink → stow aborts
+
+`stow <pkg>` fails with `existing target is not owned by stow` when a tracked symlink in the package (e.g. `agents/.claude/skills → ../.agents/skills`) has a dead target AND a real file/symlink occupies the target path (created by another tool, e.g. the agents installer). Fix: remove the dead link from the package (`git rm <pkg>/<path>`, `rmdir` parents) — reversible via git history; the target-side file is untouched. Check with `git ls-files <pkg>` — an apparently-empty dir may actually be a tracked dangling symlink.
+
 ## Special Cases
 
 ### Rime on macOS
