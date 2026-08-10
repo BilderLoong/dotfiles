@@ -194,6 +194,7 @@ ln -sf ../../../agents/.agents/AGENTS.md opencode/.config/opencode/AGENTS.md
 ```
 
 - Stowed links chain: `~/.claude/CLAUDE.md → dotfiles/claude/.claude/CLAUDE.md → dotfiles/agents/.agents/AGENTS.md`. Edit the canonical file once → all agents.
+- Pi family (oh-my-pi fork + legacy pi): omp reads `~/.omp/agent/AGENTS.md` (native "builtin" provider, user-level every session) and ALSO inherits via its claude/codex/opencode compat providers reading the user-level files above; legacy pi (pi-mono) reads `~/.pi/agent/AGENTS.md` (from `getAgentDir()`). All three paths can be repo-internal symlinks in the `pi/` package: `pi/.omp/agent/AGENTS.md → ../../../agents/.agents/AGENTS.md`, `pi/.pi/agent/AGENTS.md → ../../../agents/.agents/AGENTS.md`.
 - Repo-relative symlinks survive `git clone` on any machine (portable). Root-level `AGENTS.md` file in the repo also works and is skipped by `stow */`.
 - All major agent CLIs (Claude Code, Codex, OpenCode) follow symlinked rule files; only Claude Code additionally supports `@path` imports (Codex/OpenCode read plain content — symlinks are the cross-agent mechanism).
 - Verify with `readlink -f ~/.claude/CLAUDE.md ...` (all resolve to the canonical file) — no `stow -R` needed, stowed links still point at the same repo paths.
