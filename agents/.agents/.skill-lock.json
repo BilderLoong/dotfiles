@@ -68,6 +68,7 @@
     "warp",
     "zed",
     "claude-code",
-    "pi"
+    "pi",
+    "hermes-agent"
   ]
 }
