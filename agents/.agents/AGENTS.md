@@ -18,7 +18,6 @@ Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-s
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
-
 ## ENGINEERING DECISION HEURISTICS [DEFAULT]
 
 When multiple implementations are valid, prefer the option that is:
