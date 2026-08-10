@@ -1,6 +1,6 @@
 ---
 name: context-audit
-description: Use 
+description: Use this when there is 
 ---
 
 # Decision Audit
