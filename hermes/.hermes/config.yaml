@@ -83,6 +83,7 @@ skills:
       - himalaya
       - jupyter-live-kernel
       - openhue
+  write_approval: true
 onboarding:
   seen:
     busy_input_prompt: true
