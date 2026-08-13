@@ -97,7 +97,7 @@ source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-08-06T02:45:51Z"
+last_updated = "2026-08-13T02:45:02Z"
 source_type = "local"
 source = "/Users/birudo/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
