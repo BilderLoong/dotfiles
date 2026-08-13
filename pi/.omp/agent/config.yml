@@ -2,7 +2,7 @@ providers:
   webSearchOrder: 
     []
 modelRoles: 
-  default: opencode-go/deepseek-v4-flash:max
+  default: openai-codex/gpt-5.6-sol:xhigh
   advisor: opencode-go/deepseek-v4-flash:max
   vision: openai-codex/gpt-5.6-luna
 symbolPreset: nerd
@@ -25,7 +25,7 @@ task:
   enableLsp: true
   prewalk: false
 memory: 
-  backend: off
+  backend: "off"
 autolearn: 
   enabled: false
   autoContinue: false
