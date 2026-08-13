@@ -26,7 +26,7 @@ task:
   enableLsp: true
   prewalk: false
   agentModelOverrides: 
-    task: deepseek-v4-flash
+    task: opencode-go/deepseek-v4-flash
 memory: 
   backend: "off"
 autolearn: 
