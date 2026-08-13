@@ -25,6 +25,8 @@ task:
   showResolvedModelBadge: false
   enableLsp: true
   prewalk: false
+  agentModelOverrides: 
+    task: deepseek-v4-flash
 memory: 
   backend: "off"
 autolearn: 
