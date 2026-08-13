@@ -67,3 +67,5 @@ disabledProviders:
   - opencode
   - github
   - cursor
+dev: 
+  autoqaConsent: granted
