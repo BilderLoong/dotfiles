@@ -95,7 +95,7 @@ composerEnterBehavior = "cmdAlways"
 preventSleepWhileRunning = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-08-14T03:37:53Z"
+last_updated = "2026-08-14T03:38:14Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
