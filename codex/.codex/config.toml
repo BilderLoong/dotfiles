@@ -43,6 +43,9 @@ enabled = true
 [plugins."computer-use@openai-bundled"]
 enabled = true
 
+[plugins."ponytail@yomitan-local"]
+enabled = true
+
 [projects."/Users/birudo/Projects/anki-feedback"]
 trust_level = "trusted"
 
