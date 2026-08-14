@@ -58,3 +58,6 @@ fi
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
 
 # zprof
+
+# opencodex claude-env hook
+[ -f ~/.opencodex/claude-env.sh ] && source ~/.opencodex/claude-env.sh
