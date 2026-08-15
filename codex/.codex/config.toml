@@ -118,13 +118,13 @@ NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_n
 NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/birudo/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/birudo/.codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "7fe0e1c59da4bc68f9d6ab81ae8d349b53fee44b074f49be0effbc1105a5f1d3"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "87e84e5b4db45250b323ac54ab2f33585d867d0d13abc198e73a4e28420b657b"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
 NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.810.41047"
+BROWSER_USE_CODEX_APP_VERSION = "26.810.50856"
 SKY_CUA_SERVICE_PATH = "/Users/birudo/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
@@ -136,5 +136,5 @@ enabled = false
 
 [shell_environment_policy.set]
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "7fe0e1c59da4bc68f9d6ab81ae8d349b53fee44b074f49be0effbc1105a5f1d3"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "87e84e5b4db45250b323ac54ab2f33585d867d0d13abc198e73a4e28420b657b"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/birudo/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
