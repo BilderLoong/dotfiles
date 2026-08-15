@@ -96,6 +96,7 @@ enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra", "max"]
 show-context-window-usage = true
 composerEnterBehavior = "cmdAlways"
 preventSleepWhileRunning = true
+composerPlainTextMode = true
 
 [marketplaces.openai-bundled]
 last_updated = "2026-08-15T08:08:33Z"
