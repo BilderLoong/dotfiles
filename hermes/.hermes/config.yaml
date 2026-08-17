@@ -1,6 +1,6 @@
 model:
-  default: gpt-5.6-terra
-  provider: openai-codex
+  default: deepseek-v4-flash
+  provider: opencode-go
   base_url: ''
 agent:
   reasoning_effort: max
