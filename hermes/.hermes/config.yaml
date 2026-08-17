@@ -1,5 +1,5 @@
 model:
-  default: gpt-5.6-sol
+  default: gpt-5.6-terra
   provider: openai-codex
   base_url: ''
 agent:
