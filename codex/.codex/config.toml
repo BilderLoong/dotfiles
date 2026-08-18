@@ -46,6 +46,9 @@ enabled = true
 [plugins."ponytail@yomitan-local"]
 enabled = true
 
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
 [projects."/Users/birudo/Projects/anki-feedback"]
 trust_level = "trusted"
 
@@ -102,7 +105,7 @@ preventSleepWhileRunning = true
 composerPlainTextMode = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-08-18T07:20:24Z"
+last_updated = "2026-08-18T12:16:00Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
