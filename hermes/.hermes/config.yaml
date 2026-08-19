@@ -1,5 +1,5 @@
 model:
-  default: deepseek-v4-flash
+  default: muse-spark-1.2-contributor
   provider: opencode-go
   base_url: ''
 agent:
