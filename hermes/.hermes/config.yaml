@@ -10,7 +10,7 @@ browser:
 display:
   language: ja
   pet:
-    enabled: true
+    enabled: false
     slug: glass-label-runner
 voice:
   auto_tts: false
