@@ -9,8 +9,13 @@ browser:
   use_gateway: false
 display:
   language: ja
+  pet:
+    enabled: true
+    slug: glass-label-runner
 voice:
   auto_tts: false
+wake_word:
+  enabled: true
 memory:
   write_approval: true
   provider: hindsight
@@ -149,5 +154,3 @@ known_plugin_toolsets:
 # fallback_model:
 #   provider: openrouter
 #   model: anthropic/claude-sonnet-4
-wake_word:
-  enabled: true
