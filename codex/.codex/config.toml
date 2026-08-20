@@ -91,6 +91,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-08-17/how-is-the"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/.codex/.chatgpt-projects/g-p-6a5b3640f7f881919adcdea7434141b0"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
