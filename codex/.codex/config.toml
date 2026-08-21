@@ -94,6 +94,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/.codex/.chatgpt-projects/g-p-6a5b3640f7f881919adcdea7434141b0"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/yomitan_word_audio_source"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
