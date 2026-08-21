@@ -2,7 +2,7 @@ providers:
   webSearchOrder: 
     []
 modelRoles: 
-  default: openai-codex/gpt-5.6-sol:xhigh
+  default: opencode-go/ox-alpha-free
   advisor: opencode-go/deepseek-v4-flash:max
   vision: openai-codex/gpt-5.6-luna
   smol: opencode-go/deepseek-v4-flash:xhigh
