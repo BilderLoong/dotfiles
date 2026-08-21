@@ -1,5 +1,5 @@
 personality = "pragmatic"
-model = "openrouter/stealth-ox-alpha"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "max"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
