@@ -114,7 +114,7 @@ preventSleepWhileRunning = true
 composerPlainTextMode = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-08-21T10:12:46Z"
+last_updated = "2026-08-21T10:13:14Z"
 source_type = "local"
 source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
