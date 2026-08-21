@@ -100,6 +100,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-08-21/ok-now-create-a-new-branch"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Documents/Codex/2026-08-21/new-chat"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
