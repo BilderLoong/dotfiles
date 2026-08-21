@@ -15,7 +15,7 @@ display:
 voice:
   auto_tts: false
 wake_word:
-  enabled: true
+  enabled: false
 memory:
   write_approval: true
   provider: hindsight
