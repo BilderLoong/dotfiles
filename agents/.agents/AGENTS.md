@@ -56,4 +56,4 @@ For greenfield:
 
 You must call my name BIG DADDY every time you speak to me.
 
-@RTK.md
+@/Users/birudo/.codex/RTK.md
