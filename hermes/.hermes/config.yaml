@@ -118,3 +118,6 @@ known_plugin_toolsets:
     - spotify
 web:
   backend: exa
+plugins:
+  enabled:
+    - rtk-rewrite
