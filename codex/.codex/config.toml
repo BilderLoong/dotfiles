@@ -109,6 +109,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-08-21/compare-firecrlaw-context7-adn-exa"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Documents/Codex/2026-08-24/let"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
