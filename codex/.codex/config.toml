@@ -118,6 +118,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-08-28/ca"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Documents/Codex/2026-08-28/test-opencode-go-muse-spark-1"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
