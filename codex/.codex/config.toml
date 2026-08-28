@@ -4,6 +4,9 @@ model_reasoning_effort = "max"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 service_tier = "default"
+model_catalog_json = "/Users/birudo/.codex/opencodex-catalog.json"
+# Auto-injected by opencodex
+openai_base_url = "http://127.0.0.1:10100/v1"
 
 [agents]
 default_subagent_model = "gpt-5.6-luna"
