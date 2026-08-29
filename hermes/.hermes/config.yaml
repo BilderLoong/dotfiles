@@ -53,6 +53,8 @@ moa:
 skills:
   external_dirs:
     - ~/.agents/skills
+  trusted_project_dirs:
+    - /Users/birudo/Projects/dotfiles
   write_approval: true
   disabled:
     - airtable
@@ -91,6 +93,9 @@ skills:
       - himalaya
       - jupyter-live-kernel
       - openhue
+plugins:
+  enabled:
+    - rtk-rewrite
 onboarding:
   seen:
     busy_input_prompt: true
@@ -118,9 +123,6 @@ platform_toolsets:
 known_plugin_toolsets:
   cli:
     - spotify
-plugins:
-  enabled:
-    - rtk-rewrite
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
