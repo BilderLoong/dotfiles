@@ -95,6 +95,18 @@ local ast_grep_source = {
   end,
 }
 
+local function restore_last_session()
+  local auto_session = require "auto-session"
+  local session_name = require("auto-session.lib").get_latest_session(auto_session.get_root_dir())
+
+  if not session_name then
+    vim.notify("No saved sessions found", vim.log.levels.WARN)
+    return
+  end
+
+  auto_session.autosave_and_restore(session_name)
+end
+
 return {
   "folke/snacks.nvim",
   opts = function(_, opts)
@@ -105,7 +117,7 @@ return {
     local dashboard_keys = vim.tbl_get(opts, "dashboard", "preset", "keys") or {}
     for _, key in ipairs(dashboard_keys) do
       if key.key == "f" then key.action = "<C-P>" end
-      if key.key == "s" then key.action = "<C-P>" end
+      if key.key == "s" then key.action = restore_last_session end
     end
   end,
 }
