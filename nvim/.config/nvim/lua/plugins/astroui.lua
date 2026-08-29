@@ -25,7 +25,7 @@ return {
         },
         nord = { -- a table of overrides/changes when applying the Nord theme
           Comment = { fg = "#646E86", italic = true },
-          ["@comment"] = { fg = "#", italic = true },
+          ["@comment"] = { fg = "#646E86", italic = true },
         },
       },
       -- Icons can be configured throughout the interface
