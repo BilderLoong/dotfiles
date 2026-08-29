@@ -1,6 +1,11 @@
 ---@type LazySpec
 return {
 	"AstroNvim/astrolsp",
+	init = function()
+		-- Load nvim-lspconfig's defaults before AstroLSP extends them. The Rust
+		-- community pack later forwards this native config to rustaceanvim.
+		local _ = vim.lsp.config["rust_analyzer"]
+	end,
 	---@type AstroLSPOpts
 	opts = {
 		-- Configuration table of features provided by AstroLSP
@@ -38,6 +43,15 @@ return {
 		-- client specific configuration can also go in `lsp/` in your configuration root (see `:h lsp-config`)
 		config = {
 			-- ["*"] = { capabilities = {} }, -- modify default LSP client settings such as capabilities
+			rust_analyzer = {
+				settings = {
+					["rust-analyzer"] = {
+						files = {
+							exclude = { ".direnv", ".git", "target", "Forvo_pronunciations" },
+						},
+					},
+				},
+			},
 		},
 		-- customize how language servers are attached
 		handlers = {
