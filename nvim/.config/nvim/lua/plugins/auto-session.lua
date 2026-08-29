@@ -1,3 +1,15 @@
+local function restore_last_session()
+  local auto_session = require "auto-session"
+  local session_name = require("auto-session.lib").get_latest_session(auto_session.get_root_dir())
+
+  if not session_name then
+    vim.notify("No saved sessions found", vim.log.levels.WARN)
+    return
+  end
+
+  auto_session.autosave_and_restore(session_name)
+end
+
 return {
   "rmagatti/auto-session",
   event = "VeryLazy",
@@ -10,6 +22,11 @@ return {
     "SessionSave",
   },
   keys = {
+    {
+      "<Leader>Sl",
+      restore_last_session,
+      desc = "Load last session",
+    },
     {
       "<Leader>fS",
       function() require("auto-session").search() end,
