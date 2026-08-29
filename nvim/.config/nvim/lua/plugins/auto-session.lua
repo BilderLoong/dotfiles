@@ -19,7 +19,7 @@ return {
 		},
 	},
 	opts = {
-		auto_restore_enabled = false,
+		auto_restore_enabled = true,
 		log_level = vim.log.levels.ERROR,
 		session_lens = {
 			load_on_setup = true,
