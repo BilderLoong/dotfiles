@@ -26,7 +26,7 @@ return {
 					-- Normal = { bg = "#000000" },
 				},
 				nord = { -- a table of overrides/changes when applying the Nord theme
-					Comment = { fg = "#646E86", italic = true },
+					Comment = { fg = "#707C96", italic = true },
 					["@comment"] = { fg = "#646E86", italic = true },
 				},
 			},
