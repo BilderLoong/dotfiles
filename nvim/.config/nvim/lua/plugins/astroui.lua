@@ -24,8 +24,8 @@ return {
           -- Normal = { bg = "#000000" },
         },
         nord = { -- a table of overrides/changes when applying the Nord theme
-          Comment = { fg = "#81A1C1", italic = true },
-          ["@comment"] = { fg = "#81A1C1", italic = true },
+          Comment = { fg = "#646E86", italic = true },
+          ["@comment"] = { fg = "#", italic = true },
         },
       },
       -- Icons can be configured throughout the interface
