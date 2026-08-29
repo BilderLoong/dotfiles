@@ -16,7 +16,7 @@ return {
       desc = "Search sessions",
     },
   },
-  opts = {
+  opts = {  auto_restore_last_session = true,
     auto_restore_enabled = false,
     log_level = vim.log.levels.ERROR,
     session_lens = {
