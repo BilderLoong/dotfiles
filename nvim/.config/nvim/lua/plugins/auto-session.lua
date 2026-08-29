@@ -1,6 +1,7 @@
 return {
 	"rmagatti/auto-session",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
+	lazy=false,
 	cmd = {
 		"AutoSession",
 		"Autosession",
