@@ -45,7 +45,7 @@ return {
 			["*"] = vim.lsp.enable,
 
 			-- the key is the server that is being setup with `vim.lsp.config`
-			-- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
+			rust_analyzer = false, -- rustaceanvim owns the Rust LSP client
 		},
 		-- Configure buffer local auto commands to add when attaching a language server
 		autocmds = {
