@@ -43,9 +43,6 @@ return {
 		handlers = {
 			-- a function with the key `*` modifies the default handler, functions takes the server name as the parameter
 			["*"] = vim.lsp.enable,
-
-			-- the key is the server that is being setup with `vim.lsp.config`
-			rust_analyzer = false, -- rustaceanvim owns the Rust LSP client
 		},
 		-- Configure buffer local auto commands to add when attaching a language server
 		autocmds = {
