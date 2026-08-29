@@ -45,10 +45,6 @@ return {
         "haskell-language-server",
         "fourmolu",
 
-        -- Rust
-        "rust-analyzer",
-        "codelldb",
-
         -- Java
         "jdtls",
 
