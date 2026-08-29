@@ -1,6 +1,6 @@
 # Neovim keybinding reference
 
-Last verified: 2026-08-29
+<!-- Last verified: 2026-08-29 -->
 
 ## Scope and notation
 
