@@ -28,6 +28,10 @@ return {
     maps.n.zt = { "zt3<C-Y>", desc = "Scroll line to top with context" }
     maps.x.zt = { "zt3<C-Y>", desc = "Scroll line to top with context" }
 
+    maps.n["\\"] = { "van", remap = true, desc = "Start Tree-sitter selection" }
+    maps.x["\\"] = { "an", remap = true, desc = "Grow Tree-sitter selection" }
+    maps.x["<BS>"] = { "in", remap = true, desc = "Shrink Tree-sitter selection" }
+
     maps.n["<C-P>"] = { find_files, desc = "Find files" }
     maps.i["<C-P>"] = { find_files, desc = "Find files" }
     maps.x["<C-P>"] = { find_files, desc = "Find files" }
@@ -55,7 +59,6 @@ return {
       "<Leader>/",
       "]b",
       "[b",
-      "\\",
       "<Leader>pi",
       "<Leader>ps",
       "<Leader>pS",
