@@ -13,8 +13,10 @@ return {
   "AstroNvim/astrocore",
   init = function()
     -- Neovim defines these globally before Lazy merges plugin options. Remove
-    -- superseded aliases early so shorter replacement mappings are immediate.
-    for _, lhs in ipairs { "grr", "gri", "gra", "grn", "]b", "[b" } do
+    -- superseded aliases early. Neovim 0.12 adds grt/grx; deleting those longer
+    -- prefixes keeps Glance's shorter gr mapping immediate. Use gy for type
+    -- definitions and <Leader>lL for CodeLens instead.
+    for _, lhs in ipairs { "grr", "gri", "gra", "grn", "grt", "grx", "]b", "[b" } do
       pcall(vim.keymap.del, "n", lhs)
     end
     pcall(vim.keymap.del, "x", "gra")
