@@ -419,7 +419,7 @@ Buffer-local mappings override a global mapping with the same key while their in
 | Key | Mode | Action |
 | --- | --- | --- |
 | `<A` | `n` | Swap previous argument |
-| `<BS>` | `x` | Shrink selection to previous named node |
+| `<BS>` | `x` | Shrink Tree-sitter selection with native `in` |
 | `<F` | `n` | Swap previous function |
 | `<K` | `n` | Swap previous block |
 | `>A` | `n` | Swap next argument |
@@ -431,8 +431,8 @@ Buffer-local mappings override a global mapping with the same key while their in
 | `[f` | `n/x/o` | Previous function start |
 | `[K` | `n/x/o` | Previous block end |
 | `[k` | `n/x/o` | Previous block start |
-| `\` | `n` | Start selecting nodes with treesitter-modules |
-| `\` | `x` | Increment selection to named node |
+| `\` | `n` | Start Tree-sitter selection with native `an` |
+| `\` | `x` | Grow Tree-sitter selection with native `an` |
 | `]A` | `n/x/o` | Next argument end |
 | `]a` | `n/x/o` | Next argument start |
 | `]F` | `n/x/o` | Next function end |
