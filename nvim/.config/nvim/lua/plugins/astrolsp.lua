@@ -1,11 +1,7 @@
 ---@type LazySpec
 return {
-	"AstroNvim/astrolsp",
-	init = function()
-		-- Load nvim-lspconfig's defaults before AstroLSP extends them. The Rust
-		-- community pack later forwards this native config to rustaceanvim.
-		local _ = vim.lsp.config["rust_analyzer"]
-	end,
+	{
+		"AstroNvim/astrolsp",
 	---@type AstroLSPOpts
 	opts = {
 		-- Configuration table of features provided by AstroLSP
@@ -135,6 +131,23 @@ return {
 		on_attach = function(client, bufnr)
 			-- this would disable semanticTokensProvider for all clients
 			-- client.server_capabilities.semanticTokensProvider = nil
+		end,
+		},
+	},
+	{
+		"mrcjkb/rustaceanvim",
+		optional = true,
+		opts = function(_, opts)
+			-- The Rust pack reads the native config, which nvim-lspconfig can load
+			-- after AstroLSP. Reapply AstroLSP's merged settings before it starts.
+			local native_config = vim.lsp.config["rust_analyzer"]
+			local astro_config = require("astrolsp").config.config.rust_analyzer
+			native_config.settings = vim.tbl_deep_extend(
+				"force",
+				native_config.settings or {},
+				astro_config and astro_config.settings or {}
+			)
+			return opts
 		end,
 	},
 }
