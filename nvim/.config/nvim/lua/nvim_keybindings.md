@@ -441,11 +441,13 @@ Buffer-local mappings override a global mapping with the same key while their in
 | `]k` | `n/x/o` | Next block start |
 | `a?` | `x/o` | around conditional |
 | `aa` | `x/o` | around argument |
+| `ac` | `x/o` | around class when the language query provides class captures |
 | `af` | `x/o` | around function |
 | `ak` | `x/o` | around block |
 | `ao` | `x/o` | around loop |
 | `i?` | `x/o` | inside conditional |
 | `ia` | `x/o` | inside argument |
+| `ic` | `x/o` | inside class when the language query provides class captures |
 | `if` | `x/o` | inside function |
 | `ik` | `x/o` | inside block |
 | `io` | `x/o` | inside loop |
@@ -462,7 +464,7 @@ Buffer-local mappings override a global mapping with the same key while their in
 | `<BS>` | `i` | autopairs delete |
 | `[` | `i` | autopairs map key |
 | `]` | `i` | autopairs map key |
-| ``` | `i` | autopairs map key |
+| `` ` `` | `i` | autopairs map key |
 | `{` | `i` | autopairs map key |
 | `}` | `i` | autopairs map key |
 
@@ -534,4 +536,4 @@ The following AstroNvim plugin-management shortcuts are disabled:
 - Global overrides and removals: `lua/plugins/astrocore.lua`
 - LSP attachment mappings: `lua/plugins/astrolsp.lua`
 - Plugin-owned mappings: the corresponding files under `lua/plugins/`
-- Runtime inventory used for this document: Neovim global mappings plus a real Lua buffer with `lua_ls`, Gitsigns, Treesitter, Aerial, and Autopairs attached.
+- Runtime inventory used for this document: Neovim global mappings plus a real Lua buffer with `lua_ls`, Gitsigns, Treesitter, Aerial, and Autopairs attached; language-dependent Treesitter mappings were checked against AstroNvim's configured text-object source.
