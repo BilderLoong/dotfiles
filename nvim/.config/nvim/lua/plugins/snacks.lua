@@ -105,6 +105,7 @@ return {
     local dashboard_keys = vim.tbl_get(opts, "dashboard", "preset", "keys") or {}
     for _, key in ipairs(dashboard_keys) do
       if key.key == "f" then key.action = "<C-P>" end
+      if key.key == "f" then key.action = "<C-P>" end
     end
   end,
 }
