@@ -1,18 +1,23 @@
 return {
-  "numToStr/Comment.nvim",
-  dependencies = {
+  "folke/ts-comments.nvim",
+  event = "VeryLazy",
+  opts = {},
+  keys = {
+    -- ponytail: `x` is a temporary placeholder; use a Lua mapping if a comment delimiter contains `x`.
     {
-      "JoosepAlviste/nvim-ts-context-commentstring",
-      opts = {
-        -- The pre-hook calculates the comment string only when you comment code.
-        -- Disable the expensive CursorHold calculation, which can delay cursor movement.
-        enable_autocmd = false,
-      },
+      "gco",
+      "o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>",
+      desc = "Add commented line below",
+    },
+    {
+      "gcO",
+      "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>",
+      desc = "Add commented line above",
+    },
+    {
+      "gcA",
+      "o<esc>Vcx<esc><cmd>normal gcc<cr>kJfxa<bs>",
+      desc = "Add comment at end of line",
     },
   },
-  opts = function()
-    return {
-      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-    }
-  end,
 }

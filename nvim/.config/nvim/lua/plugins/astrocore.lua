@@ -1,85 +1,73 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+local function find_files()
+  require("snacks").picker.files {
+    hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
+  }
+end
 
--- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
--- Configuration documentation can be found with `:h astrocore`
--- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
---       as this provides autocomplete and documentation while editing
+local function navigate_buffer(direction)
+  require("astrocore.buffer").nav(direction * vim.v.count1)
+end
 
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
-  ---@type AstroCoreOpts
-  opts = {
-    -- Configure core features of AstroNvim
-    features = {
-      large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-      autopairs = true, -- enable autopairs at start
-      cmp = true, -- enable completion at start
-      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
-      highlighturl = true, -- highlight URLs at start
-      notifications = true, -- enable notifications at start
-    },
-    -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
-    diagnostics = {
-      virtual_text = true,
-      underline = true,
-    },
-    -- passed to `vim.filetype.add`
-    filetypes = {
-      -- see `:h vim.filetype.add` for usage
-      extension = {
-        foo = "fooscript",
-      },
-      filename = {
-        [".foorc"] = "fooscript",
-      },
-      pattern = {
-        [".*/etc/foo/.*"] = "fooscript",
-      },
-    },
-    -- vim options can be configured here
-    options = {
-      opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
-        number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
-        signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
-      },
-      g = { -- vim.g.<key>
-        -- configure global vim variables (vim.g)
-        -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
-        -- This can be found in the `lua/lazy_setup.lua` file
-      },
-    },
-    -- Mappings can be configured through AstroCore as well.
-    -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
-    mappings = {
-      -- first key is the mode
-      n = {
-        -- second key is the lefthand side of the map
+  init = function()
+    -- Neovim defines these globally before Lazy merges plugin options. Remove
+    -- superseded aliases early so shorter replacement mappings are immediate.
+    for _, lhs in ipairs { "grr", "gri", "gra", "grn", "]b", "[b" } do
+      pcall(vim.keymap.del, "n", lhs)
+    end
+    pcall(vim.keymap.del, "x", "gra")
+  end,
+  ---@param opts AstroCoreOpts
+  opts = function(_, opts)
+    local maps = require("astrocore").empty_map_table()
 
-        -- navigate buffer tabs
-        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+    maps.n.zt = { "zt3<C-Y>", desc = "Scroll line to top with context" }
+    maps.x.zt = { "zt3<C-Y>", desc = "Scroll line to top with context" }
 
-        -- mappings seen under group name "Buffer"
-        ["<Leader>bd"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Close buffer from tabline",
-        },
+    maps.n["<C-P>"] = { find_files, desc = "Find files" }
+    maps.i["<C-P>"] = { find_files, desc = "Find files" }
+    maps.x["<C-P>"] = { find_files, desc = "Find files" }
 
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        -- ["<Leader>b"] = { desc = "Buffers" },
+    maps.n["<C-N>"] = { "<Cmd>Neotree toggle<CR>", desc = "Toggle Explorer" }
+    maps.i["<C-N>"] = { "<Cmd>Neotree toggle<CR>", desc = "Toggle Explorer" }
 
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
-      },
-    },
-  },
+    maps.n["<Leader>fA"] = { function() require("snacks").picker.ast_grep() end, desc = "Find AST patterns" }
+    maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
+
+    maps.n["<Tab>"] = { function() navigate_buffer(1) end, desc = "Next buffer" }
+    maps.n["<S-Tab>"] = { function() navigate_buffer(-1) end, desc = "Previous buffer" }
+
+    for _, lhs in ipairs {
+      "<Leader>w",
+      "<C-S>",
+      "<Leader>q",
+      "<Leader>Q",
+      "<C-Q>",
+      "<Leader>n",
+      "<Leader>ff",
+      "<Leader>fm",
+      "<Leader>e",
+      "<Leader>o",
+      "<Leader>/",
+      "]b",
+      "[b",
+      "\\",
+      "<Leader>pi",
+      "<Leader>ps",
+      "<Leader>pS",
+      "<Leader>pu",
+      "<Leader>pU",
+      "<Leader>pm",
+      "<Leader>pM",
+      "<Leader>pa",
+    } do
+      maps.n[lhs] = false
+    end
+
+    maps.x["<Leader>/"] = false
+
+    opts.mappings = require("astrocore").extend_tbl(opts.mappings, maps)
+  end,
 }

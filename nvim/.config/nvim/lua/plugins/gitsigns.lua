@@ -1,7 +1,8 @@
 return {
   "lewis6991/gitsigns.nvim",
   opts = function(_, opts)
-    return vim.tbl_deep_extend("force", opts, {
+    local upstream_on_attach = opts.on_attach
+    local merged_opts = vim.tbl_deep_extend("force", opts, {
       signs = {
         add = { hl = "GitSignsAdd", text = "+", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
         change = { hl = "NONE", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
@@ -18,5 +19,15 @@ return {
         ignore_whitespace = true,
       },
     })
+
+    merged_opts.on_attach = function(bufnr)
+      if upstream_on_attach then upstream_on_attach(bufnr) end
+      vim.keymap.set("n", "<Leader>gu", require("gitsigns").undo_stage_hunk, {
+        buffer = bufnr,
+        desc = "Undo stage hunk",
+      })
+    end
+
+    return merged_opts
   end,
 }

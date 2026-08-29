@@ -75,6 +75,26 @@ return {
 		mappings = {
 			n = {
 				-- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
+				gd = {
+					"<Cmd>Glance definitions<CR>",
+					desc = "Show definitions in Glance",
+					cond = "textDocument/definition",
+				},
+				gy = {
+					"<Cmd>Glance type_definitions<CR>",
+					desc = "Show type definitions in Glance",
+					cond = "textDocument/typeDefinition",
+				},
+				gr = {
+					"<Cmd>Glance references<CR>",
+					desc = "Show references in Glance",
+					cond = "textDocument/references",
+				},
+				gi = {
+					"<Cmd>Glance implementations<CR>",
+					desc = "Show implementations in Glance",
+					cond = "textDocument/implementation",
+				},
 				gD = {
 					function()
 						vim.lsp.buf.declaration()
@@ -92,6 +112,11 @@ return {
 							and vim.lsp.semantic_tokens ~= nil
 					end,
 				},
+				["<Leader>lR"] = false,
+				["<Leader>lf"] = false,
+			},
+			v = {
+				["<Leader>lf"] = false,
 			},
 		},
 		-- A custom `on_attach` function to be run after the default `on_attach` function

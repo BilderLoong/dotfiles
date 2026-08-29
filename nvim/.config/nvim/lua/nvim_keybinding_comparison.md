@@ -8,7 +8,7 @@ Last verified: 2026-08-29
 - **AstroNvim baseline:** the active configuration loaded from `~/.config/nvim` with Neovim 0.11.1 and AstroNvim 6.0.4.
 - The NvChad side is exact only for the tracked custom source. Rows marked **Unverified** keep a stock NvChad claim for migration context, but the repository does not contain the final stock NvChad runtime or dependency lock.
 - This document includes global mappings, explicit buffer-local mappings, tracked plugin entry mappings, and plugin defaults that are important for migration. It does not list picker-internal or other UI-local mappings. It lists a stock Neovim key only when one configuration overrides or reuses it.
-- A lazy-loaded plugin can replace an earlier mapping. For example, AstroNvim first maps normal-mode `<leader>fm` to Find manual pages. Conform replaces that mapping after Conform loads on `BufWritePre`.
+- Lazy-loaded plugin mappings are documented by their final active owner. Conform owns `<leader>fm`; manual pages use `<leader>fM`.
 - LSP mappings are available only when a compatible language server attaches.
 - Gitsigns mappings are available only in Git-controlled buffers.
 - Treesitter text-object mappings require a parser and a matching query for the current file type.
@@ -23,29 +23,27 @@ Last verified: 2026-08-29
 
 ## Conflict notes
 
-- **Conflict:** the same mode and complete key run different functions. Example: normal-mode `<leader>n` goes to the next diagnostic in NvChad, but it creates a new file in AstroNvim.
+- **Conflict:** the same mode and complete key run different functions. Example: normal-mode `<leader>fs` finds workspace symbols in NvChad, but opens AstroNvim's smart file picker.
 - **Prefix risk:** one configuration maps a shorter key that starts a longer mapping in the other configuration. Example: AstroNvim maps `<leader>c` to close the current buffer, while NvChad uses `<leader>ca`, `<leader>cd`, and `<leader>cg`.
-- **Runtime collision:** the active function changes after a lazy-loaded plugin replaces a mapping. Example: normal-mode `<leader>fm` starts as Find manual pages and becomes Format buffer after Conform loads.
+- **Plugin ownership:** lazy-loaded mappings are listed under the plugin that owns their final active behavior.
 
 
 ## General
 
--a mean: disable current astronvim key
-+a mean: use nvchad key instead of astronvim key.
 | Functionality                                | NvChad key                         | AstroNvim key                  | State   | Note                                                                      |
 | -------------------------------------------- | ---------------------------------- | ------------------------------ | ------- | ------------------------------------------------------------------------- |
 | Exit insert mode                             | `i: jk`                            | `i: jk` with Better Escape     | Changed | Same key and function, but the plugin and timing differ.                  |
 | Exit insert mode with the alternate shortcut | —                                  | `i: jj` with Better Escape     | New     |                                                                           |
-| Scroll current line to the top               | `n/v: zt` with three context lines | `n/v: zt` with native behavior | Changed | +a; AstroNvim does not add the three context lines.                       |
-| Export the current project to VS Code        | `n: <leader>cd`                    | —                              | Removed | +a as `n: <leader>vs`; keep AstroNvim's `<leader>c` buffer-close mapping. |
+| Scroll current line to the top               | `n/v: zt` with three context lines | `n/x: zt` with three context lines | Changed | AstroCore preserves the NvChad context-scroll behavior in Normal and Visual mode. |
+| Export the current project to VS Code        | `n: <leader>cd`                    | `n: <leader>vs`                | Changed | Keep AstroNvim's `<leader>c` buffer-close mapping.                        |
 | Open the Neovim configuration                | `n: <leader>cg`                    | —                              | Removed | **Prefix risk:** AstroNvim's `<leader>c` closes the buffer.               |
 | Keep `<leader>D` unassigned                  | `n: <leader>D` disabled            | `n: <leader>D` unassigned      | Same    |                                                                           |
-| Save the current file                        | —                                  | `n: <leader>w`                 | New     | -a                                                                        |
-| Force-write the current file                 | —                                  | `n: <C-S>`                     | New     | -a                                                                        |
-| Quit the current window                      | —                                  | `n: <leader>q`                 | New     | -a                                                                        |
-| Exit Neovim                                  | —                                  | `n: <leader>Q`                 | New     | -a                                                                        |
-| Force-quit the current window                | —                                  | `n: <C-Q>`                     | New     | -a                                                                        |
-| Create a new empty file                      | —                                  | `n: <leader>n`                 | New     | -a; **Conflict:** NvChad = next diagnostic.                               |
+| Save the current file                        | —                                  | —                              | Removed | Disabled in the final AstroNvim configuration.                            |
+| Force-write the current file                 | —                                  | —                              | Removed | Disabled in the final AstroNvim configuration.                            |
+| Quit the current window                      | —                                  | —                              | Removed | Disabled in the final AstroNvim configuration.                            |
+| Exit Neovim                                  | —                                  | —                              | Removed | Disabled in the final AstroNvim configuration.                            |
+| Force-quit the current window                | —                                  | —                              | Removed | Disabled in the final AstroNvim configuration.                            |
+| Create a new empty file                      | —                                  | —                              | Removed | Disabled; NvChad's `<leader>n` remains the historical diagnostic key.     |
 | Rename the current file                      | —                                  | `n: <leader>R`                 | New     |                                                                           |
 | Close the current buffer                     | —                                  | `n: <leader>c`                 | New     | **Prefix risk:** NvChad has `<leader>ca`, `<leader>cd`, and `<leader>cg`. |
 | Force-close the current buffer               | —                                  | `n: <leader>C`                 | New     |                                                                           |
@@ -55,7 +53,7 @@ Last verified: 2026-08-29
 
 | Functionality                                       | NvChad key                   | AstroNvim key                        | State      | Note                                                                      |
 | --------------------------------------------------- | ---------------------------- | ------------------------------------ | ---------- | ------------------------------------------------------------------------- |
-| Find files                                          | `n: <leader>ff`              | `n: <leader>ff`                      | Unverified | Use `n/i/x: <C-P>` instead; disable `<leader>ff`.                         |
+| Find files                                          | `n: <leader>ff`              | `n/i/x: <C-P>`                       | Changed    | `<leader>ff` is disabled.                                                 |
 | Search text in project files                        | `n: <leader>fw` with Fzf-lua | `n: <leader>fw` with Snacks          | Changed      |                                                                           |
 | Search text in hidden and ignored files             | —                            | `n: <leader>fW`                      | New        |                                                                           |
 | Resume the previous Fzf-lua search                  | `n: <leader>rr`              | `n: <leader>f<CR>`                   | Changed    |                                                                           |
@@ -63,7 +61,7 @@ Last verified: 2026-08-29
 | Find help tags                                      | `n: <F1>`                    | `n: <leader>fh`                      | Changed    |                                                                           |
 | Open the Telescope built-in picker                  | `n/i: <A-b>`                 | —                                    | Removed    |                                                                           |
 | Find commands                                       | `n/i: <A-p>`                 | `n: <leader>fC`                      | Changed    |                                                                           |
-| Find AST-grep results                               | `n: <leader>sg`              | —                                    | Removed    | +a as `n: <leader>fA` using a project-wide Snacks/ast-grep picker.         |
+| Find AST-grep results                               | `n: <leader>sg`              | `n: <leader>fA`                      | Changed    | Uses a project-wide Snacks/ast-grep picker.                               |
 | Find buffers                                        | —                            | `n: <leader>fb`                      | New        |                                                                           |
 | Find Git files                                      | —                            | `n: <leader>fg`                      | New        |                                                                           |
 | Find recent files                                   | —                            | `n: <leader>fo`                      | New        |                                                                           |
@@ -71,7 +69,7 @@ Last verified: 2026-08-29
 | Find the word under the cursor                      | —                            | `n: <leader>fc`                      | New        |                                                                           |
 | Find keybindings                                    | —                            | `n: <leader>fk`                      | New        |                                                                           |
 | Find registers                                      | —                            | `n: <leader>fr`                      | New        |                                                                           |
-| Find manual pages                                   | —                            | `n: <leader>fm` before Conform loads | New        | Move to `n: <leader>fM`; reserve `<leader>fm` for Conform.                 |
+| Find manual pages                                   | —                            | `n: <leader>fM`                      | New        | `<leader>fm` is reserved for Conform.                                     |
 | Find notifications                                  | —                            | `n: <leader>fn`                      | New        |                                                                           |
 | Find color schemes                                  | —                            | `n: <leader>ft`                      | New        |                                                                           |
 | Find projects                                       | —                            | `n: <leader>fp`                      | New        |                                                                           |
@@ -89,28 +87,28 @@ Last verified: 2026-08-29
 
 | Functionality                                            | NvChad key                   | AstroNvim key                | State      | Note                                                              |
 | -------------------------------------------------------- | ---------------------------- | ---------------------------- | ---------- | ----------------------------------------------------------------- |
-| Toggle the file explorer                                 | `n: <leader>e` with NvimTree | `n: <leader>e` with Neo-tree | Unverified | Use `n/i: <C-N>`; disable `<leader>e`.                         |
-| Focus the file explorer or return to the previous window | —                            | `n: <leader>o`               | New        | -a                                                                |
+| Toggle the file explorer                                 | `n: <leader>e` with NvimTree | `n/i: <C-N>` with Neo-tree   | Changed    | `<leader>e` is disabled.                                       |
+| Focus the file explorer or return to the previous window | —                            | —                            | Removed    | `<leader>o` is disabled.                                       |
 
 ## LSP and diagnostics
 
 | Functionality                               | NvChad key                   | AstroNvim key                      | State   | Note                                                        |
 | ------------------------------------------- | ---------------------------- | ---------------------------------- | ------- | ----------------------------------------------------------- |
-| Go to definition                            | `n: gd` with Glance          | `n: gd` with the native LSP client | Changed | Use Glance on `gd`.                                         |
-| Go to type definition                       | `n: gy` with Glance          | `n: gy` with the native LSP client | Changed | Use Glance on `gy`.                                         |
-| Find references                             | `n: gr` with Glance          | `n: grr` or `<leader>lR`           | Changed | Use Glance on `gr`; remove `grr` and `<leader>lR`.          |
+| Go to definition                            | `n: gd` with Glance          | `n: gd` with Glance                | Same    | Capability-gated on LSP definition support.                 |
+| Go to type definition                       | `n: gy` with Glance          | `n: gy` with Glance                | Same    | Capability-gated on LSP type-definition support.            |
+| Find references                             | `n: gr` with Glance          | `n: gr` with Glance                | Same    | Remove `grr` and `<leader>lR`.                              |
 | Go to the previous reference                | —                            | `n: [r`                            | New     | Provided by Snacks when references are available.           |
 | Go to the next reference                    | —                            | `n: ]r`                            | New     | Provided by Snacks when references are available.           |
-| Find implementations                        | `n: gi` with Telescope       | `n: gri`                           | Changed | Use Glance on `gi`; remove `gri`.                         |
+| Find implementations                        | `n: gi` with Telescope       | `n: gi` with Glance                | Changed | Remove `gri`.                                             |
 | Open a symbols outline                      | `n: gO` with Lspsaga         | `n: <leader>lS`                    | Changed | **Conflict:** AstroNvim = find document symbols.            |
 | Find document symbols                       | `n/i: <A-d>` with Telescope  | `n: gO`                            | Changed | **Conflict:** NvChad = open the symbols outline.            |
 | Open the Lspsaga finder                     | `n: ga`                      | —                                  | Removed |                                                             |
 | Show hover documentation                    | `n: K` with Lspsaga          | `n: K` with the native LSP client  | Changed |                                                             |
-| Run a code action                           | `n: <leader>ca` with Lspsaga | `n/x: gra` or `<leader>la`         | Changed | Use `<leader>la`; remove `gra`.                             |
-| Go to the next diagnostic                   | `n: <leader>n`               | `n: ]d`                            | Changed | **Conflict:** AstroNvim = create a new file.                |
+| Run a code action                           | `n: <leader>ca` with Lspsaga | `n/x: <leader>la`                  | Changed | Remove `gra`.                                               |
+| Go to the next diagnostic                   | `n: <leader>n`               | `n: ]d`                            | Changed | AstroNvim's `<leader>n` mapping is disabled.                |
 | Find workspace symbols                      | `n: <leader>fs` with Fzf-lua | `n: <leader>lG`                    | Changed | **Conflict:** AstroNvim = smart file picker.                |
 | Go to a declaration                         | —                            | `n: gD`                            | New     |                                                             |
-| Rename the current symbol                   | —                            | `n: grn` or `<leader>lr`           | New     | Use `<leader>lr`; remove `grn`.                             |
+| Rename the current symbol                   | —                            | `n: <leader>lr`                    | New     | Remove `grn`.                                               |
 | Show signature help                         | —                            | `n: gK` or `<leader>lh`            | New     |                                                             |
 | Show signature help in insert mode          | —                            | `i: <C-S>`                         | New     |                                                             |
 | Run an LSP source action                    | —                            | `n: <leader>lA`                    | New     |                                                             |
@@ -152,7 +150,7 @@ Last verified: 2026-08-29
 | Find Git stashes                          | —                            | `n: <leader>gT`             | New     |               |
 | Stage a Git hunk                          | `n/v: <leader>ghs`           | `n/v: <leader>gs`           | Changed |               |
 | Reset a Git hunk                          | `n/v: <leader>ghr`           | `n/v: <leader>gr`           | Changed |               |
-| Undo the last stage-hunk operation        | `n/v: <leader>ghu`           | —                           | Removed | +a as `n: <leader>gu`. |
+| Undo the last stage-hunk operation        | `n/v: <leader>ghu`           | `n: <leader>gu`             | Changed | Owned by Gitsigns.     |
 | Select a Git hunk text object             | `x/o: ih`                    | `x/o: ig`                   | Changed |               |
 | Show blame for the current line           | —                            | `n: <leader>gl`             | New     |               |
 | Show full blame for the current line      | —                            | `n: <leader>gL`             | New     |               |
@@ -200,18 +198,18 @@ Last verified: 2026-08-29
 
 | Functionality         | NvChad key      | AstroNvim key | State   | Note                                 |
 | --------------------- | --------------- | ------------- | ------- | ------------------------------------ |
-| Search saved sessions | `n: <leader>ss` | —             | Removed | +a as `n: <leader>fS` using Auto Session's Snacks picker. |
+| Search saved sessions | `n: <leader>ss` | `n: <leader>fS` | Changed | Uses Auto Session's Snacks picker. |
 
 ## Formatting and folds
 
 | Functionality                                                 | NvChad key       | AstroNvim key                       | State   | Note                                                                   |
 | ------------------------------------------------------------- | ---------------- | ----------------------------------- | ------- | ---------------------------------------------------------------------- |
-| Format the current buffer with Conform                        | `n: <leader>fm`  | `n: <leader>fm` after Conform loads | Same    | Keep `<leader>fm`; move Find manual pages to `<leader>fM`.              |
+| Format the current buffer with Conform                        | `n: <leader>fm`  | `n: <leader>fm`                    | Same    | Conform owns this mapping; manual pages use `<leader>fM`.               |
 | Format a visual selection with Conform                        | `v: <leader>fm`  | `v: <leader>fm`                     | Same    |                                                                        |
 | Run Conform from operator-pending mode; it formats the buffer | `o: <leader>fm`  | `o: <leader>fm`                     | Same    | This is not motion-based. Conform detects a range only in Visual mode. |
-| Format through the active LSP client                          | —                | `n/v: <leader>lf`                   | New     | -a; Conform already falls back to LSP formatting.                      |
-| Close all folds                                               | `n: zM` with UFO | `n: zM` with native fold behavior   | Changed | +a; use UFO so `foldlevel` stays at 99.                                |
-| Open all folds                                                | `n: zR` with UFO | `n: zR` with native fold behavior   | Changed | +a; use UFO so `foldlevel` stays at 99.                                |
+| Format through the active LSP client                          | —                | —                                   | Removed | `<leader>lf` is disabled; Conform already falls back to LSP formatting. |
+| Close all folds                                               | `n: zM` with UFO | `n: zM` with UFO                    | Same    | UFO preserves `foldlevel = 99`.                                        |
+| Open all folds                                                | `n: zR` with UFO | `n: zR` with UFO                    | Same    | UFO preserves `foldlevel = 99`.                                        |
 
 ## Haskell tools
 
@@ -225,9 +223,9 @@ Last verified: 2026-08-29
 
 | Functionality                                    | NvChad key                   | AstroNvim key             | State   | Note                                                                  |
 | ------------------------------------------------ | ---------------------------- | ------------------------- | ------- | --------------------------------------------------------------------- |
-| Open completion                                  | `i: <A-Space>` with nvim-cmp | `i: <C-Space>` with Blink | Changed | Use `<A-Space>`; disable Blink's `<C-Space>`.                          |
-| Select the next completion item                  | —                            | `i: <C-N>` or `<C-J>`     | New     | Disable Blink's `<C-N>`; keep `<C-J>`.                                 |
-| Select the previous completion item              | —                            | `i: <C-P>` or `<C-K>`     | New     | Disable Blink's `<C-P>`; keep `<C-K>`.                                 |
+| Open completion                                  | `i: <A-Space>` with nvim-cmp | `i: <A-Space>` with Blink | Changed | Blink's `<C-Space>` is disabled.                                      |
+| Select the next completion item                  | —                            | `i: <C-J>` with Blink     | New     | Blink's `<C-N>` is disabled.                                          |
+| Select the previous completion item              | —                            | `i: <C-K>` with Blink     | New     | Blink's `<C-P>` is disabled.                                          |
 | Accept a Copilot suggestion                      | `i: <C-J>`                   | —                         | Removed | **Conflict:** AstroNvim uses `i: <C-J>` for the next completion item. |
 | Select the smart Treesitter text subject         | `x/o: .`                     | —                         | Removed | Intentionally disabled: textsubjects is incompatible with Treesitter `main`. |
 | Select the outer Treesitter container            | `x/o: ;`                     | —                         | Removed | Intentionally disabled: textsubjects is incompatible with Treesitter `main`. |
@@ -262,10 +260,10 @@ Last verified: 2026-08-29
 | Swap with the previous Treesitter block          | `n: <K`                      | `n: <K`                   | Same    |                                                                       |
 | Swap with the previous Treesitter function       | `n: <F`                      | `n: <F`                   | Same    |                                                                       |
 | Swap with the previous Treesitter argument       | `n: <A`                      | `n: <A`                   | Same    |                                                                       |
-| Start incremental Treesitter selection           | `n: gnn`                     | —                         | Removed | +a as `n: \` through `treesitter-modules.nvim`.                            |
-| Expand incremental Treesitter selection by node  | `x: grn`                     | —                         | Removed | +a as `x: \` through `treesitter-modules.nvim`.                            |
-| Expand incremental Treesitter selection by scope | `x: grc`                     | —                         | Removed |                                                                       |
-| Shrink incremental Treesitter selection by node  | `x: grm`                     | —                         | Removed | +a as `x: <BS>`; leave scope expansion disabled.                            |
+| Start incremental Treesitter selection           | `n: gnn`                     | `n: \`                    | Changed | Provided by `treesitter-modules.nvim`.                                 |
+| Expand incremental Treesitter selection by node  | `x: grn`                     | `x: \`                    | Changed | Provided by `treesitter-modules.nvim`.                                 |
+| Expand incremental Treesitter selection by scope | `x: grc`                     | —                         | Removed | Scope expansion is intentionally disabled.                             |
+| Shrink incremental Treesitter selection by node  | `x: grm`                     | `x: <BS>`                  | Changed | Provided by `treesitter-modules.nvim`.                                 |
 
 ## Yanky
 
@@ -309,8 +307,8 @@ Last verified: 2026-08-29
 | Add a surrounding pair                | `n: ys{motion}{char}` | `n: ys{motion}{char}` | Same       |                                                                   |
 | Delete a surrounding pair             | `n: ds{char}`         | `n: ds{char}`         | Same       |                                                                   |
 | Change a surrounding pair             | `n: cs{old}{new}`     | `n: cs{old}{new}`     | Same       |                                                                   |
-| Toggle a comment on the current line  | `n: <leader>/`        | `n: <leader>/`        | Unverified | NvChad stock mapping is not present in the tracked custom source. |
-| Toggle comments on a visual selection | `v: <leader>/`        | `v: <leader>/`        | Unverified | NvChad stock mapping is not present in the tracked custom source. |
+| Toggle a comment on the current line  | `n: <leader>/`        | —                      | Removed    | Disabled in the final AstroNvim configuration.                    |
+| Toggle comments on a visual selection | `v: <leader>/`        | —                      | Removed    | Disabled in the final AstroNvim configuration.                    |
 | Add a commented line below            | —                     | `n: gco`              | New        |                                                                   |
 | Add a commented line above            | —                     | `n: gcO`              | New        |                                                                   |
 
@@ -327,8 +325,8 @@ Last verified: 2026-08-29
 | Open the previous buffer                     | —          | `n: <leader>bp`  | New   |      |
 | Open a selected buffer in a vertical split   | —          | `n: <leader>b\|` | New   |      |
 | Open a selected buffer in a horizontal split | —          | `n: <leader>b\`  | New   |      |
-| Go to the next buffer                        | —          | `n: ]b`          | New   | Use `<Tab>`; disable `]b` and accept the `<C-I>` tradeoff. |
-| Go to the previous buffer                    | —          | `n: [b`          | New   | Use `<S-Tab>`; disable `[b`.                              |
+| Go to the next buffer                        | —          | `n: <Tab>`       | New   | `]b` is disabled; accept the `<C-I>` tradeoff.            |
+| Go to the previous buffer                    | —          | `n: <S-Tab>`     | New   | `[b` is disabled.                                         |
 | Move the current buffer tab right            | —          | `n: >b`          | New   |      |
 | Move the current buffer tab left             | —          | `n: <b`          | New   |      |
 | Sort buffers by extension                    | —          | `n: <leader>bse` | New   |      |
@@ -359,7 +357,7 @@ Last verified: 2026-08-29
 
 | Functionality                                    | NvChad key | AstroNvim key   | State | Note                                             |
 | ------------------------------------------------ | ---------- | --------------- | ----- | ------------------------------------------------ |
-| Create a horizontal split                        | —          | `n: \`          | New   | -a; `\` is reserved for incremental selection.    |
+| Create a horizontal split                        | —          | —                | Removed | `\` is reserved for incremental selection.       |
 | Create a vertical split                          | —          | `n: \|`         | New   |                                                  |
 | Move to the left Neovim split or tmux pane       | `n: <C-H>` | `n: <C-H>`      | Same  | Provided by vim-tmux-navigator after `VeryLazy`. |
 | Move to the lower Neovim split or tmux pane      | `n: <C-J>` | `n: <C-J>`      | Same  | Provided by vim-tmux-navigator after `VeryLazy`. |
@@ -408,14 +406,14 @@ Last verified: 2026-08-29
  ( a(b(c(d)c)b)a)
 
 ## Plugin management
-Disable all below
+All plugin-management mappings below are intentionally disabled.
 | Functionality                  | NvChad key | AstroNvim key   | State | Note |
 | ------------------------------ | ---------- | --------------- | ----- | ---- |
-| Install plugins                | —          | `n: <leader>pi` | New   | -a   |
-| Show plugin status             | —          | `n: <leader>ps` | New   | -a   |
-| Synchronize plugins            | —          | `n: <leader>pS` | New   | -a   |
-| Check for plugin updates       | —          | `n: <leader>pu` | New   | -a   |
-| Update plugins                 | —          | `n: <leader>pU` | New   | -a   |
-| Open Mason Installer           | —          | `n: <leader>pm` | New   | -a   |
-| Update Mason packages          | —          | `n: <leader>pM` | New   | -a   |
-| Update Lazy and Mason packages | —          | `n: <leader>pa` | New   | -a   |
+| Install plugins                | —          | —               | Removed | Disabled. |
+| Show plugin status             | —          | —               | Removed | Disabled. |
+| Synchronize plugins            | —          | —               | Removed | Disabled. |
+| Check for plugin updates       | —          | —               | Removed | Disabled. |
+| Update plugins                 | —          | —               | Removed | Disabled. |
+| Open Mason Installer           | —          | —               | Removed | Disabled. |
+| Update Mason packages          | —          | —               | Removed | Disabled. |
+| Update Lazy and Mason packages | —          | —               | Removed | Disabled. |

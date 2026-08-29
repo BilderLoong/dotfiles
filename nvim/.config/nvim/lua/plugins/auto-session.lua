@@ -2,17 +2,26 @@ return {
   "rmagatti/auto-session",
   event = "VeryLazy",
   cmd = {
+    "AutoSession",
     "Autosession",
     "SessionDelete",
     "SessionRestore",
     "SessionRestoreFromFile",
     "SessionSave",
   },
+  keys = {
+    {
+      "<Leader>fS",
+      function() require("auto-session").search() end,
+      desc = "Search sessions",
+    },
+  },
   opts = {
     auto_restore_enabled = false,
     log_level = vim.log.levels.ERROR,
     session_lens = {
       load_on_setup = true,
+      picker = "snacks",
       theme_conf = { border = true },
       previewer = true,
     },
