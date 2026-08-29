@@ -5,7 +5,7 @@ Last verified: 2026-08-29
 ## Scope
 
 - **NvChad baseline:** Git revision `f7ce9e03`, the last tracked NvChad configuration before its files were deleted.
-- **AstroNvim baseline:** the active configuration loaded from `~/.config/nvim` with Neovim 0.11.1 and AstroNvim 6.0.4.
+- **AstroNvim baseline:** the active configuration loaded from `~/.config/nvim` with Neovim 0.12.5 and AstroNvim 6.0.4.
 - The NvChad side is exact only for the tracked custom source. Rows marked **Unverified** keep a stock NvChad claim for migration context, but the repository does not contain the final stock NvChad runtime or dependency lock.
 - This document includes global mappings, explicit buffer-local mappings, tracked plugin entry mappings, and plugin defaults that are important for migration. It does not list picker-internal or other UI-local mappings. It lists a stock Neovim key only when one configuration overrides or reuses it.
 - Lazy-loaded plugin mappings are documented by their final active owner. Conform owns `<leader>fm`; manual pages use `<leader>fM`.
@@ -95,8 +95,8 @@ Last verified: 2026-08-29
 | Functionality                               | NvChad key                   | AstroNvim key                      | State   | Note                                                        |
 | ------------------------------------------- | ---------------------------- | ---------------------------------- | ------- | ----------------------------------------------------------- |
 | Go to definition                            | `n: gd` with Glance          | `n: gd` with Glance                | Same    | Capability-gated on LSP definition support.                 |
-| Go to type definition                       | `n: gy` with Glance          | `n: gy` with Glance                | Same    | Capability-gated on LSP type-definition support.            |
-| Find references                             | `n: gr` with Glance          | `n: gr` with Glance                | Same    | Remove `grr` and `<leader>lR`.                              |
+| Go to type definition                       | `n: gy` with Glance          | `n: gy` with Glance                | Same    | Capability-gated on LSP type-definition support; Neovim 0.12's `grt` default is disabled. |
+| Find references                             | `n: gr` with Glance          | `n: gr` with Glance                | Same    | Remove longer native `gr*` aliases so this mapping is immediate; remove `<leader>lR`. |
 | Go to the previous reference                | —                            | `n: [r`                            | New     | Provided by Snacks when references are available.           |
 | Go to the next reference                    | —                            | `n: ]r`                            | New     | Provided by Snacks when references are available.           |
 | Find implementations                        | `n: gi` with Telescope       | `n: gi` with Glance                | Changed | Remove `gri`.                                             |
@@ -113,7 +113,7 @@ Last verified: 2026-08-29
 | Show signature help in insert mode          | —                            | `i: <C-S>`                         | New     |                                                             |
 | Run an LSP source action                    | —                            | `n: <leader>lA`                    | New     |                                                             |
 | Refresh CodeLens                            | —                            | `n: <leader>ll`                    | New     |                                                             |
-| Run CodeLens                                | —                            | `n: <leader>lL`                    | New     |                                                             |
+| Run CodeLens                                | —                            | `n: <leader>lL`                    | New     | Neovim 0.12's `grx` default is disabled.                    |
 | Show LSP health information                 | —                            | `n: <leader>li`                    | New     |                                                             |
 | Show diagnostics under the cursor           | —                            | `n: <leader>ld` or `gl`            | New     |                                                             |
 | Search diagnostics                          | —                            | `n: <leader>lD`                    | New     |                                                             |
