@@ -139,14 +139,17 @@ return {
 		optional = true,
 		opts = function(_, opts)
 			-- The Rust pack reads the native config, which nvim-lspconfig can load
-			-- after AstroLSP. Reapply AstroLSP's merged settings before it starts.
-			local native_config = vim.lsp.config["rust_analyzer"]
+			-- after AstroLSP. Pass AstroLSP's merged settings into the pack loader.
 			local astro_config = require("astrolsp").config.config.rust_analyzer
-			native_config.settings = vim.tbl_deep_extend(
-				"force",
-				native_config.settings or {},
-				astro_config and astro_config.settings or {}
-			)
+			local pack_settings = opts.server.settings
+			opts.server.settings = function(project_root, default_settings)
+				local settings = vim.tbl_deep_extend(
+					"force",
+					default_settings or {},
+					astro_config and astro_config.settings or {}
+				)
+				return pack_settings(project_root, settings)
+			end
 			return opts
 		end,
 	},
