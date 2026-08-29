@@ -95,6 +95,12 @@ local ast_grep_source = {
   end,
 }
 
+local function find_files()
+  require("snacks").picker.files {
+    hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
+  }
+end
+
 local function restore_last_session()
   local auto_session = require "auto-session"
   local session_name = require("auto-session.lib").get_latest_session(auto_session.get_root_dir())
@@ -116,7 +122,7 @@ return {
 
     local dashboard_keys = vim.tbl_get(opts, "dashboard", "preset", "keys") or {}
     for _, key in ipairs(dashboard_keys) do
-      if key.key == "f" then key.action = "<C-P>" end
+      if key.key == "f" then key.action = find_files end
       if key.key == "s" then key.action = restore_last_session end
     end
   end,
