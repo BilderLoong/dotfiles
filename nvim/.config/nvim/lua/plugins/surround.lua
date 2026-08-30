@@ -3,11 +3,11 @@ return {
   version = "*",
   init = function() vim.g.nvim_surround_no_visual_mappings = true end,
   keys = {
-  "c",
-  "y",
-  "d",
-  { "gs", mode = "x" },
-  { "gS", mode = "x" },
+    "c",
+    "y",
+    "d",
+    { "gs", mode = "x" },
+    { "gS", mode = "x" },
   },
   config = function()
     require("nvim-surround").setup {}
