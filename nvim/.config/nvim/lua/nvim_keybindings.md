@@ -513,7 +513,6 @@ These active mappings do not appear reliably in `nvim_get_keymap()` because thei
 | `<Leader>lD` | `n` | Use `gL` to search diagnostics. |
 | `]b` | `n` | Use `<Tab>` for the next buffer. |
 | `[b` | `n` | Use `<S-Tab>` for the previous buffer. |
-
 | `grr` | `n` | Use Glance references on `gr`. |
 | `gri` | `n` | Use Glance implementations on `gi`. |
 | `gra` | `n/x` | Use `<Leader>la` for code actions. |
