@@ -4,6 +4,6 @@ return {
 	cmd = "ASToggle",
 	event = { "User AstroFile", "InsertEnter" },
 	opts = {
-		noautocmd = true,
+		-- noautocmd = true,
 	},
 }
