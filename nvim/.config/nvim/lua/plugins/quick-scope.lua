@@ -1,5 +1,4 @@
-return 
-  {
+return {
     "unblevable/quick-scope",
     event = "BufReadPost",
     config = function()
