@@ -4,9 +4,7 @@ local function find_files()
   }
 end
 
-local function navigate_buffer(direction)
-  require("astrocore.buffer").nav(direction * vim.v.count1)
-end
+local function navigate_buffer(direction) require("astrocore.buffer").nav(direction * vim.v.count1) end
 
 ---@type LazySpec
 return {
@@ -42,8 +40,17 @@ return {
     maps.n["<Leader>fA"] = { function() require("snacks").picker.ast_grep() end, desc = "Find AST patterns" }
     maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
 
-    maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
-
+    -- maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
+    maps.n.gL = {
+      function()
+        require("snacks").picker.diagnostics {
+          layout = { preset = "sidebar" },
+          auto_close = false,
+          jump = { close = false },
+        }
+      end,
+      desc = "Diagnostics sidebar",
+    }
     maps.n["<Tab>"] = { function() navigate_buffer(1) end, desc = "Next buffer" }
     maps.n["<S-Tab>"] = { function() navigate_buffer(-1) end, desc = "Previous buffer" }
 
