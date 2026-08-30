@@ -1,7 +1,9 @@
 return {
   "kylechui/nvim-surround",
   version = "*",
-  init = function() vim.g.nvim_surround_no_visual_mappings = true end,
+  init = function()
+    vim.g.nvim_surround_no_visual_mappings = true
+  end,
   keys = {
     { "<C-g>s", mode = "i" },
     { "<C-g>S", mode = "i" },
