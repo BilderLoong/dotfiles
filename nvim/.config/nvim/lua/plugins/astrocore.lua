@@ -41,16 +41,16 @@ return {
     maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
 
     maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
-    -- maps.n.gL = {
-    --   function()
-    --     require("snacks").picker.diagnostics {
-    --       layout = { preset = "sidebar" },
-    --       auto_close = false,
-    --       jump = { close = false },
-    --     }
-    --   end,
-    --   desc = "Diagnostics sidebar",
-    -- }
+    maps.n.gL = {
+      function()
+        require("snacks").picker.diagnostics {
+          layout = { preset = "sidebar" },
+          auto_close = false,
+          jump = { close = false },
+        }
+      end,
+      desc = "Diagnostics sidebar",
+    }
     maps.n["<Tab>"] = { function() navigate_buffer(1) end, desc = "Next buffer" }
     maps.n["<S-Tab>"] = { function() navigate_buffer(-1) end, desc = "Previous buffer" }
 
