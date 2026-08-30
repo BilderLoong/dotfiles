@@ -5,7 +5,7 @@ return {
   keys = {
     { "<C-g>s", mode = "i" },
     { "<C-g>S", mode = "i" },
-    { "ys",mode= "n" },
+    { "ys", mode = "n" },
     { "yS", mode = "n" },
     { "ds", mode = "n" },
     { "cs", mode = "n" },
