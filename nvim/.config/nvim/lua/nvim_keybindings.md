@@ -418,7 +418,7 @@ Buffer-local mappings override a global mapping with the same key while their in
 | Key | Mode | Action |
 | --- | --- | --- |
 | `<A` | `n` | Swap previous argument |
-| `<BS>` | `x` | Shrink Tree-sitter selection with native `in` |
+| `<BS>` | `x` | Shrink Tree-sitter selection |
 | `<F` | `n` | Swap previous function |
 | `<K` | `n` | Swap previous block |
 | `>A` | `n` | Swap next argument |
@@ -430,8 +430,8 @@ Buffer-local mappings override a global mapping with the same key while their in
 | `[f` | `n/x/o` | Previous function start |
 | `[K` | `n/x/o` | Previous block end |
 | `[k` | `n/x/o` | Previous block start |
-| `\` | `n` | Start Tree-sitter selection with native `an` |
-| `\` | `x` | Grow Tree-sitter selection with native `an` |
+| `\` | `n` | Start Tree-sitter selection |
+| `\` | `x` | Grow Tree-sitter selection |
 | `]A` | `n/x/o` | Next argument end |
 | `]a` | `n/x/o` | Next argument start |
 | `]F` | `n/x/o` | Next function end |
@@ -513,7 +513,7 @@ These active mappings do not appear reliably in `nvim_get_keymap()` because thei
 | `<Leader>lD` | `n` | Use `gL` to search diagnostics. |
 | `]b` | `n` | Use `<Tab>` for the next buffer. |
 | `[b` | `n` | Use `<S-Tab>` for the previous buffer. |
-| `\` | `global n` | Horizontal-split alias removed; parser buffers use `\` for Treesitter selection. |
+
 | `grr` | `n` | Use Glance references on `gr`. |
 | `gri` | `n` | Use Glance implementations on `gi`. |
 | `gra` | `n/x` | Use `<Leader>la` for code actions. |
