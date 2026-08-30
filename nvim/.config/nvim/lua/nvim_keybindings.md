@@ -488,6 +488,8 @@ These active mappings do not appear reliably in `nvim_get_keymap()` because thei
 | `ys{motion}{char}` | `n` | Add a surrounding pair |
 | `ds{char}` | `n` | Delete a surrounding pair |
 | `cs{old}{new}` | `n` | Change a surrounding pair |
+| `gs{char}` | `x` | Add a surrounding pair around a visual selection |
+| `gS{char}` | `x` | Add a surrounding pair around a visual selection, on new lines |
 
 ### Capability-dependent LSP fallback
 
