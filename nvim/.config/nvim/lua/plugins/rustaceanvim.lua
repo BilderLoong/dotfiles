@@ -19,7 +19,7 @@ return {
       if type(settings) ~= "table" then settings = {} end
       settings["rust-analyzer"] = settings["rust-analyzer"] or {}
       settings["rust-analyzer"].files = settings["rust-analyzer"].files or {}
-      settings["rust-analyzer"].files.watcher = "client" -- "server" config 
+      settings["rust-analyzer"].files.watcher = "client" -- "server" config have performance issuse for me. 
 
       return settings
     end
