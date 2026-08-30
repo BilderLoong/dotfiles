@@ -134,8 +134,6 @@ Last verified: 2026-08-29
 | --- | --- | --- | --- |
 | `<Leader>lA` | `n` | LSP source action | Buffer-local |
 | `<Leader>la` | `n/x` | LSP code action | Buffer-local |
-| `<Leader>ld` | `n` | Hover diagnostics | Global |
-| `<Leader>lD` | `n` | Search diagnostics | Global |
 | `<Leader>lG` | `n` | Search workspace symbols | Buffer-local |
 | `<Leader>lh` | `n` | Signature help | Buffer-local |
 | `<Leader>li` | `n` | Lsp Information | Global |
@@ -330,6 +328,7 @@ Last verified: 2026-08-29
 | `gcO` | `n` | Add Comment Above |
 | `gco` | `n` | Add Comment Below |
 | `gl` | `n` | Hover diagnostics |
+| `gL` | `n` | Search diagnostics |
 | `gO` | `n` | vim.lsp.buf.document_symbol() |
 | `gp` | `n/x` | Put after and move cursor |
 | `gP` | `n/x` | Put before and move cursor |
@@ -510,6 +509,8 @@ These active mappings do not appear reliably in `nvim_get_keymap()` because thei
 | `<Leader>e` | `n` | Use `<C-N>` to toggle Neo-tree. |
 | `<Leader>o` | `n` | Explorer focus alias removed. |
 | `<Leader>/` | `n/x` | Use `gcc` for a line or `gc` for a selection/motion. |
+| `<Leader>ld` | `n` | Use `gl` to show diagnostics under the cursor. |
+| `<Leader>lD` | `n` | Use `gL` to search diagnostics. |
 | `]b` | `n` | Use `<Tab>` for the next buffer. |
 | `[b` | `n` | Use `<S-Tab>` for the previous buffer. |
 | `\` | `global n` | Horizontal-split alias removed; parser buffers use `\` for Treesitter selection. |
