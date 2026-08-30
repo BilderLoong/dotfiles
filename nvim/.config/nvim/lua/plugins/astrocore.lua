@@ -42,6 +42,8 @@ return {
     maps.n["<Leader>fA"] = { function() require("snacks").picker.ast_grep() end, desc = "Find AST patterns" }
     maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
 
+    maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
+
     maps.n["<Tab>"] = { function() navigate_buffer(1) end, desc = "Next buffer" }
     maps.n["<S-Tab>"] = { function() navigate_buffer(-1) end, desc = "Previous buffer" }
 
@@ -57,6 +59,8 @@ return {
       "<Leader>e",
       "<Leader>o",
       "<Leader>/",
+      "<Leader>ld",
+      "<Leader>lD",
       "]b",
       "[b",
       "<Leader>pi",
