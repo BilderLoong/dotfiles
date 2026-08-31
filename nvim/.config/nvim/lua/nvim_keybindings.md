@@ -80,7 +80,7 @@ Last verified: 2026-08-29
 | Key | Mode | Action | Scope |
 | --- | --- | --- | --- |
 | `<Leader>f'` | `n` | Find marks | Global |
-| `<Leader>f<CR>` | `n` | Resume previous search | Global |
+| `<Leader>ff` | `n` | Resume previous search | Global |
 | `<Leader>fA` | `n` | Find AST patterns | Global |
 | `<Leader>fa` | `n` | Find AstroNvim config files | Global |
 | `<Leader>fb` | `n` | Find buffers | Global |
@@ -507,7 +507,7 @@ These active mappings do not appear reliably in `nvim_get_keymap()` because thei
 | `<Leader>Q` | `n` | Disabled exit-Neovim alias. |
 | `<C-Q>` | `n` | Disabled force-quit alias. |
 | `<Leader>n` | `n` | Disabled new-file alias; diagnostics use bracket mappings. |
-| `<Leader>ff` | `n` | Use `<C-P>` to find files. |
+| `<Leader>f<CR>` | `n` | Resume previous search moved to `<Leader>ff`. |
 | `<Leader>e` | `n` | Use `<C-N>` to toggle Neo-tree. |
 | `<Leader>o` | `n` | Explorer focus alias removed. |
 | `<Leader>/` | `n/x` | Use `gcc` for a line or `gc` for a selection/motion. |
