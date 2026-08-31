@@ -17,5 +17,5 @@ return
     use_trouble_qf = true,
   },
 
-  config = function() require("glance").setup {} end,
+  -- config = function() require("glance").setup {} end,
 }
