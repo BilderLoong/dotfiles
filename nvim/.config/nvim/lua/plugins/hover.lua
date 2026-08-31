@@ -23,9 +23,12 @@ return {
   end,
   keys = {
     {
-      {"<MouseMove>", mode={"n"}, function ()
-         require('hover').mouse()
-      end}
+      {
+        "<MouseMove>",
+        mode = { "n" },
+        function() require("hover").mouse() end,
+        { desc = "hover.nvim (mouse)" },
+      },
     },
   },
 }
