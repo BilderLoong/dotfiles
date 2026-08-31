@@ -3,7 +3,7 @@ return
 {
   "dnlhc/glance.nvim",
   cmd = { "Glance" },
-  opts = {
+  opts = require("nord.plugins.glance").make_opts {
     hooks = {
       before_open = function(results, open, jump)
         if #results == 1 then
