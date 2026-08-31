@@ -1,70 +1,70 @@
--- local function open_or_enter_hover()
---   local source_win = vim.api.nvim_get_current_win()
---   local hover = require("hover")
---   hover.enter()
---   if vim.api.nvim_get_current_win() == source_win then
---     hover.open()
---   end
--- end
---
--- ---@type LazySpec
--- return {
---   {
---     "lewis6991/hover.nvim",
---     event = "LspAttach",
---     init = function() vim.o.mousemoveevent = true end,
---     config = function()
---       require("hover").config {
---         providers = {
---           "hover.providers.lsp",
---           "hover.providers.diagnostic",
---           "hover.providers.dap",
---           "hover.providers.man",
---           "hover.providers.dictionary",
---         },
---         preview_opts = {
---           border = "rounded",
---         },
---         preview_window = false,
---         title = true,
---         mouse_providers = {
---           "hover.providers.lsp",
---         },
---         mouse_delay = 1000,
---       }
---     end,
---     keys = {
---       {
---         "<MouseMove>",
---         mode = { "n" },
---         function() require("hover").mouse() end,
---         desc = "hover.nvim (mouse)",
---       },
---     },
---   },
---   {
---     "AstroNvim/astrolsp",
---     ---@type AstroLSPOpts
---     opts = {
---       mappings = {
---         n = {
---           K = {
---             open_or_enter_hover,
---             desc = "Open or enter hover",
---             cond = "textDocument/hover",
---           },
---           ["[H"] = {
---             function() require("hover").switch("previous") end,
---             desc = "Previous hover source",
---             cond = "textDocument/hover",
---           },
---           ["]H"] = {
---             function() require("hover").switch("next") end,
---             desc = "Next hover source",
---             cond = "textDocument/hover",
---           },
---         },
---       },
---     },
---   },
--- }
+local function open_or_enter_hover()
+  local source_win = vim.api.nvim_get_current_win()
+  local hover = require("hover")
+  hover.enter()
+  if vim.api.nvim_get_current_win() == source_win then
+    hover.open()
+  end
+end
+
+---@type LazySpec
+return {
+  {
+    "lewis6991/hover.nvim",
+    event = "LspAttach",
+    init = function() vim.o.mousemoveevent = true end,
+    config = function()
+      require("hover").config {
+        providers = {
+          "hover.providers.lsp",
+          "hover.providers.diagnostic",
+          "hover.providers.dap",
+          "hover.providers.man",
+          "hover.providers.dictionary",
+        },
+        preview_opts = {
+          border = "rounded",
+        },
+        preview_window = false,
+        title = true,
+        mouse_providers = {
+          "hover.providers.lsp",
+        },
+        mouse_delay = 1000,
+      }
+    end,
+    keys = {
+      {
+        "<MouseMove>",
+        mode = { "n" },
+        function() require("hover").mouse() end,
+        desc = "hover.nvim (mouse)",
+      },
+    },
+  },
+  {
+    "AstroNvim/astrolsp",
+    ---@type AstroLSPOpts
+    opts = {
+      mappings = {
+        n = {
+          K = {
+            open_or_enter_hover,
+            desc = "Open or enter hover",
+            cond = "textDocument/hover",
+          },
+          ["[H"] = {
+            function() require("hover").switch("previous") end,
+            desc = "Previous hover source",
+            cond = "textDocument/hover",
+          },
+          ["]H"] = {
+            function() require("hover").switch("next") end,
+            desc = "Next hover source",
+            cond = "textDocument/hover",
+          },
+        },
+      },
+    },
+  },
+}
