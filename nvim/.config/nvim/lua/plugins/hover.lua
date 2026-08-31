@@ -23,7 +23,9 @@ return {
   end,
   keys = {
     {
-      {"<MouseMove>", mode={""}}
+      {"<MouseMove>", mode={"n"}, function ()
+        
+      end}
     },
   },
 }
