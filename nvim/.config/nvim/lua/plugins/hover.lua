@@ -16,9 +16,8 @@ return {
       preview_window = false,
       title = true,
       mouse_providers = {
-        
+        "hover.providers.lsp",
       },
-      
     }
   end,
 }
