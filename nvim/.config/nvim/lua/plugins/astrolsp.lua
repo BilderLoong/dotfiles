@@ -72,32 +72,6 @@ return {
 		mappings = {
 			n = {
 				-- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
-				K = {
-					function()
-						local source_win = vim.api.nvim_get_current_win()
-						local hover = require("hover")
-						hover.enter()
-						if vim.api.nvim_get_current_win() == source_win then
-							hover.open()
-						end
-					end,
-					desc = "Open or enter hover",
-					cond = "textDocument/hover",
-				},
-				["[H"] = {
-					function()
-						require("hover").switch("previous")
-					end,
-					desc = "Previous hover source",
-					cond = "textDocument/hover",
-				},
-				["]H"] = {
-					function()
-						require("hover").switch("next")
-					end,
-					desc = "Next hover source",
-					cond = "textDocument/hover",
-				},
 				gd = {
 					"<Cmd>Glance definitions<CR>",
 					desc = "Show definitions in Glance",
