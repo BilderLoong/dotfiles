@@ -74,16 +74,14 @@ return {
 				-- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
 				K = {
 					function()
-						require("hover").open()
+						local source_win = vim.api.nvim_get_current_win()
+						local hover = require("hover")
+						hover.enter()
+						if vim.api.nvim_get_current_win() == source_win then
+							hover.open()
+						end
 					end,
-					desc = "Hover",
-					cond = "textDocument/hover",
-				},
-				["<Leader>lK"] = {
-					function()
-						require("hover").enter()
-					end,
-					desc = "Enter hover window",
+					desc = "Open or enter hover",
 					cond = "textDocument/hover",
 				},
 				["[H"] = {
