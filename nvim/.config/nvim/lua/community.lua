@@ -5,7 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.rust" },  { import = "astrocommunity.editing-support.nvim-treesitter-context" },
+  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.editing-support.nvim-treesitter-context" },
   -- TODO: try this: https://docs.astronvim.com/recipes/mappings/#enable-picker-lsp-mappings
   -- { import = "astrocommunity.recipes.picker-lsp-mappings" },
