@@ -10,7 +10,6 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      -- diff = { mode = "fg" },
     },
     config = function(_, opts) require("nord").setup(opts) end,
   },
