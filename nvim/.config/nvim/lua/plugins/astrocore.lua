@@ -43,16 +43,6 @@ return {
     maps.n["<Leader>fP"] = { function() require("snacks").picker.pickers() end, desc = "Find picker" }
 
     maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
-    -- maps.n.gL = {
-    --   function()
-    --     require("snacks").picker.diagnostics {
-    --       layout = { preset = "sidebar" },
-    --       auto_close = false,
-    --       jump = { close = false },
-    --     }
-    --   end,
-    --   desc = "Diagnostics sidebar",
-    -- }
     maps.n["<Tab>"] = { function() navigate_buffer(1) end, desc = "Next buffer" }
     maps.n["<S-Tab>"] = { function() navigate_buffer(-1) end, desc = "Previous buffer" }
 
