@@ -15,6 +15,9 @@ return
     },
     border = { enable = true },
     use_trouble_qf = true,
+    folds = {
+      folded = false,
+    },
   },
 
   -- config = function() require("glance").setup {} end,
