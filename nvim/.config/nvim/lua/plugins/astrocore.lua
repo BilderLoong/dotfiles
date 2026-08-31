@@ -4,9 +4,7 @@ local function find_files()
   }
 end
 
-local function navigate_buffer(direction)
-  require("astrocore.buffer").nav(direction * vim.v.count1)
-end
+local function navigate_buffer(direction) require("astrocore.buffer").nav(direction * vim.v.count1) end
 
 ---@type LazySpec
 return {
@@ -28,6 +26,10 @@ return {
     maps.n.zt = { "zt3<C-Y>", desc = "Scroll line to top with context" }
     maps.x.zt = { "zt3<C-Y>", desc = "Scroll line to top with context" }
 
+    maps.n["\\"] = { "van", remap = true, desc = "Start Tree-sitter selection" }
+    maps.x["\\"] = { "an", remap = true, desc = "Grow Tree-sitter selection" }
+    maps.x["<BS>"] = { "in", remap = true, desc = "Shrink Tree-sitter selection" }
+
     maps.n["<C-P>"] = { find_files, desc = "Find files" }
     maps.i["<C-P>"] = { find_files, desc = "Find files" }
     maps.x["<C-P>"] = { find_files, desc = "Find files" }
@@ -37,7 +39,19 @@ return {
 
     maps.n["<Leader>fA"] = { function() require("snacks").picker.ast_grep() end, desc = "Find AST patterns" }
     maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
+    maps.n["<Leader>ff"] = { function() require("snacks").picker.resume() end, desc = "Resume previous search" }
 
+    maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
+    -- maps.n.gL = {
+    --   function()
+    --     require("snacks").picker.diagnostics {
+    --       layout = { preset = "sidebar" },
+    --       auto_close = false,
+    --       jump = { close = false },
+    --     }
+    --   end,
+    --   desc = "Diagnostics sidebar",
+    -- }
     maps.n["<Tab>"] = { function() navigate_buffer(1) end, desc = "Next buffer" }
     maps.n["<S-Tab>"] = { function() navigate_buffer(-1) end, desc = "Previous buffer" }
 
@@ -48,14 +62,15 @@ return {
       "<Leader>Q",
       "<C-Q>",
       "<Leader>n",
-      "<Leader>ff",
+      "<Leader>f<CR>",
       "<Leader>fm",
       "<Leader>e",
       "<Leader>o",
       "<Leader>/",
+      "<Leader>ld",
+      "<Leader>lD",
       "]b",
       "[b",
-      "\\",
       "<Leader>pi",
       "<Leader>ps",
       "<Leader>pS",
