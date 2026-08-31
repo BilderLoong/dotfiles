@@ -24,7 +24,7 @@ return {
   keys = {
     {
       {"<MouseMove>", mode={"n"}, function ()
-        
+         require('hover').mouse()
       end}
     },
   },
