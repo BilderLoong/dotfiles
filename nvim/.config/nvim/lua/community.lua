@@ -7,6 +7,4 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.editing-support.nvim-treesitter-context" },
-  -- TODO: Config to use with vscode.
-  -- { import = "astrocommunity.recipes.vscode" }, -- [VS Code Integration | AstroNvim Documentation](https://docs.astronvim.com/recipes/vscode/)
 }
