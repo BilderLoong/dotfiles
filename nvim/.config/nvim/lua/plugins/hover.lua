@@ -1,5 +1,4 @@
-return 
-  {
+return {
   "lewis6991/hover.nvim",
   event = "LspAttach",
   config = function()
@@ -22,14 +21,12 @@ return
       mouse_delay = 1000,
     }
   end,
-    keys = 
-      {
-        {
-          "<MouseMove>",
-          mode = { "n" },
-          function() require("hover").mouse() end,
-          desc = "hover.nvim (mouse)",
-        },
-      },
-    ,
+  keys = {
+    {
+      "<MouseMove>",
+      mode = { "n" },
+      function() require("hover").mouse() end,
+      desc = "hover.nvim (mouse)",
+    },
+  },
 }
