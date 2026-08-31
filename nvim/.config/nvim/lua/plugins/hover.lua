@@ -20,6 +20,12 @@ return {
       },
       mouse_delay = 1000,
     }
-    
   end,
+  keys = {
+    {
+      "<Leader>vs",
+      function() require("export-to-vscode").launch() end,
+      desc = "Export project to VS Code",
+    },
+  },
 }
