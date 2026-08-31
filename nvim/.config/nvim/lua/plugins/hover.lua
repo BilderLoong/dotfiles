@@ -18,6 +18,7 @@ return {
       mouse_providers = {
         "hover.providers.lsp",
       },
+      
     }
   end,
 }
