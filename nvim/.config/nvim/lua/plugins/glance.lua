@@ -1,5 +1,5 @@
 return
----@type LazySpec
+--- @type LazySpec
 {
   "dnlhc/glance.nvim",
   cmd = { "Glance" },
