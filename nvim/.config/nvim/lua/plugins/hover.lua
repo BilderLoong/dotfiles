@@ -1,7 +1,10 @@
 return {
   "lewis6991/hover.nvim",
   event = "LspAttach",
-  init=funct
+  init=function ()
+    
+    
+  end
   config = function()
     require("hover").config {
       providers = {
