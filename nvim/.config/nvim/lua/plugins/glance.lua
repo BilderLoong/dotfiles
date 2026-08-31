@@ -1,4 +1,6 @@
-return {
+return
+---@type LazySpec
+{
   "dnlhc/glance.nvim",
   cmd = { "Glance" },
   opts = {},
