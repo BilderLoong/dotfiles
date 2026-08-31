@@ -15,13 +15,7 @@ return {
       },
       preview_window = false,
       title = true,
-       preview_window = false,
-  title = true,
-  mouse_providers = {
-    'hover.providers.lsp',
-  },
-  mouse_delay = 1000
-}mouse_providers = {},
+      mouse_providers = {},
       
     }
   end,
