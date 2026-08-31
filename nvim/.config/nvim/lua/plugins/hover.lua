@@ -1,10 +1,7 @@
 return {
   "lewis6991/hover.nvim",
   event = "LspAttach",
-  init=function ()
-    
-    vim.o.mousemoveevent = true
-  end
+  init = function() vim.o.mousemoveevent = true end,
   config = function()
     require("hover").config {
       providers = {
