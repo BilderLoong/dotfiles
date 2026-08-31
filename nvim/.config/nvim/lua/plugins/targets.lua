@@ -1,4 +1,1 @@
-return {
-  "wellle/targets.vim",
-  event = "User AstroFile",
-}
+local value = (first, second)
