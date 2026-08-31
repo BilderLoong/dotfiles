@@ -23,7 +23,7 @@ return {
   end,
   keys = {
     {
-      {""}
+      {"<MouseMove>"}
     },
   },
 }
