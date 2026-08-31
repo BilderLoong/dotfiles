@@ -111,7 +111,7 @@ Last verified: 2026-08-29
 | Key | Mode | Action | Scope |
 | --- | --- | --- | --- |
 | `<Leader>gb` | `n` | Git branches | Global |
-| `<Leader>gC` | `n` | Git commits (current file) | Global |
+| `<Leader>gC` | `n` | Git file history (Diffview) | Global |
 | `<Leader>gc` | `n` | Git commits (repository) | Global |
 | `<Leader>gd` | `n` | View Git diff | Buffer-local |
 | `<Leader>gg` | `n` | ToggleTerm lazygit | Global |
