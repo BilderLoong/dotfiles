@@ -39,7 +39,7 @@ return {
 
     maps.n["<Leader>fA"] = { function() require("snacks").picker.ast_grep() end, desc = "Find AST patterns" }
     maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
-    maps.n["<Leader>ff"] = { function() require("snacks").picker. end, desc = "Find man" }
+    maps.n["<Leader>ff"] = { function() require("snacks").picker.qflist end, desc = "Find man" }
 
     maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
     -- maps.n.gL = {
