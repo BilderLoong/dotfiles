@@ -27,7 +27,7 @@ return {
         "<MouseMove>",
         mode = { "n" },
         function() require("hover").mouse() end,
-        { desc = "hover.nvim (mouse)" },
+        desc = "hover.nvim (mouse)",
       },
     },
   },
