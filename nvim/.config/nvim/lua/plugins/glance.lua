@@ -3,7 +3,7 @@ return
 {
   "dnlhc/glance.nvim",
   cmd = { "Glance" },
-    https://github.com/gbprod/nord.nvim#-integrations
+  -- https://github.com/gbprod/nord.nvim#-integrations
   opts = require("nord.plugins.glance").make_opts {
     hooks = {
       before_open = function(results, open, jump)
