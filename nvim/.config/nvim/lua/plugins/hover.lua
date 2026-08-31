@@ -8,7 +8,7 @@ end
 ---@type LazySpec
 return {
   {
-    enable = false,
+    enabled = false,
     "lewis6991/hover.nvim",
     event = "LspAttach",
     init = function() vim.o.mousemoveevent = true end,
