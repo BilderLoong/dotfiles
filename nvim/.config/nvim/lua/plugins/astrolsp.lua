@@ -72,6 +72,34 @@ return {
 		mappings = {
 			n = {
 				-- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
+				K = {
+					function()
+						require("hover").open()
+					end,
+					desc = "Hover",
+					cond = "textDocument/hover",
+				},
+				["<Leader>lK"] = {
+					function()
+						require("hover").enter()
+					end,
+					desc = "Enter hover window",
+					cond = "textDocument/hover",
+				},
+				["[H"] = {
+					function()
+						require("hover").switch("previous")
+					end,
+					desc = "Previous hover source",
+					cond = "textDocument/hover",
+				},
+				["]H"] = {
+					function()
+						require("hover").switch("next")
+					end,
+					desc = "Next hover source",
+					cond = "textDocument/hover",
+				},
 				gd = {
 					"<Cmd>Glance definitions<CR>",
 					desc = "Show definitions in Glance",
