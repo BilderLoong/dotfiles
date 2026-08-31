@@ -1,15 +1,14 @@
 local function open_or_enter_hover()
   local source_win = vim.api.nvim_get_current_win()
-  local hover = require("hover")
+  local hover = require "hover"
   hover.enter()
-  if vim.api.nvim_get_current_win() == source_win then
-    hover.open()
-  end
+  if vim.api.nvim_get_current_win() == source_win then hover.open() end
 end
 
 ---@type LazySpec
 return {
   {
+    enable = false,
     "lewis6991/hover.nvim",
     event = "LspAttach",
     init = function() vim.o.mousemoveevent = true end,
@@ -54,12 +53,12 @@ return {
             cond = "textDocument/hover",
           },
           ["[H"] = {
-            function() require("hover").switch("previous") end,
+            function() require("hover").switch "previous" end,
             desc = "Previous hover source",
             cond = "textDocument/hover",
           },
           ["]H"] = {
-            function() require("hover").switch("next") end,
+            function() require("hover").switch "next" end,
             desc = "Next hover source",
             cond = "textDocument/hover",
           },
