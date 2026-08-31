@@ -15,7 +15,9 @@ return {
       },
       preview_window = false,
       title = true,
-      mouse_providers = {},
+      mouse_providers = {
+        
+      },
       
     }
   end,
