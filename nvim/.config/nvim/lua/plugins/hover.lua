@@ -3,7 +3,7 @@ return {
   event = "LspAttach",
   init=function ()
     
-    
+    vim.o.mousemoveevent = true
   end
   config = function()
     require("hover").config {
