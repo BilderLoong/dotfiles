@@ -78,4 +78,4 @@ return {
 
     opts.mappings = require("astrocore").extend_tbl(opts.mappings, maps)
   end,
-}
+n}
