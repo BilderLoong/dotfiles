@@ -22,5 +22,14 @@ return
       mouse_delay = 1000,
     }
   end,
-  keys = ,
+  keys = {
+    {
+      {
+        "<MouseMove>",
+        mode = { "n" },
+        function() require("hover").mouse() end,
+        desc = "hover.nvim (mouse)",
+      },
+    },
+  },
 }
