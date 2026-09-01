@@ -113,6 +113,7 @@ local function restore_last_session()
   auto_session.autosave_and_restore(session_name)
 end
 
+---@type LazySpec
 return {
   "folke/snacks.nvim",
   opts = function(_, opts)
