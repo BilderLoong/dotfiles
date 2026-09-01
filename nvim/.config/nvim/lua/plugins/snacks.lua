@@ -120,6 +120,23 @@ return {
     opts.picker.sources = opts.picker.sources or {}
     opts.picker.sources.ast_grep = ast_grep_source
 
+    local git_log_source = opts.picker.sources.git_log or {}
+    local upstream_git_log_config = git_log_source.config
+
+    git_log_source.config = function(picker_opts)
+      if upstream_git_log_config then picker_opts = upstream_git_log_config(picker_opts) or picker_opts end
+      if not picker_opts.current_file then return picker_opts end
+
+      picker_opts.previewers.diff.style = "terminal"
+      picker_opts.layout = {
+        preset = "default",
+        fullscreen = true,
+        config = function(layout) layout.layout[2].width = 0.8 end,
+      }
+      return picker_opts
+    end
+    opts.picker.sources.git_log = git_log_source
+
     local dashboard_keys = vim.tbl_get(opts, "dashboard", "preset", "keys") or {}
     for _, key in ipairs(dashboard_keys) do
       if key.key == "f" then key.action = find_files end

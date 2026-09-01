@@ -27,21 +27,6 @@ return {
         nord = { -- a table of overrides/changes when applying the Nord theme
           Comment = { fg = "#75809C", italic = true },
           ["@comment"] = { fg = "#75809C", italic = true },
-          -- -- VS Code-style diffs: tinted lines with stronger changed-text highlights.
-          -- DiffAdd = { bg = "#404E47" },
-          -- DiffDelete = { bg = "#642F37" },
-          -- DiffChange = { bg = "#2E3440" },
-          -- DiffText = { bg = "#3C5362" },
-          -- DiffviewDiffOldLine = { bg = "#642F37" },
-          -- DiffviewDiffOldText = { bg = "#642F37" },
-          -- DiffviewDiffNewLine = { bg = "#404E47" },
-          -- DiffviewDiffNewText = { bg = "#404E47" },
-          -- SnacksDiffAdd = { bg = "#404E47" },
-          -- SnacksDiffDelete = { bg = "#642F37" },
-          -- SnacksDiffContext = { bg = "#2E3440" },
-          -- SnacksDiffAddLineNr = { fg = "#758E68", bg = "#2E3440" },
-          -- SnacksDiffDeleteLineNr = { fg = "#9F6462", bg = "#2E3440" },
-          -- SnacksDiffContextLineNr = { fg = "#75809C", bg = "#2E3440" },
         },
       },
       -- Icons can be configured throughout the interface
