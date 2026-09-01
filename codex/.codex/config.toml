@@ -136,22 +136,22 @@ show-context-window-usage = true
 composerEnterBehavior = "cmdAlways"
 preventSleepWhileRunning = true
 composerPlainTextMode = true
-appearanceLightCodeThemeId = "vscode-plus"
+appearanceLightCodeThemeId = "codex"
 
 [desktop.appearanceLightChromeTheme]
-accent = "#007acc"
-accentSource = "custom"
+accent = "#0169cc"
+accentSource = "chatgpt"
 contrast = 45
-ink = "#000000"
+ink = "#0d0d0d"
 opaqueWindows = false
 surface = "#ffffff"
 
 [desktop.appearanceLightChromeTheme.fonts]
 
 [desktop.appearanceLightChromeTheme.semanticColors]
-diffAdded = "#008000"
-diffRemoved = "#ee0000"
-skill = "#0000ff"
+diffAdded = "#00a240"
+diffRemoved = "#e02e2a"
+skill = "#751ed9"
 
 [marketplaces.openai-bundled]
 source_type = "local"
