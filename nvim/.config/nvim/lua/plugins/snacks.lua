@@ -122,7 +122,8 @@ return {
     local upstream_git_log_config = git_log_source.config
 
     git_log_source.config = function(picker_opts)
-      if upstream_git_log_config then picker_opts = upstream_git_log_config(picker_opts) or picker_opts end
+      if upstream_git_log_config then 
+        picker_opts = upstream_git_log_config(picker_opts) or picker_opts end
       if not picker_opts.current_file then return picker_opts end
 
       picker_opts.previewers.diff.style = "terminal"
