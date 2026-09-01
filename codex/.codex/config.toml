@@ -136,6 +136,22 @@ show-context-window-usage = true
 composerEnterBehavior = "cmdAlways"
 preventSleepWhileRunning = true
 composerPlainTextMode = true
+appearanceLightCodeThemeId = "vscode-plus"
+
+[desktop.appearanceLightChromeTheme]
+accent = "#007acc"
+accentSource = "custom"
+contrast = 45
+ink = "#000000"
+opaqueWindows = false
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#008000"
+diffRemoved = "#ee0000"
+skill = "#0000ff"
 
 [marketplaces.openai-bundled]
 source_type = "local"
