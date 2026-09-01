@@ -41,29 +41,29 @@ return {
       },
     },
   },
-  {
-    "AstroNvim/astrolsp",
-    ---@type AstroLSPOpts
-    opts = {
-      mappings = {
-        n = {
-          K = {
-            open_or_enter_hover,
-            desc = "Open or enter hover",
-            cond = "textDocument/hover",
-          },
-          ["[H"] = {
-            function() require("hover").switch "previous" end,
-            desc = "Previous hover source",
-            cond = "textDocument/hover",
-          },
-          ["]H"] = {
-            function() require("hover").switch "next" end,
-            desc = "Next hover source",
-            cond = "textDocument/hover",
-          },
-        },
-      },
-    },
-  },
-}
+--   {
+--     "AstroNvim/astrolsp",
+--     ---@type AstroLSPOpts
+--     opts = {
+--       mappings = {
+--         n = {
+--           K = {
+--             open_or_enter_hover,
+--             desc = "Open or enter hover",
+--             cond = "textDocument/hover",
+--           },
+--           ["[H"] = {
+--             function() require("hover").switch "previous" end,
+--             desc = "Previous hover source",
+--             cond = "textDocument/hover",
+--           },
+--           ["]H"] = {
+--             function() require("hover").switch "next" end,
+--             desc = "Next hover source",
+--             cond = "textDocument/hover",
+--           },
+--         },
+--       },
+--     },
+--   },
+-- }
