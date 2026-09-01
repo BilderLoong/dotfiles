@@ -23,9 +23,7 @@ local ast_grep_source = {
 
     local cmd = vim.fn.exepath "ast-grep"
     if cmd == "" then cmd = vim.fn.exepath "sg" end
-    if cmd == "" and vim.fn.executable "/opt/homebrew/bin/ast-grep" == 1 then
-      cmd = "/opt/homebrew/bin/ast-grep"
-    end
+    if cmd == "" and vim.fn.executable "/opt/homebrew/bin/ast-grep" == 1 then cmd = "/opt/homebrew/bin/ast-grep" end
     if cmd == "" then
       Snacks.notify.error "ast-grep executable not found"
       return {}
@@ -48,50 +46,49 @@ local ast_grep_source = {
     if opts.follow then table.insert(args, "--follow") end
     table.insert(args, ".")
 
-    return require("snacks.picker.source.proc").proc(ctx:opts {
-      cmd = cmd,
-      args = args,
-      cwd = cwd,
-      notify = false,
-      transform = function(item)
-        local ok, entry = pcall(vim.json.decode, item.text)
-        if
-          not ok
-          or type(entry) ~= "table"
-          or type(entry.file) ~= "string"
-          or type(entry.range) ~= "table"
-          or type(entry.range.start) ~= "table"
-        then
-          return false
-        end
+    return require("snacks.picker.source.proc").proc(
+      ctx:opts {
+        cmd = cmd,
+        args = args,
+        cwd = cwd,
+        notify = false,
+        transform = function(item)
+          local ok, entry = pcall(vim.json.decode, item.text)
+          if
+            not ok
+            or type(entry) ~= "table"
+            or type(entry.file) ~= "string"
+            or type(entry.range) ~= "table"
+            or type(entry.range.start) ~= "table"
+          then
+            return false
+          end
 
-        local start = entry.range.start
-        if type(start.line) ~= "number" or type(start.column) ~= "number" then return false end
+          local start = entry.range.start
+          if type(start.line) ~= "number" or type(start.column) ~= "number" then return false end
 
-        local display = type(entry.lines) == "string" and entry.lines
-          or type(entry.text) == "string" and entry.text
-          or ""
-        local first = display:match "([^\r\n]*)" or display
-        local multiline = display:find "[\r\n]" ~= nil
+          local display = type(entry.lines) == "string" and entry.lines
+            or type(entry.text) == "string" and entry.text
+            or ""
+          local first = display:match "([^\r\n]*)" or display
+          local multiline = display:find "[\r\n]" ~= nil
 
-        item.cwd = cwd
-        item.file = entry.file
-        item.line = vim.trim(first) .. (multiline and " …" or "")
-        item.pos = { start.line + 1, start.column }
+          item.cwd = cwd
+          item.file = entry.file
+          item.line = vim.trim(first) .. (multiline and " …" or "")
+          item.pos = { start.line + 1, start.column }
 
-        local finish = entry.range["end"]
-        if
-          type(finish) == "table"
-          and type(finish.line) == "number"
-          and type(finish.column) == "number"
-        then
-          item.end_pos = { finish.line + 1, finish.column }
-        end
+          local finish = entry.range["end"]
+          if type(finish) == "table" and type(finish.line) == "number" and type(finish.column) == "number" then
+            item.end_pos = { finish.line + 1, finish.column }
+          end
 
-        item.lang = entry.language
-        item.text = table.concat({ item.file, tostring(item.pos[1]), tostring(item.pos[2]), item.line }, ":")
-      end,
-    }, ctx)
+          item.lang = entry.language
+          item.text = table.concat({ item.file, tostring(item.pos[1]), tostring(item.pos[2]), item.line }, ":")
+        end,
+      },
+      ctx
+    )
   end,
 }
 
