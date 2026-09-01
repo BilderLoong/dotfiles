@@ -9,8 +9,7 @@ return {
     "gbprod/nord.nvim",
     lazy = false,
     priority = 1000,
-    opts = {
-    },
+    opts = {},
     config = function(_, opts) require("nord").setup(opts) end,
   },
   {
