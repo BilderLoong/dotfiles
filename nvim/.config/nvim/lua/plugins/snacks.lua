@@ -118,9 +118,12 @@ return {
     opts.picker.sources = opts.picker.sources or {}
     opts.picker.sources.ast_grep = ast_grep_source
 
+    ---@type snacks.picker.git.log.Config
     local git_log_source = opts.picker.sources.git_log or {}
+    ---@type (fun(opts: snacks.picker.git.log.Config): snacks.picker.git.log.Config?)?
     local upstream_git_log_config = git_log_source.config
 
+    ---@param picker_opts snacks.picker.git.log.Config
     git_log_source.config = function(picker_opts)
       if upstream_git_log_config then picker_opts = upstream_git_log_config(picker_opts) or picker_opts end
 
@@ -130,6 +133,7 @@ return {
       picker_opts.layout = {
         preset = "default",
         fullscreen = true,
+        ---@param layout snacks.picker.layout.Config
         config = function(layout) layout.layout[2].width = 0.8 end,
       }
       return picker_opts
