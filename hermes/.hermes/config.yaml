@@ -3,7 +3,7 @@ model:
   provider: openai-codex
   base_url: https://chatgpt.com/backend-api/codex
 agent:
-  reasoning_effort: max
+  reasoning_effort: high
 web:
   backend: exa
 browser:
