@@ -69,6 +69,11 @@ return {
     -- mappings to be set up on attaching of a language server
     mappings = {
       n = {
+        ["<Leader>lg"] = {
+          function() require("snacks").picker.lsp_workspace_symbols() end,
+          desc = "Find workspace symbol",
+          cond = "workspace/symbol",
+        },
         -- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
         gd = {
           "<Cmd>Glance definitions<CR>",
@@ -104,6 +109,7 @@ return {
         },
         ["<Leader>lR"] = false,
         ["<Leader>lf"] = false,
+        ["<Leader>lG"] = false,
       },
       v = {
         ["<Leader>lf"] = false,

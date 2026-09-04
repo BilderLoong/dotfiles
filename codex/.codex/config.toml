@@ -3,10 +3,7 @@ model = "gpt-5.6-sol"
 model_reasoning_effort = "xhigh"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
-service_tier = "default"
-model_catalog_json = "/Users/birudo/.codex/opencodex-catalog.json"
-# Auto-injected by opencodex
-openai_base_url = "http://127.0.0.1:10100/v1"
+service_tier = "priority"
 
 [agents]
 default_subagent_model = "gpt-5.6-luna"
@@ -34,8 +31,6 @@ enabled = true
 enabled = true
 [plugins."template-creator@openai-primary-runtime"]
 enabled = true
-[plugins."sites@openai-bundled"]
-enabled = true
 
 [plugins."browser@openai-bundled"]
 enabled = true
@@ -47,6 +42,12 @@ enabled = true
 enabled = true
 
 [plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
 enabled = true
 
 [projects."/Users/birudo/Projects/anki-feedback"]
@@ -173,13 +174,13 @@ NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/birudo/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/birudo/.codex"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-BROWSER_USE_TINYSKY_ENABLED = "0"
-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
-NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.825.51511"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/birudo/.codex/plugins/cache/openai-bundled/browser/26.825.51511/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.901.20858"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/birudo/.codex/plugins/cache/openai-bundled/browser/26.901.20858/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "/Users/birudo/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
@@ -187,10 +188,6 @@ CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
 args = ["mcp"]
 cwd = "."
-enabled = false
-
-[mcp_servers.cua_repl]
-command = "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
 enabled = false
 
 [shell_environment_policy.set]
