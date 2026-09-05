@@ -146,24 +146,24 @@ show-context-window-usage = true
 composerEnterBehavior = "cmdIfMultiline"
 preventSleepWhileRunning = true
 composerPlainTextMode = true
-appearanceLightCodeThemeId = "codex"
+appearanceLightCodeThemeId = "vscode-plus"
 usePointerCursors = false
 dock-icon-preference = "codex-system"
 
 [desktop.appearanceLightChromeTheme]
-accent = "#0169cc"
-accentSource = "chatgpt"
+accent = "#007acc"
+accentSource = "custom"
 contrast = 45
-ink = "#0d0d0d"
+ink = "#000000"
 opaqueWindows = false
 surface = "#ffffff"
 
 [desktop.appearanceLightChromeTheme.fonts]
 
 [desktop.appearanceLightChromeTheme.semanticColors]
-diffAdded = "#00a240"
-diffRemoved = "#e02e2a"
-skill = "#751ed9"
+diffAdded = "#008000"
+diffRemoved = "#ee0000"
+skill = "#0000ff"
 
 [marketplaces.openai-bundled]
 source_type = "local"
