@@ -57,7 +57,7 @@ Use linguistic judgment, not a word limit or a punctuation-count threshold. Appl
 - Change only `cloze-prefix` and `cloze-suffix`. Keep `cloze-body` byte-for-byte unchanged, including its capitalization and formatting.
 - Keep one complete sentence containing the target. Keep adjacent context when needed to resolve a reference, preserve the target meaning, or understand the target's use.
 - Remove unrelated surrounding sentences and removable cut-off fragments. Do not remove parts that change negation, conditions, comparison, speaker attribution, or the intended meaning.
-- Add punctuation, sentence-start capitalization, and spacing corrections as needed within the retained context.
+- Add punctuation, sentence-start capitalization, and spacing corrections as needed within the retained context. Once a note qualifies for cleanup, complete the retained sentence's punctuation, including its final mark. The rule about missing final punctuation alone controls note selection; it does not exempt an already-selected note from punctuation repair.
 - Preserve original wording. Do not paraphrase, translate, expand abbreviations, or silently correct spelling, grammar, or transcription errors.
 - If the target sentence itself is incomplete, do not invent the missing text. Mark it `needs-review`.
 - If the body appears wrong or would need capitalization or another edit, report that issue separately. Do not change it.

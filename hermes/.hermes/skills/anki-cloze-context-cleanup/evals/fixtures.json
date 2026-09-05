@@ -8,7 +8,7 @@
     {"id": "incomplete", "prefix": "", "body": "entrepris", "suffix": " par les glaciers laisse apparaître d'étonnants plissements"},
     {"id": "html", "prefix": "Le train arrive. <em>Toutes les personnes</em> ", "body": "en face", "suffix": " attendent le train. Le café ferme."},
     {"id": "empty-prefix", "prefix": "", "body": "Bonjour", "suffix": " ! Le train arrive dans cinq minutes."},
-    {"id": "empty-suffix", "prefix": "The shop closes. This is ", "body": "wonderful", "suffix": ""},
+    {"id": "empty-suffix", "prefix": "The shop closes. The view is ", "body": "wonderful", "suffix": ""},
     {"id": "japanese", "prefix": "電車が来ました。私は", "body": "本", "suffix": "を読みます。店は閉まりました。"},
     {"id": "missing-field", "prefix": "Je prends le ", "body": "train"}
   ]
