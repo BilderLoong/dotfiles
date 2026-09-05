@@ -11,6 +11,7 @@ return {
     { "M", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true } },
     { "m", mode = { "x" }, function() require("substitute").visual() end, desc = "Substitute Visual", { noremap = true } },
   },
+
   opts = {},
   config = function(_, opts)
     require("substitute").setup {
