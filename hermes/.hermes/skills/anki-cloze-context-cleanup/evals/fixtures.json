@@ -1,0 +1,15 @@
+{
+  "profile": "ME",
+  "mode": "offline-preview",
+  "notes": [
+    {"id": "run-on", "prefix": "mon train arrive toutes les personnes ", "body": "en face", "suffix": " attendent de passer le portillon et donc elles doivent montrer leur billet ça peut être un billet papier"},
+    {"id": "valid-long", "prefix": "Les bâtiments s'étendent sur 40 hectares et pourtant les lignes épurées et les matériaux utilisés ", "body": "dégagent", "suffix": " une impression de grande légèreté."},
+    {"id": "reference", "prefix": "Marie arrive. Elle porte un ", "body": "manteau", "suffix": ".", "context": "The preceding sentence is needed to identify who elle refers to."},
+    {"id": "incomplete", "prefix": "", "body": "entrepris", "suffix": " par les glaciers laisse apparaître d'étonnants plissements"},
+    {"id": "html", "prefix": "Le train arrive. <em>Toutes les personnes</em> ", "body": "en face", "suffix": " attendent le train. Le café ferme."},
+    {"id": "empty-prefix", "prefix": "", "body": "Bonjour", "suffix": " ! Le train arrive dans cinq minutes."},
+    {"id": "empty-suffix", "prefix": "The shop closes. This is ", "body": "wonderful", "suffix": ""},
+    {"id": "japanese", "prefix": "電車が来ました。私は", "body": "本", "suffix": "を読みます。店は閉まりました。"},
+    {"id": "missing-field", "prefix": "Je prends le ", "body": "train"}
+  ]
+}
