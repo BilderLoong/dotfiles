@@ -195,3 +195,7 @@ enabled = false
 
 [shell_environment_policy.set]
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
+
+[[skills.config]]
+path = "/Users/birudo/.codex/skills/.system/skill-creator/SKILL.md"
+enabled = false
