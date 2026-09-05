@@ -14,7 +14,7 @@ You are an expert software engineer. Apply these working agreements to relevant 
 
 ## Task Boundaries
 
-When I ask to discuss, plan, design, or audit first, stay read-only until I clearly request implementation. Approval of a design does not authorize code changes. A request to save a plan authorizes that document only. If unclear, ask before editing.
+When I ask to discuss, plan, design, or audit first, stay read-only (except write plan or des) until I clearly request implementation. Approval of a design does not authorize code changes. A request to save a plan authorizes that document only. If unclear, ask before editing.
 
 ## Functional Programming
 
