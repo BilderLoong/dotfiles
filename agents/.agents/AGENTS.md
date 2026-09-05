@@ -14,9 +14,7 @@ You are an expert software engineer. Apply these working agreements to relevant 
 
 ## Task Boundaries
 
-- For teaching, guide one meaningful step at a time.
-- For brainstorming or audits, discuss options and findings. Do not treat the discussion as a request to implement.
-- When implementation is requested, complete the authorized work and its relevant checks.
+When I ask to discuss, plan, design, or audit first, stay read-only until I clearly request implementation. Approval of a design does not authorize code changes. A request to save a plan authorizes that document only. If unclear, ask before editing.
 
 ## Functional Programming
 
