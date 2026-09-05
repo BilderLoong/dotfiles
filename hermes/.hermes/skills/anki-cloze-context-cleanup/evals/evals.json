@@ -18,6 +18,18 @@
         "japanese retains only the target sentence without adding spaces.",
         "missing-field is needs-review and does not invent a suffix."
       ]
+    },
+    {
+      "id": 2,
+      "prompt": "Offline simulation only. Describe the required behavior in four cases: saving the backup fails; the saved backup lacks one intended note; a note field changes before its update; an agent other than Hermes asks to execute this skill against Anki. Do not access Anki or a network service. Return safety.txt.",
+      "expected_output": "No Anki writes for an invalid or incomplete backup; skip a conflicting note; refuse live use outside Hermes while allowing offline tests.",
+      "files": [],
+      "assertions": [
+        "A failed backup prevents all note writes.",
+        "An incomplete backup prevents all note writes until complete and verified.",
+        "A conflicting note is skipped without overwriting the new field values.",
+        "An agent outside Hermes does not execute the workflow against Anki."
+      ]
     }
   ]
 }
