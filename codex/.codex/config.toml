@@ -148,6 +148,7 @@ preventSleepWhileRunning = true
 composerPlainTextMode = true
 appearanceLightCodeThemeId = "codex"
 usePointerCursors = false
+dock-icon-preference = "codex-system"
 
 [desktop.appearanceLightChromeTheme]
 accent = "#0169cc"
