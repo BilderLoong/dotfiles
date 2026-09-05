@@ -147,6 +147,7 @@ composerEnterBehavior = "cmdIfMultiline"
 preventSleepWhileRunning = true
 composerPlainTextMode = true
 appearanceLightCodeThemeId = "codex"
+usePointerCursors = false
 
 [desktop.appearanceLightChromeTheme]
 accent = "#0169cc"
