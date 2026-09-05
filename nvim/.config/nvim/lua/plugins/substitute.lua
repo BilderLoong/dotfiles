@@ -8,7 +8,7 @@ return {
     { "X", mode = { "x" }, function() require("substitute.exchange").visual() end, desc = "Substitute Exchange Visual", { noremap = true } },
     { "m", mode = { "n" }, function() require("substitute").operator() end, desc = "Substitute Operator", { noremap = true } },
     { "mm", mode = { "n" }, function() require("substitute").line() end, desc = "Substitute Line", { noremap = true } },
-    { "M", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true } },
+    { "gM", mode = { "n" }, function() require("substitute").eol() end, desc = "Substitute EOL", { noremap = true } },
     { "m", mode = { "x" }, function() require("substitute").visual() end, desc = "Substitute Visual", { noremap = true } },
   },
 
