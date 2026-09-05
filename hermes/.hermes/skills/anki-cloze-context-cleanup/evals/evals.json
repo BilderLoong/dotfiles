@@ -5,7 +5,7 @@
       "id": 1,
       "prompt": "BIG DADDY asks for an offline preview of cloze-context cleanup for every supplied fixture. Select run-on sentences, unrelated surrounding context, and removable cut-off fragments. Preserve the target body and original wording. Keep necessary references and valid formatting. Flag incomplete or uncertain cases. Return results.json with a notes array: id, status (propose, unchanged, needs-review), prefix, body, suffix, reason. Use null for a missing field. Do not access Anki or any network service. Do not edit the fixtures.",
       "expected_output": "Nine classified notes. Safe context reductions, valid long sentence and needed reference preserved, incomplete and missing-field cases flagged, exact body preservation, valid retained HTML, language-appropriate boundaries.",
-      "files": ["fixtures.json"],
+      "files": ["evals/fixtures.json"],
       "assertions": [
         "Every fixture is classified exactly once and every body is unchanged.",
         "run-on is proposed with prefix Toutes les personnes followed by one space and suffix ending at leur billet.",

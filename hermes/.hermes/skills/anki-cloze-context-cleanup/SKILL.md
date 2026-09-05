@@ -1,6 +1,7 @@
 ---
 name: anki-cloze-context-cleanup
-description: Hermes Agent only. Inspect and improve Anki cloze context when the user asks to shorten surrounding text, remove excess context, or punctuate sentences in cloze-prefix and cloze-suffix. Use for reviewing or applying these changes to selected Anki notes. Do not use for general note correction, translation, dictionary editing, or scheduling changes.
+description: Hermes only - trim and punctuate Anki cloze context safely.
+version: 0.1.0
 metadata:
   hermes:
     tags: [anki, cloze, context-cleanup]
@@ -9,6 +10,10 @@ metadata:
 # Anki cloze context cleanup
 
 Improve the context around a target expression without changing that expression or inventing source text.
+
+## When to Use
+
+Use when the user asks Hermes to inspect, shorten, or add punctuation to Anki `cloze-prefix` and `cloze-suffix` fields. Exclude general note correction, translation, dictionary editing, and scheduling changes.
 
 ## Hermes-only use
 
