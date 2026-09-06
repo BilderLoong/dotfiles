@@ -3,7 +3,7 @@ model = "gpt-6-astra"
 model_reasoning_effort = "medium"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
-service_tier = "default"
+service_tier = "priority"
 
 [agents]
 default_subagent_model = "gpt-5.6-luna"
