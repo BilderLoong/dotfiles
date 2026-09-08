@@ -9,7 +9,17 @@ return {
     "gbprod/nord.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+      on_highlights = function(highlights, palette)
+        -- Balanced inlay hints, derived from the active Nord palette.
+        local background = palette.polar_night.brighter
+        highlights.LspInlayHint = {
+          fg = require("nord.utils").blend(palette.snow_storm.origin, background, 0.68),
+          bg = background,
+          italic = false,
+        }
+      end,
+    },
     config = function(_, opts) require("nord").setup(opts) end,
   },
   {
