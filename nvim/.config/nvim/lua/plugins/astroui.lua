@@ -24,8 +24,8 @@ return {
           -- Normal = { bg = "#000000" },
         },
         nord = { -- a table of overrides/changes when applying the Nord theme
-          Comment = { fg = "#75809C", italic = true },
-          ["@comment"] = { fg = "#75809C", italic = true },
+          -- Comment = { fg = "#75809C", italic = true },
+          -- ["@comment"] = { fg = "#75809C", italic = true },
           -- NvChad-era diff colors, ported from the pre-AstroNvim config
           -- (nvim/.config/nvim/lua/custom/chadrc.lua @ f7ce9e03): hl_override used
           -- bg = { "green", -25 } etc., which base46 resolves through
