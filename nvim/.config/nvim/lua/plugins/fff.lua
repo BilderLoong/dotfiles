@@ -10,6 +10,9 @@ return {
     })
   end,
   opts = {
+    layout = {
+      prompt_position = "top",
+    },
     prompt_vim_mode = true,
     keymaps = {
       move_down = { "<Down>", "<C-n>", "<C-j>" },
