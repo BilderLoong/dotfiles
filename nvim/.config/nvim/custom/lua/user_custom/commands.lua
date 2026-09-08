@@ -6,7 +6,8 @@ local function format_location(path, buftype, line, column)
 end
 
 local function copy_location(modifier)
-  local location, err = format_location(vim.fn.expand("%:" .. modifier), vim.bo.buftype, vim.fn.line ".", vim.fn.col ".")
+  local location, err =
+    format_location(vim.fn.expand("%:" .. modifier), vim.bo.buftype, vim.fn.line ".", vim.fn.col ".")
   if not location then
     vim.notify(err, vim.log.levels.WARN)
     return
@@ -16,9 +17,7 @@ local function copy_location(modifier)
     return
   end
   local ok, result = pcall(vim.fn.setreg, "+", location, "v")
-  if not ok or result ~= 0 then
-    vim.notify("Cannot copy location: " .. tostring(result), vim.log.levels.ERROR)
-  end
+  if not ok or result ~= 0 then vim.notify("Cannot copy location: " .. tostring(result), vim.log.levels.ERROR) end
 end
 
 function M.setup()
