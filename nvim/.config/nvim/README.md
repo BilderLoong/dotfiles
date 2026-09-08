@@ -3,7 +3,7 @@ Use conform to format file by using lsp and external formatters.
 ## Custom commands
 
 Personal Neovim commands belong in `custom/lua/user_custom/`. Register them through
- the local `user-custom` plugin and add each public command name to `cmd` in
+the local `user-custom` plugin and add each public command name to `cmd` in
 `lua/plugins/custom.lua`. Do not place new personal command definitions in
 `polish.lua` or unrelated plugin specs. Load helpers on demand. Give automatic
 actions their own suitable event/startup loading.
