@@ -125,3 +125,5 @@ platform_toolsets:
 known_plugin_toolsets:
   cli:
     - spotify
+compression:
+  codex_responses_native: true
