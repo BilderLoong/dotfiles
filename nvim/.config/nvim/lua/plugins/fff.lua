@@ -3,9 +3,9 @@ return {
   lazy = false, -- Load at startup; FFF controls when indexing starts
   build = function() require("fff.download").download_or_build_binary() end,
   init = function()
-    vim.api.nvim_create_autocmd("User", {
+    vim.api.nvim_create_autocmd("FileType", {
       group = vim.api.nvim_create_augroup("fff_resume_tracking", { clear = true }),
-      pattern = "FFFOpen",
+      pattern = "fff_input",
       callback = function() require("picker_resume").mark "fff" end,
     })
   end,
