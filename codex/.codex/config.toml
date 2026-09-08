@@ -182,6 +182,9 @@ source = "/Users/birudo/.codex/.tmp/bundled-marketplaces/openai-bundled"
 source_type = "local"
 source = "/Users/birudo/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
+[mcp_servers.fff]
+command = "/opt/homebrew/bin/fff-mcp"
+
 [mcp_servers.node_repl]
 args = []
 command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
