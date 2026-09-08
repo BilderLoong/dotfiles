@@ -24,6 +24,7 @@ return {
           -- Normal = { bg = "#000000" },
         },
         nord = { -- a table of overrides/changes when applying the Nord theme
+          LspInlayHint = { fg = "#81A1C1", bg = "#353D4B", italic = false },
           -- Comment = { fg = "#75809C", italic = true },
           -- ["@comment"] = { fg = "#75809C", italic = true },
           -- NvChad-era diff colors, ported from the pre-AstroNvim config
