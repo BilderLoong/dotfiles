@@ -14,6 +14,11 @@ function M.setup()
     })
     vim.api.nvim_set_hl(0, "Comment", highlight)
     applied = vim.api.nvim_get_hl(0, { name = "Comment", link = false })
+    -- Nord defines Treesitter comments separately from classic syntax comments.
+    local treesitter = vim.api.nvim_get_hl(0, { name = "@comment", link = false })
+    if treesitter.fg == original.fg then
+      vim.api.nvim_set_hl(0, "@comment", vim.tbl_extend("force", treesitter, { fg = highlight.fg }))
+    end
   end
   vim.api.nvim_create_autocmd("ColorScheme", {
     group = vim.api.nvim_create_augroup("comment_highlight", { clear = true }),
