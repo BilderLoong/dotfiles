@@ -146,6 +146,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-09-08/ca"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/playground"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
