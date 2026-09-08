@@ -111,6 +111,16 @@ return {
   "folke/snacks.nvim",
   opts = function(_, opts)
     opts.picker = opts.picker or {}
+    local upstream_picker_config = opts.picker.config
+    opts.picker.config = function(picker_opts)
+      if upstream_picker_config then picker_opts = upstream_picker_config(picker_opts) or picker_opts end
+      local on_show = picker_opts.on_show
+      picker_opts.on_show = function(picker)
+        if picker.opts.remember_last ~= false then require("picker_resume").mark "snacks" end
+        if on_show then on_show(picker) end
+      end
+      return picker_opts
+    end
     opts.picker.sources = opts.picker.sources or {}
     opts.picker.sources.ast_grep = ast_grep_source
 

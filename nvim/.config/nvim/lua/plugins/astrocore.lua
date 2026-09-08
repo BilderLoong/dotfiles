@@ -35,7 +35,10 @@ return {
 
     maps.n["<Leader>fA"] = { function() require("snacks").picker.ast_grep() end, desc = "Find AST patterns" }
     maps.n["<Leader>fM"] = { function() require("snacks").picker.man() end, desc = "Find man" }
-    maps.n["<Leader>ff"] = { function() require("snacks").picker.resume() end, desc = "Resume previous search" }
+    maps.n["<Leader>ff"] = { function() require("picker_resume").resume() end, desc = "Resume last picker" }
+    maps.n["<Leader>fw"] = { function() require("fff").live_grep() end, desc = "Find words (FFF)" }
+    maps.n["<Leader>fc"] = { function() require("fff").live_grep_under_cursor() end, desc = "Find word under cursor (FFF)" }
+    maps.x["<Leader>fc"] = { function() require("fff").live_grep_under_cursor() end, desc = "Find selected text (FFF)" }
     maps.n["<Leader>fP"] = { function() require("snacks").picker.pickers() end, desc = "Find picker" }
 
     maps.n.gL = { function() require("snacks").picker.diagnostics() end, desc = "Search diagnostics" }
