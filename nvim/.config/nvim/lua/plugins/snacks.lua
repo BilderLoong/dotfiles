@@ -92,11 +92,7 @@ local ast_grep_source = {
   end,
 }
 
-local function find_files()
-  require("snacks").picker.files {
-    hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
-  }
-end
+local function find_files() require("fff").find_files() end
 
 local function restore_last_session()
   local auto_session = require "auto-session"

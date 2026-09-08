@@ -1,8 +1,4 @@
-local function find_files()
-  require("snacks").picker.files {
-    hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
-  }
-end
+local function find_files() require("fff").find_files() end
 
 local function navigate_buffer(direction) require("astrocore.buffer").nav(direction * vim.v.count1) end
 
