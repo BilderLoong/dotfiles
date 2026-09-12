@@ -16,7 +16,7 @@ from typing import Any, Callable
 
 FIELDS = ("cloze-prefix", "cloze-body", "cloze-suffix")
 CUTOFFS = {"FR": {"without": 150, "with": 300}, "EN": {"without": 150, "with": 300},
-           "DE": {"without": 150, "with": 300}, "JA": {"without": 100, "with": None}}
+           "JA": {"without": 100, "with": None}}
 READ_ACTIONS = {"getActiveProfile", "findNotes", "notesInfo"}
 
 
