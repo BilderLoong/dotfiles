@@ -1,6 +1,6 @@
 ---
 name: anki-cloze-context-cleanup
-description: Hermes only - trim and punctuate Anki cloze context safely.
+description: Hermes only - trim and punctuate French, Japanese, and English Anki cloze context safely.
 version: 0.1.0
 metadata:
   hermes:
