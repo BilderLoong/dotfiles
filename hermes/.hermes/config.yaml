@@ -127,3 +127,5 @@ platform_toolsets:
 known_plugin_toolsets:
   cli:
     - spotify
+approvals:
+  mode: "off"
