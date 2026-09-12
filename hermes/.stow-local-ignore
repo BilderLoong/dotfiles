@@ -1,0 +1,4 @@
+/\.hermes/skills/anki-cloze-context-cleanup/backups($|/)
+(^|/)__pycache__($|/)
+\.py[cod]$
+(^|/)\.gitignore$
