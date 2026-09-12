@@ -15,11 +15,6 @@ Improve the context around a target expression without changing that expression 
 
 Use when the user asks Hermes to inspect, shorten, or add punctuation to Anki `cloze-prefix` and `cloze-suffix` fields. Exclude general note correction, translation, dictionary editing, and scheduling changes.
 
-## Hermes-only use
-
-Execute this workflow against Anki only when running in Hermes Agent. Other agents may author, audit, or test it against offline fixtures, but must not use it to access or modify Anki.
-
-Keep the canonical skill in the dotfiles repository's `hermes/.hermes/skills/anki-cloze-context-cleanup/` package. When installation is requested, expose it only in Hermes's skill directory (normally `~/.hermes/skills/`). Do not install or link it into shared `.agents/skills`, Codex, Claude, or other agent skill directories. This controls discovery and intended use; a Markdown file is not an access-control mechanism.
 
 ## Establish scope and authority
 
