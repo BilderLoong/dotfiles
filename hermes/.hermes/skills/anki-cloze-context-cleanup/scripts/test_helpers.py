@@ -1,5 +1,6 @@
 """Run offline: python3 -B -m unittest discover -s scripts -p 'test_*.py'."""
 import json
+import os
 import tempfile
 import unittest
 from datetime import datetime, timezone
@@ -137,6 +138,19 @@ class BackupTests(unittest.TestCase):
         self.assertIsInstance(gc.backup_expiry({"kind": gc.KIND, "createdAt": "2025-01-01T00:00:00Z", "expiresAt": "2025-01-02T00:00:00Z"}), str)
         with tempfile.TemporaryDirectory() as tmp:
             self.assertEqual(gc.collect(Path(tmp)/'missing', datetime.now(timezone.utc), False)['deleted'], [])
+
+    def test_malformed_and_nonregular_backups_are_retained(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            invalid = folder/'backup-20250101T000000Z.json'
+            invalid.write_text('{bad json')
+            fifo = folder/'backup-20250102T000000Z.json'
+            os.mkfifo(fifo)
+            result = gc.collect(folder, datetime(2026, 1, 1, tzinfo=timezone.utc), True)
+            self.assertEqual(result['deleted'], [])
+            self.assertTrue(invalid.exists() and fifo.exists())
+            self.assertEqual(len(result['errors']), 1)
+            self.assertEqual(len(result['skipped']), 1)
 
 
 if __name__ == '__main__':

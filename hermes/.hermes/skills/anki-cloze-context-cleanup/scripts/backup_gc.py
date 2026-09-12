@@ -33,7 +33,7 @@ def parse_timestamp(value: object) -> datetime | str:
         if parsed.tzinfo is None:
             return "Timestamp has no timezone"
         return parsed.astimezone(timezone.utc)
-    except ValueError:
+    except (ValueError, OverflowError):
         return "Invalid timestamp"
 
 
@@ -52,7 +52,7 @@ def backup_expiry(value: object) -> datetime | str:
 
 def read_regular_file(path: Path) -> bytes:
     """Do not follow a file symlink, including one swapped in during the read."""
-    descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
     with os.fdopen(descriptor, "rb") as stream:
         if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):
             raise ValueError("Not a regular file")
@@ -70,7 +70,7 @@ def collect(directory: Path, now: datetime, delete: bool) -> dict[str, Any]:
         raise ValueError("Backup path is not a directory")
     # Filesystem operations are sequenced; no recursion or wildcard deletion.
     for path in sorted(directory.iterdir()):
-        if path.is_symlink() or not NAME.fullmatch(path.name):
+        if path.is_symlink() or not NAME.fullmatch(path.name) or not path.is_file():
             report["skipped"].append({"file": path.name, "reason": "not_a_managed_backup"})
             continue
         try:
