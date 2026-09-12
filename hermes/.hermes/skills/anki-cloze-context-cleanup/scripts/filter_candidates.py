@@ -81,7 +81,7 @@ def parse_profile(profile: object) -> tuple[str, dict[str, Any]] | str:
     if any(not isinstance(e, dict) or type(e.get("enabled")) is not bool or not isinstance(e.get("character1"), str)
            or not e["character1"] or (e.get("character2") is not None and not isinstance(e["character2"], str)) for e in entries):
         return "Invalid Yomitan termination character entry"
-    marks = sorted({e["character1"] for e in entries if e["enabled"] and e.get("character2") is None} | {":"})
+    marks = sorted({e["character1"] for e in entries if e["enabled"] and e.get("character2") is None})
     return general["language"].upper(), {"marks": marks, "newlines": mode == "custom"}
 
 
@@ -202,7 +202,7 @@ def main() -> int:
                    "skippedReasons": dict(Counter(n["reason"] for n in skipped))}
         report = {"kind": "anki-cloze-candidates/v1", "profile": args.profile, "query": args.query,
                   "noteIds": [n["noteId"] for n in notes], "startedAt": started, "capturedAt": datetime.now(timezone.utc).isoformat(),
-                  "settings": {"path": str(args.settings.absolute()), "sha256": hashlib.sha256(raw_settings).hexdigest(), "rules": rules, "addedPunctuation": [":"]},
+                  "settings": {"path": str(args.settings.absolute()), "sha256": hashlib.sha256(raw_settings).hexdigest(), "rules": rules},
                   "cutoffs": CUTOFFS, "comparison": ">", "summary": summary, "candidates": candidates, "skipped": skipped}
         args.output.parent.mkdir(parents=True, exist_ok=True)
         with args.output.open("x", encoding="utf-8") as output:

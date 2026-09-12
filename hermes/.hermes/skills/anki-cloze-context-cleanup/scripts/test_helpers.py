@@ -45,13 +45,13 @@ class CandidateTests(unittest.TestCase):
         for code in ("ZH", "LA"):
             self.assertEqual(filtering.inspect_note(note(1000, False, code), self.rules)["reason"], "excluded_language")
 
-    def test_colon_example_is_excluded(self):
+    def test_colon_is_not_added_to_settings(self):
         text = "Ainsi, quand il aperçut pour la première fois mon avion (je ne dessinerai pas mon avion, c’est un dessin beaucoup trop compliqué pour moi) il me demanda :"
         n = note(154)
         n["fields"]["cloze-body"]["value"] = text
         n["fields"]["cloze-suffix"]["value"] = ""
         result = filtering.inspect_note(n, self.rules)
-        self.assertEqual((result["length"], result["hasPunctuation"], result["status"]), (154, True, "skipped"))
+        self.assertEqual((result["length"], result["hasPunctuation"], result["status"]), (154, False, "candidate"))
 
     def test_visible_text_and_newline_modes(self):
         self.assertEqual(filtering.visible_text('<div>A&nbsp;<ruby>漢<rt>かん.</rt><rp>(.)</rp></ruby></div><div>B</div>[sound:x.mp3]'), 'A 漢\nB')

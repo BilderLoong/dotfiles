@@ -29,7 +29,7 @@ For live selections, run the read-only helper from this skill folder, with an ex
 python3 -B scripts/filter_candidates.py --query 'added:2 note:Yomichan' --settings /path/to/yomitan-settings.json --output /path/to/new-candidates.json
 ```
 
-It defaults to profile `ME` and never overwrites a report. Review its candidates and skipped reasons. French, English and German qualify at **>300 characters with punctuation OR >150 without**; Japanese at **>100 without punctuation**. Chinese and other languages are excluded. Punctuation means enabled Yomitan sentence endings, configured newline boundaries, and `:`. Length counts visible prefix + body + suffix. A candidate still needs the meaning checks below; never edit it merely because the filter selected it.
+It defaults to profile `ME` and never overwrites a report. Review its candidates and skipped reasons. French, English and German qualify at **>300 characters with punctuation OR >150 without**; Japanese at **>100 without punctuation**. Chinese and other languages are excluded. Punctuation means the enabled Yomitan sentence endings and configured newline boundaries; add no extra characters. Length counts visible prefix + body + suffix. A candidate still needs the meaning checks below; never edit it merely because the filter selected it.
 
 ## Select and edit
 
