@@ -16,6 +16,7 @@ Use when the user asks Hermes to shorten or punctuate `cloze-prefix` and `cloze-
 ## Scope
 
 - Target note type is yomichan.
+- Only French (`FR`), Japanese (`JA`), and English (`EN`) are supported. Require one unambiguous language tag; exclude other languages and conflicting language tags even when the query is broader.
 - Default to profile `ME` unless specified. Confirm the active profile; ask before using a different one.
 - Require a search query or explicit note IDs. Inspect every selected note and record the profile, query, time, and fixed IDs. Keep those IDs when applying a reviewed plan.
 - Preview by default. An explicit execution request authorizes edits without another approval. Planning, discussion, or design approval alone does not authorize Anki writes; saving a plan authorizes only that document.
@@ -29,7 +30,7 @@ For live selections, run the read-only helper from this skill folder, with an ex
 python3 -B scripts/filter_candidates.py --query 'added:2 note:Yomichan' --settings /path/to/yomitan-settings.json --output /path/to/new-candidates.json
 ```
 
-It defaults to profile `ME` and never overwrites a report. Review its candidates and skipped reasons. French, English and German qualify at **>300 characters with punctuation OR >150 without**; Japanese at **>100 without punctuation**. Chinese and other languages are excluded. Punctuation means the enabled Yomitan sentence endings and configured newline boundaries; add no extra characters. Length counts visible prefix + body + suffix. A candidate still needs the meaning checks below; never edit it merely because the filter selected it.
+It defaults to profile `ME` and never overwrites a report. Review its candidates and skipped reasons. French and English qualify at **>300 characters with punctuation OR >150 without**; Japanese at **>100 without punctuation**. All other languages are excluded. Punctuation means the enabled Yomitan sentence endings and configured newline boundaries; add no extra characters. Length counts visible prefix + body + suffix. A candidate still needs the meaning checks below; never edit it merely because the filter selected it.
 
 ## Select and edit
 
