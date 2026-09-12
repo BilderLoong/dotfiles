@@ -3,7 +3,7 @@ model:
   provider: opencode-go
   base_url: https://opencode.ai/zen/go/v1
 agent:
-  reasoning_effort: high
+  reasoning_effort: max
 web:
   backend: exa
 browser:
