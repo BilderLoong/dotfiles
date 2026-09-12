@@ -13,7 +13,7 @@ import filter_candidates as filtering
 def settings(mode="custom"):
     return {"options": {"profiles": [
         {"options": {"general": {"language": code.lower()}, "sentenceParsing": {
-            "terminationCharacterMode": mode if code == "DE" else "custom",
+            "terminationCharacterMode": mode if code == "EN" else "custom",
             "terminationCharacters": [
                 {"enabled": True, "character1": ".", "character2": None},
                 {"enabled": True, "character1": "。", "character2": None},
@@ -37,13 +37,14 @@ class CandidateTests(unittest.TestCase):
         self.assertIsInstance(self.rules, dict)
 
     def test_strict_cutoffs_and_languages(self):
-        for code in ("FR", "EN", "DE"):
+        self.assertEqual(set(filtering.CUTOFFS), {"FR", "EN", "JA"})
+        for code in ("FR", "EN"):
             for length, punctuated, wanted in [(150, False, False), (151, False, True), (300, True, False), (301, True, True)]:
                 with self.subTest(code=code, length=length, punctuated=punctuated):
                     self.assertEqual(filtering.inspect_note(note(length, punctuated, code), self.rules)["status"], "candidate" if wanted else "skipped")
         for length, punctuated, wanted in [(100, False, False), (101, False, True), (1000, True, False)]:
             self.assertEqual(filtering.inspect_note(note(length, punctuated, "JA"), self.rules)["status"], "candidate" if wanted else "skipped")
-        for code in ("ZH", "LA"):
+        for code in ("DE", "ZH", "LA"):
             self.assertEqual(filtering.inspect_note(note(1000, False, code), self.rules)["reason"], "excluded_language")
 
     def test_colon_is_not_added_to_settings(self):
@@ -58,7 +59,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(filtering.visible_text('<div>A&nbsp;<ruby>漢<rt>かん.</rt><rp>(.)</rp></ruby></div><div>B</div>[sound:x.mp3]'), 'A 漢\nB')
         self.assertEqual(filtering.visible_text('<span title=".">a</span><script>bad.</script><br>b'), 'a\nb')
         self.assertEqual(filtering.visible_text('<div>A</div>'), 'A')
-        for code, has_punctuation in [("FR", True), ("DE", False)]:
+        for code, has_punctuation in [("FR", True), ("EN", False)]:
             n = note(320, language=code)
             n["fields"]["cloze-prefix"]["value"] = "a<br>b"
             result = filtering.inspect_note(n, self.rules)
@@ -74,6 +75,8 @@ class CandidateTests(unittest.TestCase):
         n = note(160)
         n["tags"] = ["FR", "EN"]
         self.assertEqual(filtering.inspect_note(n, self.rules)["reason"], "ambiguous_language")
+        n["tags"] = ["FR", "DE"]
+        self.assertEqual(filtering.inspect_note(n, self.rules)["reason"], "ambiguous_language")
         n["tags"] = ["FR", "fr"]
         self.assertEqual(filtering.inspect_note(n, self.rules)["status"], "candidate")
         n["fields"]["cloze-body"]["value"] = "<br>"
@@ -86,6 +89,12 @@ class CandidateTests(unittest.TestCase):
         value["options"]["profiles"].append(alternate)
         self.assertIsInstance(filtering.parse_settings(value), str)
         self.assertIsInstance(filtering.parse_settings(42), str)
+
+    def test_only_supported_language_settings_are_required(self):
+        value = settings()
+        profiles = [profile for profile in value["options"]["profiles"]
+                    if profile["options"]["general"]["language"] in {"fr", "en", "ja"}]
+        self.assertIsInstance(filtering.parse_settings({"options": {"profiles": profiles}}), dict)
 
     def test_read_actions_profile_and_id_guards(self):
         calls = []
