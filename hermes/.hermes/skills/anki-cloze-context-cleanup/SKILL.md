@@ -15,7 +15,6 @@ Improve the context around a target expression without changing that expression 
 
 Use when the user asks Hermes to inspect, shorten, or add punctuation to Anki `cloze-prefix` and `cloze-suffix` fields. Exclude general note correction, translation, dictionary editing, and scheduling changes.
 
-
 ## Establish scope and authority
 
 - Default to profile `ME` unless the user names another profile. Confirm the active profile before reading notes. If it differs, ask the user to select or authorize the intended profile; do not silently use the active one.
