@@ -58,7 +58,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(filtering.visible_text('<span title=".">a</span><script>bad.</script><br>b'), 'a\nb')
         self.assertEqual(filtering.visible_text('<div>A</div>'), 'A')
         for code, has_punctuation in [("FR", True), ("DE", False)]:
-            n = note(160, language=code)
+            n = note(320, language=code)
             n["fields"]["cloze-prefix"]["value"] = "a<br>b"
             result = filtering.inspect_note(n, self.rules)
             self.assertEqual(result["hasPunctuation"], has_punctuation)
