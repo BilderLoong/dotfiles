@@ -128,7 +128,7 @@ known_plugin_toolsets:
   cli:
     - spotify
 approvals:
-  mode: 'off'
+  mode: 'smart'
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
