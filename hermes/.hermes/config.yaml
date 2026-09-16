@@ -104,7 +104,7 @@ onboarding:
   seen:
     busy_input_prompt: true
     tool_progress_prompt: true
-_config_version: 44
+_config_version: 45
 mcp_servers: {}
 platform_toolsets:
   cli:
@@ -112,6 +112,7 @@ platform_toolsets:
     - clarify
     - code_execution
     - computer_use
+    - connections
     - cronjob
     - delegation
     - file
@@ -128,7 +129,7 @@ known_plugin_toolsets:
   cli:
     - spotify
 approvals:
-  mode: "off"
+  mode: 'off'
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
