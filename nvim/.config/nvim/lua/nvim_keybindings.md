@@ -326,6 +326,7 @@ Last verified: 2026-08-29
 | `gcA` | `n` | Add comment at end of line |
 | `gcc` | `n` | Toggle comment line |
 | `gcO` | `n` | Add Comment Above |
+<!--  -->
 | `gco` | `n` | Add Comment Below |
 | `gl` | `n` | Hover diagnostics |
 | `gL` | `n` | Search diagnostics |
