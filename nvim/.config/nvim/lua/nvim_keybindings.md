@@ -337,7 +337,7 @@ Last verified: 2026-08-29
 | `in` | `x/o` | Select child (inner) node |
 | `j` | `n/x` | Move cursor down |
 | `k` | `n/x` | Move cursor up |
-| `M` | `n` | Substitute EOL |
+| `gM` | `n` | Substitute EOL |
 | `m` | `n` | Substitute Operator |
 | `m` | `x` | Substitute Visual |
 | `mm` | `n` | Substitute Line |
