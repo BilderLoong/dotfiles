@@ -1,6 +1,6 @@
 personality = "pragmatic"
-model = "opencode-go/deepseek-v4.1-flash"
-model_reasoning_effort = "max"
+model = "gpt-6-astra"
+model_reasoning_effort = "high"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 service_tier = "default"
