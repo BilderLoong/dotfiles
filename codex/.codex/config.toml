@@ -168,6 +168,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Documents/Codex/2026-09-16/anki-cloze-context-cleanup-last-5"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/definer-mod"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
