@@ -209,6 +209,7 @@ source = "/Users/birudo/.cache/codex-runtimes/codex-primary-runtime/plugins/open
 
 [mcp_servers.fff]
 command = "/opt/homebrew/bin/fff-mcp"
+enabled = false
 
 [mcp_servers.node_repl]
 args = []
