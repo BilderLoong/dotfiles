@@ -1,71 +1,73 @@
-providers: 
-  webSearchOrder: 
+providers:
+  webSearchOrder:
     []
-modelRoles: 
+modelRoles:
   default: opencode-go/ox-alpha-free
   advisor: opencode-go/deepseek-v4-flash:max
   vision: openai-codex/gpt-5.6-luna
   smol: opencode-go/deepseek-v4-flash:xhigh
 symbolPreset: nerd
-theme: 
+theme:
   dark: nord-readable
   light: dark-nord
-setupVersion: 1
+setupVersion: 2
 colorBlindMode: false
-statusLine: 
+statusLine:
   compactThinkingLevel: true
-terminal: 
+terminal:
   showProgress: true
-tui: 
+tui:
   codexResetFireworks: true
   tight: true
-display: 
+display:
   showTokenUsage: true
-task: 
+task:
   showResolvedModelBadge: false
   enableLsp: true
   prewalk: false
-  agentModelOverrides: 
+  agentModelOverrides:
     task: opencode-go/deepseek-v4-flash
-memory: 
+memory:
   backend: "off"
-autolearn: 
+autolearn:
   enabled: false
   autoContinue: false
-plan: 
+plan:
   defaultOnStartup: false
-astGrep: 
+astGrep:
   enabled: true
-computer: 
+computer:
   enabled: true
-checkpoint: 
+checkpoint:
   enabled: true
-github: 
+github:
   enabled: true
-security: 
+security:
   enabled: true
-read: 
+read:
   renderMarkdown: true
-lsp: 
+lsp:
   formatOnWrite: true
   diagnosticsOnEdit: true
 defaultThinkingLevel: auto
-compaction: 
+compaction:
   idleEnabled: true
-contextPromotion: 
+contextPromotion:
   enabled: false
-skills: 
+skills:
   enablePiUser: true
   enablePiProject: true
   enableClaudeUser: false
   enableClaudeProject: false
   enableCodexUser: false
-disabledProviders: 
+disabledProviders:
   - claude
   - codex
   - gemini
   - opencode
   - github
   - cursor
-dev: 
+dev:
   autoqaConsent: granted
+composer:
+  shape: band
