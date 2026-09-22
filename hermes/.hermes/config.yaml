@@ -8,7 +8,7 @@ agent:
 web:
   backend: exa
 browser:
-  use_real_profile: true
+  use_real_profile: false
   cloud_provider: local
   use_gateway: false
 compression:
@@ -99,7 +99,7 @@ skills:
       - jupyter-live-kernel
       - openhue
 approvals:
-  mode: "off"
+  mode: 'off'
 plugins:
   enabled:
     - rtk-rewrite
