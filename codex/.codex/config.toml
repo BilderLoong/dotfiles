@@ -1,10 +1,10 @@
 personality = "pragmatic"
-model_reasoning_effort = "max"
+model_reasoning_effort = "medium"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 service_tier = "default"
 model_catalog_json = "/Users/birudo/.codex/opencodex-catalog.json"
-model = "opencode-go/mimo-v2.6-pro"
+model = "gpt-6-astra"
 # Auto-injected by opencodex
 openai_base_url = "http://127.0.0.1:10100/v1"
 # Auto-injected by opencodex
