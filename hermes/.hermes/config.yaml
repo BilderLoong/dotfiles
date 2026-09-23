@@ -112,6 +112,7 @@ _config_version: 45
 mcp_servers: {}
 platform_toolsets:
   cli:
+    - a2a
     - browser
     - clarify
     - code_execution
@@ -131,7 +132,38 @@ platform_toolsets:
     - web
 known_plugin_toolsets:
   cli:
+    - a2a
     - spotify
+known_builtin_toolsets:
+  cli:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - connections
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - kanban
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
