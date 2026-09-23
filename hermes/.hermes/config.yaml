@@ -103,7 +103,9 @@ approvals:
   mode: 'off'
 plugins:
   enabled:
+    - hermes-memory-ui
     - rtk-rewrite
+  disabled: []
 onboarding:
   seen:
     busy_input_prompt: true
