@@ -8,7 +8,7 @@ agent:
 web:
   backend: exa
 browser:
-  use_real_profile: false
+  use_real_profile: true
   cloud_provider: local
   use_gateway: false
 compression:
