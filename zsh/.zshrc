@@ -59,3 +59,4 @@ fi
 
 # zprof
 
+export PATH="$HOME/.local/bin:$PATH"
