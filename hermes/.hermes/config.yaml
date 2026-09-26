@@ -111,7 +111,12 @@ onboarding:
     busy_input_prompt: true
     tool_progress_prompt: true
 _config_version: 45
-mcp_servers: {}
+mcp_servers:
+  qgis:
+    command: /Users/birudo/Projects/qgis-mcp/.venv/bin/qgis-mcp-server
+    env:
+      QGIS_MCP_TOOL_MODE: compound
+    enabled: true
 platform_toolsets:
   cli:
     - a2a
