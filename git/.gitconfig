@@ -30,3 +30,5 @@
 	recurse = true
 [annex]
 	largefiles = (largerthan=10000m)
+[init]
+	defaultBranch = main
