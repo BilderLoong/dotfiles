@@ -263,3 +263,9 @@ trusted_hash = "sha256:6a6f42bc3b58d6262db38bfd74d7f340fcca2b09cdb134aad365063f0
 
 [hooks.state."ponytail@yomitan-local:hooks/claude-codex-hooks.json:subagent_start:0:0"]
 trusted_hash = "sha256:1423b56c1322f96c8f74c51c1e7ae9a047b904c1fa43ee9165d462fd7a6e70ef"
+
+[hooks.state."/Users/birudo/Projects/subtitle_service/.codex/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:f217fbcf8ebe41da3413e01f17f17afcb1cae89c2b995feccd9ebbc4b2297fb6"
+
+[hooks.state."/Users/birudo/Projects/subtitle_service/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:6eb46df3fb741be24b7d49bd375f6a1b24257fa297b6f0f886c1e34a32ef4dfb"
