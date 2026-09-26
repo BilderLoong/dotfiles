@@ -110,7 +110,7 @@ onboarding:
   seen:
     busy_input_prompt: true
     tool_progress_prompt: true
-_config_version: 45
+_config_version: 46
 platform_toolsets:
   cli:
     - a2a
