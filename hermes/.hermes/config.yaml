@@ -21,6 +21,7 @@ display:
   message_reactions: true
 voice:
   auto_tts: false
+  voice_chat_mode: chained
 wake_word:
   enabled: false
 memory:
