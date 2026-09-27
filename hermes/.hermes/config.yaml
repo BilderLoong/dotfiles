@@ -61,6 +61,7 @@ skills:
   trusted_project_dirs:
     - /Users/birudo/Projects/dotfiles
     - /Users/birudo/Projects/gis
+    - /Users/birudo/Projects/geolibre
   write_approval: true
   disabled:
     - airtable
