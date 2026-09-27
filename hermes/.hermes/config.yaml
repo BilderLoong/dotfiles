@@ -60,6 +60,7 @@ skills:
     - ~/.agents/skills
   trusted_project_dirs:
     - /Users/birudo/Projects/dotfiles
+    - /Users/birudo/Projects/gis
   write_approval: true
   disabled:
     - airtable
