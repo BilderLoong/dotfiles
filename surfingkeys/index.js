@@ -6,7 +6,7 @@
 // API DOC: https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md
 
 api.imap('jk', '<Esc>');
-settings.startToShowEmoji = 2;
+
 
 api.addSearchAlias('i', 'Google Images', 'https://www.google.com/search?tbm=isch&q=');
 
