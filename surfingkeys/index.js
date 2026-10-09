@@ -32,6 +32,7 @@ api.addSearchAlias('e', 'etymonline', 'https://www.etymonline.com/word/', 's', '
     return res;
 });
 
+settings.startToShowEmoji = 2;
 // set theme
 settings.theme = `
 .sk_theme {
