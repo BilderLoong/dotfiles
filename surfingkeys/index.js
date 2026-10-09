@@ -5,6 +5,7 @@
 
 // API DOC: https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md
 
+api.imap('jj', '<Esc>');
 
 api.addSearchAlias('i', 'Google Images', 'https://www.google.com/search?tbm=isch&q=');
 
