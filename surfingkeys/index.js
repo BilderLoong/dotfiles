@@ -6,6 +6,8 @@
 // API DOC: https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md
 
 
+api.addSearchAlias('i', 'Google Images', 'https://www.google.com/search?tbm=isch&q=');
+
 api.mapkey('ymd', 'Copy current page title and URL as Markdown', function() {
   const title = document.title;
   const url = window.location.href;

@@ -1,14 +1,14 @@
 personality = "pragmatic"
-model_reasoning_effort = "max"
+model_reasoning_effort = "ultra"
 
 notify = ["/Users/birudo/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 service_tier = "default"
+model = "gpt-6.1-sol"
 model_catalog_json = "/Users/birudo/.codex/opencodex-catalog.json"
 # Auto-injected by opencodex (undo: ocx restore)
 openai_base_url = "http://127.0.0.1:10100/v1"
 # Auto-injected by opencodex (undo: ocx restore)
 experimental_realtime_ws_base_url = "http://127.0.0.1:10100/v1"
-model = "opencode-go/glm-5.3-flash"
 [agents]
 default_subagent_model = "gpt-5.6-luna"
 default_subagent_reasoning_effort = "max"
@@ -52,6 +52,9 @@ enabled = true
 enabled = true
 
 [plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."code-review@openai-bundled"]
 enabled = true
 
 [projects."/Users/birudo/Projects/anki-feedback"]
@@ -177,6 +180,9 @@ trust_level = "trusted"
 [projects."/Users/birudo/Projects/subtitle_service"]
 trust_level = "trusted"
 
+[projects."/Users/birudo/Projects/geolibre"]
+trust_level = "trusted"
+
 [desktop]
 followUpQueueMode = "steer"
 selected-avatar-id = "rocky"
@@ -192,6 +198,7 @@ composerPlainTextMode = true
 appearanceLightCodeThemeId = "codex"
 usePointerCursors = false
 dock-icon-preference = "codex-system"
+browser-annotation-markers-visible = true
 
 [desktop.appearanceLightChromeTheme]
 accent = "#0169cc"
@@ -207,6 +214,12 @@ surface = "#ffffff"
 diffAdded = "#00a240"
 diffRemoved = "#e02e2a"
 skill = "#751ed9"
+
+[desktop.open-in-target-preferences]
+global = "vscode"
+
+[desktop.open-in-target-preferences.perPath]
+"/Users/birudo/.codex/worktrees/b184/geolibre" = "vscode"
 
 [marketplaces.openai-bundled]
 source_type = "local"
@@ -231,14 +244,14 @@ NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_n
 NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/birudo/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/birudo/.codex"
-BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab,mcpapps"
 BROWSER_USE_TINYSKY_ENABLED = "1"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
 NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.924.20706"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/birudo/.codex/plugins/cache/openai-bundled/browser/26.924.20706/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.930.31730"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/birudo/.codex/plugins/cache/openai-bundled/browser/26.930.31730/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "/Users/birudo/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex"
 
@@ -247,6 +260,10 @@ command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.
 args = ["mcp"]
 cwd = "."
 enabled = false
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest"]
 
 [shell_environment_policy.set]
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
@@ -269,3 +286,21 @@ trusted_hash = "sha256:f217fbcf8ebe41da3413e01f17f17afcb1cae89c2b995feccd9ebbc4b
 
 [hooks.state."/Users/birudo/Projects/subtitle_service/.codex/hooks.json:stop:0:0"]
 trusted_hash = "sha256:6eb46df3fb741be24b7d49bd375f6a1b24257fa297b6f0f886c1e34a32ef4dfb"
+
+[hooks.state."/Users/birudo/Projects/definer-mod/.codex/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:f217fbcf8ebe41da3413e01f17f17afcb1cae89c2b995feccd9ebbc4b2297fb6"
+
+[hooks.state."/Users/birudo/Projects/definer-mod/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:6eb46df3fb741be24b7d49bd375f6a1b24257fa297b6f0f886c1e34a32ef4dfb"
+
+[hooks.state."/Users/birudo/Projects/tiktok-language-filter/.codex/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:f217fbcf8ebe41da3413e01f17f17afcb1cae89c2b995feccd9ebbc4b2297fb6"
+
+[hooks.state."/Users/birudo/Projects/tiktok-language-filter/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:6eb46df3fb741be24b7d49bd375f6a1b24257fa297b6f0f886c1e34a32ef4dfb"
+
+[hooks.state."/Users/birudo/Projects/yomitan-dictionary/.codex/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:12efdd54b3c8a0778d63d1056073a7cbeec09518b5bfd46e2893c96b2292af7f"
+
+[hooks.state."/Users/birudo/Projects/yomitan-dictionary/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:15e2e58db3e02eb8b44667e15b8ae7c28d08178d5dd1c1ed4b9369ef3ecf56d9"

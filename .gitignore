@@ -4,3 +4,8 @@
 **/.DS_Store
 
 *.orig
+
+# Hermes cloze-cleanup runtime data.
+/hermes/.hermes/skills/anki-cloze-context-cleanup/backups/
+/hermes/.hermes/skills/anki-cloze-context-cleanup/**/__pycache__/
+/hermes/.hermes/skills/anki-cloze-context-cleanup/**/*.py[cod]
