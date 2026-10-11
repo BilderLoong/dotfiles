@@ -263,7 +263,15 @@ enabled = false
 
 [mcp_servers.chrome-devtools]
 command = "npx"
-args = ["-y", "chrome-devtools-mcp@latest"]
+args = [
+  "-y",
+  "chrome-devtools-mcp@latest",
+  "--autoConnect",
+  "--userDataDir",
+  "/Users/birudo/Library/Application Support/Citro Labs/ego lite",
+  "--no-usage-statistics",
+  "--no-performance-crux",
+]
 
 [shell_environment_policy.set]
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
