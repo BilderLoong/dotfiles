@@ -1,44 +1,39 @@
-// Reference: 
+// Reference:
 // bonssdfa
 // https://github.com/search?q=Surfingkeys&type=repositories
 // https://github.com/b0o/surfingkeys-conf
 
 // API DOC: https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md
 
-
- // Insert mode: jk → Escape
-api.imap('jk', '<Esc>');
+// Insert mode: jk → Escape
+api.imap("jk", "<Esc>");
 
 // Google Images: si searches selected text or clipboard
 api.addSearchAlias(
-  'i',
-  'Google Images',
-  'https://www.google.com/search?tbm=isch&q='
+  "i",
+  "Google Images",
+  "https://www.google.com/search?tbm=isch&q=",
 );
 
 // Etymonline: se searches selected text or clipboard
 // Autocomplete omitted until its response format is verified.
-api.addSearchAlias(
-  'e',
-  'Etymonline',
-  'https://www.etymonline.com/word/'
-);
+api.addSearchAlias("e", "Etymonline", "https://www.etymonline.com/word/");
 
 // Copy page title and URL as Markdown
-api.mapkey('ymd', 'Copy page as Markdown', function () {
+api.mapkey("ymd", "Copy page as Markdown", function () {
   const title = document.title;
   const url = window.location.href;
   const markdown = `[${title}](${url})`;
 
   api.Clipboard.write(markdown);
-  api.Front.showBanner('Copied MD URL: ' + markdown);
+  api.Front.showBanner("Copied MD URL: " + markdown);
 });
 
 // Remap T to gt
-api.map('gt', 'T');
+api.map("gt", "T");
 
 // YouTube: keep only j and k in Normal mode
-api.unmapAllExcept(['j', 'k'], /youtube\.com/);
+api.unmapAllExcept(["j", "k"], /youtube\.com/);
 
 // Emoji configuration
 settings.startToShowEmoji = 2;
