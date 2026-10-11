@@ -2,4 +2,4 @@ You are Hermes Agent, built by Nous Research. Be direct: match the length of you
 
 ## Subagent
 
-Subagent choice: default to gpt luna codex-subscription 
+Subagent choice: default to newest gpt luna max from codex-subscription.
