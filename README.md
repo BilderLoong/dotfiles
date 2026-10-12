@@ -236,11 +236,30 @@ The `codex` package manages `~/.codex/AGENTS.md`, a curated `~/.codex/config.tom
 
 ### Rime on macOS
 
-Stow into a non-standard target:
+The `Rime` package stores 飞鹤快拼, its dictionaries, Lua modules, and shipped lookup databases.
+It does not store learned words, typing data, device settings, or the generated `build/` folder.
+The old `Rime_bak` package stays unchanged.
+
+Source: [boomker/rime-fast-xhup](https://github.com/boomker/rime-fast-xhup), commit `f3dfb3607dfc14480c49d72d6a1930e47eedbf09`.
+The upstream license is in `Rime/LICENSE`.
+
+Local settings:
+- 小鹤双拼 with `/` before shape codes. Example: `uu/i` produces `输`.
+- Scheme menu: Control + grave or Option + grave.
+- Shape hints: Control + N.
+- Command shortcuts, the password generator, and extra input history are disabled.
+- Grammar suggestions are disabled because no grammar model is installed.
+
+Stow into the Rime data folder, not the home folder:
 
 ```bash
+stow -n -v -S Rime -t ~/Library/Rime
 stow -S Rime -t ~/Library/Rime
 ```
+
+If real files conflict, make a backup first. Use `--adopt` only to preserve their current contents.
+After changes, select **重新部署** from the 鼠须管 menu.
+
 
 ---
 
