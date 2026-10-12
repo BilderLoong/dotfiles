@@ -1,0 +1,5 @@
+(^|/)(README(\..*)?|LICENSE(\..*)?|\.gitignore|\.stow-local-ignore)$
+^/(build|sync)(/|$)
+(^|/)[^/]*\.userdb[^/]*(/|$)
+^/(installation|user)\.yaml$
+(^|/)\.DS_Store$
