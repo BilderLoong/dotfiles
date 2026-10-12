@@ -1,0 +1,12 @@
+# Rime dictionary
+# encoding: utf-8
+
+---
+name: flyhe_fast
+version: 2026.01.23
+
+import_tables:
+  - cn_dicts/flyhe_chars        # 字表
+  - cn_dicts/flypy_base         # 基础词库
+  - cn_dicts/flypy_melt_eng     # 中英数字派生
+  # - cn_dicts/ext/flypy_stock  # A 股市场股票

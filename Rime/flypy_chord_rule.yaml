@@ -1,0 +1,80 @@
+---
+
+patch:
+  ## 左右飞键音码规则
+  - derive/^(j)n/$1c/
+  - derive/^([jy])t/$1d/            # t --> d
+  - derive/^(j)p/$1e/               # p --> e
+  - derive/^([jlx])q/$1f/           # q --> f
+  - derive/^p([okbmuhj])/e$1/
+  - derive/^q([pkibmsxyl])/f$1/
+  - derive/^qt/fd/
+  - derive/^qu/fe/
+  - derive/^([jk])y/$1w/          # [jki]y --> [jki]w
+  - derive/^y([ikb])/w$1/         # y[ikb] --> w[ikb]
+  - derive/^yh/wn/
+  - derive/^yj/wm/
+  - derive/^hj/aj/
+  - derive/^vs/us/                # vs --> us
+  - derive/^vf/vn/                # vf --> vn
+  - derive/^vr/vm/                # vr --> vm
+  - derive/^rv/rl/                # rv --> rl
+  - derive/^rz/rm/                # rz --> rm
+  - derive/^rf/rn/                # rf --> rn
+  - derive/^rg/rb/                # rg --> rb
+  - derive/^tg/rb/                # tg --> rb
+  - derive/^tk/rk/                # tk --> rk
+  - derive/^tv/dl/                # tv --> dl
+  - derive/^gr/gm/                # gr --> gm
+  - derive/^gf/gn/                # gf --> gn
+  - derive/^g([wv])/gi/           # g[wv] --> gi
+  - derive/^xt/xo/
+  - derive/^xs/xh/
+  - derive/^nh/nx/
+  - derive/^nj/xj/
+  - derive/^jm/jz/
+  - derive/^jb/ja/
+  - derive/^za/zl/
+  - derive/^ze/zn/
+  - derive/^zr/zm/
+  - derive/^z([ws])/zk/
+  - derive/^mh/mx/
+  - derive/^mb/ms/
+  - derive/^mo/mr/
+  - derive/^mu/mv/
+  - derive/^sz/sl/
+  - derive/^bw/bs/
+  - derive/^b([nm])/s$1/
+  - derive/^cs/ck/
+  - derive/^ce/cn/
+  - derive/^cr/cm/
+  - derive/^c([dz])/cl/
+
+  # 以下为 纠错规则(权重低)
+  - derive/^qr/fo/correction
+  - derive/^qn/fn/correction
+  - derive/^ko/kr/correction
+  - derive/^hy/hw/correction
+  - derive/^uj/ur/correction
+  - derive/^uy/uw/correction      # uy --> uw
+  - derive/^vx/ux/correction      # vx --> ux
+  - derive/^vd/ud/correction      # vd --> ud
+  - derive/^vg/vk/correction      # vg --> vk
+  - derive/^te/df/correction      # te --> df
+  - derive/^tw/dw/correction      # tw --> dw
+  - derive/^gy/gk/correction      # gy --> gk
+  - derive/^nu/nv/correction
+  - derive/^no/nr/correction
+  - derive/^lo/ng/correction
+  - derive/^lp/nl/correction
+  - derive/^ly/nw/correction
+  - derive/^lm/nz/correction
+  - derive/^li/lx/correction
+  - derive/^mk/me/correction
+  - derive/^nt/nd/correction
+  - derive/^iy/iw/correction
+  - derive/^i([kl])/ix/correction
+  - derive/^([mn])p/$1e/correction
+  - derive/^([dn])q/$1f/correction
+  - derive/^p([in])/e$1/correction
+  - derive/^b([fg])/s$1/correction

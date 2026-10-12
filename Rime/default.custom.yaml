@@ -1,0 +1,11 @@
+patch:
+  schema_list:
+    - schema: flypy_xhfast
+    - schema: luna_pinyin
+  switcher/hotkeys:
+    - Control+grave
+    - Alt+grave
+  switcher/fold_options: true
+  switcher/save_options:
+    - ascii_punct
+    - char_mode
