@@ -1,0 +1,7 @@
+/build/
+/sync/
+*.userdb*
+/installation.yaml
+/user.yaml
+*.log
+.DS_Store
