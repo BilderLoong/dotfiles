@@ -189,7 +189,7 @@ patch:
 
   speller/+:
     algebra/+:
-      # - derive|/||                  # 取消注释,直接辅码(新手不推荐)
+      - derive|/||                  # 取消注释,直接辅码(新手不推荐)
 
       ## 模糊音:
       - derive/^([qx])v/$1u/
