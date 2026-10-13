@@ -242,7 +242,7 @@ patch:
 
   history:                            # 上屏历史记录
     tag: history
-    prefix: "/hs"
+    # prefix: "/hs"
     prefix: "hH"
     tips: "上屏历史"
     max_count: 99
