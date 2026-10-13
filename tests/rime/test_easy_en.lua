@@ -29,6 +29,7 @@ local function translate(input, entries, limit)
                     text = entry.text,
                     comment = suffix == "" and "" or "~" .. suffix,
                 })
+                if lookup_limit > 0 and #self.entries >= lookup_limit then break end
             end
         end
     end
