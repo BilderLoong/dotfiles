@@ -6,6 +6,12 @@ local P = {}
 local T = {}
 local F = {}
 
+local hint_reset = {
+    comment_off = 0,
+    mask_hint = 1,
+    tone_hint = 2,
+}
+
 function M.init(env)
     Env(env)
     local engine = env.engine
@@ -90,15 +96,9 @@ function T.init(env)
                         ctx:set_property("preedit_format_state", "0")
                     end
                 end
-            elseif (name == "mask_hint") and ctx:get_option("mask_hint") and (env:Config_get("switches/@last/reset") ~= 0) then
-                env:Config_set("switches/@last/reset", 0)
-                env:Config_set("radical_lookup/overwrite_comment", false)
-            elseif (name == "tone_hint") and ctx:get_option("tone_hint") and (env:Config_get("switches/@last/reset") ~= 1) then
-                env:Config_set("switches/@last/reset", 1)
-                env:Config_set("radical_lookup/overwrite_comment", true)
-            elseif (name == "comment_off") and ctx:get_option("comment_off") and (env:Config_get("switches/@last/reset") ~= 0) then
-                env:Config_set("switches/@last/reset", 0)
-                env:Config_set("radical_lookup/overwrite_comment", false)
+            elseif hint_reset[name] ~= nil and ctx:get_option(name) then
+                env:Config_set("switches/@last/reset", hint_reset[name])
+                env:Config_set("radical_lookup/overwrite_comment", name == "tone_hint")
             end
         end
     )
@@ -127,14 +127,20 @@ function P.func(key, env)
             config:set_bool("easy_en-ecdict/overwrite_comment", false) -- 重写英文注释为空
         elseif segment.prompt:match(env.easy_en_prompt) and not env.en_comment_overwrite then
             config:set_bool("easy_en-ecdict/overwrite_comment", true)  -- 重写英文注释为中文
-        elseif (env:Config_get("switches/@last/reset") ~= 0) and (env.comment_hints > 0) then
-            context:set_option("mask_hint", true)                      -- 重写注释为辅码
-            env:Config_set("switches/@last/reset", 0)
-            env:Config_set("radical_lookup/overwrite_comment", false)
-        elseif (env:Config_get("switches/@last/reset") ~= 1) and (env.comment_hints > 0) then
-            context:set_option("tone_hint", true)
-            env:Config_set("switches/@last/reset", 1)
-            env:Config_set("radical_lookup/overwrite_comment", true) -- 重写注释为注音
+        elseif env.comment_hints > 0 then
+            local next_mode
+            if context:get_option("mask_hint") then
+                next_mode = "tone_hint"
+            elseif context:get_option("tone_hint") then
+                next_mode = "comment_off"
+            else
+                next_mode = "mask_hint"
+            end
+            for _, option in ipairs({ "comment_off", "mask_hint", "tone_hint" }) do
+                context:set_option(option, option == next_mode)
+            end
+            env:Config_set("switches/@last/reset", hint_reset[next_mode])
+            env:Config_set("radical_lookup/overwrite_comment", next_mode == "tone_hint")
         end
         config:save_to_file(rime_api.get_user_data_dir() .. "/build/" .. schema.schema_id .. ".schema.yaml")
         engine:apply_schema(Schema(schema.schema_id))
