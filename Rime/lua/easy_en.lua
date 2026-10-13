@@ -153,6 +153,7 @@ function easy_en.translator(input, seg, env)
         end
         -- Zero removes Rime's prefix-scan limit for wildcard queries.
         env.mem:dict_lookup(header, true, glob and 0 or env.expand_word_count)
+        local match_count = 0
         for dictentry in env.mem:iter_dict() do
             local matches
             if glob then
