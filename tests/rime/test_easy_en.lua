@@ -110,4 +110,18 @@ same_values(plain_results, { "glob" }, "plain glob completion")
 assert(plain_memory.lookup_header == "glob", "plain completion must keep its original lookup prefix")
 assert(plain_memory.lookup_limit == 666, "default lookup limit must remain 666")
 
+local question_results, question_memory = translate("glo?", entries)
+same_values(question_results, { "glob" }, "glo? must match one character only")
+assert(question_memory.lookup_header == "glo", "glo? must look up from the first wildcard")
+
+local mixed_results, mixed_memory = translate("g?o*", entries)
+same_values(mixed_results, { "glo", "glob", "globe", "global" }, "g?o* must match one then zero-or-more characters")
+assert(mixed_memory.lookup_header == "g", "prefix lookup must stop before the first wildcard")
+
+local unicode_results = translate("g?b", entries)
+same_values(unicode_results, { "gøb" }, "? must consume one Unicode character")
+
+local literal_results = translate("g+*b", entries)
+same_values(literal_results, { "g+b", "g++b" }, "Lua pattern metacharacters must stay literal")
+
 print("PASS easy_en translator multi-star regression")
