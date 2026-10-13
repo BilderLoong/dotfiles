@@ -97,7 +97,7 @@ patch:
       # - {when: composing, accept: Control+i,    send: Shift+Left}
       - {when: composing, accept: Tab,          send: Shift+Right}
       # - {when: composing, accept: Control+o,    send: Shift+Right}
-      - {when: always,    accept: Control+Shift+0, select: ".next"}
+      # - {when: always,    accept: Control+Shift+0, select: ".next"}
       # - {when: always,    accept: Control+Shift+E, select: easy_en}
       # - {when: composing, accept: Control+w, send: Control+BackSpace}
 
