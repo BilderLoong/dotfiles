@@ -79,7 +79,7 @@ patch:
     hide_cand: "Control+x"                    # 匹配当前输入码后隐藏指定的候选字词
     reduce_fq_cand: "Control+j"               # 匹配当前输入码后降频指定的候选字词
     switch_comment: "Control+n"               # 切换注释(小鹤形码 / 带调拼音 / 无)
-    remove_user_word: "Control+r"             # 历史上屏字词调频为负(用户词典)
+    remove_user_word: "Control+r"             # 未启用：commit_history 未注册到引擎
     easydict_translate: "Control+y"           # 调用 Easydict 翻译高亮字词
     switch_cn_en_schema: "Control+g"          # 切换中英方案(支持一键互切)
     symbol_menu_fallback: "Control+p"         # 符号二级菜单返回主菜单键
@@ -87,7 +87,7 @@ patch:
     select_last_character: "0"                # 0 以词定字(尾字)，无 equal 别名
     bindings/+:
       - {when: has_menu,  accept: ";", send: Control+2}          # 分号; 用于第2候选
-      - {when: has_menu,  accept: '.', send: Page_Down}          # 括号] 下一页
+      - {when: has_menu,  accept: '.', send: Page_Down}          # 句号 . 下一页
       - {when: paging,    accept: ',', send: Page_Up}          # 逗号, 返回上一页
       # - {when: has_menu,  accept: "'", send: Control+3}        # 引号' 用于第3候选
       # - {when: paging,    accept: minus,  send: Page_Up}       # 减号- 返回上一页
