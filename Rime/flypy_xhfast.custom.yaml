@@ -237,7 +237,7 @@ patch:
   LaTeX:                              # LaTeX 公式输入
     tag: LaTeX
     # prefix: "lT"
-    prefix: "/lt"
+    # prefix: "/lt"
     tips: "LaTeX 公式"
 
   history:                            # 上屏历史记录
