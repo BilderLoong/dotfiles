@@ -54,6 +54,9 @@ if len(sys.argv) == 3:
                 })
     finally:
         lua_path.write_text(saved)
+    for row in engine_rows:
+        expected = row["variant"] in ("no_scan_limit_only", "both_changes")
+        assert row["r*lt_finds_result"] == expected, row
 report = {"fixture": rows, "real_engine": engine_rows}
 output = scratch / "rime-limit-ablation-results.json"
 output.write_text(json.dumps(report, indent=2) + "\n")
