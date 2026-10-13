@@ -155,7 +155,9 @@ function easy_en.translator(input, seg, env)
         for dictentry in env.mem:iter_dict() do
             local matches
             if glob then
-                matches = glob_matches(glob, dictentry.comment)
+                -- Rime stores only the completion suffix in comment.
+                local code = header .. dictentry.comment:gsub("^~", "")
+                matches = glob_matches(glob, code)
             else
                 local code_tail = string.match(dictentry.comment:lower(), tailer .. "$") or ""
                 matches = tailer and (code_tail == tailer)
