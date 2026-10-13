@@ -1,6 +1,6 @@
 require("lib/string")
 local P = {}
-local T = {}
+ocal T = {}
 local F = {}
 local M = {}
 
