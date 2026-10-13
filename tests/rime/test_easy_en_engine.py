@@ -22,6 +22,8 @@ for schema in ("easy_en", "flypy_xhfast"):
     assert not {"glo", "globe"} & words("glo?"), (schema, "question mark width")
     assert words("glo??"), (schema, "two question marks returned no results")
     assert all(re.fullmatch(r"glo..", word) for word in words("glo??")), (schema, "two-character width")
+    assert "glob" in words("g*l*b"), (schema, "short prefix still misses glob")
+    assert "result" in words("r*lt"), (schema, "short prefix still misses result")
     assert not {"grab", "grub"} & words("g*l*b"), (schema, "interior literal ignored")
     assert {"glob", "globe"}.issubset(words("glob*")), (schema, "existing completion")
     results.extend({"schema": schema, "query": row["query"], "candidate_count": len(row["candidates"])} for row in rows)
