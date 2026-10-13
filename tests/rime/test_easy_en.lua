@@ -1,4 +1,5 @@
-package.path = "./Rime/lua/?.lua;./Rime/lua/?/init.lua;" .. package.path
+local lua_dir = os.getenv("RIME_TEST_LUA_DIR") or "./Rime/lua"
+package.path = lua_dir .. "/?.lua;./Rime/lua/?.lua;./Rime/lua/?/init.lua;" .. package.path
 
 local easy_en = require("easy_en")
 
