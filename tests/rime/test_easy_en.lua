@@ -102,6 +102,14 @@ local entries = {
     { text = "gxb", comment = "gxb" },
 }
 
+local late_result = translate("r*lt", {
+    { text = "rabbit", comment = "rabbit" },
+    { text = "random", comment = "random" },
+    { text = "rain", comment = "rain" },
+    { text = "result", comment = "result" },
+}, 2)
+same_values(late_result, { "result" }, "nonmatching entries must not hide result")
+
 local glob_results, glob_memory = translate("g*l*b", entries, 300)
 same_values(glob_results, { "glob", "glooooob" }, "g*l*b full match")
 assert(glob_memory.lookup_header == "g", "g*l*b must look up from its first wildcard prefix")
