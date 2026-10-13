@@ -3,7 +3,7 @@ name: asd-ste100
 description: ASD-STE100 Simplified Technical English, and the reply shape a reader with ADHD can act on. A standing style rule, not an on-request tool. Layer 1 governs the words of every text a human reads — chat replies, docs, READMEs, commit messages, PR text, code comments, error messages, release notes, tool descriptions, task trackers, wiki pages. Layer 2 governs the order of a reply to a person — the next action first, numbered steps, no preamble and no closer. Neither layer touches code, identifiers, or command syntax. Load it before you write prose, and also when asked to remove "AI slop", make writing clear or plain, enforce a controlled style, or review text for STE violations. Two word modes — strict (procedures, runbooks, safety text, error messages) and STE-flavored (general prose, the default).
 license: MIT (see LICENSE; the ASD-STE100 specification itself is not covered)
 metadata:
-  version: "2.0.5"
+  version: "2.0.6"
   spec: ASD-STE100 Issue 9 (January 2025)
   replaces: i-have-adhd
 ---
@@ -178,26 +178,37 @@ Four real conflicts, and the ruling for each.
 
 # Verify
 
-## Lint before you send, not after
+## Chat replies in Hermes: check after generation
 
-An installed gate lints the reply after the model sends it. A block then makes the model send the same reply a second time, so the reader sees the answer twice. Lint first, and the gate never fires.
+The default Hermes profile uses the local `ste-lint` plugin. It registers the native `post_llm_call` hook. The hook receives the final reply and runs `ste-lint.py` through standard input. It does not call a model.
 
-Before a final reply of more than 60 words, and before you write prose to a file:
+1. Apply the word and shape rules as you write.
+2. Send the final reply once. Do not write a scratch draft only to check a chat reply.
+3. Let the hook save the score after generation. Do not repeat the reply, request a correction, or start another model call because of a warning.
 
-1. Write the draft to a scratch file.
-2. Run `node hooks/run-python.cjs scripts/ste-lint.py --fail-over 2.5 draft.md` from the skill directory.
-3. Fix the reported categories. Lint one more time. Two passes, no more.
-4. Send the reply one time.
+The hook saves the last report for each session in `$HERMES_HOME/logs/ste-lint/<session-hash>.json`. A new report replaces the old report. Reports contain counts, not the reply or sentence samples.
+
+Example report fields: `status="warning"`, `score=3.2`, `target=2.5`.
+
+Replies of 60 words or less have status `skipped`. Longer replies warn if the word score exceeds 2.5 or the separate shape count exceeds 1. A checker failure has status `checker_error`, not `pass`. Warnings do not block or replace the visible reply. They do not enter model context automatically.
+
+Do not add a lint score to a chat reply unless you actually read its report. The hook runs after generation, so its result is not available while you write that same reply. If the plugin is not loaded, apply the checklist below. Do not claim that an automatic check ran.
+
+The Claude Code hook files in this skill are separate. This Hermes setup does not enable or change them.
+
+## Prose files: check the saved artifact
+
+Write the requested file once. Run the local checker on that file. Fix actual problems in place. Do not repeat the full file in chat only to show it.
+
+Run these commands from the skill directory:
 
 ```
-node hooks/run-python.cjs scripts/ste-lint.py draft.md            # flavored target: under 2.5 per 100 words
-node hooks/run-python.cjs scripts/ste-lint.py --strict draft.md   # strict target: under 1.5 per 100 words
-node hooks/run-python.cjs scripts/ste-lint.py --shape draft.md    # add the Layer 2 counts
+node hooks/run-python.cjs scripts/ste-lint.py --fail-over 2.5 document.md
+node hooks/run-python.cjs scripts/ste-lint.py --strict --fail-over 1.5 document.md
+node hooks/run-python.cjs scripts/ste-lint.py --shape document.md
 ```
 
-Report the final score with the text. Do not present text as clean without a lint run.
-
-If the gate blocks you anyway, send the corrected reply and nothing else. Add no apology, no note about the gate, and no summary of what changed. Keep every fact from the first draft.
+Report a score only after a real check. The checker tests text patterns. It does not prove full STE compliance.
 
 ## Score and shape are separate numbers
 
