@@ -151,7 +151,8 @@ function easy_en.translator(input, seg, env)
             tailer = string.match(input, "[^" .. env.wildcard .. "]+$") or ""
             header = string.match(input, "^[^" .. env.wildcard .. "]+")
         end
-        env.mem:dict_lookup(header, true, env.expand_word_count) -- expand_search
+        -- Zero removes Rime's prefix-scan limit for wildcard queries.
+        env.mem:dict_lookup(header, true, glob and 0 or env.expand_word_count)
         for dictentry in env.mem:iter_dict() do
             local matches
             if glob then

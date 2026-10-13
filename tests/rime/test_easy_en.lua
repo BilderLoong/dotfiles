@@ -113,7 +113,7 @@ same_values(late_result, { "result" }, "nonmatching entries must not hide result
 local glob_results, glob_memory = translate("g*l*b", entries, 300)
 same_values(glob_results, { "glob", "glooooob" }, "g*l*b full match")
 assert(glob_memory.lookup_header == "g", "g*l*b must look up from its first wildcard prefix")
-assert(glob_memory.lookup_limit == 300, "wildcard search must preserve the configured lookup limit")
+assert(glob_memory.lookup_limit == 0, "wildcard lookup must not stop before filtering")
 
 local double_star = translate("g**b", entries)
 local single_star = translate("g*b", entries)
