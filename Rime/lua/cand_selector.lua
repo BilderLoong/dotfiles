@@ -7,6 +7,163 @@ local T = {}
 local F = {}
 local M = {}
 
+local function is_han_character(text)
+    if type(text) ~= "string" or utf8.len(text) ~= 1 then return false end
+    local codepoint = utf8.codepoint(text)
+    return (codepoint >= 0x3400 and codepoint <= 0x4DBF)
+        or (codepoint >= 0x4E00 and codepoint <= 0x9FFF)
+        or (codepoint >= 0xF900 and codepoint <= 0xFAFF)
+        or (codepoint >= 0x20000 and codepoint <= 0x2EBEF)
+        or (codepoint >= 0x30000 and codepoint <= 0x323AF)
+end
+
+local function shape_code_from_lookup(lookup)
+    if type(lookup) ~= "string" or #lookup < 2 then return nil end
+    local code = lookup:sub(-2)
+    return code:match("^%l%l$") and code or nil
+end
+
+local function component_slots_from_lookup(lookup)
+    if type(lookup) ~= "string" then return nil end
+    local component_text = lookup:match("・([^%s]+)")
+    if not component_text or utf8.len(component_text) ~= 2 then return nil end
+
+    local slots = {}
+    for _, codepoint in utf8.codes(component_text) do
+        table.insert(slots, utf8.char(codepoint))
+    end
+    return slots
+end
+
+local function append_component_suffix(comment, shape_code, slots)
+    local current = type(comment) == "string" and comment or ""
+    if not shape_code then return current end
+
+    local shape_prefix = " " .. shape_code
+    local suffix = slots and (#slots > 0) and ("〔" .. table.concat(slots) .. "〕") or ""
+    if current:sub(1, #shape_prefix) == shape_prefix then
+        if suffix == "" or current:find(suffix, 1, true) then return current end
+        return shape_prefix .. suffix .. current:sub(#shape_prefix + 1)
+    end
+    return shape_prefix .. suffix .. current
+end
+
+local function two_han_characters(text)
+    if type(text) ~= "string" or utf8.len(text) ~= 2 then return nil end
+    local characters = {}
+    for _, codepoint in utf8.codes(text) do
+        table.insert(characters, utf8.char(codepoint))
+    end
+    if #characters ~= 2 or not is_han_character(characters[1]) or not is_han_character(characters[2]) then
+        return nil
+    end
+    return characters
+end
+
+local function word_shape_data(env, text)
+    local characters = two_han_characters(text)
+    if not characters or not env.b_hint_shape_db then return nil end
+
+    local first_shape = shape_code_from_lookup(env.b_hint_shape_db:lookup(characters[1]))
+    local second_shape = shape_code_from_lookup(env.b_hint_shape_db:lookup(characters[2]))
+    if not first_shape or not second_shape then return nil end
+
+    local first_lookup = env.b_hint_component_db and env.b_hint_component_db:lookup(characters[1])
+    local second_lookup = env.b_hint_component_db and env.b_hint_component_db:lookup(characters[2])
+    return {
+        shape_code = second_shape .. first_shape,
+        first_components = component_slots_from_lookup(first_lookup),
+        second_components = component_slots_from_lookup(second_lookup),
+    }
+end
+
+local function word_component_text(second_components, first_components, visible_positions)
+    local function has_two_slots(slots)
+        return type(slots) == "table"
+            and #slots == 2
+            and type(slots[1]) == "string"
+            and utf8.len(slots[1]) == 1
+            and type(slots[2]) == "string"
+            and utf8.len(slots[2]) == 1
+    end
+    if not has_two_slots(second_components) or not has_two_slots(first_components) then return nil end
+
+    local groups = {}
+    local current_character = nil
+    for _, position in ipairs(visible_positions) do
+        if position < 1 or position > 4 then return nil end
+        local character_index = position <= 2 and 1 or 2
+        local component_index = ((position - 1) % 2) + 1
+        local components = character_index == 1 and second_components or first_components
+        if character_index ~= current_character then
+            table.insert(groups, {})
+            current_character = character_index
+        end
+        table.insert(groups[#groups], components[component_index])
+    end
+
+    local rendered_groups = {}
+    for _, group in ipairs(groups) do
+        table.insert(rendered_groups, table.concat(group))
+    end
+    return (#rendered_groups > 0) and table.concat(rendered_groups, "｜") or nil
+end
+
+local function append_word_hint(comment, visible_code, component_text)
+    local current = type(comment) == "string" and comment or ""
+    local code_prefix = " ~" .. visible_code
+    local suffix = component_text and "〔" .. component_text .. "〕" or ""
+    if current:sub(1, #code_prefix) == code_prefix then
+        if suffix == "" or current:find(suffix, 1, true) then return current end
+        return code_prefix .. suffix .. current:sub(#code_prefix + 1)
+    end
+    return code_prefix .. suffix .. current
+end
+
+local function matched_word_shape_positions(shape_code, typed_code)
+    if type(shape_code) ~= "string" or type(typed_code) ~= "string" or #typed_code > 2 then return nil end
+    if #typed_code == 0 then return {} end
+
+    local first_key = typed_code:sub(1, 1)
+    local second_key = typed_code:sub(2, 2)
+    if not shape_code:match("^" .. first_key .. ".?" .. second_key) then return nil end
+    if #typed_code == 1 then return { 1 } end
+
+    local second_position = (shape_code:sub(3, 3) == second_key) and 3 or 2
+    return { 1, second_position }
+end
+
+local function remaining_word_shape_positions(shape_code, matched_positions, visible_count)
+    if type(shape_code) ~= "string" or type(matched_positions) ~= "table" then return nil end
+    if type(visible_count) ~= "number" or visible_count < 0 then return nil end
+
+    local matched = {}
+    for _, position in ipairs(matched_positions) do
+        if position < 1 or position > #shape_code or matched[position] then return nil end
+        matched[position] = true
+    end
+
+    local visible_positions = {}
+    for position = 1, #shape_code do
+        if not matched[position] and #visible_positions < visible_count then
+            table.insert(visible_positions, position)
+        end
+    end
+    return visible_positions
+end
+
+local function append_components_to_shape_comment(comment, component_text)
+    local current = type(comment) == "string" and comment or ""
+    if not component_text then return current end
+
+    local code_prefix = current:match("^%s*~%l+")
+    if not code_prefix then return current end
+
+    local suffix = "〔" .. component_text .. "〕"
+    if current:find(suffix, 1, true) then return current end
+    return code_prefix .. suffix .. current:sub(#code_prefix + 1)
+end
+
 local function get_shape_cache_limit(env)
     local limit = env.word_shape_cache_limit or env.word_lookup_limit or 50
     if limit < 1 then return 1 end
@@ -57,11 +214,17 @@ end
 
 function F.init(env)
     M.init(env)
-    env.tone_format_rule = env.engine.schema.config:get_list("cand_selector/tone_convert_format")
+    local config = env.engine.schema.config
+    env.tone_format_rule = config:get_list("cand_selector/tone_convert_format")
+    env.b_hint_enabled = (config:get_int("translator/spelling_hints") or 0) > 0
+    env.b_hint_shape_db = ReverseLookup("flypy_xhfast")
+    env.b_hint_component_db = ReverseLookup("flypy_reverse")
 end
 
 function M.fini(env)
     clear_word_shape_cache(env)
+    env.b_hint_shape_db = nil
+    env.b_hint_component_db = nil
     if env.mem then
         env.mem:disconnect()
         env.mem = nil
@@ -364,6 +527,10 @@ function F.func(input, env)
     local fm_project = Projection()
     local context = env.engine.context
     local raw_input = context.input
+    local use_mask = context:get_option("mask_hint")
+    local use_tone = context:get_option("tone_hint")
+    local comment_off = context:get_option("comment_off")
+    local show_component_hints = use_mask and not use_tone and not comment_off and env.b_hint_enabled
     local fm_code = raw_input:match("/(.)$")
     local tone_filter_mode = raw_input:match("%l%l/%u") and true or false
     local fm_replaced_code = fm_code
@@ -372,6 +539,75 @@ function F.func(input, env)
     local new_preedit_code = tone_filter_mode and raw_input:match("^(.-)/") .. "/" .. fm_replaced_code or raw_input
 
     for cand in input:iter() do
+        local cand_text = cand.text
+        local cand_type = type(cand.type) == "string" and cand.type or ""
+
+        if
+            show_component_hints
+            and not cand_type:find("reverse_lookup", 1, true)
+            and not cand_type:find("tone_match", 1, true)
+            and not cand_type:find("completion", 1, true)
+            and not cand_type:find("emoji", 1, true)
+            and not cand_type:find("symbol", 1, true)
+            and is_han_character(cand_text)
+        then
+            local shape_lookup = env.b_hint_shape_db and env.b_hint_shape_db:lookup(cand_text)
+            local shape_code = shape_code_from_lookup(shape_lookup)
+            if shape_code then
+                local component_lookup = env.b_hint_component_db
+                    and env.b_hint_component_db:lookup(cand_text)
+                local slots = component_slots_from_lookup(component_lookup)
+                cand.comment = append_component_suffix(cand.comment, shape_code, slots)
+            end
+        end
+        if
+            show_component_hints
+            and raw_input:match("^%l%l%l%l$")
+            and utf8.len(cand_text) == 2
+            and not cand_type:find("reverse_lookup", 1, true)
+            and not cand_type:find("tone_match", 1, true)
+            and not cand_type:find("completion", 1, true)
+            and not cand_type:find("emoji", 1, true)
+            and not cand_type:find("symbol", 1, true)
+        then
+            local shape_data = word_shape_data(env, cand_text)
+            if shape_data then
+                local visible_code = shape_data.shape_code:sub(1, 3)
+                local component_text = word_component_text(
+                    shape_data.second_components,
+                    shape_data.first_components,
+                    { 1, 2, 3 }
+                )
+                cand.comment = append_word_hint(cand.comment, visible_code, component_text)
+            end
+        end
+
+        local typed_shape_code = raw_input:match("^%l%l%l%l/(%l?%l?)$")
+        local visible_shape_code = cand.comment and cand.comment:match("^%s*~([a-z]+)")
+        if
+            show_component_hints
+            and typed_shape_code ~= nil
+            and cand_type:match("^pre_select")
+            and visible_shape_code
+        then
+            local shape_data = word_shape_data(env, cand_text)
+            local matched_positions = shape_data
+                and matched_word_shape_positions(shape_data.shape_code, typed_shape_code)
+            local visible_positions = matched_positions
+                and remaining_word_shape_positions(
+                    shape_data.shape_code,
+                    matched_positions,
+                    #visible_shape_code
+                )
+            local component_text = visible_positions
+                and word_component_text(
+                    shape_data.second_components,
+                    shape_data.first_components,
+                    visible_positions
+                )
+            cand.comment = append_components_to_shape_comment(cand.comment, component_text)
+        end
+
         -- 符号自动上屏(;[a-z])
         if raw_input:match("^;%l+$") and not symbol_cands[cand] then
             table.insert(symbol_cands, cand)

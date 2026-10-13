@@ -1,4 +1,2 @@
-local drop_words = {
-	"冰淇林",
-}
+local drop_words = {}
 return drop_words

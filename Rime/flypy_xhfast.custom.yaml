@@ -13,7 +13,7 @@ patch:
     - flypy_radical
     - flyhe_fast
     - flypy_reverse
-  translator/contextual_suggestions: false
+  translator/contextual_suggestions: true
   grammar/language: ""
   # 候选菜单
   menu/+:
@@ -21,16 +21,16 @@ patch:
     candidate_cycle: true
     # alternative_select_keys: 1234567  # 候选键
     # 注释掉下行以恢复常规候选标签序号
-    alternative_select_labels: [①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨, ⓪]
+    # alternative_select_labels: [①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨, ⓪]
 
   # 候选菜单布局样式
   style/+:
-    font_point: 17                    # 候选字大小
+    font_point: 25                    # 候选字大小
     line_spacing: 5                   # 行间距大小
     show_paging: false                # 是否显示分页符号
     inline_preedit: false             # 编码位是否嵌入候选框
-    text_orientation: horizontal      # 候选文字横向(horizontal)/纵向(vertical)
-    candidate_list_layout: linear     # 候选菜单横向(linear)/纵向(stacked)
+    text_orientation: horizontal       # 候选文字横向(horizontal)/纵向(vertical)
+    candidate_list_layout: stacked     # 候选菜单横向(linear)/纵向(stacked)
 
   switches/+:
     - name: emoji
@@ -87,9 +87,9 @@ patch:
     select_last_character: "0"                # `0/equal` 以词定字(尾字)
     bindings/+:
       - {when: has_menu,  accept: ";", send: Control+2}          # 分号; 用于第2候选
-      - {when: has_menu,  accept: ']', send: Page_Down}          # 括号] 下一页
-      - {when: paging,    accept: comma, send: Page_Up}          # 逗号, 返回上一页
-      # - {when: has_menu,  accept: "'", send: Control+3}        # 引号' 用于第3候选
+      - {when: has_menu,  accept: '.', send: Page_Down}          # 括号] 下一页
+      - {when: paging,    accept: ',', send: Page_Up}          # 逗号, 返回上一页
+      - {when: has_menu,  accept: "'", send: Control+3}        # 引号' 用于第3候选
       # - {when: paging,    accept: minus,  send: Page_Up}       # 减号- 返回上一页
       # - {when: paging,    accept: equal,  send: Page_Down}     # 等号= 下一页
       # - {when: has_menu,  accept: period, send: Page_Down}     # 句号. 下一页

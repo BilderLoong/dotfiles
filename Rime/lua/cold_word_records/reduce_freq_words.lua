@@ -1,4 +1,2 @@
-local reduce_freq_words = {
-	["颜射"] = { "yjue" },
-}
+local reduce_freq_words = {}
 return reduce_freq_words
