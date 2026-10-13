@@ -33,7 +33,7 @@ function T.func(input, seg, env)
             { "删用户词", "→ Ctrl+r" },
             { "注解切换", "→ Ctrl+n" },
             { "符号菜单", "→ Ctrl+p" },
-            { "EasyDict", "→ Ctrl+y" },
+            -- { "EasyDict", "→ Ctrl+y" },
             { "切换英打", "→ Ctrl+g" },
             { "简拼展开", "→ Ctrl+q / 8" },
             { "英文方案", "→ Ctrl+Shift+E" },
