@@ -72,7 +72,7 @@ patch:
   key_binder/+:
     import_preset: default                    # 从 default.yaml 继承通用的
     fuzz_algebra_first: "8"                   # 8 简拼优先；3–6 位小写输入时生效
-    char_mode: "Control+s"                    # 单字/词组优先模式切换
+    char_mode: "Control+s"                    # 单字/词组优先切换；菜单内 3–4 位小写输入
     pin_cand: "Control+t"                     # 候选词置顶
     unpin_cand: "Control+t"                   # 候选词取消置顶
     drop_cand: "Control+d"                    # 强制删词, 无视输入的编码
@@ -140,9 +140,9 @@ patch:
   recognizer/+:
     patterns/+:
       LaTeX: "^(/lt|lT)(.*)$"                     # LaTeX
-      history: "^(/hs|hH|uH)$"                    # 上屏历史
+      history: "^(/hs|hH|uH)$"                    # 仅识别；历史处理模块未启用
       flypy_help: "^(/oh|oH)$"                    # 帮助菜单
-      shortcut_cmd: "^/kj[a-z]*$"                 # 快捷指令(执行命令)
+      shortcut_cmd: "^/kj[a-z]*$"                 # 仅识别；shortcut 模块未启用
       shortcut_app: "^/jk[a-z]*$"                 # 快捷指令(启动应用)
       flypy_key_map: "^/ok[a-z]*$"                # 小鹤双拼键位帮助
       flypy_switcher: "^(/so|sO)$"                # 切换方案配置选项
