@@ -139,15 +139,15 @@ patch:
 
   recognizer/+:
     patterns/+:
-      LaTeX: "^(/lt|lT)(.*)$"                     # LaTeX
+      LaTeX: "^(/lt|lT)(.*)$"                     # 使用 lT；/lt 转换会残留前缀
       history: "^(/hs|hH|uH)$"                    # 仅识别；历史处理模块未启用
       flypy_help: "^(/oh|oH)$"                    # 帮助菜单
       shortcut_cmd: "^/kj[a-z]*$"                 # 仅识别；shortcut 模块未启用
-      shortcut_app: "^/jk[a-z]*$"                 # 快捷指令(启动应用)
+      shortcut_app: "^/jk[a-z]*$"                 # 仅识别；shortcut 模块未启用
       flypy_key_map: "^/ok[a-z]*$"                # 小鹤双拼键位帮助
       flypy_switcher: "^(/so|sO)$"                # 切换方案配置选项
       calculator: "^(=|cC)([^,;']*)$"             # 计算器(可查帮助)
-      flypy_radical: "^(`L|rL|oL)[a-z]+$"         # 单字部件组字(查拼音)
+      flypy_radical: "^(`L|rL|oL)[a-z]+$"         # 使用 `L；rL/oL 不匹配表翻译器前缀
       chinese_lunar: "^(/nl|nL|cL)[0-9]*$"        # 中国农历(可反查)
       chinese_number: "^(/nn|nN|oN)[0-9.-]+$"     # 中文大写数字(金额)
       date_time: '^(/wd|date|orq)[-\+][0-9]+$'    # 日期(可查前后指定N日)
