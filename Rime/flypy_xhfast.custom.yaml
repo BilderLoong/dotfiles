@@ -36,7 +36,7 @@ patch:
     - name: emoji
       states: [🈚️, 😄]
       reset: 1
-    - name: prediction  # 仅用于移动端
+    - name: prediction  # 需要 librime-predict；本机桌面引擎可用
       states: [休想, 联想]
     - name: char_mode
       states: [词组优先, 单字优先]
@@ -260,7 +260,7 @@ patch:
   cand_selector:                      # 候选选择器
     word_lookup_limit: 300            # 检索最多迭代数
     auto_select_char: true            # 单字优先时全码唯一则自动顶屏(小鹤音形效果)
-    auto_select_phrase: false         # 词组加间接辅码唯一则自动上屏(默认关闭)
+    auto_select_phrase: false         # 当前选择器未实现词组自动上屏
     if_unmatched_show_mark: "⭕️"      # 当未匹配到候选项时, 首选 yield 一个标记以提示(留空则不显示)
     tone_convert_format:              # 声调过滤(依次对应: 一[轻]二三四声), 修改则不适配同文键盘
       - xlit/IUNM/1234/
