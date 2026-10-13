@@ -71,7 +71,7 @@ local function translate(input, entries, limit)
         expand_word_count = limit or 666,
         mem = memory,
     }
-    easy_en.translator(input, { start = 0, _end = #input }, env)
+    easy_en.translator.func(input, { start = 0, _end = #input }, env)
 
     local words = {}
     for _, candidate in ipairs(results) do
