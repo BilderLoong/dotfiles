@@ -17,7 +17,7 @@ local function same_values(actual, expected, label)
 end
 
 local function translate(input, entries, limit)
-    local memory = { entries = {}, lookup_header = nil, lookup_limit = nil }
+    local memory = { entries = {}, lookup_header = nil, lookup_limit = nil, read_count = 0 }
     function memory:dict_lookup(header, _, lookup_limit)
         self.lookup_header = header
         self.lookup_limit = lookup_limit
