@@ -86,7 +86,6 @@ local entries = {
     { text = "grab", comment = "grab" },
     { text = "grub", comment = "grub" },
     { text = "gxbfooob", comment = "gxbfooob" },
-    { text = "glob", comment = "glob" },
     { text = "globe", comment = "globe" },
     { text = "global", comment = "global" },
 }
