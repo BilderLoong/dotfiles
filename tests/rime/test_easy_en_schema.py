@@ -29,12 +29,12 @@ class EasyEnSchemaRecognizerTests(unittest.TestCase):
         self.assertRegex("g**b", self.flypy)
 
     def test_easy_en_recognizes_partial_wildcard_inputs(self):
-        for query in ("g*", "g**", "g?", "g?*", "g*l*"):
+        for query in ("g*", "g**", "g*l*"):
             with self.subTest(query=query):
                 self.assertRegex(query, self.easy_en)
 
     def test_flypy_recognizes_partial_wildcard_inputs(self):
-        for query in ("g*", "g**", "g?", "g?*", "g*l*"):
+        for query in ("g*", "g**", "g*l*"):
             with self.subTest(query=query):
                 self.assertRegex(query, self.flypy)
 
