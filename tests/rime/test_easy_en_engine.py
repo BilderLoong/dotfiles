@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 console, data_dir = sys.argv[1:3]
-queries = ["g*", "g**", "g?", "g?*", "g*l*", "g*l*b", "g*b", "g**b", "gl*b*", "glo?", "glo??", "g?o*", "glob*"]
+queries = ["g*", "g**", "g?", "g?*", "g*l*", "g*l*b", "g*b", "g**b", "gl*b*", "glo?", "glo??", "g?o*", "glob*", "r*lt"]
 results = []
 for schema in ("easy_en", "flypy_xhfast"):
     run = subprocess.run([console, data_dir, schema, *queries], text=True, capture_output=True, check=True)
