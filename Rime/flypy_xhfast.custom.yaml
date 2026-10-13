@@ -94,7 +94,7 @@ patch:
       # - {when: paging,    accept: equal,  send: Page_Down}     # 等号= 下一页
       # - {when: has_menu,  accept: period, send: Page_Down}     # 句号. 下一页
       - {when: composing, accept: Shift+Tab,    send: Shift+Left}
-      - {when: composing, accept: Control+i,    send: Shift+Left}
+      # - {when: composing, accept: Control+i,    send: Shift+Left}
       - {when: composing, accept: Tab,          send: Shift+Right}
       - {when: composing, accept: Control+o,    send: Shift+Right}
       - {when: always,    accept: Control+Shift+0, select: ".next"}
