@@ -96,7 +96,7 @@ engine:
     - lua_translator@*easy_en*translator              # * 号触发英文模糊匹配
 
     # - lua_translator@*revert_commit_word            # 模拟退格键撤销字符
-    - lua_translator@*flypy_fuzzy*translator          # 8,ctrl-q 简拼优先前排
+    - lua_translator@*flypy_fuzzy*translator          # 简拼优先键由 key_binder/fuzz_algebra_first 设置
     - lua_translator@*cand_selector*translator        # /,; 单字和表情自动上屏
     - lua_translator@*word_autocaps*translator        # A-Z 大写开头触发单词大写
     - lua_translator@*chinese_number*translator       # /nn,nN 触发大写金额数字
