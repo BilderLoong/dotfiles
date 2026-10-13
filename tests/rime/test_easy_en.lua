@@ -110,6 +110,15 @@ local late_result = translate("r*lt", {
 }, 2)
 same_values(late_result, { "result" }, "nonmatching entries must not hide result")
 
+local capped_results, capped_memory = translate("r*lt", {
+    { text = "rabbit", comment = "rabbit" },
+    { text = "random", comment = "random" },
+    { text = "result", comment = "result" },
+    { text = "revolt", comment = "revolt" },
+    { text = "rebuilt", comment = "rebuilt" },
+}, 2)
+same_values(capped_results, { "result", "revolt" }, "limit must count matching candidates only")
+
 local glob_results, glob_memory = translate("g*l*b", entries, 300)
 same_values(glob_results, { "glob", "glooooob" }, "g*l*b full match")
 assert(glob_memory.lookup_header == "g", "g*l*b must look up from its first wildcard prefix")
