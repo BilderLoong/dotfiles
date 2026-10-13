@@ -1,5 +1,12 @@
-(^|/)(README(\..*)?|LICENSE(\..*)?|\.gitignore|\.stow-local-ignore)$
-^/(build|sync)(/|$)
-(^|/)[^/]*\.userdb[^/]*(/|$)
-^/(installation|user)\.yaml$
+(^|/)build(/|$)
+(^|/)sync(/|$)
+.*\.userdb.*
+(^|/)user\.yaml$
+(^|/)installation\.yaml$
+.*\.gram$
+.*\.log$
 (^|/)\.DS_Store$
+(^|/)\.gitignore$
+(^|/)\.stow-local-ignore$
+(^|/)README\.md$
+(^|/)AGENTS\.md$
