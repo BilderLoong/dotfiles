@@ -296,7 +296,7 @@ recognizer:                           # 处理特定规则的输入码
   import_preset: default
   patterns:
     make_sentence: "^`?[a-z]+`[a-z`]*$"                     # `  引导精准造词
-    easy_en: "^[a-zA-Z]+[-_']*[*][a-zA-Z]*$"                # *  进入英文模式
+    easy_en: "^[a-zA-Z]+[-_']*[a-zA-Z]*([*][a-zA-Z]*)+$"                # *  进入英文模式
     free_make_word: '^[a-zA-Z/`]+`=[a-zA-Z/-]*$'            # `= 引导自由造词
     punct: "^(/([0-9]0?|[A-Za-z]+))|(;[A-Za-z]+)$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"
