@@ -1023,3 +1023,475 @@ A row shows the first few configured outputs, not every item in that symbol cate
 Other active filters can change a visible candidate list.
 Utility commands can take priority if they share an input form.
 The source definitions remain in [symbols.custom.yaml](symbols.custom.yaml).
+
+<details>
+<summary>Slash codes (371)</summary>
+
+| Input | First configured outputs |
+|---|---|
+| <code>/0</code> | <code>零</code>, <code>〇</code>, <code>⁰</code>, <code>₀</code> |
+| <code>/1</code> | <code>一</code>, <code>壹</code>, <code>¹</code>, <code>₁</code> |
+| <code>/10</code> | <code>十</code>, <code>拾</code>, <code>¹⁰</code>, <code>₁₀</code> |
+| <code>/2</code> | <code>二</code>, <code>贰</code>, <code>²</code>, <code>₂</code> |
+| <code>/3</code> | <code>三</code>, <code>叁</code>, <code>³</code>, <code>₃</code> |
+| <code>/4</code> | <code>四</code>, <code>肆</code>, <code>⁴</code>, <code>₄</code> |
+| <code>/5</code> | <code>五</code>, <code>伍</code>, <code>⁵</code>, <code>₅</code> |
+| <code>/6</code> | <code>六</code>, <code>陆</code>, <code>⁶</code>, <code>₆</code> |
+| <code>/7</code> | <code>七</code>, <code>柒</code>, <code>⁷</code>, <code>₇</code> |
+| <code>/8</code> | <code>八</code>, <code>捌</code>, <code>⁸</code>, <code>₈</code> |
+| <code>/9</code> | <code>九</code>, <code>玖</code>, <code>⁹</code>, <code>₉</code> |
+| <code>/A</code> | <code>Ā</code>, <code>Á</code>, <code>Ǎ</code>, <code>À</code> |
+| <code>/AA</code> | <code>Ꜳ</code> |
+| <code>/AE</code> | <code>Æ</code>, <code>Ǣ</code>, <code>Ǽ</code>, <code>ᴭ</code> |
+| <code>/AO</code> | <code>Ꜵ</code> |
+| <code>/AU</code> | <code>Ꜷ</code> |
+| <code>/AV</code> | <code>Ꜹ</code>, <code>Ꜻ</code> |
+| <code>/AY</code> | <code>Ꜽ</code> |
+| <code>/B</code> | <code>Ḃ</code>, <code>Ḅ</code>, <code>ʙ</code>, <code>ᴃ</code> |
+| <code>/C</code> | <code>Ç</code>, <code>Ć</code>, <code>Č</code>, <code>Ĉ</code> |
+| <code>/D</code> | <code>Ď</code>, <code>Ḋ</code>, <code>ᴅ</code>, <code>ᴆ</code> |
+| <code>/E</code> | <code>Ē</code>, <code>É</code>, <code>Ě</code>, <code>È</code> |
+| <code>/F</code> | <code>Ḟ</code>, <code>ꜰ</code>, <code>Ƒ</code>, <code>ꟻ</code> |
+| <code>/G</code> | <code>Ḡ</code>, <code>Ǵ</code>, <code>Ǧ</code>, <code>Ĝ</code> |
+| <code>/H</code> | <code>Ĥ</code>, <code>Ȟ</code>, <code>Ḣ</code>, <code>Ḧ</code> |
+| <code>/HV</code> | <code>Ƕ</code> |
+| <code>/I</code> | <code>Ī</code>, <code>Í</code>, <code>Ǐ</code>, <code>Ì</code> |
+| <code>/IJ</code> | <code>Ĳ</code> |
+| <code>/J</code> | <code>Ĵ</code>, <code>ᴊ</code>, <code>ᴶ</code>, <code>Ɉ</code> |
+| <code>/K</code> | <code>Ḱ</code>, <code>Ǩ</code>, <code>ᴋ</code>, <code>ᴷ</code> |
+| <code>/L</code> | <code>Ĺ</code>, <code>ʟ</code>, <code>ᶫ</code>, <code>Ƚ</code> |
+| <code>/LL</code> | <code>Ỻ</code> |
+| <code>/M</code> | <code>Ḿ</code>, <code>Ṁ</code>, <code>ᴍ</code>, <code>ᴹ</code> |
+| <code>/N</code> | <code>Ń</code>, <code>Ň</code>, <code>Ǹ</code>, <code>Ṅ</code> |
+| <code>/NJ</code> | <code>Ǌ</code> |
+| <code>/Nj</code> | <code>ǋ</code> |
+| <code>/O</code> | <code>Ō</code>, <code>Ó</code>, <code>Ő</code>, <code>Ǒ</code> |
+| <code>/OE</code> | <code>Œ</code>, <code>ɶ</code> |
+| <code>/OI</code> | <code>Ƣ</code> |
+| <code>/OO</code> | <code>Ꝏ</code> |
+| <code>/OU</code> | <code>Ȣ</code>, <code>ᴽ</code> |
+| <code>/P</code> | <code>Ṕ</code>, <code>Ṗ</code>, <code>ᴘ</code>, <code>ᴾ</code> |
+| <code>/Q</code> | <code>Ɋ</code>, <code>Ꝗ</code>, <code>Ꝙ</code> |
+| <code>/R</code> | <code>Ŕ</code>, <code>Ř</code>, <code>Ȑ</code>, <code>Ȓ</code> |
+| <code>/Rx</code> | <code>℞</code> |
+| <code>/S</code> | <code>Ś</code>, <code>Ŝ</code>, <code>Š</code>, <code>Ṡ</code> |
+| <code>/T</code> | <code>Ť</code>, <code>Ṫ</code>, <code>ᴛ</code>, <code>ᵀ</code> |
+| <code>/TZ</code> | <code>Ꜩ</code> |
+| <code>/U</code> | <code>Ū</code>, <code>Ú</code>, <code>Ű</code>, <code>Ǔ</code> |
+| <code>/V</code> | <code>Ü</code>, <code>Ǖ</code>, <code>Ǘ</code>, <code>Ǚ</code> |
+| <code>/VY</code> | <code>Ꝡ</code> |
+| <code>/W</code> | <code>Ẃ</code>, <code>Ẁ</code>, <code>Ŵ</code>, <code>Ẇ</code> |
+| <code>/X</code> | <code>Ẋ</code>, <code>Ẍ</code> |
+| <code>/Y</code> | <code>Ȳ</code>, <code>Ý</code>, <code>Ỳ</code>, <code>Ŷ</code> |
+| <code>/Z</code> | <code>Ź</code>, <code>Ž</code>, <code>Ẑ</code>, <code>Ż</code> |
+| <code>/a</code> | <code>ā</code>, <code>á</code>, <code>ǎ</code>, <code>à</code> |
+| <code>/aa</code> | <code>ꜳ</code> |
+| <code>/ae</code> | <code>æ</code>, <code>ǣ</code>, <code>ǽ</code>, <code>ᵆ</code> |
+| <code>/an</code> | <code>🅰️</code>, <code>🅱️</code>, <code>🆎</code>, <code>🆑</code> |
+| <code>/ao</code> | <code>ꜵ</code> |
+| <code>/au</code> | <code>ꜷ</code> |
+| <code>/av</code> | <code>ꜹ</code>, <code>ꜻ</code> |
+| <code>/ax</code> | <code>❤️</code>, <code>🧡</code>, <code>💛</code>, <code>💚</code> |
+| <code>/ay</code> | <code>ꜽ</code> |
+| <code>/b</code> | <code>ḃ</code>, <code>ḅ</code>, <code>ᵇ</code>, <code>ƀ</code> |
+| <code>/ba</code> | <code>八</code>, <code>捌</code>, <code>⁸</code>, <code>₈</code> |
+| <code>/backspace</code> | <code>⌫</code> |
+| <code>/bc</code> | <code>👝</code>, <code>👛</code>, <code>👜</code>, <code>💼</code> |
+| <code>/bd</code> | <code>、</code>, <code>。</code>, <code>「</code>, <code>」</code> |
+| <code>/bdf</code> | <code>佰</code> |
+| <code>/bdy</code> | <code>≠</code> |
+| <code>/bdz</code> | <code>﹅</code>, <code>﹆</code>, <code>﹁</code>, <code>﹂</code> |
+| <code>/bg</code> | <code>☰</code>, <code>☱</code>, <code>☲</code>, <code>☳</code> |
+| <code>/bgm</code> | <code>乾</code>, <code>兑</code>, <code>离</code>, <code>震</code> |
+| <code>/bh</code> | <code>㇀</code>, <code>㇁</code>, <code>㇂</code>, <code>㇃</code> |
+| <code>/bq</code> | <code>☻</code>, <code>☺</code>, <code>☹</code> |
+| <code>/br</code> | <code>🧓🏼</code>, <code>🧑🏼</code>, <code>👱🏼</code>, <code>🧒🏼</code> |
+| <code>/bs</code> | <code>丨</code>, <code>亅</code>, <code>丿</code>, <code>乛</code> |
+| <code>/bzr</code> | <code>🧓🏼</code>, <code>🧑🏼</code>, <code>👱🏼</code>, <code>🧒🏼</code> |
+| <code>/c</code> | <code>ç</code>, <code>ć</code>, <code>č</code>, <code>ĉ</code> |
+| <code>/cap</code> | <code>⇪</code> |
+| <code>/caps</code> | <code>⇪</code> |
+| <code>/cc</code> | <code>©</code>, <code>®</code>, <code>℗</code>, <code>ⓘ</code> |
+| <code>/cd</code> | <code>🍅</code>, <code>🍆</code>, <code>🥒</code>, <code>🥕</code> |
+| <code>/ch</code> | <code>×</code> |
+| <code>/chu</code> | <code>÷</code> |
+| <code>/cj</code> | <code>🥄</code>, <code>🍴</code>, <code>🍽️</code>, <code>🥣</code> |
+| <code>/cje</code> | <code>🧧</code>, <code>🧨</code>, <code>🧮</code> |
+| <code>/cjr</code> | <code>🥙</code>, <code>🌮</code>, <code>🌯</code>, <code>🫔</code> |
+| <code>/cl</code> | <code>🌽</code>, <code>🥔</code>, <code>🍠</code>, <code>🥜</code> |
+| <code>/cmd</code> | <code>⌘</code> |
+| <code>/co</code> | <code>✗</code>, <code>✘</code>, <code>❎</code>, <code>❌</code> |
+| <code>/cs</code> | <code>🐛</code>, <code>🪱</code>, <code>🐞</code>, <code>🪲</code> |
+| <code>/ctrl</code> | <code>⌃</code> |
+| <code>/d</code> | <code>ď</code>, <code>ḋ</code>, <code>ᵈ</code>, <code>đ</code> |
+| <code>/db</code> | <code>ȸ</code> |
+| <code>/dd</code> | <code>🐶</code>, <code>🐮</code>, <code>🐵</code>, <code>🙈</code> |
+| <code>/del</code> | <code>⌦</code> |
+| <code>/dm</code> | <code>·</code> |
+| <code>/dn</code> | <code>❖</code>, <code>⌘</code>, <code>⌃</code>, <code>⌥</code> |
+| <code>/down</code> | <code>↓</code>, <code>⬇️</code> |
+| <code>/dq</code> | <code>💡</code>, <code>📺</code>, <code>☎️</code>, <code>📟</code> |
+| <code>/dt</code> | <code>🚈</code>, <code>🚇</code>, <code>🚊</code>, <code>🚞</code> |
+| <code>/du</code> | <code>°</code>, <code>℃</code>, <code>℉</code> |
+| <code>/dv</code> | <code>✓</code>, <code>✔</code>, <code>✅</code> |
+| <code>/dw</code> | <code>Å</code>, <code>℃</code>, <code>％</code>, <code>‰</code> |
+| <code>/dwl</code> | <code>🐶</code>, <code>🐱</code>, <code>🐭</code>, <code>🐹</code> |
+| <code>/dwu</code> | <code>🦆</code>, <code>🦅</code>, <code>🦉</code>, <code>🦇</code> |
+| <code>/dx</code> | <code>🍮</code>, <code>🍩</code>, <code>🍪</code>, <code>🍧</code> |
+| <code>/dy</code> | <code>&gt;</code>, <code>≥</code> |
+| <code>/dz</code> | <code>子</code>, <code>丑</code>, <code>寅</code>, <code>卯</code> |
+| <code>/dzi</code> | <code>⌚️</code>, <code>📱</code>, <code>💻</code>, <code>⌨️</code> |
+| <code>/dzr</code> | <code>🔥</code>, <code>💧</code>, <code>🌬️</code>, <code>☀️</code> |
+| <code>/e</code> | <code>ē</code>, <code>é</code>, <code>ě</code>, <code>è</code> |
+| <code>/eject</code> | <code>⏏</code> |
+| <code>/enter</code> | <code>⏎</code> |
+| <code>/er</code> | <code>二</code>, <code>貳</code>, <code>₂</code>, <code>²</code> |
+| <code>/escape</code> | <code>⎋</code> |
+| <code>/ey</code> | <code>а</code>, <code>б</code>, <code>в</code>, <code>г</code> |
+| <code>/eyd</code> | <code>А</code>, <code>Б</code>, <code>В</code>, <code>Г</code> |
+| <code>/f</code> | <code>ḟ</code>, <code>ᶠ</code>, <code>ƒ</code>, <code>ᵮ</code> |
+| <code>/fase</code> | <code>🦲</code>, <code>🦰</code>, <code>🦱</code>, <code>🦳</code> |
+| <code>/fe</code> | <code>.txt</code>, <code>.md</code>, <code>.yaml</code>, <code>.toml</code> |
+| <code>/ff</code> | <code>😂</code>, <code>☺️</code>, <code>😏</code>, <code>😒</code> |
+| <code>/ffi</code> | <code>ﬃ</code> |
+| <code>/ffl</code> | <code>ﬄ</code> |
+| <code>/fh</code> | <code>©</code>, <code>®</code>, <code>℗</code>, <code>℠</code> |
+| <code>/fi</code> | <code>ﬁ</code> |
+| <code>/fk</code> | <code>▀</code>, <code>▁</code>, <code>▂</code>, <code>▃</code> |
+| <code>/fl</code> | <code>ﬂ</code> |
+| <code>/fn</code> | <code>ʩ</code> |
+| <code>/fs</code> | <code>½</code>, <code>⅓</code>, <code>⅔</code>, <code>¼</code> |
+| <code>/fse</code> | <code>🏻</code>, <code>🏼</code>, <code>🏽</code>, <code>🏾</code> |
+| <code>/fx</code> | <code>🟥</code>, <code>🟧</code>, <code>🟨</code>, <code>🟩</code> |
+| <code>/fxq</code> | <code>🛩️</code>, <code>✈️</code>, <code>🚁</code>, <code>🚀</code> |
+| <code>/fz</code> | <code>🧥</code>, <code>👚</code>, <code>👕</code>, <code>👖</code> |
+| <code>/g</code> | <code>ḡ</code>, <code>ǵ</code>, <code>ǧ</code>, <code>ĝ</code> |
+| <code>/gh</code> | <code>√</code> |
+| <code>/gj</code> | <code>⚙️</code>, <code>🔩</code>, <code>⛏️</code>, <code>🛠️</code> |
+| <code>/gjc</code> | <code>🚌</code>, <code>🚎</code>, <code>🚍</code>, <code>🚈</code> |
+| <code>/go</code> | <code>🍏</code>, <code>🍎</code>, <code>🍐</code>, <code>🍊</code> |
+| <code>/gw</code> | <code>🦄</code>, <code>🤖</code>, <code>👾</code>, <code>👹</code> |
+| <code>/gz</code> | <code>甲子</code>, <code>乙丑</code>, <code>丙寅</code>, <code>丁卯</code> |
+| <code>/h</code> | <code>ĥ</code>, <code>ȟ</code>, <code>ḣ</code>, <code>ḧ</code> |
+| <code>/hb</code> | <code>￥</code>, <code>¥</code>, <code>¤</code>, <code>￠</code> |
+| <code>/hc</code> | <code>🚄</code>, <code>🚅</code>, <code>🚝</code>, <code>🚆</code> |
+| <code>/hd</code> | <code>🌸</code>, <code>🌺</code>, <code>🌼</code>, <code>🌻</code> |
+| <code>/hr</code> | <code>🧓🏿</code>, <code>🧑🏿</code>, <code>🧒🏿</code>, <code>👶🏿</code> |
+| <code>/hsd</code> | <code>℉</code>, <code>°F</code> |
+| <code>/hv</code> | <code>ƕ</code> |
+| <code>/hw</code> | <code>ㄱ</code>, <code>ㄴ</code>, <code>ㄷ</code>, <code>ㄹ</code> |
+| <code>/hwh</code> | <code>㈀</code>, <code>㈁</code>, <code>㈂</code>, <code>㈃</code> |
+| <code>/hwq</code> | <code>㉠</code>, <code>㉡</code>, <code>㉢</code>, <code>㉣</code> |
+| <code>/hx</code> | <code>🌸</code>, <code>🌺</code>, <code>🌼</code>, <code>🌻</code> |
+| <code>/hzh</code> | <code>㈠</code>, <code>㈡</code>, <code>㈢</code>, <code>㈣</code> |
+| <code>/hzq</code> | <code>㊀</code>, <code>㊁</code>, <code>㊂</code>, <code>㊃</code> |
+| <code>/hzr</code> | <code>🧓🏻</code>, <code>🧑🏻</code>, <code>🧒🏻</code>, <code>👶🏻</code> |
+| <code>/i</code> | <code>ī</code>, <code>í</code>, <code>ǐ</code>, <code>ì</code> |
+| <code>/ie</code> | <code>🚗</code>, <code>🚕</code>, <code>🚙</code>, <code>🚌</code> |
+| <code>/ij</code> | <code>ĳ</code> |
+| <code>/ir</code> | <code>🚢</code>, <code>⛴️</code>, <code>🛳️</code>, <code>🛥️</code> |
+| <code>/iro</code> | <code>い</code>, <code>ろ</code>, <code>は</code>, <code>に</code> |
+| <code>/j</code> | <code>ĵ</code>, <code>ǰ</code>, <code>ⱼ</code>, <code>ʲ</code> |
+| <code>/jc</code> | <code>🐄</code>, <code>🐃</code>, <code>🐂</code>, <code>🦬</code> |
+| <code>/jd</code> | <code>▉▁▁▁▁</code>, <code>▉▉▁▁▁</code>, <code>▉▉▉▁▁</code>, <code>▉▉▉▉▁</code> |
+| <code>/jg</code> | <code>⿰</code>, <code>⿱</code>, <code>⿲</code>, <code>⿳</code> |
+| <code>/jgh</code> | <code>·</code> |
+| <code>/jgo</code> | <code>🥜</code>, <code>🌰️</code> |
+| <code>/jh</code> | <code>■</code>, <code>□</code>, <code>▢</code>, <code>▣</code> |
+| <code>/jiu</code> | <code>🍷</code>, <code>🥃</code>, <code>🍺</code>, <code>🍶</code> |
+| <code>/jl</code> | <code>立春</code>, <code>雨水</code>, <code>惊蛰</code>, <code>春分</code> |
+| <code>/jlk</code> | <code>🧙🏻</code>, <code>🧝🏻</code>, <code>🧛🏻</code>, <code>🧟</code> |
+| <code>/jm</code> | <code>あ</code>, <code>ぁ</code>, <code>い</code>, <code>ぃ</code> |
+| <code>/jma</code> | <code>あ</code>, <code>か</code>, <code>が</code>, <code>さ</code> |
+| <code>/jmb</code> | <code>ば</code>, <code>び</code>, <code>ぶ</code>, <code>べ</code> |
+| <code>/jmbj</code> | <code>ｱ</code>, <code>ｧ</code>, <code>ｲ</code>, <code>ｨ</code> |
+| <code>/jmd</code> | <code>だ</code>, <code>ぢ</code>, <code>づ</code>, <code>で</code> |
+| <code>/jme</code> | <code>え</code>, <code>け</code>, <code>げ</code>, <code>せ</code> |
+| <code>/jmg</code> | <code>が</code>, <code>ぎ</code>, <code>ぐ</code>, <code>げ</code> |
+| <code>/jmh</code> | <code>は</code>, <code>ひ</code>, <code>ふ</code>, <code>へ</code> |
+| <code>/jmi</code> | <code>い</code>, <code>き</code>, <code>ぎ</code>, <code>し</code> |
+| <code>/jmk</code> | <code>か</code>, <code>ゕ</code>, <code>き</code>, <code>く</code> |
+| <code>/jmm</code> | <code>ま</code>, <code>み</code>, <code>む</code>, <code>め</code> |
+| <code>/jmn</code> | <code>な</code>, <code>に</code>, <code>ぬ</code>, <code>ね</code> |
+| <code>/jmo</code> | <code>お</code>, <code>こ</code>, <code>ご</code>, <code>そ</code> |
+| <code>/jmp</code> | <code>ぱ</code>, <code>ぴ</code>, <code>ぷ</code>, <code>ぺ</code> |
+| <code>/jmq</code> | <code>㋐</code>, <code>㋑</code>, <code>㋒</code>, <code>㋓</code> |
+| <code>/jmr</code> | <code>ら</code>, <code>り</code>, <code>る</code>, <code>れ</code> |
+| <code>/jms</code> | <code>さ</code>, <code>し</code>, <code>す</code>, <code>せ</code> |
+| <code>/jmt</code> | <code>た</code>, <code>ち</code>, <code>つ</code>, <code>っ</code> |
+| <code>/jmu</code> | <code>う</code>, <code>く</code>, <code>ぐ</code>, <code>す</code> |
+| <code>/jmw</code> | <code>わ</code>, <code>ゐ</code>, <code>ゑ</code>, <code>を</code> |
+| <code>/jmy</code> | <code>や</code>, <code>ゃ</code>, <code>ゆ</code>, <code>ゅ</code> |
+| <code>/jmz</code> | <code>ざ</code>, <code>じ</code>, <code>ず</code>, <code>ぜ</code> |
+| <code>/jp</code> | <code>🏅</code>, <code>🎖️</code>, <code>🥇</code>, <code>🥈</code> |
+| <code>/jq</code> | <code>九</code>, <code>玖</code>, <code>⁹</code>, <code>₉</code> |
+| <code>/jqb</code> | <code>🦆</code>, <code>🐓</code>, <code>🦃</code>, <code>🐔</code> |
+| <code>/jr</code> | <code>🎊</code>, <code>🎉</code>, <code>🪅</code>, <code>🎏</code> |
+| <code>/jt</code> | <code>↑</code>, <code>↓</code>, <code>←</code>, <code>→</code> |
+| <code>/jx</code> | <code>⚙️</code>, <code>🔩</code>, <code>⛏️</code>, <code>🛠️</code> |
+| <code>/k</code> | <code>ḱ</code>, <code>ǩ</code>, <code>ₖ</code>, <code>ᵏ</code> |
+| <code>/kc</code> | <code>🍔</code>, <code>🌭</code>, <code>🍟</code>, <code>🥞</code> |
+| <code>/ks</code> | <code>⌘</code>, <code>⌥</code>, <code>⇧</code>, <code>⌃</code> |
+| <code>/kx</code> | <code>🔬</code>, <code>🔭</code>, <code>⚗️</code>, <code>⚛️</code> |
+| <code>/l</code> | <code>ĺ</code>, <code>ˡ</code>, <code>ł</code>, <code>ꝉ</code> |
+| <code>/lc</code> | <code>🍢</code>, <code>🍡</code> |
+| <code>/left</code> | <code>←</code>, <code>⬅️</code> |
+| <code>/lg</code> | <code>❄️</code>, <code>🌨️</code>, <code>☃️</code>, <code>⛄️</code> |
+| <code>/lj</code> | <code>ǉ</code> |
+| <code>/lk</code> | <code>零</code>, <code>〇</code>, <code>⁰</code>, <code>₀</code> |
+| <code>/ll</code> | <code>ỻ</code> |
+| <code>/lm</code> | <code>ⅰ</code>, <code>ⅱ</code>, <code>ⅲ</code>, <code>ⅳ</code> |
+| <code>/lmd</code> | <code>Ⅰ</code>, <code>Ⅱ</code>, <code>Ⅲ</code>, <code>Ⅳ</code> |
+| <code>/lq</code> | <code>六</code>, <code>陆</code>, <code>⁶</code>, <code>₆</code> |
+| <code>/ls</code> | <code>ʪ</code> |
+| <code>/lsi</code> | <code>🍭</code>, <code>🍬</code>, <code>🍫</code>, <code>🍿</code> |
+| <code>/lssg</code> | <code>䷀</code>, <code>䷁</code>, <code>䷂</code>, <code>䷃</code> |
+| <code>/lssgm</code> | <code>乾</code>, <code>坤</code>, <code>屯</code>, <code>蒙</code> |
+| <code>/lx</code> | <code>♂</code>, <code>♀</code>, <code>⚢</code>, <code>⚣</code> |
+| <code>/lz</code> | <code>ʫ</code>, <code>ɮ</code> |
+| <code>/m</code> | <code>ḿ</code>, <code>ṁ</code>, <code>ᵐ</code>, <code>ₘ</code> |
+| <code>/mb</code> | <code>🍞</code>, <code>🥐</code>, <code>🥖</code>, <code>🥨</code> |
+| <code>/mba</code> | <code>```go</code>, <code>```java</code>, <code>```kotlin</code>, <code>```rust</code> |
+| <code>/mbc</code> | <code>```yaml</code>, <code>```toml</code>, <code>```json</code>, <code>```dockerfile</code> |
+| <code>/mbs</code> | <code>```python</code>, <code>```javascript</code>, <code>```typescript</code>, <code>```bash</code> |
+| <code>/mj</code> | <code>🀀</code>, <code>🀁</code>, <code>🀂</code>, <code>🀃</code> |
+| <code>/msl</code> | <code>👳🏽</code> |
+| <code>/mz</code> | <code>👒</code>, <code>🧢</code>, <code>🎩</code>, <code>🎓</code> |
+| <code>/n</code> | <code>ń</code>, <code>ň</code>, <code>ǹ</code>, <code>ṅ</code> |
+| <code>/nc</code> | <code>卐</code> |
+| <code>/nj</code> | <code>ǌ</code> |
+| <code>/nm</code> | <code>廿</code> |
+| <code>/nr</code> | <code>🦆</code>, <code>🦅</code>, <code>🦉</code>, <code>🦇</code> |
+| <code>/o</code> | <code>ō</code>, <code>ó</code>, <code>ő</code>, <code>ǒ</code> |
+| <code>/oe</code> | <code>œ</code>, <code>ᴔ</code> |
+| <code>/oi</code> | <code>ƣ</code> |
+| <code>/oo</code> | <code>ꝏ</code> |
+| <code>/opt</code> | <code>⌥</code> |
+| <code>/ou</code> | <code>ȣ</code> |
+| <code>/p</code> | <code>ṕ</code>, <code>ṗ</code>, <code>ᵖ</code>, <code>ᵽ</code> |
+| <code>/pd</code> | <code>π</code> |
+| <code>/pi</code> | <code>π</code> |
+| <code>/pjm</code> | <code>ア</code>, <code>ァ</code>, <code>イ</code>, <code>ィ</code> |
+| <code>/pk</code> | <code>♠</code>, <code>♥</code>, <code>♣</code>, <code>♦</code> |
+| <code>/pp</code> | <code>乛</code>, <code>冫</code>, <code>丷</code>, <code>龹</code> |
+| <code>/py</code> | <code>ā</code>, <code>á</code>, <code>ǎ</code>, <code>à</code> |
+| <code>/pyd</code> | <code>Ā</code>, <code>Á</code>, <code>Ǎ</code>, <code>À</code> |
+| <code>/q</code> | <code>ɋ</code>, <code>ꝗ</code>, <code>ꝙ</code>, <code>ʠ</code> |
+| <code>/qc</code> | <code>🚗</code>, <code>🚕</code>, <code>🚙</code>, <code>🚌</code> |
+| <code>/qg</code> | <code>👁️</code>, <code>👂🏻</code>, <code>👃🏻</code>, <code>👄</code> |
+| <code>/qi</code> | <code>七</code>, <code>柒</code>, <code>⁷</code>, <code>₇</code> |
+| <code>/qm</code> | <code>仟</code> |
+| <code>/qp</code> | <code>ȹ</code> |
+| <code>/qq</code> | <code>⚽️</code>, <code>🏀</code>, <code>🏈</code>, <code>🏐</code> |
+| <code>/r</code> | <code>ŕ</code>, <code>ř</code>, <code>ȑ</code>, <code>ȓ</code> |
+| <code>/return</code> | <code>⏎</code> |
+| <code>/right</code> | <code>→</code>, <code>➡️</code> |
+| <code>/rl</code> | <code>🍥</code>, <code>🍣</code>, <code>🍱</code>, <code>🍙</code> |
+| <code>/rq</code> | <code>㏠</code>, <code>㏡</code>, <code>㏢</code>, <code>㏣</code> |
+| <code>/ry</code> | <code>🧴</code>, <code>🧼</code>, <code>🧻</code>, <code>🧽</code> |
+| <code>/rz</code> | <code>🥩</code>, <code>🥓</code>, <code>🍗</code>, <code>🍖</code> |
+| <code>/s</code> | <code>ś</code>, <code>ŝ</code>, <code>š</code>, <code>ṡ</code> |
+| <code>/sa</code> | <code>卅</code> |
+| <code>/sb</code> | <code>⁰</code>, <code>¹</code>, <code>²</code>, <code>³</code> |
+| <code>/sc</code> | <code>🍅</code>, <code>🍆</code>, <code>🥒</code>, <code>🥕</code> |
+| <code>/sd</code> | <code>ˉ</code>, <code>ˊ</code>, <code>ˇ</code>, <code>ˋ</code> |
+| <code>/seg</code> | <code>白羊宮</code>, <code>金牛宮</code>, <code>雙子宮</code>, <code>巨蟹宮</code> |
+| <code>/sg</code> | <code>🍏</code>, <code>🍎</code>, <code>🍐</code>, <code>🍊</code> |
+| <code>/shift</code> | <code>⇧</code> |
+| <code>/si</code> | <code>四</code>, <code>肆</code>, <code>₄</code>, <code>⁴</code> |
+| <code>/sj</code> | <code>三</code>, <code>叄</code>, <code>₃</code>, <code>³</code> |
+| <code>/sk</code> | <code>㍘</code>, <code>㍙</code>, <code>㍚</code>, <code>㍛</code> |
+| <code>/sm</code> | <code>⌚️</code>, <code>📱</code>, <code>💻</code>, <code>⌨️</code> |
+| <code>/space</code> | <code>␣</code> |
+| <code>/ss</code> | <code>👌</code>, <code>👍</code>, <code>👎</code>, <code>👊</code> |
+| <code>/ssd</code> | <code>℃</code>, <code>°C</code> |
+| <code>/sv</code> | <code>🕛</code>, <code>🕧</code>, <code>🕐</code>, <code>🕜</code> |
+| <code>/sx</code> | <code>±</code>, <code>÷</code>, <code>×</code>, <code>∈</code> |
+| <code>/sxn</code> | <code>🐁</code>, <code>🐀</code>, <code>🐂</code>, <code>🐃</code> |
+| <code>/sy</code> | <code>∴</code> |
+| <code>/sz</code> | <code>⚀</code>, <code>⚁</code>, <code>⚂</code>, <code>⚃</code> |
+| <code>/szd</code> | <code>⒈</code>, <code>⒉</code>, <code>⒊</code>, <code>⒋</code> |
+| <code>/szh</code> | <code>⑴</code>, <code>⑵</code>, <code>⑶</code>, <code>⑷</code> |
+| <code>/szm</code> | <code>〡</code>, <code>〢</code>, <code>〣</code>, <code>〤</code> |
+| <code>/szq</code> | <code>⓪</code>, <code>①</code>, <code>②</code>, <code>③</code> |
+| <code>/t</code> | <code>ť</code>, <code>ṫ</code>, <code>ẗ</code>, <code>ᵗ</code> |
+| <code>/tc</code> | <code>ʨ</code> |
+| <code>/td</code> | <code>🍮</code>, <code>🍩</code>, <code>🍪</code>, <code>🍧</code> |
+| <code>/tg</code> | <code>甲</code>, <code>乙</code>, <code>丙</code>, <code>丁</code> |
+| <code>/th</code> | <code>ᵺ</code> |
+| <code>/tj</code> | <code>★☆☆☆☆</code>, <code>★★☆☆☆</code>, <code>★★★☆☆</code>, <code>★★★★☆</code> |
+| <code>/tl</code> | <code>🧄</code>, <code>🧅</code>, <code>🧂</code>, <code>🧀</code> |
+| <code>/tq</code> | <code>☀️</code>, <code>🌤️</code>, <code>⛅️</code>, <code>🌦️</code> |
+| <code>/ts</code> | <code>ʦ</code>, <code>ʧ</code> |
+| <code>/tt</code> | <code>☄</code>, <code>☼</code>, <code>☽</code>, <code>☾</code> |
+| <code>/tu</code> | <code>🍯</code>, <code>🍰</code>, <code>🍮</code>, <code>🎂</code> |
+| <code>/txj</code> | <code>⚊</code>, <code>⚋</code>, <code>⚌</code>, <code>⚍</code> |
+| <code>/tz</code> | <code>ꜩ</code> |
+| <code>/u</code> | <code>ū</code>, <code>ú</code>, <code>ű</code>, <code>ǔ</code> |
+| <code>/ue</code> | <code>ᵫ</code> |
+| <code>/ui</code> | <code>十</code>, <code>拾</code>, <code>¹⁰</code>, <code>₁₀</code> |
+| <code>/up</code> | <code>↑</code>, <code>⬆️</code> |
+| <code>/v</code> | <code>ü</code>, <code>ǖ</code>, <code>ǘ</code>, <code>ǚ</code> |
+| <code>/vs</code> | <code>标点:bd ➤</code>, <code>符号:fh ➤</code>, <code>电脑:dn ➤</code>, <code>推荐:tj ➤</code> |
+| <code>/vv</code> | <code>👌</code>, <code>👍</code>, <code>😂</code>, <code>😅</code> |
+| <code>/vy</code> | <code>ꝡ</code> |
+| <code>/w</code> | <code>ẃ</code>, <code>ẁ</code>, <code>ŵ</code>, <code>ẇ</code> |
+| <code>/wc</code> | <code>🍛</code>, <code>🍲</code>, <code>🍝</code>, <code>🍜</code> |
+| <code>/wf</code> | <code>[微笑]</code>, <code>[撇嘴]</code>, <code>[发呆]</code>, <code>[得意]</code> |
+| <code>/wq</code> | <code>🔫</code>, <code>🗡️</code>, <code>⚔️</code>, <code>🔪</code> |
+| <code>/wu</code> | <code>五</code>, <code>伍</code>, <code>⁵</code>, <code>₅</code> |
+| <code>/ww</code> | <code>ʬ</code> |
+| <code>/wz</code> | <code>卍</code> |
+| <code>/x</code> | <code>ẋ</code>, <code>ẍ</code>, <code>ᶍ</code>, <code>ˣ</code> |
+| <code>/xb</code> | <code>₀</code>, <code>₁</code>, <code>₂</code>, <code>₃</code> |
+| <code>/xc</code> | <code>🍕</code>, <code>🥓</code>, <code>🧀</code>, <code>🥖</code> |
+| <code>/xh</code> | <code>★</code>, <code>☆</code>, <code>⛤</code>, <code>⛥</code> |
+| <code>/xi</code> | <code>卌</code> |
+| <code>/xie</code> | <code>👡</code>, <code>👢</code>, <code>👞</code>, <code>👟</code> |
+| <code>/xl</code> | <code>α</code>, <code>β</code>, <code>γ</code>, <code>δ</code> |
+| <code>/xld</code> | <code>Α</code>, <code>Β</code>, <code>Γ</code>, <code>Δ</code> |
+| <code>/xq</code> | <code>♔</code>, <code>♕</code>, <code>♖</code>, <code>♗</code> |
+| <code>/xue</code> | <code>❄️</code>, <code>🌨️</code>, <code>☃️</code>, <code>⛄️</code> |
+| <code>/xx</code> | <code>＊</code>, <code>×</code>, <code>✱</code>, <code>★</code> |
+| <code>/xxk</code> | <code>🅰️</code>, <code>🅱️</code>, <code>🅾️</code>, <code>🆎️</code> |
+| <code>/xy</code> | <code>&lt;</code>, <code>≤</code> |
+| <code>/xz</code> | <code>♈</code>, <code>♉</code>, <code>♊</code>, <code>♋</code> |
+| <code>/xzg</code> | <code>白羊宫</code>, <code>金牛宫</code>, <code>双子宫</code>, <code>巨蟹宫</code> |
+| <code>/xzi</code> | <code>👡</code>, <code>👢</code>, <code>👞</code>, <code>👟</code> |
+| <code>/xzm</code> | <code>白羊座</code>, <code>金牛座</code>, <code>双子座</code>, <code>巨蟹座</code> |
+| <code>/y</code> | <code>ȳ</code>, <code>ý</code>, <code>ỳ</code>, <code>ŷ</code> |
+| <code>/yd</code> | <code>🏒</code>, <code>🏸</code>, <code>🏓</code>, <code>🏑</code> |
+| <code>/ydy</code> | <code>⛷️</code>, <code>🏂🏻</code>, <code>🏋🏻</code>, <code>🤺</code> |
+| <code>/yez</code> | <code>🍃</code>, <code>🍂</code>, <code>🍁</code>, <code>🌱</code> |
+| <code>/yf</code> | <code>㋀</code>, <code>㋁</code>, <code>㋂</code>, <code>㋃</code> |
+| <code>/yfu</code> | <code>🧥</code>, <code>👚</code>, <code>👕</code>, <code>👖</code> |
+| <code>/yh</code> | <code>☢️</code>, <code>☣️</code>, <code>🦠</code> |
+| <code>/yi</code> | <code>一</code>, <code>壹</code>, <code>¹</code>, <code>₁</code> |
+| <code>/yj</code> | <code>👓</code>, <code>🕶️</code>, <code>🥽</code> |
+| <code>/yl</code> | <code>🧋</code>, <code>🍹</code>, <code>🧃</code>, <code>🍸</code> |
+| <code>/yle</code> | <code>🎮</code>, <code>🎰</code>, <code>🎲</code>, <code>🎯</code> |
+| <code>/yly</code> | <code>🏟️</code>, <code>🎡</code>, <code>🎢</code>, <code>🎠</code> |
+| <code>/yq</code> | <code>🎻</code>, <code>🎸</code>, <code>🎹</code>, <code>🎷</code> |
+| <code>/yr</code> | <code>🔴</code>, <code>🟠</code>, <code>🟡</code>, <code>🟢</code> |
+| <code>/ys</code> | <code>🟥</code>, <code>🟧</code>, <code>🟨</code>, <code>🟩</code> |
+| <code>/ysdw</code> | <code>🦉</code>, <code>🦇</code>, <code>🐍</code>, <code>🐢</code> |
+| <code>/ysj</code> | <code>↗</code> |
+| <code>/ysu</code> | <code>💧</code>, <code>🔥</code>, <code>🌪️</code>, <code>🪨</code> |
+| <code>/yu</code> | <code>🐠</code>, <code>🐟</code>, <code>🐡</code>, <code>🪼</code> |
+| <code>/yw</code> | <code>∵</code> |
+| <code>/yx</code> | <code>🌕</code>, <code>🌖</code>, <code>🌗</code>, <code>🌘</code> |
+| <code>/yxj</code> | <code>↘</code> |
+| <code>/yy</code> | <code>𝄞</code>, <code>♩</code>, <code>♪</code>, <code>♫</code> |
+| <code>/yya</code> | <code>🌙</code>, <code>💫</code>, <code>⭐️</code>, <code>🌟</code> |
+| <code>/yz</code> | <code>圆</code> |
+| <code>/z</code> | <code>ź</code>, <code>ž</code>, <code>ẑ</code>, <code>ż</code> |
+| <code>/zb</code> | <code>┌</code>, <code>└</code>, <code>┐</code>, <code>┘</code> |
+| <code>/zc</code> | <code>🍜</code>, <code>🍚</code>, <code>🍲</code>, <code>🥘</code> |
+| <code>/zd</code> | <code>🍳</code>, <code>🥚</code>, <code>🧀</code>, <code>🥖</code> |
+| <code>/zf</code> | <code>±</code> |
+| <code>/zfh</code> | <code>±</code> |
+| <code>/zj</code> | <code>✝️</code>, <code>☪️</code>, <code>🕉️</code>, <code>☸️</code> |
+| <code>/zmh</code> | <code>⒜</code>, <code>⒝</code>, <code>⒞</code>, <code>⒟</code> |
+| <code>/zmq</code> | <code>ⓐ</code>, <code>Ⓐ</code>, <code>ⓑ</code>, <code>Ⓑ</code> |
+| <code>/zr</code> | <code>🔥</code>, <code>💧</code>, <code>🌬️</code>, <code>☀️</code> |
+| <code>/zsj</code> | <code>↖</code> |
+| <code>/zsr</code> | <code>🧓🏽</code>, <code>🧑🏽</code>, <code>🧒🏽</code>, <code>👶🏽</code> |
+| <code>/zt</code> | <code>➖</code>, <code>✅</code>, <code>❌</code>, <code>❓</code> |
+| <code>/zw</code> | <code>🌲</code>, <code>🌳</code>, <code>🎄</code>, <code>🌵</code> |
+| <code>/zxj</code> | <code>↙</code> |
+| <code>/zy</code> | <code>↔︎</code>, <code>⇔</code>, <code>⇋</code> |
+
+</details>
+
+<details>
+<summary>Semicolon codes (85)</summary>
+
+| Input | First configured outputs |
+|---|---|
+| <code>;a</code> | <code>！</code> |
+| <code>;b</code> | <code>(</code> |
+| <code>;c</code> | <code>)</code> |
+| <code>;d</code> | <code>、</code> |
+| <code>;e</code> | <code>`</code> |
+| <code>;fbt</code> | <code>[合十]</code> |
+| <code>;fby</code> | <code>[白眼]</code> |
+| <code>;fcd</code> | <code>👎</code> |
+| <code>;fcg</code> | <code>[吃瓜]</code> |
+| <code>;fco</code> | <code>❌</code> |
+| <code>;fdc</code> | <code>👎</code> |
+| <code>;fdg</code> | <code>[蛋糕]</code> |
+| <code>;fdp</code> | <code>💡</code> |
+| <code>;fdv</code> | <code>✅</code> |
+| <code>;fdy</code> | <code>[得意]</code> |
+| <code>;fdz</code> | <code>👍</code> |
+| <code>;fe</code> | <code>🔔</code>, <code>📅</code>, <code>👀</code>, <code>🔥</code> |
+| <code>;ffd</code> | <code>[发呆]</code> |
+| <code>;ffn</code> | <code>[发怒]</code> |
+| <code>;fgy</code> | <code>[勾引]</code> |
+| <code>;fhh</code> | <code>[嘿哈]</code> |
+| <code>;fhj</code> | <code>🚀</code> |
+| <code>;fho</code> | <code>🔥</code> |
+| <code>;fhx</code> | <code>[害羞]</code> |
+| <code>;fjd</code> | <code>[惊讶]</code> |
+| <code>;fjx</code> | <code>[奸笑]</code> |
+| <code>;fjy</code> | <code>[加油]</code> |
+| <code>;fkj</code> | <code>[恐惧]</code> |
+| <code>;fkl</code> | <code>[可怜]</code> |
+| <code>;flb</code> | <code>📢</code> |
+| <code>;flk</code> | <code>[裂开]</code> |
+| <code>;fll</code> | <code>[流泪]</code> |
+| <code>;flq</code> | <code>[666]</code> |
+| <code>;fmg</code> | <code>[玫瑰]</code> |
+| <code>;fng</code> | <code>[难过]</code> |
+| <code>;fnl</code> | <code>🔔</code> |
+| <code>;fql</code> | <code>[强]</code> |
+| <code>;fqm</code> | <code>💰</code> |
+| <code>;fqv</code> | <code>[庆祝]</code> |
+| <code>;fqz</code> | <code>🚩</code> |
+| <code>;frl</code> | <code>📅</code> |
+| <code>;fs</code> | <code>；</code>, <code>！</code>, <code>“</code>, <code>”</code> |
+| <code>;ftd</code> | <code>📌</code> |
+| <code>;fth</code> | <code>❗</code> |
+| <code>;ftx</code> | <code>[偷笑]</code> |
+| <code>;fup</code> | <code>👍</code> |
+| <code>;fvt</code> | <code>[猪头]</code> |
+| <code>;fwh</code> | <code>❓</code> |
+| <code>;fwl</code> | <code>[捂脸]</code> |
+| <code>;fwu</code> | <code>[握手]</code> |
+| <code>;fwx</code> | <code>[微笑]</code> |
+| <code>;fxk</code> | <code>[破涕为笑]</code> |
+| <code>;fxu</code> | <code>[嘘]</code> |
+| <code>;fxx</code> | <code>⭐</code> |
+| <code>;fyb</code> | <code>[拥抱]</code> |
+| <code>;fyj</code> | <code>👀</code> |
+| <code>;fyw</code> | <code>[疑问]</code> |
+| <code>;fyy</code> | <code>[晕]</code> |
+| <code>;fyz</code> | <code>👉</code> |
+| <code>;fzd</code> | <code>👇</code> |
+| <code>;fzl</code> | <code>👈</code> |
+| <code>;fzr</code> | <code>👉</code> |
+| <code>;fzu</code> | <code>👆</code> |
+| <code>;fzy</code> | <code>[呲牙]</code> |
+| <code>;fzz</code> | <code>💤</code> |
+| <code>;g</code> | <code>・</code> |
+| <code>;h</code> | <code>§</code> |
+| <code>;i</code> | <code>」</code> |
+| <code>;j</code> | <code>#</code> |
+| <code>;k</code> | <code>【</code> |
+| <code>;l</code> | <code>】</code> |
+| <code>;m</code> | <code>&gt;</code> |
+| <code>;n</code> | <code>&lt;</code> |
+| <code>;o</code> | <code>.</code> |
+| <code>;p</code> | <code>％</code> |
+| <code>;q</code> | <code>:</code> |
+| <code>;r</code> | <code>&quot;</code> |
+| <code>;s</code> | <code>……</code> |
+| <code>;t</code> | <code>@</code> |
+| <code>;u</code> | <code>「</code> |
+| <code>;v</code> | <code>——</code> |
+| <code>;w</code> | <code>？</code> |
+| <code>;x</code> | <code>＊</code> |
+| <code>;y</code> | <code>￥</code> |
+| <code>;z</code> | <code>&#x27;</code> |
+
+</details>
