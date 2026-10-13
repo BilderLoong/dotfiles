@@ -129,6 +129,15 @@ if os.getenv("RIME_LIMIT_ABLATION") then
 end
 same_values(late_result, { "result" }, "nonmatching entries must not hide result")
 same_values(capped_results, { "result", "revolt" }, "limit must count matching candidates only")
+assert(capped_memory.read_count == 4, "iteration must stop immediately after the second match")
+
+local no_matches, no_match_memory = translate("r*zz", {
+    { text = "rabbit", comment = "rabbit" },
+    { text = "random", comment = "random" },
+    { text = "result", comment = "result" },
+}, 2)
+same_values(no_matches, {}, "a query without matches returns no candidates")
+assert(no_match_memory.read_count == 3, "without enough matches, iteration must reach the end")
 
 local glob_results, glob_memory = translate("g*l*b", entries, 300)
 same_values(glob_results, { "glob", "glooooob" }, "g*l*b full match")
