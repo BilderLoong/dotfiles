@@ -151,6 +151,8 @@ It differs from the custom global hide action on `Ctrl+d`.
 For a longer Chinese input that ends with `'`, the Lua navigator can move the cursor by a syllable's first code letter.
 A lowercase letter selects its first matching syllable.
 `Shift` plus that letter selects its last matching syllable.
+Example: type `vsgovsyh'`, then push `v` to move to the first `vs` syllable.
+`Shift+V` moves to the last `vs` syllable in that input.
 This path requires a parsed multi-syllable code. It does not apply to every input that ends with `'`.
 For example, a code such as `nihc'` permits syllable movement with `,` and `.` instead of page movement.
 Use `Tab` and `Shift+Tab` if the letter-navigation condition does not apply.
