@@ -127,7 +127,7 @@ recognizer:
   import_preset: default
   patterns:
     uppercase: ""
-    easy_en: "^[a-zA-Z]+[-_']*[a-zA-Z]*([*][a-zA-Z]*)*$"
+    easy_en: "^[a-zA-Z]+[-_']*[a-zA-Z]*([*?][a-zA-Z]*)*$"
 
 algebra_common:
   # - xform/^a/!/
