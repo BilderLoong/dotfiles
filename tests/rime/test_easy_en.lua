@@ -111,7 +111,9 @@ local single_star = translate("g*b", entries)
 same_values(double_star, single_star, "g**b must behave like g*b")
 
 local plain_results, plain_memory = translate("glob", entries)
-same_values(plain_results, { "glob" }, "plain glob completion")
+-- The table translator supplies ordinary completion. This Lua path
+-- leaves exact matches alone when Rime supplies an empty comment.
+same_values(plain_results, {}, "plain glob leaves completion to the table translator")
 assert(plain_memory.lookup_header == "glob", "plain completion must keep its original lookup prefix")
 assert(plain_memory.lookup_limit == 666, "default lookup limit must remain 666")
 
