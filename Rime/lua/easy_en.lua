@@ -5,6 +5,70 @@ ecdict: 把ECDICT.dict.yaml里的text作为comment，code作为text输出
 require("lib/string")
 local easy_en = {}
 
+local function escape_lua_pattern(literal)
+    return literal:gsub("([%^%$%(%)%%%.%[%]%*%+%-%?])", "%%%1")
+end
+
+local function prepare_glob(input)
+    local wildcard_start = input:find("*", 1, true)
+    if not wildcard_start then return nil end
+
+    local prefix = input:sub(1, wildcard_start - 1)
+    if not prefix:match("^[a-zA-Z]") then return nil end
+
+    local tokens = {}
+    for _, codepoint in utf8.codes(input:lower()) do
+        local character = utf8.char(codepoint)
+        if character == "*" then
+            table.insert(tokens, { kind = "many" })
+        else
+            table.insert(tokens, { kind = "literal", pattern = escape_lua_pattern(character) })
+        end
+    end
+    return { prefix = prefix, tokens = tokens }
+end
+
+local function utf8_characters(value)
+    local characters = {}
+    for _, codepoint in utf8.codes(value) do
+        table.insert(characters, utf8.char(codepoint))
+    end
+    return characters
+end
+
+local function glob_matches(glob, value)
+    local characters = utf8_characters(value:lower())
+    local matched = {}
+
+    local function match_from(pattern_index, character_index)
+        local pattern_matches = matched[pattern_index]
+        if pattern_matches and pattern_matches[character_index] ~= nil then
+            return pattern_matches[character_index]
+        end
+        pattern_matches = pattern_matches or {}
+        matched[pattern_index] = pattern_matches
+
+        local token = glob.tokens[pattern_index]
+        local result
+        if not token then
+            result = character_index > #characters
+        elseif token.kind == "many" then
+            result = match_from(pattern_index + 1, character_index)
+                or (characters[character_index] ~= nil and match_from(pattern_index, character_index + 1))
+        else
+            local character = characters[character_index]
+            result = character ~= nil
+                and character:match("^" .. token.pattern .. "$") ~= nil
+                and match_from(pattern_index + 1, character_index + 1)
+        end
+
+        pattern_matches[character_index] = result
+        return result
+    end
+
+    return match_from(1, 1)
+end
+
 local function truncate_comment(comment)
     local MAX_LENGTH = 30
     if utf8.len(comment) > MAX_LENGTH then
