@@ -47,8 +47,6 @@ Pins show `ᵀᴼᴾ`. Hide and priority records have no undo key.
 
 | Input | Function | Example |
 |---|---|---|
-| Pronunciation code | Double-pinyin | `nihc` → **你好** |
-| Pronunciation + `/` + shape | Narrow character candidates | `ni/rx` → **你**, `uu/i` → **输** |
 | Direct pronunciation + shape | Shape input without `/` | `nirx` → **你** |
 | Four pronunciation keys + `/` + shape | Filter a two-character word | `nihc/nr` → **你好** |
 | Pronunciation + `/I`, `/U`, `/N`, `/M` | Filter tones 1, 2, 3, 4 | `ni/N` → third-tone candidates |
