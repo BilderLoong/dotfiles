@@ -59,6 +59,9 @@ local function glob_matches(glob, value)
         local result
         if not token then
             result = character_index > #characters
+        elseif token.kind == "many" then
+            result = match_from(pattern_index + 1, character_index)
+                or (characters[character_index] ~= nil and match_from(pattern_index, character_index + 1))
         elseif token.kind == "one" then
             result = characters[character_index] ~= nil
                 and match_from(pattern_index + 1, character_index + 1)
