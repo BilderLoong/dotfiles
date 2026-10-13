@@ -332,3 +332,4 @@ patch:
       # calendar_data: calendar.yaml    # 加载日历数据（节气/节假日）
       rules:
         - custom_predict_rules.yaml   # 从用户目录加载规则文件
+        - custom_predict_rules.yaml   # 从用户目录加载规则文件
