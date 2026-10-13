@@ -22,8 +22,13 @@ local function translate(input, entries, limit)
         self.lookup_limit = lookup_limit
         self.entries = {}
         for _, entry in ipairs(entries) do
-            if entry.comment:lower():sub(1, #header) == header:lower() then
-                table.insert(self.entries, entry)
+            local code = entry.comment
+            if code:lower():sub(1, #header) == header:lower() then
+                local suffix = code:sub(#header + 1)
+                table.insert(self.entries, {
+                    text = entry.text,
+                    comment = suffix == "" and "" or "~" .. suffix,
+                })
             end
         end
     end
