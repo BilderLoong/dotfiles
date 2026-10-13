@@ -119,7 +119,7 @@ same_values(mixed_results, { "glo", "glob", "globe", "global", "glooooob" }, "g?
 assert(mixed_memory.lookup_header == "g", "prefix lookup must stop before the first wildcard")
 
 local unicode_results = translate("g?b", entries)
-same_values(unicode_results, { "gøb" }, "? must consume one Unicode character")
+same_values(unicode_results, { "g+b", "gxb", "gøb" }, "? must consume one Unicode character")
 
 local literal_results = translate("g+*b", entries)
 same_values(literal_results, { "g+b", "g++b" }, "Lua pattern metacharacters must stay literal")
