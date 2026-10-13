@@ -22,7 +22,6 @@ Example: `nihc` → **你好**. The menu shows five candidates per page.
 | `Shift+Return` | Insert the displayed code | During input |
 | `Ctrl+Shift+Return` | Insert the candidate comment | Candidate menu |
 | `Ctrl+Backspace` | Remove a syllable | During input |
-| `Left` / `Right` | Move one code character | During input |
 | `Shift+Left` / `Shift+Right`, `Shift+Tab` / `Tab` | Move by syllable | During input |
 | `Ctrl+a` / `Ctrl+e` | Move to the start / end | During input |
 | Left `Shift` alone | Temporary English mode | `Return` inserts text and returns to Chinese |
