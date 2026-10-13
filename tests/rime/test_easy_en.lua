@@ -88,6 +88,12 @@ local entries = {
     { text = "gxbfooob", comment = "gxbfooob" },
     { text = "globe", comment = "globe" },
     { text = "global", comment = "global" },
+    { text = "glo", comment = "glo" },
+    { text = "gøb", comment = "gøb" },
+    { text = "gøøb", comment = "gøøb" },
+    { text = "g+b", comment = "g+b" },
+    { text = "g++b", comment = "g++b" },
+    { text = "gxb", comment = "gxb" },
 }
 
 local glob_results, glob_memory = translate("g*l*b", entries, 300)
