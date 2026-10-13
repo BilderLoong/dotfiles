@@ -125,16 +125,31 @@ function easy_en.translator(input, seg, env)
         return
     end
     local segment = composition:back()
-    if segment:has_tag(env.tag) or (schema.schema_id == "easy_en") or input:match("^%l+%*%l+$") then
+    local glob = prepare_glob(input)
+    if input:find("*", 1, true) and not glob then return end
+
+    if segment:has_tag(env.tag) or (schema.schema_id == "easy_en") or glob then
         if not (schema.schema_id == "easy_en") then
             segment.prompt = "〔" .. env.prompt .. "〕"
         end
-        local tailer = string.match(input, "[^" .. env.wildcard .. "]+$") or ""
-        local header = string.match(input, "^[^" .. env.wildcard .. "]+")
+        local tailer
+        local header
+        if glob then
+            header = glob.prefix
+        else
+            tailer = string.match(input, "[^" .. env.wildcard .. "]+$") or ""
+            header = string.match(input, "^[^" .. env.wildcard .. "]+")
+        end
         env.mem:dict_lookup(header, true, env.expand_word_count) -- expand_search
         for dictentry in env.mem:iter_dict() do
-            local code_tail = string.match(dictentry.comment:lower(), tailer .. "$") or ""
-            if tailer and (code_tail == tailer) then
+            local matches
+            if glob then
+                matches = glob_matches(glob, dictentry.comment)
+            else
+                local code_tail = string.match(dictentry.comment:lower(), tailer .. "$") or ""
+                matches = tailer and (code_tail == tailer)
+            end
+            if matches then
                 local ph = Phrase(env.mem, "expand_en_word", seg.start, seg._end, dictentry)
                 ph.comment = dictentry.comment:lower()
                 yield(ph:toCandidate())
