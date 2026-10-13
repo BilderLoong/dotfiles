@@ -38,7 +38,9 @@ local function translate(input, entries, limit)
         local index = 0
         return function()
             index = index + 1
-            return self.entries[index]
+            local entry = self.entries[index]
+            if entry then self.read_count = self.read_count + 1 end
+            return entry
         end
     end
 
