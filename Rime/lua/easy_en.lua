@@ -168,6 +168,8 @@ function easy_en.translator(input, seg, env)
                 local ph = Phrase(env.mem, "expand_en_word", seg.start, seg._end, dictentry)
                 ph.comment = dictentry.comment:lower()
                 yield(ph:toCandidate())
+                match_count = match_count + 1
+                if glob and match_count >= env.expand_word_count then break end
             end
         end
     end
