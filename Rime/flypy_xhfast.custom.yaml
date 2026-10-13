@@ -89,7 +89,7 @@ patch:
       - {when: has_menu,  accept: ";", send: Control+2}          # 分号; 用于第2候选
       - {when: has_menu,  accept: '.', send: Page_Down}          # 括号] 下一页
       - {when: paging,    accept: ',', send: Page_Up}          # 逗号, 返回上一页
-      - {when: has_menu,  accept: "'", send: Control+3}        # 引号' 用于第3候选
+      # - {when: has_menu,  accept: "'", send: Control+3}        # 引号' 用于第3候选
       # - {when: paging,    accept: minus,  send: Page_Up}       # 减号- 返回上一页
       # - {when: paging,    accept: equal,  send: Page_Down}     # 等号= 下一页
       # - {when: has_menu,  accept: period, send: Page_Down}     # 句号. 下一页

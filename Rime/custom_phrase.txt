@@ -48,6 +48,9 @@
 # Adobe Illustrator	ai	1
 
 ## 常用短语
+宝贝	bb
+[亲亲]	wqq
+[呲牙]	wcy
 时间	uij
 🐮🍺	nei
 微信	wx
