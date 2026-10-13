@@ -13,8 +13,6 @@ Example: `nihc` → **你好**. The menu shows five candidates per page.
 
 | Key | Action | When |
 |---|---|---|
-| `Space`, `1`–`5` | Insert the highlighted or numbered candidate | Candidate menu |
-| `Up` / `Down` | Move the highlight | Candidate menu |
 | `;` | Select candidate 2 | Candidate menu |
 | `.` / `,` | Next / previous page | Previous page requires paging |
 | `9` / `0` | Insert the word's first / last character | Normal Chinese input |
