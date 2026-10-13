@@ -71,7 +71,7 @@ patch:
 
   key_binder/+:
     import_preset: default                    # 从 default.yaml 继承通用的
-    fuzz_algebra_first: "8"                   # `8/Control+q` 简拼优先
+    fuzz_algebra_first: "8"                   # 8 简拼优先；3–6 位小写输入时生效
     char_mode: "Control+s"                    # 单字/词组优先模式切换
     pin_cand: "Control+t"                     # 候选词置顶
     unpin_cand: "Control+t"                   # 候选词取消置顶
@@ -83,8 +83,8 @@ patch:
     easydict_translate: "Control+y"           # 调用 Easydict 翻译高亮字词
     switch_cn_en_schema: "Control+g"          # 切换中英方案(支持一键互切)
     symbol_menu_fallback: "Control+p"         # 符号二级菜单返回主菜单键
-    select_first_character: "9"               # `9/minus` 以词定字(首字)
-    select_last_character: "0"                # `0/equal` 以词定字(尾字)
+    select_first_character: "9"               # 9 以词定字(首字)，无 minus 别名
+    select_last_character: "0"                # 0 以词定字(尾字)，无 equal 别名
     bindings/+:
       - {when: has_menu,  accept: ";", send: Control+2}          # 分号; 用于第2候选
       - {when: has_menu,  accept: '.', send: Page_Down}          # 括号] 下一页
