@@ -10,9 +10,14 @@ local function escape_lua_pattern(literal)
 end
 
 local function prepare_glob(input)
-    local wildcard_start = input:find("*", 1, true)
-    if not wildcard_start then return nil end
+    local star_start = input:find("*", 1, true)
+    local one_start = input:find("?", 1, true)
+    if not star_start and not one_start then return nil end
 
+    local wildcard_start = star_start
+    if one_start and (not wildcard_start or one_start < wildcard_start) then
+        wildcard_start = one_start
+    end
     local prefix = input:sub(1, wildcard_start - 1)
     if not prefix:match("^[a-zA-Z]") then return nil end
 
@@ -21,6 +26,8 @@ local function prepare_glob(input)
         local character = utf8.char(codepoint)
         if character == "*" then
             table.insert(tokens, { kind = "many" })
+        elseif character == "?" then
+            table.insert(tokens, { kind = "one" })
         else
             table.insert(tokens, { kind = "literal", pattern = escape_lua_pattern(character) })
         end
