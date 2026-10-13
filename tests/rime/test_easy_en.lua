@@ -115,7 +115,7 @@ same_values(question_results, { "glob" }, "glo? must match one character only")
 assert(question_memory.lookup_header == "glo", "glo? must look up from the first wildcard")
 
 local mixed_results, mixed_memory = translate("g?o*", entries)
-same_values(mixed_results, { "glo", "glob", "globe", "global" }, "g?o* must match one then zero-or-more characters")
+same_values(mixed_results, { "glo", "glob", "globe", "global", "glooooob" }, "g?o* must match one then zero-or-more characters")
 assert(mixed_memory.lookup_header == "g", "prefix lookup must stop before the first wildcard")
 
 local unicode_results = translate("g?b", entries)
