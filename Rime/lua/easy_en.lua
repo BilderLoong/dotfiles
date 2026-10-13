@@ -136,7 +136,8 @@ function easy_en.translator(input, seg, env)
     end
     local segment = composition:back()
     local glob = prepare_glob(input)
-    if input:find("*", 1, true) and not glob then return end
+    local has_wildcard = input:find("*", 1, true) or input:find("?", 1, true)
+    if has_wildcard and not glob then return end
 
     if segment:has_tag(env.tag) or (schema.schema_id == "easy_en") or glob then
         if not (schema.schema_id == "easy_en") then
