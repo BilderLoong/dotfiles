@@ -21,7 +21,6 @@ Example: `nihc` → **你好**. The menu shows five candidates per page.
 | `Return`, `Ctrl+m` | Insert the raw code, not the candidate | During input |
 | `Shift+Return` | Insert the displayed code | During input |
 | `Ctrl+Shift+Return` | Insert the candidate comment | Candidate menu |
-| `Backspace`, `Delete` | Delete before / at the cursor | During input |
 | `Ctrl+Backspace` | Remove a syllable | During input |
 | `Left` / `Right` | Move one code character | During input |
 | `Shift+Left` / `Shift+Right`, `Shift+Tab` / `Tab` | Move by syllable | During input |
