@@ -38,6 +38,16 @@ class EasyEnSchemaRecognizerTests(unittest.TestCase):
             with self.subTest(query=query):
                 self.assertRegex(query, self.flypy)
 
+    def test_easy_en_recognizes_question_wildcards_and_partial_inputs(self):
+        for query in ("glo?", "g?o*", "g?", "g?*"):
+            with self.subTest(query=query):
+                self.assertRegex(query, self.easy_en)
+
+    def test_flypy_recognizes_question_wildcards_and_partial_inputs(self):
+        for query in ("glo?", "g?o*", "g?", "g?*"):
+            with self.subTest(query=query):
+                self.assertRegex(query, self.flypy)
+
     def test_existing_english_prefix_and_punctuation_rules_remain(self):
         self.assertRegex("ab-_\'*cd", self.easy_en)
         self.assertRegex("ab-_\'*cd", self.flypy)
