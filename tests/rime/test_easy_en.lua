@@ -117,6 +117,15 @@ local capped_results, capped_memory = translate("r*lt", {
     { text = "revolt", comment = "revolt" },
     { text = "rebuilt", comment = "rebuilt" },
 }, 2)
+if os.getenv("RIME_LIMIT_ABLATION") then
+    local found_result = false
+    for _, word in ipairs(late_result) do
+        if word == "result" then found_result = true end
+    end
+    print(string.format('{"finds_late_result":%s,"matching_count":%d}', tostring(found_result), #capped_results))
+    return
+end
+same_values(late_result, { "result" }, "nonmatching entries must not hide result")
 same_values(capped_results, { "result", "revolt" }, "limit must count matching candidates only")
 
 local glob_results, glob_memory = translate("g*l*b", entries, 300)
