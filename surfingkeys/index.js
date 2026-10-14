@@ -5,9 +5,6 @@
 
 // API DOC: https://github.com/brookhong/Surfingkeys/blob/master/docs/API.md
 
-// Insert mode: jk → Escape
-api.imap("jk", "<Esc>");
-
 // Google Images: si searches selected text or clipboard
 api.addSearchAlias(
   "i",
@@ -33,7 +30,12 @@ api.mapkey("ymd", "Copy page as Markdown", function () {
 api.map("gt", "T");
 
 // YouTube: keep only j and k in Normal mode
-api.unmapAllExcept(["j", "k"], /youtube\.com/);
+// Keep Insert Escape so the jk shortcut can copy its settings.
+api.unmapAllExcept(["j", "k", "<Esc>"], /youtube\.com/);
+api.unmap("<Esc>", /youtube\.com/);
+
+// Add Insert jk after cleanup to avoid the Surfingkeys prefix error.
+api.imap("jk", "<Esc>");
 
 // Emoji configuration
 settings.startToShowEmoji = 2;
