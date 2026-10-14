@@ -28,7 +28,7 @@ patch:
   switches/@5/reset: 1   # Components on: 拆分开
   switches/@10/reset: 1  # Auxiliary-code hints on: 辅助开
   super_comment/candidate_length: 10
-  super_replacer/rules/@0/sentence: true[27;5;106~
+  super_replacer/rules/@0/sentence: true
 
   #这个文件主要用于置顶，编码为自定义编码的词汇，取消注释用自己的词库名称避免覆盖，须与wanxiang_phrase.custom.yaml一同修改
   #custom_phrase/dictionary: wanxiang_phrase_my
