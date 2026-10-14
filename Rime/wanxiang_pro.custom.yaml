@@ -24,7 +24,7 @@ patch:
 
   #下面是候选数量
   menu/page_size: 6
-  style:
+  style/+:
     font_point: 22
   
   switches/@5/reset: 1   # Components on: 拆分开
