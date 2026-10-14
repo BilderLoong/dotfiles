@@ -24,6 +24,7 @@ patch:
 
   #下面是候选数量
   menu/page_size: 6
+  
   switches/@5/reset: 1   # Components on: 拆分开
   switches/@10/reset: 1  # Auxiliary-code hints on: 辅助开
 
