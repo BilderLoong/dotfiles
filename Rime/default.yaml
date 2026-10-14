@@ -18,7 +18,7 @@ menu:
   #alternative_select_labels: [ ⒈, ⒉, ⒊, ⒋, ⒌, ⒍, ⒎, ⒏, ⒐, ⒑ ]  # 修改候选项标签，Linux用这行用了加点字符
   #alternative_select_keys: ASDFGHJKL  # 这里战略性占用选字按键，如编码字符占用数字键，则需另设选字键
 style:
-  font_point
+  font_point: 22
   
 # 万象状态面板相关
 switcher:
