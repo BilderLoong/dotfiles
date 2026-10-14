@@ -1,0 +1,3 @@
+patch:
+  style/+:
+    font_point: 22
