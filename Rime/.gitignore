@@ -3,5 +3,6 @@
 *.userdb*
 /installation.yaml
 /user.yaml
+*.gram
 *.log
 .DS_Store
